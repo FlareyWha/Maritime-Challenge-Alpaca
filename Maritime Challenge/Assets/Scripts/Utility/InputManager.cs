@@ -12,7 +12,9 @@ public class InputManager : MonoBehaviour
     {
         InputActions = new Controls();
 
-        Scene scene = SceneManager.GetActiveScene();
+        //Scene scene = SceneManager.GetActiveScene();
+
+        SwitchActionMap(InputActions.Main);
 
         //if (scene.name == "Main Menu")
         //    SwitchActionMap(InputActions.MainMenu);

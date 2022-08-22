@@ -7,6 +7,11 @@ public class SphereController : MonoBehaviour
     [SerializeField]
     private GameObject sphere;
 
+    private void Start()
+    {
+        sphere.SetActive(false);
+    }
+
     // Update is called once per frame
     void Update()
     {
