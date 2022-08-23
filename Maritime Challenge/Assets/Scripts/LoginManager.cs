@@ -21,8 +21,12 @@ public class LoginManager : MonoBehaviour
         // LOGIN
         // Set Player Details/Data
 
-        // Connec to Server
+        // Connect to Server
         SceneManager.Instance.LoadScene(SCENE_ID.HOME);
+        foreach (Transform pos in NetworkManager.startPositions)
+        {
+            Debug.Log("Found Pos: " + pos.position);
+        }
         manager.StartClient();
     }
 }
