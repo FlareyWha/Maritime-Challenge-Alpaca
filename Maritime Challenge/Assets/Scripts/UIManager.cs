@@ -4,5 +4,7 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviourSingleton<UIManager>
 {
+    public PlayerFollowCamera Camera;
+
     public Joystick Joystick;
 }

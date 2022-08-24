@@ -7,12 +7,13 @@ public class Joystick : MonoBehaviour
     public GameObject InnerCircle, OuterCircle;
 
     private float inner_radius = 0.0f;
-    private const float max_delta_radius = 1.0f;
+    private float max_delta_radius = 0.0f;
     private bool isHeld = false;
 
     void Start()
     {
-        inner_radius = Camera.main.WorldToScreenPoint(InnerCircle.transform.lossyScale).x;
+        inner_radius = InnerCircle.GetComponent<RectTransform>().rect.width * 0.5f;
+        max_delta_radius = inner_radius;
     }
 
     void Update()
@@ -21,7 +22,7 @@ public class Joystick : MonoBehaviour
              && IsWithinButton())
         {
             isHeld = true;
-            Debug.Log("Joystick Held");
+            //Debug.Log("Joystick Held");
         }
         else if (isHeld)
         {
@@ -29,11 +30,11 @@ public class Joystick : MonoBehaviour
             {
                 isHeld = false;
                 InnerCircle.transform.position = OuterCircle.transform.position;
-                Debug.Log("Joystick Released");
+                //Debug.Log("Joystick Released");
                 return;
             }
 
-            Vector2 touchWorldPos = Camera.main.ScreenToWorldPoint(InputManager.InputActions.Main.TouchPosition.ReadValue<Vector2>());
+            Vector2 touchWorldPos = InputManager.InputActions.Main.TouchPosition.ReadValue<Vector2>();
 
             Vector2 oriPos = new Vector2(OuterCircle.transform.position.x, OuterCircle.transform.position.y);
             if (Vector2.Distance(touchWorldPos, oriPos) > max_delta_radius)
@@ -50,13 +51,17 @@ public class Joystick : MonoBehaviour
         Vector2 dis = InnerCircle.transform.position - OuterCircle.transform.position;
         if (dis.magnitude == 0)
             return Vector2.zero;
-        else return dis;
+
+        float perc = dis.magnitude / max_delta_radius;
+        perc = Mathf.Clamp(perc, 0.0f, 1.0f);
+        
+        return perc * dis.normalized;
     }
 
     private bool IsWithinButton()
     {
         Vector2 touchPos = InputManager.InputActions.Main.TouchPosition.ReadValue<Vector2>();
-        Vector3 buttonPos = Camera.main.WorldToScreenPoint(InnerCircle.transform.position);
+        Vector3 buttonPos = InnerCircle.transform.position;
    
         if (touchPos.x < buttonPos.x + inner_radius && touchPos.x > buttonPos.x - inner_radius
             && touchPos.y > buttonPos.y - inner_radius && touchPos.y < buttonPos.y + inner_radius)
