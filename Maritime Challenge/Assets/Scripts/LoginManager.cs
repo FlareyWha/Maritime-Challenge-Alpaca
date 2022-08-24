@@ -1,10 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Mirror;
 
 public class LoginManager : MonoBehaviour
 {
+    [SerializeField]
+    private InputField InputField_Username, InputField_Password;
+
     NetworkManager manager;
 
     void Start()
@@ -14,12 +18,14 @@ public class LoginManager : MonoBehaviour
 
     public void Login()
     {
-        // Check Verification Database blah blah...
+        // Check Verification of Input Fields from Database blah blah...
 
 
 
         // LOGIN
-        // Set Player Details/Data
+        // Set Player Details/Data in PLayerData
+
+
 
         // Connect to Server
         SceneManager.Instance.LoadScene(SCENE_ID.HOME);
