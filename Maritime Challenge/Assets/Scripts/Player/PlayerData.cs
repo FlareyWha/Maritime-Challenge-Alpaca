@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class PlayerDat
+public static class PlayerData
 {
-    public static string PlayerName;
-    public static string PlayerID;
+    public static string Name;
+    public static int ID;
+    public static int NumRightshipRollers;
 }

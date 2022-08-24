@@ -1,16 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Mirror;
 
 public class PlayerMovement : NetworkBehaviour
 {
+    [SerializeField]
+    private Text PlayerDisplayName;
+    private int PlayerID;
+
     private const float WALK_SPEED = 3.0f;
 
     public override void OnStartLocalPlayer()
     {
-        // Init Player to SpawnPos
+        // Init from Player Data
+        PlayerDisplayName.text = PlayerData.Name;
+        PlayerID = PlayerData.ID;
 
+        // Init Player to SpawnPos
+        
         // Attach Camera
         UIManager.Instance.Camera.SetFollowTarget(gameObject);
 
