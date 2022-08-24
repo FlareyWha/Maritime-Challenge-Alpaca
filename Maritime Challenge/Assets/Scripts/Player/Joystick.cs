@@ -22,7 +22,7 @@ public class Joystick : MonoBehaviour
              && IsWithinButton())
         {
             isHeld = true;
-            Debug.Log("Joystick Held");
+            //Debug.Log("Joystick Held");
         }
         else if (isHeld)
         {
@@ -30,7 +30,7 @@ public class Joystick : MonoBehaviour
             {
                 isHeld = false;
                 InnerCircle.transform.position = OuterCircle.transform.position;
-                Debug.Log("Joystick Released");
+                //Debug.Log("Joystick Released");
                 return;
             }
 
