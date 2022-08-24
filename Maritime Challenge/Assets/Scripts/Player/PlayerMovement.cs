@@ -14,21 +14,9 @@ public class PlayerMovement : NetworkBehaviour
         // Attach Camera
         UIManager.Instance.Camera.SetFollowTarget(gameObject);
 
-        // StartCoroutine(PlayerInits());
     }
 
-    IEnumerator PlayerInits()
-    {
-        if (isLocalPlayer)
-        {
-            while (UIManager.Instance == null)
-                UIManager.Instance.Camera.SetFollowTarget(gameObject);
-        }
-
-        yield return null;
-    }
-
-
+  
     void Update()
     {
         if (!isLocalPlayer)
