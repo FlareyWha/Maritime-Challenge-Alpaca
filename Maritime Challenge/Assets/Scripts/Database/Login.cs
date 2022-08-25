@@ -29,7 +29,7 @@ public class Login : MonoBehaviour
     IEnumerator DoSendLoginInfoEmail()
     {
         //Set the URL to the getUID one
-        url = DataManager.Instance.URL_getUID;
+        url = ServerDataManager.Instance.URL_getUID;
         Debug.Log(url);
 
         WWWForm form = new WWWForm();
@@ -45,8 +45,8 @@ public class Login : MonoBehaviour
                     displayTxt.text = webreq.downloadHandler.text;
                 else
                 {
-                    DataManager.Instance.UID = int.Parse(webreq.downloadHandler.text);
-                    Debug.Log(DataManager.Instance.UID);
+                    PlayerData.UID = int.Parse(webreq.downloadHandler.text);
+                    Debug.Log(PlayerData.UID);
                     StartCoroutine(DoStartLogin());
                 }
 
@@ -59,11 +59,11 @@ public class Login : MonoBehaviour
 
     IEnumerator DoStartLogin()
     {
-        url = DataManager.Instance.URL_login;
+        url = ServerDataManager.Instance.URL_login;
         Debug.Log(url);
 
         WWWForm form = new WWWForm();
-        form.AddField("uid", DataManager.Instance.UID);
+        form.AddField("uid", PlayerData.UID);
         UnityWebRequest webreq = UnityWebRequest.Post(url, form);
         yield return webreq.SendWebRequest();
         switch (webreq.result)

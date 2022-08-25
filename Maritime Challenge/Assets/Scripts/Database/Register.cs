@@ -38,7 +38,7 @@ public class Register : MonoBehaviour
 
     IEnumerator DoVerifyEmail()
     {
-        url = DataManager.Instance.URL_verifyEmail;
+        url = ServerDataManager.Instance.URL_verifyEmail;
         Debug.Log(url);
 
         WWWForm form = new WWWForm();
@@ -61,7 +61,7 @@ public class Register : MonoBehaviour
 
     IEnumerator DoRegister()
     {
-        url = DataManager.Instance.URL_register;
+        url = ServerDataManager.Instance.URL_register;
         Debug.Log(url);
 
         //Create the birthday text
