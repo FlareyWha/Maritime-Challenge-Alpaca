@@ -19,24 +19,6 @@ public class PlayerMovement : NetworkBehaviour
     private const float MAX_VEL = 3.0f;
 
 
-    void Start()
-    {
-        // TBC! - Init from Player Data when player data is set
-      //  PlayerDisplayName.text = PlayerData.Name;
-       // PlayerID = PlayerData.ID;
-        
-    }
-    public override void OnStartLocalPlayer()
-    {
-
-        // Init Player to SpawnPos
-        
-        // Attach Camera
-        UIManager.Instance.Camera.SetFollowTarget(gameObject);
-
-    }
-
-  
     void Update()
     {
         if (!isLocalPlayer)
