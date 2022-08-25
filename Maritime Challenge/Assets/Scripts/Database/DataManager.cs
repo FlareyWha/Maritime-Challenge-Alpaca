@@ -21,9 +21,9 @@ public class DataManager : MonoBehaviourSingleton<DataManager>
     //static string serverURL = "http://ec2-107-20-224-130.compute-1.amazonaws.com/lab02_daevon_200412T/";
 
     //URL's
-    public string URL_getUid = serverURL + "get_uid.php";
-    public string URL_getUsername = serverURL + "get_username.php";
-    public string URL_login = serverURL + "login.php";
-    public string URL_verifyEmail = serverURL + "verify_email.php";
-    public string URL_register = serverURL + "register.php";
+    public string URL_getUID = serverURL + "GetUid.php";
+    public string URL_getUsername = serverURL + "GetUsername.php";
+    public string URL_login = serverURL + "Login.php";
+    public string URL_verifyEmail = serverURL + "VerifyEmail.php";
+    public string URL_register = serverURL + "Register.php";
 }
