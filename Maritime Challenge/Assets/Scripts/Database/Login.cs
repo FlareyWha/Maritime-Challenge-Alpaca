@@ -8,10 +8,13 @@ using System;
 
 public class Login : MonoBehaviour
 {
-    public string URL = "http://localhost/lab02_daevon_200412T/login.php";
-    public Text displayTxt; //must add using UnityEngine.UI
-    public InputField if_email, if_password; //to link to the input fields
-    public GameObject panel_next;
+    private string url;
+    [SerializeField]
+    private Text displayTxt; //must add using UnityEngine.UI
+    [SerializeField]
+    private InputField if_email, if_password; //to link to the input fields
+    [SerializeField]
+    private GameObject panel_next;
 
     private void Awake()
     {
@@ -25,13 +28,14 @@ public class Login : MonoBehaviour
 
     IEnumerator DoSendLoginInfoEmail()
     {
-        URL = DataManager.Instance.URL_getUid;
-        Debug.Log(URL);
+        //Set the URL to the getUID one
+        url = ServerDataManager.Instance.URL_login;
+        Debug.Log(url);
 
         WWWForm form = new WWWForm();
         form.AddField("sEmail", if_email.text);
         form.AddField("sPassword", if_password.text);
-        UnityWebRequest webreq = UnityWebRequest.Post(URL, form);
+        UnityWebRequest webreq = UnityWebRequest.Post(url, form);
         yield return webreq.SendWebRequest();
         switch (webreq.result)
         {
@@ -41,8 +45,8 @@ public class Login : MonoBehaviour
                     displayTxt.text = webreq.downloadHandler.text;
                 else
                 {
-                    DataManager.Instance.UID = int.Parse(webreq.downloadHandler.text);
-                    Debug.Log(DataManager.Instance.UID);
+                    PlayerData.UID = int.Parse(webreq.downloadHandler.text);
+                    Debug.Log(PlayerData.UID);
                     StartCoroutine(DoStartLogin());
                 }
 
@@ -55,12 +59,12 @@ public class Login : MonoBehaviour
 
     IEnumerator DoStartLogin()
     {
-        URL = DataManager.Instance.URL_login;
-        Debug.Log(URL);
+        url = ServerDataManager.Instance.URL_login;
+        Debug.Log(url);
 
         WWWForm form = new WWWForm();
-        form.AddField("uid", DataManager.Instance.UID);
-        UnityWebRequest webreq = UnityWebRequest.Post(URL, form);
+        form.AddField("uid", PlayerData.UID);
+        UnityWebRequest webreq = UnityWebRequest.Post(url, form);
         yield return webreq.SendWebRequest();
         switch (webreq.result)
         {
