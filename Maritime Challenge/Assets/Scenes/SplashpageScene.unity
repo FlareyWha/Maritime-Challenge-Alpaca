@@ -309,9 +309,10 @@ GameObject:
   - component: {fileID: 643075853}
   - component: {fileID: 643075852}
   - component: {fileID: 643075854}
+  - component: {fileID: 643075855}
   m_Layer: 0
   m_Name: DontDestroyOnLoad
-  m_TagString: Untagged
+  m_TagString: DontDestroy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -354,11 +355,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed8d1c5b576733a48b8030db6347bc73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  URL_getUID: http://localhost/Maritime_Challenge/get_uid.php
   URL_getUsername: http://localhost/Maritime_Challenge/get_username.php
   URL_login: http://localhost/Maritime_Challenge/login.php
   URL_verifyEmail: http://localhost/Maritime_Challenge/verify_email.php
   URL_register: http://localhost/Maritime_Challenge/register.php
+--- !u!114 &643075855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643075851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de2deeec005b7f74fbb4d82c861e3d96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2011881872
 GameObject:
   m_ObjectHideFlags: 0

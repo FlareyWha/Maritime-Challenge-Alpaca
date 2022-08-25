@@ -9,7 +9,6 @@ public class ServerDataManager : MonoBehaviourSingleton<ServerDataManager>
     //static string serverURL = "http://ec2-107-20-224-130.compute-1.amazonaws.com/lab02_daevon_200412T/";
 
     //URL's
-    public string URL_getUID = serverURL + "GetUid.php";
     public string URL_getUsername = serverURL + "GetUsername.php";
     public string URL_login = serverURL + "Login.php";
     public string URL_verifyEmail = serverURL + "VerifyEmail.php";
