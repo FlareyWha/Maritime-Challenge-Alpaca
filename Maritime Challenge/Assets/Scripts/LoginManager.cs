@@ -22,10 +22,6 @@ public class LoginManager : MonoBehaviour
 
     public void Login()
     {
-        ConnectToServer();
-        return;
-
-
         // Check Verification of Input Fields from Database blah blah...
         //Verify that email is a proper email. If it is then continue, else try again
         if (!InputField_Email.text.Contains(".com") || !InputField_Email.text.Contains("@"))
@@ -42,13 +38,13 @@ public class LoginManager : MonoBehaviour
     IEnumerator DoSendLoginInfoEmail()
     {
         //Set the URL to the getUID one
-        url = ServerDataManager.Instance.URL_login;
+        url = ServerDataManager.URL_login;
         Debug.Log(url);
 
         WWWForm form = new WWWForm();
         form.AddField("sEmail", InputField_Email.text);
         form.AddField("sPassword", InputField_Password.text);
-        UnityWebRequest webreq = UnityWebRequest.Post(url, form);
+        using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
         yield return webreq.SendWebRequest();
         switch (webreq.result)
         {
@@ -59,12 +55,12 @@ public class LoginManager : MonoBehaviour
                 else
                 {
                     confirmationText.text = "Login Success";
+
                     //Save the UID 
                     PlayerData.UID = int.Parse(webreq.downloadHandler.text);
                     Debug.Log(PlayerData.UID);
 
-                    //Connect only if login is successful
-                    ConnectToServer();
+                    StartCoroutine(GetPlayerData());
                 }
                 break;
             default:
@@ -73,7 +69,31 @@ public class LoginManager : MonoBehaviour
         }
     }
 
-    private void ConnectToServer()
+    IEnumerator GetPlayerData()
+    {
+        url = ServerDataManager.URL_getPlayerData;
+        Debug.Log(url);
+
+        WWWForm form = new WWWForm();
+        form.AddField("UID", PlayerData.UID);
+        using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
+        yield return webreq.SendWebRequest();
+        switch (webreq.result)
+        {
+            case UnityWebRequest.Result.Success:
+                //Deseralize the data
+                JSONDeseralizer.DeseralizePlayerData(webreq.downloadHandler.text);
+
+                //Connect only if login is successful
+                ConnectToServer();
+                break;
+            default:
+                confirmationText.text = "Server error";
+                break;
+        }
+    }
+
+    public void ConnectToServer()
     {
         // Connect to Server
         SceneManager.Instance.LoadScene(SCENE_ID.HOME);

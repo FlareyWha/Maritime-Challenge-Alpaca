@@ -29,7 +29,7 @@ public class Login : MonoBehaviour
     IEnumerator DoSendLoginInfoEmail()
     {
         //Set the URL to the getUID one
-        url = ServerDataManager.Instance.URL_login;
+        url = ServerDataManager.URL_login;
         Debug.Log(url);
 
         WWWForm form = new WWWForm();
@@ -59,7 +59,7 @@ public class Login : MonoBehaviour
 
     IEnumerator DoStartLogin()
     {
-        url = ServerDataManager.Instance.URL_login;
+        url = ServerDataManager.URL_login;
         Debug.Log(url);
 
         WWWForm form = new WWWForm();
