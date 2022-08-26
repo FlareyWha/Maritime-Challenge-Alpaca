@@ -12,11 +12,14 @@ public class ChatManager : MonoBehaviourSingleton<ChatManager>
     [SerializeField]
     private InputField InputField_Message;
     [SerializeField]
+    private Dropdown Dropdown_ChatType;
+    [SerializeField]
     private Transform ChatLogRect;
 
     private PlayerCommands myPlayerCommands = null;
 
     private CHAT_TYPE chatType = CHAT_TYPE.WORLD;
+    private List<string> chatTypeList = new List<string>() { "World", "Guild" };
 
     void Start()
     {
@@ -25,6 +28,11 @@ public class ChatManager : MonoBehaviourSingleton<ChatManager>
 
     IEnumerator ChatManagerInits()
     {
+
+        Dropdown_ChatType.ClearOptions();
+        Dropdown_ChatType.AddOptions(chatTypeList);
+
+
         while (PlayerData.MyPlayer == null)
             yield return null;
 
@@ -49,11 +57,9 @@ public class ChatManager : MonoBehaviourSingleton<ChatManager>
         chatUI.Init(chat_type, sender_name, message);
     }
 
- 
-
     public void OnChatTypeChanged()
     {
-
+        chatType = (CHAT_TYPE)Dropdown_ChatType.value;
     }
 
     public CHAT_TYPE GetChatType()
