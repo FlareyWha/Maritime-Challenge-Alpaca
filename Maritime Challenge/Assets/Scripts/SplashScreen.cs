@@ -15,7 +15,7 @@ public class SplashScreen : MonoBehaviour
         StartCoroutine(SplashcreenWait());
     }
 
-    void Update()
+    void FixedUpdate()
     {
         Vector3 currRot = splashImage.transform.rotation.eulerAngles;
         currRot.z += 200.0f * Time.deltaTime;

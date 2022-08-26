@@ -29,11 +29,13 @@ public class PlayerCommands : NetworkBehaviour
     {
         Debug.Log("Received RPC from Server, Updating Chat Log...");
 
-       if (player == null)
+        if (player == null)
         {
             Debug.Log("Player was NULL!!");
             return;
         }
         ChatManager.Instance.UpdateChatLog(chat_type, player.GetUsername(), message);
+        PlayerUI playerUI = player.gameObject.GetComponent<PlayerUI>();
+        playerUI.AddChatBubble(message);
     }
 }
