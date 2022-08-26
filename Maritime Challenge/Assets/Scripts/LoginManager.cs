@@ -22,6 +22,10 @@ public class LoginManager : MonoBehaviour
 
     public void Login()
     {
+        ConnectToServer();
+        return;
+
+
         // Check Verification of Input Fields from Database blah blah...
         //Verify that email is a proper email. If it is then continue, else try again
         if (!InputField_Email.text.Contains(".com") || !InputField_Email.text.Contains("@"))

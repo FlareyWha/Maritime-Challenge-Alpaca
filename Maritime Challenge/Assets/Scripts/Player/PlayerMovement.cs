@@ -6,10 +6,7 @@ using Mirror;
 
 public class PlayerMovement : NetworkBehaviour
 {
-    [SerializeField]
-    private Text PlayerDisplayName;
-    private int PlayerID;
-
+  
     //private const float WALK_SPEED = 3.0f;
 
     private Vector2 velocity = Vector2.zero;
