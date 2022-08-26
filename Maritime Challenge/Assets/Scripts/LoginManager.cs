@@ -17,7 +17,7 @@ public class LoginManager : MonoBehaviour
 
     void Start()
     {
-        manager = GetComponent<NetworkManager>();
+        manager = GameObject.Find("NetworkManager").GetComponent<NetworkManager>();
     }
 
     public void Login()
