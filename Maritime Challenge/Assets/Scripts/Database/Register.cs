@@ -38,12 +38,12 @@ public class Register : MonoBehaviour
 
     IEnumerator DoVerifyEmail()
     {
-        url = ServerDataManager.Instance.URL_verifyEmail;
+        url = ServerDataManager.URL_verifyEmail;
         Debug.Log(url);
 
         WWWForm form = new WWWForm();
         form.AddField("sEmail", emailInputField.text);
-        UnityWebRequest webreq = UnityWebRequest.Post(url, form);
+        using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
         yield return webreq.SendWebRequest();
         switch (webreq.result)
         {
@@ -61,7 +61,7 @@ public class Register : MonoBehaviour
 
     IEnumerator DoRegister()
     {
-        url = ServerDataManager.Instance.URL_register;
+        url = ServerDataManager.URL_register;
         Debug.Log(url);
 
         //Create the birthday text
@@ -74,7 +74,7 @@ public class Register : MonoBehaviour
         form.AddField("sEmail", emailInputField.text);
         form.AddField("sPassword", passwordInputField.text);
         form.AddField("dBirthday", birthdayText);
-        UnityWebRequest webreq = UnityWebRequest.Post(url, form);
+        using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
         yield return webreq.SendWebRequest();
         switch (webreq.result)
         {
