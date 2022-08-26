@@ -43,6 +43,8 @@ public class Register : MonoBehaviour
 
         WWWForm form = new WWWForm();
         form.AddField("sEmail", emailInputField.text);
+
+        //url += "sEmail=" + UnityWebRequest.EscapeURL(emailInputField.text);
         using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
         yield return webreq.SendWebRequest();
         switch (webreq.result)

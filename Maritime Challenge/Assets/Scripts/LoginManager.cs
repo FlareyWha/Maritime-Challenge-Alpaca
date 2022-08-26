@@ -49,9 +49,12 @@ public class LoginManager : MonoBehaviour
         switch (webreq.result)
         {
             case UnityWebRequest.Result.Success:
+                Debug.Log(webreq.downloadHandler.text);
                 Debug.Log("Sending info Success");
-                if (webreq.downloadHandler.text == "Login failed.")
+                if (webreq.downloadHandler.text == "Login failed." || webreq.downloadHandler.text == "not posted!")
+                {
                     confirmationText.text = webreq.downloadHandler.text;
+                }
                 else
                 {
                     confirmationText.text = "Login Success";
@@ -64,6 +67,7 @@ public class LoginManager : MonoBehaviour
                 }
                 break;
             default:
+                Debug.Log(webreq.downloadHandler.text);
                 confirmationText.text = "Server error";
                 break;
         }
