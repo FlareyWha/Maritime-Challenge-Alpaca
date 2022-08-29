@@ -9,37 +9,59 @@ public class Player : NetworkBehaviour
     private int UID = 0;
     [SyncVar]
     private int guildID = 0;
-    [SyncVar (hook = nameof(OnUsernameSet))]
-    private string username = "Unset";
+    [SyncVar(hook = nameof(SyncUsername))]
+    private string username = "";
 
     private PlayerUI playerUI = null;
 
-   
-    public override void OnStartLocalPlayer()
-    {
-        // GO Inits
-        playerUI = GetComponent<PlayerUI>();
 
-        // Set Local Player if this is yours
-        if (isLocalPlayer)
-        {
-            PlayerData.MyPlayer = this;
-            username = PlayerData.Name;
-        }
+    public override void OnStartAuthority()
+    {
+
+        // Init Player to SpawnPos
+
+        // Set My Player
+        PlayerData.MyPlayer = this;
+        // Init Synced Player Vars
+        SetUsername(PlayerData.Name);
+        Debug.Log("Setting Player Name.." + username);
+
+    }
+    public override void OnStartClient()
+    {
+        EnsureInits();
 
         // Player UI Inits for New Players (No Callback On Set)
         playerUI.SetDisplayName(username);
+        Debug.Log("Initting Player Name..." + username);
 
-        // Init Player to SpawnPos
 
         // Attach Camera
         UIManager.Instance.Camera.SetFollowTarget(gameObject);
 
+        base.OnStartClient();
     }
 
-    void OnUsernameSet(string prev_name, string new_name)
+    private void EnsureInits()
     {
+        // GO Inits
+        if (playerUI == null)
+            playerUI = GetComponent<PlayerUI>();
+    }
+
+    [Command]
+    void SetUsername(string name)
+    {
+        username = name;
+    }
+
+    void SyncUsername(string prev_name, string new_name)
+    {
+        EnsureInits();
+
+        username = new_name;
         playerUI.SetDisplayName(new_name);
+        Debug.Log("Name Received, " + new_name);
     }
 
     public string GetUsername()
