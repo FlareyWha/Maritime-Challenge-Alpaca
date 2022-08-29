@@ -5,8 +5,8 @@ using UnityEngine;
 public class ServerDataManager : MonoBehaviour
 {
     //Server url that will change
-    //static string serverURL = "http://localhost/Maritime_Challenge/";
-    static string serverURL = "https://ship.focused.lol/Maritime_Challenge/";
+    static string serverURL = "http://localhost/Maritime_Challenge/";
+    //static string serverURL = "https://ship.focused.lol/Maritime_Challenge/";
 
     //URL's
     public static string URL_getUsername = serverURL + "GetUsername.php";
