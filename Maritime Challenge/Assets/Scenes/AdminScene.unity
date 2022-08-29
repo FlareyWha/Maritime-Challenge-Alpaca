@@ -2642,10 +2642,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed8d1c5b576733a48b8030db6347bc73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  URL_getUsername: http://localhost/Maritime_Challenge/GetUsername.php
-  URL_login: http://localhost/Maritime_Challenge/Login.php
-  URL_verifyEmail: http://localhost/Maritime_Challenge/VerifyEmail.php
-  URL_register: http://localhost/Maritime_Challenge/Register.php
 --- !u!114 &2004487328
 MonoBehaviour:
   m_ObjectHideFlags: 0

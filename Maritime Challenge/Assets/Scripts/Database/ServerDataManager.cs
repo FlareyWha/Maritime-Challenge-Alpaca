@@ -14,4 +14,6 @@ public class ServerDataManager : MonoBehaviour
     public static string URL_verifyEmail = serverURL + "VerifyEmail.php";
     public static string URL_register = serverURL + "Register.php";
     public static string URL_getPlayerData = serverURL + "GetPlayerData.php";
+    public static string URL_getFriends = serverURL + "GetFriends.php";
+    public static string URL_getPhonebookData = serverURL + "GetPhonebookData.php";
 }

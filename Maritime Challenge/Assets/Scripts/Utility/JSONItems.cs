@@ -8,6 +8,7 @@ public class JSONPlayerData
 {
     public string sUsername;
     public string dBirthday;
+    public string sBiography;
     public int iLevel;
     public int iXP;
     public int iDepartment;
@@ -25,4 +26,30 @@ public class JSONPlayerData
 public class JSONPlayerDataList
 {
     public List<JSONPlayerData> playerData = new List<JSONPlayerData>();
+}
+
+[Serializable]
+public class JSONFriends
+{
+    public int iFriendUID;
+    public int iFriendshipLevel;
+}
+
+[Serializable]
+public class JSONFriendList
+{
+    public List<JSONFriends> friends = new List<JSONFriends>();
+}
+
+[Serializable]
+public class JSONPhonebookData
+{
+    public int iOtherUID;
+    public bool bOtherUnlocked;
+}
+
+[Serializable]
+public class JSONPhonebookDataList
+{
+    public List<JSONPhonebookData> phonebookData = new List<JSONPhonebookData>();
 }

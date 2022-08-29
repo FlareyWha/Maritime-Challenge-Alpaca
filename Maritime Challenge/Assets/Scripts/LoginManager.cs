@@ -63,6 +63,7 @@ public class LoginManager : MonoBehaviour
                     PlayerData.UID = int.Parse(webreq.downloadHandler.text);
                     Debug.Log(PlayerData.UID);
 
+                    //Get player data
                     StartCoroutine(GetPlayerData());
                 }
                 break;
@@ -87,6 +88,54 @@ public class LoginManager : MonoBehaviour
             case UnityWebRequest.Result.Success:
                 //Deseralize the data
                 JSONDeseralizer.DeseralizePlayerData(webreq.downloadHandler.text);
+
+                //Get friends
+                StartCoroutine(GetFriends());
+                break;
+            default:
+                confirmationText.text = "Server error";
+                break;
+        }
+    }
+
+    IEnumerator GetFriends()
+    {
+        url = ServerDataManager.URL_getFriends;
+        Debug.Log(url);
+
+        WWWForm form = new WWWForm();
+        form.AddField("UID", PlayerData.UID);
+        using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
+        yield return webreq.SendWebRequest();
+        switch (webreq.result)
+        {
+            case UnityWebRequest.Result.Success:
+                //Deseralize the data
+                JSONDeseralizer.DeseralizeFriends(webreq.downloadHandler.text);
+
+                //Get phonebook data
+                StartCoroutine(GetPhonebookData());
+                break;
+            default:
+                confirmationText.text = "Server error";
+                break;
+        }
+    }
+
+    IEnumerator GetPhonebookData()
+    {
+        url = ServerDataManager.URL_getPhonebookData;
+        Debug.Log(url);
+
+        WWWForm form = new WWWForm();
+        form.AddField("UID", PlayerData.UID);
+        using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
+        yield return webreq.SendWebRequest();
+        switch (webreq.result)
+        {
+            case UnityWebRequest.Result.Success:
+                //Deseralize the data
+                JSONDeseralizer.DeseralizePhonebookData(webreq.downloadHandler.text);
 
                 //Connect only if login is successful
                 ConnectToServer();
