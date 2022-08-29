@@ -27,7 +27,7 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
             StartCoroutine(ToggleSlideAnim(MenuPanelMask, false, button));
     }
 
-   
+
 
     public void ToggleChat(Button button)
     {
@@ -66,6 +66,10 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
             mask.gameObject.SetActive(false);
     }
 
+    public bool IsInteractButtonClicked()
+    {
+        return false;
+    }
 
 
 }

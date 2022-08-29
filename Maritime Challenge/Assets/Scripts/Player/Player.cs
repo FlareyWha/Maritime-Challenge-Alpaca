@@ -47,6 +47,7 @@ public class Player : NetworkBehaviour
         // GO Inits
         if (playerUI == null)
             playerUI = GetComponent<PlayerUI>();
+
     }
 
     [Command]

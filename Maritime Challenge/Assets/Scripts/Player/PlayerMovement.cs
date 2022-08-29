@@ -15,6 +15,12 @@ public class PlayerMovement : NetworkBehaviour
 
     private const float MAX_VEL = 3.0f;
 
+    private Rigidbody2D rb = null;
+
+    public override void OnStartClient()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
 
     void Update()
     {
@@ -22,7 +28,9 @@ public class PlayerMovement : NetworkBehaviour
             return;
 
         Vector2 input = UIManager.Instance.Joystick.GetDirection();
-        transform.position += new Vector3(input.x, input.y, 0.0f) * MAX_VEL * Time.deltaTime;
+        
+        rb.position += input * MAX_VEL * Time.deltaTime;
         
     }
+
 }
