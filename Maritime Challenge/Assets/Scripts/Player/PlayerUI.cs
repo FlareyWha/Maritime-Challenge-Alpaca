@@ -30,4 +30,19 @@ public class PlayerUI : MonoBehaviour
 
         // Limit Chat Bubbles
     }
+
+    void FixedUpdate()
+    {
+        foreach (ChatBubbleUI bubble in chatBubbleList)
+        {
+            ChatBubbleUI oldest = chatBubbleList[0];
+            oldest.UpdateTimer();
+            
+            if (oldest.GetTimer() <= 0.0f)
+            {
+                Destroy(oldest.gameObject);
+            }
+        }
+        chatBubbleList.RemoveAll(item => item == null);
+    }
 }
