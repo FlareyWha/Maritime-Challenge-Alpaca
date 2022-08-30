@@ -12,7 +12,7 @@ public static class PlayerData
     public static int CurrLevel = 0;
     public static int CurrXP = 0;
     public static int Department = 0;
-    public static int Guild = 0;
+    public static int GuildID = 0;
     public static int Country = 0;
     public static int NumRightshipRollers = 0;
     public static int NumTokens = 0;

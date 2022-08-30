@@ -9,6 +9,10 @@ public class PlayerUI : MonoBehaviour
     [SerializeField]
     private Text PlayerDisplayName;
 
+
+    [SerializeField]
+    private Image InteractPanel;
+
     [SerializeField]
     private GameObject ChatBubbleUIPrefab;
     [SerializeField]
@@ -29,6 +33,16 @@ public class PlayerUI : MonoBehaviour
         chatBubbleList.Add(chatUI);
 
         // Limit Chat Bubbles
+    }
+
+    public void ShowInteractPanel()
+    {
+        StartCoroutine(UIManager.ToggleSlideAnim(InteractPanel, true, 0.6f, null));
+    }
+
+    public void HideInteractPanel()
+    {
+        StartCoroutine(UIManager.ToggleSlideAnim(InteractPanel, false, 0.2f, null));
     }
 
     void FixedUpdate()

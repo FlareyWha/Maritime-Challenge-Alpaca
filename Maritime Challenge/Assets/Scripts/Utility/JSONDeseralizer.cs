@@ -18,7 +18,7 @@ public class JSONDeseralizer : MonoBehaviour
         PlayerData.CurrLevel = jsonPlayerData.iLevel;
         PlayerData.CurrXP = jsonPlayerData.iXP;
         PlayerData.Department = jsonPlayerData.iDepartment;
-        PlayerData.Guild = jsonPlayerData.iGuildID;
+        PlayerData.GuildID = jsonPlayerData.iGuildID;
         PlayerData.Country = jsonPlayerData.iCountry;
         PlayerData.NumRightshipRollers = jsonPlayerData.iTotalRightshipRollers;
         PlayerData.NumTokens = jsonPlayerData.iTotalTokens;

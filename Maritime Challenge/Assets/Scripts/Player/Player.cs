@@ -17,7 +17,6 @@ public class Player : NetworkBehaviour
 
     public override void OnStartAuthority()
     {
-
         // Init Player to SpawnPos
 
         // Set My Player
@@ -47,7 +46,6 @@ public class Player : NetworkBehaviour
         // GO Inits
         if (playerUI == null)
             playerUI = GetComponent<PlayerUI>();
-
     }
 
     [Command]
@@ -69,12 +67,10 @@ public class Player : NetworkBehaviour
     {
         return username;
     }
-
     public int GetGuildID()
     {
         return guildID;
     }
-
     public int GetUID()
     {
         return UID;

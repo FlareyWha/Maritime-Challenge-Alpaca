@@ -15,16 +15,15 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
 
     private const float OPEN_MENU_ANIM_TIME = 0.5f;
     private const float CLOSE_MENU_ANIM_TIME = 0.5f;
-    private float timer = 0.0f;
-
+    //private float timer = 0.0f;
 
 
     public void ToggleMenu(Button button)
     {
         if (MenuPanelMask.fillAmount == 0.0f)
-            StartCoroutine(ToggleSlideAnim(MenuPanelMask, true, button));
+            StartCoroutine(ToggleSlideAnim(MenuPanelMask, true, OPEN_MENU_ANIM_TIME, button));
         else
-            StartCoroutine(ToggleSlideAnim(MenuPanelMask, false, button));
+            StartCoroutine(ToggleSlideAnim(MenuPanelMask, false, CLOSE_MENU_ANIM_TIME, button));
     }
 
 
@@ -32,22 +31,23 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
     public void ToggleChat(Button button)
     {
         if (ChatPanelMask.fillAmount == 0.0f)
-            StartCoroutine(ToggleSlideAnim(ChatPanelMask, true, button));
+            StartCoroutine(ToggleSlideAnim(ChatPanelMask, true, OPEN_MENU_ANIM_TIME, button));
         else
-            StartCoroutine(ToggleSlideAnim(ChatPanelMask, false, button));
+            StartCoroutine(ToggleSlideAnim(ChatPanelMask, false, CLOSE_MENU_ANIM_TIME, button));
     }
 
-    IEnumerator ToggleSlideAnim(Image mask, bool open, Button button)
+    static public IEnumerator ToggleSlideAnim(Image mask, bool open, float anim_time, Button button)
     {
-        button.interactable = false;
+        if (button != null)
+            button.interactable = false;
         if (open)
             mask.gameObject.SetActive(true);
 
-        float fade_rate = 1.0f / OPEN_MENU_ANIM_TIME;
+        float fade_rate = 1.0f / anim_time;
         if (!open)
             fade_rate *= -1;
 
-        timer = OPEN_MENU_ANIM_TIME;
+        float timer = anim_time;
         while (timer > 0.0f)
         {
             timer -= Time.deltaTime;
@@ -60,8 +60,8 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
         else
             mask.fillAmount = 0.0f;
 
-
-        button.interactable = true;
+        if (button != null)
+            button.interactable = true;
         if (!open)
             mask.gameObject.SetActive(false);
     }
