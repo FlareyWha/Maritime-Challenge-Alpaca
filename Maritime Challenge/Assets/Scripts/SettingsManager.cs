@@ -10,7 +10,13 @@ public class SettingsManager : MonoBehaviour
     
     void Start()
     {
-        
+        JoystickToggle.isOn = GameSettings.LOCK_JOYSTICK;
+    }
+
+    public void OnJoystickToggled()
+    {
+        GameSettings.LOCK_JOYSTICK = JoystickToggle.isOn;
+        Joystick.Instance.OnJoystickSettingsChanged();
     }
 
 }

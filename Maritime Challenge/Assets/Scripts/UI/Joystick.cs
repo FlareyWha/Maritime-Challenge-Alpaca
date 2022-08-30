@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Joystick : MonoBehaviour
+public class Joystick : MonoBehaviourSingleton<Joystick>
 {
     [SerializeField]
     private GameObject InnerCircle, OuterCircle;
@@ -16,13 +16,15 @@ public class Joystick : MonoBehaviour
     private float free_move_width = 0.0f;
     private float free_move_height = 0.0f;
     private bool isHeld = false;
+    private Vector2 defaultPos;
 
     void Start()
     {
-      
+        defaultPos = OuterCircle.transform.position;
+
         inner_radius = InnerCircle.GetComponent<RectTransform>().rect.width * 0.5f;
         outer_radius = OuterCircle.GetComponent<RectTransform>().rect.width * 0.5f;
-        max_delta_radius = inner_radius;
+        max_delta_radius = inner_radius * 1.5f;
 
         free_move_height = FreeMoveArea.rect.height;
         free_move_width = FreeMoveArea.rect.width;
@@ -70,7 +72,7 @@ public class Joystick : MonoBehaviour
 
         }
     }
-    
+
     public Vector2 GetDirection()
     {
         Vector2 dis = InnerCircle.transform.position - OuterCircle.transform.position;
@@ -79,10 +81,9 @@ public class Joystick : MonoBehaviour
 
         float perc = dis.magnitude / max_delta_radius;
         perc = Mathf.Clamp(perc, 0.0f, 1.0f);
-        
+
         return perc * dis.normalized;
     }
-
 
     private void HideJoystick()
     {
@@ -100,6 +101,17 @@ public class Joystick : MonoBehaviour
     {
         InnerCircle.transform.position = pos;
         OuterCircle.transform.position = pos;
+    }
+
+    public void OnJoystickSettingsChanged()
+    {
+        if (GameSettings.LOCK_JOYSTICK)
+        {
+            ShowJoystick();
+            MoveJoystick(defaultPos);
+        }
+        else
+            HideJoystick();
     }
 
     private bool IsWithinTouchArea()
@@ -125,24 +137,24 @@ public class Joystick : MonoBehaviour
 
 
         Vector2 touchPos = InputManager.InputActions.Main.TouchPosition.ReadValue<Vector2>();
-    
+
         if (touchPos.x < maxX && touchPos.x > minX
             && touchPos.y > minY && touchPos.y < maxY)
         {
             return true;
         }
-       
+
         return false;
     }
 
     private void ConstraintWithinScreen()
     {
         Vector2 pos;
-        pos.x = Mathf.Clamp(transform.position.x, FreeMoveArea.position.x - free_move_width * 0.5f + outer_radius, 
-            FreeMoveArea.position.x + free_move_width * 0.5f - outer_radius);
-        pos.y = Mathf.Clamp(transform.position.y, FreeMoveArea.position.y - free_move_height * 0.5f + outer_radius, 
-            FreeMoveArea.position.y + free_move_height * 0.5f - outer_radius);
-        transform.position = pos;
+        pos.x = Mathf.Clamp(OuterCircle.transform.position.x, FreeMoveArea.position.x - free_move_width * 0.5f + max_delta_radius + inner_radius,
+            FreeMoveArea.position.x + (free_move_width * 0.5f) - max_delta_radius - inner_radius);
+        pos.y = Mathf.Clamp(OuterCircle.transform.position.y, FreeMoveArea.position.y - free_move_height * 0.5f + max_delta_radius + inner_radius,
+            FreeMoveArea.position.y + free_move_height * 0.5f - max_delta_radius - inner_radius);
+        MoveJoystick(pos);
     }
 
 }
