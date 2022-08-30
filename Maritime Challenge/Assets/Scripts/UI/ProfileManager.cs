@@ -38,7 +38,7 @@ public class ProfileManager : MonoBehaviour
     void EditGuildText()
     {
         //Get guild name based off id wait does this mean i need another table AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        guildText.text = "Guild: " + PlayerData.Guild;
+        guildText.text = "Guild: " + PlayerData.GuildID;
     }
 
     void EditDepartmentText()

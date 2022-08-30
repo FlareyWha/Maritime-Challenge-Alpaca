@@ -58,5 +58,10 @@ public class PlayerInteract : NetworkBehaviour
         return false;
     }
 
+    public void AddFriend()
+    {
+        Player player = gameObject.GetComponent<Player>();
+    }
+
 
 }
