@@ -131,8 +131,7 @@ public class Joystick : MonoBehaviour
         {
             return true;
         }
-        Debug.Log("TOUCH NOT IN TOUCH AREA!! \nTouch Pos: " + touchPos 
-            + "\nMinX: " + minX +  "MaxX: " + maxX + " MinY: " + minY + " MaxY: " + maxY);
+       
         return false;
     }
 

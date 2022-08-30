@@ -42,7 +42,7 @@ public class PlayerUI : MonoBehaviour
             if (oldest.GetTimer() <= 0.0f)
             {
                 toRemoveList.Add(oldest);
-                Destroy(oldest.gameObject);
+                oldest.StartFadeOut();
             }
         }
         foreach (ChatBubbleUI bubble in toRemoveList)
