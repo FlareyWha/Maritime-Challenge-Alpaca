@@ -79,7 +79,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: aaa
 --- !u!114 &608290240023548549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106,6 +106,7 @@ GameObject:
   - component: {fileID: 6604379867793836086}
   - component: {fileID: 5116218111595059913}
   - component: {fileID: 4783783020662866634}
+  - component: {fileID: 7466988712993874339}
   m_Layer: 5
   m_Name: ChatBubbleUI
   m_TagString: Untagged
@@ -184,3 +185,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MessageText: {fileID: 7569778354389226091}
+--- !u!225 &7466988712993874339
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2474843570704675809}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0

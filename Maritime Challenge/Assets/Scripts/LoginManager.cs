@@ -137,6 +137,30 @@ public class LoginManager : MonoBehaviour
                 //Deseralize the data
                 JSONDeseralizer.DeseralizePhonebookData(webreq.downloadHandler.text);
 
+                //Set player to online
+                StartCoroutine(SetOnline());
+                break;
+            default:
+                confirmationText.text = "Server error";
+                break;
+        }
+    }
+
+    IEnumerator SetOnline()
+    {
+        url = ServerDataManager.URL_setOnline;
+        Debug.Log(url);
+
+        WWWForm form = new WWWForm();
+        form.AddField("bOnline", 1);
+        form.AddField("UID", PlayerData.UID);
+        using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
+        yield return webreq.SendWebRequest();
+        switch (webreq.result)
+        {
+            case UnityWebRequest.Result.Success:
+                Debug.Log(webreq.downloadHandler.text);
+
                 //Connect only if login is successful
                 ConnectToServer();
                 break;

@@ -8,6 +8,7 @@ public class JSONPlayerData
 {
     public string sUsername;
     public string dBirthday;
+    public int iCurrentTitleID;
     public string sBiography;
     public int iLevel;
     public int iXP;

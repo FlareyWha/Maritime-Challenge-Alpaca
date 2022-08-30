@@ -71,5 +71,5 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
         return false;
     }
 
-
+   
 }

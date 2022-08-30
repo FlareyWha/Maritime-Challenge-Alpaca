@@ -13,6 +13,7 @@ public class JSONDeseralizer : MonoBehaviour
         //Set all the info needed
         PlayerData.Name = jsonPlayerData.sUsername;
         PlayerData.Birthday = jsonPlayerData.dBirthday;
+        PlayerData.CurrentTitleID = jsonPlayerData.iCurrentTitleID;
         PlayerData.Biography = jsonPlayerData.sBiography;
         PlayerData.CurrLevel = jsonPlayerData.iLevel;
         PlayerData.CurrXP = jsonPlayerData.iXP;

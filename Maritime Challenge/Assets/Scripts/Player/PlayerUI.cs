@@ -33,6 +33,7 @@ public class PlayerUI : MonoBehaviour
 
     void FixedUpdate()
     {
+        List<ChatBubbleUI> toRemoveList = new List<ChatBubbleUI>();
         foreach (ChatBubbleUI bubble in chatBubbleList)
         {
             ChatBubbleUI oldest = chatBubbleList[0];
@@ -40,9 +41,14 @@ public class PlayerUI : MonoBehaviour
             
             if (oldest.GetTimer() <= 0.0f)
             {
-                Destroy(oldest.gameObject);
+                toRemoveList.Add(oldest);
+                oldest.StartFadeOut();
             }
         }
-        chatBubbleList.RemoveAll(item => item == null);
+        foreach (ChatBubbleUI bubble in toRemoveList)
+        {
+            chatBubbleList.Remove(bubble);
+        }
+
     }
 }
