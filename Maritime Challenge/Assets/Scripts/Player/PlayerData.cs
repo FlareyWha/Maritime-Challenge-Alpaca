@@ -7,6 +7,7 @@ public static class PlayerData
     public static int UID = 0;
     public static string Name = "Unset";
     public static string Birthday = "0000-0-0";
+    public static int CurrentTitleID = 1;
     public static string Biography = "";
     public static int CurrLevel = 0;
     public static int CurrXP = 0;
