@@ -27,8 +27,6 @@ public static class PlayerData // Local Player's Data
     //Dict to store id of people and whether they are unlocked
     public static Dictionary<int, bool> PhonebookData = new Dictionary<int, bool>();
 
-
-
     public static Player MyPlayer = null;
 
 	public static List<FriendInfo> FriendDataList = new List<FriendInfo>();

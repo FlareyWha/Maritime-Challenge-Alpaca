@@ -21,13 +21,13 @@ public class ProfileNamecard : MonoBehaviour
 
     }
 
-    public void SetDetails(PlayerInfo player)
+    public void SetDetails(FriendInfo player)
     {
-        //Name.text = player.
-        //Bio.text = player.GetBio();
-        //Level.text = player.GetLevel().ToString();
-        //Country.text = PlayerData.GetCountryName(player.GetCountryID());
-        //Title.sprite = PlayerData.GetTitleByID(player.GetTitleID());
+        Name.text = player.Name;
+        Bio.text = player.Biography;
+        Level.text = player.CurrLevel.ToString();
+        Country.text = PlayerData.GetCountryName(player.Country);
+        Title.sprite = PlayerData.GetTitleByID(player.CurrentTitleID);
 
     }
 

@@ -49,7 +49,7 @@ public class JSONDeseralizer : MonoBehaviour
         }
     }
 
-    public static void DeseralizeFriendData(int friendUID, string friendDataJSON)
+    public static FriendInfo DeseralizeFriendData(int friendUID, string friendDataJSON)
     {
         JSONFriendDataList friendDataList = JsonUtility.FromJson<JSONFriendDataList>(friendDataJSON);
 
@@ -70,5 +70,6 @@ public class JSONDeseralizer : MonoBehaviour
         friendInfo.Country = jsonFriendData.iCountry;
 
         PlayerData.FriendDataList.Add(friendInfo);
+        return friendInfo;
     }
 }

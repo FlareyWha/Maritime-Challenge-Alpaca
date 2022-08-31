@@ -5,12 +5,12 @@ using UnityEngine.UI;
 public class ContactsUI : MonoBehaviour
 {
     [SerializeField]
-    private Image AvatarImage;
+    private Image AvatarImage, Highlight;
     [SerializeField]
     private Text Name;
 
     private Button button;
-    private FriendInfo linkedPlayer;
+    private int linkedPlayerID;
 
     private event Action<ContactsUI> SetSelectedContact;
 
@@ -23,13 +23,14 @@ public class ContactsUI : MonoBehaviour
     void OnButtonClicked()
     {
         SetSelectedContact?.Invoke(this);
+        EnableHighlight();
     }
 
-    public void Initialise(Sprite avatarSprite, FriendInfo player, string name, Action<ContactsUI> action)
+    public void Initialise(Sprite avatarSprite, int playerID, string name, Action<ContactsUI> action)
     {
         AvatarImage.sprite = avatarSprite;
         Name.text = name;
-        linkedPlayer = player;
+        linkedPlayerID = playerID;
         SetSelectedContact = action;
     }
 
@@ -38,9 +39,21 @@ public class ContactsUI : MonoBehaviour
         SetSelectedContact = action;
     }
 
-    public FriendInfo GetLinkedPlayer()
+    public void DisableHighlight()
     {
-        return linkedPlayer;
+        Highlight.color = new Color32(255, 255, 255, 50);
+    }
+
+    private void EnableHighlight()
+    {
+
+        Highlight.color = new Color32(255, 255, 255, 150);
+
+    }
+
+    public int GetLinkedPlayerID()
+    {
+        return linkedPlayerID;
     }
 
 

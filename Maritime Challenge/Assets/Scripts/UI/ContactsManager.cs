@@ -13,9 +13,9 @@ public class ContactsManager : MonoBehaviour
     [SerializeField]
     private ProfileNamecard DisplayNamecard;
 
-    private FriendInfo currSelected;
+    private ContactsUI currSelected;
 
-    private void UpdateContactsListDisplay()
+    private void UpdateContactsListRect()
     {
         foreach (Transform child in ContactsListRect)
         {
@@ -23,30 +23,50 @@ public class ContactsManager : MonoBehaviour
         }
 
 
-        //foreach (Player player in PlayerData.FriendList)
-        //{
-        //      
-        //}
+        foreach (KeyValuePair<int, bool> player in PlayerData.PhonebookData)
+        {
+            GameObject uiGO = Instantiate(ContactUIPrefab, ContactsListRect);
+            ContactsUI contact = uiGO.GetComponent<ContactsUI>();
+            if (!player.Value)
+            {
+                contact.InitUnknown(SetSelectedContact);
+            }
+            else
+            {
+
+            }
+        }
     }
 
     public void SetSelectedContact(ContactsUI contact)
     {
-        currSelected = contact.GetLinkedPlayer();
-        UpdateContactDisplayUI();
+        currSelected.DisableHighlight();
+        currSelected = contact;
+        SetCurrentFriendInfo(contact.GetLinkedPlayerID());
     }
 
-    private void UpdateContactDisplayUI()
+    private void UpdateContactDisplayUI(FriendInfo friend)
     {
-        DisplayNamecard.SetDetails(currSelected);
+        DisplayNamecard.SetDetails(friend);
     }
 
-    private void GetFriendInfo(int friendUID)
+    private void SetCurrentFriendInfo(int friendUID)
     {
+        foreach (FriendInfo friend in PlayerData.FriendDataList)
+        {
+            if (friend.UID == friendUID)
+            {
+                UpdateContactDisplayUI(friend);
+                return;
+            }
+        }
         StartCoroutine(StartGetFriendInfo(friendUID));
     }
 
     IEnumerator StartGetFriendInfo(int friendUID)
     {
+        // Add Loading Anim
+
         string url = ServerDataManager.URL_getFriendInfo;
         Debug.Log(url);
 
@@ -59,8 +79,8 @@ public class ContactsManager : MonoBehaviour
         {
             case UnityWebRequest.Result.Success:
                 //Deseralize the data
-                JSONDeseralizer.DeseralizeFriendData(friendUID, webreq.downloadHandler.text);
-
+                FriendInfo friend =  JSONDeseralizer.DeseralizeFriendData(friendUID, webreq.downloadHandler.text);
+                UpdateContactDisplayUI(friend);
                 break;
             case UnityWebRequest.Result.ProtocolError:
                 Debug.LogError(webreq.downloadHandler.text);
