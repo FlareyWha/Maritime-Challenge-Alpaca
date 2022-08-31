@@ -9,6 +9,8 @@ public class ContactsManager : MonoBehaviour
     private GameObject ContactUIPrefab;
     [SerializeField]
     private Transform ContactsListRect;
+    [SerializeField]
+    private ProfileNamecard DisplayNamecard;
 
     private PlayerInfo currSelected;
 
@@ -34,6 +36,6 @@ public class ContactsManager : MonoBehaviour
 
     private void UpdateContactDisplayUI()
     {
-
+        DisplayNamecard.SetDetails(currSelected);
     }
 }

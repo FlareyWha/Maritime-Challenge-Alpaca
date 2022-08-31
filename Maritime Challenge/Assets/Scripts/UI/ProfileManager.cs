@@ -55,21 +55,7 @@ public class ProfileManager : MonoBehaviour
     {
         string countryName = "";
 
-        switch (PlayerData.Country)
-        {
-            case 0:
-                countryName = "Singapore";
-                break;
-            case 1:
-                countryName = "America";
-                break;
-            case 2:
-                countryName = "Australia";
-                break;
-            case 3:
-                countryName = "Europe";
-                break;
-        }
+        countryName = PlayerData.GetCountryName(PlayerData.Country);
 
         countryText.text = "Country: " + countryName;
     }

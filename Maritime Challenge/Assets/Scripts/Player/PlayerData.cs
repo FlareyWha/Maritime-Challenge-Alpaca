@@ -28,6 +28,29 @@ public static class PlayerData // Local Player's Data
     public static Dictionary<int, bool> PhonebookData = new Dictionary<int, bool>();
 
     public static Player MyPlayer = null;
+
+
+
+    public static string GetCountryName(int id)
+    {
+        switch (id)
+        {
+            case 0:
+                return "Singapore";
+            case 1:
+                return "America";
+            case 2:
+                return "Australia";
+            case 3:
+                return "Europe";
+        }
+        return "Country does not exist";
+    }
+
+    public static Sprite GetTitleByID(int id)
+    {
+        return null;
+    }
 }
 
 public struct PlayerInfo

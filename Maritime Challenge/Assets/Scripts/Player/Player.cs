@@ -11,6 +11,14 @@ public class Player : NetworkBehaviour
     private int guildID = 0;
     [SyncVar(hook = nameof(SyncUsername))]
     private string username = "";
+    [SyncVar]
+    private string bio = "";
+    [SyncVar]
+    private int level = 0;
+    [SyncVar]
+    private int countryID = 0;
+    [SyncVar]
+    private int titleID = 0;
 
     private PlayerUI playerUI = null;
 
@@ -22,7 +30,7 @@ public class Player : NetworkBehaviour
         // Set My Player
         PlayerData.MyPlayer = this;
         // Init Synced Player Vars
-        SetUsername(PlayerData.Name);
+        SetDetails(PlayerData.Name, PlayerData.Biography, PlayerData.CurrentTitleID, PlayerData.GuildID, PlayerData.Country, PlayerData.CurrLevel);
         Debug.Log("Setting Player Name.." + username);
 
     }
@@ -50,9 +58,14 @@ public class Player : NetworkBehaviour
     }
 
     [Command]
-    void SetUsername(string name)
+    void SetDetails(string name, string bio, int title_id, int guild_id, int country_id, int level)
     {
         username = name;
+        this.bio = bio;
+        titleID = title_id;
+        guildID = guild_id;
+        countryID = country_id;
+        this.level = level;
     }
 
     void SyncUsername(string prev_name, string new_name)
@@ -68,6 +81,10 @@ public class Player : NetworkBehaviour
     {
         return username;
     }
+    public string GetBio()
+    {
+        return bio;
+    }
     public int GetGuildID()
     {
         return guildID;
@@ -75,5 +92,17 @@ public class Player : NetworkBehaviour
     public int GetUID()
     {
         return UID;
+    }
+    public int GetTitleID()
+    {
+        return titleID;
+    }
+    public int GetLevel()
+    {
+        return level;
+    }
+    public int GetCountryID()
+    {
+        return countryID;
     }
 }

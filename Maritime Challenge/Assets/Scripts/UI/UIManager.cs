@@ -24,7 +24,7 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
 
     // Interaction UIs
     [SerializeField]
-    private GameObject InteractNamecard;
+    private ProfileNamecard InteractNamecard;
 
 
     private const float OPEN_MENU_ANIM_TIME = 0.5f;
@@ -58,22 +58,22 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
 
     public void SetInteractNamecardDetails(Player player) // TBC dk get here or frm outside class
     {
-
+        InteractNamecard.SetDetails(player);
     }
 
     public void ShowInteractNamecard()
     {
-        StartCoroutine(ToggleFlyInAnim(InteractNamecard, new Vector3(0, -900, 0), Vector3.zero, 1.0f, null));
+        StartCoroutine(ToggleFlyInAnim(InteractNamecard.gameObject, new Vector3(0, -900, 0), Vector3.zero, 1.0f, null));
     }
 
     public void ShowInteractNamecard(Button button)
     {
-        StartCoroutine(ToggleFlyInAnim(InteractNamecard, new Vector3(0, -900, 0), Vector3.zero, 1.0f, button));
+        StartCoroutine(ToggleFlyInAnim(InteractNamecard.gameObject, new Vector3(0, -900, 0), Vector3.zero, 1.0f, button));
     }
 
     public void HideInteractNamecard(Button button)
     {
-        StartCoroutine(ToggleFlyOutAnim(InteractNamecard, Vector3.zero, new Vector3(0, -900, 0), 1.0f, button));
+        StartCoroutine(ToggleFlyOutAnim(InteractNamecard.gameObject, Vector3.zero, new Vector3(0, -900, 0), 1.0f, button));
     }
 
     static public IEnumerator ToggleSlideAnim(Image mask, bool open, float anim_time, Button button)
