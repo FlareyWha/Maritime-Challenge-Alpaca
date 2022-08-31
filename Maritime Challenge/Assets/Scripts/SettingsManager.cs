@@ -16,7 +16,7 @@ public class SettingsManager : MonoBehaviour
     public void OnJoystickToggled()
     {
         GameSettings.LOCK_JOYSTICK = JoystickToggle.isOn;
-        Joystick.Instance.OnJoystickSettingsChanged();
+        UIManager.Instance.Joystick.OnJoystickSettingsChanged();
     }
 
 }
