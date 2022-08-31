@@ -77,7 +77,10 @@ public class PlayerInteract : NetworkBehaviour
                 Debug.Log(webreq.downloadHandler.text);
 
                 //Add friend to the friend list
-                PlayerData.FriendList.Add(PlayerData.UID, otherUID);
+                PlayerData.FriendList.Add(otherUID, 1);
+                break;
+            case UnityWebRequest.Result.ProtocolError:
+                Debug.Log(webreq.downloadHandler.text);
                 break;
             default:
                 Debug.LogError("Friend cannot be added");

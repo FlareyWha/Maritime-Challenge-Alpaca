@@ -51,21 +51,18 @@ public class LoginManager : MonoBehaviour
             case UnityWebRequest.Result.Success:
                 Debug.Log(webreq.downloadHandler.text);
                 Debug.Log("Sending info Success");
-                if (webreq.downloadHandler.text == "Login failed." || webreq.downloadHandler.text == "not posted!")
-                {
-                    confirmationText.text = webreq.downloadHandler.text;
-                }
-                else
-                {
-                    confirmationText.text = "Login Success";
 
-                    //Save the UID 
-                    PlayerData.UID = int.Parse(webreq.downloadHandler.text);
-                    Debug.Log(PlayerData.UID);
+                confirmationText.text = "Login Success";
 
-                    //Get player data
-                    StartCoroutine(GetPlayerData());
-                }
+                //Save the UID 
+                PlayerData.UID = int.Parse(webreq.downloadHandler.text);
+                Debug.Log(PlayerData.UID);
+
+                //Get player data
+                StartCoroutine(GetPlayerData());
+                break;
+            case UnityWebRequest.Result.ProtocolError:
+                confirmationText.text = webreq.downloadHandler.text;
                 break;
             default:
                 Debug.Log(webreq.downloadHandler.text);
@@ -92,6 +89,9 @@ public class LoginManager : MonoBehaviour
                 //Get friends
                 StartCoroutine(GetFriends());
                 break;
+            case UnityWebRequest.Result.ProtocolError:
+                confirmationText.text = webreq.downloadHandler.text;
+                break;
             default:
                 confirmationText.text = "Server error";
                 break;
@@ -115,6 +115,9 @@ public class LoginManager : MonoBehaviour
 
                 //Get phonebook data
                 StartCoroutine(GetPhonebookData());
+                break;
+            case UnityWebRequest.Result.ProtocolError:
+                confirmationText.text = webreq.downloadHandler.text;
                 break;
             default:
                 confirmationText.text = "Server error";
@@ -140,6 +143,9 @@ public class LoginManager : MonoBehaviour
                 //Set player to online
                 StartCoroutine(SetOnline());
                 break;
+            case UnityWebRequest.Result.ProtocolError:
+                confirmationText.text = webreq.downloadHandler.text;
+                break;
             default:
                 confirmationText.text = "Server error";
                 break;
@@ -163,6 +169,9 @@ public class LoginManager : MonoBehaviour
 
                 //Connect only if login is successful
                 ConnectToServer();
+                break;
+            case UnityWebRequest.Result.ProtocolError:
+                confirmationText.text = webreq.downloadHandler.text;
                 break;
             default:
                 confirmationText.text = "Server error";
