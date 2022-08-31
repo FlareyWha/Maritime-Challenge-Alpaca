@@ -5,21 +5,26 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviourSingleton<UIManager>
 {
-   
+    // Main/Hub
     public PlayerFollowCamera Camera;
-   
     public Joystick Joystick;
 
     [SerializeField]
     private Image MenuPanelMask;
     [SerializeField]
     private Image ChatPanelMask;
+
+    // Profile Page : TBC -> Might Shift to ProfileManager
     [SerializeField]
     private Image NamecardMask, NamecardImage;
     [SerializeField]
     private Sprite ShortNamecardSprite, LongNamecardSprite;
     [SerializeField]
     private GameObject ProfilePageButtons;
+
+    // Interaction UIs
+    [SerializeField]
+    private GameObject InteractNamecard;
 
 
     private const float OPEN_MENU_ANIM_TIME = 0.5f;
@@ -35,8 +40,6 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
             StartCoroutine(ToggleSlideAnim(MenuPanelMask, false, CLOSE_MENU_ANIM_TIME, button));
     }
 
-
-
     public void ToggleChat(Button button)
     {
         if (ChatPanelMask.fillAmount == 0.0f)
@@ -44,7 +47,6 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
         else
             StartCoroutine(ToggleSlideAnim(ChatPanelMask, false, CLOSE_MENU_ANIM_TIME, button));
     }
-
 
     public void ToggleNamecard(Button arrowButton)
     {
@@ -54,7 +56,25 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
             StartCoroutine(RetractNamecardAnim(1.0f, arrowButton));
     }
 
+    public void SetInteractNamecardDetails(Player player) // TBC dk get here or frm outside class
+    {
 
+    }
+
+    public void ShowInteractNamecard()
+    {
+        StartCoroutine(ToggleFlyInAnim(InteractNamecard, new Vector3(0, -900, 0), Vector3.zero, 1.0f, null));
+    }
+
+    public void ShowInteractNamecard(Button button)
+    {
+        StartCoroutine(ToggleFlyInAnim(InteractNamecard, new Vector3(0, -900, 0), Vector3.zero, 1.0f, button));
+    }
+
+    public void HideInteractNamecard(Button button)
+    {
+        StartCoroutine(ToggleFlyOutAnim(InteractNamecard, Vector3.zero, new Vector3(0, -900, 0), 1.0f, button));
+    }
 
     static public IEnumerator ToggleSlideAnim(Image mask, bool open, float anim_time, Button button)
     {
@@ -85,6 +105,51 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
         if (!open)
             mask.gameObject.SetActive(false);
     }
+
+    static public IEnumerator ToggleFlyInAnim(GameObject uiGO, Vector3 startPos, Vector3 targetPos, float anim_time, Button button)
+    {
+        if (button != null)
+            button.interactable = false;
+
+        uiGO.gameObject.SetActive(true);
+
+        Vector3 fly_rate = (targetPos - startPos) / anim_time;
+       
+        float timer = anim_time;
+        while (timer > 0.0f)
+        {
+            timer -= Time.deltaTime;
+            uiGO.transform.localPosition += fly_rate * Time.deltaTime;
+            yield return null;
+        }
+
+        if (button != null)
+            button.interactable = true;
+     
+    }
+
+    static public IEnumerator ToggleFlyOutAnim(GameObject uiGO, Vector3 startPos, Vector3 targetPos, float anim_time, Button button)
+    {
+        if (button != null)
+            button.interactable = false;
+
+
+        Vector3 fly_rate = (targetPos - startPos) / anim_time;
+
+        float timer = anim_time;
+        while (timer > 0.0f)
+        {
+            timer -= Time.deltaTime;
+            uiGO.transform.localPosition += fly_rate * Time.deltaTime;
+            yield return null;
+        }
+
+        if (button != null)
+            button.interactable = true;
+
+        uiGO.gameObject.SetActive(false);
+    }
+
 
 
     private IEnumerator ExtendNamecardAnim(float anim_time, Button button)

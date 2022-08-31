@@ -36,7 +36,8 @@ public class Player : NetworkBehaviour
 
 
         // Attach Camera
-        UIManager.Instance.Camera.SetFollowTarget(gameObject);
+        if (isLocalPlayer)
+            UIManager.Instance.Camera.SetFollowTarget(gameObject);
 
         base.OnStartClient();
     }

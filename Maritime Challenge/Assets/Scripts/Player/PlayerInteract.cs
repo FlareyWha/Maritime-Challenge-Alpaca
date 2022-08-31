@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Mirror;
 using UnityEngine.Networking;
 
@@ -45,24 +46,19 @@ public class PlayerInteract : NetworkBehaviour
         playerUI.HideInteractPanel();
     }
 
-    bool IsWithinPlayer()
+    public void ViewProfile(Button button)
     {
-        Vector2 touchPos = InputManager.InputActions.Main.TouchPosition.ReadValue<Vector2>();
-        Vector3 playerPos = Camera.main.WorldToScreenPoint(transform.position);
-        if (touchPos.x < playerPos.x + playerSize.x * 0.5f && touchPos.x > playerPos.x - playerSize.x * 0.5f
-            && touchPos.y > playerPos.y - playerSize.y * 0.5f && touchPos.y < playerPos.y + playerSize.y * 0.5f)
-        {
-            return true;
-        }
-
-        //Debug.Log(transform.position);
-        return false;
+        Player player = gameObject.GetComponent<Player>();
+        UIManager.Instance.SetInteractNamecardDetails(player);
+        UIManager.Instance.ShowInteractNamecard(button);
     }
+
 
     public void AddFriend()
     {
         Player player = gameObject.GetComponent<Player>();
         StartCoroutine(StartAddFriend(player.GetUID()));
+
     }
 
     IEnumerator StartAddFriend(int otherUID)
@@ -87,5 +83,18 @@ public class PlayerInteract : NetworkBehaviour
                 Debug.LogError("Friend cannot be added");
                 break;
         }
+    }
+    private bool IsWithinPlayer()
+    {
+        Vector2 touchPos = InputManager.InputActions.Main.TouchPosition.ReadValue<Vector2>();
+        Vector3 playerPos = Camera.main.WorldToScreenPoint(transform.position);
+        if (touchPos.x < playerPos.x + playerSize.x * 0.5f && touchPos.x > playerPos.x - playerSize.x * 0.5f
+            && touchPos.y > playerPos.y - playerSize.y * 0.5f && touchPos.y < playerPos.y + playerSize.y * 0.5f)
+        {
+            return true;
+        }
+
+        //Debug.Log(transform.position);
+        return false;
     }
 }

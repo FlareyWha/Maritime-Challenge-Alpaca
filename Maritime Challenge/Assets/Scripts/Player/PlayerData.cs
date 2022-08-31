@@ -30,7 +30,7 @@ public static class PlayerData // Local Player's Data
     public static Player MyPlayer = null;
 }
 
-public struct PlayerInfo
+public struct FriendInfo
 {
     public static string Name = "Unset";
     public static bool ShowBirthday = true;
@@ -42,7 +42,6 @@ public struct PlayerInfo
     public static int GuildID = 0;
     public static int Country = 0;
 
-    public static bool IsFriends = false;
     public static int FriendshipLevel = 0;
 }
 
