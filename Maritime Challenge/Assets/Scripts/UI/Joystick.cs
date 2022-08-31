@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Joystick : MonoBehaviourSingleton<Joystick>
+public class Joystick : MonoBehaviour
 {
     [SerializeField]
     private GameObject InnerCircle, OuterCircle;
