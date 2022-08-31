@@ -8,17 +8,12 @@ public class ProfileManager : MonoBehaviour
     [SerializeField]
     private Text nameText, guildText, departmentText, countryText, birthdayText;
 
-    // Start is called before the first frame update
+   
     void Start()
     {
-        
+        LoadData();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void LoadData()
     {

@@ -103,6 +103,11 @@ public class Joystick : MonoBehaviour
         OuterCircle.transform.position = pos;
     }
 
+    public void ResetJoystick()
+    {
+        InnerCircle.transform.position = OuterCircle.transform.position;
+    }
+
     public void OnJoystickSettingsChanged()
     {
         if (GameSettings.LOCK_JOYSTICK)

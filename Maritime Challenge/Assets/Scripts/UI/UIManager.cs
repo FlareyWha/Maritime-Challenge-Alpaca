@@ -18,6 +18,8 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
     private Image NamecardMask, NamecardImage;
     [SerializeField]
     private Sprite ShortNamecardSprite, LongNamecardSprite;
+    [SerializeField]
+    private GameObject ProfilePageButtons;
 
 
     private const float OPEN_MENU_ANIM_TIME = 0.5f;
@@ -89,6 +91,8 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
     {
         // Hide Arrow Button
         button.gameObject.SetActive(false);
+        // Hide Other Buttons
+        ProfilePageButtons.SetActive(false);
 
         // Extend Namecard
         NamecardMask.fillAmount = 0.42f;
@@ -144,6 +148,8 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
         // Rotate and Show Arrow Button
         button.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
         button.gameObject.SetActive(true);
+        // Show Profile Buttons
+        ProfilePageButtons.SetActive(true);
     }
 
     public bool IsInteractButtonClicked()
@@ -155,6 +161,7 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
     public void ToggleJoystick(bool on)
     {
         Joystick.gameObject.SetActive(on);
+        Joystick.ResetJoystick();
     }
    
 }

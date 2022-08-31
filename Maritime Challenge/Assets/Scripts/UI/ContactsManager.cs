@@ -10,7 +10,7 @@ public class ContactsManager : MonoBehaviour
     [SerializeField]
     private Transform ContactsListRect;
 
-
+    private PlayerInfo currSelected;
 
     private void UpdateContactsListDisplay()
     {
@@ -22,7 +22,18 @@ public class ContactsManager : MonoBehaviour
 
         //foreach (Player player in PlayerData.FriendList)
         //{
-
+        //      
         //}
+    }
+
+    public void SetSelectedContact(ContactsUI contact)
+    {
+        currSelected = contact.GetLinkedPlayer();
+        UpdateContactDisplayUI();
+    }
+
+    private void UpdateContactDisplayUI()
+    {
+
     }
 }
