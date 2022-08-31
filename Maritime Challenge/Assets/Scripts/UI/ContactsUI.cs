@@ -10,7 +10,7 @@ public class ContactsUI : MonoBehaviour
     private Text Name;
 
     private Button button;
-    private PlayerInfo linkedPlayer;
+    private FriendInfo linkedPlayer;
 
     private event Action<ContactsUI> SetSelectedContact;
 
@@ -25,7 +25,7 @@ public class ContactsUI : MonoBehaviour
         SetSelectedContact?.Invoke(this);
     }
 
-    public void Initialise(Sprite avatarSprite, PlayerInfo player, string name, Action<ContactsUI> action)
+    public void Initialise(Sprite avatarSprite, FriendInfo player, string name, Action<ContactsUI> action)
     {
         AvatarImage.sprite = avatarSprite;
         Name.text = name;
@@ -38,7 +38,7 @@ public class ContactsUI : MonoBehaviour
         SetSelectedContact = action;
     }
 
-    public PlayerInfo GetLinkedPlayer()
+    public FriendInfo GetLinkedPlayer()
     {
         return linkedPlayer;
     }

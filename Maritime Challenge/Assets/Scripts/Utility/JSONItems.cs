@@ -7,6 +7,7 @@ using System;
 public class JSONPlayerData
 {
     public string sUsername;
+    public bool bShowBirthday;
     public string dBirthday;
     public int iCurrentTitleID;
     public string sBiography;
@@ -53,4 +54,26 @@ public class JSONPhonebookData
 public class JSONPhonebookDataList
 {
     public List<JSONPhonebookData> phonebookData = new List<JSONPhonebookData>();
+}
+
+[Serializable]
+public class JSONFriendData
+{
+    public string sUsername;
+    public bool bShowBirthday;
+    public string dBirthday;
+    public int iCurrentTitleID;
+    public string sBiography;
+    public int iLevel;
+    public int iXP;
+    public int iDepartment;
+    public int iGuildID;
+    public int iCountry;
+    public bool bOnline;
+}
+
+[Serializable]
+public class JSONFriendDataList
+{
+    public List<JSONFriendData> friendData = new List<JSONFriendData>();
 }
