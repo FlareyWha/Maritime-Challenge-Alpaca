@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
+using UnityEngine.Networking;
 
 public class PlayerInteract : NetworkBehaviour
 {
@@ -61,7 +62,27 @@ public class PlayerInteract : NetworkBehaviour
     public void AddFriend()
     {
         Player player = gameObject.GetComponent<Player>();
+        StartCoroutine(StartAddFriend(player.GetUID()));
     }
 
+    IEnumerator StartAddFriend(int otherUID)
+    {
+        string url = ServerDataManager.URL_addFriend;
+        Debug.Log(url);
 
+        WWWForm form = new WWWForm();
+        form.AddField("UID", PlayerData.UID);
+        form.AddField("OtherUID", otherUID);
+        using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
+        yield return webreq.SendWebRequest();
+        switch (webreq.result)
+        {
+            case UnityWebRequest.Result.Success:
+                Debug.Log(webreq.downloadHandler.text);
+                break;
+            default:
+                Debug.LogError("Friend cannot be added");
+                break;
+        }
+    }
 }
