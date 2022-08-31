@@ -75,13 +75,16 @@ public class Register : MonoBehaviour
         form.AddField("sUsername", usernameInputField.text);
         form.AddField("sEmail", emailInputField.text);
         form.AddField("sPassword", passwordInputField.text);
-        form.AddField("dBirthday", birthdayText);
+        //form.AddField("dBirthday", birthdayText);
         using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
         yield return webreq.SendWebRequest();
         switch (webreq.result)
         {
             case UnityWebRequest.Result.Success:
                 confirmationText.text = webreq.downloadHandler.text;
+                break;
+            case UnityWebRequest.Result.ProtocolError:
+                confirmationText.text = webreq.downloadHandler.error;
                 break;
             default:
                 confirmationText.text = "server error";

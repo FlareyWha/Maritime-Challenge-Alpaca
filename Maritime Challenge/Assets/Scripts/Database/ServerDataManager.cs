@@ -9,7 +9,7 @@ public class ServerDataManager : MonoBehaviour
     static string serverURL = "https://ship.focused.lol/Maritime_Challenge/";
 
     //URL's
-    public static string URL_getUsername = serverURL + "GetUsername.php";
+    //public static string URL_getUsername = serverURL + "GetUsername.php";
     public static string URL_login = serverURL + "Login.php";
     public static string URL_verifyEmail = serverURL + "VerifyEmail.php";
     public static string URL_register = serverURL + "Register.php";
@@ -17,4 +17,5 @@ public class ServerDataManager : MonoBehaviour
     public static string URL_getFriends = serverURL + "GetFriends.php";
     public static string URL_getPhonebookData = serverURL + "GetPhonebookData.php";
     public static string URL_setOnline = serverURL + "SetOnline.php";
+    public static string URL_addFriend = serverURL + "AddFriend.php";
 }
