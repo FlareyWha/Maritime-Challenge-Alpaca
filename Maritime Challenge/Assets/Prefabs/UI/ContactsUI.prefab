@@ -135,8 +135,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a45e2f82f9a0f174aa92cc0491d5a7e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AvatarImage: {fileID: 0}
-  Name: {fileID: 0}
+  AvatarImage: {fileID: 3130731066842336846}
+  Highlight: {fileID: 3130731065216954891}
+  Name: {fileID: 3130731066081762376}
 --- !u!1 &3130731066081762382
 GameObject:
   m_ObjectHideFlags: 0
@@ -149,7 +150,7 @@ GameObject:
   - component: {fileID: 3130731066081762379}
   - component: {fileID: 3130731066081762376}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -12,6 +12,8 @@ public class ContactsManager : MonoBehaviour
     private Transform ContactsListRect;
     [SerializeField]
     private ProfileNamecard DisplayNamecard;
+    [SerializeField]
+    private Text DisplayName;
 
     private ContactsUI currSelected;
 
@@ -48,6 +50,7 @@ public class ContactsManager : MonoBehaviour
     private void UpdateContactDisplayUI(FriendInfo friend)
     {
         DisplayNamecard.SetDetails(friend);
+        DisplayName.text = friend.Name;
     }
 
     private void SetCurrentFriendInfo(int friendUID)
