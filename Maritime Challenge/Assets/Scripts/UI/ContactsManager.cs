@@ -10,7 +10,7 @@ public class ContactsManager : MonoBehaviour
     [SerializeField]
     private Transform ContactsListRect;
 
-  //  private PlayerInfo currSelected;
+    private PlayerInfo currSelected;
 
     private void UpdateContactsListDisplay()
     {

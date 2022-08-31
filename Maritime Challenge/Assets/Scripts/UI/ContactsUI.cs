@@ -10,7 +10,7 @@ public class ContactsUI : MonoBehaviour
     private Text Name;
 
     private Button button;
-   // private PlayerInfo linkedPlayer;
+    private PlayerInfo linkedPlayer;
 
     private event Action<ContactsUI> SetSelectedContact;
 
