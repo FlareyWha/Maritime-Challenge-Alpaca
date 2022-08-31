@@ -151,5 +151,10 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
         return false;
     }
 
+
+    public void ToggleJoystick(bool on)
+    {
+        Joystick.gameObject.SetActive(on);
+    }
    
 }
