@@ -12,6 +12,7 @@ public class JSONDeseralizer : MonoBehaviour
 
         //Set all the info needed
         PlayerData.Name = jsonPlayerData.sUsername;
+        PlayerData.ShowBirthday = jsonPlayerData.bShowBirthday;
         PlayerData.Birthday = jsonPlayerData.dBirthday;
         PlayerData.CurrentTitleID = jsonPlayerData.iCurrentTitleID;
         PlayerData.Biography = jsonPlayerData.sBiography;
@@ -46,5 +47,28 @@ public class JSONDeseralizer : MonoBehaviour
         {
             PlayerData.PhonebookData.Add(phonebookDataList.phonebookData[i].iOtherUID, phonebookDataList.phonebookData[i].bOtherUnlocked);
         }
+    }
+
+    public static void DeseralizeFriendData(int friendUID, string friendDataJSON)
+    {
+        JSONFriendDataList friendDataList = JsonUtility.FromJson<JSONFriendDataList>(friendDataJSON);
+
+        JSONFriendData jsonFriendData = friendDataList.friendData[0];
+
+        FriendInfo friendInfo = new FriendInfo();
+
+        //Set all the info needed
+        friendInfo.UID = friendUID;
+        friendInfo.Name = jsonFriendData.sUsername;
+        friendInfo.ShowBirthday = jsonFriendData.bShowBirthday;
+        friendInfo.Birthday = jsonFriendData.dBirthday;
+        friendInfo.CurrentTitleID = jsonFriendData.iCurrentTitleID;
+        friendInfo.Biography = jsonFriendData.sBiography;
+        friendInfo.CurrLevel = jsonFriendData.iLevel;
+        friendInfo.Department = jsonFriendData.iDepartment;
+        friendInfo.GuildID = jsonFriendData.iGuildID;
+        friendInfo.Country = jsonFriendData.iCountry;
+
+        PlayerData.FriendDataList.Add(friendInfo);
     }
 }
