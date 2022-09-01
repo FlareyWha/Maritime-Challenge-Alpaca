@@ -38,6 +38,8 @@ public class ContactsManager : MonoBehaviour
 
         Debug.Log("Updating ContactsListRect...");
 
+        // TBC - Sort List By Known/Unknown
+
         foreach (KeyValuePair<BasicInfo, bool> player in PlayerData.PhonebookData)
         {
             GameObject uiGO = Instantiate(ContactUIPrefab, ContactsListRect);
@@ -75,7 +77,7 @@ public class ContactsManager : MonoBehaviour
         if (currSelected == null)
             return;
 
-        if (CheckIfFriends(currSelected.GetContactInfo().UID))
+        if (FriendsManager.CheckIfFriends(currSelected.GetContactInfo().UID))
             SetCurrentFriendInfo(currSelected.GetContactInfo().UID);
         else if (currSelected.GetUnlockStatus())
             UpdateContactDisplayUI(currSelected.GetContactInfo());
@@ -86,7 +88,7 @@ public class ContactsManager : MonoBehaviour
     private void UpdateContactDisplayUI(BasicInfo player) // For Unlocked But Not Friends
     {
         FriendshipUI.SetActive(false);
-        DisplayNamecard.SetHidden();
+        DisplayNamecard.SetHidden(currSelected.GetContactInfo().UID);
         DisplayName.text = player.Name;
     }
 
@@ -101,7 +103,7 @@ public class ContactsManager : MonoBehaviour
     private void HideContactDisplayInfo() // For Not Unlocked
     {
         FriendshipUI.SetActive(false);
-        DisplayNamecard.SetUnknown();
+        DisplayNamecard.SetUnknown(currSelected.GetContactInfo().UID);
         DisplayName.text = "?";
     }
 
@@ -148,17 +150,7 @@ public class ContactsManager : MonoBehaviour
     }
 
 
-    private bool CheckIfFriends(int id)
-    {
-        Debug.Log("Checking through Friends List...");
-        foreach (BasicInfo player in PlayerData.FriendList)
-        {
-            Debug.Log("Found Friend Name: " + player.Name);
-            if (player.UID == id)
-                return true;
-        }
-        return false;
-    }
+    
 
     public void AddSelectedContactAsFriend()
     {
@@ -168,6 +160,16 @@ public class ContactsManager : MonoBehaviour
     public void UnfriendContact()
     {
         FriendsManager.Instance.DeleteFriend(currSelected.GetContactInfo().UID);
+    }
+
+    public static bool CheckIfKnown(int playerID)
+    {
+        foreach (KeyValuePair<BasicInfo, bool> player in PlayerData.PhonebookData)
+        {
+            if (player.Key.UID == playerID)
+                return player.Value;
+        }
+        return false;
     }
 
 }

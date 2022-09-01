@@ -34,6 +34,10 @@ public class PlayerCommands : NetworkBehaviour
             Debug.Log("Player was NULL!!");
             return;
         }
+
+        if (chat_type == CHAT_TYPE.GUILD && player.GetGuildID() != PlayerData.GuildID)
+            return;
+
         ChatManager.Instance.UpdateChatLog(chat_type, player.GetUsername(), message);
         PlayerUI playerUI = player.gameObject.GetComponent<PlayerUI>();
         playerUI.AddChatBubble(message);

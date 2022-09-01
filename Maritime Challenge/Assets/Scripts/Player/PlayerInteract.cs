@@ -12,6 +12,8 @@ public class PlayerInteract : NetworkBehaviour
 
     private bool isInteractOpen = false;
 
+    public static Player interactPlayer = null;
+
 
     void Start()
     {
@@ -49,6 +51,7 @@ public class PlayerInteract : NetworkBehaviour
         Player player = gameObject.GetComponent<Player>();
         UIManager.Instance.SetInteractNamecardDetails(player);
         UIManager.Instance.ShowInteractNamecard(button);
+        interactPlayer = player;
     }
 
 

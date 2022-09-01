@@ -58,9 +58,21 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
 
     public void SetInteractNamecardDetails(Player player) // TBC dk get here or frm outside class
     {
-        InteractNamecard.SetDetails(player);
+        if (FriendsManager.CheckIfFriends(player.GetUID()))
+            InteractNamecard.SetDetails(player);
+        else if (ContactsManager.CheckIfKnown(player.GetUID()))
+            InteractNamecard.SetHidden(player.GetUID());
+        else
+            InteractNamecard.SetUnknown(player.GetUID());
     }
 
+    public void AddInteractedAsFriend()
+    {
+        int id = InteractNamecard.GetPlayerID();
+        FriendsManager.Instance.AddFriend(id, PlayerData.FindPlayerNameByID(id));
+        InteractNamecard.SetDetails(PlayerInteract.interactPlayer);
+    }
+    
     public void ShowInteractNamecard()
     {
         StartCoroutine(ToggleFlyInAnim(InteractNamecard.gameObject, new Vector3(0, -900, 0), Vector3.zero, 1.0f, null));
@@ -74,6 +86,7 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
     public void HideInteractNamecard(Button button)
     {
         StartCoroutine(ToggleFlyOutAnim(InteractNamecard.gameObject, Vector3.zero, new Vector3(0, -900, 0), 1.0f, button));
+        PlayerInteract.interactPlayer = null;
     }
 
     static public IEnumerator ToggleSlideAnim(Image mask, bool open, float anim_time, Button button)
@@ -113,6 +126,7 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
 
         uiGO.gameObject.SetActive(true);
 
+        uiGO.transform.localPosition = startPos;
         Vector3 fly_rate = (targetPos - startPos) / anim_time;
        
         float timer = anim_time;
@@ -133,7 +147,7 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
         if (button != null)
             button.interactable = false;
 
-
+        uiGO.transform.localPosition = startPos;
         Vector3 fly_rate = (targetPos - startPos) / anim_time;
 
         float timer = anim_time;
@@ -149,7 +163,6 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
 
         uiGO.gameObject.SetActive(false);
     }
-
 
 
     private IEnumerator ExtendNamecardAnim(float anim_time, Button button)

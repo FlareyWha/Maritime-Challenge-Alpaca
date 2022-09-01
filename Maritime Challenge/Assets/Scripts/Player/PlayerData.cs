@@ -69,6 +69,17 @@ public static class PlayerData // Local Player's Data
         return null;
     }
 
+    public static string FindPlayerNameByID(int id)
+    {
+        foreach (KeyValuePair<BasicInfo,  bool> info in PhonebookData)
+        {
+            if (info.Key.UID == id)
+                return info.Key.Name;
+        }
+
+        return "Player does not exist";
+    }
+
    
 
 }

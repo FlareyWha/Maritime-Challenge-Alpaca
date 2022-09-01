@@ -15,6 +15,8 @@ public class FriendsManager : MonoBehaviourSingleton<FriendsManager>
         StartCoroutine(StartAddFriend(id, name));
     }
 
+
+
     IEnumerator StartAddFriend(int otherUID, string name)
     {
         string url = ServerDataManager.URL_addFriend;
@@ -77,5 +79,17 @@ public class FriendsManager : MonoBehaviourSingleton<FriendsManager>
                 Debug.LogError("Friend cannot be removed");
                 break;
         }
+    }
+
+    public static bool CheckIfFriends(int id)
+    {
+        Debug.Log("Checking through Friends List...");
+        foreach (BasicInfo player in PlayerData.FriendList)
+        {
+            Debug.Log("Found Friend Name: " + player.Name);
+            if (player.UID == id)
+                return true;
+        }
+        return false;
     }
 }
