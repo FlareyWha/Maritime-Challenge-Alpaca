@@ -74,6 +74,7 @@ public class FriendInfo : BasicInfo
     public int Department;
     public int GuildID;
     public int Country;
+    public bool Online;
     public int FriendshipLevel;
 }
 
