@@ -3576,14 +3576,14 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1182802842}
+  - {fileID: 779628425}
   m_Father: {fileID: 1387159820}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -189, y: -420}
-  m_SizeDelta: {x: 322, y: 610}
+  m_AnchoredPosition: {x: -189, y: -410}
+  m_SizeDelta: {x: 322, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &708197998
 MonoBehaviour:
@@ -4376,6 +4376,42 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 765997161}
   m_CullTransparentMesh: 1
+--- !u!1 &779628424
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 779628425}
+  m_Layer: 5
+  m_Name: Viewport
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &779628425
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779628424}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1182802842}
+  m_Father: {fileID: 708197997}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 322, y: 600}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &782008266
 GameObject:
   m_ObjectHideFlags: 0
@@ -4974,6 +5010,7 @@ MonoBehaviour:
   ContactsListRect: {fileID: 1182802842}
   DisplayNamecard: {fileID: 1132872499}
   DisplayName: {fileID: 201644417}
+  DisplayAvatar: {fileID: 0}
   FriendshipUI: {fileID: 307217753}
   FriendshipText: {fileID: 961106999}
 --- !u!114 &903138275
@@ -6163,6 +6200,7 @@ GameObject:
   - component: {fileID: 1182802842}
   - component: {fileID: 1182802844}
   - component: {fileID: 1182802845}
+  - component: {fileID: 1182802843}
   m_Layer: 5
   m_Name: ContactsListRect
   m_TagString: Untagged
@@ -6181,14 +6219,28 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 708197997}
+  m_Father: {fileID: 779628425}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -305}
-  m_SizeDelta: {x: 0, y: 610}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 7}
+  m_Pivot: {x: 0.5, y: 1}
+--- !u!114 &1182802843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1182802841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 0
+  m_VerticalFit: 2
 --- !u!222 &1182802844
 CanvasRenderer:
   m_ObjectHideFlags: 0
