@@ -15,7 +15,7 @@ public static class PlayerData // Local Player's Data
     public static int Department = 0;
     public static int GuildID = 0;
     public static int Country = 0;
-    public static int NumRightshipRollers = 0;
+    public static int NumRightshipRollars = 0;
     public static int NumTokens = 0;
     public static int NumEventCurrency = 0;
     public static Vector3 PlayerPosition;

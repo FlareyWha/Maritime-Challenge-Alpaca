@@ -20,4 +20,8 @@ public class ServerDataManager : MonoBehaviour
     public static string URL_addFriend = serverURL + "AddFriend.php";
     public static string URL_deleteFriend = serverURL + "DeleteFriend.php";
     public static string URL_getFriendInfo = serverURL + "GetFriendInfo.php";
+    public static string URL_updateAccountXPLevels = serverURL + "UpdateAccountXPLevels.php";
+    public static string URL_updateTotalRightshipRollars = serverURL + "UpdateTotalRightshipRollars.php";
+    public static string URL_updateTotalTokens = serverURL + "UpdateTotalTokens.php";
+    public static string URL_updateTotalEventCurrency = serverURL + "UpdateTotalEventCurrency.php";
 }

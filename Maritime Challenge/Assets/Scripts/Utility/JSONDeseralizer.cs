@@ -21,7 +21,7 @@ public class JSONDeseralizer : MonoBehaviour
         PlayerData.Department = jsonPlayerData.iDepartment;
         PlayerData.GuildID = jsonPlayerData.iGuildID;
         PlayerData.Country = jsonPlayerData.iCountry;
-        PlayerData.NumRightshipRollers = jsonPlayerData.iTotalRightshipRollers;
+        PlayerData.NumRightshipRollars = jsonPlayerData.iTotalRightshipRollars;
         PlayerData.NumTokens = jsonPlayerData.iTotalTokens;
         PlayerData.NumEventCurrency = jsonPlayerData.iTotalEventCurrency;
         PlayerData.PlayerPosition = new Vector3(jsonPlayerData.fPlayerXPos, jsonPlayerData.fPlayerYPos, jsonPlayerData.fPlayerZPos);

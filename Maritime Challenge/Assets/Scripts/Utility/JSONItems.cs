@@ -16,7 +16,7 @@ public class JSONPlayerData
     public int iDepartment;
     public int iGuildID;
     public int iCountry;
-    public int iTotalRightshipRollers;
+    public int iTotalRightshipRollars;
     public int iTotalTokens;
     public int iTotalEventCurrency;
     public float fPlayerXPos;
