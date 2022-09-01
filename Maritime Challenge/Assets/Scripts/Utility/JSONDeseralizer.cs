@@ -34,7 +34,12 @@ public class JSONDeseralizer : MonoBehaviour
         //Add all the friends into a list
         for (int i = 0; i < friendList.friends.Count; ++i)
         {
-            PlayerData.FriendList.Add(friendList.friends[i].iFriendUID, friendList.friends[i].iFriendshipLevel);
+            BasicInfo basicInfo = new BasicInfo
+            {
+                UID = friendList.friends[i].iFriendUID,
+                Name = friendList.friends[i].sUsername
+            };
+            PlayerData.FriendList.Add(basicInfo);
         }
     }
 
@@ -45,7 +50,12 @@ public class JSONDeseralizer : MonoBehaviour
         //Add all the phonebook data into the dict
         for (int i = 0; i < phonebookDataList.phonebookData.Count; ++i)
         {
-            PlayerData.PhonebookData.Add(phonebookDataList.phonebookData[i].iOtherUID, phonebookDataList.phonebookData[i].bOtherUnlocked);
+            BasicInfo basicInfo = new BasicInfo
+            {
+                UID = phonebookDataList.phonebookData[i].iOtherUID,
+                Name = phonebookDataList.phonebookData[i].sUsername
+            };
+            PlayerData.PhonebookData.Add(basicInfo, phonebookDataList.phonebookData[i].bOtherUnlocked);
         }
     }
 

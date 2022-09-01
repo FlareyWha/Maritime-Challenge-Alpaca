@@ -57,11 +57,11 @@ public class PlayerInteract : NetworkBehaviour
     public void AddFriend()
     {
         Player player = gameObject.GetComponent<Player>();
-        StartCoroutine(StartAddFriend(player.GetUID()));
+        StartCoroutine(StartAddFriend(player.GetUID(), player.GetUsername()));
 
     }
 
-    IEnumerator StartAddFriend(int otherUID)
+    IEnumerator StartAddFriend(int otherUID, string name)
     {
         string url = ServerDataManager.URL_addFriend;
         Debug.Log(url);
@@ -77,7 +77,12 @@ public class PlayerInteract : NetworkBehaviour
                 Debug.Log(webreq.downloadHandler.text);
 
                 //Add friend to the friend list
-                PlayerData.FriendList.Add(otherUID, 1);
+                BasicInfo basicInfo = new BasicInfo
+                {
+                    UID = otherUID,
+                    Name = name
+                };
+                PlayerData.FriendList.Add(basicInfo);
                 break;
             case UnityWebRequest.Result.ProtocolError:
                 Debug.Log(webreq.downloadHandler.text);

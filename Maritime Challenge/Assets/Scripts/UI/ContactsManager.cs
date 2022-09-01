@@ -23,7 +23,7 @@ public class ContactsManager : MonoBehaviour
         }
 
 
-        foreach (KeyValuePair<int, bool> player in PlayerData.PhonebookData)
+        foreach (KeyValuePair<BasicInfo, bool> player in PlayerData.PhonebookData)
         {
             GameObject uiGO = Instantiate(ContactUIPrefab, ContactsListRect);
             ContactsUI contact = uiGO.GetComponent<ContactsUI>();
@@ -60,6 +60,9 @@ public class ContactsManager : MonoBehaviour
                 return;
             }
         }
+
+
+        //Should this be above
         StartCoroutine(StartGetFriendInfo(friendUID));
     }
 

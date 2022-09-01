@@ -34,7 +34,7 @@ public class JSONPlayerDataList
 public class JSONFriends
 {
     public int iFriendUID;
-    public int iFriendshipLevel;
+    public string sUsername;
 }
 
 [Serializable]
@@ -47,6 +47,7 @@ public class JSONFriendList
 public class JSONPhonebookData
 {
     public int iOtherUID;
+    public string sUsername;
     public bool bOtherUnlocked;
 }
 
