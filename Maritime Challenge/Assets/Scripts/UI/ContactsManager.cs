@@ -15,6 +15,8 @@ public class ContactsManager : MonoBehaviour
     [SerializeField]
     private Text DisplayName;
     [SerializeField]
+    private Image DisplayAvatar;
+    [SerializeField]
     private GameObject FriendshipUI;
     [SerializeField]
     private Text FriendshipText;
@@ -75,14 +77,16 @@ public class ContactsManager : MonoBehaviour
 
         if (CheckIfFriends(currSelected.GetContactInfo().UID))
             SetCurrentFriendInfo(currSelected.GetContactInfo().UID);
-        else
+        else if (currSelected.GetUnlockStatus())
             UpdateContactDisplayUI(currSelected.GetContactInfo());
+        else
+            HideContactDisplayInfo();
     }
 
     private void UpdateContactDisplayUI(BasicInfo player) // For Unlocked But Not Friends
     {
         FriendshipUI.SetActive(false);
-        DisplayNamecard.SetUnknown();
+        DisplayNamecard.SetHidden();
         DisplayName.text = player.Name;
     }
 
@@ -92,6 +96,13 @@ public class ContactsManager : MonoBehaviour
         FriendshipText.text = friend.FriendshipLevel.ToString();
         DisplayNamecard.SetDetails(friend);
         DisplayName.text = friend.Name;
+    }
+
+    private void HideContactDisplayInfo() // For Not Unlocked
+    {
+        FriendshipUI.SetActive(false);
+        DisplayNamecard.SetUnknown();
+        DisplayName.text = "?";
     }
 
     private void SetCurrentFriendInfo(int friendUID)

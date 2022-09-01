@@ -16,6 +16,8 @@ public class ContactsUI : MonoBehaviour
 
     private event Action<ContactsUI> SetSelectedContact;
 
+    private bool is_unlocked = false;
+
     void Awake()
     {
         button = gameObject.GetComponent<Button>();
@@ -35,6 +37,8 @@ public class ContactsUI : MonoBehaviour
         Name.text = contact.Name;
         contactInfo = contact;
         SetSelectedContact = action;
+
+        is_unlocked = true;
     }
 
     public void InitUnknown(BasicInfo contact, Action<ContactsUI> action)
@@ -44,6 +48,7 @@ public class ContactsUI : MonoBehaviour
         contactInfo = contact;
         Name.text = "";
 
+        is_unlocked = false;
     }
 
     public void DisableHighlight()
@@ -61,6 +66,11 @@ public class ContactsUI : MonoBehaviour
     public BasicInfo GetContactInfo()
     {
         return contactInfo;
+    }
+
+    public bool GetUnlockStatus()
+    {
+        return is_unlocked;
     }
 
 
