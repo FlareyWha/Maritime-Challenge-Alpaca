@@ -17,7 +17,7 @@ public class ContactsManager : MonoBehaviour
 
     private ContactsUI currSelected;
 
-    private void UpdateContactsListRect()
+    public void UpdateContactsListRect()
     {
         foreach (Transform child in ContactsListRect)
         {
@@ -35,7 +35,7 @@ public class ContactsManager : MonoBehaviour
             }
             else
             {
-
+                contact.Initialise(null, player.Key.UID, player.Key.Name, SetSelectedContact);
             }
         }
     }

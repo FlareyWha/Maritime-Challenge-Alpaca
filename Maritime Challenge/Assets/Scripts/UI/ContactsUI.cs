@@ -8,6 +8,8 @@ public class ContactsUI : MonoBehaviour
     private Image AvatarImage, Highlight;
     [SerializeField]
     private Text Name;
+    [SerializeField]
+    private Sprite UnknownSprite;
 
     private Button button;
     private int linkedPlayerID;
@@ -37,6 +39,7 @@ public class ContactsUI : MonoBehaviour
     public void InitUnknown(Action<ContactsUI> action)
     {
         SetSelectedContact = action;
+        Name.text = "";
     }
 
     public void DisableHighlight()
