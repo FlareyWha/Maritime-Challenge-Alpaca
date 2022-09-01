@@ -46,7 +46,7 @@ public class ContactsManager : MonoBehaviour
 
         if (ContactsListRect.childCount > 0)
         {
-            currSelected = ContactsListRect.GetChild(0).gameObject.GetComponent<ContactsUI>();
+            SetSelectedContact(ContactsListRect.GetChild(0).gameObject.GetComponent<ContactsUI>());
             currSelected.EnableHighlight();
         }
     }

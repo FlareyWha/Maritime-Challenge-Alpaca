@@ -48,6 +48,22 @@ public static class PlayerData // Local Player's Data
         return "Country does not exist";
     }
 
+    public static string GetGuildName(int id)
+    {
+        switch (id)
+        {
+            case 0:
+                return "Guild1";
+            case 1:
+                return "Guild2";
+            case 2:
+                return "Guild3";
+            case 3:
+                return "Guild4";
+        }
+        return "Guild does not exist";
+    }
+
     public static Sprite GetTitleByID(int id)
     {
         return null;

@@ -29,11 +29,12 @@ public class ProfileNamecard : MonoBehaviour
     {
         ProfileInfo.SetActive(true);
         HiddenPanel.SetActive(false);
-        Name.text = player.Name;
+        Name.text = "Name: " + player.Name;
         Bio.text = player.Biography;
         Level.text = player.CurrLevel.ToString();
-        Country.text = PlayerData.GetCountryName(player.Country);
-        Title.sprite = PlayerData.GetTitleByID(player.CurrentTitleID);
+        Country.text = "Country: " + PlayerData.GetCountryName(player.Country);
+        Guild.text = "Guild: " + PlayerData.GetGuildName(player.GuildID);
+        //Title.sprite = PlayerData.GetTitleByID(player.CurrentTitleID);
     }
 
     public void SetUnknown()
