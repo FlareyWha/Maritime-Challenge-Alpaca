@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5580784871350116834}
   - component: {fileID: 2769108654047325868}
   - component: {fileID: 2173444980401618727}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,7 +91,7 @@ GameObject:
   - component: {fileID: 6795798475703629534}
   - component: {fileID: 1423794624995397429}
   - component: {fileID: 6173948350379121533}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: InteractPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -182,7 +182,7 @@ GameObject:
   - component: {fileID: 5185564505487466057}
   - component: {fileID: 2591772733743685792}
   - component: {fileID: 4344231054537148662}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: ring
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -258,7 +258,7 @@ GameObject:
   - component: {fileID: 4810621363634352147}
   - component: {fileID: 8515650125251220336}
   - component: {fileID: 2242580777014837389}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: ViewProfileButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -391,7 +391,7 @@ GameObject:
   - component: {fileID: 2345902927155398908}
   - component: {fileID: 1067102664575429290}
   - component: {fileID: 7974225037917856813}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: CloseButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -523,7 +523,7 @@ GameObject:
   - component: {fileID: 7846514648841356797}
   - component: {fileID: 6747175181494596849}
   - component: {fileID: 1524165352262117988}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -602,7 +602,7 @@ GameObject:
   - component: {fileID: 1466539341718002028}
   - component: {fileID: 1418077665753375284}
   - component: {fileID: 7977214917965500912}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -680,7 +680,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3272728782946684711}
   - component: {fileID: 2055382209836467775}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: ChatBubbleRect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -744,7 +744,7 @@ GameObject:
   - component: {fileID: 1145404929756999563}
   - component: {fileID: 4976954408131959529}
   - component: {fileID: 7861130653023529842}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -853,7 +853,7 @@ GameObject:
   - component: {fileID: 9181191743022904711}
   - component: {fileID: 9116503974399402979}
   - component: {fileID: 6532631195805342017}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}

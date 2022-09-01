@@ -121,6 +121,9 @@ public class Joystick : MonoBehaviour
 
     private bool IsWithinTouchArea()
     {
+        if (UIManager.IsPointerOverUIElement())
+            return false;
+
 
         float minX, minY, maxX, maxY;
         minX = minY = maxX = maxY = 0;
