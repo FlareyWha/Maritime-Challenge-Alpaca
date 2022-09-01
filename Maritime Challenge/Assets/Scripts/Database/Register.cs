@@ -15,6 +15,8 @@ public class Register : MonoBehaviour
 
     public void SendRegisterInfo() //to be involved by button click
     {
+        confirmationText.text = "";
+
         //Verify that password is the same, if they are then continue, else try again
         //if (if_verifyPassword.text != if_password.text)
         //{
