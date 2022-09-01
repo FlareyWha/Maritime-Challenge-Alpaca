@@ -22,7 +22,7 @@ public class ContactsUI : MonoBehaviour
         button.onClick.AddListener(OnButtonClicked);
     }
 
-    void OnButtonClicked()
+    public void OnButtonClicked()
     {
         SetSelectedContact?.Invoke(this);
         EnableHighlight();

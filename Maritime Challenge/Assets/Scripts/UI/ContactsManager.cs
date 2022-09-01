@@ -21,6 +21,12 @@ public class ContactsManager : MonoBehaviour
 
     private ContactsUI currSelected = null;
 
+
+    private void Start()
+    {
+        FriendsManager.OnFriendListUpdated += UpdateDisplay;
+    }
+
     public void UpdateContactsListRect()
     {
         foreach (Transform child in ContactsListRect)
@@ -46,8 +52,9 @@ public class ContactsManager : MonoBehaviour
 
         if (ContactsListRect.childCount > 0)
         {
-            SetSelectedContact(ContactsListRect.GetChild(0).gameObject.GetComponent<ContactsUI>());
-            currSelected.EnableHighlight();
+            //SetSelectedContact(ContactsListRect.GetChild(0).gameObject.GetComponent<ContactsUI>());
+            //currSelected.EnableHighlight();
+            ContactsListRect.GetChild(0).gameObject.GetComponent<ContactsUI>().OnButtonClicked();
         }
     }
 
@@ -56,10 +63,18 @@ public class ContactsManager : MonoBehaviour
         if (currSelected != null)
             currSelected.DisableHighlight();
         currSelected = contact;
-        if (CheckIfFriends(contact.GetContactInfo().UID))
-            SetCurrentFriendInfo(contact.GetContactInfo().UID);
+        UpdateDisplay();
+    }
+
+    private void UpdateDisplay()
+    {
+        if (currSelected == null)
+            return;
+
+        if (CheckIfFriends(currSelected.GetContactInfo().UID))
+            SetCurrentFriendInfo(currSelected.GetContactInfo().UID);
         else
-            UpdateContactDisplayUI(contact.GetContactInfo());
+            UpdateContactDisplayUI(currSelected.GetContactInfo());
     }
 
     private void UpdateContactDisplayUI(BasicInfo player) // For Unlocked But Not Friends
@@ -130,6 +145,16 @@ public class ContactsManager : MonoBehaviour
                 return true;
         }
         return false;
+    }
+
+    public void AddSelectedContactAsFriend()
+    {
+        FriendsManager.Instance.AddFriend(currSelected.GetContactInfo().UID, currSelected.GetContactInfo().Name);
+    }
+
+    public void UnfriendContact()
+    {
+        FriendsManager.Instance.DeleteFriend(currSelected.GetContactInfo().UID);
     }
 
 }
