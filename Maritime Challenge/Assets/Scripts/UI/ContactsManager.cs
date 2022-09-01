@@ -64,8 +64,6 @@ public class ContactsManager : MonoBehaviour
             }
         }
 
-
-        //Should this be above
         StartCoroutine(StartGetFriendInfo(friendUID));
     }
 
