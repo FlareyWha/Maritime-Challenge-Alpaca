@@ -30,7 +30,7 @@ public class Player : NetworkBehaviour
         // Set My Player
         PlayerData.MyPlayer = this;
         // Init Synced Player Vars
-        SetDetails(PlayerData.Name, PlayerData.Biography, PlayerData.CurrentTitleID, PlayerData.GuildID, PlayerData.Country, PlayerData.CurrLevel);
+        SetDetails(PlayerData.UID, PlayerData.Name, PlayerData.Biography, PlayerData.CurrentTitleID, PlayerData.GuildID, PlayerData.Country, PlayerData.CurrLevel);
         Debug.Log("Setting Player Name.." + username);
 
     }
@@ -58,8 +58,9 @@ public class Player : NetworkBehaviour
     }
 
     [Command]
-    void SetDetails(string name, string bio, int title_id, int guild_id, int country_id, int level)
+    void SetDetails(int id, string name, string bio, int title_id, int guild_id, int country_id, int level)
     {
+        UID = id;
         username = name;
         this.bio = bio;
         titleID = title_id;
