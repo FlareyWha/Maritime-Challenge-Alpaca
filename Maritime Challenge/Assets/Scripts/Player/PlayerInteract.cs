@@ -57,11 +57,10 @@ public class PlayerInteract : NetworkBehaviour
     public void AddFriend()
     {
         Player player = gameObject.GetComponent<Player>();
-        StartCoroutine(StartAddFriend(player.GetUID()));
-
+        StartCoroutine(StartAddFriend(player.GetUID(), player.GetUsername()));
     }
 
-    IEnumerator StartAddFriend(int otherUID)
+    IEnumerator StartAddFriend(int otherUID, string name)
     {
         string url = ServerDataManager.URL_addFriend;
         Debug.Log(url);
@@ -77,7 +76,12 @@ public class PlayerInteract : NetworkBehaviour
                 Debug.Log(webreq.downloadHandler.text);
 
                 //Add friend to the friend list
-                PlayerData.FriendList.Add(otherUID, 1);
+                BasicInfo basicInfo = new BasicInfo
+                {
+                    UID = otherUID,
+                    Name = name
+                };
+                PlayerData.FriendList.Add(basicInfo);
                 break;
             case UnityWebRequest.Result.ProtocolError:
                 Debug.Log(webreq.downloadHandler.text);
@@ -87,6 +91,39 @@ public class PlayerInteract : NetworkBehaviour
                 break;
         }
     }
+
+    public void DeleteFriend()
+    {
+        Player player = gameObject.GetComponent<Player>();
+
+        //Delete twice due to how friends work
+        StartCoroutine(StartDeleteFriend(player.GetUID()));
+    }
+
+    IEnumerator StartDeleteFriend(int otherUID)
+    {
+        string url = ServerDataManager.URL_deleteFriend;
+        Debug.Log(url);
+
+        WWWForm form = new WWWForm();
+        form.AddField("UID", PlayerData.UID);
+        form.AddField("OtherUID", otherUID);
+        using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
+        yield return webreq.SendWebRequest();
+        switch (webreq.result)
+        {
+            case UnityWebRequest.Result.Success:
+                Debug.Log(webreq.downloadHandler.text);
+                break;
+            case UnityWebRequest.Result.ProtocolError:
+                Debug.Log(webreq.downloadHandler.text);
+                break;
+            default:
+                Debug.LogError("Friend cannot be removed");
+                break;
+        }
+    }
+
     private bool IsWithinPlayer()
     {
         Vector2 touchPos = InputManager.InputActions.Main.TouchPosition.ReadValue<Vector2>();

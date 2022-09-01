@@ -22,10 +22,10 @@ public static class PlayerData // Local Player's Data
 
     // List<FriendInfo> AllUnlockedList 
 
-    //Dict to store friendId and their friendship level
-    public static Dictionary<int, int> FriendList = new Dictionary<int, int>();
+    //Dict to store friendId
+    public static List<BasicInfo> FriendList = new List<BasicInfo>();
     //Dict to store id of people and whether they are unlocked
-    public static Dictionary<int, bool> PhonebookData = new Dictionary<int, bool>();
+    public static Dictionary<BasicInfo, bool> PhonebookData = new Dictionary<BasicInfo, bool>();
 
     public static Player MyPlayer = null;
 
@@ -57,10 +57,15 @@ public static class PlayerData // Local Player's Data
 
 }
 
-public struct FriendInfo
+public class BasicInfo
 {
     public int UID;
     public string Name;
+    //public List<Cosmetic> Cosmetics;
+}
+
+public class FriendInfo : BasicInfo
+{
     public bool ShowBirthday;
     public string Birthday;
     public int CurrentTitleID;
@@ -69,7 +74,6 @@ public struct FriendInfo
     public int Department;
     public int GuildID;
     public int Country;
-
     public int FriendshipLevel;
 }
 
