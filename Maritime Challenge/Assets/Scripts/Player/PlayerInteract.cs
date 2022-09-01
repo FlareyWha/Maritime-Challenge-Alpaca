@@ -25,7 +25,6 @@ public class PlayerInteract : NetworkBehaviour
         playerSize.x *= pixelsPerUnit;
         playerSize.y *= pixelsPerUnit;
 
-        Debug.Log("PLayer Sixe: " + playerSize);
     }
 
     void Update()

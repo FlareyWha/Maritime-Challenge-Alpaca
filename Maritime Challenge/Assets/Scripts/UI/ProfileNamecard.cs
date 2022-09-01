@@ -9,10 +9,14 @@ public class ProfileNamecard : MonoBehaviour
     private Text Name, Guild, Country, Bio, Level;
     [SerializeField]
     private Image Title;
+    [SerializeField]
+    private GameObject ProfileInfo, HiddenPanel;
 
 
     public void SetDetails(Player player)
     {
+        ProfileInfo.SetActive(true);
+        HiddenPanel.SetActive(false);
         Name.text = player.GetUsername();
         Bio.text = player.GetBio();
         Level.text = player.GetLevel().ToString();
@@ -23,12 +27,19 @@ public class ProfileNamecard : MonoBehaviour
 
     public void SetDetails(FriendInfo player)
     {
+        ProfileInfo.SetActive(true);
+        HiddenPanel.SetActive(false);
         Name.text = player.Name;
         Bio.text = player.Biography;
         Level.text = player.CurrLevel.ToString();
         Country.text = PlayerData.GetCountryName(player.Country);
         Title.sprite = PlayerData.GetTitleByID(player.CurrentTitleID);
+    }
 
+    public void SetUnknown()
+    {
+        ProfileInfo.SetActive(false);
+        HiddenPanel.SetActive(true);
     }
 
 }

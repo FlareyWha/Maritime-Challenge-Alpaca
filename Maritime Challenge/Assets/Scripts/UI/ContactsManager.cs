@@ -14,8 +14,12 @@ public class ContactsManager : MonoBehaviour
     private ProfileNamecard DisplayNamecard;
     [SerializeField]
     private Text DisplayName;
+    [SerializeField]
+    private GameObject FriendshipUI;
+    [SerializeField]
+    private Text FriendshipText;
 
-    private ContactsUI currSelected;
+    private ContactsUI currSelected = null;
 
     public void UpdateContactsListRect()
     {
@@ -24,6 +28,7 @@ public class ContactsManager : MonoBehaviour
             Destroy(child.gameObject);
         }
 
+        Debug.Log("Updating ContactsListRect...");
 
         foreach (KeyValuePair<BasicInfo, bool> player in PlayerData.PhonebookData)
         {
@@ -31,24 +36,43 @@ public class ContactsManager : MonoBehaviour
             ContactsUI contact = uiGO.GetComponent<ContactsUI>();
             if (!player.Value)
             {
-                contact.InitUnknown(SetSelectedContact);
+                contact.InitUnknown(player.Key, SetSelectedContact);
             }
             else
             {
-                contact.Initialise(null, player.Key.UID, player.Key.Name, SetSelectedContact);
+                contact.Initialise(null, player.Key, SetSelectedContact);
             }
+        }
+
+        if (ContactsListRect.childCount > 0)
+        {
+            currSelected = ContactsListRect.GetChild(0).gameObject.GetComponent<ContactsUI>();
+            currSelected.EnableHighlight();
         }
     }
 
     public void SetSelectedContact(ContactsUI contact)
     {
-        currSelected.DisableHighlight();
+        if (currSelected != null)
+            currSelected.DisableHighlight();
         currSelected = contact;
-        SetCurrentFriendInfo(contact.GetLinkedPlayerID());
+        if (CheckIfFriends(contact.GetContactInfo().UID))
+            SetCurrentFriendInfo(contact.GetContactInfo().UID);
+        else
+            UpdateContactDisplayUI(contact.GetContactInfo());
     }
 
-    private void UpdateContactDisplayUI(FriendInfo friend)
+    private void UpdateContactDisplayUI(BasicInfo player) // For Unlocked But Not Friends
     {
+        FriendshipUI.SetActive(false);
+        DisplayNamecard.SetUnknown();
+        DisplayName.text = player.Name;
+    }
+
+    private void UpdateContactDisplayUI(FriendInfo friend) // For Friends
+    {
+        FriendshipUI.SetActive(true);
+        FriendshipText.text = friend.FriendshipLevel.ToString();
         DisplayNamecard.SetDetails(friend);
         DisplayName.text = friend.Name;
     }
@@ -94,4 +118,18 @@ public class ContactsManager : MonoBehaviour
                 break;
         }
     }
+
+
+    private bool CheckIfFriends(int id)
+    {
+        Debug.Log("Checking through Friends List...");
+        foreach (BasicInfo player in PlayerData.FriendList)
+        {
+            Debug.Log("Found Friend Name: " + player.Name);
+            if (player.UID == id)
+                return true;
+        }
+        return false;
+    }
+
 }

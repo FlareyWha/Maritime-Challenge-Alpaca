@@ -12,7 +12,7 @@ public class ContactsUI : MonoBehaviour
     private Sprite UnknownSprite;
 
     private Button button;
-    private int linkedPlayerID;
+    private BasicInfo contactInfo;
 
     private event Action<ContactsUI> SetSelectedContact;
 
@@ -28,18 +28,22 @@ public class ContactsUI : MonoBehaviour
         EnableHighlight();
     }
 
-    public void Initialise(Sprite avatarSprite, int playerID, string name, Action<ContactsUI> action)
+    public void Initialise(Sprite avatarSprite, BasicInfo contact, Action<ContactsUI> action)
     {
-        AvatarImage.sprite = avatarSprite;
-        Name.text = name;
-        linkedPlayerID = playerID;
+        if (avatarSprite != null)
+            AvatarImage.sprite = avatarSprite;
+        Name.text = contact.Name;
+        contactInfo = contact;
         SetSelectedContact = action;
     }
 
-    public void InitUnknown(Action<ContactsUI> action)
+    public void InitUnknown(BasicInfo contact, Action<ContactsUI> action)
     {
+        AvatarImage.sprite = UnknownSprite;
         SetSelectedContact = action;
+        contactInfo = contact;
         Name.text = "";
+
     }
 
     public void DisableHighlight()
@@ -47,16 +51,16 @@ public class ContactsUI : MonoBehaviour
         Highlight.color = new Color32(255, 255, 255, 50);
     }
 
-    private void EnableHighlight()
+    public void EnableHighlight()
     {
 
         Highlight.color = new Color32(255, 255, 255, 150);
 
     }
 
-    public int GetLinkedPlayerID()
+    public BasicInfo GetContactInfo()
     {
-        return linkedPlayerID;
+        return contactInfo;
     }
 
 

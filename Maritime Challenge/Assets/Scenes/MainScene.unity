@@ -4961,8 +4961,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ContactUIPrefab: {fileID: 3130731065216954894, guid: 2c575759e0f01fb45803e1aadf816e64, type: 3}
   ContactsListRect: {fileID: 1182802842}
-  DisplayNamecard: {fileID: 0}
-  DisplayName: {fileID: 0}
+  DisplayNamecard: {fileID: 1132872499}
+  DisplayName: {fileID: 201644417}
+  FriendshipUI: {fileID: 307217753}
+  FriendshipText: {fileID: 961106999}
 --- !u!1 &915098690
 GameObject:
   m_ObjectHideFlags: 0
@@ -6009,6 +6011,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5226220916686098198, guid: 0684eb063e973ee42b51ae98f07c0d9f, type: 3}
   m_PrefabInstance: {fileID: 1132872497}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1132872499 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2729196438704298249, guid: 0684eb063e973ee42b51ae98f07c0d9f, type: 3}
+  m_PrefabInstance: {fileID: 1132872497}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6fa704dbb3e0784a9cf1148a239cb13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1182802841
 GameObject:
   m_ObjectHideFlags: 0
@@ -11156,6 +11169,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1062292630}
     m_Modifications:
+    - target: {fileID: 135333530212032390, guid: 0684eb063e973ee42b51ae98f07c0d9f, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5226220915925908936, guid: 0684eb063e973ee42b51ae98f07c0d9f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
