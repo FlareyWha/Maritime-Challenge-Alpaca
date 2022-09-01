@@ -52,6 +52,8 @@ public class ContactsManager : MonoBehaviour
 
         if (ContactsListRect.childCount > 0)
         {
+            // ITS LITERALLY THE SAME WHY NO WORK AAAAAAAAAAAAAAAAA
+
             //SetSelectedContact(ContactsListRect.GetChild(0).gameObject.GetComponent<ContactsUI>());
             //currSelected.EnableHighlight();
             ContactsListRect.GetChild(0).gameObject.GetComponent<ContactsUI>().OnButtonClicked();
