@@ -20,14 +20,13 @@ public static class PlayerData // Local Player's Data
     public static int NumEventCurrency = 0;
     public static Vector3 PlayerPosition;
 
-    // List<FriendInfo> AllUnlockedList 
+
+    public static Player MyPlayer = null;
 
     //Dict to store friendId
     public static List<BasicInfo> FriendList = new List<BasicInfo>();
     //Dict to store id of people and whether they are unlocked
     public static Dictionary<int, BasicInfo> PhonebookData = new Dictionary<int, BasicInfo>();
-
-    public static Player MyPlayer = null;
 
 	public static List<FriendInfo> FriendDataList = new List<FriendInfo>();
 
@@ -80,7 +79,28 @@ public static class PlayerData // Local Player's Data
         return "Player does not exist";
     }
 
-   
+    public static void ResetData()
+    {
+        UID = 0;
+        Name = "Unset";
+        ShowBirthday = true;
+        Birthday = "0000-0-0";
+        CurrentTitleID = 1;
+        Biography = "";
+        CurrLevel = 0;
+        CurrXP = 0;
+        Department = 0;
+        GuildID = 0;
+        Country = 0;
+        NumRightshipRollars = 0;
+        NumTokens = 0;
+        NumEventCurrency = 0;
+        PlayerPosition = Vector3.zero;
+
+        FriendList.Clear();
+        PhonebookData.Clear();
+        FriendDataList.Clear();
+    }
 
 }
 

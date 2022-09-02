@@ -73,4 +73,11 @@ public class ProfileManager : MonoBehaviour
         else
             birthdayText.text = "Birthday: Hidden";
     }
+
+    public void LogOut()
+    {
+        ServerManager.Instance.DisconnectFromServer();
+        SceneManager.Instance.LoadScene(SCENE_ID.LOGIN);
+        PlayerData.ResetData();
+    }
 }

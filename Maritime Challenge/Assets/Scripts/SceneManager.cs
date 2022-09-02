@@ -15,6 +15,8 @@ public class SceneManager : MonoBehaviourSingleton<SceneManager>
         UnityEngine.SceneManagement.SceneManager.LoadScene((int)id);
     }
 
+    
+
 }
 
 public enum SCENE_ID

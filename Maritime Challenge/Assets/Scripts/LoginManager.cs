@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using Mirror;
 using UnityEngine.Networking;
 
 public class LoginManager : MonoBehaviour
@@ -13,12 +12,6 @@ public class LoginManager : MonoBehaviour
     [SerializeField]
     private InputField InputField_Email, InputField_Password;
 
-    NetworkManager manager;
-
-    void Start()
-    {
-        manager = GameObject.Find("NetworkManager").GetComponent<NetworkManager>();
-    }
 
     public void Login()
     {
@@ -34,6 +27,8 @@ public class LoginManager : MonoBehaviour
         // Set Player Details/Data in PLayerData
         StartCoroutine(DoSendLoginInfoEmail());
     }
+
+ 
 
     IEnumerator DoSendLoginInfoEmail()
     {
@@ -183,10 +178,7 @@ public class LoginManager : MonoBehaviour
     {
         // Connect to Server
         SceneManager.Instance.LoadScene(SCENE_ID.HOME);
-        foreach (Transform pos in NetworkManager.startPositions)
-        {
-            Debug.Log("Found Pos: " + pos.position);
-        }
-        manager.StartClient();
+        ServerManager.Instance.ConnectToServer();
+      
     }
 }
