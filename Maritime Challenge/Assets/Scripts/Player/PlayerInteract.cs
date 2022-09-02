@@ -53,7 +53,10 @@ public class PlayerInteract : NetworkBehaviour
 
         //Unlock the phonebook data if other isnt unlocked to begin with
         if (!PlayerData.PhonebookData[player.GetUID()].Unlocked)
+        {
             StartCoroutine(UpdatePhonebookOtherUnlocked(player));
+            PlayerData.MyPlayer.UpdateXPLevels(300);
+        }
         else
         {
             UIManager.Instance.SetInteractNamecardDetails(player);
