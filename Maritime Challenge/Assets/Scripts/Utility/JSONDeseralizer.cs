@@ -37,7 +37,8 @@ public class JSONDeseralizer : MonoBehaviour
             BasicInfo basicInfo = new BasicInfo
             {
                 UID = friendList.friends[i].iFriendUID,
-                Name = friendList.friends[i].sUsername
+                Name = friendList.friends[i].sUsername,
+                Unlocked = true
             };
             PlayerData.FriendList.Add(basicInfo);
         }
@@ -53,9 +54,10 @@ public class JSONDeseralizer : MonoBehaviour
             BasicInfo basicInfo = new BasicInfo
             {
                 UID = phonebookDataList.phonebookData[i].iOtherUID,
-                Name = phonebookDataList.phonebookData[i].sUsername
+                Name = phonebookDataList.phonebookData[i].sUsername,
+                Unlocked = phonebookDataList.phonebookData[i].bOtherUnlocked
             };
-            PlayerData.PhonebookData.Add(basicInfo, phonebookDataList.phonebookData[i].bOtherUnlocked);
+            PlayerData.PhonebookData.Add(phonebookDataList.phonebookData[i].iOtherUID, basicInfo);
         }
     }
 
