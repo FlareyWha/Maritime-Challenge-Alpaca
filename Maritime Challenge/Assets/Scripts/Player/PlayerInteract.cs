@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Mirror;
+using UnityEngine.Networking;
 
 public class PlayerInteract : NetworkBehaviour
 {
@@ -50,9 +51,48 @@ public class PlayerInteract : NetworkBehaviour
     {
         Player player = gameObject.GetComponent<Player>();
 
-        UIManager.Instance.SetInteractNamecardDetails(player);
+        //Unlock the phonebook data if other isnt unlocked to begin with
+        if (!PlayerData.PhonebookData[player.GetUID()].Unlocked)
+            StartCoroutine(UpdatePhonebookOtherUnlocked(player));
+        else
+        {
+            UIManager.Instance.SetInteractNamecardDetails(player);
+        }
+
         UIManager.Instance.ShowInteractNamecard(button);
         interactPlayer = player;
+    }
+
+    IEnumerator UpdatePhonebookOtherUnlocked(Player player)
+    {
+        string url = ServerDataManager.URL_updatePhonebookOtherUnlocked;
+        Debug.Log(url);
+
+        int otherUID = player.GetUID();
+
+        WWWForm form = new WWWForm();
+        form.AddField("UID", PlayerData.UID);
+        form.AddField("OtherUID", otherUID);
+        using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
+        yield return webreq.SendWebRequest();
+        switch (webreq.result)
+        {
+            case UnityWebRequest.Result.Success:
+                //Deseralize the data
+                Debug.Log(webreq.downloadHandler.text);
+
+                PlayerData.PhonebookData[otherUID].Unlocked = true;
+
+                UIManager.Instance.SetInteractNamecardDetails(player);
+
+                break;
+            case UnityWebRequest.Result.ProtocolError:
+                Debug.LogError(webreq.downloadHandler.text);
+                break;
+            default:
+                Debug.LogError("Server error");
+                break;
+        }
     }
 
 

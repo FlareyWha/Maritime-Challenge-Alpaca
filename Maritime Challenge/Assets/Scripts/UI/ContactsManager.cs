@@ -40,17 +40,17 @@ public class ContactsManager : MonoBehaviour
 
         // TBC - Sort List By Known/Unknown
 
-        foreach (KeyValuePair<BasicInfo, bool> player in PlayerData.PhonebookData)
+        foreach (KeyValuePair<int, BasicInfo> player in PlayerData.PhonebookData)
         {
             GameObject uiGO = Instantiate(ContactUIPrefab, ContactsListRect);
             ContactsUI contact = uiGO.GetComponent<ContactsUI>();
-            if (!player.Value)
+            if (!player.Value.Unlocked)
             {
-                contact.InitUnknown(player.Key, SetSelectedContact);
+                contact.InitUnknown(player.Value, SetSelectedContact);
             }
             else
             {
-                contact.Initialise(null, player.Key, SetSelectedContact);
+                contact.Initialise(null, player.Value, SetSelectedContact);
             }
         }
 
@@ -164,10 +164,10 @@ public class ContactsManager : MonoBehaviour
 
     public static bool CheckIfKnown(int playerID)
     {
-        foreach (KeyValuePair<BasicInfo, bool> player in PlayerData.PhonebookData)
+        foreach (KeyValuePair<int, BasicInfo> player in PlayerData.PhonebookData)
         {
-            if (player.Key.UID == playerID)
-                return player.Value;
+            if (player.Value.UID == playerID)
+                return player.Value.Unlocked;
         }
         return false;
     }

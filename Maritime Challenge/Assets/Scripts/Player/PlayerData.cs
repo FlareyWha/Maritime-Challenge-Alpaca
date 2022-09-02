@@ -25,7 +25,7 @@ public static class PlayerData // Local Player's Data
     //Dict to store friendId
     public static List<BasicInfo> FriendList = new List<BasicInfo>();
     //Dict to store id of people and whether they are unlocked
-    public static Dictionary<BasicInfo, bool> PhonebookData = new Dictionary<BasicInfo, bool>();
+    public static Dictionary<int, BasicInfo> PhonebookData = new Dictionary<int, BasicInfo>();
 
     public static Player MyPlayer = null;
 
@@ -71,10 +71,10 @@ public static class PlayerData // Local Player's Data
 
     public static string FindPlayerNameByID(int id)
     {
-        foreach (KeyValuePair<BasicInfo,  bool> info in PhonebookData)
+        foreach (KeyValuePair<int, BasicInfo> info in PhonebookData)
         {
-            if (info.Key.UID == id)
-                return info.Key.Name;
+            if (info.Value.UID == id)
+                return info.Value.Name;
         }
 
         return "Player does not exist";
@@ -88,6 +88,7 @@ public class BasicInfo
 {
     public int UID;
     public string Name;
+    public bool Unlocked;
     //public List<Cosmetic> Cosmetics;
 }
 

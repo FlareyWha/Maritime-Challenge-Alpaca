@@ -16,6 +16,7 @@ public class ServerDataManager : MonoBehaviour
     public static string URL_getPlayerData = serverURL + "GetPlayerData.php";
     public static string URL_getFriends = serverURL + "GetFriends.php";
     public static string URL_getPhonebookData = serverURL + "GetPhonebookData.php";
+    public static string URL_updatePhonebookOtherUnlocked = serverURL + "UpdatePhonebookOtherUnlocked.php";
     public static string URL_setOnline = serverURL + "SetOnline.php";
     public static string URL_addFriend = serverURL + "AddFriend.php";
     public static string URL_deleteFriend = serverURL + "DeleteFriend.php";
