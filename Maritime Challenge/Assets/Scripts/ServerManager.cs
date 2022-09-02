@@ -18,7 +18,6 @@ public class ServerManager : MonoBehaviourSingleton<ServerManager>
         manager.StartClient();
     }
 
-
     public void DisconnectFromServer()
     {
         Debug.Log("Disconencting Client from Server...");
