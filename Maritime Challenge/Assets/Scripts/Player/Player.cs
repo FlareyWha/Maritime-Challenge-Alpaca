@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
+using UnityEngine.Networking;
 
 public class Player : NetworkBehaviour
 {
@@ -105,6 +106,65 @@ public class Player : NetworkBehaviour
     public int GetCountryID()
     {
         return countryID;
+    }
+
+    public void UpdateXPLevels(int xpGained)
+    {
+        int currXP = PlayerData.CurrXP;
+        int currLevel = PlayerData.CurrLevel;
+        bool finishedLevelingUp = false;
+
+        //Add up all the XP
+        currXP += xpGained;
+
+        do
+        {
+            //Get the xp requirement
+            int xpRequirement = GameSettings.GetEXPRequirement(currLevel);
+
+            //Increase level if currXP meets the xpRequirement
+            if (currXP >= xpRequirement)
+            {
+                currLevel++;
+                currXP -= xpRequirement;
+            }
+            else
+                finishedLevelingUp = true;
+        }
+        while (!finishedLevelingUp);
+
+        //Update player data values
+        PlayerData.CurrXP = currXP;
+        PlayerData.CurrLevel = currLevel;
+
+        //Update database
+        StartCoroutine(StartUpdateXPLevels());
+    }
+
+    IEnumerator StartUpdateXPLevels()
+    {
+        string url = ServerDataManager.URL_updateAccountXPLevels;
+        Debug.Log(url);
+
+        WWWForm form = new WWWForm();
+        form.AddField("UID", PlayerData.UID);
+        form.AddField("iLevel", PlayerData.CurrLevel);
+        form.AddField("iXP", PlayerData.CurrXP);
+        using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
+        yield return webreq.SendWebRequest();
+        switch (webreq.result)
+        {
+            case UnityWebRequest.Result.Success:
+                //Deseralize the data
+                Debug.Log(webreq.downloadHandler.text);
+                break;
+            case UnityWebRequest.Result.ProtocolError:
+                Debug.LogError(webreq.downloadHandler.text);
+                break;
+            default:
+                Debug.LogError("Server error");
+                break;
+        }
     }
 
 }
