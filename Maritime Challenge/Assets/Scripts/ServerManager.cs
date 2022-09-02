@@ -31,10 +31,6 @@ public class ServerManager : MonoBehaviourSingleton<ServerManager>
 
         Debug.Log("Disconencting Client from Server...");
         NetworkManager.singleton.StopClient();
-        Debug.Log("Switching back to Login Scene...");
-        SceneManager.Instance.LoadScene(SCENE_ID.LOGIN);
-        Debug.Log("Resetting Player Data...");
-        PlayerData.ResetData();
     }
 
     private void OnApplicationQuit()

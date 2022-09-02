@@ -25,4 +25,7 @@ public class ServerDataManager : MonoBehaviour
     public static string URL_updateTotalRightshipRollars = serverURL + "UpdateTotalRightshipRollars.php";
     public static string URL_updateTotalTokens = serverURL + "UpdateTotalTokens.php";
     public static string URL_updateTotalEventCurrency = serverURL + "UpdateTotalEventCurrency.php";
+    public static string URL_updateUsername = serverURL + "UpdateUsername.php";
+    public static string URL_updateBiography = serverURL + "UpdateBiography.php";
+    public static string URL_updateTitle = serverURL + "UpdateTitle.php";
 }
