@@ -150,8 +150,6 @@ public class ContactsManager : MonoBehaviour
     }
 
 
-    
-
     public void AddSelectedContactAsFriend()
     {
         FriendsManager.Instance.AddFriend(currSelected.GetContactInfo().UID, currSelected.GetContactInfo().Name);
