@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Networking;
 
 public class ProfileManager : MonoBehaviour
 {
     [SerializeField]
-    private Text nameText, guildText, departmentText, countryText, birthdayText;
+    private Text nameText, guildText, departmentText, countryText, birthdayText, biographyText;
+    [SerializeField]
+    private InputField nameInputField, biographyInputField;
     [SerializeField]
     private Image EXPFill;
     [SerializeField]
@@ -26,8 +29,108 @@ public class ProfileManager : MonoBehaviour
         EditDepartmentText();
         EditCountryText();
         EditBirthdayText();
+        EditBiographyText();
         EXPFill.fillAmount = PlayerData.CurrXP / GameSettings.GetEXPRequirement(PlayerData.CurrLevel);
         LevelNum.text = PlayerData.CurrLevel.ToString();
+    }
+
+    public void EditName()
+    {
+        StartCoroutine(StartEditName());
+    }
+
+    IEnumerator StartEditName()
+    {
+        string url = ServerDataManager.URL_updatePhonebookOtherUnlocked;
+        Debug.Log(url);
+
+        WWWForm form = new WWWForm();
+        form.AddField("UID", PlayerData.UID);
+        form.AddField("sUsername", nameInputField.text);
+        using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
+        yield return webreq.SendWebRequest();
+        switch (webreq.result)
+        {
+            case UnityWebRequest.Result.Success:
+                //Deseralize the data
+                Debug.Log(webreq.downloadHandler.text);
+
+                EditNameText();
+
+                break;
+            case UnityWebRequest.Result.ProtocolError:
+                Debug.LogError(webreq.downloadHandler.text);
+                break;
+            default:
+                Debug.LogError("Server error");
+                break;
+        }
+    }
+
+    public void EditBiography()
+    {
+        StartCoroutine(StartEditBiography());
+    }
+
+    IEnumerator StartEditBiography()
+    {
+        string url = ServerDataManager.URL_updatePhonebookOtherUnlocked;
+        Debug.Log(url);
+
+        WWWForm form = new WWWForm();
+        form.AddField("UID", PlayerData.UID);
+        form.AddField("sBiography", biographyInputField.text);
+        using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
+        yield return webreq.SendWebRequest();
+        switch (webreq.result)
+        {
+            case UnityWebRequest.Result.Success:
+                //Deseralize the data
+                Debug.Log(webreq.downloadHandler.text);
+
+                EditBiographyText();
+
+                break;
+            case UnityWebRequest.Result.ProtocolError:
+                Debug.LogError(webreq.downloadHandler.text);
+                break;
+            default:
+                Debug.LogError("Server error");
+                break;
+        }
+    }
+
+    public void EditTitle()
+    {
+        StartCoroutine(StartEditTitle());
+    }
+
+    IEnumerator StartEditTitle()
+    {
+        string url = ServerDataManager.URL_updatePhonebookOtherUnlocked;
+        Debug.Log(url);
+
+        WWWForm form = new WWWForm();
+        form.AddField("UID", PlayerData.UID);
+        form.AddField("iTitle", 0); //Change later btw
+        using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
+        yield return webreq.SendWebRequest();
+        switch (webreq.result)
+        {
+            case UnityWebRequest.Result.Success:
+                //Deseralize the data
+                Debug.Log(webreq.downloadHandler.text);
+
+                //EditTitle()
+
+                break;
+            case UnityWebRequest.Result.ProtocolError:
+                Debug.LogError(webreq.downloadHandler.text);
+                break;
+            default:
+                Debug.LogError("Server error");
+                break;
+        }
     }
 
     void EditNameText()
@@ -59,7 +162,7 @@ public class ProfileManager : MonoBehaviour
     
     void EditCountryText()
     {
-        string countryName = "";
+        string countryName;
 
         countryName = PlayerData.GetCountryName(PlayerData.Country);
 
@@ -72,6 +175,11 @@ public class ProfileManager : MonoBehaviour
             birthdayText.text = "Birthday: " + PlayerData.Birthday;
         else
             birthdayText.text = "Birthday: Hidden";
+    }
+
+    void EditBiographyText()
+    {
+        biographyText.text = PlayerData.Biography;
     }
 
     public void LogOut()
