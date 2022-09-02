@@ -28,9 +28,9 @@ public class PlayerMovement : NetworkBehaviour
             return;
 
         Vector2 input = UIManager.Instance.Joystick.GetDirection();
-        
+
+
         rb.position += input * MAX_VEL * Time.deltaTime;
-        
     }
 
 }
