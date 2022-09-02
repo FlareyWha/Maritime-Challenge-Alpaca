@@ -7,13 +7,16 @@ public class ProfileManager : MonoBehaviour
 {
     [SerializeField]
     private Text nameText, guildText, departmentText, countryText, birthdayText;
+    [SerializeField]
+    private Image EXPFill;
+    [SerializeField]
+    private Text LevelNum;
 
    
     void Start()
     {
         LoadData();
     }
-
 
     public void LoadData()
     {
@@ -23,6 +26,8 @@ public class ProfileManager : MonoBehaviour
         EditDepartmentText();
         EditCountryText();
         EditBirthdayText();
+        EXPFill.fillAmount = PlayerData.CurrXP / GameSettings.GetEXPRequirement(PlayerData.CurrLevel);
+        LevelNum.text = PlayerData.CurrLevel.ToString();
     }
 
     void EditNameText()

@@ -441,6 +441,7 @@ GameObject:
   - component: {fileID: 7432482289095101348}
   - component: {fileID: 7432482289095101346}
   - component: {fileID: 7432482289095101349}
+  - component: {fileID: 2011458929803603267}
   m_Layer: 5
   m_Name: MissionsUI
   m_TagString: Untagged
@@ -509,6 +510,22 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2011458929803603267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7432482289095101351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5d32bb1aef0e79418ad1f3486fd9792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MissionTitle: {fileID: 4737507811708982396}
+  ClaimButton: {fileID: 7769257118343249682}
+  MissionProgressFill: {fileID: 5089880075093043403}
+  MissionProgressText: {fileID: 3191674572451163588}
 --- !u!1 &8976974694157276447
 GameObject:
   m_ObjectHideFlags: 0
