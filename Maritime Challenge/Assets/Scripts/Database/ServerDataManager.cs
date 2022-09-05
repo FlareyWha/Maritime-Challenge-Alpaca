@@ -19,6 +19,7 @@ public class ServerDataManager : MonoBehaviour
     public static string URL_updatePhonebookOtherUnlocked = serverURL + "UpdatePhonebookOtherUnlocked.php";
     public static string URL_updateOnlineStatus = serverURL + "UpdateOnlineStatus.php";
     public static string URL_addFriend = serverURL + "AddFriend.php";
+    public static string URL_addFriendRequest = serverURL + "AddFriendRequest.php";
     public static string URL_deleteFriend = serverURL + "DeleteFriend.php";
     public static string URL_getFriendInfo = serverURL + "GetFriendInfo.php";
     public static string URL_updateAccountXPLevels = serverURL + "UpdateAccountXPLevels.php";

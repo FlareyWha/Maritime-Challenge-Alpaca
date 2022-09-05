@@ -149,6 +149,38 @@ public class ContactsManager : MonoBehaviour
         }
     }
 
+    public void SendFriendRequest(int friendUID)
+    {
+        //Add UI
+
+        //Start friend request
+        StartCoroutine(StartSendFriendRequest(friendUID));
+    }
+
+    IEnumerator StartSendFriendRequest(int friendUID)
+    {
+        string url = ServerDataManager.URL_addFriendRequest;
+        Debug.Log(url);
+
+        WWWForm form = new WWWForm();
+        form.AddField("UID", PlayerData.UID);
+        form.AddField("iOtherUID", friendUID);
+        using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
+        yield return webreq.SendWebRequest();
+        switch (webreq.result)
+        {
+            case UnityWebRequest.Result.Success:
+                //Deseralize the data
+                Debug.Log(webreq.downloadHandler.text);
+                break;
+            case UnityWebRequest.Result.ProtocolError:
+                Debug.LogError(webreq.downloadHandler.text);
+                break;
+            default:
+                Debug.LogError("Server error");
+                break;
+        }
+    }
 
     public void AddSelectedContactAsFriend()
     {
