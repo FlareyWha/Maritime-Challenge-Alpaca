@@ -62,7 +62,7 @@ public class ServerManager : NetworkManager
 
     IEnumerator SetOffline()
     {
-        string url = ServerDataManager.URL_setOnline;
+        string url = ServerDataManager.URL_updateOnlineStatus;
         Debug.Log(url);
 
         WWWForm form = new WWWForm();

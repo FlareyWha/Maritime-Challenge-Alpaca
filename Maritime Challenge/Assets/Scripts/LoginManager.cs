@@ -148,7 +148,7 @@ public class LoginManager : MonoBehaviour
 
     IEnumerator SetOnline()
     {
-        url = ServerDataManager.URL_setOnline;
+        url = ServerDataManager.URL_updateOnlineStatus;
         Debug.Log(url);
 
         WWWForm form = new WWWForm();
