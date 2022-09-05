@@ -185,7 +185,6 @@ public class ProfileManager : MonoBehaviour
     public void LogOut()
     {
         ServerManager.Instance.DisconnectFromServer();
-        SceneManager.Instance.LoadScene(SCENE_ID.LOGIN);
-        PlayerData.ResetData();
+        
     }
 }

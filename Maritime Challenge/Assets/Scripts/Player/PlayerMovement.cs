@@ -13,7 +13,7 @@ public class PlayerMovement : NetworkBehaviour
     private float accel_rate = 1.0f;
     private float deccel_rate = 1.0f;
 
-    private const float MAX_VEL = 3.0f;
+    private const float MAX_VEL = 5.0f;
 
     private Rigidbody2D rb = null;
 
@@ -28,7 +28,6 @@ public class PlayerMovement : NetworkBehaviour
             return;
 
         Vector2 input = UIManager.Instance.Joystick.GetDirection();
-
 
         rb.position += input * MAX_VEL * Time.deltaTime;
     }

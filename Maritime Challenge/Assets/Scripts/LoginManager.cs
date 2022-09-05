@@ -65,7 +65,6 @@ public class LoginManager : MonoBehaviour
                 break;
         }
     }
-
     IEnumerator GetPlayerData()
     {
         url = ServerDataManager.URL_getPlayerData;
@@ -161,7 +160,6 @@ public class LoginManager : MonoBehaviour
         {
             case UnityWebRequest.Result.Success:
                 Debug.Log(webreq.downloadHandler.text);
-
                 ServerManager.Instance.OfflineSetted = false;
 
                 //Connect only if login is successful

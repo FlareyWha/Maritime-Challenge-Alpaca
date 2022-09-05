@@ -23,6 +23,7 @@ public class Player : NetworkBehaviour
 
     private PlayerUI playerUI = null;
 
+    
 
     public override void OnStartAuthority()
     {
@@ -33,6 +34,8 @@ public class Player : NetworkBehaviour
         // Init Synced Player Vars
         SetDetails(PlayerData.UID, PlayerData.Name, PlayerData.Biography, PlayerData.CurrentTitleID, PlayerData.GuildID, PlayerData.Country, PlayerData.CurrLevel);
         Debug.Log("Setting Player Name.." + username);
+
+        
 
     }
     public override void OnStartClient()

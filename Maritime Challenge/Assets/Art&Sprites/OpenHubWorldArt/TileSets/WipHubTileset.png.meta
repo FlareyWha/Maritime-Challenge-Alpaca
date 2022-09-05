@@ -1,79 +1,91 @@
 fileFormatVersion: 2
-guid: f534acae05bca244493d8de8150972d9
+guid: 28deb7101035f8a45a6205e1a132fcf2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3254495943826621730
-    second: Test6_0
+      213: -3528200927646410094
+    second: WipHubTileset_0
   - first:
-      213: 9009274357355497930
-    second: Test6_1
+      213: 8553400166032918833
+    second: WipHubTileset_1
   - first:
-      213: 5763310643420387267
-    second: Test6_2
+      213: 213619724120554183
+    second: WipHubTileset_2
   - first:
-      213: 4795054860633165239
-    second: Test6_3
+      213: -5621906185822099228
+    second: WipHubTileset_3
   - first:
-      213: -3402079650869221306
-    second: Test6_4
+      213: -7889431663020074627
+    second: WipHubTileset_4
   - first:
-      213: 799414235352378164
-    second: Test6_5
+      213: 8900559090021646136
+    second: WipHubTileset_5
   - first:
-      213: 1390968321453909854
-    second: Test6_6
+      213: 8752024486623687706
+    second: WipHubTileset_6
   - first:
-      213: -7911623740894681002
-    second: Test6_7
+      213: 4992297177749496359
+    second: WipHubTileset_7
   - first:
-      213: -1403873263714705426
-    second: Test6_8
+      213: 7149422532544649363
+    second: WipHubTileset_8
   - first:
-      213: -3015939269693387307
-    second: Test6_9
+      213: -6628209883379067100
+    second: WipHubTileset_9
   - first:
-      213: -2216760155696738598
-    second: Test6_10
+      213: 1128400227164502450
+    second: WipHubTileset_10
   - first:
-      213: 8021282618190566493
-    second: Test6_11
+      213: -314512485518451346
+    second: WipHubTileset_11
   - first:
-      213: -6168952703033685585
-    second: Test6_12
+      213: 7721829441094963886
+    second: WipHubTileset_12
   - first:
-      213: 5505252870767100613
-    second: Test6_13
+      213: -1602526804101908722
+    second: WipHubTileset_13
   - first:
-      213: -7925606378638296023
-    second: Test6_14
+      213: 6294776151122618009
+    second: WipHubTileset_14
   - first:
-      213: 1535360460344928119
-    second: Test6_15
+      213: 8854167398513696491
+    second: WipHubTileset_15
   - first:
-      213: 3648503320411953040
-    second: Test6_16
+      213: 5569256406028575872
+    second: WipHubTileset_16
   - first:
-      213: 5705815619360208334
-    second: Test6_17
+      213: 3772825522845170134
+    second: WipHubTileset_17
   - first:
-      213: 2811371713780227885
-    second: Test6_18
+      213: 3793028404440075325
+    second: WipHubTileset_18
   - first:
-      213: -4110355782219472824
-    second: Test6_19
+      213: 758599732270334855
+    second: WipHubTileset_19
   - first:
-      213: 773241028805296641
-    second: Test6_20
+      213: 4825227066345083469
+    second: WipHubTileset_20
   - first:
-      213: -1964763417940472288
-    second: Test6_21
+      213: -3536223619494910609
+    second: WipHubTileset_21
   - first:
-      213: 9116617129397814391
-    second: Test6_22
+      213: 7029033755303535315
+    second: WipHubTileset_22
   - first:
-      213: -8334567976892453595
-    second: Test6_23
+      213: 1725633425571096207
+    second: WipHubTileset_23
+  - first:
+      213: 3276999226572138572
+    second: WipHubTileset_24
+  - first:
+      213: 6014405954274792612
+    second: WipHubTileset_25
+  - first:
+      213: -1956940681647437138
+    second: WipHubTileset_26
+  - first:
+      213: -42351276200211673
+    second: WipHubTileset_27
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -104,7 +116,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -140,7 +152,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -152,7 +164,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -164,7 +176,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -176,7 +188,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -188,7 +200,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -199,7 +211,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Test6_0
+      name: WipHubTileset_0
       rect:
         serializedVersion: 2
         x: 0
@@ -213,14 +225,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: edab341ae25b5d2d0800000000000000
-      internalID: -3254495943826621730
+      spriteID: 29a9e6313ff490fc0800000000000000
+      internalID: -3528200927646410094
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Test6_1
+      name: WipHubTileset_1
       rect:
         serializedVersion: 2
         x: 256
@@ -234,14 +246,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac9c53a7b4f570d70800000000000000
-      internalID: 9009274357355497930
+      spriteID: 139c8261228c3b670800000000000000
+      internalID: 8553400166032918833
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Test6_2
+      name: WipHubTileset_2
       rect:
         serializedVersion: 2
         x: 512
@@ -255,14 +267,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c7dc4fae746bff40800000000000000
-      internalID: 5763310643420387267
+      spriteID: 7caf83dd10ee6f200800000000000000
+      internalID: 213619724120554183
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Test6_3
+      name: WipHubTileset_3
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e8a0813c1afaf1b0800000000000000
+      internalID: -5621906185822099228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WipHubTileset_4
       rect:
         serializedVersion: 2
         x: 1280
@@ -276,14 +309,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7bdcc8e8df47b8240800000000000000
-      internalID: 4795054860633165239
+      spriteID: d7918f5d3bb138290800000000000000
+      internalID: -7889431663020074627
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Test6_4
+      name: WipHubTileset_5
       rect:
         serializedVersion: 2
         x: 0
@@ -297,14 +330,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 648ea50259269c0d0800000000000000
-      internalID: -3402079650869221306
+      spriteID: 83f3d1fc553258b70800000000000000
+      internalID: 8900559090021646136
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Test6_5
+      name: WipHubTileset_6
       rect:
         serializedVersion: 2
         x: 512
@@ -318,14 +351,77 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 43ba196f207181b00800000000000000
-      internalID: 799414235352378164
+      spriteID: a14b9be76ef657970800000000000000
+      internalID: 8752024486623687706
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Test6_6
+      name: WipHubTileset_7
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 722a1f435d3384540800000000000000
+      internalID: 4992297177749496359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WipHubTileset_8
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3985f710ae9d73360800000000000000
+      internalID: 7149422532544649363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WipHubTileset_9
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42715749a3ed304a0800000000000000
+      internalID: -6628209883379067100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WipHubTileset_10
       rect:
         serializedVersion: 2
         x: 0
@@ -339,14 +435,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e57e4169156bd4310800000000000000
-      internalID: 1390968321453909854
+      spriteID: 2b93c903702e8af00800000000000000
+      internalID: 1128400227164502450
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Test6_7
+      name: WipHubTileset_11
       rect:
         serializedVersion: 2
         x: 256
@@ -360,14 +456,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 658ec6f0024443290800000000000000
-      internalID: -7911623740894681002
+      spriteID: e6d5f3f8f80a2abf0800000000000000
+      internalID: -314512485518451346
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Test6_8
+      name: WipHubTileset_12
       rect:
         serializedVersion: 2
         x: 512
@@ -381,14 +477,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eefdd9664b0748ce0800000000000000
-      internalID: -1403873263714705426
+      spriteID: ea25e94f6f2792b60800000000000000
+      internalID: 7721829441094963886
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Test6_9
+      name: WipHubTileset_13
       rect:
         serializedVersion: 2
         x: 0
@@ -402,14 +498,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5dd46cd963b3526d0800000000000000
-      internalID: -3015939269693387307
+      spriteID: e07b67abc5ea2c9e0800000000000000
+      internalID: -1602526804101908722
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Test6_10
+      name: WipHubTileset_14
       rect:
         serializedVersion: 2
         x: 256
@@ -423,14 +519,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: adec47f126c7c31e0800000000000000
-      internalID: -2216760155696738598
+      spriteID: 996a34cee898b5750800000000000000
+      internalID: 6294776151122618009
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Test6_11
+      name: WipHubTileset_15
       rect:
         serializedVersion: 2
         x: 512
@@ -444,14 +540,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d54934cea02515f60800000000000000
-      internalID: 8021282618190566493
+      spriteID: beed04a665250ea70800000000000000
+      internalID: 8854167398513696491
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Test6_12
+      name: WipHubTileset_16
       rect:
         serializedVersion: 2
         x: 1024
@@ -465,14 +561,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fa9cd7b733a736aa0800000000000000
-      internalID: -6168952703033685585
+      spriteID: 084e660b139f94d40800000000000000
+      internalID: 5569256406028575872
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Test6_13
+      name: WipHubTileset_17
       rect:
         serializedVersion: 2
         x: 1280
@@ -486,14 +582,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c2c5c06156966c40800000000000000
-      internalID: 5505252870767100613
+      spriteID: 6d9b6b0e2d4cb5430800000000000000
+      internalID: 3772825522845170134
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Test6_14
+      name: WipHubTileset_18
       rect:
         serializedVersion: 2
         x: 0
@@ -507,14 +603,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92cb1b38df6920290800000000000000
-      internalID: -7925606378638296023
+      spriteID: d3c0e9dcc3b83a430800000000000000
+      internalID: 3793028404440075325
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Test6_15
+      name: WipHubTileset_19
       rect:
         serializedVersion: 2
         x: 256
@@ -528,14 +624,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7772a093432be4510800000000000000
-      internalID: 1535360460344928119
+      spriteID: 7830ea0ff66178a00800000000000000
+      internalID: 758599732270334855
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Test6_16
+      name: WipHubTileset_20
       rect:
         serializedVersion: 2
         x: 512
@@ -549,14 +645,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 097dcf6707612a230800000000000000
-      internalID: 3648503320411953040
+      spriteID: d425912a376a6f240800000000000000
+      internalID: 4825227066345083469
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Test6_17
+      name: WipHubTileset_21
       rect:
         serializedVersion: 2
         x: 1024
@@ -570,14 +666,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec537d933112f2f40800000000000000
-      internalID: 5705815619360208334
+      spriteID: f65e8a19a5fcceec0800000000000000
+      internalID: -3536223619494910609
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Test6_18
+      name: WipHubTileset_22
       rect:
         serializedVersion: 2
         x: 1280
@@ -591,14 +687,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d2f937badaff30720800000000000000
-      internalID: 2811371713780227885
+      spriteID: 3d2e81385f42c8160800000000000000
+      internalID: 7029033755303535315
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Test6_19
+      name: WipHubTileset_23
       rect:
         serializedVersion: 2
         x: 0
@@ -612,14 +708,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 840e554913515f6c0800000000000000
-      internalID: -4110355782219472824
+      spriteID: f86a4bf257ea2f710800000000000000
+      internalID: 1725633425571096207
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Test6_20
+      name: WipHubTileset_24
       rect:
         serializedVersion: 2
         x: 256
@@ -633,14 +729,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 10282bf6e9a1bba00800000000000000
-      internalID: 773241028805296641
+      spriteID: c48ef0d2f6d3a7d20800000000000000
+      internalID: 3276999226572138572
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Test6_21
+      name: WipHubTileset_25
       rect:
         serializedVersion: 2
         x: 512
@@ -654,14 +750,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02ec9f5c412cbb4e0800000000000000
-      internalID: -1964763417940472288
+      spriteID: 4a41b878956777350800000000000000
+      internalID: 6014405954274792612
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Test6_22
+      name: WipHubTileset_26
       rect:
         serializedVersion: 2
         x: 1024
@@ -675,14 +771,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7748ffe2afab48e70800000000000000
-      internalID: 9116617129397814391
+      spriteID: eaac4ef71dc87d4e0800000000000000
+      internalID: -1956940681647437138
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Test6_23
+      name: WipHubTileset_27
       rect:
         serializedVersion: 2
         x: 1280
@@ -696,8 +792,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52daafc559aa55c80800000000000000
-      internalID: -8334567976892453595
+      spriteID: 72b4d4a1db9896ff0800000000000000
+      internalID: -42351276200211673
       vertices: []
       indices: 
       edges: []

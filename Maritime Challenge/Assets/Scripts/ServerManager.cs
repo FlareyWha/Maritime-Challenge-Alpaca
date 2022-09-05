@@ -4,8 +4,12 @@ using UnityEngine;
 using Mirror;
 using UnityEngine.Networking;
 
-public class ServerManager : MonoBehaviourSingleton<ServerManager>
+public class ServerManager : NetworkManager
 {
+    #region Singleton
+    public static ServerManager Instance = null;
+    #endregion
+
     private bool offlineSetted = false;
     public bool OfflineSetted
     {
@@ -13,39 +17,48 @@ public class ServerManager : MonoBehaviourSingleton<ServerManager>
         set { offlineSetted = value; }
     }
 
-    private NetworkManager manager;
+   // private NetworkManager manager;
 
-    void Start()
+    public override void Start()
     {
-        manager = GameObject.Find("NetworkManager").GetComponent<NetworkManager>();
+        Instance = this;
+       // manager = GameObject.Find("NetworkManager").GetComponent<NetworkManager>();
     }
 
     public void ConnectToServer()
     {
-        manager.StartClient();
+        StartClient();
     }
+
 
     public void DisconnectFromServer()
     {
-        TrySetOffline();
-
         Debug.Log("Disconencting Client from Server...");
-        NetworkManager.singleton.StopClient();
+        StopClient();
     }
 
-    private void OnApplicationQuit()
+    public override void OnClientDisconnect()
+    {
+        Debug.Log("On Disconenct Client from Server Callback triggered...");
+        TrySetOffline();
+        
+    }
+
+    public override void OnApplicationQuit()
     {
         TrySetOffline();
     }
 
-    void TrySetOffline()
+    public void TrySetOffline()
     {
         if (!offlineSetted)
         {
             StartCoroutine(SetOffline());
             offlineSetted = true;
         }
+      
     }
+
 
     IEnumerator SetOffline()
     {
@@ -61,6 +74,7 @@ public class ServerManager : MonoBehaviourSingleton<ServerManager>
         {
             case UnityWebRequest.Result.Success:
                 Debug.Log(webreq.downloadHandler.text);
+                LogOutOfGame();
                 break;
             case UnityWebRequest.Result.ProtocolError:
                 Debug.LogError(webreq.downloadHandler.text);
@@ -69,5 +83,11 @@ public class ServerManager : MonoBehaviourSingleton<ServerManager>
                 Debug.LogError("Server error");
                 break;
         }
+    }
+
+    private void LogOutOfGame()
+    {
+        SceneManager.Instance.LoadScene(SCENE_ID.LOGIN);
+        PlayerData.ResetData();
     }
 }
