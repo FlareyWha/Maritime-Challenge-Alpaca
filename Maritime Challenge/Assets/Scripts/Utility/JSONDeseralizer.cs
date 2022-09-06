@@ -95,16 +95,18 @@ public class JSONDeseralizer : MonoBehaviour
         for (int i = 0; i < sentFriendRequestList.sentFriendRequests.Count; ++i)
         {
             PlayerData.SentFriendRequestList.Add(sentFriendRequestList.sentFriendRequests[i].iOtherUID);
+            Debug.Log("Found Sent Friend Request: " + sentFriendRequestList.sentFriendRequests[i].iOtherUID);
         }
     }
 
     public static void DeseralizeRecievedFriendRequests(string recievedFriendRequestJSON)
     {
-        JSONRecievedFriendRequestList recievedFriendRequestList = JsonUtility.FromJson<JSONRecievedFriendRequestList>(recievedFriendRequestJSON);
+        JSONReceivedFriendRequestList receivedFriendRequestList = JsonUtility.FromJson<JSONReceivedFriendRequestList>(recievedFriendRequestJSON);
 
-        for (int i = 0; i < recievedFriendRequestList.recievedFriendRequests.Count; ++i)
+        for (int i = 0; i < receivedFriendRequestList.receivedFriendRequests.Count; ++i)
         {
-            PlayerData.RecievedFriendRequestList.Add(recievedFriendRequestList.recievedFriendRequests[i].iOwnerUID);
+            PlayerData.ReceivedFriendRequestList.Add(receivedFriendRequestList.receivedFriendRequests[i].iOwnerUID);
+            Debug.Log("Found Received Friend Request: " + receivedFriendRequestList.receivedFriendRequests[i].iOwnerUID);
         }
     }
 }

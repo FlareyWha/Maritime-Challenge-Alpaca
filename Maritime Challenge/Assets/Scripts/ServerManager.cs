@@ -33,15 +33,12 @@ public class ServerManager : NetworkManager
 
     public void DisconnectFromServer()
     {
-        Debug.Log("Disconencting Client from Server...");
         StopClient();
     }
 
     public override void OnClientDisconnect()
     {
-        Debug.Log("On Disconenct Client from Server Callback triggered...");
         TrySetOffline();
-        
     }
 
     public override void OnApplicationQuit()

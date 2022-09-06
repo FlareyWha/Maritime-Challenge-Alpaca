@@ -50,7 +50,7 @@ public static class FriendRequestHandler
             case UnityWebRequest.Result.Success:
                 //Deseralize the data
                 Debug.Log(webreq.downloadHandler.text);
-                PlayerData.RecievedFriendRequestList.Remove(requestOwnerUID);
+                PlayerData.ReceivedFriendRequestList.Remove(requestOwnerUID);
                 break;
             case UnityWebRequest.Result.ProtocolError:
                 Debug.LogError(webreq.downloadHandler.text);

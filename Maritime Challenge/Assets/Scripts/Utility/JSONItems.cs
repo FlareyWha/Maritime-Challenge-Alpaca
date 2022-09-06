@@ -99,7 +99,7 @@ public class JSONRecievedFriendRequest
 }
 
 [Serializable]
-public class JSONRecievedFriendRequestList
+public class JSONReceivedFriendRequestList
 {
-    public List<JSONRecievedFriendRequest> recievedFriendRequests = new List<JSONRecievedFriendRequest>();
+    public List<JSONRecievedFriendRequest> receivedFriendRequests = new List<JSONRecievedFriendRequest>();
 }
