@@ -93,7 +93,7 @@ public class JSONSentFriendRequestList
 }
 
 [Serializable]
-public class JSONRecievedFriendRequest
+public class JSONReceivedFriendRequest
 {
     public int iOwnerUID;
 }
@@ -101,5 +101,5 @@ public class JSONRecievedFriendRequest
 [Serializable]
 public class JSONReceivedFriendRequestList
 {
-    public List<JSONRecievedFriendRequest> receivedFriendRequests = new List<JSONRecievedFriendRequest>();
+    public List<JSONReceivedFriendRequest> receivedFriendRequests = new List<JSONReceivedFriendRequest>();
 }

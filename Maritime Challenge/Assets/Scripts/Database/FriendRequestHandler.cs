@@ -73,6 +73,7 @@ public static class FriendRequestHandler
         switch (webreq.result)
         {
             case UnityWebRequest.Result.Success:
+               
                 //Deseralize the data
                 JSONDeseralizer.DeseralizeSentFriendRequests(webreq.downloadHandler.text);
                 Debug.Log("Get Sent Friend Requests Success");
@@ -88,7 +89,7 @@ public static class FriendRequestHandler
 
     public static IEnumerator GetRecievedFriendRequests()
     {
-        string url = ServerDataManager.URL_getRecievedFriendRequests;
+        string url = ServerDataManager.URL_getReceivedFriendRequests;
         Debug.Log(url);
 
         WWWForm form = new WWWForm();
@@ -102,6 +103,8 @@ public static class FriendRequestHandler
                 JSONDeseralizer.DeseralizeRecievedFriendRequests(webreq.downloadHandler.text);
                 Debug.Log("Get Received Friend Requests Success");
 
+                //Deseralize the data
+                JSONDeseralizer.DeseralizeReceivedFriendRequests(webreq.downloadHandler.text);
                 break;
             case UnityWebRequest.Result.ProtocolError:
                 Debug.LogError(webreq.downloadHandler.text);
@@ -111,6 +114,4 @@ public static class FriendRequestHandler
                 break;
         }
     }
-
-
 }

@@ -99,9 +99,9 @@ public class JSONDeseralizer : MonoBehaviour
         }
     }
 
-    public static void DeseralizeRecievedFriendRequests(string recievedFriendRequestJSON)
+    public static void DeseralizeReceivedFriendRequests(string receivedFriendRequestJSON)
     {
-        JSONReceivedFriendRequestList receivedFriendRequestList = JsonUtility.FromJson<JSONReceivedFriendRequestList>(recievedFriendRequestJSON);
+        JSONReceivedFriendRequestList receivedFriendRequestList = JsonUtility.FromJson<JSONReceivedFriendRequestList>(receivedFriendRequestJSON);
 
         for (int i = 0; i < receivedFriendRequestList.receivedFriendRequests.Count; ++i)
         {

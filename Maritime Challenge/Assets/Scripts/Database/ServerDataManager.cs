@@ -44,7 +44,7 @@ public class ServerDataManager : MonoBehaviour
     public static string URL_getFriendInfo = serverURL + "GetFriendInfo.php";
     public static string URL_getFriends = serverURL + "GetFriends.php";
     public static string URL_getSentFriendRequests = serverURL + "GetSentFriendRequests.php";
-    public static string URL_getRecievedFriendRequests = serverURL + "GetRecievedFriendRequests.php";
+    public static string URL_getReceivedFriendRequests = serverURL + "GetReceivedFriendRequests.php";
 
     public static string URL_deleteFriend = serverURL + "DeleteFriend.php";
     public static string URL_deleteFriendRequest = serverURL + "DeleteFriendRequest.php";
@@ -55,6 +55,13 @@ public class ServerDataManager : MonoBehaviour
 
     public static string URL_updatePhonebookOtherUnlocked = serverURL + "UpdatePhonebookOtherUnlocked.php";
     public static string URL_getPhonebookData = serverURL + "GetPhonebookData.php";
+
+    #endregion
+
+    #region Handling Missions & Achievements
+
+    public static string URL_getMissionStatus = serverURL + "GetMissionStatus.php";
+    public static string URL_getAchievementStatus = serverURL + "GetAchievementStatus.php";
 
     #endregion
 }
