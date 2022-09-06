@@ -47,6 +47,7 @@ public class ServerDataManager : MonoBehaviour
     public static string URL_getRecievedFriendRequests = serverURL + "GetRecievedFriendRequests.php";
 
     public static string URL_deleteFriend = serverURL + "DeleteFriend.php";
+    public static string URL_deleteFriendRequest = serverURL + "DeleteFriendRequest.php";
 
     #endregion
 
