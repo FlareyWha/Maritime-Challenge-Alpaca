@@ -78,7 +78,7 @@ public static class PlayerData // Local Player's Data
     {
         foreach (KeyValuePair<int, BasicInfo> info in PhonebookData)
         {
-            if (info.Value.UID == id)
+            if (info.Key == id)
                 return info.Value.Name;
         }
 
@@ -126,6 +126,8 @@ public static class PlayerData // Local Player's Data
         FriendList.Clear();
         PhonebookData.Clear();
         FriendDataList.Clear();
+        SentFriendRequestList.Clear();
+        ReceivedFriendRequestList.Clear();
     }
 
 }

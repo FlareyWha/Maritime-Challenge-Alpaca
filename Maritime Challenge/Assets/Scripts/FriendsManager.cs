@@ -33,9 +33,13 @@ public class FriendsManager : MonoBehaviourSingleton<FriendsManager>
             Destroy(child.gameObject);
         }
 
+        Debug.Log("Updating Requests Panel");
+
         // Fill in Incoming Rect
         foreach (int id in PlayerData.ReceivedFriendRequestList)
         {
+            Debug.Log("Found Incoming Friend Request: " + id);
+
             GameObject uiGO = Instantiate(IncomingFriendRequestUIPrefab, IncomingListRect);
             IncomingFriendRequestUI ui = uiGO.GetComponent<IncomingFriendRequestUI>();
             ui.Init(id);
@@ -44,7 +48,9 @@ public class FriendsManager : MonoBehaviourSingleton<FriendsManager>
         // Fill in Pending Rect
         foreach (int id in PlayerData.SentFriendRequestList)
         {
-            GameObject uiGO = Instantiate(PendingFriendRequestUIPrefab, IncomingListRect);
+            Debug.Log("Found Pending Friend Request: " + id);
+
+            GameObject uiGO = Instantiate(PendingFriendRequestUIPrefab, PendingListRect);
             PendingFriendRequestUI ui = uiGO.GetComponent<PendingFriendRequestUI>();
             ui.Init(id);
         }
@@ -61,7 +67,7 @@ public class FriendsManager : MonoBehaviourSingleton<FriendsManager>
         // Fill in Pending Rect
         foreach (int id in PlayerData.SentFriendRequestList)
         {
-            GameObject uiGO = Instantiate(PendingFriendRequestUIPrefab, IncomingListRect);
+            GameObject uiGO = Instantiate(PendingFriendRequestUIPrefab, PendingListRect);
             PendingFriendRequestUI ui = uiGO.GetComponent<PendingFriendRequestUI>();
             ui.Init(id);
         }
