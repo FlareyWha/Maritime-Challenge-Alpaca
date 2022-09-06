@@ -35,7 +35,6 @@ public class ProfileNamecard : MonoBehaviour
         Guild.text = "Guild: " + PlayerData.GetGuildName(player.GetGuildID());
         //Title.sprite = PlayerData.GetTitleByID(player.GetTitleID());
 
-
     }
 
     public void SetDetails(FriendInfo player)

@@ -9,13 +9,43 @@ public class FriendsManager : MonoBehaviourSingleton<FriendsManager>
     public delegate void FriendListUpdated();
     public static event FriendListUpdated OnFriendListUpdated;
 
+    public void SendFriendRequest(int friendUID)
+    {
+        //Add UI
+
+        //Start friend request
+        StartCoroutine(StartSendFriendRequest(friendUID));
+    }
+
+    IEnumerator StartSendFriendRequest(int friendUID)
+    {
+        string url = ServerDataManager.URL_addFriendRequest;
+        Debug.Log(url);
+
+        WWWForm form = new WWWForm();
+        form.AddField("UID", PlayerData.UID);
+        form.AddField("iOtherUID", friendUID);
+        using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
+        yield return webreq.SendWebRequest();
+        switch (webreq.result)
+        {
+            case UnityWebRequest.Result.Success:
+                //Deseralize the data
+                Debug.Log(webreq.downloadHandler.text);
+                break;
+            case UnityWebRequest.Result.ProtocolError:
+                Debug.LogError(webreq.downloadHandler.text);
+                break;
+            default:
+                Debug.LogError("Server error");
+                break;
+        }
+    }
 
     public void AddFriend(int id, string name)
     {
         StartCoroutine(StartAddFriend(id, name));
     }
-
-
 
     IEnumerator StartAddFriend(int otherUID, string name)
     {
@@ -70,6 +100,8 @@ public class FriendsManager : MonoBehaviourSingleton<FriendsManager>
         {
             case UnityWebRequest.Result.Success:
                 Debug.Log(webreq.downloadHandler.text);
+                PlayerData.FriendList.Remove(PlayerData.FindPlayerInfoByID(otherUID));
+                PlayerData.FriendDataList.Remove(PlayerData.FindFriendInfoByID(otherUID));
                 OnFriendListUpdated?.Invoke();
                 break;
             case UnityWebRequest.Result.ProtocolError:
