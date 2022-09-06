@@ -12,6 +12,13 @@ public class LoginManager : MonoBehaviour
     [SerializeField]
     private InputField InputField_Email, InputField_Password;
 
+    private PostLoginInfoGetter postLoginInfoGetter;
+
+
+    private void Start()
+    {
+        postLoginInfoGetter = GetComponent<PostLoginInfoGetter>();
+    }
 
     public void Login()
     {
@@ -24,12 +31,18 @@ public class LoginManager : MonoBehaviour
         }
 
         // LOGIN
+        PlayerData.ResetData();
+
         // Set Player Details/Data in PLayerData
         StartCoroutine(DoSendLoginInfoEmail());
     }
 
- 
 
+    public void SetOnline()
+    {
+        StartCoroutine(StartSetOnline());
+    }
+ 
     IEnumerator DoSendLoginInfoEmail()
     {
         //Set the URL to the getUID one
@@ -54,7 +67,7 @@ public class LoginManager : MonoBehaviour
                 Debug.Log(PlayerData.UID);
 
                 //Get player data
-                StartCoroutine(GetPlayerData());
+                StartCoroutine(postLoginInfoGetter.GetInfo());
                 break;
             case UnityWebRequest.Result.ProtocolError:
                 confirmationText.text = webreq.downloadHandler.text;
@@ -65,88 +78,8 @@ public class LoginManager : MonoBehaviour
                 break;
         }
     }
-    IEnumerator GetPlayerData()
-    {
-        url = ServerDataManager.URL_getPlayerData;
-        Debug.Log(url);
 
-        WWWForm form = new WWWForm();
-        form.AddField("UID", PlayerData.UID);
-        using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
-        yield return webreq.SendWebRequest();
-        switch (webreq.result)
-        {
-            case UnityWebRequest.Result.Success:
-                //Deseralize the data
-                JSONDeseralizer.DeseralizePlayerData(webreq.downloadHandler.text);
-
-                //Get friends
-                StartCoroutine(GetFriends());
-                break;
-            case UnityWebRequest.Result.ProtocolError:
-                confirmationText.text = webreq.downloadHandler.text;
-                break;
-            default:
-                confirmationText.text = "Server error";
-                break;
-        }
-    }
-
-    IEnumerator GetFriends()
-    {
-        url = ServerDataManager.URL_getFriends;
-        Debug.Log(url);
-
-        WWWForm form = new WWWForm();
-        form.AddField("UID", PlayerData.UID);
-        using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
-        yield return webreq.SendWebRequest();
-        switch (webreq.result)
-        {
-            case UnityWebRequest.Result.Success:
-                //Deseralize the data
-                JSONDeseralizer.DeseralizeFriends(webreq.downloadHandler.text);
-
-                //Get phonebook data
-                StartCoroutine(GetPhonebookData());
-                break;
-            case UnityWebRequest.Result.ProtocolError:
-                confirmationText.text = webreq.downloadHandler.text;
-                break;
-            default:
-                confirmationText.text = "Server error";
-                break;
-        }
-    }
-
-    IEnumerator GetPhonebookData()
-    {
-        url = ServerDataManager.URL_getPhonebookData;
-        Debug.Log(url);
-
-        WWWForm form = new WWWForm();
-        form.AddField("UID", PlayerData.UID);
-        using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
-        yield return webreq.SendWebRequest();
-        switch (webreq.result)
-        {
-            case UnityWebRequest.Result.Success:
-                //Deseralize the data
-                JSONDeseralizer.DeseralizePhonebookData(webreq.downloadHandler.text);
-
-                //Set player to online
-                StartCoroutine(SetOnline());
-                break;
-            case UnityWebRequest.Result.ProtocolError:
-                confirmationText.text = webreq.downloadHandler.text;
-                break;
-            default:
-                confirmationText.text = "Server error";
-                break;
-        }
-    }
-
-    IEnumerator SetOnline()
+    IEnumerator StartSetOnline()
     {
         url = ServerDataManager.URL_updateOnlineStatus;
         Debug.Log(url);

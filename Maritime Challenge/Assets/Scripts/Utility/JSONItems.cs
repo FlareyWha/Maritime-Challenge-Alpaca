@@ -79,3 +79,27 @@ public class JSONFriendDataList
 {
     public List<JSONFriendData> friendData = new List<JSONFriendData>();
 }
+
+[Serializable]
+public class JSONSentFriendRequest
+{
+    public int iOtherUID;
+}
+
+[Serializable]
+public class JSONSentFriendRequestList
+{
+    public List<JSONSentFriendRequest> sentFriendRequests = new List<JSONSentFriendRequest>();
+}
+
+[Serializable]
+public class JSONRecievedFriendRequest
+{
+    public int iOwnerUID;
+}
+
+[Serializable]
+public class JSONRecievedFriendRequestList
+{
+    public List<JSONRecievedFriendRequest> recievedFriendRequests = new List<JSONRecievedFriendRequest>();
+}

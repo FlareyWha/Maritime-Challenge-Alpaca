@@ -9,24 +9,51 @@ public class ServerDataManager : MonoBehaviour
     static string serverURL = "https://ship.focused.lol/Maritime_Challenge/";
 
     //URL's
-    //public static string URL_getUsername = serverURL + "GetUsername.php";
+
+    #region Handling Login & Register
+
+    //Login & Register
     public static string URL_login = serverURL + "Login.php";
     public static string URL_verifyEmail = serverURL + "VerifyEmail.php";
     public static string URL_register = serverURL + "Register.php";
+
+    #endregion
+
+    #region Handling Player Data
+
     public static string URL_getPlayerData = serverURL + "GetPlayerData.php";
-    public static string URL_getFriends = serverURL + "GetFriends.php";
-    public static string URL_getPhonebookData = serverURL + "GetPhonebookData.php";
-    public static string URL_updatePhonebookOtherUnlocked = serverURL + "UpdatePhonebookOtherUnlocked.php";
-    public static string URL_updateOnlineStatus = serverURL + "UpdateOnlineStatus.php";
-    public static string URL_addFriend = serverURL + "AddFriend.php";
-    public static string URL_addFriendRequest = serverURL + "AddFriendRequest.php";
-    public static string URL_deleteFriend = serverURL + "DeleteFriend.php";
-    public static string URL_getFriendInfo = serverURL + "GetFriendInfo.php";
+
+    //Game data
     public static string URL_updateAccountXPLevels = serverURL + "UpdateAccountXPLevels.php";
     public static string URL_updateTotalRightshipRollars = serverURL + "UpdateTotalRightshipRollars.php";
     public static string URL_updateTotalTokens = serverURL + "UpdateTotalTokens.php";
     public static string URL_updateTotalEventCurrency = serverURL + "UpdateTotalEventCurrency.php";
+
+    //Profile data
     public static string URL_updateUsername = serverURL + "UpdateUsername.php";
     public static string URL_updateBiography = serverURL + "UpdateBiography.php";
     public static string URL_updateTitle = serverURL + "UpdateTitle.php";
+    public static string URL_updateOnlineStatus = serverURL + "UpdateOnlineStatus.php";
+    #endregion
+
+    #region Handling Friends & Friend Requests
+
+    public static string URL_addFriend = serverURL + "AddFriend.php";
+    public static string URL_addFriendRequest = serverURL + "AddFriendRequest.php";
+
+    public static string URL_getFriendInfo = serverURL + "GetFriendInfo.php";
+    public static string URL_getFriends = serverURL + "GetFriends.php";
+    public static string URL_getSentFriendRequests = serverURL + "GetSentFriendRequests.php";
+    public static string URL_getRecievedFriendRequests = serverURL + "GetRecievedFriendRequests.php";
+
+    public static string URL_deleteFriend = serverURL + "DeleteFriend.php";
+
+    #endregion
+
+    #region Handling Phonebook Data
+
+    public static string URL_updatePhonebookOtherUnlocked = serverURL + "UpdatePhonebookOtherUnlocked.php";
+    public static string URL_getPhonebookData = serverURL + "GetPhonebookData.php";
+
+    #endregion
 }
