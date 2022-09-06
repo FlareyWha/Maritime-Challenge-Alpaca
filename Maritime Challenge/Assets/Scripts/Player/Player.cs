@@ -35,8 +35,13 @@ public class Player : NetworkBehaviour
         SetDetails(PlayerData.UID, PlayerData.Name, PlayerData.Biography, PlayerData.CurrentTitleID, PlayerData.GuildID, PlayerData.Country, PlayerData.CurrLevel);
         Debug.Log("Setting Player Name.." + username);
 
-        
+        PlayerData.OnPlayerDataUpdated += SetDetails;
 
+    }
+
+    private void SetDetails()
+    {
+        SetDetails(PlayerData.UID, PlayerData.Name, PlayerData.Biography, PlayerData.CurrentTitleID, PlayerData.GuildID, PlayerData.Country, PlayerData.CurrLevel);
     }
     public override void OnStartClient()
     {

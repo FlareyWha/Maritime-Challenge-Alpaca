@@ -108,12 +108,12 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
 
     public void ShowInteractNamecard(Button button)
     {
-        StartCoroutine(ToggleFlyInAnim(InteractNamecard.gameObject, new Vector3(0, -900, 0), Vector3.zero, 1.0f, button));
+        StartCoroutine(ToggleFlyInAnim(InteractNamecard.gameObject, new Vector3(0, -900, 0), Vector3.zero, 0.5f, button));
     }
 
     public void HideInteractNamecard(Button button)
     {
-        StartCoroutine(ToggleFlyOutAnim(InteractNamecard.gameObject, Vector3.zero, new Vector3(0, -900, 0), 1.0f, button));
+        StartCoroutine(ToggleFlyOutAnim(InteractNamecard.gameObject, Vector3.zero, new Vector3(0, -900, 0), 0.3f, button));
         PlayerInteract.interactPlayer = null;
     }
 

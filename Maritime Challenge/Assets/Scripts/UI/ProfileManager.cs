@@ -19,6 +19,8 @@ public class ProfileManager : MonoBehaviour
     void Start()
     {
         LoadData();
+
+        //PlayerData.OnPlayerDataUpdated += LoadData;
     }
 
     public void LoadData()
@@ -41,7 +43,7 @@ public class ProfileManager : MonoBehaviour
 
     IEnumerator StartEditName()
     {
-        string url = ServerDataManager.URL_updatePhonebookOtherUnlocked;
+        string url = ServerDataManager.URL_updateUsername;
         Debug.Log(url);
 
         WWWForm form = new WWWForm();
@@ -54,9 +56,8 @@ public class ProfileManager : MonoBehaviour
             case UnityWebRequest.Result.Success:
                 //Deseralize the data
                 Debug.Log(webreq.downloadHandler.text);
-
+                PlayerData.SetUsername(nameInputField.text);
                 EditNameText();
-
                 break;
             case UnityWebRequest.Result.ProtocolError:
                 Debug.LogError(webreq.downloadHandler.text);
@@ -74,7 +75,7 @@ public class ProfileManager : MonoBehaviour
 
     IEnumerator StartEditBiography()
     {
-        string url = ServerDataManager.URL_updatePhonebookOtherUnlocked;
+        string url = ServerDataManager.URL_updateBiography;
         Debug.Log(url);
 
         WWWForm form = new WWWForm();
@@ -107,7 +108,7 @@ public class ProfileManager : MonoBehaviour
 
     IEnumerator StartEditTitle()
     {
-        string url = ServerDataManager.URL_updatePhonebookOtherUnlocked;
+        string url = ServerDataManager.URL_updateTitle;
         Debug.Log(url);
 
         WWWForm form = new WWWForm();
@@ -121,7 +122,7 @@ public class ProfileManager : MonoBehaviour
                 //Deseralize the data
                 Debug.Log(webreq.downloadHandler.text);
 
-                //EditTitle()
+                EditTitle();
 
                 break;
             case UnityWebRequest.Result.ProtocolError:
@@ -136,6 +137,7 @@ public class ProfileManager : MonoBehaviour
     void EditNameText()
     {
         nameText.text = "Name: " + PlayerData.Name;
+        nameInputField.text = "";
     }
 
     void EditGuildText()

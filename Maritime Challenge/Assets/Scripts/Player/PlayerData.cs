@@ -27,15 +27,16 @@ public static class PlayerData // Local Player's Data
     public static List<BasicInfo> FriendList = new List<BasicInfo>();
     //Dict to store id of people and whether they are unlocked
     public static Dictionary<int, BasicInfo> PhonebookData = new Dictionary<int, BasicInfo>();
-
+    //Dict to store data of friends that have been viewed and saved locally
 	public static List<FriendInfo> FriendDataList = new List<FriendInfo>();
-
     //Stores all the friend requests you have sent to other people
     public static List<int> SentFriendRequestList = new List<int>();
-
     //Stores all the friend requests you have recieved from other people
     public static List<int> ReceivedFriendRequestList = new List<int>();
 
+
+    public delegate void PlayerDataUpdated();
+    public static event PlayerDataUpdated OnPlayerDataUpdated;
 
     public static string GetCountryName(int id)
     {
@@ -128,6 +129,13 @@ public static class PlayerData // Local Player's Data
         FriendDataList.Clear();
         SentFriendRequestList.Clear();
         ReceivedFriendRequestList.Clear();
+    }
+
+
+    public static void SetUsername(string name)
+    {
+        Name = name;
+        OnPlayerDataUpdated?.Invoke();
     }
 
 }
