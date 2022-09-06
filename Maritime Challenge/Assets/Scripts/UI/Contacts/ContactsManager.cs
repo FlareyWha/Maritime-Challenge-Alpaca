@@ -26,6 +26,7 @@ public class ContactsManager : MonoBehaviour
     private void Start()
     {
         FriendsManager.OnFriendListUpdated += UpdateDisplay;
+        FriendRequestHandler.OnFriendRequestSent += OnNewFriendRequestSent;
     }
 
     public void UpdateContactsListRect()
@@ -149,14 +150,21 @@ public class ContactsManager : MonoBehaviour
 
     public void AddSelectedContactAsFriend()
     {
-       // FriendsManager.Instance.AddFriend(currSelected.GetContactInfo().UID, currSelected.GetContactInfo().Name);
-       //FriendRequestHandler.
+        FriendsManager.Instance.SendFriendRequest(currSelected.GetContactInfo().UID);
     }
 
     public void UnfriendContact()
     {
         FriendsManager.Instance.DeleteFriend(currSelected.GetContactInfo().UID);
     }
+
+
+    private void OnNewFriendRequestSent(int id)
+    {
+        if (currSelected.GetContactInfo().UID == id)
+            UpdateDisplay();
+    }
+
 
     public static bool CheckIfKnown(int playerID)
     {

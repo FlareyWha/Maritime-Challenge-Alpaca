@@ -36,6 +36,10 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
     private const float CLOSE_MENU_ANIM_TIME = 0.5f;
     //private float timer = 0.0f;
 
+    void Start()
+    {
+        FriendRequestHandler.OnFriendRequestSent += OnNewFriendRequestSent;
+    }
 
     public void ToggleMenu(Button button)
     {
@@ -71,13 +75,23 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
             InteractNamecard.SetUnknown(player.GetUID());
     }
 
+    public void SetInteractNamecardDetails(int playerID)
+    {
+        if (FriendsManager.CheckIfFriends(playerID))
+            InteractNamecard.SetDetails(PlayerData.FindFriendInfoByID(playerID));
+        else if (ContactsManager.CheckIfKnown(playerID))
+            InteractNamecard.SetHidden(playerID);
+        else
+            InteractNamecard.SetUnknown(playerID);
+    }
+
     
 
     public void AddInteractedAsFriend()
     {
         int id = InteractNamecard.GetPlayerID();
-        FriendsManager.Instance.AddFriend(id, PlayerData.FindPlayerNameByID(id));
-        InteractNamecard.SetDetails(PlayerInteract.interactPlayer);
+        FriendsManager.Instance.SendFriendRequest(id);
+        //InteractNamecard.SetDetails(PlayerInteract.interactPlayer);
     }
 
     public void UnfriendInteracted()
@@ -101,6 +115,12 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
     {
         StartCoroutine(ToggleFlyOutAnim(InteractNamecard.gameObject, Vector3.zero, new Vector3(0, -900, 0), 1.0f, button));
         PlayerInteract.interactPlayer = null;
+    }
+
+    private void OnNewFriendRequestSent(int id)
+    {
+        if (InteractNamecard.GetPlayerID() == id)
+            SetInteractNamecardDetails(id);
     }
 
     static public IEnumerator ToggleSlideAnim(Image mask, bool open, float anim_time, Button button)
@@ -177,7 +197,6 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
 
         uiGO.gameObject.SetActive(false);
     }
-
 
     private IEnumerator ExtendNamecardAnim(float anim_time, Button button)
     {

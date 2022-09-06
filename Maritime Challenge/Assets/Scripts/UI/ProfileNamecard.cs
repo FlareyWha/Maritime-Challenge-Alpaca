@@ -10,7 +10,7 @@ public class ProfileNamecard : MonoBehaviour
     [SerializeField]
     private Image Title;
     [SerializeField]
-    private GameObject ProfileInfo, HiddenPanel, UnknownPanel;
+    private GameObject ProfileInfo, HiddenPanel, UnknownPanel, PendingPanel;
     //[SerializeField]
     //private GameObject AddFriendButton;
     [SerializeField]
@@ -28,6 +28,7 @@ public class ProfileNamecard : MonoBehaviour
         ProfileInfo.SetActive(true);
         HiddenPanel.SetActive(false);
         UnknownPanel.SetActive(false);
+        PendingPanel.SetActive(false);
         Name.text = "Name: " + player.GetUsername();
         Bio.text = player.GetBio();
         Level.text = player.GetLevel().ToString();
@@ -44,6 +45,7 @@ public class ProfileNamecard : MonoBehaviour
         ProfileInfo.SetActive(true);
         HiddenPanel.SetActive(false);
         UnknownPanel.SetActive(false);
+        PendingPanel.SetActive(false);
         Name.text = "Name: " + player.Name;
         Bio.text = player.Biography;
         Level.text = player.CurrLevel.ToString();
@@ -56,19 +58,27 @@ public class ProfileNamecard : MonoBehaviour
     public void SetHidden(int playerID)
     {
         this.playerID = playerID;
+        Name.text = "Name: " + PlayerData.FindPlayerNameByID(playerID);
 
         ProfileInfo.SetActive(false);
-        HiddenPanel.SetActive(true);
         UnknownPanel.SetActive(false);
+
+        bool pending = FriendsManager.CheckIfPending(playerID);
+
+
+        HiddenPanel.SetActive(!pending);
+        PendingPanel.SetActive(pending);
 
     }
 
     public void SetUnknown(int playerID)
     {
         this.playerID = playerID;
+        Name.text = "Name: " + PlayerData.FindPlayerNameByID(playerID);
 
         ProfileInfo.SetActive(false);
         HiddenPanel.SetActive(false);
+        PendingPanel.SetActive(false);
         UnknownPanel.SetActive(true);
 
         AvatarImage.sprite = UnknownSprite;

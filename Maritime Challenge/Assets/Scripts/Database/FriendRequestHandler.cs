@@ -5,6 +5,9 @@ using UnityEngine.Networking;
 
 public static class FriendRequestHandler
 {
+    public delegate void FriendRequestSent(int recID);
+    public static event FriendRequestSent OnFriendRequestSent;
+
     public static IEnumerator StartSendFriendRequest(int friendUID)
     {
         string url = ServerDataManager.URL_addFriendRequest;
@@ -20,6 +23,8 @@ public static class FriendRequestHandler
             case UnityWebRequest.Result.Success:
                 //Deseralize the data
                 Debug.Log(webreq.downloadHandler.text);
+                PlayerData.SentFriendRequestList.Add(friendUID);
+                OnFriendRequestSent?.Invoke(friendUID);
                 break;
             case UnityWebRequest.Result.ProtocolError:
                 Debug.LogError(webreq.downloadHandler.text);
@@ -45,6 +50,7 @@ public static class FriendRequestHandler
             case UnityWebRequest.Result.Success:
                 //Deseralize the data
                 Debug.Log(webreq.downloadHandler.text);
+                PlayerData.RecievedFriendRequestList.Remove(requestOwnerUID);
                 break;
             case UnityWebRequest.Result.ProtocolError:
                 Debug.LogError(webreq.downloadHandler.text);
