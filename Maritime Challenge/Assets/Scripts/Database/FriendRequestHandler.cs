@@ -100,11 +100,9 @@ public static class FriendRequestHandler
         {
             case UnityWebRequest.Result.Success:
                 //Deseralize the data
-                JSONDeseralizer.DeseralizeRecievedFriendRequests(webreq.downloadHandler.text);
+                JSONDeseralizer.DeseralizeReceivedFriendRequests(webreq.downloadHandler.text);
                 Debug.Log("Get Received Friend Requests Success");
 
-                //Deseralize the data
-                JSONDeseralizer.DeseralizeReceivedFriendRequests(webreq.downloadHandler.text);
                 break;
             case UnityWebRequest.Result.ProtocolError:
                 Debug.LogError(webreq.downloadHandler.text);
