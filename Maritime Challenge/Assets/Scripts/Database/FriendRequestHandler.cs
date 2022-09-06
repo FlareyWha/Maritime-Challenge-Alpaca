@@ -50,7 +50,7 @@ public static class FriendRequestHandler
             case UnityWebRequest.Result.Success:
                 //Deseralize the data
                 Debug.Log(webreq.downloadHandler.text);
-                PlayerData.RecievedFriendRequestList.Remove(requestOwnerUID);
+                PlayerData.ReceivedFriendRequestList.Remove(requestOwnerUID);
                 break;
             case UnityWebRequest.Result.ProtocolError:
                 Debug.LogError(webreq.downloadHandler.text);
@@ -73,9 +73,10 @@ public static class FriendRequestHandler
         switch (webreq.result)
         {
             case UnityWebRequest.Result.Success:
+                Debug.Log("Get sent friend requests success.");
+
                 //Deseralize the data
                 JSONDeseralizer.DeseralizeSentFriendRequests(webreq.downloadHandler.text);
-
                 break;
             case UnityWebRequest.Result.ProtocolError:
                 Debug.LogError(webreq.downloadHandler.text);
@@ -88,7 +89,7 @@ public static class FriendRequestHandler
 
     public static IEnumerator GetRecievedFriendRequests()
     {
-        string url = ServerDataManager.URL_getRecievedFriendRequests;
+        string url = ServerDataManager.URL_getReceivedFriendRequests;
         Debug.Log(url);
 
         WWWForm form = new WWWForm();
@@ -98,9 +99,10 @@ public static class FriendRequestHandler
         switch (webreq.result)
         {
             case UnityWebRequest.Result.Success:
-                //Deseralize the data
-                JSONDeseralizer.DeseralizeRecievedFriendRequests(webreq.downloadHandler.text);
+                Debug.Log("Get recieved friend requests success.");
 
+                //Deseralize the data
+                JSONDeseralizer.DeseralizeReceivedFriendRequests(webreq.downloadHandler.text);
                 break;
             case UnityWebRequest.Result.ProtocolError:
                 Debug.LogError(webreq.downloadHandler.text);
@@ -110,6 +112,4 @@ public static class FriendRequestHandler
                 break;
         }
     }
-
-
 }

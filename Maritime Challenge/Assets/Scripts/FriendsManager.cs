@@ -34,7 +34,7 @@ public class FriendsManager : MonoBehaviourSingleton<FriendsManager>
         }
 
         // Fill in Incoming Rect
-        foreach (int id in PlayerData.RecievedFriendRequestList)
+        foreach (int id in PlayerData.ReceivedFriendRequestList)
         {
             GameObject uiGO = Instantiate(IncomingFriendRequestUIPrefab, IncomingListRect);
             IncomingFriendRequestUI ui = uiGO.GetComponent<IncomingFriendRequestUI>();

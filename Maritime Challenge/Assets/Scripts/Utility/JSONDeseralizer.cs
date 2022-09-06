@@ -98,13 +98,13 @@ public class JSONDeseralizer : MonoBehaviour
         }
     }
 
-    public static void DeseralizeRecievedFriendRequests(string recievedFriendRequestJSON)
+    public static void DeseralizeReceivedFriendRequests(string receivedFriendRequestJSON)
     {
-        JSONRecievedFriendRequestList recievedFriendRequestList = JsonUtility.FromJson<JSONRecievedFriendRequestList>(recievedFriendRequestJSON);
+        JSONReceivedFriendRequestList receivedFriendRequestList = JsonUtility.FromJson<JSONReceivedFriendRequestList>(receivedFriendRequestJSON);
 
-        for (int i = 0; i < recievedFriendRequestList.recievedFriendRequests.Count; ++i)
+        for (int i = 0; i < receivedFriendRequestList.receivedFriendRequests.Count; ++i)
         {
-            PlayerData.RecievedFriendRequestList.Add(recievedFriendRequestList.recievedFriendRequests[i].iOwnerUID);
+            PlayerData.ReceivedFriendRequestList.Add(receivedFriendRequestList.receivedFriendRequests[i].iOwnerUID);
         }
     }
 }
