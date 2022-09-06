@@ -28,10 +28,12 @@ if ($stmt->affected_rows < 0)
 {
     http_response_code(400);
     echo "Unsucessful adding of friend. Check the UID's maybe.";
+    die();
 }
 else
     $friendsAdded = $stmt->affected_rows;
 $stmt->close();
+
 $conn->close(); // Close connection
 
 http_response_code(200);

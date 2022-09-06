@@ -18,7 +18,7 @@ catch (Exception $e)
 }
 
 //Prepare statement to update the iCoins for the account with uid
-$query = "update tb_achievementList set bAchievementCompleted=true where iOwnerUID=? and iAchievementID=?";
+$query = "select bAchievementCompleted, bAchievementClaimed from tb_achievementList where iOwnerUID=? and iAchievementID=?";
 $stmt=$conn->prepare($query);
 
 //s - string, i - integer...
@@ -26,11 +26,23 @@ $stmt->bind_param("ii", $uid, $iAchievementID);
 
 //Execute statement
 $stmt->execute();
-$stmt->fetch();
-//Returns number of rows updated
-http_response_code(200);
-echo "Num rows updated:$stmt->affected_rows";
-$stmt->close();
+$stmt->bind_result($bAchievementCompleted, $bAchievementClaimed);
 
+//Bind into array to send as json
+$arr = Array();
+$arr["achievementStatus"] = Array();
+
+while ($stmt->fetch())
+{
+    $JSONAchievementStatus= array (
+        "bAchievementCompleted" => $bAchievementCompleted,
+        "bAchievementClaimed" => $bAchievementClaimed
+    );
+    array_push($arr["achievementStatus"], $JSONAchievementStatus);
+}
+
+http_response_code(200);
+echo json_encode($arr);
+$stmt->close();
 $conn->close();
 ?>

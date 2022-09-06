@@ -18,7 +18,7 @@ catch (Exception $e)
 }
 
 //Prepare statement to update the iCoins for the account with uid
-$query = "update tb_achievementList set bAchievementClaimed=true where UID=? and iAchievementID=?";
+$query = "update tb_achievementList set bAchievementClaimed=true where iOwnerUID=? and iAchievementID=?";
 $stmt=$conn->prepare($query);
 
 //s - string, i - integer...
