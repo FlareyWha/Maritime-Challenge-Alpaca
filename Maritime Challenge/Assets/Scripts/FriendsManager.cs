@@ -1,10 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Networking;
 
 public class FriendsManager : MonoBehaviourSingleton<FriendsManager>
 {
+    [SerializeField]
+    private GameObject IncomingFriendRequestUIPrefab, PendingFriendRequestUIPrefab;
+    [SerializeField]
+    private GameObject IncomingListRect, PendingListRect;
+
+
+
 
     public delegate void FriendListUpdated();
     public static event FriendListUpdated OnFriendListUpdated;
