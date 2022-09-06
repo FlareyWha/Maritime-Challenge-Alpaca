@@ -17,7 +17,7 @@ public class FriendsManager : MonoBehaviourSingleton<FriendsManager>
 
     private void Start()
     {
-       
+        UpdateRequestsPanelUI();
     }
 
     private void UpdateRequestsPanelUI()

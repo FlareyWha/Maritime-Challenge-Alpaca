@@ -7005,10 +7005,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 622848fa8624b75489fe6b4342dd67c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IncomingFriendRequestUIPrefab: {fileID: 0}
-  PendingFriendRequestUIPrefab: {fileID: 0}
-  IncomingListRect: {fileID: 0}
-  PendingListRect: {fileID: 0}
+  IncomingFriendRequestUIPrefab: {fileID: 1139984870343951782, guid: dea4ae8041a3d894d9dcc72de7b152a9, type: 3}
+  PendingFriendRequestUIPrefab: {fileID: 6510483927481946628, guid: 009086572497b6a4b98cc4e68155c7fa, type: 3}
+  IncomingListRect: {fileID: 1271861884}
+  PendingListRect: {fileID: 2143164145}
 --- !u!1 &904357793
 GameObject:
   m_ObjectHideFlags: 0

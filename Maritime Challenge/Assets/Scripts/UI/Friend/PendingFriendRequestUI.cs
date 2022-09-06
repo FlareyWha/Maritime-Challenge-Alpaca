@@ -10,10 +10,19 @@ public class PendingFriendRequestUI : MonoBehaviour
    
     private int ReceipentID = 0;
 
+    private void Start()
+    {
+        gameObject.GetComponent<Button>().onClick.AddListener(OnViewProfile);
+    }
 
     public void Init(int rec_id)
     {
         ReceipentID = rec_id;
         RecepientName.text = PlayerData.FindPlayerNameByID(rec_id);
+    }
+
+    private void OnViewProfile()
+    {
+
     }
 }
