@@ -18,7 +18,7 @@ catch (Exception $e)
 }
 
 //Prepare statement to update the iCoins for the account with uid
-$query = "update tb_missionList set bMissionCompleted=true where UID=? and iMissionID=?";
+$query = "update tb_missionList set bMissionCompleted=true where iOwnerUID=? and iMissionID=?";
 $stmt=$conn->prepare($query);
 
 //s - string, i - integer...

@@ -18,7 +18,7 @@ catch (Exception $e)
 }
 
 //Prepare statement to update the iCoins for the account with uid
-$query = "update tb_missionList set bMissionClaimed=true where iOwnerUID=? and iMissionID=?";
+$query = "select bMissionCompleted, bMissionClaimed from tb_missionList where iOwnerUID=? and iMissionID=?";
 $stmt=$conn->prepare($query);
 
 //s - string, i - integer...
@@ -26,11 +26,23 @@ $stmt->bind_param("ii", $uid, $iMissionID);
 
 //Execute statement
 $stmt->execute();
-$stmt->fetch();
-//Returns number of rows updated
-http_response_code(200);
-echo "Num rows updated:$stmt->affected_rows";
-$stmt->close();
+$stmt->bind_result($bMissionCompleted, $bMissionClaimed);
 
+//Bind into array to send as json
+$arr = Array();
+$arr["missionStatus"] = Array();
+
+while ($stmt->fetch())
+{
+    $JSONMissionStatus= array (
+        "bMissionCompleted" => $bMissionCompleted,
+        "bMissionClaimed" => $bMissionClaimed
+    );
+    array_push($arr["missionStatus"], $JSONMissionStatus);
+}
+
+http_response_code(200);
+echo json_encode($arr);
+$stmt->close();
 $conn->close();
 ?>
