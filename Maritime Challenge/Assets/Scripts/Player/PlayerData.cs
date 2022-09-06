@@ -85,6 +85,26 @@ public static class PlayerData // Local Player's Data
         return "Player does not exist";
     }
 
+    public static BasicInfo FindPlayerInfoByID(int id)
+    {
+        foreach (BasicInfo info in FriendList)
+        {
+            if (info.UID == id)
+                return info;
+        }
+        return null;
+    }
+
+    public static FriendInfo FindFriendInfoByID(int id)
+    {
+        foreach (FriendInfo info in FriendDataList)
+        {
+            if (info.UID == id)
+                return info;
+        }
+        return null;
+    }
+
     public static void ResetData()
     {
         UID = 0;

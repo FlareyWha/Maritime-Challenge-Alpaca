@@ -79,7 +79,14 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
         FriendsManager.Instance.AddFriend(id, PlayerData.FindPlayerNameByID(id));
         InteractNamecard.SetDetails(PlayerInteract.interactPlayer);
     }
-    
+
+    public void UnfriendInteracted()
+    {
+        int id = InteractNamecard.GetPlayerID();
+        FriendsManager.Instance.DeleteFriend(id);
+        InteractNamecard.SetDetails(PlayerInteract.interactPlayer);
+    }
+
     public void ShowInteractNamecard()
     {
         StartCoroutine(ToggleFlyInAnim(InteractNamecard.gameObject, new Vector3(0, -900, 0), Vector3.zero, 1.0f, null));
