@@ -35,7 +35,6 @@ public class ContactsManager : MonoBehaviour
             Destroy(child.gameObject);
         }
 
-        Debug.Log("Updating ContactsListRect...");
 
         // TBC - Sort List By Known/Unknown
 

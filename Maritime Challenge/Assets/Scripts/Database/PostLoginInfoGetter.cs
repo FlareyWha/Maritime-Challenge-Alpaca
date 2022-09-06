@@ -20,8 +20,8 @@ public class PostLoginInfoGetter : MonoBehaviour
         StartCoroutine(coroutineCollectionManager.CollectCoroutine(GetPlayerData()));
         StartCoroutine(coroutineCollectionManager.CollectCoroutine(GetFriends()));
         StartCoroutine(coroutineCollectionManager.CollectCoroutine(GetPhonebookData()));
-        StartCoroutine(coroutineCollectionManager.CollectCoroutine(GetSentFriendRequests()));
-        StartCoroutine(coroutineCollectionManager.CollectCoroutine(GetRecievedFriendRequests()));
+        StartCoroutine(coroutineCollectionManager.CollectCoroutine(FriendRequestHandler.GetSentFriendRequests()));
+        StartCoroutine(coroutineCollectionManager.CollectCoroutine(FriendRequestHandler.GetRecievedFriendRequests()));
 
         //Wait for all the coroutines to finish running before continuing
         yield return coroutineCollectionManager;
@@ -96,56 +96,6 @@ public class PostLoginInfoGetter : MonoBehaviour
             case UnityWebRequest.Result.Success:
                 //Deseralize the data
                 JSONDeseralizer.DeseralizePhonebookData(webreq.downloadHandler.text);
-
-                break;
-            case UnityWebRequest.Result.ProtocolError:
-                Debug.LogError(webreq.downloadHandler.text);
-                break;
-            default:
-                Debug.LogError("Server error");
-                break;
-        }
-    }
-
-    IEnumerator GetSentFriendRequests()
-    {
-        string url = ServerDataManager.URL_getSentFriendRequests;
-        Debug.Log(url);
-
-        WWWForm form = new WWWForm();
-        form.AddField("UID", PlayerData.UID);
-        using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
-        yield return webreq.SendWebRequest();
-        switch (webreq.result)
-        {
-            case UnityWebRequest.Result.Success:
-                //Deseralize the data
-                JSONDeseralizer.DeseralizeSentFriendRequests(webreq.downloadHandler.text);
-
-                break;
-            case UnityWebRequest.Result.ProtocolError:
-                Debug.LogError(webreq.downloadHandler.text);
-                break;
-            default:
-                Debug.LogError("Server error");
-                break;
-        }
-    }
-
-    IEnumerator GetRecievedFriendRequests()
-    {
-        string url = ServerDataManager.URL_getRecievedFriendRequests;
-        Debug.Log(url);
-
-        WWWForm form = new WWWForm();
-        form.AddField("UID", PlayerData.UID);
-        using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
-        yield return webreq.SendWebRequest();
-        switch (webreq.result)
-        {
-            case UnityWebRequest.Result.Success:
-                //Deseralize the data
-                JSONDeseralizer.DeseralizeRecievedFriendRequests(webreq.downloadHandler.text);
 
                 break;
             case UnityWebRequest.Result.ProtocolError:

@@ -12,26 +12,32 @@ public class IncomingFriendRequestUI : MonoBehaviour
 
     private int SenderID = 0;
 
-    private event Action<int> acceptFriendRequest, rejectFriendRequest;
-
     void Start()
     {
         AcceptButton.onClick.AddListener(OnAcceptButtonClicked);
         RejectButton.onClick.AddListener(OnRejectButtonClicked);
+        gameObject.GetComponent<Button>().onClick.AddListener(OnViewProfile);
     }
 
-    public void Init()
+    public void Init(int sender_id)
     {
-        
+        SenderID = sender_id;
+        SenderName.text = PlayerData.FindPlayerNameByID(sender_id);
     }
 
     private void OnAcceptButtonClicked()
     {
-        acceptFriendRequest?.Invoke(SenderID);
+        FriendsManager.Instance.AddFriend(SenderID, SenderName.text);
+        Destroy(gameObject);
     }
 
     private void OnRejectButtonClicked()
     {
-        rejectFriendRequest?.Invoke(SenderID);
+        Destroy(gameObject);
+    }
+
+    private void OnViewProfile()
+    {
+        
     }
 }
