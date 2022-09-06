@@ -14,32 +14,15 @@ public class FriendsManager : MonoBehaviourSingleton<FriendsManager>
         //Add UI
 
         //Start friend request
-        StartCoroutine(StartSendFriendRequest(friendUID));
+        StartCoroutine(FriendRequestHandler.StartSendFriendRequest(friendUID));
     }
 
-    IEnumerator StartSendFriendRequest(int friendUID)
+    public void DeleteFriendRequest(int requestOwnerUID)
     {
-        string url = ServerDataManager.URL_addFriendRequest;
-        Debug.Log(url);
+        //Add UI
 
-        WWWForm form = new WWWForm();
-        form.AddField("UID", PlayerData.UID);
-        form.AddField("iOtherUID", friendUID);
-        using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
-        yield return webreq.SendWebRequest();
-        switch (webreq.result)
-        {
-            case UnityWebRequest.Result.Success:
-                //Deseralize the data
-                Debug.Log(webreq.downloadHandler.text);
-                break;
-            case UnityWebRequest.Result.ProtocolError:
-                Debug.LogError(webreq.downloadHandler.text);
-                break;
-            default:
-                Debug.LogError("Server error");
-                break;
-        }
+        //Start friend request
+        StartCoroutine(FriendRequestHandler.StartDeleteFriendRequest(requestOwnerUID));
     }
 
     public void AddFriend(int id, string name)
