@@ -585,6 +585,7 @@ GameObject:
   m_Component:
   - component: {fileID: 328514329}
   - component: {fileID: 328514328}
+  - component: {fileID: 328514331}
   - component: {fileID: 328514330}
   m_Layer: 0
   m_Name: LoginManager
@@ -638,6 +639,19 @@ MonoBehaviour:
   passwordShowHideButtonImage: {fileID: 1742555242}
   passwordHideIcon: {fileID: 21300000, guid: 2f8adceb0320bd84391daa3a342ef3c5, type: 3}
   passwordShowIcon: {fileID: 21300000, guid: 6a7e88ff1f36d6648bfb0c1c207f5e64, type: 3}
+--- !u!114 &328514331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 328514327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9673b96770c37f40a9db54fde485914, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  confirmationText: {fileID: 315208868}
 --- !u!1 &426243094
 GameObject:
   m_ObjectHideFlags: 0

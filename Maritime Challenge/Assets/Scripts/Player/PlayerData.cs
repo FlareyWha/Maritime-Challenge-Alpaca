@@ -30,6 +30,12 @@ public static class PlayerData // Local Player's Data
 
 	public static List<FriendInfo> FriendDataList = new List<FriendInfo>();
 
+    //Stores all the friend requests you have sent to other people
+    public static List<int> SentFriendRequestList = new List<int>();
+
+    //Stores all the friend requests you have recieved from other people
+    public static List<int> RecievedFriendRequestList = new List<int>();
+
 
     public static string GetCountryName(int id)
     {
