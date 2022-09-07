@@ -1365,6 +1365,7 @@ MonoBehaviour:
   UnknownPanel: {fileID: 7262260898877233450}
   PendingPanel: {fileID: 657325093487038086}
   IncomingPanel: {fileID: 9004794012449900705}
+  AcceptFriendRequestButton: {fileID: 8106068228912210829}
   AvatarImage: {fileID: 5226220916464862095}
   UnknownSprite: {fileID: 21300000, guid: 606938436ec28e14bb501fabd645aaed, type: 3}
 --- !u!1 &5226220916844789172
