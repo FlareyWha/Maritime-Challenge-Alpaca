@@ -28,7 +28,7 @@ public class IncomingFriendRequestUI : MonoBehaviour
     private void OnAcceptButtonClicked()
     {
         FriendsManager.Instance.AddFriend(SenderID, SenderName.text);
-        FriendsManager.Instance.DeleteFriendRequest(SenderID, PlayerData.UID);
+        FriendRequestHandler.InvokeFriendRequestDeletedEvent(SenderID, PlayerData.UID);
         Destroy(gameObject);
     }
 

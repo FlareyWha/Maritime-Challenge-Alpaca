@@ -117,7 +117,7 @@ public class ProfileNamecard : MonoBehaviour
     private void OnAcceptButtonClicked()
     {
         FriendsManager.Instance.AddFriend(playerID, Name.text);
-        FriendsManager.Instance.DeleteFriendRequest(playerID, PlayerData.UID);
+        FriendRequestHandler.InvokeFriendRequestDeletedEvent(playerID, PlayerData.UID);
     }
 
     public int GetPlayerID()

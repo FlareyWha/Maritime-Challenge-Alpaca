@@ -38,6 +38,7 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
 
     void Start()
     {
+        FriendsManager.OnNewFriendDataSaved += OnFriendDataSaved;
         FriendRequestHandler.OnFriendRequestSent += OnFriendRequestsUpdated;
         FriendRequestHandler.OnFriendRequestDeleted += OnFriendRequestsUpdated;
     }
@@ -79,11 +80,26 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
     public void SetInteractNamecardDetails(int playerID)
     {
         if (FriendsManager.CheckIfFriends(playerID))
-            InteractNamecard.SetDetails(PlayerData.FindFriendInfoByID(playerID));
+            SetFriendInteractNamecardDetails(playerID);
         else if (ContactsManager.CheckIfKnown(playerID))
             InteractNamecard.SetHidden(playerID);
         else
             InteractNamecard.SetUnknown(playerID);
+    }
+
+    private void SetFriendInteractNamecardDetails(int id)
+    {
+        foreach (FriendInfo friend in PlayerData.FriendDataList)
+        {
+            if (friend.UID == id)
+            {
+                FriendsManager.Instance.GetFriendDataInfo(id);
+                InteractNamecard.SetDetails(PlayerData.FindFriendInfoByID(id));
+                return;
+            }
+        }
+
+        FriendsManager.Instance.GetFriendDataInfo(id);
     }
 
     
@@ -122,6 +138,13 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
     {
         if (InteractNamecard.GetPlayerID() == sender_id || InteractNamecard.GetPlayerID() == rec_id)
             SetInteractNamecardDetails(InteractNamecard.GetPlayerID());
+    }
+    private void OnFriendDataSaved(FriendInfo friend)
+    {
+        if (InteractNamecard.GetPlayerID() != friend.UID)
+            return;
+
+        InteractNamecard.SetDetails(friend);
     }
 
     static public IEnumerator ToggleSlideAnim(Image mask, bool open, float anim_time, Button button)

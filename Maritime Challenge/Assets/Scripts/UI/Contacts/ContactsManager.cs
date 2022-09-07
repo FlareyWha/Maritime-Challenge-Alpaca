@@ -26,6 +26,7 @@ public class ContactsManager : MonoBehaviour
     private void Start()
     {
         FriendsManager.OnFriendListUpdated += UpdateDisplay;
+        FriendsManager.OnNewFriendDataSaved += OnFriendDataSaved;
         FriendRequestHandler.OnFriendRequestSent += OnFriendRequestsUpdated;
         FriendRequestHandler.OnFriendRequestDeleted += OnFriendRequestsUpdated;
     }
@@ -120,36 +121,10 @@ public class ContactsManager : MonoBehaviour
             }
         }
 
-        StartCoroutine(StartGetFriendInfo(friendUID));
+        FriendsManager.Instance.GetFriendDataInfo(friendUID);
     }
 
-    IEnumerator StartGetFriendInfo(int friendUID)
-    {
-        // Add Loading Anim
-
-        string url = ServerDataManager.URL_getFriendInfo;
-        Debug.Log(url);
-
-        WWWForm form = new WWWForm();
-        form.AddField("UID", PlayerData.UID);
-        form.AddField("iFriendUID", friendUID);
-        using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
-        yield return webreq.SendWebRequest();
-        switch (webreq.result)
-        {
-            case UnityWebRequest.Result.Success:
-                //Deseralize the data
-                FriendInfo friend =  JSONDeseralizer.DeseralizeFriendData(friendUID, webreq.downloadHandler.text);
-                UpdateContactDisplayUI(friend);
-                break;
-            case UnityWebRequest.Result.ProtocolError:
-                Debug.LogError(webreq.downloadHandler.text);
-                break;
-            default:
-                Debug.LogError("Server error");
-                break;
-        }
-    }
+    
 
     public void AddSelectedContactAsFriend()
     {
@@ -171,6 +146,12 @@ public class ContactsManager : MonoBehaviour
 
         if (currDisplayID == sender_id || currDisplayID == rec_id)
             UpdateDisplay();
+    }
+
+    private void OnFriendDataSaved(FriendInfo friend)
+    {
+        if (currSelected.GetContactInfo().UID == friend.UID)
+            UpdateContactDisplayUI(friend);
     }
 
 

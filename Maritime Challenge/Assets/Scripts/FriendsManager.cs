@@ -15,6 +15,9 @@ public class FriendsManager : MonoBehaviourSingleton<FriendsManager>
     public delegate void FriendListUpdated();
     public static event FriendListUpdated OnFriendListUpdated;
 
+    public delegate void NewFriendDataSaved(FriendInfo info);
+    public static event NewFriendDataSaved OnNewFriendDataSaved;
+
     private void Start()
     {
         UpdateRequestsPanelUI();
@@ -105,6 +108,7 @@ public class FriendsManager : MonoBehaviourSingleton<FriendsManager>
                     Name = name
                 };
                 PlayerData.FriendList.Add(basicInfo);
+                PlayerData.CommandsHandler.SendFriendAddedEvent(otherUID);
                 OnFriendListUpdated?.Invoke();
                 break;
             case UnityWebRequest.Result.ProtocolError:
@@ -136,6 +140,7 @@ public class FriendsManager : MonoBehaviourSingleton<FriendsManager>
                 Debug.Log(webreq.downloadHandler.text);
                 PlayerData.FriendList.Remove(PlayerData.FindPlayerInfoByID(otherUID));
                 PlayerData.FriendDataList.Remove(PlayerData.FindFriendInfoByID(otherUID));
+                PlayerData.CommandsHandler.SendFriendAddedEvent(otherUID);
                 OnFriendListUpdated?.Invoke();
                 break;
             case UnityWebRequest.Result.ProtocolError:
@@ -145,6 +150,41 @@ public class FriendsManager : MonoBehaviourSingleton<FriendsManager>
                 Debug.LogError("Friend cannot be removed");
                 break;
         }
+    }
+
+    public void GetFriendDataInfo(int friendUID)
+    {
+        StartCoroutine(StartGetFriendInfo(friendUID));
+    }
+    IEnumerator StartGetFriendInfo(int friendUID)
+    {
+        string url = ServerDataManager.URL_getFriendInfo;
+        Debug.Log(url);
+
+        WWWForm form = new WWWForm();
+        form.AddField("UID", PlayerData.UID);
+        form.AddField("iFriendUID", friendUID);
+        using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
+        yield return webreq.SendWebRequest();
+        switch (webreq.result)
+        {
+            case UnityWebRequest.Result.Success:
+                //Deseralize the data
+                FriendInfo friend = JSONDeseralizer.DeseralizeFriendData(friendUID, webreq.downloadHandler.text);
+                OnNewFriendDataSaved?.Invoke(friend);
+                break;
+            case UnityWebRequest.Result.ProtocolError:
+                Debug.LogError(webreq.downloadHandler.text);
+                break;
+            default:
+                Debug.LogError("Server error");
+                break;
+        }
+    }
+
+    public void InvokeOnFriendListUpdated()
+    {
+        OnFriendListUpdated?.Invoke();
     }
     public static bool CheckIfFriends(int id)
     {

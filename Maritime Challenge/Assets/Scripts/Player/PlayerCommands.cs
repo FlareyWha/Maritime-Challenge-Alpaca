@@ -73,7 +73,6 @@ public class PlayerCommands : NetworkBehaviour
             PlayerData.ReceivedFriendRequestList.Remove(senderID);
             FriendRequestHandler.InvokeFriendRequestDeletedEvent(senderID, recID);
         }
-
     }
 
     public void SendFriendRequestEvent(int sender_id, int rec_id)
@@ -104,5 +103,58 @@ public class PlayerCommands : NetworkBehaviour
             FriendRequestHandler.InvokeFriendRequestSentEvent(senderID, recID);
         }
 
+    }
+
+    public void SendFriendAddedEvent(int recID)
+    {
+        SendFriendAddedEventtoServer(recID, PlayerData.UID, PlayerData.Name);
+    }
+
+    [Command]
+    private void SendFriendAddedEventtoServer(int recID, int otherID, string otherName)
+    {
+        FriendAdded(recID, otherID, otherName);
+    }
+
+    [ClientRpc]
+    private void FriendAdded(int recID, int otherID, string otherName)
+    {
+        if (recID == PlayerData.UID)
+        {
+            BasicInfo basicInfo = new BasicInfo
+            {
+                UID = otherID,
+                Name = otherName
+            };
+            PlayerData.FriendList.Add(basicInfo);
+            FriendsManager.Instance.InvokeOnFriendListUpdated();
+        }
+    }
+
+    public void SendFriendRemovedEvent(int otherID)
+    {
+        SendFriendRemovedEventtoServer(otherID);
+    }
+
+    [Command]
+    private void SendFriendRemovedEventtoServer(int otherID)
+    {
+        FriendRemoved(otherID);
+    }
+
+    [ClientRpc]
+    private void FriendRemoved(int otherID)
+    {
+        if (otherID == PlayerData.UID)
+        {
+            PlayerData.FriendList.Remove(PlayerData.FindPlayerInfoByID(otherID));
+
+            FriendInfo info = PlayerData.FindFriendInfoByID(otherID);
+            if (info != null)
+                PlayerData.FriendDataList.Remove(info);
+
+            FriendsManager.Instance.InvokeOnFriendListUpdated();
+
+        }
     }
 }
