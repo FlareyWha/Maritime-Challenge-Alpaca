@@ -164,6 +164,9 @@ public class ContactsManager : MonoBehaviour
 
     private void OnFriendRequestsUpdated(int sender_id, int rec_id)
     {
+        if (currSelected == null)
+            return;
+
         int currDisplayID = currSelected.GetContactInfo().UID;
 
         if (currDisplayID == sender_id || currDisplayID == rec_id)
