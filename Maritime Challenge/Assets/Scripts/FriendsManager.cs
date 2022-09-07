@@ -167,4 +167,14 @@ public class FriendsManager : MonoBehaviourSingleton<FriendsManager>
         }
         return false;
     }
+
+    public static bool CheckIfIncoming(int id)
+    {
+        foreach (int sent_id in PlayerData.ReceivedFriendRequestList)
+        {
+            if (sent_id == id)
+                return true;
+        }
+        return false;
+    }
 }

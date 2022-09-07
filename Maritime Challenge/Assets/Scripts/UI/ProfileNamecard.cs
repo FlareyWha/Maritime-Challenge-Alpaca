@@ -10,9 +10,16 @@ public class ProfileNamecard : MonoBehaviour
     [SerializeField]
     private Image Title;
     [SerializeField]
-    private GameObject ProfileInfo, HiddenPanel, UnknownPanel, PendingPanel;
-    //[SerializeField]
-    //private GameObject AddFriendButton;
+    private GameObject ProfileInfo, HiddenPanel, UnknownPanel, PendingPanel, IncomingPanel;
+    [SerializeField]
+    private Button AcceptFriendRequestButton;
+  
+    // ProfileInfo - Friends
+    // Hidden - Not Friends
+    // Pending - Sent Friend Request to player
+    // Incoming - Received Friend Request from player
+    // Unknown - Have not met/unlocked
+
     [SerializeField]
     private Image AvatarImage;
     [SerializeField]
@@ -20,6 +27,10 @@ public class ProfileNamecard : MonoBehaviour
 
     private int playerID = 0;
 
+    void Awake()
+    {
+        AcceptFriendRequestButton.onClick.AddListener(OnAcceptButtonClicked);
+    }
 
     public void SetDetails(Player player)
     {
@@ -29,6 +40,7 @@ public class ProfileNamecard : MonoBehaviour
         HiddenPanel.SetActive(false);
         UnknownPanel.SetActive(false);
         PendingPanel.SetActive(false);
+        IncomingPanel.SetActive(false);
         Name.text = "Name: " + player.GetUsername();
         Bio.text = player.GetBio();
         Level.text = player.GetLevel().ToString();
@@ -46,6 +58,7 @@ public class ProfileNamecard : MonoBehaviour
         HiddenPanel.SetActive(false);
         UnknownPanel.SetActive(false);
         PendingPanel.SetActive(false);
+        IncomingPanel.SetActive(false);
         Name.text = "Name: " + player.Name;
         Bio.text = player.Biography;
         Level.text = player.CurrLevel.ToString();
@@ -63,18 +76,34 @@ public class ProfileNamecard : MonoBehaviour
         ProfileInfo.SetActive(false);
         UnknownPanel.SetActive(false);
 
-        bool pending = FriendsManager.CheckIfPending(playerID);
+        if (FriendsManager.CheckIfPending(playerID))
+        {
+            HiddenPanel.SetActive(false);
+            PendingPanel.SetActive(true);
+            IncomingPanel.SetActive(false);
+
+        }
+        else if (FriendsManager.CheckIfIncoming(playerID))
+        {
+            HiddenPanel.SetActive(false);
+            PendingPanel.SetActive(false);
+            IncomingPanel.SetActive(true);
+        }
+        else
+        {
+            HiddenPanel.SetActive(true);
+            PendingPanel.SetActive(false);
+            IncomingPanel.SetActive(false);
+        }
 
 
-        HiddenPanel.SetActive(!pending);
-        PendingPanel.SetActive(pending);
 
     }
 
     public void SetUnknown(int playerID)
     {
         this.playerID = playerID;
-        Name.text = "Name: " + PlayerData.FindPlayerNameByID(playerID);
+        Name.text = "";
 
         ProfileInfo.SetActive(false);
         HiddenPanel.SetActive(false);
@@ -82,6 +111,13 @@ public class ProfileNamecard : MonoBehaviour
         UnknownPanel.SetActive(true);
 
         AvatarImage.sprite = UnknownSprite;
+    }
+
+
+    private void OnAcceptButtonClicked()
+    {
+        FriendsManager.Instance.AddFriend(playerID, Name.text);
+        FriendsManager.Instance.DeleteFriendRequest(playerID, PlayerData.UID);
     }
 
     public int GetPlayerID()
