@@ -1617,7 +1617,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: mono.
+  m_Text: no one selected
 --- !u!222 &201644418
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3790,7 +3790,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &480061347
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18068,7 +18068,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2073714410
 RectTransform:
   m_ObjectHideFlags: 0

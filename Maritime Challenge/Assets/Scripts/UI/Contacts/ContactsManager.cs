@@ -26,7 +26,8 @@ public class ContactsManager : MonoBehaviour
     private void Start()
     {
         FriendsManager.OnFriendListUpdated += UpdateDisplay;
-        FriendRequestHandler.OnFriendRequestSent += OnNewFriendRequestSent;
+        FriendRequestHandler.OnFriendRequestSent += OnFriendRequestsUpdated;
+        FriendRequestHandler.OnFriendRequestDeleted += OnFriendRequestsUpdated;
     }
 
     public void UpdateContactsListRect()
@@ -51,22 +52,24 @@ public class ContactsManager : MonoBehaviour
             {
                 contact.Initialise(null, player.Value, SetSelectedContact);
             }
+
+            if (currSelected == null)
+            {
+                SetSelectedContact(contact);
+                currSelected.EnableHighlight();
+            }
         }
 
-        if (ContactsListRect.childCount > 0)
-        {
-            // ITS LITERALLY THE SAME WHY NO WORK AAAAAAAAAAAAAAAAA
+        Debug.Log("Updating Contacts List Rect.. Found Contacts: " + ContactsListRect.childCount);
 
-            //SetSelectedContact(ContactsListRect.GetChild(0).gameObject.GetComponent<ContactsUI>());
-            //currSelected.EnableHighlight();
-            ContactsListRect.GetChild(0).gameObject.GetComponent<ContactsUI>().OnButtonClicked();
-        }
+     
     }
 
     public void SetSelectedContact(ContactsUI contact)
     {
         if (currSelected != null)
             currSelected.DisableHighlight();
+        Debug.Log("ContactsManager: Setting Current Selected Contact");
         currSelected = contact;
         UpdateDisplay();
     }
@@ -159,9 +162,11 @@ public class ContactsManager : MonoBehaviour
     }
 
 
-    private void OnNewFriendRequestSent(int id)
+    private void OnFriendRequestsUpdated(int sender_id, int rec_id)
     {
-        if (currSelected.GetContactInfo().UID == id)
+        int currDisplayID = currSelected.GetContactInfo().UID;
+
+        if (currDisplayID == sender_id || currDisplayID == rec_id)
             UpdateDisplay();
     }
 

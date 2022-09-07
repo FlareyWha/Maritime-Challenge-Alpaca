@@ -5,8 +5,11 @@ using UnityEngine.Networking;
 
 public static class FriendRequestHandler
 {
-    public delegate void FriendRequestSent(int recID);
+    public delegate void FriendRequestSent(int senderID, int recID);
     public static event FriendRequestSent OnFriendRequestSent;
+
+    public delegate void FriendRequestDeleted(int senderID, int recID);
+    public static event FriendRequestDeleted OnFriendRequestDeleted;
 
     public static IEnumerator StartSendFriendRequest(int friendUID)
     {
@@ -23,8 +26,9 @@ public static class FriendRequestHandler
             case UnityWebRequest.Result.Success:
                 //Deseralize the data
                 Debug.Log(webreq.downloadHandler.text);
-                PlayerData.SentFriendRequestList.Add(friendUID);
-                OnFriendRequestSent?.Invoke(friendUID);
+                // PlayerData.SentFriendRequestList.Add(friendUID);
+                // OnFriendRequestSent?.Invoke(friendUID);
+                PlayerData.CommandsHandler.SendFriendRequestEvent(PlayerData.UID, friendUID);
                 break;
             case UnityWebRequest.Result.ProtocolError:
                 Debug.LogError(webreq.downloadHandler.text);
@@ -35,14 +39,14 @@ public static class FriendRequestHandler
         }
     }
 
-    public static IEnumerator StartDeleteFriendRequest(int requestOwnerUID)
+    public static IEnumerator StartDeleteFriendRequest(int senderID, int recID)
     {
         string url = ServerDataManager.URL_deleteFriendRequest;
         Debug.Log(url);
 
         WWWForm form = new WWWForm();
-        form.AddField("UID", PlayerData.UID);
-        form.AddField("iOwnerUID", requestOwnerUID);
+        form.AddField("iOwnerUID", senderID);
+        form.AddField("iOtherUID", recID);
         using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
         yield return webreq.SendWebRequest();
         switch (webreq.result)
@@ -50,7 +54,7 @@ public static class FriendRequestHandler
             case UnityWebRequest.Result.Success:
                 //Deseralize the data
                 Debug.Log(webreq.downloadHandler.text);
-                PlayerData.ReceivedFriendRequestList.Remove(requestOwnerUID);
+                PlayerData.CommandsHandler.SendDeletedFriendRequestEvent(senderID, recID);
                 break;
             case UnityWebRequest.Result.ProtocolError:
                 Debug.LogError(webreq.downloadHandler.text);
@@ -111,5 +115,15 @@ public static class FriendRequestHandler
                 Debug.LogError("Server error");
                 break;
         }
+    }
+
+    public static void InvokeFriendRequestSentEvent(int sender_id, int rec_id)
+    {
+        OnFriendRequestSent?.Invoke(sender_id, rec_id);
+    }
+
+    public static void InvokeFriendRequestDeletedEvent(int sender_id, int rec_id)
+    {
+        OnFriendRequestDeleted?.Invoke(sender_id, rec_id);
     }
 }

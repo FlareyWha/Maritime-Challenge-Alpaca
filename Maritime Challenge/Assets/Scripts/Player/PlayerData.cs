@@ -22,6 +22,7 @@ public static class PlayerData // Local Player's Data
 
 
     public static Player MyPlayer = null;
+    public static PlayerCommands CommandsHandler = null;
 
     //Dict to store friendId
     public static List<BasicInfo> FriendList = new List<BasicInfo>();

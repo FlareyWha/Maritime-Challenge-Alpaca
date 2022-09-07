@@ -16,7 +16,6 @@ public class ChatManager : MonoBehaviourSingleton<ChatManager>
     [SerializeField]
     private Transform ChatLogRect;
 
-    private PlayerCommands myPlayerCommands = null;
 
     private CHAT_TYPE chatType = CHAT_TYPE.WORLD;
     private List<string> chatTypeList = new List<string>() { "World", "Guild" };
@@ -36,7 +35,6 @@ public class ChatManager : MonoBehaviourSingleton<ChatManager>
         while (PlayerData.MyPlayer == null)
             yield return null;
 
-        myPlayerCommands = PlayerData.MyPlayer.gameObject.GetComponent<PlayerCommands>();
     }
 
     public void SendMessage()
@@ -46,7 +44,7 @@ public class ChatManager : MonoBehaviourSingleton<ChatManager>
             return;
 
         // Send Message
-        myPlayerCommands.SendChatMessage(InputField_Message.text);
+        PlayerData.CommandsHandler.SendChatMessage(InputField_Message.text);
         InputField_Message.text = "";
     }
 

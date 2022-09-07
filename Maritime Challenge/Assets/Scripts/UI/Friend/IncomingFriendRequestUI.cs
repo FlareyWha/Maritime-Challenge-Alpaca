@@ -28,13 +28,13 @@ public class IncomingFriendRequestUI : MonoBehaviour
     private void OnAcceptButtonClicked()
     {
         FriendsManager.Instance.AddFriend(SenderID, SenderName.text);
-        FriendsManager.Instance.DeleteFriendRequest(SenderID);
+        FriendsManager.Instance.DeleteFriendRequest(SenderID, PlayerData.UID);
         Destroy(gameObject);
     }
 
     private void OnRejectButtonClicked()
     {
-        FriendsManager.Instance.DeleteFriendRequest(SenderID);
+        FriendsManager.Instance.DeleteFriendRequest(SenderID, PlayerData.UID);
         Destroy(gameObject);
     }
 

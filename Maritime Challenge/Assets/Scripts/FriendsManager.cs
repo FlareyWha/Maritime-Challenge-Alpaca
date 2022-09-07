@@ -18,7 +18,8 @@ public class FriendsManager : MonoBehaviourSingleton<FriendsManager>
     private void Start()
     {
         UpdateRequestsPanelUI();
-        FriendRequestHandler.OnFriendRequestSent += OnNewRequestSent;
+        FriendRequestHandler.OnFriendRequestSent += OnFriendRequestsUpdated;
+        FriendRequestHandler.OnFriendRequestDeleted += OnFriendRequestsUpdated;
     }
 
     private void UpdateRequestsPanelUI()
@@ -56,21 +57,9 @@ public class FriendsManager : MonoBehaviourSingleton<FriendsManager>
         }
     }
 
-    private void OnNewRequestSent(int playerid)
+    private void OnFriendRequestsUpdated(int sender_id, int receiver_id)
     {
-        // Clear Rect
-        foreach (Transform child in PendingListRect)
-        {
-            Destroy(child.gameObject);
-        }
-
-        // Fill in Pending Rect
-        foreach (int id in PlayerData.SentFriendRequestList)
-        {
-            GameObject uiGO = Instantiate(PendingFriendRequestUIPrefab, PendingListRect);
-            PendingFriendRequestUI ui = uiGO.GetComponent<PendingFriendRequestUI>();
-            ui.Init(id);
-        }
+        UpdateRequestsPanelUI();
     }
 
 
@@ -83,12 +72,12 @@ public class FriendsManager : MonoBehaviourSingleton<FriendsManager>
     }
 
 
-    public void DeleteFriendRequest(int requestOwnerUID)
+    public void DeleteFriendRequest(int senderID, int recID)
     {
         //Add UI
 
         //Start friend request
-        StartCoroutine(FriendRequestHandler.StartDeleteFriendRequest(requestOwnerUID));
+        StartCoroutine(FriendRequestHandler.StartDeleteFriendRequest(senderID, recID));
     }
     public void AddFriend(int id, string name)
     {
