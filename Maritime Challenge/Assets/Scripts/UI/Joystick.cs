@@ -79,10 +79,10 @@ public class Joystick : MonoBehaviour
         if (dis.magnitude == 0)
             return Vector2.zero;
 
-        float perc = dis.magnitude / max_delta_radius;
-        perc = Mathf.Clamp(perc, 0.0f, 1.0f);
+      //  float perc = dis.magnitude / max_delta_radius;
+      //  perc = Mathf.Clamp(perc, 0.0f, 1.0f);
 
-        return perc * dis.normalized;
+        return dis.normalized; // * perc;
     }
 
     private void HideJoystick()

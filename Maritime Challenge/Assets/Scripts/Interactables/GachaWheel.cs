@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class GachaWheel : Interactable
 {
-    protected override void Interact()
+    public override void Interact()
     {
         // ...
     }

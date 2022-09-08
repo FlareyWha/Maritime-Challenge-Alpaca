@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
-    [SerializeField]
-    private float InteractRadius = 3.0f;
+   // [SerializeField]
+   // private float InteractRadius = 3.0f;
 
 
     private Player myPlayer = null;
 
-    protected bool in_range = false;
-    protected static List<Interactable> inRangeList = new List<Interactable>();
+   // protected bool in_range = false;
+ 
 
 
     void Start()
@@ -29,36 +29,31 @@ public class Interactable : MonoBehaviour
 
     void Update()
     {
-        if (in_range && UIManager.Instance.IsInteractButtonClicked())
-        {
-            Interact();
-        }
+       
     }
 
-    protected virtual void Interact()
+    public virtual void Interact()
     {
 
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject == PlayerData.MyPlayer.gameObject)
         {
             // Enable Interact Button
             // ...
 
-            in_range = true;
-            inRangeList.Add(this);
+            PlayerInteract.InRangeList.Add(this);
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject == PlayerData.MyPlayer.gameObject || collision.gameObject == PlayerData.MyPlayer.GetBattleShip().gameObject)
         {
-            in_range = false;
-            inRangeList.Remove(this);
-            if (inRangeList.Count == 0)
+            PlayerInteract.InRangeList.Remove(this);
+            if (PlayerInteract.InRangeList.Count == 0)
             {
 
                 // Disable Interact Button if no others

@@ -6,6 +6,10 @@ using UnityEngine.Networking;
 
 public class Player : BaseEntity
 {
+    [SerializeField]
+    private GameObject BattleShipPrefab;
+
+
     [SyncVar]
     private int UID = 0;
     [SyncVar]
@@ -21,12 +25,13 @@ public class Player : BaseEntity
     [SyncVar]
     private int titleID = 0;
 
+
+    private Battleship LinkedBattleship = null;
+
+
     private PlayerUI playerUI = null;
 
-    //Entity stats
-    private BaseEntity baseEntity;
-
-    public override void OnStartAuthority()
+    public override void OnStartLocalPlayer()
     {
         // Init Player to SpawnPos
 
@@ -37,6 +42,10 @@ public class Player : BaseEntity
         Debug.Log("Setting Player Name.." + username);
 
         PlayerData.OnPlayerDataUpdated += SetDetails;
+
+        //Init My BattleShip
+        SpawnBattleShip();
+
     }
 
     private void SetDetails()
@@ -78,6 +87,48 @@ public class Player : BaseEntity
         this.level = level;
     }
 
+    [Command]
+    void SpawnBattleShip()
+    {
+        GameObject ship = Instantiate(BattleShipPrefab);
+        NetworkServer.Spawn(ship, connectionToClient);
+    }
+
+    public void SetLinkedShip(Battleship ship)
+    {
+        LinkedBattleship = ship;
+    }
+
+    public void SummonBattleShip(Dock dock)
+    {
+        if (LinkedBattleship == null)
+        {
+            Debug.Log("Player does not have a Linked BatleShip!!");
+            return;
+        }
+
+        LinkedBattleship.Summon(dock.GetRefShipTransform());
+        gameObject.SetActive(false);
+    }
+
+    public void DockShip(Dock dock)
+    {
+        if (LinkedBattleship == null)
+        {
+            Debug.Log("Player does not have a Linked BatleShip!!");
+            return;
+        }
+
+        LinkedBattleship.Dock();
+        Transform playerT = dock.GetRefPlayerTransform();
+        transform.position = playerT.position;
+        transform.rotation = playerT.rotation;
+        gameObject.SetActive(true);
+    }
+
+
+
+
     void OnUsernameChanged(string prev_name, string new_name)
     {
         EnsureInits();
@@ -114,6 +165,11 @@ public class Player : BaseEntity
     public int GetCountryID()
     {
         return countryID;
+    }
+
+    public Battleship GetBattleShip()
+    {
+        return LinkedBattleship;
     }
 
     // ================ DATABASE ======================

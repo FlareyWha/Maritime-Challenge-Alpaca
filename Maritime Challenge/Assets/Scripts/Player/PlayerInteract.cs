@@ -14,7 +14,7 @@ public class PlayerInteract : NetworkBehaviour
     private bool isInteractOpen = false;
 
     public static Player interactPlayer = null;
-
+    public static List<Interactable> InRangeList = new List<Interactable>();
 
     void Start()
     {
@@ -31,10 +31,16 @@ public class PlayerInteract : NetworkBehaviour
 
     void Update()
     {
+        // LOCAL PLAYER'S INTERACTIONS WITH WORLD
         if (isLocalPlayer)
-            return;
-
-        if (!isInteractOpen && InputManager.InputActions.Main.Tap.WasPressedThisFrame() && IsWithinPlayer())
+        {
+            if (InRangeList.Count > 0 && UIManager.Instance.IsInteractButtonClicked())
+            {
+                InRangeList[0].Interact();
+            }
+        }
+        // OTHER CLIENTS INTERACT WITH LOCAL PLAYER FOR VIEW MENU
+        else if (!isInteractOpen && InputManager.InputActions.Main.Tap.WasPressedThisFrame() && IsWithinPlayer())
         {
             isInteractOpen = true;
             playerUI.ShowInteractPanel();
@@ -97,21 +103,6 @@ public class PlayerInteract : NetworkBehaviour
                 break;
         }
     }
-
-
-    public void AddFriend()
-    {
-        Player player = gameObject.GetComponent<Player>();
-        FriendsManager.Instance.AddFriend(player.GetUID(), player.GetUsername());
-    }
-
-  
-    public void DeleteFriend()
-    {
-        Player player = gameObject.GetComponent<Player>();
-        FriendsManager.Instance.DeleteFriend(player.GetUID());
-    }
-
  
     private bool IsWithinPlayer()
     {

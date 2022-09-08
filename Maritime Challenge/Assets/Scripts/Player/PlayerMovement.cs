@@ -7,13 +7,7 @@ using Mirror;
 public class PlayerMovement : NetworkBehaviour
 {
   
-    //private const float WALK_SPEED = 3.0f;
-
-    private Vector2 velocity = Vector2.zero;
-    private float accel_rate = 1.0f;
-    private float deccel_rate = 1.0f;
-
-    private const float MAX_VEL = 5.0f;
+    private const float WALK_SPEED = 5.0f;
 
     private Rigidbody2D rb = null;
 
@@ -27,9 +21,11 @@ public class PlayerMovement : NetworkBehaviour
         if (!isLocalPlayer)
             return;
 
+      
+
         Vector2 input = UIManager.Instance.Joystick.GetDirection();
 
-        rb.position += input * MAX_VEL * Time.deltaTime;
+        rb.position += input * WALK_SPEED * Time.deltaTime;
     }
 
 }

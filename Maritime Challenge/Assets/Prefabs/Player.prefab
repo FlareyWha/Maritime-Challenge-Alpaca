@@ -1057,6 +1057,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  BattleShipPrefab: {fileID: 2042507932746732076, guid: b8ed2059b8897514fa98360bc451be85, type: 3}
 --- !u!114 &9116503974399402979
 MonoBehaviour:
   m_ObjectHideFlags: 0
