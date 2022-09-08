@@ -4,9 +4,9 @@ using UnityEngine;
 using Mirror;
 
 [System.Serializable]
-public class BaseEntity : MonoBehaviour
-
+public class BaseEntity : NetworkBehaviour
 {
+    [SyncVar(hook = nameof(OnHPChanged))]
     protected int hp;
     public int HP
     {
@@ -73,6 +73,11 @@ public class BaseEntity : MonoBehaviour
     }
 
     protected virtual void HandleDeath()
+    {
+
+    }
+
+    protected virtual void OnHPChanged(int oldHP, int newHP)
     {
 
     }

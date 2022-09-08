@@ -10,7 +10,7 @@ public class Player : NetworkBehaviour
     private int UID = 0;
     [SyncVar]
     private int guildID = 0;
-    [SyncVar(hook = nameof(SyncUsername))]
+    [SyncVar(hook = nameof(OnUsernameChanged))]
     private string username = "";
     [SyncVar]
     private string bio = "";
@@ -78,13 +78,12 @@ public class Player : NetworkBehaviour
         this.level = level;
     }
 
-    void SyncUsername(string prev_name, string new_name)
+    void OnUsernameChanged(string prev_name, string new_name)
     {
         EnsureInits();
 
-        username = new_name;
-        playerUI.SetDisplayName(new_name);
-        Debug.Log("Name Received, " + new_name);
+        playerUI.SetDisplayName(username);
+        Debug.Log("Name Received, " + username);
     }
 
     public string GetUsername()
