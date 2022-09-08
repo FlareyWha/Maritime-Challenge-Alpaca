@@ -23,9 +23,6 @@ public class Player : BaseEntity
 
     private PlayerUI playerUI = null;
 
-    //Entity stats
-    private BaseEntity baseEntity;
-
     public override void OnStartAuthority()
     {
         // Init Player to SpawnPos
