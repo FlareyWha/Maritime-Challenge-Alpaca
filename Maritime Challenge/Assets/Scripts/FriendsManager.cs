@@ -140,7 +140,7 @@ public class FriendsManager : MonoBehaviourSingleton<FriendsManager>
                 Debug.Log(webreq.downloadHandler.text);
                 PlayerData.FriendList.Remove(PlayerData.FindPlayerInfoByID(otherUID));
                 PlayerData.FriendDataList.Remove(PlayerData.FindFriendInfoByID(otherUID));
-                PlayerData.CommandsHandler.SendFriendAddedEvent(otherUID);
+                PlayerData.CommandsHandler.SendFriendRemovedEvent(otherUID);
                 OnFriendListUpdated?.Invoke();
                 break;
             case UnityWebRequest.Result.ProtocolError:
@@ -188,10 +188,8 @@ public class FriendsManager : MonoBehaviourSingleton<FriendsManager>
     }
     public static bool CheckIfFriends(int id)
     {
-        Debug.Log("Checking through Friends List...");
         foreach (BasicInfo player in PlayerData.FriendList)
         {
-            Debug.Log("Found Friend Name: " + player.Name);
             if (player.UID == id)
                 return true;
         }

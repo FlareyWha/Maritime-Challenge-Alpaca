@@ -119,6 +119,8 @@ public class PlayerCommands : NetworkBehaviour
     [ClientRpc]
     private void FriendAdded(int recID, int otherID, string otherName)
     {
+        Debug.Log("Received Friend Added Event");
+
         if (recID == PlayerData.UID)
         {
             BasicInfo basicInfo = new BasicInfo

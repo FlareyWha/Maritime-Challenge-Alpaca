@@ -26,7 +26,6 @@ public class ContactsUI : MonoBehaviour
 
     private void OnButtonClicked()
     {
-        Debug.Log("ContactsUI: OnButtonClicked");
         SetSelectedContact?.Invoke(this);
         EnableHighlight();
     }

@@ -61,8 +61,6 @@ public class ContactsManager : MonoBehaviour
             }
         }
 
-        Debug.Log("Updating Contacts List Rect.. Found Contacts: " + ContactsListRect.childCount);
-
      
     }
 
@@ -70,7 +68,6 @@ public class ContactsManager : MonoBehaviour
     {
         if (currSelected != null)
             currSelected.DisableHighlight();
-        Debug.Log("ContactsManager: Setting Current Selected Contact");
         currSelected = contact;
         UpdateDisplay();
     }
