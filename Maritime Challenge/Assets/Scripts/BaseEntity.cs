@@ -55,4 +55,3 @@ public class BaseEntity : MonoBehaviour
         set { movespd = value; }
     }
 }
-
