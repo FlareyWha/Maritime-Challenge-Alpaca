@@ -107,19 +107,21 @@ public class PlayerCommands : NetworkBehaviour
 
     public void SendFriendAddedEvent(int recID)
     {
+        Debug.Log("COMMAND: Sending Friend Added Event for: " + recID +  "from " + PlayerData.UID);
         SendFriendAddedEventtoServer(recID, PlayerData.UID, PlayerData.Name);
     }
 
     [Command]
     private void SendFriendAddedEventtoServer(int recID, int otherID, string otherName)
     {
+        Debug.Log("SERVER RECEIVED COMMAND: Sending Friend Addd Event for: " + recID + "from " + otherID);
         FriendAdded(recID, otherID, otherName);
     }
 
     [ClientRpc]
     private void FriendAdded(int recID, int otherID, string otherName)
     {
-        Debug.Log("Received Friend Added Event");
+        Debug.Log("CLIENT RPC: Received Friend Added Event for: " + recID);
 
         if (recID == PlayerData.UID)
         {
@@ -133,21 +135,25 @@ public class PlayerCommands : NetworkBehaviour
         }
     }
 
-    public void SendFriendRemovedEvent(int otherID)
+    public void SendFriendRemovedEvent(int recID)
     {
-        SendFriendRemovedEventtoServer(otherID);
+        Debug.Log("COMMAND: Sending Friend Removed Event for: " + recID + "from " + PlayerData.UID);
+        SendFriendRemovedEventtoServer(recID, PlayerData.UID);
     }
 
     [Command]
-    private void SendFriendRemovedEventtoServer(int otherID)
+    private void SendFriendRemovedEventtoServer(int recID, int otherID)
     {
-        FriendRemoved(otherID);
+        Debug.Log("SERVER RECEIVED COMMAND: Sending Friend Removed Event for: " + recID + "from " + otherID);
+        FriendRemoved(recID, otherID);
     }
 
     [ClientRpc]
-    private void FriendRemoved(int otherID)
+    private void FriendRemoved(int recID, int otherID)
     {
-        if (otherID == PlayerData.UID)
+
+        Debug.Log("Received Friend Removed Event for " + recID);
+        if (recID == PlayerData.UID)
         {
             PlayerData.FriendList.Remove(PlayerData.FindPlayerInfoByID(otherID));
 

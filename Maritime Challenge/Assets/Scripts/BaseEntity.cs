@@ -4,7 +4,7 @@ using UnityEngine;
 using Mirror;
 
 [System.Serializable]
-public class BaseEntity
+public class BaseEntity : MonoBehaviour
 {
     protected int hp;
     public int HP

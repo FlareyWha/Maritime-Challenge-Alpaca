@@ -38,6 +38,7 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
 
     void Start()
     {
+        FriendsManager.OnFriendListUpdated += OnFriendListUpdated;
         FriendsManager.OnNewFriendDataSaved += OnFriendDataSaved;
         FriendRequestHandler.OnFriendRequestSent += OnFriendRequestsUpdated;
         FriendRequestHandler.OnFriendRequestDeleted += OnFriendRequestsUpdated;
@@ -104,19 +105,6 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
 
     
 
-    public void AddInteractedAsFriend()
-    {
-        int id = InteractNamecard.GetPlayerID();
-        FriendsManager.Instance.SendFriendRequest(id);
-        //InteractNamecard.SetDetails(PlayerInteract.interactPlayer);
-    }
-
-    public void UnfriendInteracted()
-    {
-        int id = InteractNamecard.GetPlayerID();
-        FriendsManager.Instance.DeleteFriend(id);
-        InteractNamecard.SetDetails(PlayerInteract.interactPlayer);
-    }
 
     public void ShowInteractNamecard()
     {
@@ -145,6 +133,11 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
             return;
 
         InteractNamecard.SetDetails(friend);
+    }
+
+    private void OnFriendListUpdated()
+    {
+        SetInteractNamecardDetails(InteractNamecard.GetPlayerID());
     }
 
     static public IEnumerator ToggleSlideAnim(Image mask, bool open, float anim_time, Button button)

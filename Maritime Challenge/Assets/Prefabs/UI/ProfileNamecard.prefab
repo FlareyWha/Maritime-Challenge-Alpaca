@@ -991,7 +991,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Name: ???'
+  m_Text: 
 --- !u!1 &5226220915833585822
 GameObject:
   m_ObjectHideFlags: 0
@@ -1366,6 +1366,8 @@ MonoBehaviour:
   PendingPanel: {fileID: 657325093487038086}
   IncomingPanel: {fileID: 9004794012449900705}
   AcceptFriendRequestButton: {fileID: 8106068228912210829}
+  AddFriendButton: {fileID: 4749506206140517134}
+  RemoveFriendButton: {fileID: 8929804119663971861}
   AvatarImage: {fileID: 5226220916464862095}
   UnknownSprite: {fileID: 21300000, guid: 606938436ec28e14bb501fabd645aaed, type: 3}
 --- !u!1 &5226220916844789172
@@ -2145,7 +2147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3137255, g: 0.3137255, b: 0, a: 1}
+  m_Color: {r: 0.3137255, g: 0.3137255, b: 0.3137255, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

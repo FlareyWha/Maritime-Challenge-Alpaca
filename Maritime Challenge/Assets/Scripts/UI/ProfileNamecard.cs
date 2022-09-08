@@ -12,7 +12,7 @@ public class ProfileNamecard : MonoBehaviour
     [SerializeField]
     private GameObject ProfileInfo, HiddenPanel, UnknownPanel, PendingPanel, IncomingPanel;
     [SerializeField]
-    private Button AcceptFriendRequestButton;
+    private Button AcceptFriendRequestButton, AddFriendButton, RemoveFriendButton;
   
     // ProfileInfo - Friends
     // Hidden - Not Friends
@@ -29,6 +29,8 @@ public class ProfileNamecard : MonoBehaviour
 
     void Awake()
     {
+        AddFriendButton.onClick.AddListener(OnAddFriendButtonClicked);
+        RemoveFriendButton.onClick.AddListener(OnRemoveFriendButtonClicked);
         AcceptFriendRequestButton.onClick.AddListener(OnAcceptButtonClicked);
     }
 
@@ -117,7 +119,17 @@ public class ProfileNamecard : MonoBehaviour
     private void OnAcceptButtonClicked()
     {
         FriendsManager.Instance.AddFriend(playerID, Name.text);
-        FriendRequestHandler.InvokeFriendRequestDeletedEvent(playerID, PlayerData.UID);
+        FriendsManager.Instance.DeleteFriendRequest(playerID, PlayerData.UID);
+    }
+
+    private void OnAddFriendButtonClicked()
+    {
+        FriendsManager.Instance.SendFriendRequest(playerID);
+    }
+
+    private void OnRemoveFriendButtonClicked()
+    {
+        FriendsManager.Instance.DeleteFriend(playerID);
     }
 
     public int GetPlayerID()

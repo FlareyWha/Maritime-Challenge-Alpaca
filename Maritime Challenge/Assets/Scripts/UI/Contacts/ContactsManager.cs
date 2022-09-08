@@ -123,15 +123,15 @@ public class ContactsManager : MonoBehaviour
 
     
 
-    public void AddSelectedContactAsFriend()
-    {
-        FriendsManager.Instance.SendFriendRequest(currSelected.GetContactInfo().UID);
-    }
+    //public void AddSelectedContactAsFriend()
+    //{
+        
+    //}
 
-    public void UnfriendContact()
-    {
-        FriendsManager.Instance.DeleteFriend(currSelected.GetContactInfo().UID);
-    }
+    //public void UnfriendContact()
+    //{
+    //    FriendsManager.Instance.DeleteFriend(currSelected.GetContactInfo().UID);
+    //}
 
 
     private void OnFriendRequestsUpdated(int sender_id, int rec_id)
