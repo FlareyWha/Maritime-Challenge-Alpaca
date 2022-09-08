@@ -4,13 +4,20 @@ using UnityEngine;
 using Mirror;
 
 [System.Serializable]
-public class BaseEntity
+public abstract class BaseEntity
 {
     protected int hp;
     public int HP
     {
         get { return hp; }
         set { hp = value; }
+    }
+
+    protected int maxHp;
+    public int MAXHP
+    {
+        get { return maxHp; }
+        set { maxHp = value; }
     }
 
     //protected int def;
@@ -53,5 +60,19 @@ public class BaseEntity
     {
         get { return movespd; }
         set { movespd = value; }
+    }
+
+    protected void TakeDamage(int damageAmount)
+    {
+        hp -= damageAmount;
+
+        //Call required stuff if entity dies 
+        if (hp <= 0)
+            HandleDeath();
+    }
+
+    protected virtual void HandleDeath()
+    {
+
     }
 }
