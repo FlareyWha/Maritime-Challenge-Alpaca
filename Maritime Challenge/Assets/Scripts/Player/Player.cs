@@ -23,7 +23,8 @@ public class Player : NetworkBehaviour
 
     private PlayerUI playerUI = null;
 
-    
+    //Entity stats
+    private BaseEntity baseEntity;
 
     public override void OnStartAuthority()
     {
@@ -36,7 +37,6 @@ public class Player : NetworkBehaviour
         Debug.Log("Setting Player Name.." + username);
 
         PlayerData.OnPlayerDataUpdated += SetDetails;
-
     }
 
     private void SetDetails()
