@@ -4,7 +4,7 @@ using UnityEngine;
 using Mirror;
 using UnityEngine.Networking;
 
-public class Player : NetworkBehaviour
+public class Player : BaseEntity
 {
     [SyncVar]
     private int UID = 0;
@@ -86,6 +86,7 @@ public class Player : NetworkBehaviour
         Debug.Log("Name Received, " + username);
     }
 
+    // ================= GETTERS =====================
     public string GetUsername()
     {
         return username;
@@ -115,6 +116,7 @@ public class Player : NetworkBehaviour
         return countryID;
     }
 
+    // ================ DATABASE ======================
     public void UpdateXPLevels(int xpGained)
     {
         int currXP = PlayerData.CurrXP;
