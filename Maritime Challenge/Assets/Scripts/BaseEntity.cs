@@ -55,4 +55,4 @@ public class BaseEntity
         set { movespd = value; }
     }
 }
-}
+
