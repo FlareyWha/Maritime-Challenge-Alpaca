@@ -5,12 +5,20 @@ using Mirror;
 
 [System.Serializable]
 public class BaseEntity : MonoBehaviour
+
 {
     protected int hp;
     public int HP
     {
         get { return hp; }
         set { hp = value; }
+    }
+
+    protected int maxHp;
+    public int MAXHP
+    {
+        get { return maxHp; }
+        set { maxHp = value; }
     }
 
     //protected int def;
@@ -53,5 +61,19 @@ public class BaseEntity : MonoBehaviour
     {
         get { return movespd; }
         set { movespd = value; }
+    }
+
+    protected void TakeDamage(int damageAmount)
+    {
+        hp -= damageAmount;
+
+        //Call required stuff if entity dies 
+        if (hp <= 0)
+            HandleDeath();
+    }
+
+    protected virtual void HandleDeath()
+    {
+
     }
 }
