@@ -32,6 +32,7 @@ public class Player : BaseEntity
     private PlayerUI playerUI = null;
 
     public override void OnStartLocalPlayer()
+
     {
         // Init Player to SpawnPos
 
