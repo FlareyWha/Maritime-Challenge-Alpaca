@@ -6,7 +6,7 @@ using Mirror;
 public class Battleship : NetworkBehaviour
 {
 
-    private Rigidbody2D rigidbody = null;
+    private Rigidbody2D rb = null;
 
     private Vector2 velocity = Vector2.zero;
     private Vector2 accel = Vector2.zero;
@@ -17,7 +17,7 @@ public class Battleship : NetworkBehaviour
 
     public override void OnStartAuthority()
     {
-        rigidbody = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
 
         Debug.Log("BattleShip: Taken Authority Over BattleShip");
         PlayerData.MyPlayer.SetLinkedShip(this);
@@ -53,7 +53,7 @@ public class Battleship : NetworkBehaviour
         velocity.x = Mathf.Clamp(velocity.x, -MAX_VEL, MAX_VEL);
         velocity.y = Mathf.Clamp(velocity.y, -MAX_VEL, MAX_VEL);
 
-        rigidbody.position += velocity * Time.deltaTime;
+        rb.position += velocity * Time.deltaTime;
 
     }
 
