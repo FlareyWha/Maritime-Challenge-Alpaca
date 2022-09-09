@@ -13,36 +13,76 @@ public enum ENEMY_STATES
 
 public class BaseEnemy : BaseEntity
 {
+    [SerializeField]
     protected Vector2 spawnPoint;
     protected float distanceToSpawnPoint;
     [SerializeField]
-    protected float maxDistanceToSpawnPoint = 30f;
+    protected int movementAreaCellWidth, movementAreaCellHeight;
+    protected Vector2 movementAreaLowerLimit, movementAreaUpperLimit;
+    protected Vector3Int gridMovementAreaLowerLimit, gridMovementAreaUpperLimit;
 
     protected Player currentTargetPlayer;
     protected Vector2 directionToPlayer;
     protected float distanceToPlayer;
     [SerializeField]
     protected float detectionDistance = 10f;
+    [SerializeField]
+    protected float findPlayerDistance = 20f;
 
     [SerializeField]
     protected float maxIdleTime = 5f;
-
     [SerializeField]
     protected float maxPatrolTime = 10f;
-
     [SerializeField]
     protected float maxSpotTime = 1f;
-
     [SerializeField]
     protected float maxChaseTime = 5f;
 
-    private float timer;
-    private float maxTimer;
+    protected float timer;
+    protected float maxTimer;
     protected ENEMY_STATES currEnemyState;
+
+    protected float aStarTimer;
+    protected List<Vector3Int> path = new List<Vector3Int>();
+    protected Vector3 destination;
+    protected Vector3 currentMovementDirection;
+    protected bool firstMove;
+
+    [SerializeField]
+    protected LayerMask playerLayerMask;
+
+    private void OnDrawGizmos()
+    {
+        //Draw something to visualize the box area
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireCube(spawnPoint, new Vector3(movementAreaUpperLimit.x - movementAreaLowerLimit.x, movementAreaUpperLimit.y - movementAreaLowerLimit.y, 0));
+    }
 
     // Start is called before the first frame update
     protected virtual void Start()
     {
+        Grid grid = GameObject.Find("Grid").GetComponent<Grid>();
+
+        //Make sure spawn point will start from the edge of the grid
+        spawnPoint.x -= spawnPoint.x % grid.cellSize.x;
+        spawnPoint.y -= spawnPoint.y % grid.cellSize.y;
+
+        //Set current position to spawn point
+        transform.position = spawnPoint;
+
+        Vector3Int gridSpawnPoint = grid.WorldToCell(spawnPoint);
+
+        movementAreaCellWidth -= Mathf.RoundToInt(movementAreaCellWidth % grid.cellSize.x);
+        movementAreaCellHeight -= Mathf.RoundToInt(movementAreaCellHeight % grid.cellSize.y);
+
+        //Save this for later for a*
+        gridMovementAreaLowerLimit = new Vector3Int(gridSpawnPoint.x - movementAreaCellWidth / 2, gridSpawnPoint.y - movementAreaCellHeight / 2, 0);
+        gridMovementAreaUpperLimit = new Vector3Int(gridSpawnPoint.x + movementAreaCellWidth / 2, gridSpawnPoint.y + movementAreaCellHeight / 2, 0);
+
+        //Set the limits for where the enemy can go
+        movementAreaLowerLimit = grid.CellToWorld(gridMovementAreaLowerLimit);
+        movementAreaUpperLimit = grid.CellToWorld(gridMovementAreaUpperLimit);
+
         FindPlayerToTarget();
     }
 
@@ -57,6 +97,8 @@ public class BaseEnemy : BaseEntity
         //Find distance to player if a player target is active
         if (currentTargetPlayer != null)
             distanceToPlayer = Vector2.Distance(currentTargetPlayer.transform.position, transform.position);
+        else
+            FindPlayerToTarget();
 
         switch (currEnemyState)
         {
@@ -118,7 +160,7 @@ public class BaseEnemy : BaseEntity
     {
         distanceToSpawnPoint = Vector3.Distance(spawnPoint, transform.position);
 
-        if (timer >= maxTimer || distanceToSpawnPoint >= maxDistanceToSpawnPoint || distanceToPlayer > detectionDistance)
+        if (timer >= maxTimer || CheckOutOfBounds() || distanceToPlayer > detectionDistance)
         {
             currEnemyState = ENEMY_STATES.IDLE;
             ResetTimer(maxIdleTime);
@@ -129,13 +171,23 @@ public class BaseEnemy : BaseEntity
 
     protected virtual void HandleAttack()
     {
-
+        //Choose an attack and play its animation or something, once done go into cooldown or go back to chase i suppose
     }
 
     protected void FindPlayerToTarget()
     {
         //Find a player in range somehow i suppose
         //currentTargetPlayer = 
+
+        Collider[] players = Physics.OverlapSphere(transform.position, findPlayerDistance);
+
+        foreach (Collider player in players)
+        {
+            if (player.gameObject.CompareTag("Player"))
+            {
+                currentTargetPlayer = player.GetComponent<Player>();
+            }
+        }
     }
 
     protected void GetDirectionToPlayer()
@@ -149,8 +201,54 @@ public class BaseEnemy : BaseEntity
         maxTimer = newMaxTimer;
     }
 
+    protected void CheckAStar()
+    {
+        if (aStarTimer < 0)
+        {
+            //Get path
+            //path = AStarPathfinding.Instance.FindPath(gridMovementAreaLowerLimit, transform.position, currentTargetPlayer.transform.position, movementAreaCellWidth, movementAreaCellHeight);
+
+            aStarTimer = 1.25f;
+            firstMove = true;
+
+            foreach (Vector3Int position in path)
+            {
+                if (firstMove)
+                {
+                    destination = position;
+                    currentMovementDirection = destination - transform.position;
+                    firstMove = false;
+                }
+                else
+                {
+                    if (position - destination == currentMovementDirection)
+                    {
+                        destination = position;
+                    }
+                    else
+                        break;
+                }
+            }
+        }
+
+        aStarTimer -= Time.deltaTime;
+    }
+
     protected void Move()
     {
-        transform.Translate(directionToPlayer * movespd * Time.deltaTime);
+        CheckAStar();
+
+        transform.Translate(currentMovementDirection * movespd * Time.deltaTime);
+    }
+
+
+    protected bool CheckOutOfBounds()
+    {
+        if (transform.position.x < movementAreaLowerLimit.x || transform.position.x > movementAreaUpperLimit.x || transform.position.y < movementAreaLowerLimit.y || transform.position.y > movementAreaUpperLimit.y)
+        {
+            return true;
+        }
+
+        return false;
     }
 }
