@@ -13,11 +13,11 @@ GameObject:
   - component: {fileID: 2042507932746732112}
   - component: {fileID: 2042507932746732113}
   - component: {fileID: 2425340848230285394}
-  - component: {fileID: 5050686614557521982}
   - component: {fileID: 5819340548618860176}
+  - component: {fileID: 4643109351371328166}
   m_Layer: 0
   m_Name: BattleShip
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 3374480f0e12b15458bca866fe070cf0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ae37a3edde070b24dbd7611fc8dddcdd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -160,22 +160,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!58 &5050686614557521982
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2042507932746732076}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 3.16
 --- !u!114 &5819340548618860176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,6 +174,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  UpwardSprite: {fileID: 21300000, guid: 3374480f0e12b15458bca866fe070cf0, type: 3}
+  DownwardSprite: {fileID: 21300000, guid: dd7c4ffdc4c02de4bb13dad6613642bd, type: 3}
+  LeftSprite: {fileID: 21300000, guid: ae37a3edde070b24dbd7611fc8dddcdd, type: 3}
+  RightSprite: {fileID: 21300000, guid: 5cd9f5d0e400b4146b2b5b71e9aaa1c6, type: 3}
+--- !u!58 &4643109351371328166
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042507932746732076}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 3.105
 --- !u!1 &2106921298954242604
 GameObject:
   m_ObjectHideFlags: 0

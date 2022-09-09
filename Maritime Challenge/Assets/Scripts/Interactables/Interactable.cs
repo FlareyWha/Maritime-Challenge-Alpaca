@@ -9,12 +9,12 @@ public class Interactable : MonoBehaviour
 
 
     private Player myPlayer = null;
-
+    protected string interactMessage = "Interact";
    // protected bool in_range = false;
  
 
 
-    void Start()
+    void Awake()
     {
         StartCoroutine(InteractableInits());
     }
@@ -24,6 +24,7 @@ public class Interactable : MonoBehaviour
         while (PlayerData.MyPlayer == null)
             yield return null;
 
+        Debug.Log("Interactable: SetMyPlayer!");
         myPlayer = PlayerData.MyPlayer;
     }
 
@@ -39,10 +40,13 @@ public class Interactable : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject == PlayerData.MyPlayer.gameObject)
+        if (collision.gameObject == myPlayer.gameObject || collision.gameObject == myPlayer.GetBattleShip().gameObject)
         {
-            // Enable Interact Button
-            // ...
+            if (PlayerInteract.InRangeList.Count == 0)
+            {
+                // Enable Interact Button if no others
+                UIManager.Instance.EnableInteractButton(interactMessage);
+            }
 
             PlayerInteract.InRangeList.Add(this);
         }
@@ -50,13 +54,13 @@ public class Interactable : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject == PlayerData.MyPlayer.gameObject || collision.gameObject == PlayerData.MyPlayer.GetBattleShip().gameObject)
+        if (collision.gameObject == myPlayer.gameObject || collision.gameObject == myPlayer.GetBattleShip().gameObject)
         {
             PlayerInteract.InRangeList.Remove(this);
             if (PlayerInteract.InRangeList.Count == 0)
             {
-
                 // Disable Interact Button if no others
+                UIManager.Instance.DisableInteractButton();
             }
         }
     }

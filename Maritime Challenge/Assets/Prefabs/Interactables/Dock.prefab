@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 4851536740854130390}
   - component: {fileID: 4851536740854130388}
   - component: {fileID: 6363441071005558601}
-  - component: {fileID: 852190245}
   m_Layer: 0
   m_Name: Dock
   m_TagString: Dock
@@ -117,20 +116,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RefShipTransform: {fileID: 6923443188934791959}
   RefPlayerTransform: {fileID: 7591159869947547350}
---- !u!114 &852190245
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4851536740854130391}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70b1994b64979d946953295ac68ca637, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RefShipTransform: {fileID: 0}
-  RefPlayerTransform: {fileID: 0}
 --- !u!1001 &1189244075061662789
 PrefabInstance:
   m_ObjectHideFlags: 0

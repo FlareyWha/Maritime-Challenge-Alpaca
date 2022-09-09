@@ -7,15 +7,41 @@ public class Dock : Interactable
 
 
     [SerializeField]
+    private bool IsStartingDock = false;
+    [SerializeField]
     private Transform RefShipTransform, RefPlayerTransform;
 
     private bool is_docked_here = false;
 
-    public override void Interact()
+    void Start()
     {
-        
+        if (IsStartingDock)
+            is_docked_here = true;
+
+        UpdateInteractMessage();
+
+
     }
 
+    public override void Interact()
+    {
+        Debug.Log("Dock: Interact function called");
+        if (is_docked_here)
+            PlayerData.MyPlayer.SummonBattleShip(this);
+        else
+            PlayerData.MyPlayer.DockShip(this);
+
+        is_docked_here = !is_docked_here;
+        UpdateInteractMessage();
+    }
+
+    private void UpdateInteractMessage()
+    {
+        if (is_docked_here)
+            interactMessage = "Summon Ship?";
+        else
+            interactMessage = "Dock Here?";
+    }
 
     public Transform GetRefShipTransform()
     {

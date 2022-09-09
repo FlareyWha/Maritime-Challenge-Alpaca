@@ -109,6 +109,7 @@ public class Player : BaseEntity
         }
 
         LinkedBattleship.Summon(dock.GetRefShipTransform());
+        PlayerFollowCamera.Instance.SetFollowTarget(LinkedBattleship.gameObject);
         gameObject.SetActive(false);
     }
 
@@ -124,6 +125,7 @@ public class Player : BaseEntity
         Transform playerT = dock.GetRefPlayerTransform();
         transform.position = playerT.position;
         transform.rotation = playerT.rotation;
+        PlayerFollowCamera.Instance.SetFollowTarget(gameObject);
         gameObject.SetActive(true);
     }
 

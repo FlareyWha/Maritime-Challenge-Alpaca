@@ -26,24 +26,29 @@ public class PlayerInteract : NetworkBehaviour
 
         playerSize.x *= pixelsPerUnit;
         playerSize.y *= pixelsPerUnit;
+    }
 
+    public override void OnStartAuthority()
+    {
+        UIManager.Instance.InteractButton.onClick.AddListener(OnInteractButtonClicked);
     }
 
     void Update()
     {
-        // LOCAL PLAYER'S INTERACTIONS WITH WORLD
-        if (isLocalPlayer)
-        {
-            if (InRangeList.Count > 0 && UIManager.Instance.IsInteractButtonClicked())
-            {
-                InRangeList[0].Interact();
-            }
-        }
+      
         // OTHER CLIENTS INTERACT WITH LOCAL PLAYER FOR VIEW MENU
-        else if (!isInteractOpen && InputManager.InputActions.Main.Tap.WasPressedThisFrame() && IsWithinPlayer())
+        if (!isInteractOpen && InputManager.InputActions.Main.Tap.WasPressedThisFrame() && IsWithinPlayer())
         {
             isInteractOpen = true;
             playerUI.ShowInteractPanel();
+        }
+    }
+
+    private void OnInteractButtonClicked()
+    {
+        if (InRangeList.Count > 0)
+        {
+            InRangeList[0].Interact();
         }
     }
 

@@ -19,6 +19,10 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
     [SerializeField]
     private Image ChatPanelMask;
 
+    public Button InteractButton;
+    [SerializeField]
+    private Text InteractButtonText;
+
     // Profile Page : TBC -> Might Shift to ProfileManager
     [SerializeField]
     private Image NamecardMask, NamecardImage;
@@ -34,6 +38,7 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
 
     private const float OPEN_MENU_ANIM_TIME = 0.5f;
     private const float CLOSE_MENU_ANIM_TIME = 0.5f;
+
     //private float timer = 0.0f;
 
     void Start()
@@ -66,6 +71,18 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
             StartCoroutine(ExtendNamecardAnim(1.0f, arrowButton));
         else
             StartCoroutine(RetractNamecardAnim(1.0f, arrowButton));
+    }
+
+    public void EnableInteractButton(string interact_text)
+    {
+        InteractButton.gameObject.SetActive(true);
+
+        InteractButtonText.text = interact_text;
+        SetWidthByTextWidth(InteractButton.gameObject, InteractButtonText);
+    }
+    public void DisableInteractButton()
+    {
+        InteractButton.gameObject.SetActive(false);
     }
 
     public void SetInteractNamecardDetails(Player player) // TBC dk get here or frm outside class
@@ -103,7 +120,6 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
         FriendsManager.Instance.GetFriendDataInfo(id);
     }
 
-    
 
 
     public void ShowInteractNamecard()
@@ -280,12 +296,7 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
         ProfilePageButtons.SetActive(true);
     }
 
-    public bool IsInteractButtonClicked()
-    {
-        return false;
-    }
-
-
+  
     public void ToggleJoystick(bool on)
     {
         Joystick.gameObject.SetActive(on);
@@ -322,4 +333,20 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
         return raysastResults;
     }
 
+
+    public static void SetWidthByTextWidth(GameObject toChange, Text toRef)
+    {
+        float text_width = toRef.preferredWidth;
+        RectTransform rt = toChange.gameObject.GetComponent(typeof(RectTransform)) as RectTransform;
+        rt.sizeDelta = new Vector2(text_width, rt.rect.height);
+    }
+
+    public static void SetHeightByTextHeight(GameObject toChange, Text toRef)
+    {
+        float text_height = toRef.preferredHeight;
+        RectTransform rt = toChange.GetComponent(typeof(RectTransform)) as RectTransform;
+        rt.sizeDelta = new Vector2(rt.rect.width, text_height);
+    }
+
+    
 }
