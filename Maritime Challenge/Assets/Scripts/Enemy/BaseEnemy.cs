@@ -23,11 +23,11 @@ public class BaseEnemy : BaseEntity
 
     protected Player currentTargetPlayer;
     protected Vector2 directionToPlayer;
-    protected float distanceToPlayer;
+    protected float distanceToPlayer = int.MaxValue;
     [SerializeField]
     protected float detectionDistance = 10f;
     [SerializeField]
-    protected float findPlayerDistance = 20f;
+    protected float findPlayerDistance = 1000f;
 
     [SerializeField]
     protected float maxIdleTime = 5f;
@@ -40,7 +40,7 @@ public class BaseEnemy : BaseEntity
 
     protected float timer;
     protected float maxTimer;
-    protected ENEMY_STATES currEnemyState;
+    protected ENEMY_STATES currEnemyState = ENEMY_STATES.IDLE;
 
     protected float aStarTimer;
     protected List<Vector3Int> path = new List<Vector3Int>();
@@ -72,6 +72,7 @@ public class BaseEnemy : BaseEntity
 
         Vector3Int gridSpawnPoint = grid.WorldToCell(spawnPoint);
 
+        //Make sure cell width and height will always fit cell size
         movementAreaCellWidth -= Mathf.RoundToInt(movementAreaCellWidth % grid.cellSize.x);
         movementAreaCellHeight -= Mathf.RoundToInt(movementAreaCellHeight % grid.cellSize.y);
 
@@ -139,7 +140,6 @@ public class BaseEnemy : BaseEntity
 
     protected virtual void HandlePatrol()
     {
-
         if (timer >= maxTimer)
         {
             currEnemyState = ENEMY_STATES.IDLE;
@@ -179,15 +179,20 @@ public class BaseEnemy : BaseEntity
         //Find a player in range somehow i suppose
         //currentTargetPlayer = 
 
-        Collider[] players = Physics.OverlapSphere(transform.position, findPlayerDistance);
+        //Collider[] players = Physics.OverlapSphere(transform.position, findPlayerDistance);
 
-        foreach (Collider player in players)
-        {
-            if (player.gameObject.CompareTag("Player"))
-            {
-                currentTargetPlayer = player.GetComponent<Player>();
-            }
-        }
+        //foreach (Collider player in players)
+        //{
+        //    if (player.gameObject.CompareTag("Player"))
+        //    {
+        //        currentTargetPlayer = player.GetComponent<Player>();
+        //    }
+        //}
+
+        GameObject[] playersToChooseFrom = GameObject.FindGameObjectsWithTag("Player");
+
+        if (playersToChooseFrom.Length > 0)
+            currentTargetPlayer = playersToChooseFrom[Random.Range(0, playersToChooseFrom.Length)].GetComponent<Player>();
     }
 
     protected void GetDirectionToPlayer()
@@ -203,10 +208,16 @@ public class BaseEnemy : BaseEntity
 
     protected void CheckAStar()
     {
+        if (currentTargetPlayer == null)
+            return;
+
         if (aStarTimer < 0)
         {
+            Debug.Log(currentTargetPlayer);
+            Debug.Log(AStarPathfinding.Instance);
+
             //Get path
-            //path = AStarPathfinding.Instance.FindPath(gridMovementAreaLowerLimit, transform.position, currentTargetPlayer.transform.position, movementAreaCellWidth, movementAreaCellHeight);
+            path = AStarPathfinding.Instance.FindPath(gridMovementAreaLowerLimit, transform.position, currentTargetPlayer.transform.position, movementAreaCellWidth, movementAreaCellHeight);
 
             aStarTimer = 1.25f;
             firstMove = true;
