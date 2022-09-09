@@ -47,6 +47,8 @@ public class Player : BaseEntity
         //Init My BattleShip
         SpawnBattleShip();
 
+
+        //transform.position = new Vector3(-10, -10, 0);
     }
 
     private void SetDetails()

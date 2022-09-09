@@ -24,7 +24,7 @@ public class AStarPathfinding : MonoBehaviourSingleton<AStarPathfinding>
         
     }
 
-    public List<Vector3Int> FindPath(Vector3Int gridLowerLimits, Vector3 startPos, Vector3 endPos, int gridWidth, int gridHeight)
+    public List<Vector3> FindPath(Vector3Int gridLowerLimits, Vector3 startPos, Vector3 endPos, int gridWidth, int gridHeight)
     {
         Node[,] allNodes = new Node[gridWidth, gridHeight];
         List<Node> openList; //List of nodes to check
@@ -63,9 +63,9 @@ public class AStarPathfinding : MonoBehaviourSingleton<AStarPathfinding>
             //Get the node with the lowest F cost
             currentNode = GetLowestFCostNode(openList);
             
-            //Return the path to check
+            //Return the path to check if the pos of the current node is same as endNode
             if (currentNode.xPos == endNode.xPos && currentNode.yPos == endNode.yPos)
-                return CalculatePath(endNode);
+                return CalculatePath(currentNode);
 
             //Remove node from checking list and add it to checked list
             openList.Remove(currentNode);
@@ -106,8 +106,8 @@ public class AStarPathfinding : MonoBehaviourSingleton<AStarPathfinding>
 
     Node GetNode(Node[,] allNodes, Vector3Int gridLowerLimits, int nodeXPos, int nodeYPos)
     {
-        Debug.Log("XNode: " + (nodeXPos - gridLowerLimits.x));
-        Debug.Log("YNode: " + (nodeYPos - gridLowerLimits.y));
+        //Debug.Log("XNode: " + (nodeXPos - gridLowerLimits.x));
+        //Debug.Log("YNode: " + (nodeYPos - gridLowerLimits.y));
         Node node = allNodes[nodeXPos - gridLowerLimits.x, nodeYPos - gridLowerLimits.y];
         return node;
     }
@@ -175,15 +175,15 @@ public class AStarPathfinding : MonoBehaviourSingleton<AStarPathfinding>
         return availableNeighbourList;
     }
 
-    private List<Vector3Int> CalculatePath(Node endNode)
+    private List<Vector3> CalculatePath(Node endNode)
     {
-        List<Vector3Int> path = new List<Vector3Int> { new Vector3Int(endNode.xPos, endNode.yPos, 0) };
+        List<Vector3> path = new List<Vector3> { grid.CellToWorld(new Vector3Int(endNode.xPos, endNode.yPos, 0)) };
         Node currentNode = endNode;
 
         //Loops through the parents until it reaches back to the start
         while (currentNode.Parent != null)
         {
-            path.Add(new Vector3Int(currentNode.Parent.xPos, currentNode.Parent.yPos, 0));
+            path.Add(grid.CellToWorld(new Vector3Int(currentNode.Parent.xPos, currentNode.Parent.yPos, 0)));
             currentNode = currentNode.Parent;
         }
 

@@ -13,6 +13,8 @@ public enum ENEMY_STATES
 
 public class BaseEnemy : BaseEntity
 {
+    protected Rigidbody2D rb;
+
     [SerializeField]
     protected Vector2 spawnPoint;
     protected float distanceToSpawnPoint;
@@ -43,10 +45,10 @@ public class BaseEnemy : BaseEntity
     protected ENEMY_STATES currEnemyState = ENEMY_STATES.IDLE;
 
     protected float aStarTimer;
-    protected List<Vector3Int> path = new List<Vector3Int>();
+    protected List<Vector3> path = new List<Vector3>();
     protected Vector3 destination;
-    protected Vector3 currentMovementDirection;
-    protected bool firstMove;
+    protected Vector2 currentMovementDirection;
+    protected int pathIncrement;
 
     [SerializeField]
     protected LayerMask playerLayerMask;
@@ -61,6 +63,8 @@ public class BaseEnemy : BaseEntity
     // Start is called before the first frame update
     protected virtual void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
+
         Grid grid = GameObject.Find("Grid").GetComponent<Grid>();
 
         //Make sure spawn point will start from the edge of the grid
@@ -220,36 +224,40 @@ public class BaseEnemy : BaseEntity
             path = AStarPathfinding.Instance.FindPath(gridMovementAreaLowerLimit, transform.position, currentTargetPlayer.transform.position, movementAreaCellWidth, movementAreaCellHeight);
 
             aStarTimer = 1.25f;
-            firstMove = true;
 
-            foreach (Vector3Int position in path)
-            {
-                if (firstMove)
-                {
-                    destination = position;
-                    currentMovementDirection = destination - transform.position;
-                    firstMove = false;
-                }
-                else
-                {
-                    if (position - destination == currentMovementDirection)
-                    {
-                        destination = position;
-                    }
-                    else
-                        break;
-                }
-            }
+            pathIncrement = 0;
+            destination = path[pathIncrement];
+            currentMovementDirection = destination - transform.position;
+            pathIncrement++;
         }
 
         aStarTimer -= Time.deltaTime;
+    }
+
+    protected void CheckMovementDirection()
+    {
+        if (Vector2.Distance(transform.position, destination) < 0.5f)
+        {
+            if (pathIncrement < path.Count)
+            {
+                destination = path[pathIncrement];
+                currentMovementDirection = (destination - transform.position);
+                pathIncrement++;
+            }
+            else
+            {
+                Debug.LogWarning("Reached end of path");
+            }
+        }
     }
 
     protected void Move()
     {
         CheckAStar();
 
-        transform.Translate(currentMovementDirection * movespd * Time.deltaTime);
+        CheckMovementDirection();
+
+        rb.position += currentMovementDirection * movespd * Time.deltaTime;
     }
 
 

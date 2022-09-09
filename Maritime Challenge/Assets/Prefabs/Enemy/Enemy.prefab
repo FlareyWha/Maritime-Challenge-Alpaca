@@ -190,6 +190,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  hp: 0
+  maxHp: 0
+  atk: 0
+  atkspd: 0
+  critrate: 0
+  critdmg: 0
+  movespd: 2
   spawnPoint: {x: -10, y: -10}
   movementAreaCellWidth: 20
   movementAreaCellHeight: 20
