@@ -26,6 +26,8 @@ public class BaseEnemy : BaseEntity
     protected float distanceToPlayer;
     [SerializeField]
     protected float detectionDistance = 10f;
+    [SerializeField]
+    protected float findPlayerDistance = 20f;
 
     [SerializeField]
     protected float maxIdleTime = 5f;
@@ -41,21 +43,39 @@ public class BaseEnemy : BaseEntity
     protected ENEMY_STATES currEnemyState;
 
     protected float aStarTimer;
-    protected List<Vector3Int> path;
+    protected List<Vector3Int> path = new List<Vector3Int>();
     protected Vector3 destination;
     protected Vector3 currentMovementDirection;
     protected bool firstMove;
 
+    [SerializeField]
+    protected LayerMask playerLayerMask;
+
+    private void OnDrawGizmos()
+    {
+        //Draw something to visualize the box area
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireCube(spawnPoint, new Vector3(movementAreaUpperLimit.x - movementAreaLowerLimit.x, movementAreaUpperLimit.y - movementAreaLowerLimit.y, 0));
+    }
+
     // Start is called before the first frame update
     protected virtual void Start()
     {
-        transform.position = spawnPoint;
-
         Grid grid = GameObject.Find("Grid").GetComponent<Grid>();
+
+        //Make sure spawn point is in int
+        spawnPoint = new Vector2(Mathf.RoundToInt(spawnPoint.x), Mathf.RoundToInt(spawnPoint.y));
+
+        //Make sure spawn point will start from the edge of the grid
+        spawnPoint.x -= spawnPoint.x % grid.cellSize.x;
+        spawnPoint.y -= spawnPoint.y % grid.cellSize.y;
+
+        //Set current position to spawn point
+        transform.position = spawnPoint;
 
         Vector3Int gridSpawnPoint = grid.WorldToCell(spawnPoint);
 
-        //Save this for later for a star
+        //Save this for later for a*
         gridMovementAreaLowerLimit = new Vector3Int(gridSpawnPoint.x - movementAreaCellWidth / 2, gridSpawnPoint.y - movementAreaCellHeight / 2, 0);
         gridMovementAreaUpperLimit = new Vector3Int(gridSpawnPoint.x + movementAreaCellWidth / 2, gridSpawnPoint.y + movementAreaCellHeight / 2, 0);
 
@@ -77,6 +97,8 @@ public class BaseEnemy : BaseEntity
         //Find distance to player if a player target is active
         if (currentTargetPlayer != null)
             distanceToPlayer = Vector2.Distance(currentTargetPlayer.transform.position, transform.position);
+        else
+            FindPlayerToTarget();
 
         switch (currEnemyState)
         {
@@ -156,6 +178,16 @@ public class BaseEnemy : BaseEntity
     {
         //Find a player in range somehow i suppose
         //currentTargetPlayer = 
+
+        Collider[] players = Physics.OverlapSphere(transform.position, findPlayerDistance);
+
+        foreach (Collider player in players)
+        {
+            if (player.gameObject.CompareTag("Player"))
+            {
+                currentTargetPlayer = player.GetComponent<Player>();
+            }
+        }
     }
 
     protected void GetDirectionToPlayer()
@@ -174,7 +206,7 @@ public class BaseEnemy : BaseEntity
         if (aStarTimer < 0)
         {
             //Get path
-            path = AStarPathfinding.Instance.FindPath(gridMovementAreaLowerLimit, gridMovementAreaUpperLimit, transform.position, currentTargetPlayer.transform.position, movementAreaCellWidth, movementAreaCellHeight);
+            //path = AStarPathfinding.Instance.FindPath(gridMovementAreaLowerLimit, transform.position, currentTargetPlayer.transform.position, movementAreaCellWidth, movementAreaCellHeight);
 
             aStarTimer = 1.25f;
             firstMove = true;

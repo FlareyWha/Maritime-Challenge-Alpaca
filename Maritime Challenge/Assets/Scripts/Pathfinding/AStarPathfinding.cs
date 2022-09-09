@@ -24,9 +24,9 @@ public class AStarPathfinding : MonoBehaviourSingleton<AStarPathfinding>
         
     }
 
-    public List<Vector3Int> FindPath(Vector3Int gridLowerLimits, Vector3Int gridUpperLimits, Vector3 startPos, Vector3 endPos, int gridWidth, int gridHeight)
+    public List<Vector3Int> FindPath(Vector3Int gridLowerLimits, Vector3 startPos, Vector3 endPos, int gridWidth, int gridHeight)
     {
-        List<Node> allNodes = new List<Node>();
+        Node[,] allNodes = new Node[gridWidth, gridHeight];
         List<Node> openList; //List of nodes to check
         HashSet<Node> closedList; //List of nodes checked
 
@@ -37,15 +37,14 @@ public class AStarPathfinding : MonoBehaviourSingleton<AStarPathfinding>
         endNode = new Node(grid.WorldToCell(endPos));
 
         //Loop through the given area to create nodes and store them
-        for (int i = gridLowerLimits.x; i < gridUpperLimits.x; ++i)
+        for (int i = 0; i < allNodes.GetLength(0); ++i)
         {
-            for (int j = gridLowerLimits.y; j < gridUpperLimits.y; j++)
+            for (int j = 0; j < allNodes.GetLength(1); j++)
             {
-                Node node = new Node(i, j);
-                node.G = int.MaxValue;
-                node.CalculateFCost();
-
-                allNodes.Add(node);
+                allNodes[i, j].xPos = i;
+                allNodes[i, j].yPos = i;
+                allNodes[i, j].G = int.MaxValue;
+                allNodes[i, j].CalculateFCost();
             }    
         }
 
@@ -71,7 +70,7 @@ public class AStarPathfinding : MonoBehaviourSingleton<AStarPathfinding>
             closedList.Add(currentNode);
 
             //Gets the list of available neighbours to check
-            List<Node> availableNeighbours = GetAvailableNeighbours(allNodes, currentNode, gridWidth, gridHeight);
+            List<Node> availableNeighbours = GetAvailableNeighbours(allNodes, gridLowerLimits, currentNode, gridWidth, gridHeight);
 
             //Loops through all the available neighbours
             foreach (Node neighbourNode in availableNeighbours)
@@ -99,15 +98,9 @@ public class AStarPathfinding : MonoBehaviourSingleton<AStarPathfinding>
         return null;
     }
 
-    Node GetNode(List<Node> allNodes, int nodeXPos, int nodeYPos)
+    Node GetNode(Node[,] allNodes, Vector3Int gridLowerLimits, int nodeXPos, int nodeYPos)
     {
-        foreach (Node node in allNodes)
-        {
-            if (node.xPos == nodeXPos && node.yPos == nodeYPos)
-                return node;
-        }
-
-        return null;
+        return allNodes[gridLowerLimits.x + nodeXPos, gridLowerLimits.y + nodeYPos];
     }
 
     int CalculateHCost(Node firstNode, Node secondNode)
@@ -133,42 +126,42 @@ public class AStarPathfinding : MonoBehaviourSingleton<AStarPathfinding>
         return lowestCostNode;
     }
 
-    List<Node> GetAvailableNeighbours(List<Node> allNodes, Node currentNode, int gridWidth, int gridHeight)
+    List<Node> GetAvailableNeighbours(Node[,] allNodes, Vector3Int gridLowerLimits, Node currentNode, int gridWidth, int gridHeight)
     {
         List<Node> availableNeighbourList = new List<Node>();
 
         //Check left
         if (currentNode.xPos - 1 >= 0)
         {
-            availableNeighbourList.Add(GetNode(allNodes, currentNode.xPos - 1, currentNode.yPos));
+            availableNeighbourList.Add(GetNode(allNodes, gridLowerLimits, currentNode.xPos - 1, currentNode.yPos));
 
             //Check bottom left
             if (currentNode.yPos - 1 >= 0)
-                availableNeighbourList.Add(GetNode(allNodes, currentNode.xPos - 1, currentNode.yPos - 1));
+                availableNeighbourList.Add(GetNode(allNodes, gridLowerLimits, currentNode.xPos - 1, currentNode.yPos - 1));
 
             //Check top left
             if (currentNode.yPos + 1 < gridHeight)
-                availableNeighbourList.Add(GetNode(allNodes, currentNode.xPos - 1, currentNode.yPos + 1));
+                availableNeighbourList.Add(GetNode(allNodes, gridLowerLimits, currentNode.xPos - 1, currentNode.yPos + 1));
         }
         //Check right
         if (currentNode.xPos + 1 < gridWidth)
         {
-            availableNeighbourList.Add(GetNode(allNodes, currentNode.xPos + 1, currentNode.yPos));
+            availableNeighbourList.Add(GetNode(allNodes, gridLowerLimits, currentNode.xPos + 1, currentNode.yPos));
 
             //Check bottom right
             if (currentNode.yPos - 1 >= 0)
-                availableNeighbourList.Add(GetNode(allNodes, currentNode.xPos + 1, currentNode.yPos - 1));
+                availableNeighbourList.Add(GetNode(allNodes, gridLowerLimits, currentNode.xPos + 1, currentNode.yPos - 1));
 
             //Check top right
             if (currentNode.yPos + 1 < gridHeight)
-                availableNeighbourList.Add(GetNode(allNodes, currentNode.xPos + 1, currentNode.yPos + 1));
+                availableNeighbourList.Add(GetNode(allNodes, gridLowerLimits, currentNode.xPos + 1, currentNode.yPos + 1));
         }
         //Check bottom
         if (currentNode.yPos - 1 >= 0)
-            availableNeighbourList.Add(GetNode(allNodes, currentNode.xPos, currentNode.yPos - 1));
+            availableNeighbourList.Add(GetNode(allNodes, gridLowerLimits, currentNode.xPos, currentNode.yPos - 1));
         //Check top
         if (currentNode.yPos + 1 < gridHeight)
-            availableNeighbourList.Add(GetNode(allNodes, currentNode.xPos, currentNode.yPos + 1));
+            availableNeighbourList.Add(GetNode(allNodes, gridLowerLimits, currentNode.xPos, currentNode.yPos + 1));
 
         return availableNeighbourList;
     }

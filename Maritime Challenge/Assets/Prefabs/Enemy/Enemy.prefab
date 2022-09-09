@@ -30,8 +30,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2042507932746732076}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.4, y: -23, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 651338178707676300}
   m_Father: {fileID: 0}
@@ -190,12 +190,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  maxDistanceToSpawnPoint: 30
+  spawnPoint: {x: 5.5, y: 5.5}
+  movementAreaCellWidth: 4
+  movementAreaCellHeight: 4
   detectionDistance: 10
+  findPlayerDistance: 20
   maxIdleTime: 5
   maxPatrolTime: 10
   maxSpotTime: 1
   maxChaseTime: 5
+  playerLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &2106921298954242604
 GameObject:
   m_ObjectHideFlags: 0
