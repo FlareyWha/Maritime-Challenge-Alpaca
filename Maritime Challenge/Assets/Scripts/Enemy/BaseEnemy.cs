@@ -63,9 +63,6 @@ public class BaseEnemy : BaseEntity
     {
         Grid grid = GameObject.Find("Grid").GetComponent<Grid>();
 
-        //Make sure spawn point is in int
-        spawnPoint = new Vector2(Mathf.RoundToInt(spawnPoint.x), Mathf.RoundToInt(spawnPoint.y));
-
         //Make sure spawn point will start from the edge of the grid
         spawnPoint.x -= spawnPoint.x % grid.cellSize.x;
         spawnPoint.y -= spawnPoint.y % grid.cellSize.y;
@@ -74,6 +71,9 @@ public class BaseEnemy : BaseEntity
         transform.position = spawnPoint;
 
         Vector3Int gridSpawnPoint = grid.WorldToCell(spawnPoint);
+
+        movementAreaCellWidth -= Mathf.RoundToInt(movementAreaCellWidth % grid.cellSize.x);
+        movementAreaCellHeight -= Mathf.RoundToInt(movementAreaCellHeight % grid.cellSize.y);
 
         //Save this for later for a*
         gridMovementAreaLowerLimit = new Vector3Int(gridSpawnPoint.x - movementAreaCellWidth / 2, gridSpawnPoint.y - movementAreaCellHeight / 2, 0);
