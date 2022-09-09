@@ -26,19 +26,21 @@ public class BaseEnemy : BaseEntity
 
     [SerializeField]
     protected float maxIdleTime = 5f;
-
     [SerializeField]
     protected float maxPatrolTime = 10f;
-
     [SerializeField]
     protected float maxSpotTime = 1f;
-
     [SerializeField]
     protected float maxChaseTime = 5f;
 
     private float timer;
     private float maxTimer;
     protected ENEMY_STATES currEnemyState;
+
+    protected List<Vector3Int> path;
+    protected Vector3 destination;
+    protected Vector3 currentMovementDirection;
+    protected bool firstMove;
 
     // Start is called before the first frame update
     protected virtual void Start()
@@ -151,6 +153,26 @@ public class BaseEnemy : BaseEntity
 
     protected void Move()
     {
+        foreach (Vector3Int position in path)
+        {
+            if (firstMove)
+            {
+                destination = position;
+                currentMovementDirection = destination - transform.position;
+                firstMove = false;
+            }
+            else
+            {
+                if (position - destination == currentMovementDirection)
+                {
+                    destination = position;
+                }
+                else
+                    break;
+            }
+        }
+
+
         transform.Translate(directionToPlayer * movespd * Time.deltaTime);
     }
 }

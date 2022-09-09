@@ -5,22 +5,17 @@ using UnityEngine;
 public class AStarPathfinding : MonoBehaviour
 {
     public const int STRAIGHT_MOVEMENT_COST = 10;
-    public const int DIAGONAL_MOVEMENT_COST = 14;
+    public const int DIAGONAL_MOVEMENT_COST = 14; //14 cus A^2 + B^2 = C^2 where A=B=1
 
-    private List<Node> allNodes;
-    private List<Node> openList; //List of nodes to check
-    private HashSet<Node> closedList; //List of nodes checked
-
-    [SerializeField]
     private Grid grid;
 
-    [SerializeField]
-    private int gridWidth, gridHeight;
+    //[SerializeField]
+    //private int gridWidth, gridHeight;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        grid = GameObject.Find("Grid").GetComponent<Grid>();
     }
 
     // Update is called once per frame
@@ -29,17 +24,22 @@ public class AStarPathfinding : MonoBehaviour
         
     }
 
-    public List<Node> FindPath(Grid grid, Vector3 startPos, Vector3 endPos)
+    public List<Vector3Int> FindPath(Vector2Int gridStartPos, Vector3 startPos, Vector3 endPos, int gridWidth, int gridHeight)
     {
+        List<Node> allNodes = new List<Node>();
+        List<Node> openList; //List of nodes to check
+        HashSet<Node> closedList; //List of nodes checked
+
         Node currentNode, startNode, endNode;
 
         //Add new nodes for the start and end
         startNode = new Node(grid.WorldToCell(startPos));
         endNode = new Node(grid.WorldToCell(endPos));
 
-        for (int i = 0; i < gridWidth; ++i)
+        //Loop through the given area to create nodes and store them
+        for (int i = gridStartPos.x; i < gridStartPos.x + gridWidth; ++i)
         {
-            for (int j = 0; j < gridHeight; j++)
+            for (int j = gridStartPos.y; j < gridStartPos.y + gridHeight; j++)
             {
                 Node node = new Node(i, j);
                 node.G = int.MaxValue;
@@ -49,18 +49,18 @@ public class AStarPathfinding : MonoBehaviour
             }    
         }
 
-        //Add start node into the open list
-        openList = new List<Node> { startNode };
-        closedList = new HashSet<Node>();
-
         startNode.G = 0;
         startNode.H = CalculateHCost(startNode, endNode);
         startNode.CalculateFCost();
 
+        //Add start node into the open list
+        openList = new List<Node> { startNode };
+        closedList = new HashSet<Node>();
+
         while (openList.Count > 0)
         {
             //Get the node with the lowest F cost
-            currentNode = GetLowestFCostNode();
+            currentNode = GetLowestFCostNode(openList);
             
             //Return the path to check
             if (currentNode == endNode)
@@ -71,7 +71,7 @@ public class AStarPathfinding : MonoBehaviour
             closedList.Add(currentNode);
 
             //Gets the list of available neighbours to check
-            List<Node> availableNeighbours = GetAvailableNeighbours(currentNode);
+            List<Node> availableNeighbours = GetAvailableNeighbours(allNodes, currentNode, gridWidth, gridHeight);
 
             //Loops through all the available neighbours
             foreach (Node neighbourNode in availableNeighbours)
@@ -99,6 +99,17 @@ public class AStarPathfinding : MonoBehaviour
         return null;
     }
 
+    Node GetNode(List<Node> allNodes, int nodeXPos, int nodeYPos)
+    {
+        foreach (Node node in allNodes)
+        {
+            if (node.xPos == nodeXPos && node.yPos == nodeYPos)
+                return node;
+        }
+
+        return null;
+    }
+
     int CalculateHCost(Node firstNode, Node secondNode)
     {
         int xDistance = Mathf.Abs(firstNode.xPos - secondNode.xPos);
@@ -109,7 +120,7 @@ public class AStarPathfinding : MonoBehaviour
         return DIAGONAL_MOVEMENT_COST * Mathf.Min(xDistance, yDistance) + STRAIGHT_MOVEMENT_COST * remainder;
     }
 
-    Node GetLowestFCostNode()
+    Node GetLowestFCostNode(List<Node> openList)
     {
         Node lowestCostNode = openList[0];
 
@@ -122,55 +133,55 @@ public class AStarPathfinding : MonoBehaviour
         return lowestCostNode;
     }
 
-    List<Node> GetAvailableNeighbours(Node currentNode)
+    List<Node> GetAvailableNeighbours(List<Node> allNodes, Node currentNode, int gridWidth, int gridHeight)
     {
         List<Node> availableNeighbourList = new List<Node>();
 
         //Check left
         if (currentNode.xPos - 1 >= 0)
         {
-            availableNeighbourList.Add(new Node(currentNode.xPos - 1, currentNode.yPos));
+            availableNeighbourList.Add(GetNode(allNodes, currentNode.xPos - 1, currentNode.yPos));
 
             //Check bottom left
             if (currentNode.yPos - 1 >= 0)
-                availableNeighbourList.Add(new Node(currentNode.xPos - 1, currentNode.yPos - 1));
+                availableNeighbourList.Add(GetNode(allNodes, currentNode.xPos - 1, currentNode.yPos - 1));
 
             //Check top left
             if (currentNode.yPos + 1 < gridHeight)
-                availableNeighbourList.Add(new Node(currentNode.xPos - 1, currentNode.yPos + 1));
+                availableNeighbourList.Add(GetNode(allNodes, currentNode.xPos - 1, currentNode.yPos + 1));
         }
         //Check right
         if (currentNode.xPos + 1 < gridWidth)
         {
-            availableNeighbourList.Add(new Node(currentNode.xPos + 1, currentNode.yPos));
+            availableNeighbourList.Add(GetNode(allNodes, currentNode.xPos + 1, currentNode.yPos));
 
             //Check bottom right
             if (currentNode.yPos - 1 >= 0)
-                availableNeighbourList.Add(new Node(currentNode.xPos + 1, currentNode.yPos - 1));
+                availableNeighbourList.Add(GetNode(allNodes, currentNode.xPos + 1, currentNode.yPos - 1));
 
             //Check top right
             if (currentNode.yPos + 1 < gridHeight)
-                availableNeighbourList.Add(new Node(currentNode.xPos + 1, currentNode.yPos + 1));
+                availableNeighbourList.Add(GetNode(allNodes, currentNode.xPos + 1, currentNode.yPos + 1));
         }
         //Check bottom
         if (currentNode.yPos - 1 >= 0)
-            availableNeighbourList.Add(new Node(currentNode.xPos, currentNode.yPos - 1));
+            availableNeighbourList.Add(GetNode(allNodes, currentNode.xPos, currentNode.yPos - 1));
         //Check top
         if (currentNode.yPos + 1 < gridHeight)
-            availableNeighbourList.Add(new Node(currentNode.xPos, currentNode.yPos + 1));
+            availableNeighbourList.Add(GetNode(allNodes, currentNode.xPos, currentNode.yPos + 1));
 
         return availableNeighbourList;
     }
 
-    private List<Node> CalculatePath(Node endNode)
+    private List<Vector3Int> CalculatePath(Node endNode)
     {
-        List<Node> path = new List<Node> { endNode };
+        List<Vector3Int> path = new List<Vector3Int> { new Vector3Int(endNode.xPos, endNode.yPos, 0) };
         Node currentNode = endNode;
 
         //Loops through the parents until it reaches back to the start
         while (currentNode.Parent != null)
         {
-            path.Add(currentNode.Parent);
+            path.Add(new Vector3Int(currentNode.Parent.xPos, currentNode.Parent.yPos, 0));
             currentNode = currentNode.Parent;
         }
 
