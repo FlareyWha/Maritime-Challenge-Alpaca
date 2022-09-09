@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AStarPathfinding : MonoBehaviour
+public class AStarPathfinding : MonoBehaviourSingleton<AStarPathfinding>
 {
     public const int STRAIGHT_MOVEMENT_COST = 10;
     public const int DIAGONAL_MOVEMENT_COST = 14; //14 cus A^2 + B^2 = C^2 where A=B=1
@@ -24,7 +24,7 @@ public class AStarPathfinding : MonoBehaviour
         
     }
 
-    public List<Vector3Int> FindPath(Vector2Int gridStartPos, Vector3 startPos, Vector3 endPos, int gridWidth, int gridHeight)
+    public List<Vector3Int> FindPath(Vector3Int gridLowerLimits, Vector3Int gridUpperLimits, Vector3 startPos, Vector3 endPos, int gridWidth, int gridHeight)
     {
         List<Node> allNodes = new List<Node>();
         List<Node> openList; //List of nodes to check
@@ -37,9 +37,9 @@ public class AStarPathfinding : MonoBehaviour
         endNode = new Node(grid.WorldToCell(endPos));
 
         //Loop through the given area to create nodes and store them
-        for (int i = gridStartPos.x; i < gridStartPos.x + gridWidth; ++i)
+        for (int i = gridLowerLimits.x; i < gridUpperLimits.x; ++i)
         {
-            for (int j = gridStartPos.y; j < gridStartPos.y + gridHeight; j++)
+            for (int j = gridLowerLimits.y; j < gridUpperLimits.y; j++)
             {
                 Node node = new Node(i, j);
                 node.G = int.MaxValue;

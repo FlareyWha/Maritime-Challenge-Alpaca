@@ -19,6 +19,7 @@ public class BaseEnemy : BaseEntity
     [SerializeField]
     protected int movementAreaCellWidth, movementAreaCellHeight;
     protected Vector2 movementAreaLowerLimit, movementAreaUpperLimit;
+    protected Vector3Int gridMovementAreaLowerLimit, gridMovementAreaUpperLimit;
 
     protected Player currentTargetPlayer;
     protected Vector2 directionToPlayer;
@@ -52,11 +53,15 @@ public class BaseEnemy : BaseEntity
 
         Grid grid = GameObject.Find("Grid").GetComponent<Grid>();
 
-        Vector3Int spawnPointGrid = grid.WorldToCell(spawnPoint);
+        Vector3Int gridSpawnPoint = grid.WorldToCell(spawnPoint);
+
+        //Save this for later for a star
+        gridMovementAreaLowerLimit = new Vector3Int(gridSpawnPoint.x - movementAreaCellWidth / 2, gridSpawnPoint.y - movementAreaCellHeight / 2, 0);
+        gridMovementAreaUpperLimit = new Vector3Int(gridSpawnPoint.x + movementAreaCellWidth / 2, gridSpawnPoint.y + movementAreaCellHeight / 2, 0);
 
         //Set the limits for where the enemy can go
-        movementAreaLowerLimit = grid.CellToWorld(new Vector3Int(spawnPointGrid.x - movementAreaCellWidth / 2, spawnPointGrid.y - movementAreaCellHeight / 2, 0));
-        movementAreaUpperLimit = grid.CellToWorld(new Vector3Int(spawnPointGrid.x + movementAreaCellWidth / 2, spawnPointGrid.y + movementAreaCellHeight / 2, 0));
+        movementAreaLowerLimit = grid.CellToWorld(gridMovementAreaLowerLimit);
+        movementAreaUpperLimit = grid.CellToWorld(gridMovementAreaUpperLimit);
 
         FindPlayerToTarget();
     }
@@ -169,6 +174,7 @@ public class BaseEnemy : BaseEntity
         if (aStarTimer < 0)
         {
             //Get path
+            path = AStarPathfinding.Instance.FindPath(gridMovementAreaLowerLimit, gridMovementAreaUpperLimit, transform.position, currentTargetPlayer.transform.position, movementAreaCellWidth, movementAreaCellHeight);
 
             aStarTimer = 1.25f;
             firstMove = true;
