@@ -4,9 +4,18 @@ using UnityEngine;
 
 public class PlayerFollowCamera : MonoBehaviourSingleton<PlayerFollowCamera>
 {
+    private Camera cam;
     private GameObject followTarget;
 
-  
+    private bool in_anim = false;
+    private float defaultOrthoSize;
+
+    void Start()
+    {
+        cam = GetComponent<Camera>();
+        defaultOrthoSize = cam.orthographicSize;
+    }
+
     void Update()
     {
         if (followTarget != null)
@@ -27,5 +36,34 @@ public class PlayerFollowCamera : MonoBehaviourSingleton<PlayerFollowCamera>
     public void DetachCamera()
     {
         followTarget = null;
+    }
+
+    public void ZoomCameraInOut(float orthoDis, float anim_time = 1.0f)
+    {
+        StartCoroutine(ZoomCameraAnim(cam.orthographicSize, orthoDis, anim_time));
+    }
+
+    public void ResetCameraZoom(float anim_time = 1.0f)
+    {
+        StartCoroutine(ZoomCameraAnim(cam.orthographicSize, defaultOrthoSize, anim_time));
+    }
+
+    IEnumerator ZoomCameraAnim(float startSize, float endSize, float anim_time)
+    {
+        cam.orthographicSize = startSize;
+
+        float zoom_rate = (endSize - startSize) / anim_time;
+
+        float timer = anim_time;
+        while (timer > 0)
+        {
+            timer -= Time.deltaTime;
+            cam.orthographicSize += zoom_rate * Time.deltaTime;
+            yield return null;
+        }
+
+        cam.orthographicSize = endSize;
+
+
     }
 }

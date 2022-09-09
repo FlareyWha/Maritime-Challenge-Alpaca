@@ -110,6 +110,7 @@ public class Player : BaseEntity
 
         LinkedBattleship.Summon(dock.GetRefShipTransform());
         PlayerFollowCamera.Instance.SetFollowTarget(LinkedBattleship.gameObject);
+        PlayerFollowCamera.Instance.ZoomCameraInOut(30);
         gameObject.SetActive(false);
     }
 
@@ -126,6 +127,7 @@ public class Player : BaseEntity
         transform.position = playerT.position;
         transform.rotation = playerT.rotation;
         PlayerFollowCamera.Instance.SetFollowTarget(gameObject);
+        PlayerFollowCamera.Instance.ResetCameraZoom();
         gameObject.SetActive(true);
     }
 
