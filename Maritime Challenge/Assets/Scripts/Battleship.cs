@@ -31,7 +31,7 @@ public class Battleship : NetworkBehaviour
         prevFacing = currFacing = SHIPFACING.LEFT;
         Debug.Log("BattleShip Start Visibility: " + isVisibile);
     }
-
+    
     public override void OnStartAuthority()
     {
         Debug.Log("BattleShip: Taken Authority Over BattleShip");
