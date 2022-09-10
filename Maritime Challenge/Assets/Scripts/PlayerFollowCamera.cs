@@ -40,16 +40,23 @@ public class PlayerFollowCamera : MonoBehaviourSingleton<PlayerFollowCamera>
 
     public void ZoomCameraInOut(float orthoDis, float anim_time = 1.0f)
     {
+        if (in_anim)
+            return;
+
         StartCoroutine(ZoomCameraAnim(cam.orthographicSize, orthoDis, anim_time));
     }
 
     public void ResetCameraZoom(float anim_time = 1.0f)
     {
+        if (in_anim)
+            return;
+
         StartCoroutine(ZoomCameraAnim(cam.orthographicSize, defaultOrthoSize, anim_time));
     }
 
     IEnumerator ZoomCameraAnim(float startSize, float endSize, float anim_time)
     {
+        in_anim = true;
         cam.orthographicSize = startSize;
 
         float zoom_rate = (endSize - startSize) / anim_time;
@@ -63,6 +70,7 @@ public class PlayerFollowCamera : MonoBehaviourSingleton<PlayerFollowCamera>
         }
 
         cam.orthographicSize = endSize;
+        in_anim = false;
 
 
     }

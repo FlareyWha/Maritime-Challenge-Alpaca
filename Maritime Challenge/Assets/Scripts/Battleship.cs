@@ -6,8 +6,12 @@ using Mirror;
 public class Battleship : NetworkBehaviour
 {
 
+    [SyncVar]
+    private bool isVisibile = false;
+
     [SerializeField]
     private Sprite UpwardSprite, DownwardSprite, LeftSprite, RightSprite;
+    private SHIPFACING currFacing, prevFacing;
 
     private Rigidbody2D rb = null;
     private SpriteRenderer shipSprite = null;
@@ -19,20 +23,20 @@ public class Battleship : NetworkBehaviour
 
     private const float MAX_VEL = 10.0f;
 
-    void Awake()
+    void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         shipSprite = GetComponent<SpriteRenderer>();
+        gameObject.SetActive(isVisibile);
+        prevFacing = currFacing = SHIPFACING.LEFT;
+        Debug.Log("BattleShip Start Visibility: " + isVisibile);
     }
 
     public override void OnStartAuthority()
     {
         Debug.Log("BattleShip: Taken Authority Over BattleShip");
         PlayerData.MyPlayer.SetLinkedShip(this);
-        gameObject.SetActive(false);
     }
-
-   
 
     void Update()
     {
@@ -65,34 +69,89 @@ public class Battleship : NetworkBehaviour
         rb.position += velocity * Time.deltaTime;
 
         // Update Ship Sprite
+        prevFacing = currFacing;
         if (Mathf.Abs(velocity.x) > Mathf.Abs(velocity.y))
         {
             if (velocity.x > 0)
-                shipSprite.sprite = RightSprite;
+                currFacing = SHIPFACING.RIGHT;
             else
-                shipSprite.sprite = LeftSprite;
+                currFacing = SHIPFACING.LEFT;
         }
         else
         {
             if (velocity.y > 0)
-                shipSprite.sprite = UpwardSprite;
+                currFacing = SHIPFACING.UP;
             else
-                shipSprite.sprite = DownwardSprite;
+                currFacing = SHIPFACING.DOWN;
         }
+        if (prevFacing != currFacing)
+            SyncShipSprite((int)currFacing);
+
 
     }
 
 
     public void Dock()
     {
-        gameObject.SetActive(false);
+        SyncShipStatus(false);
     }
+
     public void Summon(Transform refTransform)
     {
-        gameObject.SetActive(true);
         transform.position = refTransform.position;
         transform.rotation = refTransform.rotation;
-        shipSprite.sprite = LeftSprite;
+        currFacing = SHIPFACING.LEFT;
+        SyncShipSprite((int)currFacing);
+        SyncShipStatus(true);
     }
+
+    [Command]
+    private void SyncShipStatus(bool show)
+    {
+        isVisibile = show;
+        SetShipStatus(show);
+    }
+
+    [Command]
+    private void SyncShipSprite(int facing)
+    {
+        SetShipSprite(facing);
+    }
+
+    [ClientRpc]
+    private void SetShipStatus(bool show)
+    {
+        gameObject.SetActive(show);
+    }
+
+    [ClientRpc]
+    private void SetShipSprite(int facing)
+    {
+        switch ((SHIPFACING)facing)
+        {
+            case SHIPFACING.LEFT:
+                shipSprite.sprite = LeftSprite;
+                break;
+            case SHIPFACING.RIGHT:
+                shipSprite.sprite = RightSprite;
+                break;
+            case SHIPFACING.UP:
+                shipSprite.sprite = UpwardSprite;
+                break;
+            case SHIPFACING.DOWN:
+                shipSprite.sprite = DownwardSprite;
+                break;
+        }
+    }
+}
+
+enum SHIPFACING
+{
+    UP,
+    DOWN,
+    LEFT,
+    RIGHT,
+
+    NUM_TOTAL
 }
 

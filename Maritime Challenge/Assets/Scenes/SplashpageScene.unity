@@ -281,7 +281,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2c45662eb22bb1e4ebba4af6fa43f7df, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1fac70e27d92d6649a96736ac582e393, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -455,6 +455,7 @@ MonoBehaviour:
   playerSpawnMethod: 0
   spawnPrefabs:
   - {fileID: 2042507932746732076, guid: b8ed2059b8897514fa98360bc451be85, type: 3}
+  - {fileID: 2042507932746732076, guid: f90545761a549af4b9035749ef8701ba, type: 3}
 --- !u!4 &1399865151
 Transform:
   m_ObjectHideFlags: 0

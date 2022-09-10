@@ -37,7 +37,7 @@ public class PlayerInteract : NetworkBehaviour
     {
       
         // OTHER CLIENTS INTERACT WITH LOCAL PLAYER FOR VIEW MENU
-        if (!isInteractOpen && InputManager.InputActions.Main.Tap.WasPressedThisFrame() && IsWithinPlayer())
+        if (!isLocalPlayer && !isInteractOpen && InputManager.InputActions.Main.Tap.WasPressedThisFrame() && IsWithinPlayer())
         {
             isInteractOpen = true;
             playerUI.ShowInteractPanel();

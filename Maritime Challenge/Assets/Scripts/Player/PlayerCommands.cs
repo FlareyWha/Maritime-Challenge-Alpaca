@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Mirror;
 
 
@@ -165,4 +166,21 @@ public class PlayerCommands : NetworkBehaviour
 
         }
     }
+
+
+    [Command]
+    public void EnterScene(GameObject player, string sceneName)
+    {
+        NetworkIdentity networkIdentity = player.gameObject.GetComponent<NetworkIdentity>();
+        SceneMessage message = new SceneMessage { sceneName = sceneName, sceneOperation = SceneOperation.LoadAdditive };
+        networkIdentity.connectionToClient.Send(message);
+        OnPlayerShifted(player, sceneName);
+    }
+
+    [ClientRpc]
+    public void OnPlayerShifted(GameObject player, string sceneName)
+    {
+      
+    }
+
 }

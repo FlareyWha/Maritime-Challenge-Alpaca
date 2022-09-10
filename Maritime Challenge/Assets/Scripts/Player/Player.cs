@@ -25,11 +25,19 @@ public class Player : BaseEntity
     [SyncVar]
     private int titleID = 0;
 
+    [SyncVar]
+    private bool isVisible = true;
+
 
     private Battleship LinkedBattleship = null;
 
 
     private PlayerUI playerUI = null;
+
+    void Start()
+    {
+        gameObject.SetActive(isVisible);
+    }
 
     public override void OnStartLocalPlayer()
 
@@ -47,6 +55,8 @@ public class Player : BaseEntity
         //Init My BattleShip
         SpawnBattleShip();
 
+
+        DontDestroyOnLoad(this);
     }
 
     private void SetDetails()
@@ -86,6 +96,8 @@ public class Player : BaseEntity
         guildID = guild_id;
         countryID = country_id;
         this.level = level;
+
+        isVisible = true;
     }
 
     [Command]
@@ -93,6 +105,8 @@ public class Player : BaseEntity
     {
         GameObject ship = Instantiate(BattleShipPrefab);
         NetworkServer.Spawn(ship, connectionToClient);
+        Battleship bs = ship.GetComponent<Battleship>();
+        bs.Dock();
     }
 
     public void SetLinkedShip(Battleship ship)
@@ -111,7 +125,7 @@ public class Player : BaseEntity
         LinkedBattleship.Summon(dock.GetRefShipTransform());
         PlayerFollowCamera.Instance.SetFollowTarget(LinkedBattleship.gameObject);
         PlayerFollowCamera.Instance.ZoomCameraInOut(30);
-        gameObject.SetActive(false);
+        SyncPlayerVisibility(false);
     }
 
     public void DockShip(Dock dock)
@@ -128,9 +142,21 @@ public class Player : BaseEntity
         transform.rotation = playerT.rotation;
         PlayerFollowCamera.Instance.SetFollowTarget(gameObject);
         PlayerFollowCamera.Instance.ResetCameraZoom();
-        gameObject.SetActive(true);
+        SyncPlayerVisibility(true);
     }
 
+    [Command]
+    private void SyncPlayerVisibility(bool show)
+    {
+        SetPlayerVisibility(show);
+        isVisible = show;
+    }
+
+    [ClientRpc]
+    private void SetPlayerVisibility(bool show)
+    {
+        gameObject.SetActive(show);
+    }
 
 
 

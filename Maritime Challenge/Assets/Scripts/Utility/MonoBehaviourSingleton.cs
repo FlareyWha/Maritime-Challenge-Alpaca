@@ -19,7 +19,10 @@ public class MonoBehaviourSingleton<T> : MonoBehaviour where T : Component
         if (instance == null)
             instance = this as T;
         else
-            Destroy(this);
+        {
+            Destroy(instance);
+            instance = this as T;
+        }
     }
 
     protected virtual void OnDestroy()
