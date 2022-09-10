@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 using Mirror;
 using UnityEngine.Networking;
 
@@ -27,7 +28,6 @@ public class Player : BaseEntity
 
     [SyncVar]
     private bool isVisible = true;
-
 
     private Battleship LinkedBattleship = null;
 
@@ -59,6 +59,7 @@ public class Player : BaseEntity
         //DontDestroyOnLoad(this);
         //transform.position = new Vector3(-10, -10, 0);
     }
+
 
     private void SetDetails()
     {
@@ -106,13 +107,22 @@ public class Player : BaseEntity
     {
         GameObject ship = Instantiate(BattleShipPrefab);
         NetworkServer.Spawn(ship, connectionToClient);
+        SetLinkedShip(ship);
+
         Battleship bs = ship.GetComponent<Battleship>();
         bs.Dock();
+
     }
 
-    public void SetLinkedShip(Battleship ship)
+    private void Update()
     {
-        LinkedBattleship = ship;
+        //Debug.Log(NetworkServer.spawned.Count);
+    }
+
+    [ClientRpc]
+    public void SetLinkedShip(GameObject ship)
+    {
+        LinkedBattleship = ship.GetComponent<Battleship>();
     }
 
     public void SummonBattleShip(Dock dock)

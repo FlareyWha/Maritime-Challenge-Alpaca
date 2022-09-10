@@ -61,7 +61,7 @@ public class PlayerInteract : NetworkBehaviour
     public void ViewProfile(Button button)
     {
         Player player = gameObject.GetComponent<Player>();
-
+      
         //Unlock the phonebook data if other isnt unlocked to begin with
         if (!PlayerData.PhonebookData[player.GetUID()].Unlocked)
         {

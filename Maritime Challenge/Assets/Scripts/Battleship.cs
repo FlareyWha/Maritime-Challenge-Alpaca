@@ -29,15 +29,14 @@ public class Battleship : NetworkBehaviour
         shipSprite = GetComponent<SpriteRenderer>();
         gameObject.SetActive(isVisibile);
         prevFacing = currFacing = SHIPFACING.LEFT;
-        Debug.Log("BattleShip Start Visibility: " + isVisibile);
     }
-    
+
     public override void OnStartAuthority()
     {
         Debug.Log("BattleShip: Taken Authority Over BattleShip");
-        PlayerData.MyPlayer.SetLinkedShip(this);
+        //PlayerData.MyPlayer.SetLinkedShip(this);
     }
-
+   
     void Update()
     {
         if (!hasAuthority)
