@@ -190,11 +190,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  spawnPoint: {x: -2, y: -2}
-  movementAreaCellWidth: 10
-  movementAreaCellHeight: 10
+  hp: 0
+  maxHp: 0
+  atk: 0
+  atkspd: 0
+  critrate: 0
+  critdmg: 0
+  movespd: 2
+  spawnPoint: {x: -10, y: -10}
+  movementAreaCellWidth: 20
+  movementAreaCellHeight: 20
   detectionDistance: 10
-  findPlayerDistance: 20
+  findPlayerDistance: 1000
   maxIdleTime: 5
   maxPatrolTime: 10
   maxSpotTime: 1

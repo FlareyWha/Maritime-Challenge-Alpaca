@@ -6,15 +6,28 @@ using Mirror;
 [System.Serializable]
 public class BaseEntity : NetworkBehaviour
 {
+    [SerializeField]
     [SyncVar(hook = nameof(OnHPChanged))]
     protected int hp;
+
+    [SerializeField]
     protected int maxHp;
     //protected int def;
+
+    [SerializeField]
     protected int atk;
+
+    [SerializeField]
     protected int atkspd;
+
+    [SerializeField]
     protected int critrate;
+
+    [SerializeField]
     protected int critdmg;
-    protected int movespd;
+
+    [SerializeField]
+    protected int movespd = 1;
 
     protected void TakeDamage(int damageAmount)
     {

@@ -56,7 +56,8 @@ public class Player : BaseEntity
         SpawnBattleShip();
 
 
-        DontDestroyOnLoad(this);
+        //DontDestroyOnLoad(this);
+        //transform.position = new Vector3(-10, -10, 0);
     }
 
     private void SetDetails()
