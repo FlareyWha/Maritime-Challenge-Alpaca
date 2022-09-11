@@ -23,12 +23,13 @@ public class Battleship : NetworkBehaviour
 
     private const float MAX_VEL = 10.0f;
 
-    void Start()
+    void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         shipSprite = GetComponent<SpriteRenderer>();
         gameObject.SetActive(isVisibile);
         prevFacing = currFacing = SHIPFACING.LEFT;
+
     }
 
     public override void OnStartAuthority()
@@ -118,7 +119,7 @@ public class Battleship : NetworkBehaviour
     }
 
     [ClientRpc]
-    private void SetShipStatus(bool show)
+    public void SetShipStatus(bool show)
     {
         gameObject.SetActive(show);
     }

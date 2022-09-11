@@ -28,6 +28,8 @@ public class Player : BaseEntity
 
     [SyncVar]
     private bool isVisible = true;
+    [SyncVar(hook = nameof(OnShipSet))]
+    private GameObject LinkedBattleshipGO = null;
 
     private Battleship LinkedBattleship = null;
 
@@ -103,6 +105,7 @@ public class Player : BaseEntity
         this.level = level;
 
         isVisible = true;
+        LinkedBattleshipGO = null;
     }
 
     [Command]
@@ -110,21 +113,15 @@ public class Player : BaseEntity
     {
         GameObject ship = Instantiate(BattleShipPrefab);
         NetworkServer.Spawn(ship, connectionToClient);
-        SetLinkedShip(ship);
+        LinkedBattleshipGO = ship;
 
         Battleship bs = ship.GetComponent<Battleship>();
-        bs.Dock();
+        bs.SetShipStatus(false);
     }
 
     private void Update()
     {
         //Debug.Log(NetworkServer.spawned.Count);
-    }
-
-    [ClientRpc]
-    public void SetLinkedShip(GameObject ship)
-    {
-        LinkedBattleship = ship.GetComponent<Battleship>();
     }
 
     public void SummonBattleShip(Dock dock)
@@ -171,7 +168,7 @@ public class Player : BaseEntity
         gameObject.SetActive(show);
     }
 
-
+    // ============ SYNCVAR CALLBACKS ====================
 
     void OnUsernameChanged(string prev_name, string new_name)
     {
@@ -179,6 +176,17 @@ public class Player : BaseEntity
 
         playerUI.SetDisplayName(username);
         Debug.Log("Name Received, " + username);
+    }
+
+    void OnShipSet(GameObject old, GameObject newGO)
+    {
+        if (LinkedBattleshipGO == null)
+        {
+            LinkedBattleship = null;
+            return;
+        }
+
+        LinkedBattleship = newGO.GetComponent<Battleship>();
     }
 
     // ================= GETTERS =====================
