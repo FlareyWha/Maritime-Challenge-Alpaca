@@ -39,6 +39,7 @@ public class Player : BaseEntity
         gameObject.SetActive(isVisible);
     }
 
+
     public override void OnStartLocalPlayer()
 
     {
@@ -78,6 +79,8 @@ public class Player : BaseEntity
         if (isLocalPlayer)
             UIManager.Instance.Camera.SetFollowTarget(gameObject);
 
+        NetworkServer.SpawnObjects();
+
         base.OnStartClient();
     }
 
@@ -111,7 +114,6 @@ public class Player : BaseEntity
 
         Battleship bs = ship.GetComponent<Battleship>();
         bs.Dock();
-
     }
 
     private void Update()

@@ -25,6 +25,18 @@ public class ServerManager : NetworkManager
        // manager = GameObject.Find("NetworkManager").GetComponent<NetworkManager>();
     }
 
+    public override void OnClientConnect()
+    {
+        NetworkServer.SpawnObjects();
+        base.OnClientConnect();
+    }
+
+    public override void OnStartClient()
+    {
+
+        base.OnStartClient();
+    }
+
     public void ConnectToServer()
     {
         StartClient();
