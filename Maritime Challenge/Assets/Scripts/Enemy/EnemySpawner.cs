@@ -1,21 +1,39 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
-public class EnemySpawner : MonoBehaviourSingleton<EnemySpawner>
+public class EnemySpawner : NetworkBehaviour
 {
+    #region Singleton
+    public static EnemySpawner Instance = null;
+    #endregion
+
     [SerializeField]
     private GameObject enemyPrefab;
 
-    // Start is called before the first frame update
+
     void Start()
     {
-        GameObject newEnemy = Instantiate(enemyPrefab, new Vector2(9999, 9999), Quaternion.identity);
+        Instance = this;
+
+
+        if (isServer)
+        {
+            Spawn();
+            Debug.Log("SERVER RUNS START");
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
         
+    }
+  
+    private void Spawn()
+    {
+        GameObject newEnemy = Instantiate(enemyPrefab, new Vector2(9999, 9999), Quaternion.identity);
+        NetworkServer.Spawn(newEnemy);
+
     }
 }
