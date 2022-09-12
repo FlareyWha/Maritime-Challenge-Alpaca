@@ -36,7 +36,6 @@ public class Battleship : NetworkBehaviour
         shipSprite = GetComponent<SpriteRenderer>();
         prevFacing = currFacing = SHIPFACING.LEFT;
 
-        gameObject.SetActive(isVisible);
         UpdateUI(ownerName, ownerName);
 
     }
