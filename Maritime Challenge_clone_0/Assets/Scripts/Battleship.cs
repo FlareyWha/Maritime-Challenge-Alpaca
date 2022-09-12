@@ -40,6 +40,7 @@ public class Battleship : NetworkBehaviour
    
     void Update()
     {
+        return;
         if (!hasAuthority)
             return;
 

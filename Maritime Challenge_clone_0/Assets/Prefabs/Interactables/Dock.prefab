@@ -114,6 +114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70b1994b64979d946953295ac68ca637, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsStartingDock: 0
   RefShipTransform: {fileID: 6923443188934791959}
   RefPlayerTransform: {fileID: 7591159869947547350}
 --- !u!1001 &1189244075061662789
@@ -123,6 +124,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4851536740854130389}
     m_Modifications:
+    - target: {fileID: 2242580777014837389, guid: 136c5d6d95eb85142a1a751d644afb93, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5580784871350116834, guid: 136c5d6d95eb85142a1a751d644afb93, type: 3}
       propertyPath: m_SizeDelta.x
       value: 142
@@ -130,6 +135,10 @@ PrefabInstance:
     - target: {fileID: 5580784871350116834, guid: 136c5d6d95eb85142a1a751d644afb93, type: 3}
       propertyPath: m_SizeDelta.y
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7974225037917856813, guid: 136c5d6d95eb85142a1a751d644afb93, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8292533501798687719, guid: 136c5d6d95eb85142a1a751d644afb93, type: 3}
       propertyPath: m_AssetId
@@ -195,7 +204,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9181191743022904711, guid: 136c5d6d95eb85142a1a751d644afb93, type: 3}
+    - {fileID: 495746369782457198, guid: 136c5d6d95eb85142a1a751d644afb93, type: 3}
+    - {fileID: 9116503974399402979, guid: 136c5d6d95eb85142a1a751d644afb93, type: 3}
+    - {fileID: 6532631195805342017, guid: 136c5d6d95eb85142a1a751d644afb93, type: 3}
+    - {fileID: 3737132526103077014, guid: 136c5d6d95eb85142a1a751d644afb93, type: 3}
+    - {fileID: 7250314046485260686, guid: 136c5d6d95eb85142a1a751d644afb93, type: 3}
+    - {fileID: 8292533501798687719, guid: 136c5d6d95eb85142a1a751d644afb93, type: 3}
+    - {fileID: 5191556324479391844, guid: 136c5d6d95eb85142a1a751d644afb93, type: 3}
+    - {fileID: 5731032183495838382, guid: 136c5d6d95eb85142a1a751d644afb93, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 136c5d6d95eb85142a1a751d644afb93, type: 3}
 --- !u!4 &7591159869947547350 stripped
 Transform:

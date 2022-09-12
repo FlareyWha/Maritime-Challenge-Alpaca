@@ -61,7 +61,7 @@ public class BaseEnemy : BaseEntity
 
         if (path.Count > 1)
         {
-            for (int i = 0; i < path.Count; ++i)
+            for (int i = 0; i < path.Count - 1; ++i)
             { 
                 Gizmos.DrawLine(path[i], path[i + 1]);
             }
@@ -137,16 +137,17 @@ public class BaseEnemy : BaseEntity
         if (timer >= maxTimer)
         {
             currEnemyState = ENEMY_STATES.PATROL;
+            GetPatrolDestination();
             ResetTimer(maxPatrolTime);
-
-            Debug.Log("Enemy patrolling");
+            
+            //Debug.Log("Enemy patrolling");
         }
         else if (distanceToPlayer <= detectionDistance)
         {
             currEnemyState = ENEMY_STATES.CHASE;
             ResetTimer(maxChaseTime);
 
-            Debug.Log("Enemy spotted player");
+            //Debug.Log("Enemy spotted player");
         }
     }
 
@@ -157,15 +158,17 @@ public class BaseEnemy : BaseEntity
             currEnemyState = ENEMY_STATES.IDLE;
             ResetTimer(maxIdleTime);
 
-            Debug.Log("Enemy resting");
+            //Debug.Log("Enemy resting");
         }
         else if (distanceToPlayer <= detectionDistance)
         {
             currEnemyState = ENEMY_STATES.CHASE;
             ResetTimer(maxChaseTime);
 
-            Debug.Log("Enemy spotted player");
+            //Debug.Log("Enemy spotted player");
         }
+
+        PatrolMovement();
     }
 
     protected virtual void HandleChase()
@@ -178,7 +181,7 @@ public class BaseEnemy : BaseEntity
             ResetTimer(maxIdleTime);
         }
 
-        Move();
+        ChaseMovement();
     }
 
     protected virtual void HandleAttack()
@@ -218,6 +221,39 @@ public class BaseEnemy : BaseEntity
         maxTimer = newMaxTimer;
     }
 
+    protected void FindAStarPath(Vector3 endPos)
+    {
+        path = AStarPathfinding.Instance.FindPath(gridMovementAreaLowerLimit, transform.position, endPos, movementAreaCellWidth, movementAreaCellHeight);
+
+        pathIncrement = 0;
+        destination = path[pathIncrement];
+        currentMovementDirection = destination - transform.position;
+        pathIncrement++;
+    }
+
+    protected void PatrolMovement()
+    {
+        CheckMovementDirection(true);
+
+        Move();
+    }
+
+    protected void GetPatrolDestination()
+    {
+        Vector3 randPatrolDestination = new Vector3(gridMovementAreaLowerLimit.x + Random.Range(0, movementAreaCellWidth), gridMovementAreaLowerLimit.y + Random.Range(0, movementAreaCellHeight), 0);
+
+        FindAStarPath(randPatrolDestination);
+    }
+
+    protected void ChaseMovement()
+    {
+        CheckAStar();
+
+        CheckMovementDirection(false);
+
+        Move();
+    }
+
     protected void CheckAStar()
     {
         if (currentTargetPlayer == null)
@@ -225,24 +261,15 @@ public class BaseEnemy : BaseEntity
 
         if (aStarTimer < 0)
         {
-            Debug.Log(currentTargetPlayer);
-            Debug.Log(AStarPathfinding.Instance);
-
-            //Get path
-            path = AStarPathfinding.Instance.FindPath(gridMovementAreaLowerLimit, transform.position, currentTargetPlayer.transform.position, movementAreaCellWidth, movementAreaCellHeight);
+            FindAStarPath(currentTargetPlayer.transform.position);
 
             aStarTimer = 1.25f;
-
-            pathIncrement = 0;
-            destination = path[pathIncrement];
-            currentMovementDirection = destination - transform.position;
-            pathIncrement++;
         }
 
         aStarTimer -= Time.deltaTime;
     }
 
-    protected void CheckMovementDirection()
+    protected void CheckMovementDirection(bool patrolling)
     {
         if (Vector2.Distance(transform.position, destination) < 0.5f)
         {
@@ -254,20 +281,21 @@ public class BaseEnemy : BaseEntity
             }
             else
             {
-                Debug.LogWarning("Reached end of path");
+                //Debug.LogWarning("Reached end of path");
+                currentMovementDirection = Vector2.zero;
+
+                if (patrolling)
+                {
+                    GetPatrolDestination();
+                }
             }
         }
     }
 
     protected void Move()
     {
-        CheckAStar();
-
-        CheckMovementDirection();
-
         rb.position += currentMovementDirection * movespd * Time.deltaTime;
     }
-
 
     protected bool CheckOutOfBounds()
     {
