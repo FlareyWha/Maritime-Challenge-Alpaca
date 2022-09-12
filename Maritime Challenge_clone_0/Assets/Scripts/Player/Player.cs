@@ -81,7 +81,6 @@ public class Player : BaseEntity
         if (isLocalPlayer)
             UIManager.Instance.Camera.SetFollowTarget(gameObject);
 
-        NetworkServer.SpawnObjects();
 
         base.OnStartClient();
     }
