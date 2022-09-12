@@ -58,6 +58,14 @@ public class BaseEnemy : BaseEntity
         //Draw something to visualize the box area
         Gizmos.color = Color.green;
         Gizmos.DrawWireCube(spawnPoint, new Vector3(movementAreaUpperLimit.x - movementAreaLowerLimit.x, movementAreaUpperLimit.y - movementAreaLowerLimit.y, 0));
+
+        if (path.Count > 1)
+        {
+            for (int i = 0; i < path.Count; ++i)
+            { 
+                Gizmos.DrawLine(path[i], path[i + 1]);
+            }
+        }
     }
 
     // Start is called before the first frame update

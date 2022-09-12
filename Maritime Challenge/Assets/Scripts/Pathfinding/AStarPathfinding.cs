@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class AStarPathfinding : MonoBehaviourSingleton<AStarPathfinding>
 {
@@ -8,6 +9,9 @@ public class AStarPathfinding : MonoBehaviourSingleton<AStarPathfinding>
     public const int DIAGONAL_MOVEMENT_COST = 14; //14 cus A^2 + B^2 = C^2 where A=B=1
 
     private Grid grid;
+
+    [SerializeField]
+    private Tilemap tilemap_collider;
 
     //[SerializeField]
     //private int gridWidth, gridHeight;
@@ -47,6 +51,9 @@ public class AStarPathfinding : MonoBehaviourSingleton<AStarPathfinding>
                 allNodes[i, j] = new Node(gridLowerLimits.x + i, gridLowerLimits.y + j);
                 allNodes[i, j].G = int.MaxValue;
                 allNodes[i, j].CalculateFCost();
+
+                if (tilemap_collider.HasTile(new Vector3Int(gridLowerLimits.x + i, gridLowerLimits.y + j, 0)))
+                    allNodes[i, j].traversable = false;
             }    
         }
 
@@ -77,15 +84,18 @@ public class AStarPathfinding : MonoBehaviourSingleton<AStarPathfinding>
             //Loops through all the available neighbours
             foreach (Node neighbourNode in availableNeighbours)
             {
-                //Skips this neighbour if closed list contains it, as it has already been checked
+                //Skips this neighbour if closed list contains it, as it has already been checked. 
                 if (closedList.Contains(neighbourNode))
                     continue;
 
-                int currentToNeighbourGCost = currentNode.G + CalculateHCost(currentNode, neighbourNode);
+                //Skips this neighbour if its not traversable, and adds it to closed list
+                if (!neighbourNode.traversable)
+                {
+                    closedList.Add(neighbourNode);
+                    continue;
+                }
 
-                //Debug.LogWarning("Neighbour cost: " + neighbourNode.G);
-                //Debug.LogWarning("currentToNeighbourGCost cost: " + currentToNeighbourGCost);
-                //Debug.LogWarning("F cost: " + neighbourNode.F);
+                int currentToNeighbourGCost = currentNode.G + CalculateHCost(currentNode, neighbourNode);
 
                 //Checks if the cost is lower than the current neighbours cost
                 if (currentToNeighbourGCost < neighbourNode.G)
