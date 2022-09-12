@@ -111,7 +111,7 @@ public class AStarPathfinding : MonoBehaviourSingleton<AStarPathfinding>
             }
         }
 
-        return null;
+        return new List<Vector3>();
     }
 
     Node GetNode(Node[,] allNodes, Vector3Int gridLowerLimits, int nodeXPos, int nodeYPos)

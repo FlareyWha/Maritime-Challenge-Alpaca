@@ -24,6 +24,7 @@ public class JSONDeseralizer : MonoBehaviour
         PlayerData.NumRightshipRollars = jsonPlayerData.iTotalRightshipRollars;
         PlayerData.NumTokens = jsonPlayerData.iTotalTokens;
         PlayerData.NumEventCurrency = jsonPlayerData.iTotalEventCurrency;
+        PlayerData.CurrentBattleship = jsonPlayerData.iCurrentBattleship;
         PlayerData.PlayerPosition = new Vector3(jsonPlayerData.fPlayerXPos, jsonPlayerData.fPlayerYPos, jsonPlayerData.fPlayerZPos);
     }
 

@@ -29,7 +29,7 @@ public class BaseEnemy : BaseEntity
     [SerializeField]
     protected float detectionDistance = 10f;
     [SerializeField]
-    protected float findPlayerDistance = 1000f;
+    protected float findPlayerDistance = 20f;
 
     [SerializeField]
     protected float maxIdleTime = 5f;
@@ -59,7 +59,7 @@ public class BaseEnemy : BaseEntity
         Gizmos.color = Color.green;
         Gizmos.DrawWireCube(spawnPoint, new Vector3(movementAreaUpperLimit.x - movementAreaLowerLimit.x, movementAreaUpperLimit.y - movementAreaLowerLimit.y, 0));
 
-        if (path.Count > 1)
+        if (path.Count > 2)
         {
             for (int i = 0; i < path.Count - 1; ++i)
             { 
@@ -109,7 +109,17 @@ public class BaseEnemy : BaseEntity
     {
         //Find distance to player if a player target is active
         if (currentTargetPlayer != null)
+        {
             distanceToPlayer = Vector2.Distance(currentTargetPlayer.transform.position, transform.position);
+
+            //Try to find player again if player exceeds the findPlayerDistance
+            if (distanceToPlayer > findPlayerDistance)
+            {
+                distanceToPlayer = int.MaxValue;
+                currentTargetPlayer = null;
+                FindPlayerToTarget();
+            }
+        }
         else
             FindPlayerToTarget();
 
