@@ -12,6 +12,8 @@ public class Node
     public int H = 0; //Estimated cost to move from given node on the grid to final destination
     public int F = 0; //Sum of G & H. The smaller the better
 
+    public bool traversable = true;
+
     public Node(int xPos, int yPos)
     {
         this.xPos = xPos;
