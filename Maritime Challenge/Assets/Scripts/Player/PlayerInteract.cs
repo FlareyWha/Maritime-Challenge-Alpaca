@@ -44,6 +44,7 @@ public class PlayerInteract : NetworkBehaviour
         }
     }
 
+    [Client]
     private void OnInteractButtonClicked()
     {
         if (InRangeList.Count > 0)

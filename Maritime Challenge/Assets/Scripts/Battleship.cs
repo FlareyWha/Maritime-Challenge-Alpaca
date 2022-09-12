@@ -6,7 +6,7 @@ using Mirror;
 public class Battleship : NetworkBehaviour
 {
 
-    [SyncVar]
+    [SyncVar(hook =nameof(OnShipStatusChanged))]
     private bool isVisibile = false;
 
     [SerializeField]
@@ -27,7 +27,6 @@ public class Battleship : NetworkBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         shipSprite = GetComponent<SpriteRenderer>();
-        //gameObject.SetActive(isVisibile);
         prevFacing = currFacing = SHIPFACING.LEFT;
 
     }
@@ -35,12 +34,16 @@ public class Battleship : NetworkBehaviour
     public override void OnStartAuthority()
     {
         Debug.Log("BattleShip: Taken Authority Over BattleShip");
-        //PlayerData.MyPlayer.SetLinkedShip(this);
+    }
+
+    [Server]
+    public void ServerInits()
+    {
+        isVisibile = false;
     }
    
     void Update()
     {
-        return;
         if (!hasAuthority)
             return;
 
@@ -110,7 +113,6 @@ public class Battleship : NetworkBehaviour
     private void SyncShipStatus(bool show)
     {
         isVisibile = show;
-        SetShipStatus(show);
     }
 
     [Command]
@@ -119,10 +121,9 @@ public class Battleship : NetworkBehaviour
         SetShipSprite(facing);
     }
 
-    [ClientRpc]
-    public void SetShipStatus(bool show)
+    public void OnShipStatusChanged(bool old, bool show)
     {
-        gameObject.SetActive(show);
+        gameObject.SetActive(isVisibile);
     }
 
     [ClientRpc]

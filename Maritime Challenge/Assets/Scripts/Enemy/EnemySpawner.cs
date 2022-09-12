@@ -18,11 +18,11 @@ public class EnemySpawner : NetworkBehaviour
         Instance = this;
 
 
-        if (isServer)
-        {
-            Spawn();
-            Debug.Log("SERVER RUNS START");
-        }
+        //if (isServer)
+        //{
+        //    Spawn();
+        //    Debug.Log("SERVER RUNS START");
+        //}
     }
 
     void Update()
