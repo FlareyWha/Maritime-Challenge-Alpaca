@@ -28,6 +28,10 @@ public class BaseEntity : NetworkBehaviour
 
     [SerializeField]
     protected float movespd = 1;
+    public override void OnStartServer()
+    {
+        this.hp = hp;
+    }
 
     protected void TakeDamage(int damageAmount)
     {
