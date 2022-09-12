@@ -61,7 +61,7 @@ public class BaseEnemy : BaseEntity
 
         if (path.Count > 1)
         {
-            for (int i = 0; i < path.Count; ++i)
+            for (int i = 0; i < path.Count - 1; ++i)
             { 
                 Gizmos.DrawLine(path[i], path[i + 1]);
             }
@@ -138,15 +138,15 @@ public class BaseEnemy : BaseEntity
         {
             currEnemyState = ENEMY_STATES.PATROL;
             ResetTimer(maxPatrolTime);
-
-            Debug.Log("Enemy patrolling");
+            
+            //Debug.Log("Enemy patrolling");
         }
         else if (distanceToPlayer <= detectionDistance)
         {
             currEnemyState = ENEMY_STATES.CHASE;
             ResetTimer(maxChaseTime);
 
-            Debug.Log("Enemy spotted player");
+            //Debug.Log("Enemy spotted player");
         }
     }
 
@@ -157,14 +157,14 @@ public class BaseEnemy : BaseEntity
             currEnemyState = ENEMY_STATES.IDLE;
             ResetTimer(maxIdleTime);
 
-            Debug.Log("Enemy resting");
+            //Debug.Log("Enemy resting");
         }
         else if (distanceToPlayer <= detectionDistance)
         {
             currEnemyState = ENEMY_STATES.CHASE;
             ResetTimer(maxChaseTime);
 
-            Debug.Log("Enemy spotted player");
+            //Debug.Log("Enemy spotted player");
         }
     }
 
@@ -225,8 +225,8 @@ public class BaseEnemy : BaseEntity
 
         if (aStarTimer < 0)
         {
-            Debug.Log(currentTargetPlayer);
-            Debug.Log(AStarPathfinding.Instance);
+            //Debug.Log(currentTargetPlayer);
+            //Debug.Log(AStarPathfinding.Instance);
 
             //Get path
             path = AStarPathfinding.Instance.FindPath(gridMovementAreaLowerLimit, transform.position, currentTargetPlayer.transform.position, movementAreaCellWidth, movementAreaCellHeight);
@@ -254,7 +254,7 @@ public class BaseEnemy : BaseEntity
             }
             else
             {
-                Debug.LogWarning("Reached end of path");
+                //Debug.LogWarning("Reached end of path");
             }
         }
     }
