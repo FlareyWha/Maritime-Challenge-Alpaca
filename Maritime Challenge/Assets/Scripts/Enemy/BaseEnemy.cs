@@ -233,11 +233,7 @@ public class BaseEnemy : BaseEntity
 
     protected void FindAStarPath(Vector3 endPos)
     {
-        do
-        {
-            path = AStarPathfinding.Instance.FindPath(gridMovementAreaLowerLimit, transform.position, endPos, movementAreaCellWidth, movementAreaCellHeight);
-        }
-        while (path.Count > 1);
+        path = AStarPathfinding.Instance.FindPath(gridMovementAreaLowerLimit, transform.position, endPos, movementAreaCellWidth, movementAreaCellHeight);
 
         pathIncrement = 0;
         destination = path[pathIncrement];
