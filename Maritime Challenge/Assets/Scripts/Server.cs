@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Mirror;
 
 public class Server : MonoBehaviour
@@ -11,6 +12,7 @@ public class Server : MonoBehaviour
     {
         manager = GetComponent<NetworkManager>();
         manager.StartServer();
+        UnityEngine.SceneManagement.SceneManager.LoadScene("MainScene");
     }
 
 }

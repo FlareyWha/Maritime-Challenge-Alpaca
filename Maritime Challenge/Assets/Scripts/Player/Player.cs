@@ -115,8 +115,8 @@ public class Player : BaseEntity
         NetworkServer.Spawn(ship, connectionToClient);
         LinkedBattleshipGO = ship;
 
-        Battleship bs = ship.GetComponent<Battleship>();
-        bs.SetShipStatus(false);
+     //   Battleship bs = ship.GetComponent<Battleship>();
+      //  bs.SetShipStatus(false);
     }
 
     private void Update()

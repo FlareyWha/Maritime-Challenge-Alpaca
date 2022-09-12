@@ -110,7 +110,7 @@ public class LoginManager : MonoBehaviour
     public void ConnectToServer()
     {
         // Connect to Server
-        SceneManager.Instance.LoadScene(SCENE_ID.HOME);
+     //   SceneManager.Instance.LoadScene(SCENE_ID.HOME);
         ServerManager.Instance.ConnectToServer();
       
     }
