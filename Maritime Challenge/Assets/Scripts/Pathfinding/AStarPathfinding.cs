@@ -187,13 +187,13 @@ public class AStarPathfinding : MonoBehaviourSingleton<AStarPathfinding>
 
     private List<Vector3> CalculatePath(Node endNode)
     {
-        List<Vector3> path = new List<Vector3> { grid.CellToWorld(new Vector3Int(endNode.xPos, endNode.yPos, 0)) };
+        List<Vector3> path = new List<Vector3> { grid.GetCellCenterWorld(new Vector3Int(endNode.xPos, endNode.yPos, 0)) };
         Node currentNode = endNode;
 
         //Loops through the parents until it reaches back to the start
         while (currentNode.Parent != null)
         {
-            path.Add(grid.CellToWorld(new Vector3Int(currentNode.Parent.xPos, currentNode.Parent.yPos, 0)));
+            path.Add(grid.GetCellCenterWorld(new Vector3Int(currentNode.Parent.xPos, currentNode.Parent.yPos, 0)));
             currentNode = currentNode.Parent;
         }
 
