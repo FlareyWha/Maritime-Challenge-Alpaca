@@ -40,8 +40,8 @@ public class AStarPathfinding : MonoBehaviourSingleton<AStarPathfinding>
         startNode = new Node(grid.WorldToCell(startPos));
         endNode = new Node(grid.WorldToCell(endPos));
 
-        Debug.Log("Start node pos: " + startNode.xPos + ", " + startNode.yPos);
-        Debug.Log("End node pos: " + endNode.xPos + ", " + endNode.yPos);
+       // Debug.Log("Start node pos: " + startNode.xPos + ", " + startNode.yPos);
+        //Debug.Log("End node pos: " + endNode.xPos + ", " + endNode.yPos);
 
         //Loop through the given area to create nodes and store them
         for (int i = 0; i < allNodes.GetLength(0); ++i)
