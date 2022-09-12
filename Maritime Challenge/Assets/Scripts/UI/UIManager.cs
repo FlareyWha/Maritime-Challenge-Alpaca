@@ -337,7 +337,7 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
     public static void SetWidthByTextWidth(GameObject toChange, Text toRef)
     {
         float text_width = toRef.preferredWidth;
-        RectTransform rt = toChange.gameObject.GetComponent(typeof(RectTransform)) as RectTransform;
+        RectTransform rt = toChange.GetComponent(typeof(RectTransform)) as RectTransform;
         rt.sizeDelta = new Vector2(text_width, rt.rect.height);
     }
 
