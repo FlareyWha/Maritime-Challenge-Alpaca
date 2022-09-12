@@ -30,6 +30,11 @@ public class Battleship : NetworkBehaviour
 
     private const float MAX_VEL = 10.0f;
 
+    private BaseEnemy currTarget = null;
+
+    private float fire_interval = 0.0f;
+    private float fire_timer = 0.0f;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -116,6 +121,18 @@ public class Battleship : NetworkBehaviour
         if (prevFacing != currFacing)
             SyncShipSprite((int)currFacing);
 
+        // Update Ship Attack
+        if (currTarget != null)
+        {
+
+        }
+
+
+    }
+
+    [Command]
+    private void FireCannon()
+    {
 
     }
 
@@ -173,6 +190,8 @@ public class Battleship : NetworkBehaviour
                 break;
         }
     }
+
+
 }
 
 enum SHIPFACING

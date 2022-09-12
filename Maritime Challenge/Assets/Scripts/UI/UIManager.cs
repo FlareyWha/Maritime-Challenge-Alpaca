@@ -135,7 +135,7 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
     public void HideInteractNamecard(Button button)
     {
         StartCoroutine(ToggleFlyOutAnim(InteractNamecard.gameObject, Vector3.zero, new Vector3(0, -900, 0), 0.3f, button));
-        PlayerInteract.interactPlayer = null;
+        PlayerUI.interactPlayer = null;
     }
 
     private void OnFriendRequestsUpdated(int sender_id, int rec_id)
