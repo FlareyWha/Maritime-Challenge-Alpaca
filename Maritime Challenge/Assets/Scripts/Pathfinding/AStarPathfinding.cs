@@ -111,7 +111,7 @@ public class AStarPathfinding : MonoBehaviourSingleton<AStarPathfinding>
             }
         }
 
-        return new List<Vector3>();
+        return new List<Vector3> { grid.GetCellCenterWorld(new Vector3Int(startNode.xPos, startNode.yPos, 0)) };
     }
 
     Node GetNode(Node[,] allNodes, Vector3Int gridLowerLimits, int nodeXPos, int nodeYPos)
