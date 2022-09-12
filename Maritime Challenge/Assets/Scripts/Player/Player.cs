@@ -116,6 +116,7 @@ public class Player : BaseEntity
 
         Battleship bs = ship.GetComponent<Battleship>();
         bs.ServerInits();
+
     }
 
     private void Update()
@@ -186,6 +187,8 @@ public class Player : BaseEntity
         }
 
         LinkedBattleship = newGO.GetComponent<Battleship>();
+        if (isLocalPlayer)
+            LinkedBattleship.InitShip(username);
     }
 
     // ================= GETTERS =====================

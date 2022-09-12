@@ -135,7 +135,7 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
     public void HideInteractNamecard(Button button)
     {
         StartCoroutine(ToggleFlyOutAnim(InteractNamecard.gameObject, Vector3.zero, new Vector3(0, -900, 0), 0.3f, button));
-        PlayerInteract.interactPlayer = null;
+        PlayerUI.interactPlayer = null;
     }
 
     private void OnFriendRequestsUpdated(int sender_id, int rec_id)
@@ -337,7 +337,7 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
     public static void SetWidthByTextWidth(GameObject toChange, Text toRef)
     {
         float text_width = toRef.preferredWidth;
-        RectTransform rt = toChange.gameObject.GetComponent(typeof(RectTransform)) as RectTransform;
+        RectTransform rt = toChange.GetComponent(typeof(RectTransform)) as RectTransform;
         rt.sizeDelta = new Vector2(text_width, rt.rect.height);
     }
 

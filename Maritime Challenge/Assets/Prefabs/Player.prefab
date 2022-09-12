@@ -382,8 +382,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6532631195805342017}
-        m_TargetAssemblyTypeName: PlayerInteract, Assembly-CSharp
+      - m_Target: {fileID: 9116503974399402979}
+        m_TargetAssemblyTypeName: PlayerUI, Assembly-CSharp
         m_MethodName: ViewProfile
         m_Mode: 2
         m_Arguments:
@@ -515,8 +515,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6532631195805342017}
-        m_TargetAssemblyTypeName: PlayerInteract, Assembly-CSharp
+      - m_Target: {fileID: 9116503974399402979}
+        m_TargetAssemblyTypeName: PlayerUI, Assembly-CSharp
         m_MethodName: CloseInteractPanel
         m_Mode: 1
         m_Arguments:
@@ -1077,6 +1077,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5a317b54f53daa46838ca0d03acff17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   PlayerDisplayName: {fileID: 2173444980401618727}
   InteractPanel: {fileID: 1423794624995397429}
   ChatBubbleUIPrefab: {fileID: 2474843570704675809, guid: 31493853d27f2d748a6d9658c5836a71, type: 3}

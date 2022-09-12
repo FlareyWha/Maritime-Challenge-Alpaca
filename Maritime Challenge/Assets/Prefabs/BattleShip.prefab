@@ -174,6 +174,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  OwnerNameText: {fileID: 3553049689375612532}
+  OwnerNameBG: {fileID: 2338799580837776988}
   UpwardSprite: {fileID: 21300000, guid: 3374480f0e12b15458bca866fe070cf0, type: 3}
   DownwardSprite: {fileID: 21300000, guid: dd7c4ffdc4c02de4bb13dad6613642bd, type: 3}
   LeftSprite: {fileID: 21300000, guid: ae37a3edde070b24dbd7611fc8dddcdd, type: 3}
@@ -222,7 +224,7 @@ RectTransform:
   m_GameObject: {fileID: 2106921298954242604}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.05, y: 0.05, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3908768988884072760}
   m_RootOrder: 0
@@ -315,7 +317,7 @@ RectTransform:
   m_GameObject: {fileID: 2816257712706396094}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.05, y: 0.05, z: 1}
   m_Children:
   - {fileID: 487342779514795924}
   m_Father: {fileID: 651338178707676300}
@@ -324,7 +326,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 5, y: 1}
+  m_SizeDelta: {x: 180, y: 26}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2178694124741134037
 CanvasRenderer:

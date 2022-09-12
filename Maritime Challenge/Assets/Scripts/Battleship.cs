@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Mirror;
 
 public class Battleship : NetworkBehaviour
@@ -8,7 +9,13 @@ public class Battleship : NetworkBehaviour
 
     [SyncVar(hook=nameof(OnShipStatusChanged))]
     private bool isVisible = false;
+    [SyncVar(hook =nameof(UpdateUI))]
+    private string ownerName = "";
 
+    [SerializeField]
+    private Text OwnerNameText;
+    [SerializeField]
+    private Image OwnerNameBG;
     [SerializeField]
     private Sprite UpwardSprite, DownwardSprite, LeftSprite, RightSprite;
     private SHIPFACING currFacing, prevFacing;
@@ -23,32 +30,48 @@ public class Battleship : NetworkBehaviour
 
     private const float MAX_VEL = 10.0f;
 
+    private BaseEnemy currTarget = null;
+
+    private float fire_interval = 0.0f;
+    private float fire_timer = 0.0f;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         shipSprite = GetComponent<SpriteRenderer>();
         prevFacing = currFacing = SHIPFACING.LEFT;
-        gameObject.SetActive(false);
+
+        UpdateUI(ownerName, ownerName);
+
     }
 
     public override void OnStartAuthority()
     {
         Debug.Log("BattleShip: Taken Authority Over BattleShip");
-        gameObject.SetActive(false);
-    }
-
-    public override void OnStartLocalPlayer()
-    {
-        gameObject.SetActive(false);
+      
     }
 
     [Server]
     public void ServerInits()
     {
         isVisible = false;
+        ownerName = "";
     }
+  
+    [Command]
+    public void InitShip(string name)
+    {
+        isVisible = false;
+        ownerName = name;
 
+    }
+    private void UpdateUI(string oldname, string newname)
+    { 
+        OwnerNameText.text = ownerName;
+        UIManager.SetWidthByTextWidth(OwnerNameBG.gameObject, OwnerNameText);
+    }
    
+
     void Update()
     {
         if (!hasAuthority)
@@ -98,6 +121,18 @@ public class Battleship : NetworkBehaviour
         if (prevFacing != currFacing)
             SyncShipSprite((int)currFacing);
 
+        // Update Ship Attack
+        if (currTarget != null)
+        {
+
+        }
+
+
+    }
+
+    [Command]
+    private void FireCannon()
+    {
 
     }
 
@@ -155,6 +190,8 @@ public class Battleship : NetworkBehaviour
                 break;
         }
     }
+
+
 }
 
 enum SHIPFACING
