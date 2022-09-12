@@ -27,7 +27,7 @@ public class Battleship : NetworkBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         shipSprite = GetComponent<SpriteRenderer>();
-        gameObject.SetActive(isVisibile);
+        //gameObject.SetActive(isVisibile);
         prevFacing = currFacing = SHIPFACING.LEFT;
 
     }
