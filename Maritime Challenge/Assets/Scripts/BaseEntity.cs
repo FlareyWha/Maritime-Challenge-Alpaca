@@ -18,16 +18,16 @@ public class BaseEntity : NetworkBehaviour
     protected int atk;
 
     [SerializeField]
-    protected int atkspd;
+    protected float atkspd;
 
     [SerializeField]
-    protected int critrate;
+    protected float critrate;
 
     [SerializeField]
-    protected int critdmg;
+    protected float critdmg;
 
     [SerializeField]
-    protected int movespd = 1;
+    protected float movespd = 1;
 
     protected void TakeDamage(int damageAmount)
     {
