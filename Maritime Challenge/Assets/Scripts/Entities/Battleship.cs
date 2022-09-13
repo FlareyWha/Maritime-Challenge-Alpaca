@@ -49,7 +49,7 @@ public class Battleship : NetworkBehaviour
         prevFacing = currFacing = SHIPFACING.LEFT;
 
         UpdateUI(ownerName, ownerName);
-
+        gameObject.SetActive(false);
     }
 
     public override void OnStartAuthority()

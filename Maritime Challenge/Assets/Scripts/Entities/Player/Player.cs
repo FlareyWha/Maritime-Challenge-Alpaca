@@ -192,6 +192,7 @@ public class Player : BaseEntity
         }
 
         LinkedBattleship = newGO.GetComponent<Battleship>();
+        LinkedBattleshipGO.SetActive(false);
         if (isLocalPlayer)
             LinkedBattleship.InitShip(username);
     }
