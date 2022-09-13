@@ -21,7 +21,6 @@ public class EnemySpawner : NetworkBehaviour
         if (isServer)
         {
             Spawn();
-            Debug.Log("SERVER RUNS START");
         }
     }
 
@@ -30,10 +29,16 @@ public class EnemySpawner : NetworkBehaviour
         
     }
   
+    [Server]
     private void Spawn()
     {
         GameObject newEnemy = Instantiate(enemyPrefab, new Vector2(9999, 9999), Quaternion.identity);
         NetworkServer.Spawn(newEnemy);
+    }
 
+    [Command]
+    private void AskServerToSpawn()
+    {
+        Spawn();
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
 public enum ENEMY_STATES
 {
@@ -70,6 +71,9 @@ public class BaseEnemy : BaseEntity
     // Start is called before the first frame update
     protected virtual void Start()
     {
+        if (!isServer)
+            return;
+
         rb = GetComponent<Rigidbody2D>();
 
         Grid grid = GameObject.Find("Grid").GetComponent<Grid>();
@@ -103,6 +107,10 @@ public class BaseEnemy : BaseEntity
     // Update is called once per frame
     protected virtual void Update()
     {
+
+        if (!isServer)
+            return;
+
         HandleFSM();
         base.CheckForEntityClick();
     }
