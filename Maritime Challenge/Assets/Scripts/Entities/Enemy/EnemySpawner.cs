@@ -37,7 +37,7 @@ public class EnemySpawner : NetworkBehaviour
     }
 
     [Command]
-    private void AskServerToSpawn()
+    public void AskServerToSpawn()
     {
         Spawn();
     }
