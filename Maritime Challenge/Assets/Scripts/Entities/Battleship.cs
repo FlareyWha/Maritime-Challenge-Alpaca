@@ -136,8 +136,9 @@ public class Battleship : NetworkBehaviour
             dis.z = 0;
             if (dis.magnitude > TARGET_RANGE)
             {
-                currTarget = null;
-                selectedTargetUI.transform.SetParent(null);
+                currTarget = null; 
+                selectedTargetUI.transform.position = transform.position + selectedTargetUI.transform.localPosition;
+                selectedTargetUI.transform.SetParent(transform);
                 selectedTargetUI.gameObject.SetActive(false);
             }
 
