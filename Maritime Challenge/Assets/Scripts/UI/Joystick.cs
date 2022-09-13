@@ -73,6 +73,7 @@ public class Joystick : MonoBehaviour
         }
     }
 
+   
     public Vector2 GetDirection()
     {
         Vector2 dis = InnerCircle.transform.position - OuterCircle.transform.position;
@@ -95,6 +96,7 @@ public class Joystick : MonoBehaviour
     {
         InnerCircle.SetActive(true);
         OuterCircle.SetActive(true);
+        ResetJoystick();
     }
 
     private void MoveJoystick(Vector2 pos)

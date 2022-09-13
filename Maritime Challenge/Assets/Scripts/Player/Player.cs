@@ -36,11 +36,11 @@ public class Player : BaseEntity
 
     private PlayerUI playerUI = null;
 
-    void Start()
+    private void Start()
     {
         gameObject.SetActive(isVisible);
+        base.InitSpriteSize();
     }
-
 
     public override void OnStartLocalPlayer()
 
@@ -121,7 +121,12 @@ public class Player : BaseEntity
 
     private void Update()
     {
-        //Debug.Log(NetworkServer.spawned.Count);
+        base.CheckForEntityClick();
+    }
+    public override void OnEntityClicked()
+    {
+        Debug.Log("Player Entity Click Called");
+        playerUI.OpenInteractPanel();
     }
 
     public void SummonBattleShip(Dock dock)

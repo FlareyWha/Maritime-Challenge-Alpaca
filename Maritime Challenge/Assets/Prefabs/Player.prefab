@@ -1079,6 +1079,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  hp: 0
+  maxHp: 0
+  atk: 0
+  atkspd: 0
+  critrate: 0
+  critdmg: 0
+  movespd: 1
   PlayerDisplayName: {fileID: 2173444980401618727}
   InteractPanel: {fileID: 1423794624995397429}
   ChatBubbleUIPrefab: {fileID: 2474843570704675809, guid: 31493853d27f2d748a6d9658c5836a71, type: 3}

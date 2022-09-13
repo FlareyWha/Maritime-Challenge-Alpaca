@@ -96,12 +96,15 @@ public class BaseEnemy : BaseEntity
         movementAreaUpperLimit = grid.CellToWorld(gridMovementAreaUpperLimit);
 
         FindPlayerToTarget();
+
+        base.InitSpriteSize();
     }
 
     // Update is called once per frame
     protected virtual void Update()
     {
         HandleFSM();
+        base.CheckForEntityClick();
     }
 
     protected virtual void HandleFSM()
@@ -314,5 +317,10 @@ public class BaseEnemy : BaseEntity
         }
 
         return false;
+    }
+
+    public override void OnEntityClicked()
+    {
+        PlayerData.MyPlayer.GetBattleShip().SetTarget(this);
     }
 }

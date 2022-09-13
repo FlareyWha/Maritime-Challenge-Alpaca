@@ -22,18 +22,22 @@ public class Battleship : NetworkBehaviour
 
     private Rigidbody2D rb = null;
     private SpriteRenderer shipSprite = null;
+    private BaseEnemy currTarget = null;
+    private Player ownerPlayer = null;
 
     private Vector2 velocity = Vector2.zero;
     private Vector2 accel = Vector2.zero;
     private float accel_rate = 10.0f;
     private float deccel_rate = 5.0f;
-
     private const float MAX_VEL = 10.0f;
 
-    private BaseEnemy currTarget = null;
+    private const float TARGET_RANGE = 100.0f;
 
-    private float fire_interval = 0.0f;
+    private const float FIRE_INTERVAL = 0.0f;
     private float fire_timer = 0.0f;
+
+    [SerializeField]
+    private GameObject selectedTargetUI;
 
     void Awake()
     {
@@ -48,7 +52,7 @@ public class Battleship : NetworkBehaviour
     public override void OnStartAuthority()
     {
         Debug.Log("BattleShip: Taken Authority Over BattleShip");
-      
+        ownerPlayer = PlayerData.MyPlayer;
     }
 
     [Server]
@@ -124,16 +128,42 @@ public class Battleship : NetworkBehaviour
         // Update Ship Attack
         if (currTarget != null)
         {
-
+            fire_timer -= Time.deltaTime;
+            if (fire_timer <= 0.0f)
+            {
+                FireCannon();
+                fire_timer = FIRE_INTERVAL;
+            }
         }
 
 
     }
 
-    [Command]
     private void FireCannon()
     {
+        LaunchCannonBall(currTarget.gameObject);
+    }
 
+    [Command]
+    private void LaunchCannonBall(GameObject target)
+    {
+
+    }
+
+    public bool SetTarget(BaseEnemy enemy)
+    {
+        Vector3 dis = enemy.transform.position - transform.position;
+        dis.z = 0;
+        if (dis.magnitude > TARGET_RANGE)
+            return false;
+
+        currTarget = enemy;
+        selectedTargetUI.transform.position = enemy.transform.position + selectedTargetUI.transform.localPosition;
+        selectedTargetUI.transform.SetParent(enemy.transform);
+        selectedTargetUI.gameObject.SetActive(true);
+
+        fire_timer = 0.0f;
+        return true;
     }
 
 

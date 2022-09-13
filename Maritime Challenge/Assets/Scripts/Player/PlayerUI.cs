@@ -5,7 +5,7 @@ using UnityEngine.Networking;
 using UnityEngine.UI;
 using Mirror;
 
-public class PlayerUI : NetworkBehaviour
+public class PlayerUI : BaseEntity
 {
  
     [SerializeField]
@@ -27,12 +27,6 @@ public class PlayerUI : NetworkBehaviour
 
     void Start()
     {
-        // Get Player Sprite Size
-        playerSize = GetComponent<SpriteRenderer>().bounds.size;
-        float pixelsPerUnit = GetComponent<SpriteRenderer>().sprite.pixelsPerUnit;
-
-        playerSize.x *= pixelsPerUnit;
-        playerSize.y *= pixelsPerUnit;
     }
 
     public void SetDisplayName(string name)
@@ -80,14 +74,18 @@ public class PlayerUI : NetworkBehaviour
             chatBubbleList.Remove(bubble);
         }
 
-        // Player Interact
-        // OTHER CLIENTS INTERACT WITH LOCAL PLAYER FOR VIEW MENU
-        if (!isLocalPlayer && !isInteractOpen && InputManager.InputActions.Main.Tap.WasPressedThisFrame() && IsWithinPlayer())
+      
+
+    }
+
+    // OTHER CLIENTS INTERACT WITH LOCAL PLAYER FOR VIEW MENU
+    public void OpenInteractPanel()
+    {
+        if (!isLocalPlayer && !isInteractOpen)
         {
             isInteractOpen = true;
             ShowInteractPanel();
         }
-
     }
 
 
@@ -115,22 +113,6 @@ public class PlayerUI : NetworkBehaviour
         UIManager.Instance.ShowInteractNamecard(button);
         interactPlayer = player;
     }
-
-    private bool IsWithinPlayer()
-    {
-        Vector2 touchPos = InputManager.InputActions.Main.TouchPosition.ReadValue<Vector2>();
-        Vector3 playerPos = Camera.main.WorldToScreenPoint(transform.position);
-        if (touchPos.x < playerPos.x + playerSize.x * 0.5f && touchPos.x > playerPos.x - playerSize.x * 0.5f
-            && touchPos.y > playerPos.y - playerSize.y * 0.5f && touchPos.y < playerPos.y + playerSize.y * 0.5f)
-        {
-            return true;
-        }
-
-        //Debug.Log(transform.position);
-        return false;
-    }
-
-
 
     IEnumerator UpdatePhonebookOtherUnlocked(Player player)
     {

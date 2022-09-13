@@ -17,13 +17,12 @@ public class EnemySpawner : NetworkBehaviour
     {
         Instance = this;
 
-        GameObject newEnemy = Instantiate(enemyPrefab, new Vector2(9999, 9999), Quaternion.identity);
-
-        //if (isServer)
-        //{
-        //    Spawn();
-        //    Debug.Log("SERVER RUNS START");
-        //}
+      
+        if (isServer)
+        {
+            Spawn();
+            Debug.Log("SERVER RUNS START");
+        }
     }
 
     void Update()
