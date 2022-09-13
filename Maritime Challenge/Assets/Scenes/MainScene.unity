@@ -5755,7 +5755,7 @@ GameObject:
   - component: {fileID: 735754984}
   - component: {fileID: 735754986}
   - component: {fileID: 735754985}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Tilemap_Water
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87089,6 +87089,7 @@ GameObject:
   - component: {fileID: 1378710691}
   - component: {fileID: 1378710693}
   - component: {fileID: 1378710692}
+  - component: {fileID: 1378710694}
   m_Layer: 5
   m_Name: Map
   m_TagString: Untagged
@@ -87157,6 +87158,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1378710690}
   m_CullTransparentMesh: 1
+--- !u!114 &1378710694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378710690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e22923b6a03ed24db3e0a28b85472a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mapCamera: {fileID: 2115657599}
+  scrollSpeed: 25
+  minCameraZoom: 5
+  maxCameraZoom: 300
+  cameraPositionLowerLimit: {x: -250, y: -250}
+  cameraPositionUpperLimit: {x: 250, y: 250}
 --- !u!1 &1380023542
 GameObject:
   m_ObjectHideFlags: 0
@@ -92860,7 +92879,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.33449623, g: 0.6165531, b: 0.764151, a: 0}
+  m_BackGroundColor: {r: 0.46274513, g: 0.7411765, b: 0.7568628, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -92881,7 +92900,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 103
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 8400000, guid: 8f62b2bcd01a6ca45a5fc4917d142118, type: 2}
   m_TargetDisplay: 0

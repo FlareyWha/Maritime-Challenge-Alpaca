@@ -15,9 +15,27 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "Tap2",
+                    "type": "Button",
+                    "id": "905479dd-43b3-4dc7-b399-1bc03386cde6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "TouchPosition",
                     "type": "Value",
                     "id": "2196c62a-6dce-413a-bd5a-bbbd2e460b11",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "TouchPosition2",
+                    "type": "Value",
+                    "id": "db1337ef-6efa-4f8e-9ee8-49dd564c466c",
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
@@ -28,7 +46,7 @@
                 {
                     "name": "",
                     "id": "08d098ee-7ded-4896-aadb-8f46175062db",
-                    "path": "<Touchscreen>/Press",
+                    "path": "<Touchscreen>/touch0/press",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -72,11 +90,44 @@
                 {
                     "name": "",
                     "id": "c7a021a8-c348-49ed-9fd0-7d32725a4a64",
-                    "path": "<Touchscreen>/position",
+                    "path": "<Touchscreen>/touch0/position",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "TouchPosition",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "70c6e0d8-4001-46a0-ac95-21b41ba7f9ce",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TouchPosition2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5f59690d-a344-4dca-9913-cee191da035e",
+                    "path": "<Touchscreen>/touch1/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TouchPosition2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1ad3fa8d-b191-4694-8cbd-d096e1050c4c",
+                    "path": "<Touchscreen>/touch1/press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Tap2",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
