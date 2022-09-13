@@ -71,6 +71,8 @@ public class BaseEnemy : BaseEntity
     // Start is called before the first frame update
     protected virtual void Start()
     {
+        base.InitSpriteSize();
+
         if (!isServer)
             return;
 
@@ -100,19 +102,17 @@ public class BaseEnemy : BaseEntity
         movementAreaUpperLimit = grid.CellToWorld(gridMovementAreaUpperLimit);
 
         FindPlayerToTarget();
-
-        base.InitSpriteSize();
     }
 
     // Update is called once per frame
     protected virtual void Update()
     {
+        base.CheckForEntityClick();
 
         if (!isServer)
             return;
 
         HandleFSM();
-        base.CheckForEntityClick();
     }
 
     protected virtual void HandleFSM()

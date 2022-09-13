@@ -20,6 +20,9 @@ public class Battleship : NetworkBehaviour
     private Sprite UpwardSprite, DownwardSprite, LeftSprite, RightSprite;
     private SHIPFACING currFacing, prevFacing;
 
+    [SerializeField]
+    private GameObject CannonBallPrefab;
+
     private Rigidbody2D rb = null;
     private SpriteRenderer shipSprite = null;
     private BaseEnemy currTarget = null;
@@ -27,13 +30,13 @@ public class Battleship : NetworkBehaviour
 
     private Vector2 velocity = Vector2.zero;
     private Vector2 accel = Vector2.zero;
-    private float accel_rate = 10.0f;
-    private float deccel_rate = 5.0f;
+    private float accel_rate = 20.0f;
+    private float deccel_rate = 10.0f;
     private const float MAX_VEL = 10.0f;
 
-    private const float TARGET_RANGE = 100.0f;
+    private const float TARGET_RANGE = 30.0f;
 
-    private const float FIRE_INTERVAL = 0.0f;
+    private const float FIRE_INTERVAL = 2.0f;
     private float fire_timer = 0.0f;
 
     [SerializeField]
@@ -128,14 +131,25 @@ public class Battleship : NetworkBehaviour
         // Update Ship Attack
         if (currTarget != null)
         {
+            // Check for Stop Attack when out of range
+            Vector3 dis = currTarget.transform.position - transform.position;
+            dis.z = 0;
+            if (dis.magnitude > TARGET_RANGE)
+            {
+                currTarget = null;
+                selectedTargetUI.transform.SetParent(null);
+                selectedTargetUI.gameObject.SetActive(false);
+            }
+
+            // Fire Cannonball
             fire_timer -= Time.deltaTime;
             if (fire_timer <= 0.0f)
             {
                 FireCannon();
                 fire_timer = FIRE_INTERVAL;
             }
-        }
 
+        }
 
     }
 
@@ -147,11 +161,17 @@ public class Battleship : NetworkBehaviour
     [Command]
     private void LaunchCannonBall(GameObject target)
     {
+        GameObject ball = Instantiate(CannonBallPrefab, transform.position, Quaternion.identity);
+        NetworkServer.Spawn(ball);
 
+        CannonBall cannonBall = ball.GetComponent<CannonBall>();
+        cannonBall.Init(target);
     }
 
     public bool SetTarget(BaseEnemy enemy)
     {
+        Debug.Log("Set Target To: " + enemy.name);
+
         Vector3 dis = enemy.transform.position - transform.position;
         dis.z = 0;
         if (dis.magnitude > TARGET_RANGE)
@@ -219,11 +239,6 @@ public class Battleship : NetworkBehaviour
                 shipSprite.sprite = DownwardSprite;
                 break;
         }
-    }
-
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
     }
 
 }
