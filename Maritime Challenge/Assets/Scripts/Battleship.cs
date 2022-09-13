@@ -192,6 +192,10 @@ public class Battleship : NetworkBehaviour
     }
 
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+    }
+
 }
 
 enum SHIPFACING

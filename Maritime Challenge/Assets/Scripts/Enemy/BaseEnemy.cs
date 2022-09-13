@@ -10,7 +10,6 @@ public enum ENEMY_STATES
     ATTACK,
     NO_ENEMY_STATE
 }
-
 public class BaseEnemy : BaseEntity
 {
     protected Rigidbody2D rb;
