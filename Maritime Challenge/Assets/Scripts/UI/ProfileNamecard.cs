@@ -23,7 +23,7 @@ public class ProfileNamecard : MonoBehaviour
     [SerializeField]
     private Image AvatarImage;
     [SerializeField]
-    private Sprite UnknownSprite;
+    private Sprite UnknownSprite, DefaultSprite;
 
     private int playerID = 0;
 
@@ -49,7 +49,7 @@ public class ProfileNamecard : MonoBehaviour
         Country.text = "Country: " + PlayerData.GetCountryName(player.GetCountryID());
         Guild.text = "Guild: " + PlayerData.GetGuildName(player.GetGuildID());
         //Title.sprite = PlayerData.GetTitleByID(player.GetTitleID());
-
+        AvatarImage.sprite = DefaultSprite;
     }
 
     public void SetDetails(FriendInfo player)
@@ -67,7 +67,7 @@ public class ProfileNamecard : MonoBehaviour
         Country.text = "Country: " + PlayerData.GetCountryName(player.Country);
         Guild.text = "Guild: " + PlayerData.GetGuildName(player.GuildID);
         //Title.sprite = PlayerData.GetTitleByID(player.CurrentTitleID);
-      
+        AvatarImage.sprite = DefaultSprite;
     }
 
     public void SetHidden(int playerID)
@@ -98,7 +98,7 @@ public class ProfileNamecard : MonoBehaviour
             IncomingPanel.SetActive(false);
         }
 
-
+        AvatarImage.sprite = DefaultSprite;
 
     }
 

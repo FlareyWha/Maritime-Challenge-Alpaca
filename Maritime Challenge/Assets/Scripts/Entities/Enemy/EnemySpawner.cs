@@ -20,7 +20,7 @@ public class EnemySpawner : NetworkBehaviour
       
         if (isServer)
         {
-            Spawn();
+           // Spawn();
         }
     }
 
