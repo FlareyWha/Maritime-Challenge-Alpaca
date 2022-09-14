@@ -208,12 +208,28 @@ public class Battleship : NetworkBehaviour
     private void SyncShipStatus(bool show)
     {
         isVisible = show;
+        gameObject.SetActive(isVisible);
     }
 
     [Command]
     private void SyncShipSprite(int facing)
     {
         SetShipSprite(facing);
+        switch ((SHIPFACING)facing)
+        {
+            case SHIPFACING.LEFT:
+                shipSprite.sprite = LeftSprite;
+                break;
+            case SHIPFACING.RIGHT:
+                shipSprite.sprite = RightSprite;
+                break;
+            case SHIPFACING.UP:
+                shipSprite.sprite = UpwardSprite;
+                break;
+            case SHIPFACING.DOWN:
+                shipSprite.sprite = DownwardSprite;
+                break;
+        }
     }
 
     public void OnShipStatusChanged(bool old, bool show)

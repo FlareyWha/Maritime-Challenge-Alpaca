@@ -17,11 +17,13 @@ public class EnemySpawner : NetworkBehaviour
     {
         Instance = this;
 
-      
-        if (isServer)
+        NetworkServer.SpawnObjects();
+        Debug.Log("Spawned Network GOs Count: " + NetworkServer.spawned.Count);
+        foreach (KeyValuePair<uint, NetworkIdentity> spawned in NetworkServer.spawned)
         {
-           // Spawn();
+            Debug.Log("Spawned: " + spawned.Value.gameObject.name);
         }
+
     }
 
     void Update()
@@ -30,15 +32,16 @@ public class EnemySpawner : NetworkBehaviour
     }
   
     [Server]
-    private void Spawn()
+    private void Spawn(Vector2 spawnPos)
     {
-        GameObject newEnemy = Instantiate(enemyPrefab, new Vector2(9999, 9999), Quaternion.identity);
+        GameObject newEnemy = Instantiate(enemyPrefab, spawnPos, Quaternion.identity);
         NetworkServer.Spawn(newEnemy);
     }
 
     [Command]
-    public void AskServerToSpawn()
+    public void AskServerToSpawn(Vector2 spawnPos)
     {
-        Spawn();
+        Spawn(spawnPos);
     }
+
 }

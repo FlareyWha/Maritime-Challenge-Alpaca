@@ -72,11 +72,12 @@ public class BaseEnemy : BaseEntity
     protected virtual void Start()
     {
         base.InitSpriteSize();
+        rb = GetComponent<Rigidbody2D>();
 
         if (!isServer)
             return;
 
-        rb = GetComponent<Rigidbody2D>();
+        Debug.Log("Enemy Start Called");
 
         Grid grid = GameObject.Find("Grid").GetComponent<Grid>();
 
