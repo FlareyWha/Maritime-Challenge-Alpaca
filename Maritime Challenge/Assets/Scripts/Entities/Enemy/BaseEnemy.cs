@@ -161,14 +161,14 @@ public class BaseEnemy : BaseEntity
             GetPatrolDestination();
             ResetTimer(maxPatrolTime);
             
-            //Debug.Log("Enemy patrolling");
+            Debug.Log("Enemy patrolling");
         }
         else if (distanceToPlayer <= detectionDistance)
         {
             currEnemyState = ENEMY_STATES.CHASE;
             ResetTimer(maxChaseTime);
 
-            //Debug.Log("Enemy spotted player");
+            Debug.Log("Enemy spotted player");
         }
     }
 
@@ -179,14 +179,14 @@ public class BaseEnemy : BaseEntity
             currEnemyState = ENEMY_STATES.IDLE;
             ResetTimer(maxIdleTime);
 
-            //Debug.Log("Enemy resting");
+            Debug.Log("Enemy resting");
         }
         else if (distanceToPlayer <= detectionDistance)
         {
             currEnemyState = ENEMY_STATES.CHASE;
             ResetTimer(maxChaseTime);
 
-            //Debug.Log("Enemy spotted player");
+            Debug.Log("Enemy spotted player");
         }
 
         PatrolMovement();
@@ -242,10 +242,22 @@ public class BaseEnemy : BaseEntity
         maxTimer = newMaxTimer;
     }
 
+    protected void FindAStarPath(Vector3Int endGridPos)
+    {
+        path = AStarPathfinding.Instance.FindPath(gridMovementAreaLowerLimit, transform.position, endGridPos, movementAreaCellWidth, movementAreaCellHeight);
+
+        SetStartOfPath();
+    }
+
     protected void FindAStarPath(Vector3 endPos)
     {
         path = AStarPathfinding.Instance.FindPath(gridMovementAreaLowerLimit, transform.position, endPos, movementAreaCellWidth, movementAreaCellHeight);
 
+        SetStartOfPath();
+    }
+
+    protected void SetStartOfPath()
+    {
         pathIncrement = 0;
         destination = path[pathIncrement];
         currentMovementDirection = destination - transform.position;
@@ -261,7 +273,7 @@ public class BaseEnemy : BaseEntity
 
     protected void GetPatrolDestination()
     {
-        Vector3 randPatrolDestination = new Vector3(gridMovementAreaLowerLimit.x + Random.Range(0, movementAreaCellWidth), gridMovementAreaLowerLimit.y + Random.Range(0, movementAreaCellHeight), 0);
+        Vector3Int randPatrolDestination = new Vector3Int(gridMovementAreaLowerLimit.x + Random.Range(0, movementAreaCellWidth), gridMovementAreaLowerLimit.y + Random.Range(0, movementAreaCellHeight), 0);
 
         FindAStarPath(randPatrolDestination);
     }

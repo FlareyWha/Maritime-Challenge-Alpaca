@@ -28,6 +28,11 @@ public class AStarPathfinding : MonoBehaviourSingleton<AStarPathfinding>
         
     }
 
+    public List<Vector3> FindPath(Vector3Int gridLowerLimits, Vector3 startPos, Vector3Int endGridPos, int gridWidth, int gridHeight)
+    {
+        return FindPath(gridLowerLimits, startPos, grid.CellToWorld(endGridPos), gridWidth, gridHeight);
+    }
+
     public List<Vector3> FindPath(Vector3Int gridLowerLimits, Vector3 startPos, Vector3 endPos, int gridWidth, int gridHeight)
     {
         Node[,] allNodes = new Node[gridWidth, gridHeight];
@@ -67,6 +72,8 @@ public class AStarPathfinding : MonoBehaviourSingleton<AStarPathfinding>
 
         while (openList.Count > 0)
         {
+            Debug.LogWarning(openList.Count);
+
             //Get the node with the lowest F cost
             currentNode = GetLowestFCostNode(openList);
             
