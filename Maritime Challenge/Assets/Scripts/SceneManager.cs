@@ -27,8 +27,8 @@ public class SceneManager : MonoBehaviourSingleton<SceneManager>
         message = new SceneMessage { sceneName = newSceneName, sceneOperation = SceneOperation.LoadAdditive };
         playerNetIdentity.connectionToClient.Send(message);
         // Then move the player object to the subscene
-        UnityEngine.SceneManagement.SceneManager.MoveGameObjectToScene(playerNetIdentity.gameObject,
-            UnityEngine.SceneManagement.SceneManager.GetSceneByName(newSceneName));
+        //UnityEngine.SceneManagement.SceneManager.MoveGameObjectToScene(playerNetIdentity.gameObject,
+        //    UnityEngine.SceneManagement.SceneManager.GetSceneByName(newSceneName));
         // Reposition Player
         playerNetIdentity.gameObject.transform.position = Vector3.zero;
     }

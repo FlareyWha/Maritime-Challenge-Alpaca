@@ -198,7 +198,7 @@ MonoBehaviour:
   critrate: 0
   critdmg: 0
   movespd: 1
-  targetPosition: {fileID: 3913211141615104091}
+  targetTransform: {fileID: 3913211141615104091}
   spawnPoint: {x: 0, y: 0}
   movementAreaCellWidth: 32
   movementAreaCellHeight: 32

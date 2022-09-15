@@ -7,14 +7,14 @@ public class CannonBall : NetworkBehaviour
 {
 
     private Vector2 velocity = Vector2.zero;
-    private float homing_rate = 2.0f;
+    private float homing_rate = 20.0f;
 
     private float SPEED = 15.0f;
     private float accel_rate = 0.5f;
 
     private Rigidbody2D rb = null;
 
-    private GameObject target = null;
+    private BaseEnemy target = null;
 
     private int damage = 10;
 
@@ -22,7 +22,7 @@ public class CannonBall : NetworkBehaviour
     public void Init(GameObject target)
     {
         rb = GetComponent<Rigidbody2D>();
-        this.target = target;
+        this.target = target.GetComponent<BaseEnemy>();
         velocity = (target.transform.position - transform.position).normalized * SPEED;
     }
 
@@ -44,7 +44,7 @@ public class CannonBall : NetworkBehaviour
             return;
 
         // Update Position
-        Vector2 dis = target.transform.Find("Target Position").position - transform.position;
+        Vector2 dis = target.TargetTransform.position - transform.position;
         Vector2 homingDir = dis.normalized - velocity.normalized;
         velocity += homingDir * homing_rate * Time.deltaTime;
 
@@ -55,11 +55,17 @@ public class CannonBall : NetworkBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Debug.Log("Cannonball Hit Enemy");
+        }
+
         if (!isServer)
             return;
 
         if (collision.gameObject.CompareTag("Enemy"))
         {
+            Debug.Log("Cannonball Hit Enemy");
             BaseEntity enemy = collision.gameObject.GetComponent<BaseEntity>();
             enemy.TakeDamage(10);
             NetworkServer.Destroy(gameObject);

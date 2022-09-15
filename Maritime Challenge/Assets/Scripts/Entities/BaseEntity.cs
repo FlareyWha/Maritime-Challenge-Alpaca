@@ -31,6 +31,9 @@ public class BaseEntity : NetworkBehaviour
 
     private Vector2 spriteSize;
 
+    protected delegate void EntityHPChanged(int oldHP, int newHP);
+    protected event EntityHPChanged OnEntityHPChanged;
+
     public void TakeDamage(int damageAmount)
     {
         hp -= damageAmount;
@@ -47,9 +50,9 @@ public class BaseEntity : NetworkBehaviour
 
     }
 
-    protected virtual void OnHPChanged(int oldHP, int newHP)
+    private void OnHPChanged(int oldHP, int newHP)
     {
-
+        OnEntityHPChanged?.Invoke(oldHP, newHP);
     }
 
 

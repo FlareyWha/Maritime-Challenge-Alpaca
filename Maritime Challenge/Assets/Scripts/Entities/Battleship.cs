@@ -57,7 +57,11 @@ public class Battleship : NetworkBehaviour
     public override void OnStartAuthority()
     {
         Debug.Log("BattleShip: Taken Authority Over BattleShip");
-        ownerPlayer = PlayerData.MyPlayer;
+    }
+
+    public void SetOwner(Player player)
+    {
+        ownerPlayer = player;
     }
 
     [Server]
@@ -206,9 +210,9 @@ public class Battleship : NetworkBehaviour
         SyncShipStatus(true);
     }
 
-    public void SetHP(float perc)
+    public void SetHP(int oldhp, int newhp)
     {
-        HPFill.fillAmount = perc;
+        HPFill.fillAmount = (float)oldhp / newhp;
     }
 
     [Command]

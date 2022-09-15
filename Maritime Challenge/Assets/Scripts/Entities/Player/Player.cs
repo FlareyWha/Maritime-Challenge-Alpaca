@@ -117,6 +117,7 @@ public class Player : BaseEntity
 
         Battleship bs = ship.GetComponent<Battleship>();
         bs.ServerInits();
+        bs.SetOwner(connectionToClient.identity.gameObject.GetComponent<Player>());
 
     }
 
@@ -130,12 +131,7 @@ public class Player : BaseEntity
         playerUI.OpenInteractPanel();
     }
 
-    protected override void OnHPChanged(int oldHP, int newHP)
-    {
-        LinkedBattleship.SetHP((float)newHP / maxHp);
-        Debug.Log("PLAYER HP CHANGED");
-    }
-
+ 
     public void SummonBattleShip(Dock dock)
     {
         if (LinkedBattleship == null)
@@ -199,9 +195,13 @@ public class Player : BaseEntity
         }
 
         LinkedBattleship = newGO.GetComponent<Battleship>();
+        LinkedBattleship.SetOwner(this);
         LinkedBattleshipGO.SetActive(false);
         if (isLocalPlayer)
+        {
             LinkedBattleship.InitShip(username);
+            OnEntityHPChanged += LinkedBattleship.SetHP;
+        }
     }
 
     // ================= GETTERS =====================

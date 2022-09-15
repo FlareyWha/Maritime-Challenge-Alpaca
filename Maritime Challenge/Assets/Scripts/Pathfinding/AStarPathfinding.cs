@@ -72,7 +72,7 @@ public class AStarPathfinding : MonoBehaviourSingleton<AStarPathfinding>
 
         while (openList.Count > 0)
         {
-            Debug.LogWarning(openList.Count);
+            //Debug.LogWarning(openList.Count);
 
             //Get the node with the lowest F cost
             currentNode = GetLowestFCostNode(openList);

@@ -16,10 +16,10 @@ public class BaseEnemy : BaseEntity
 {
     protected Rigidbody2D rb;
     [SerializeField]
-    protected Transform targetPosition;
-    public Transform TargetPosition
+    protected Transform targetTransform;
+    public Transform TargetTransform
     {
-        get { return targetPosition; }
+        get { return targetTransform; }
         private set { }
     }
 
@@ -81,11 +81,12 @@ public class BaseEnemy : BaseEntity
     {
         base.InitSpriteSize();
         rb = GetComponent<Rigidbody2D>();
+        OnEntityHPChanged += OnHPChanged;
 
         if (!isServer)
             return;
 
-        Debug.Log("Enemy Start Called");
+       // Debug.Log("Enemy Start Called");
 
         Grid grid = GameObject.Find("Grid").GetComponent<Grid>();
 
@@ -169,14 +170,14 @@ public class BaseEnemy : BaseEntity
             GetPatrolDestination();
             ResetTimer(maxPatrolTime);
             
-            Debug.Log("Enemy patrolling");
+            //Debug.Log("Enemy patrolling");
         }
         else if (distanceToPlayer <= detectionDistance)
         {
             currEnemyState = ENEMY_STATES.CHASE;
             ResetTimer(maxChaseTime);
 
-            Debug.Log("Enemy spotted player");
+            //Debug.Log("Enemy spotted player");
         }
     }
 
@@ -187,14 +188,14 @@ public class BaseEnemy : BaseEntity
             currEnemyState = ENEMY_STATES.IDLE;
             ResetTimer(maxIdleTime);
 
-            Debug.Log("Enemy resting");
+            //Debug.Log("Enemy resting");
         }
         else if (distanceToPlayer <= detectionDistance)
         {
             currEnemyState = ENEMY_STATES.CHASE;
             ResetTimer(maxChaseTime);
 
-            Debug.Log("Enemy spotted player");
+            //Debug.Log("Enemy spotted player");
         }
 
         PatrolMovement();
@@ -347,9 +348,9 @@ public class BaseEnemy : BaseEntity
         }
         return false;
     }
-    protected override void OnHPChanged(int oldHP, int newHP)
+    private void OnHPChanged(int oldHP, int newHP)
     {
-        Debug.Log("PLAYER HP CHANGED");
+        //Debug.Log("PLAYER HP CHANGED");
         HPFill.fillAmount = (float)newHP / maxHp;
     }
     public override void OnEntityClicked()
