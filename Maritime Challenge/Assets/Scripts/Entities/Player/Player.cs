@@ -130,6 +130,11 @@ public class Player : BaseEntity
         playerUI.OpenInteractPanel();
     }
 
+    protected override void OnHPChanged(int oldHP, int newHP)
+    {
+        LinkedBattleship.SetHP((float)newHP / maxHp);
+    }
+
     public void SummonBattleShip(Dock dock)
     {
         if (LinkedBattleship == null)

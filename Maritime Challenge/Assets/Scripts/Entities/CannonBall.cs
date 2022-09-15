@@ -16,6 +16,8 @@ public class CannonBall : NetworkBehaviour
 
     private GameObject target = null;
 
+    private int damage = 10;
+
     [Server]
     public void Init(GameObject target)
     {
@@ -58,6 +60,8 @@ public class CannonBall : NetworkBehaviour
 
         if (collision.gameObject.CompareTag("Enemy"))
         {
+            BaseEntity enemy = collision.gameObject.GetComponent<BaseEntity>();
+            enemy.TakeDamage(10);
             NetworkServer.Destroy(gameObject);
         }
     }

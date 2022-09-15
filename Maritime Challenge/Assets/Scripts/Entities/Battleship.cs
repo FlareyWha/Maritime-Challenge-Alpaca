@@ -17,6 +17,8 @@ public class Battleship : NetworkBehaviour
     [SerializeField]
     private Image OwnerNameBG;
     [SerializeField]
+    private Image HPFill;
+    [SerializeField]
     private Sprite UpwardSprite, DownwardSprite, LeftSprite, RightSprite;
     private SHIPFACING currFacing, prevFacing;
 
@@ -204,6 +206,11 @@ public class Battleship : NetworkBehaviour
         SyncShipStatus(true);
     }
 
+    public void SetHP(float perc)
+    {
+        HPFill.fillAmount = perc;
+    }
+
     [Command]
     private void SyncShipStatus(bool show)
     {
@@ -256,6 +263,11 @@ public class Battleship : NetworkBehaviour
                 shipSprite.sprite = DownwardSprite;
                 break;
         }
+    }
+
+    public Player GetOwner()
+    {
+        return ownerPlayer;
     }
 
 }

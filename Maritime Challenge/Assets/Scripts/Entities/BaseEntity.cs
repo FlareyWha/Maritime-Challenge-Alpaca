@@ -31,7 +31,7 @@ public class BaseEntity : NetworkBehaviour
 
     private Vector2 spriteSize;
 
-    protected void TakeDamage(int damageAmount)
+    public void TakeDamage(int damageAmount)
     {
         hp -= damageAmount;
 
