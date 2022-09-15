@@ -44,7 +44,6 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 2800000, guid: a2fb1e544a39cef488c1b70c59f9ec24, type: 3}
-    - {fileID: 21300000, guid: 273f896dc5fe03548a929c479c87285b, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -63,7 +62,6 @@ SpriteAtlas:
   - {fileID: 1144152149369700641, guid: a2fb1e544a39cef488c1b70c59f9ec24, type: 3}
   - {fileID: 6953417517128577867, guid: a2fb1e544a39cef488c1b70c59f9ec24, type: 3}
   - {fileID: -7845767186677109439, guid: a2fb1e544a39cef488c1b70c59f9ec24, type: 3}
-  - {fileID: 21300000, guid: 273f896dc5fe03548a929c479c87285b, type: 3}
   m_PackedSpriteNamesToIndex:
   - CityTileset_12
   - CityTileset_10
@@ -78,7 +76,6 @@ SpriteAtlas:
   - CityTileset_4
   - CityTileset_9
   - CityTileset_8
-  - WipHubTileset
   m_RenderDataMap: {}
   m_Tag: SpriteAtlas
   m_IsVariant: 0

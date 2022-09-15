@@ -3,14 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
 
-public class Server : MonoBehaviour
+public class Server : Mirror.Examples.MultipleAdditiveScenes.MultiSceneNetManager
 {
-    NetworkManager manager;
-
-    void Start()
+    public override void Start()
     {
-        manager = GetComponent<NetworkManager>();
-        manager.StartServer();
+        StartServer();
     }
 
 }

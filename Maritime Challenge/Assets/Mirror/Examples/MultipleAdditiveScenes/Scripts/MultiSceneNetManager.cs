@@ -13,15 +13,17 @@ namespace Mirror.Examples.MultipleAdditiveScenes
     [AddComponentMenu("")]
     public class MultiSceneNetManager : NetworkManager
     {
-        [Header("Spawner Setup")]
-        [Tooltip("Reward Prefab for the Spawner")]
-        public GameObject rewardPrefab;
+        //[Header("Spawner Setup")]
+        //[Tooltip("Reward Prefab for the Spawner")]
+        //public GameObject rewardPrefab;
 
         [Header("MultiScene Setup")]
         public int instances = 3;
 
         [Scene]
         public string gameScene;
+        [SerializeField]
+        private int startingSubSceneIndex = 1;
 
         // This is set true after server loads all subscene instances
         bool subscenesLoaded;
@@ -92,13 +94,13 @@ namespace Mirror.Examples.MultipleAdditiveScenes
         // If instances is zero, the loop is bypassed entirely.
         IEnumerator ServerLoadSubScenes()
         {
-            for (int index = 1; index <= instances; index++)
+            for (int index = startingSubSceneIndex; index <= instances; index++)
             {
                 yield return SceneManager.LoadSceneAsync(gameScene, new LoadSceneParameters { loadSceneMode = LoadSceneMode.Additive, localPhysicsMode = LocalPhysicsMode.Physics3D });
 
                 Scene newScene = SceneManager.GetSceneAt(index);
                 subScenes.Add(newScene);
-                Spawner.InitialSpawn(newScene);
+                //Spawner.InitialSpawn(newScene);
             }
 
             subscenesLoaded = true;

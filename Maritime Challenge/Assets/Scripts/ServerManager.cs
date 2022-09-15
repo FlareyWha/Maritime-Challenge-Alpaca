@@ -4,7 +4,7 @@ using UnityEngine;
 using Mirror;
 using UnityEngine.Networking;
 
-public class ServerManager : NetworkManager
+public class ServerManager : Mirror.Examples.MultipleAdditiveScenes.MultiSceneNetManager
 {
     #region Singleton
     public static ServerManager Instance = null;

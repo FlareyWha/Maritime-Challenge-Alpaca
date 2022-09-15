@@ -43,10 +43,7 @@ public class Player : BaseEntity
     }
 
     public override void OnStartLocalPlayer()
-
     {
-        // Init Player to SpawnPos
-
         // Set My Player
         PlayerData.MyPlayer = this;
         // Init Synced Player Vars
@@ -61,6 +58,8 @@ public class Player : BaseEntity
 
         //DontDestroyOnLoad(this);
         //transform.position = new Vector3(-10, -10, 0);
+
+        gameObject.GetComponent<PlayerCommands>().RequestEnterScene("WorldHubScene");
     }
 
 

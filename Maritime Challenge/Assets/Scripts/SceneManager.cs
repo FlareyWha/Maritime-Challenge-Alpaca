@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using Mirror;
 
 public class SceneManager : MonoBehaviourSingleton<SceneManager>
 {
- 
+
 
     public void LoadScene(string name)
     {
@@ -17,11 +17,19 @@ public class SceneManager : MonoBehaviourSingleton<SceneManager>
         UnityEngine.SceneManagement.SceneManager.LoadScene((int)id);
     }
 
-    // TEST
-    public void EnterNetworkedScene(string sceneName)
+    [Server]
+    public void EnterNetworkedSubScene(NetworkIdentity playerNetIdentity, string sceneName)
     {
-        PlayerData.CommandsHandler.EnterScene(PlayerData.MyPlayer.gameObject, sceneName);
+        SceneMessage message = new SceneMessage { sceneName = sceneName, sceneOperation = SceneOperation.LoadAdditive };
+        playerNetIdentity.connectionToClient.Send(message);
     }
+
+    //TEST-FOR INSPECTER
+    public void RequestEnterScene(string sceneName)
+    {
+        PlayerData.CommandsHandler.RequestEnterScene(sceneName);
+    }
+
 
 }
 
@@ -29,8 +37,11 @@ public enum SCENE_ID
 {
     SPLASH = 0,
     LOGIN = 1,
-    HOME = 2,
-    CAFE = 3,
+    // MAIN EMPTY SCENE
+    MAIN_EMPTY = 2,
+    // SUB SCENE START
+    HOME = 3,
+    CAFE,
 
     NUM_TOTAL
 }

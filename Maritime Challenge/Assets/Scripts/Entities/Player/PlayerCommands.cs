@@ -167,20 +167,10 @@ public class PlayerCommands : NetworkBehaviour
         }
     }
 
-
     [Command]
-    public void EnterScene(GameObject player, string sceneName)
+    public void RequestEnterScene(string sceneName)
     {
-        NetworkIdentity networkIdentity = player.gameObject.GetComponent<NetworkIdentity>();
-        SceneMessage message = new SceneMessage { sceneName = sceneName, sceneOperation = SceneOperation.LoadAdditive };
-        networkIdentity.connectionToClient.Send(message);
-        OnPlayerShifted(player, sceneName);
-    }
-
-    [ClientRpc]
-    public void OnPlayerShifted(GameObject player, string sceneName)
-    {
-      
+        SceneManager.Instance.EnterNetworkedSubScene(netIdentity, sceneName);
     }
 
 }
