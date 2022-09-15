@@ -18,18 +18,39 @@ public class SceneManager : MonoBehaviourSingleton<SceneManager>
     }
 
     [Server]
-    public void EnterNetworkedSubScene(NetworkIdentity playerNetIdentity, string sceneName)
+    public void EnterNetworkedSubScene(NetworkIdentity playerNetIdentity, string currSceneName, string newSceneName)
     {
-        SceneMessage message = new SceneMessage { sceneName = sceneName, sceneOperation = SceneOperation.LoadAdditive };
+        // Unload Current SubScene
+        SceneMessage message = new SceneMessage { sceneName = currSceneName, sceneOperation = SceneOperation.UnloadAdditive };
         playerNetIdentity.connectionToClient.Send(message);
+        // Load New SubScene
+        message = new SceneMessage { sceneName = newSceneName, sceneOperation = SceneOperation.LoadAdditive };
+        playerNetIdentity.connectionToClient.Send(message);
+        // Then move the player object to the subscene
+        UnityEngine.SceneManagement.SceneManager.MoveGameObjectToScene(playerNetIdentity.gameObject,
+            UnityEngine.SceneManagement.SceneManager.GetSceneByName(newSceneName));
+        // Reposition Player
+        playerNetIdentity.gameObject.transform.position = Vector3.zero;
+    }
+
+    [Server]
+    public void EnterNetworkedScene(NetworkIdentity playerNetIdentity, string newSceneName)
+    {
+        // Load SubScene
+        SceneMessage message = new SceneMessage { sceneName = newSceneName, sceneOperation = SceneOperation.LoadAdditive };
+        playerNetIdentity.connectionToClient.Send(message);
+        // Then move the player object to the subscene
+        UnityEngine.SceneManagement.SceneManager.MoveGameObjectToScene(playerNetIdentity.gameObject,
+            UnityEngine.SceneManagement.SceneManager.GetSceneByName(newSceneName));
+        // Reposition Player
+        playerNetIdentity.gameObject.transform.position = new Vector3(0, 1, 0);
     }
 
     //TEST-FOR INSPECTER
     public void RequestEnterScene(string sceneName)
     {
-        PlayerData.CommandsHandler.RequestEnterScene(sceneName);
+        PlayerData.CommandsHandler.SwitchSubScene(sceneName);
     }
-
 
 }
 
@@ -41,6 +62,20 @@ public enum SCENE_ID
     MAIN_EMPTY = 2,
     // SUB SCENE START
     HOME = 3,
+    CAFE,
+
+    NUM_TOTAL
+}
+
+public enum SERVER_SCENE_ID
+{
+    SERVER = 0,
+    SPLASH,
+    LOGIN,
+    // MAIN EMPTY SCENE
+    MAIN_EMPTY = 3,
+    // SUB SCENE START
+    HOME = 4,
     CAFE,
 
     NUM_TOTAL

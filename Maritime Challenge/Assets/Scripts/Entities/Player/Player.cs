@@ -59,7 +59,9 @@ public class Player : BaseEntity
         //DontDestroyOnLoad(this);
         //transform.position = new Vector3(-10, -10, 0);
 
-        gameObject.GetComponent<PlayerCommands>().RequestEnterScene("WorldHubScene");
+
+        // Load Player into World Hub
+        gameObject.GetComponent<PlayerCommands>().EnterSubScene("WorldHubScene");
     }
 
 

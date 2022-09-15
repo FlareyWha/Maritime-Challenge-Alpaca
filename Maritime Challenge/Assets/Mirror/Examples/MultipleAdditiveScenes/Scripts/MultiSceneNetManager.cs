@@ -22,8 +22,8 @@ namespace Mirror.Examples.MultipleAdditiveScenes
 
         [Scene]
         public string gameScene;
-        [SerializeField]
-        private int startingSubSceneIndex = 1;
+        [Scene]
+        public string[] subScenesList;
 
         // This is set true after server loads all subscene instances
         bool subscenesLoaded;
@@ -62,10 +62,10 @@ namespace Mirror.Examples.MultipleAdditiveScenes
 
             base.OnServerAddPlayer(conn);
 
-            PlayerScore playerScore = conn.identity.GetComponent<PlayerScore>();
-            playerScore.playerNumber = clientIndex;
-            playerScore.scoreIndex = clientIndex / subScenes.Count;
-            playerScore.matchIndex = clientIndex % subScenes.Count;
+            //PlayerScore playerScore = conn.identity.GetComponent<PlayerScore>();
+            //playerScore.playerNumber = clientIndex;
+            //playerScore.scoreIndex = clientIndex / subScenes.Count;
+            //playerScore.matchIndex = clientIndex % subScenes.Count;
 
             // Do this only on server, not on clients
             // This is what allows the NetworkSceneChecker on player and scene objects
@@ -86,6 +86,7 @@ namespace Mirror.Examples.MultipleAdditiveScenes
         /// </summary>
         public override void OnStartServer()
         {
+            Debug.Log("On Start Server Callback Called");
             StartCoroutine(ServerLoadSubScenes());
         }
 
@@ -94,11 +95,11 @@ namespace Mirror.Examples.MultipleAdditiveScenes
         // If instances is zero, the loop is bypassed entirely.
         IEnumerator ServerLoadSubScenes()
         {
-            for (int index = startingSubSceneIndex; index <= instances; index++)
+            for (int index = 0; index < subScenesList.Length; index++)
             {
-                yield return SceneManager.LoadSceneAsync(gameScene, new LoadSceneParameters { loadSceneMode = LoadSceneMode.Additive, localPhysicsMode = LocalPhysicsMode.Physics3D });
+                yield return SceneManager.LoadSceneAsync(subScenesList[index], new LoadSceneParameters { loadSceneMode = LoadSceneMode.Additive, localPhysicsMode = LocalPhysicsMode.Physics2D });
 
-                Scene newScene = SceneManager.GetSceneAt(index);
+                Scene newScene = SceneManager.GetSceneByName(subScenesList[index]);
                 subScenes.Add(newScene);
                 //Spawner.InitialSpawn(newScene);
             }

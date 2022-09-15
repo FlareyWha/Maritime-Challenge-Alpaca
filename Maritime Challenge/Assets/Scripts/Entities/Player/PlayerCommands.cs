@@ -167,10 +167,29 @@ public class PlayerCommands : NetworkBehaviour
         }
     }
 
-    [Command]
-    public void RequestEnterScene(string sceneName)
+    public void SwitchSubScene(string sceneName)
     {
-        SceneManager.Instance.EnterNetworkedSubScene(netIdentity, sceneName);
+        RequestSwitchToSubScene(PlayerData.activeSubScene, sceneName);
+        PlayerData.activeSubScene = sceneName;
+    }
+
+    public void EnterSubScene(string sceneName)
+    {
+        RequestEnterSubScene(sceneName);
+        PlayerData.activeSubScene = sceneName;
+    }
+
+
+    [Command]
+    private void RequestSwitchToSubScene(string currSceneName, string sceneName)
+    {
+        SceneManager.Instance.EnterNetworkedSubScene(netIdentity, currSceneName, sceneName);
+    }
+
+    [Command]
+    private void RequestEnterSubScene(string sceneName)
+    {
+        SceneManager.Instance.EnterNetworkedScene(netIdentity, sceneName);
     }
 
 }

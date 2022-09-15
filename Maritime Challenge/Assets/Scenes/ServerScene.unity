@@ -427,6 +427,7 @@ GameObject:
   - component: {fileID: 1318416893}
   - component: {fileID: 1318416896}
   - component: {fileID: 1318416894}
+  - component: {fileID: 1318416895}
   m_Layer: 0
   m_Name: NetworkManager
   m_TagString: Untagged
@@ -477,6 +478,18 @@ MonoBehaviour:
   debugLog: 0
   statisticsGUI: 0
   statisticsLog: 0
+--- !u!114 &1318416895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318416892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b979f26c95d34324ba005bfacfa9c4fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1318416896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -508,7 +521,9 @@ MonoBehaviour:
   - {fileID: 3171479867457677337, guid: 3b6c88c2f2545ee41812db2a9d27ea86, type: 3}
   instances: 2
   gameScene: Assets/Scenes/MainScene.unity
-  startingSubSceneIndex: 4
+  subScenesList:
+  - Assets/Scenes/WorldScenes/CafeScene.unity
+  - Assets/Scenes/WorldScenes/WorldHubScene.unity
 --- !u!1 &1438128726
 GameObject:
   m_ObjectHideFlags: 0
