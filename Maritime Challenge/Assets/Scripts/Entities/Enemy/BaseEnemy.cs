@@ -37,6 +37,8 @@ public class BaseEnemy : BaseEntity
     protected float maxSpotTime = 1f;
     [SerializeField]
     protected float maxChaseTime = 5f;
+    [SerializeField]
+    protected float attackDistance = 2f;
 
     protected float timer;
     protected float maxTimer;
@@ -194,6 +196,10 @@ public class BaseEnemy : BaseEntity
             currEnemyState = ENEMY_STATES.IDLE;
             ResetTimer(maxIdleTime);
         }
+        else if (distanceToPlayer < attackDistance)
+        {
+            currEnemyState = ENEMY_STATES.ATTACK;
+        }
 
         ChaseMovement();
     }
@@ -201,6 +207,10 @@ public class BaseEnemy : BaseEntity
     protected virtual void HandleAttack()
     {
         //Choose an attack and play its animation or something, once done go into cooldown or go back to chase i suppose
+        currentTargetPlayer.GetOwner().TakeDamage(10);
+
+        currEnemyState = ENEMY_STATES.IDLE;
+        ResetTimer(maxIdleTime);
     }
 
     protected void FindPlayerToTarget()
