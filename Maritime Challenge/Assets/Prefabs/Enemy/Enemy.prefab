@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &422631374047782895
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6769939372035517399}
+  m_Layer: 6
+  m_Name: Target Position
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6769939372035517399
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 422631374047782895}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.18, y: -1.74, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2042507932746732114}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2042507932746732076
 GameObject:
   m_ObjectHideFlags: 0
@@ -34,6 +64,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 651338178707676300}
+  - {fileID: 6769939372035517399}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -197,18 +228,15 @@ MonoBehaviour:
   critrate: 0
   critdmg: 0
   movespd: 2
-  spawnPoint: {x: -10, y: -10}
+  spawnPoint: {x: 0, y: -100}
   movementAreaCellWidth: 20
   movementAreaCellHeight: 20
   detectionDistance: 10
-  findPlayerDistance: 1000
+  findPlayerDistance: 20
   maxIdleTime: 5
   maxPatrolTime: 10
   maxSpotTime: 1
   maxChaseTime: 5
-  playerLayerMask:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!1 &2106921298954242604
 GameObject:
   m_ObjectHideFlags: 0

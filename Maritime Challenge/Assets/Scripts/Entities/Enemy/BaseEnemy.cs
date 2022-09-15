@@ -17,14 +17,12 @@ public class BaseEnemy : BaseEntity
 
     [SerializeField]
     protected Vector2 spawnPoint;
-    protected float distanceToSpawnPoint;
     [SerializeField]
     protected int movementAreaCellWidth, movementAreaCellHeight;
     protected Vector2 movementAreaLowerLimit, movementAreaUpperLimit;
     protected Vector3Int gridMovementAreaLowerLimit, gridMovementAreaUpperLimit;
 
-    protected Player currentTargetPlayer;
-    protected Vector2 directionToPlayer;
+    protected Battleship currentTargetPlayer;
     protected float distanceToPlayer = int.MaxValue;
     [SerializeField]
     protected float detectionDistance = 10f;
@@ -50,10 +48,7 @@ public class BaseEnemy : BaseEntity
     protected Vector2 currentMovementDirection;
     protected int pathIncrement;
 
-    [SerializeField]
-    protected LayerMask playerLayerMask;
-
-    private void OnDrawGizmos()
+    protected void OnDrawGizmos()
     {
         //Draw something to visualize the box area
         Gizmos.color = Color.green;
@@ -194,8 +189,6 @@ public class BaseEnemy : BaseEntity
 
     protected virtual void HandleChase()
     {
-        distanceToSpawnPoint = Vector3.Distance(spawnPoint, transform.position);
-
         if (timer >= maxTimer || CheckOutOfBounds() || distanceToPlayer > detectionDistance)
         {
             currEnemyState = ENEMY_STATES.IDLE;
@@ -228,12 +221,7 @@ public class BaseEnemy : BaseEntity
         GameObject[] playersToChooseFrom = GameObject.FindGameObjectsWithTag("Player");
 
         if (playersToChooseFrom.Length > 0)
-            currentTargetPlayer = playersToChooseFrom[Random.Range(0, playersToChooseFrom.Length)].GetComponent<Player>();
-    }
-
-    protected void GetDirectionToPlayer()
-    {
-        directionToPlayer = currentTargetPlayer.transform.position - transform.position;
+            currentTargetPlayer = playersToChooseFrom[Random.Range(0, playersToChooseFrom.Length)].GetComponent<Battleship>();
     }
 
     protected void ResetTimer(float newMaxTimer)
