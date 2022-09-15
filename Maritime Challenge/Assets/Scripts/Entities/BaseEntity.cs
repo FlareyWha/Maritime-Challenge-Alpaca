@@ -35,6 +35,8 @@ public class BaseEntity : NetworkBehaviour
     {
         hp -= damageAmount;
 
+        Debug.Log("DAMAGE TAKEN");
+
         //Call required stuff if entity dies 
         if (hp <= 0)
             HandleDeath();

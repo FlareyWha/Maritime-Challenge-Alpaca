@@ -133,6 +133,7 @@ public class Player : BaseEntity
     protected override void OnHPChanged(int oldHP, int newHP)
     {
         LinkedBattleship.SetHP((float)newHP / maxHp);
+        Debug.Log("PLAYER HP CHANGED");
     }
 
     public void SummonBattleShip(Dock dock)

@@ -44,7 +44,7 @@ public class CannonBall : NetworkBehaviour
             return;
 
         // Update Position
-        Vector2 dis = target.transform.position - transform.position;
+        Vector2 dis = target.transform.Find("Target Position").position - transform.position;
         Vector2 homingDir = dis.normalized - velocity.normalized;
         velocity += homingDir * homing_rate * Time.deltaTime;
 

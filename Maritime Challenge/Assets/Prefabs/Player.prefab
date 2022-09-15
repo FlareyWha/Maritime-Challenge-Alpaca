@@ -1080,8 +1080,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  hp: 0
-  maxHp: 0
+  hp: 100
+  maxHp: 100
   atk: 0
   atkspd: 0
   critrate: 0

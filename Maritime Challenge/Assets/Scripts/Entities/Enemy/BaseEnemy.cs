@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Mirror;
 
 public enum ENEMY_STATES
@@ -39,6 +40,9 @@ public class BaseEnemy : BaseEntity
     protected float maxChaseTime = 5f;
     [SerializeField]
     protected float attackDistance = 2f;
+
+    [SerializeField]
+    private Image HPFill;
 
     protected float timer;
     protected float maxTimer;
@@ -334,10 +338,13 @@ public class BaseEnemy : BaseEntity
         {
             return true;
         }
-
         return false;
     }
-
+    protected override void OnHPChanged(int oldHP, int newHP)
+    {
+        Debug.Log("PLAYER HP CHANGED");
+        HPFill.fillAmount = (float)newHP / maxHp;
+    }
     public override void OnEntityClicked()
     {
         PlayerData.MyPlayer.GetBattleShip().SetTarget(this);
