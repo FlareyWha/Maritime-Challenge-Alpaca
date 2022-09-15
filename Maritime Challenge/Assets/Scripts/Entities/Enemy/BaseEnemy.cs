@@ -353,6 +353,8 @@ public class BaseEnemy : BaseEntity
         //Debug.Log("PLAYER HP CHANGED");
         HPFill.fillAmount = (float)newHP / maxHp;
     }
+
+    [Client]
     public override void OnEntityClicked()
     {
         PlayerData.MyPlayer.GetBattleShip().SetTarget(this);

@@ -162,17 +162,20 @@ public class Battleship : NetworkBehaviour
 
     private void FireCannon()
     {
-        LaunchCannonBall(currTarget.gameObject);
+        LaunchCannonBall(currTarget.gameObject, PlayerData.activeSubScene);
     }
 
     [Command]
-    private void LaunchCannonBall(GameObject target)
+    private void LaunchCannonBall(GameObject target, string currSceneName)
     {
         GameObject ball = Instantiate(CannonBallPrefab, transform.position, Quaternion.identity);
         NetworkServer.Spawn(ball);
 
         CannonBall cannonBall = ball.GetComponent<CannonBall>();
         cannonBall.Init(target);
+
+        UnityEngine.SceneManagement.SceneManager.MoveGameObjectToScene(ball,
+            UnityEngine.SceneManagement.SceneManager.GetSceneByName(currSceneName));
     }
 
     public bool SetTarget(BaseEnemy enemy)
