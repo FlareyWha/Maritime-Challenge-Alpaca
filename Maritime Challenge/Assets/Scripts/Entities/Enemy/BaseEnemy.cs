@@ -15,6 +15,13 @@ public enum ENEMY_STATES
 public class BaseEnemy : BaseEntity
 {
     protected Rigidbody2D rb;
+    [SerializeField]
+    protected Transform targetPosition;
+    public Transform TargetPosition
+    {
+        get { return targetPosition; }
+        private set { }
+    }
 
     [SerializeField]
     protected Vector2 spawnPoint;
