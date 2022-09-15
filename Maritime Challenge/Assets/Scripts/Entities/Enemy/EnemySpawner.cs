@@ -12,6 +12,9 @@ public class EnemySpawner : NetworkBehaviour
     [SerializeField]
     private GameObject enemyPrefab;
 
+    [SerializeField]
+    private GameObject eelBossPrefab;
+
 
     void Start()
     {
