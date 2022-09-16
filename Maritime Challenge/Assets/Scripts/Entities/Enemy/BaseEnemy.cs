@@ -10,6 +10,7 @@ public enum ENEMY_STATES
     PATROL,
     CHASE,
     ATTACK,
+    FREEZE,
     NO_ENEMY_STATE
 }
 public class BaseEnemy : BaseEntity
@@ -45,6 +46,8 @@ public class BaseEnemy : BaseEntity
     protected float maxSpotTime = 1f;
     [SerializeField]
     protected float maxChaseTime = 5f;
+    [SerializeField]
+    protected float maxFreezeTime = 2f;
     [SerializeField]
     protected float attackDistance = 2f;
 
@@ -162,6 +165,9 @@ public class BaseEnemy : BaseEntity
             case ENEMY_STATES.ATTACK:
                 HandleAttack();
                 break;
+            case ENEMY_STATES.FREEZE:
+                HandleFreeze();
+                break;
         }
 
         timer += Time.deltaTime;
@@ -224,10 +230,18 @@ public class BaseEnemy : BaseEntity
 
     protected virtual void HandleAttack()
     {
-
         currentTargetPlayer.GetOwner().TakeDamage(5, gameObject);
-        currEnemyState = ENEMY_STATES.IDLE;
-        ResetTimer(maxIdleTime);
+        currEnemyState = ENEMY_STATES.FREEZE;
+        ResetTimer(maxFreezeTime);
+    }
+
+    protected virtual void HandleFreeze()
+    {
+        if (timer >= maxTimer)
+        {
+            currEnemyState = ENEMY_STATES.IDLE;
+            ResetTimer(maxIdleTime);
+        }
     }
 
     protected void FindPlayerToTarget()

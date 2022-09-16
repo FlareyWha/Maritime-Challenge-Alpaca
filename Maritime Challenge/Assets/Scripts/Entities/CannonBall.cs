@@ -7,7 +7,7 @@ public class CannonBall : NetworkBehaviour
 {
 
     private Vector2 velocity = Vector2.zero;
-    private float homing_rate = 50.0f;
+    private float homing_rate = 30.0f;
 
     private float SPEED = 15.0f;
     private float accel_rate = 0.5f;
