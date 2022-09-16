@@ -5,7 +5,7 @@ using UnityEngine.Networking;
 using UnityEngine.UI;
 using Mirror;
 
-public class PlayerUI : BaseEntity
+public class PlayerUI : NetworkBehaviour
 {
  
     [SerializeField]

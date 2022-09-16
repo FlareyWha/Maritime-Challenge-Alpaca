@@ -83,7 +83,7 @@ public class Battleship : NetworkBehaviour
         OwnerNameText.text = ownerName;
         UIManager.SetWidthByTextWidth(OwnerNameBG.gameObject, OwnerNameText);
     }
-   
+
 
     void Update()
     {
@@ -98,7 +98,7 @@ public class Battleship : NetworkBehaviour
             velocity += accel * accel_rate * Time.deltaTime;
         }
         // Stop Ship if coming to a stop  (curr dir diff from last accel dir) - so it doesn't go backwards from deccel
-        if (velocity.magnitude != 0 && 
+        if (velocity.magnitude != 0 &&
             Vector2.Dot(accel, velocity) < 0)
         {
             velocity = Vector2.zero;
@@ -134,14 +134,17 @@ public class Battleship : NetworkBehaviour
         if (prevFacing != currFacing)
             SyncShipSprite((int)currFacing);
 
+
+
         // Update Ship Attack
         if (currTarget != null)
-        {
+        {   
             // Check for Stop Attack when out of range
             Vector3 dis = currTarget.transform.position - transform.position;
             dis.z = 0;
             if (dis.magnitude > TARGET_RANGE)
             {
+                currTarget.OnEntityDied -= OnTargetDiedCallback;
                 currTarget = null;
                 UpdateSelectedTargetUI();
             }
@@ -192,6 +195,12 @@ public class Battleship : NetworkBehaviour
             UnityEngine.SceneManagement.SceneManager.GetSceneByName(currSceneName));
     }
 
+    private void OnTargetDiedCallback()
+    {
+        currTarget = null;
+        UpdateSelectedTargetUI();
+    }
+
     public bool SetTarget(BaseEnemy enemy)
     {
         if (currTarget == enemy)
@@ -201,14 +210,13 @@ public class Battleship : NetworkBehaviour
             return false;
         }
 
-        Debug.Log("Set Target To: " + enemy.name);
-
         Vector3 dis = enemy.transform.position - transform.position;
         dis.z = 0;
         if (dis.magnitude > TARGET_RANGE)
             return false;
 
         currTarget = enemy;
+        currTarget.OnEntityDied += OnTargetDiedCallback;
         UpdateSelectedTargetUI();
 
         fire_timer = 0.0f;
@@ -234,7 +242,7 @@ public class Battleship : NetworkBehaviour
 
     public void SetHP(int oldhp, int newhp)
     {
-        HPFill.fillAmount = (float)oldhp / newhp;
+        HPFill.fillAmount = (float)newhp / ownerPlayer.GetMaxHP();
     }
 
     [Command]

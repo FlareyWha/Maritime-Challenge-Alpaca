@@ -31,6 +31,9 @@ public class BaseEntity : NetworkBehaviour
 
     private Vector2 spriteSize;
 
+    public delegate void EntityDied();
+    public event EntityDied OnEntityDied;
+
     protected delegate void EntityHPChanged(int oldHP, int newHP);
     protected event EntityHPChanged OnEntityHPChanged;
 
@@ -41,7 +44,10 @@ public class BaseEntity : NetworkBehaviour
         Debug.Log("Take Damage Called, " + attacker.name + " dealt " + damageAmount);
         //Call required stuff if entity dies 
         if (hp <= 0)
+        {
+            InvokeOnEntityDied();
             HandleDeath();
+        }
 
         OnDamageDealtOrTaken(damageAmount, false, attacker);
     }
@@ -54,9 +60,14 @@ public class BaseEntity : NetworkBehaviour
             PopUpManager.Instance.AddHPChangeText(hp_amt, !dealt, this.transform);
     }
 
+
+    [ClientRpc]
+    private void InvokeOnEntityDied()
+    {
+        OnEntityDied?.Invoke();
+    }
     protected virtual void HandleDeath()
     {
-
     }
 
     private void OnHPChanged(int oldHP, int newHP)
@@ -111,5 +122,10 @@ public class BaseEntity : NetworkBehaviour
     public float GetSpriteSizeMax()
     {
         return spriteSize.x > spriteSize.y ? spriteSize.x : spriteSize.y;
+    }
+
+    public int GetMaxHP()
+    {
+        return maxHp;
     }
 }

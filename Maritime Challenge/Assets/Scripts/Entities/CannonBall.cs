@@ -7,7 +7,7 @@ public class CannonBall : NetworkBehaviour
 {
 
     private Vector2 velocity = Vector2.zero;
-    private float homing_rate = 20.0f;
+    private float homing_rate = 50.0f;
 
     private float SPEED = 15.0f;
     private float accel_rate = 0.5f;
@@ -26,6 +26,8 @@ public class CannonBall : NetworkBehaviour
         this.target = target.GetComponent<BaseEnemy>();
         this.ownerPlayer = owner;
         velocity = (target.transform.position - transform.position).normalized * SPEED;
+
+        target.GetComponent<BaseEntity>().OnEntityDied += OnTargetDiedCallback;
     }
 
     private void FixedUpdate()
@@ -46,13 +48,21 @@ public class CannonBall : NetworkBehaviour
             return;
 
         // Update Position
-        Vector2 dis = target.TargetTransform.position - transform.position;
-        Vector2 homingDir = dis.normalized - velocity.normalized;
-        velocity += homingDir * homing_rate * Time.deltaTime;
+        if (target != null)
+        {
+            Vector2 dis = target.TargetTransform.position - transform.position;
+            Vector2 homingDir = dis.normalized - velocity.normalized;
+            velocity += homingDir * homing_rate * Time.deltaTime;
+        }
 
         SPEED += accel_rate * Time.deltaTime;
         rb.position += velocity.normalized * SPEED * Time.deltaTime;
 
+    }
+
+    private void OnTargetDiedCallback()
+    {
+        target = null;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

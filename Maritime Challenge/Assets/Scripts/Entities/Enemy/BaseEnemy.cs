@@ -48,6 +48,8 @@ public class BaseEnemy : BaseEntity
     [SerializeField]
     protected float attackDistance = 2f;
 
+    private float attack_interval = 1.0f;
+
     [SerializeField]
     private Image HPFill;
 
@@ -141,7 +143,10 @@ public class BaseEnemy : BaseEntity
             }
         }
         else
+        {
             FindPlayerToTarget();
+            return;
+        }
 
         switch (currEnemyState)
         {
@@ -211,6 +216,7 @@ public class BaseEnemy : BaseEntity
         else if (distanceToPlayer < attackDistance + currentTargetPlayer.GetOwner().GetSpriteRadius())
         {
             currEnemyState = ENEMY_STATES.ATTACK;
+            timer = 0.5f * attack_interval;
         }
 
         ChaseMovement();
@@ -218,9 +224,8 @@ public class BaseEnemy : BaseEntity
 
     protected virtual void HandleAttack()
     {
-        //Choose an attack and play its animation or something, once done go into cooldown or go back to chase i suppose
-        currentTargetPlayer.GetOwner().TakeDamage(5, gameObject);
 
+        currentTargetPlayer.GetOwner().TakeDamage(5, gameObject);
         currEnemyState = ENEMY_STATES.IDLE;
         ResetTimer(maxIdleTime);
     }
