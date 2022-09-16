@@ -118,7 +118,7 @@ public class Player : BaseEntity
         Battleship bs = ship.GetComponent<Battleship>();
         bs.ServerInits();
         bs.SetOwner(connectionToClient.identity.gameObject.GetComponent<Player>());
-
+       
     }
 
     private void Update()

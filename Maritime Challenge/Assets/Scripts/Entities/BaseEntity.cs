@@ -56,8 +56,10 @@ public class BaseEntity : NetworkBehaviour
     private void OnDamageDealtOrTaken(int hp_amt, bool dealt, GameObject attacker) 
     {
         Debug.Log("OnDamageDealtOrTakenCalled Callback from Rpc Called");
-        if (attacker == PlayerData.MyPlayer.gameObject || this.gameObject == PlayerData.MyPlayer.gameObject)
+        if (attacker == PlayerData.MyPlayer.gameObject)
             PopUpManager.Instance.AddHPChangeText(hp_amt, !dealt, this.transform);
+        else if (this.gameObject == PlayerData.MyPlayer.gameObject)
+            PopUpManager.Instance.AddHPChangeText(hp_amt, !dealt, gameObject.GetComponent<Player>().GetBattleShip().transform);
     }
 
 

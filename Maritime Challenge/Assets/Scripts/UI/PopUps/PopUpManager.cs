@@ -21,7 +21,8 @@ public class PopUpManager : MonoBehaviourSingleton<PopUpManager>
         popup_go.transform.lossyScale.Set(1, 1, 1);
 
         HPPopUp hpPopUp = popup_go.GetComponent<HPPopUp>();
-        hpPopUp.Init(amt, isNegative, entityTransform.gameObject == PlayerData.MyPlayer.gameObject);
+        hpPopUp.Init(amt, isNegative, entityTransform.gameObject == PlayerData.MyPlayer.gameObject 
+            || entityTransform.gameObject == PlayerData.MyPlayer.GetBattleShip().gameObject);
         popUpList.Add(hpPopUp);
     }
 
