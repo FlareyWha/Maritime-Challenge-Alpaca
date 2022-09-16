@@ -46,13 +46,7 @@ public class Interactable : MonoBehaviour
 
         if (collision.gameObject == myPlayer.gameObject || collision.gameObject == myPlayer.GetBattleShip().gameObject)
         {
-            if (PlayerInteract.InRangeList.Count == 0)
-            {
-                // Enable Interact Button if no others
-                UIManager.Instance.EnableInteractButton(interactMessage);
-            }
-
-            PlayerInteract.InRangeList.Add(this);
+            PlayerInteract.OnEnterInteractable(this);
         }
     }
 
@@ -63,12 +57,12 @@ public class Interactable : MonoBehaviour
 
         if (collision.gameObject == myPlayer.gameObject || collision.gameObject == myPlayer.GetBattleShip().gameObject)
         {
-            PlayerInteract.InRangeList.Remove(this);
-            if (PlayerInteract.InRangeList.Count == 0)
-            {
-                // Disable Interact Button if no others
-                UIManager.Instance.DisableInteractButton();
-            }
+            PlayerInteract.OnLeaveInteractable(this);
         }
+    }
+
+    public string GetInteractMessage()
+    {
+        return interactMessage;
     }
 }

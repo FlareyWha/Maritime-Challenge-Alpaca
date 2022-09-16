@@ -25,7 +25,6 @@ public class Dock : Interactable
 
     public override void Interact()
     {
-        Debug.Log("Dock: Interact function called");
         if (is_docked_here)
             PlayerData.MyPlayer.SummonBattleShip(this);
         else

@@ -169,6 +169,7 @@ public class PlayerCommands : NetworkBehaviour
 
     public void SwitchSubScene(string sceneName)
     {
+        PlayerInteract.ClearInteractables();
         RequestSwitchToSubScene(PlayerData.activeSubScene, sceneName);
         PlayerData.activeSubScene = sceneName;
     }
