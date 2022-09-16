@@ -392,7 +392,6 @@ GameObject:
   - component: {fileID: 1399865151}
   - component: {fileID: 1399865150}
   - component: {fileID: 1399865149}
-  - component: {fileID: 1399865152}
   m_Layer: 0
   m_Name: ConnectionManager
   m_TagString: Untagged
@@ -426,7 +425,7 @@ MonoBehaviour:
   MaximizeSendReceiveBuffersToOSLimit: 1
   ReliableMaxMessageSize: 298449
   UnreliableMaxMessageSize: 1199
-  debugLog: 0
+  debugLog: 1
   statisticsGUI: 0
   statisticsLog: 0
 --- !u!114 &1399865150
@@ -448,7 +447,7 @@ MonoBehaviour:
   offlineScene: Assets/Scenes/LoginScene.unity
   onlineScene: Assets/Scenes/MainScene.unity
   transport: {fileID: 1399865149}
-  networkAddress: proxy.focused.lol
+  networkAddress: localhost
   maxConnections: 100
   authenticator: {fileID: 0}
   playerPrefab: {fileID: 8779834002269100689, guid: 136c5d6d95eb85142a1a751d644afb93, type: 3}
@@ -458,9 +457,6 @@ MonoBehaviour:
   - {fileID: 2042507932746732076, guid: b8ed2059b8897514fa98360bc451be85, type: 3}
   - {fileID: 2042507932746732076, guid: f90545761a549af4b9035749ef8701ba, type: 3}
   - {fileID: 3171479867457677337, guid: 3b6c88c2f2545ee41812db2a9d27ea86, type: 3}
-  instances: 2
-  gameScene: Assets/Scenes/MainScene.unity
-  subScenesList: []
 --- !u!4 &1399865151
 Transform:
   m_ObjectHideFlags: 0
@@ -469,24 +465,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1399865148}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.3862133, y: 0.53861654, z: -7.163799}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1399865152
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1399865148}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b979f26c95d34324ba005bfacfa9c4fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1821652344
 GameObject:
   m_ObjectHideFlags: 0

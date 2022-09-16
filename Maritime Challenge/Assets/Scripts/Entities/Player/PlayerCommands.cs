@@ -175,6 +175,7 @@ public class PlayerCommands : NetworkBehaviour
 
     public void EnterSubScene(string sceneName)
     {
+        Debug.Log("Send request to enter");
         RequestEnterSubScene(sceneName);
         PlayerData.activeSubScene = sceneName;
     }

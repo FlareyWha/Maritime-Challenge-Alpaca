@@ -20,10 +20,10 @@ namespace Mirror.Examples.MultipleAdditiveScenes
         [Header("MultiScene Setup")]
         public int instances = 3;
 
-        [Scene]
-        public string gameScene;
-        [Scene]
-        public string[] subScenesList;
+        [SerializeField]
+        private string gameScene;
+        [SerializeField]
+        private string[] subScenesList;
 
         // This is set true after server loads all subscene instances
         bool subscenesLoaded;
@@ -55,7 +55,7 @@ namespace Mirror.Examples.MultipleAdditiveScenes
                 yield return null;
 
             // Send Scene message to client to additively load the game scene
-            conn.Send(new SceneMessage { sceneName = gameScene, sceneOperation = SceneOperation.LoadAdditive });
+            //conn.Send(new SceneMessage { sceneName = gameScene, sceneOperation = SceneOperation.LoadAdditive });
 
             // Wait for end of frame before adding the player to ensure Scene Message goes first
             yield return new WaitForEndOfFrame();
@@ -65,8 +65,11 @@ namespace Mirror.Examples.MultipleAdditiveScenes
             // Do this only on server, not on clients
             // This is what allows the NetworkSceneChecker on player and scene objects
             // to isolate matches per scene instance on server.
-            if (subScenes.Count > 0)
-                SceneManager.MoveGameObjectToScene(conn.identity.gameObject, SceneManager.GetSceneByName(subScenesList[0]));
+            //if (subScenes.Count > 0)
+            //{
+            //    Scene startScene = SceneManager.GetSceneByName(subScenesList[0]);
+            //    SceneManager.MoveGameObjectToScene(conn.identity.gameObject, SceneManager.GetSceneByName(subScenesList[0]));
+            //}
 
             clientIndex++;
         }
@@ -81,7 +84,6 @@ namespace Mirror.Examples.MultipleAdditiveScenes
         /// </summary>
         public override void OnStartServer()
         {
-            Debug.Log("On Start Server Callback Called");
             StartCoroutine(ServerLoadSubScenes());
         }
 
@@ -90,15 +92,16 @@ namespace Mirror.Examples.MultipleAdditiveScenes
         // If instances is zero, the loop is bypassed entirely.
         IEnumerator ServerLoadSubScenes()
         {
+            while (SceneManager.GetActiveScene().name != gameScene)
+                yield return null;
+
             for (int index = 0; index < subScenesList.Length; index++)
             {
                 yield return SceneManager.LoadSceneAsync(subScenesList[index], new LoadSceneParameters { loadSceneMode = LoadSceneMode.Additive, localPhysicsMode = LocalPhysicsMode.Physics2D });
-
+                Debug.Log("Loaded Async Sub Scene " + subScenesList[index]);
                 Scene newScene = SceneManager.GetSceneByName(subScenesList[index]);
                 subScenes.Add(newScene);
-                //Spawner.InitialSpawn(newScene);
             }
-
             subscenesLoaded = true;
         }
 

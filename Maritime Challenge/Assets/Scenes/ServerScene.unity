@@ -173,7 +173,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 249671574}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.3862133, y: 0.53861654, z: -7.163799}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -520,10 +520,10 @@ MonoBehaviour:
   - {fileID: 2042507932746732076, guid: f90545761a549af4b9035749ef8701ba, type: 3}
   - {fileID: 3171479867457677337, guid: 3b6c88c2f2545ee41812db2a9d27ea86, type: 3}
   instances: 2
-  gameScene: Assets/Scenes/MainScene.unity
+  gameScene: MainScene
   subScenesList:
-  - Assets/Scenes/WorldScenes/CafeScene.unity
-  - Assets/Scenes/WorldScenes/WorldHubScene.unity
+  - WorldHubScene
+  - CafeScene
 --- !u!1 &1438128726
 GameObject:
   m_ObjectHideFlags: 0
