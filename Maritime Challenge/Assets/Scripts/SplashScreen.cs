@@ -17,10 +17,10 @@ public class SplashScreen : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector3 currRot = splashImage.transform.rotation.eulerAngles;
-        currRot.z += 200.0f * Time.deltaTime;
-        currRot.z = Mathf.Clamp(currRot.z, 0.0f, 360.0f);
-        splashImage.transform.rotation = Quaternion.Euler(currRot);
+        //Vector3 currRot = splashImage.transform.rotation.eulerAngles;
+        //currRot.z += 200.0f * Time.deltaTime;
+        //currRot.z = Mathf.Clamp(currRot.z, 0.0f, 360.0f);
+        //splashImage.transform.rotation = Quaternion.Euler(currRot);
     }
 
     IEnumerator SplashcreenWait()

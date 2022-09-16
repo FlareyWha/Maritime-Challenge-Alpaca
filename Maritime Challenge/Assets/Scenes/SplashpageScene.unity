@@ -281,7 +281,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1fac70e27d92d6649a96736ac582e393, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7b2d60bdd9ca75c4c82676e0b73efadf, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -460,7 +460,7 @@ MonoBehaviour:
   - {fileID: 3171479867457677337, guid: 3b6c88c2f2545ee41812db2a9d27ea86, type: 3}
   instances: 2
   gameScene: Assets/Scenes/MainScene.unity
-  startingSubSceneIndex: 3
+  subScenesList: []
 --- !u!4 &1399865151
 Transform:
   m_ObjectHideFlags: 0
@@ -504,7 +504,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1821652345
 RectTransform:
   m_ObjectHideFlags: 0
