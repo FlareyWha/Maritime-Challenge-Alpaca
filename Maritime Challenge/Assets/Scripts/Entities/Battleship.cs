@@ -142,10 +142,8 @@ public class Battleship : NetworkBehaviour
             dis.z = 0;
             if (dis.magnitude > TARGET_RANGE)
             {
-                currTarget = null; 
-                selectedTargetUI.transform.position = transform.position + selectedTargetUI.transform.localPosition;
-                selectedTargetUI.transform.SetParent(transform);
-                selectedTargetUI.gameObject.SetActive(false);
+                currTarget = null;
+                UpdateSelectedTargetUI();
             }
 
             // Fire Cannonball
@@ -160,6 +158,22 @@ public class Battleship : NetworkBehaviour
 
     }
 
+    private void UpdateSelectedTargetUI()
+    {
+        if (currTarget == null)
+        {
+            selectedTargetUI.transform.position = transform.position + selectedTargetUI.transform.localPosition;
+            selectedTargetUI.transform.SetParent(transform);
+            selectedTargetUI.gameObject.SetActive(false);
+        }
+        else
+        {
+            selectedTargetUI.transform.position = currTarget.transform.position + selectedTargetUI.transform.localPosition;
+            selectedTargetUI.transform.SetParent(currTarget.transform);
+            selectedTargetUI.gameObject.SetActive(true);
+        }
+    }
+
     private void FireCannon()
     {
         LaunchCannonBall(currTarget.gameObject, PlayerData.activeSubScene);
@@ -172,7 +186,7 @@ public class Battleship : NetworkBehaviour
         NetworkServer.Spawn(ball);
 
         CannonBall cannonBall = ball.GetComponent<CannonBall>();
-        cannonBall.Init(target);
+        cannonBall.Init(target, ownerPlayer);
 
         UnityEngine.SceneManagement.SceneManager.MoveGameObjectToScene(ball,
             UnityEngine.SceneManagement.SceneManager.GetSceneByName(currSceneName));
@@ -180,6 +194,13 @@ public class Battleship : NetworkBehaviour
 
     public bool SetTarget(BaseEnemy enemy)
     {
+        if (currTarget == enemy)
+        {
+            currTarget = null;
+            UpdateSelectedTargetUI();
+            return false;
+        }
+
         Debug.Log("Set Target To: " + enemy.name);
 
         Vector3 dis = enemy.transform.position - transform.position;
@@ -188,9 +209,7 @@ public class Battleship : NetworkBehaviour
             return false;
 
         currTarget = enemy;
-        selectedTargetUI.transform.position = enemy.transform.position + selectedTargetUI.transform.localPosition;
-        selectedTargetUI.transform.SetParent(enemy.transform);
-        selectedTargetUI.gameObject.SetActive(true);
+        UpdateSelectedTargetUI();
 
         fire_timer = 0.0f;
         return true;

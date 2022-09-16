@@ -55,8 +55,7 @@ namespace Mirror.Examples.MultipleAdditiveScenes
                 yield return null;
 
             // Send Scene message to client to additively load the game scene
-            for (int index = 0; index < subScenesList.Length; index++)
-                conn.Send(new SceneMessage { sceneName = subScenesList[index], sceneOperation = SceneOperation.LoadAdditive });
+            conn.Send(new SceneMessage { sceneName = gameScene, sceneOperation = SceneOperation.LoadAdditive });
 
             // Wait for end of frame before adding the player to ensure Scene Message goes first
             yield return new WaitForEndOfFrame();
@@ -66,8 +65,8 @@ namespace Mirror.Examples.MultipleAdditiveScenes
             // Do this only on server, not on clients
             // This is what allows the NetworkSceneChecker on player and scene objects
             // to isolate matches per scene instance on server.
-            //if (subScenes.Count > 0)
-            //    SceneManager.MoveGameObjectToScene(conn.identity.gameObject, subScenes[clientIndex % subScenes.Count]);
+            if (subScenes.Count > 0)
+                SceneManager.MoveGameObjectToScene(conn.identity.gameObject, SceneManager.GetSceneByName(subScenesList[0]));
 
             clientIndex++;
         }

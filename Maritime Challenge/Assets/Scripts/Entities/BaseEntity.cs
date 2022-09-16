@@ -34,15 +34,24 @@ public class BaseEntity : NetworkBehaviour
     protected delegate void EntityHPChanged(int oldHP, int newHP);
     protected event EntityHPChanged OnEntityHPChanged;
 
-    public void TakeDamage(int damageAmount)
+    [Server]
+    public void TakeDamage(int damageAmount, GameObject attacker)
     {
         hp -= damageAmount;
-
-        Debug.Log("DAMAGE TAKEN");
-
+        Debug.Log("Take Damage Called, " + attacker.name + " dealt " + damageAmount);
         //Call required stuff if entity dies 
         if (hp <= 0)
             HandleDeath();
+
+        OnDamageDealtOrTaken(damageAmount, false, attacker);
+    }
+
+    [ClientRpc]
+    private void OnDamageDealtOrTaken(int hp_amt, bool dealt, GameObject attacker) 
+    {
+        Debug.Log("OnDamageDealtOrTakenCalled Callback from Rpc Called");
+        if (attacker == PlayerData.MyPlayer.gameObject || this.gameObject == PlayerData.MyPlayer.gameObject)
+            PopUpManager.Instance.AddHPChangeText(hp_amt, !dealt, this.transform);
     }
 
     protected virtual void HandleDeath()
@@ -55,11 +64,10 @@ public class BaseEntity : NetworkBehaviour
         OnEntityHPChanged?.Invoke(oldHP, newHP);
     }
 
-
     protected void InitSpriteSize()
     {
         // Get Player Sprite Size
-        spriteSize = GetComponent<SpriteRenderer>().bounds.size;
+        spriteSize = GetComponent<SpriteRenderer>().bounds.size * 0.5f;
         float pixelsPerUnit = GetComponent<SpriteRenderer>().sprite.pixelsPerUnit;
 
         spriteSize.x *= pixelsPerUnit;
@@ -71,24 +79,37 @@ public class BaseEntity : NetworkBehaviour
         if (InputManager.InputActions.Main.Tap.WasPressedThisFrame() && IsWithinEntity())
         {
             gameObject.GetComponent<BaseEntity>().OnEntityClicked();
-            Debug.Log("Invoking On Entity Clicked Event");
         }
     }
     public virtual void OnEntityClicked()
     {
-        Debug.Log("Base Entity Clicked Called");
     }
 
     protected bool IsWithinEntity()
     {
         Vector2 touchPos = InputManager.InputActions.Main.TouchPosition.ReadValue<Vector2>();
-        Vector3 playerPos = UIManager.Instance.Camera.GetComponent<Camera>().WorldToScreenPoint(transform.position);
-        if (touchPos.x < playerPos.x + spriteSize.x * 0.5f && touchPos.x > playerPos.x - spriteSize.x * 0.5f
-            && touchPos.y > playerPos.y - spriteSize.y * 0.5f && touchPos.y < playerPos.y + spriteSize.y * 0.5f)
+        Vector3 entityPos = UIManager.Instance.Camera.GetComponent<Camera>().WorldToScreenPoint(transform.position);
+        if (touchPos.x < entityPos.x + spriteSize.x * 0.5f && touchPos.x > entityPos.x - spriteSize.x * 0.5f
+            && touchPos.y > entityPos.y - spriteSize.y * 0.5f && touchPos.y < entityPos.y + spriteSize.y * 0.5f)
         {
             return true;
         }
 
         return false;
+    }
+
+    public Vector2 GetSpriteSize()
+    {
+        return spriteSize;
+    }
+
+    public float GetSpriteRadius()
+    {
+        return (spriteSize.x + spriteSize.y) * 0.5f;
+    }
+
+    public float GetSpriteSizeMax()
+    {
+        return spriteSize.x > spriteSize.y ? spriteSize.x : spriteSize.y;
     }
 }

@@ -295,14 +295,11 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
         // Show Profile Buttons
         ProfilePageButtons.SetActive(true);
     }
-
-  
     public void ToggleJoystick(bool on)
     {
         Joystick.gameObject.SetActive(on);
         Joystick.ResetJoystick();
     }
-
 
     // Returns 'true' if we touched or hovering on Unity UI element.
     public static bool IsPointerOverUIElement()
@@ -332,7 +329,6 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
         EventSystem.current.RaycastAll(eventData, raysastResults);
         return raysastResults;
     }
-
 
     public static void SetWidthByTextWidth(GameObject toChange, Text toRef)
     {

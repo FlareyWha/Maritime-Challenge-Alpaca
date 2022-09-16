@@ -14,15 +14,17 @@ public class CannonBall : NetworkBehaviour
 
     private Rigidbody2D rb = null;
 
+    private Player ownerPlayer = null;
     private BaseEnemy target = null;
 
     private int damage = 10;
 
     [Server]
-    public void Init(GameObject target)
+    public void Init(GameObject target, Player owner)
     {
         rb = GetComponent<Rigidbody2D>();
         this.target = target.GetComponent<BaseEnemy>();
+        this.ownerPlayer = owner;
         velocity = (target.transform.position - transform.position).normalized * SPEED;
     }
 
@@ -67,7 +69,7 @@ public class CannonBall : NetworkBehaviour
         {
             Debug.Log("Cannonball Hit Enemy");
             BaseEntity enemy = collision.gameObject.GetComponent<BaseEntity>();
-            enemy.TakeDamage(10);
+            enemy.TakeDamage(10, ownerPlayer.gameObject);
             NetworkServer.Destroy(gameObject);
         }
     }

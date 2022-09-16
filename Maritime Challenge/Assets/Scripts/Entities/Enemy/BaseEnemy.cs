@@ -208,7 +208,7 @@ public class BaseEnemy : BaseEntity
             currEnemyState = ENEMY_STATES.IDLE;
             ResetTimer(maxIdleTime);
         }
-        else if (distanceToPlayer < attackDistance)
+        else if (distanceToPlayer < attackDistance + currentTargetPlayer.GetOwner().GetSpriteRadius())
         {
             currEnemyState = ENEMY_STATES.ATTACK;
         }
@@ -219,7 +219,7 @@ public class BaseEnemy : BaseEntity
     protected virtual void HandleAttack()
     {
         //Choose an attack and play its animation or something, once done go into cooldown or go back to chase i suppose
-        currentTargetPlayer.GetOwner().TakeDamage(10);
+        currentTargetPlayer.GetOwner().TakeDamage(5, gameObject);
 
         currEnemyState = ENEMY_STATES.IDLE;
         ResetTimer(maxIdleTime);
@@ -352,6 +352,12 @@ public class BaseEnemy : BaseEntity
     {
         //Debug.Log("PLAYER HP CHANGED");
         HPFill.fillAmount = (float)newHP / maxHp;
+    }
+
+    [Server]
+    protected override void HandleDeath()
+    {
+        NetworkServer.Destroy(gameObject);
     }
 
     [Client]

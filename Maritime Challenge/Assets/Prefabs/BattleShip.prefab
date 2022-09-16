@@ -629,7 +629,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &7893541989598244511
 MonoBehaviour:
@@ -757,6 +757,10 @@ PrefabInstance:
     - target: {fileID: 570683647798269212, guid: 210ae76f13fad1343b4f666408a85c25, type: 3}
       propertyPath: m_Name
       value: PlayerIcon
+      objectReference: {fileID: 0}
+    - target: {fileID: 570683647798269212, guid: 210ae76f13fad1343b4f666408a85c25, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2744229280487282483, guid: 210ae76f13fad1343b4f666408a85c25, type: 3}
       propertyPath: m_RootOrder
