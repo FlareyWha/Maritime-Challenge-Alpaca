@@ -283,7 +283,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 7b2d60bdd9ca75c4c82676e0b73efadf, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -448,7 +448,7 @@ MonoBehaviour:
   offlineScene: Assets/Scenes/LoginScene.unity
   onlineScene: Assets/Scenes/MainScene.unity
   transport: {fileID: 1399865149}
-  networkAddress: 127.0.0.1
+  networkAddress: proxy.focused.lol
   maxConnections: 100
   authenticator: {fileID: 0}
   playerPrefab: {fileID: 8779834002269100689, guid: 136c5d6d95eb85142a1a751d644afb93, type: 3}
@@ -722,7 +722,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
