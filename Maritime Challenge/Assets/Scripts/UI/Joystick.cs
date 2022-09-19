@@ -56,6 +56,7 @@ public class Joystick : MonoBehaviour
                 Debug.Log("Joystick Released");
                 isHeld = false;
                 InnerCircle.transform.position = OuterCircle.transform.position;
+                Debug.Log("iNNER POS:" + InnerCircle.transform.position + "  outer shit: " + OuterCircle.transform.position);
                 if (!GameSettings.LOCK_JOYSTICK)
                     HideJoystick();
                 return;
@@ -77,12 +78,13 @@ public class Joystick : MonoBehaviour
     public Vector2 GetDirection()
     {
         Vector2 dis = InnerCircle.transform.position - OuterCircle.transform.position;
-        if (dis.magnitude == 0)
+        if (dis.magnitude <= 0.3)
             return Vector2.zero;
 
-      //  float perc = dis.magnitude / max_delta_radius;
-      //  perc = Mathf.Clamp(perc, 0.0f, 1.0f);
+        //  float perc = dis.magnitude / max_delta_radius;
+        //  perc = Mathf.Clamp(perc, 0.0f, 1.0f);
 
+      
         return dis.normalized; // * perc;
     }
 
