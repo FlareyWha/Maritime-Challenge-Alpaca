@@ -38,7 +38,7 @@ public class Battleship : NetworkBehaviour
 
     private const float TARGET_RANGE = 30.0f;
 
-    private const float FIRE_INTERVAL = 2.0f;
+    private float FIRE_INTERVAL = 2.0f;
     private float fire_timer = 0.0f;
 
     [SerializeField]
@@ -62,6 +62,7 @@ public class Battleship : NetworkBehaviour
     public void SetOwner(Player player)
     {
         ownerPlayer = player;
+        FIRE_INTERVAL = player.ATKSPD;
     }
 
     [Server]
@@ -242,7 +243,7 @@ public class Battleship : NetworkBehaviour
 
     public void SetHP(int oldhp, int newhp)
     {
-        HPFill.fillAmount = (float)newhp / ownerPlayer.GetMaxHP();
+        HPFill.fillAmount = (float)newhp / ownerPlayer.MaxHP;
     }
 
     [Command]

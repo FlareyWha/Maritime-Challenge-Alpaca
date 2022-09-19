@@ -29,6 +29,27 @@ public class BaseEntity : NetworkBehaviour
     [SerializeField]
     protected float movespd = 1;
 
+    public int HP
+    {
+        get { return hp; }
+        private set { }
+    }
+    public int MaxHP
+    {
+        get { return maxHp; }
+        private set { }
+    }
+    public int ATK
+    {
+        get { return atk; }
+        private set { }
+    }
+    public float ATKSPD
+    {
+        get { return atkspd; }
+        private set { }
+    }
+
 
     public delegate void EntityDied();
     public event EntityDied OnEntityDied;
@@ -52,7 +73,7 @@ public class BaseEntity : NetworkBehaviour
     }
 
     [ClientRpc]
-    private void OnDamageDealtOrTaken(int hp_amt, bool dealt, GameObject attacker) 
+    private void OnDamageDealtOrTaken(int hp_amt, bool dealt, GameObject attacker)
     {
         Debug.Log("OnDamageDealtOrTakenCalled Callback from Rpc Called");
         if (attacker == PlayerData.MyPlayer.gameObject)
@@ -76,7 +97,7 @@ public class BaseEntity : NetworkBehaviour
         OnEntityHPChanged?.Invoke(oldHP, newHP);
     }
 
-    
+
     protected void CheckForEntityClick()
     {
         if (InputManager.InputActions.Main.Tap.WasPressedThisFrame() && IsWithinEntity())
@@ -128,8 +149,4 @@ public class BaseEntity : NetworkBehaviour
         return spriteSize.x > spriteSize.y ? spriteSize.x : spriteSize.y;
     }
 
-    public int GetMaxHP()
-    {
-        return maxHp;
-    }
 }

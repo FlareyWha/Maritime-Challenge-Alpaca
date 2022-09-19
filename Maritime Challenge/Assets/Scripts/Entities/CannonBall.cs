@@ -92,7 +92,7 @@ public class CannonBall : NetworkBehaviour
         {
             Debug.Log("Cannonball Hit Enemy");
             BaseEntity enemy = collision.gameObject.GetComponent<BaseEntity>();
-            enemy.TakeDamage(10, ownerPlayer.gameObject);
+            enemy.TakeDamage(ownerPlayer.ATK, ownerPlayer.gameObject);
             NetworkServer.Destroy(gameObject);
         }
     }

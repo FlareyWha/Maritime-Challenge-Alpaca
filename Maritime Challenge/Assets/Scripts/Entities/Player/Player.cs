@@ -31,10 +31,9 @@ public class Player : BaseEntity
     [SyncVar(hook = nameof(OnShipSet))]
     private GameObject LinkedBattleshipGO = null;
 
+    private PlayerUI playerUI = null;
     private Battleship LinkedBattleship = null;
 
-
-    private PlayerUI playerUI = null;
 
     private void Start()
     {
