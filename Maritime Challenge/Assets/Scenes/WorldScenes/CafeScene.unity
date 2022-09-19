@@ -5662,7 +5662,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &786774347
 Transform:
   m_ObjectHideFlags: 0
@@ -5754,6 +5754,7 @@ GameObject:
   m_Component:
   - component: {fileID: 824749609}
   - component: {fileID: 824749610}
+  - component: {fileID: 824749611}
   m_Layer: 0
   m_Name: Front Counter
   m_TagString: Untagged
@@ -5826,6 +5827,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &824749611
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 824749608}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 15.39, y: 4.37}
+    newSize: {x: 15.39, y: 4.37}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 15.39, y: 4.37}
+  m_EdgeRadius: 0
 --- !u!1001 &877160126
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6946,6 +6973,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sit (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4851536740854130391, guid: c329656309de28248bdfaed725c33776, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c329656309de28248bdfaed725c33776, type: 3}
 --- !u!4 &1214807041 stripped
@@ -7185,7 +7216,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1365911531
 Transform:
   m_ObjectHideFlags: 0
@@ -7268,7 +7299,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1447845524
 Transform:
   m_ObjectHideFlags: 0
@@ -7300,41 +7331,7 @@ CompositeCollider2D:
   m_GeometryType: 0
   m_GenerationType: 0
   m_EdgeRadius: 0
-  m_ColliderPaths:
-  - m_Collider: {fileID: 1447845527}
-    m_ColliderPaths:
-    - - X: 240000000
-        Y: 260000000
-      - X: 120000000
-        Y: 260000000
-      - X: 120000000
-        Y: 400000000
-      - X: -120000000
-        Y: 400000000
-      - X: -120000000
-        Y: 260000000
-      - X: -240000000
-        Y: 260000000
-      - X: -240000000
-        Y: -20000000
-      - X: 240000000
-        Y: -20000000
-    - - X: -220000000
-        Y: 0
-      - X: -220000000
-        Y: 240000000
-      - X: -100000000
-        Y: 240000000
-      - X: -100000000
-        Y: 380000000
-      - X: 100000000
-        Y: 380000000
-      - X: 100000000
-        Y: 240000000
-      - X: 220000000
-        Y: 240000000
-      - X: 220000000
-        Y: 0
+  m_ColliderPaths: []
   m_CompositePaths:
     m_Paths:
     - - {x: 23.999971, y: -2}
@@ -8425,6 +8422,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sit (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4851536740854130391, guid: c329656309de28248bdfaed725c33776, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c329656309de28248bdfaed725c33776, type: 3}
 --- !u!4 &1454502210 stripped
@@ -9150,7 +9151,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1878769004
 Transform:
   m_ObjectHideFlags: 0
@@ -9286,6 +9287,10 @@ PrefabInstance:
     - target: {fileID: 4851536740854130391, guid: c329656309de28248bdfaed725c33776, type: 3}
       propertyPath: m_Name
       value: Sit
+      objectReference: {fileID: 0}
+    - target: {fileID: 4851536740854130391, guid: c329656309de28248bdfaed725c33776, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c329656309de28248bdfaed725c33776, type: 3}
