@@ -29,7 +29,6 @@ public class BaseEntity : NetworkBehaviour
     [SerializeField]
     protected float movespd = 1;
 
-    private Vector2 spriteSize;
 
     public delegate void EntityDied();
     public event EntityDied OnEntityDied;
@@ -77,16 +76,7 @@ public class BaseEntity : NetworkBehaviour
         OnEntityHPChanged?.Invoke(oldHP, newHP);
     }
 
-    protected void InitSpriteSize()
-    {
-        // Get Player Sprite Size
-        spriteSize = GetComponent<SpriteRenderer>().bounds.size * 0.5f;
-        float pixelsPerUnit = GetComponent<SpriteRenderer>().sprite.pixelsPerUnit;
-
-        spriteSize.x *= pixelsPerUnit;
-        spriteSize.y *= pixelsPerUnit;
-    }
-
+    
     protected void CheckForEntityClick()
     {
         if (InputManager.InputActions.Main.Tap.WasPressedThisFrame() && IsWithinEntity())
@@ -100,6 +90,10 @@ public class BaseEntity : NetworkBehaviour
 
     protected bool IsWithinEntity()
     {
+
+        // Get Player Sprite Size
+        Vector2 spriteSize = GetSpriteSize();
+
         Vector2 touchPos = InputManager.InputActions.Main.TouchPosition.ReadValue<Vector2>();
         Vector3 entityPos = UIManager.Instance.Camera.GetComponent<Camera>().WorldToScreenPoint(transform.position);
         if (touchPos.x < entityPos.x + spriteSize.x * 0.5f && touchPos.x > entityPos.x - spriteSize.x * 0.5f
@@ -113,16 +107,24 @@ public class BaseEntity : NetworkBehaviour
 
     public Vector2 GetSpriteSize()
     {
+        Vector2 spriteSize = GetComponent<SpriteRenderer>().bounds.size * 0.5f;
+        float pixelsPerUnit = GetComponent<SpriteRenderer>().sprite.pixelsPerUnit;
+
+        spriteSize.x *= pixelsPerUnit;
+        spriteSize.y *= pixelsPerUnit;
+
         return spriteSize;
     }
 
     public float GetSpriteRadius()
     {
+        Vector2 spriteSize = GetSpriteSize();
         return (spriteSize.x + spriteSize.y) * 0.5f;
     }
 
     public float GetSpriteSizeMax()
     {
+        Vector2 spriteSize = GetSpriteSize();
         return spriteSize.x > spriteSize.y ? spriteSize.x : spriteSize.y;
     }
 

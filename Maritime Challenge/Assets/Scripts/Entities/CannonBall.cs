@@ -19,6 +19,12 @@ public class CannonBall : NetworkBehaviour
 
     private int damage = 10;
 
+    void Awake()
+    {
+        if (isClient)
+            gameObject.SetActive(false);
+    }
+
     [Server]
     public void Init(GameObject target, Player owner)
     {
@@ -28,6 +34,13 @@ public class CannonBall : NetworkBehaviour
         velocity = (target.transform.position - transform.position).normalized * SPEED;
 
         target.GetComponent<BaseEntity>().OnEntityDied += OnTargetDiedCallback;
+        Show();
+    }
+    
+    [ClientRpc]
+    private void Show()
+    {
+        gameObject.SetActive(true);
     }
 
     private void FixedUpdate()
