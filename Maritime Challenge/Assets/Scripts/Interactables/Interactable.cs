@@ -24,7 +24,6 @@ public class Interactable : MonoBehaviour
         while (PlayerData.MyPlayer == null)
             yield return null;
 
-        Debug.Log("Interactable: SetMyPlayer!");
         myPlayer = PlayerData.MyPlayer;
     }
 

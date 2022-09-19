@@ -18,6 +18,8 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
     private Image MenuPanelMask;
     [SerializeField]
     private Image ChatPanelMask;
+    [SerializeField]
+    private GameObject LoadingScreen;
 
     public Button InteractButton;
     [SerializeField]
@@ -89,6 +91,11 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
     public void DisableInteractButton()
     {
         InteractButton.gameObject.SetActive(false);
+    }
+    
+    public void ToggleLoadingScreen(bool show)
+    {
+        LoadingScreen.SetActive(show);
     }
 
     public void SetInteractNamecardDetails(Player player) // TBC dk get here or frm outside class
