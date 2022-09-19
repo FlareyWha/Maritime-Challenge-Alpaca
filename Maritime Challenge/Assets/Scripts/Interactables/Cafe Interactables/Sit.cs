@@ -27,11 +27,6 @@ public class Sit : Interactable
         Sits.Add(this);
     }
 
-    private void Update()
-    {
-        Debug.Log(SitID + " " + playerSeated);
-        Debug.Log(SitID + " " + (playerSeated == PlayerData.MyPlayer));
-    }
 
     public override void Interact()
     {
