@@ -1,38 +1,72 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using Mirror;
 
 public class Sit : Interactable
 {
-    bool isSeated = false;
+    public static List<Sit> Sits = new List<Sit>();
+
+    public int SitID;
+
+
+    private Player playerSeated = null;
+    public Player PlayerSeated
+    {
+        get { return playerSeated; }
+        set { playerSeated = value; }
+    }
 
     // Start is called before the first frame update
     void Start()
     {
         UpdateInteractMessage();
+
+        SitID = Sits.Count;
+        Sits.Add(this);
+    }
+
+    private void Update()
+    {
+        Debug.Log(SitID + " " + playerSeated);
+        Debug.Log(SitID + " " + (playerSeated == PlayerData.MyPlayer));
     }
 
     public override void Interact()
     {
-        if (isSeated)
+        if (playerSeated == null)
         {
+            Player player = PlayerData.MyPlayer;
+
+            //Set player pos to the seat's pos
+            player.transform.position = transform.parent.position;
+
+            //Disable joystick
+            UIManager.Instance.ToggleJoystick(false);
+            
             //Prob clamp the player pos to the seat or smth and prevent movment
+            PlayerData.CommandsHandler.SendPlayerSeatedEvent(SitID, player);
         }
-        else
+        else if (playerSeated == PlayerData.MyPlayer)
         {
+            //Enable joystick
+            UIManager.Instance.ToggleJoystick(true);
 
             //Do the opposite of above
+            PlayerData.CommandsHandler.SendPlayerSeatedEvent(SitID, null);
         }
 
-        isSeated = !isSeated;
         UpdateInteractMessage();
     }
 
-    private void UpdateInteractMessage()
+    public void UpdateInteractMessage()
     {
-        if (isSeated)
+        if (playerSeated == null)
             interactMessage = "Sit Down?";
-        else
+        else if (playerSeated == PlayerData.MyPlayer)
             interactMessage = "Stand Up?";
+
+        UIManager.Instance.SetInteractButtonMessage(interactMessage);
     }
 }

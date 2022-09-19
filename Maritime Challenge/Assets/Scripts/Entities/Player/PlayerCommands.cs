@@ -197,6 +197,21 @@ public class PlayerCommands : NetworkBehaviour
         SceneManager.Instance.EnterNetworkedScene(netIdentity, sceneName);
     }
 
+
+    [Command]
+    public void SendPlayerSeatedEvent(int sitID, Player player)
+    {
+        SetPlayerSeated(sitID, player);
+    }
+
+
+    [ClientRpc]
+    public void SetPlayerSeated(int sitID, Player player)
+    {
+        Sit.Sits[sitID].PlayerSeated = player;
+        Sit.Sits[sitID].UpdateInteractMessage();
+    }
+
     IEnumerator WaitEnterScene(string sceneName)
     {
         UIManager.Instance.ToggleLoadingScreen(true);
@@ -208,7 +223,4 @@ public class PlayerCommands : NetworkBehaviour
 
         UIManager.Instance.ToggleLoadingScreen(false);
     }
-
-  
-
 }

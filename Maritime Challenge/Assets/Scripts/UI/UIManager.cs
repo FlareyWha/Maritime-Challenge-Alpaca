@@ -79,9 +79,15 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
     {
         InteractButton.gameObject.SetActive(true);
 
+        SetInteractButtonMessage(interact_text);
+    }
+
+    public void SetInteractButtonMessage(string interact_text)
+    {
         InteractButtonText.text = interact_text;
         SetWidthByTextWidth(InteractButton.gameObject, InteractButtonText);
     }
+
     public void DisableInteractButton()
     {
         InteractButton.gameObject.SetActive(false);
