@@ -1,11 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Mirror;
 
 public class SceneManager : MonoBehaviourSingleton<SceneManager>
 {
 
+    private void Start()
+    {
+        UnityEngine.SceneManagement.SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (mode == LoadSceneMode.Additive)
+            PlayerData.activeSubScene = scene.name;
+    }
 
     public void LoadScene(string name)
     {

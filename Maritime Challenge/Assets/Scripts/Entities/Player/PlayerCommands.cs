@@ -171,14 +171,17 @@ public class PlayerCommands : NetworkBehaviour
     {
         PlayerInteract.ClearInteractables();
         RequestSwitchToSubScene(PlayerData.activeSubScene, sceneName);
-        PlayerData.activeSubScene = sceneName;
+        //PlayerData.activeSubScene = sceneName;
+
+        StartCoroutine(WaitEnterScene(sceneName));
     }
 
     public void EnterSubScene(string sceneName)
     {
         Debug.Log("Send request to enter");
         RequestEnterSubScene(sceneName);
-        PlayerData.activeSubScene = sceneName;
+        //PlayerData.activeSubScene = sceneName;
+        StartCoroutine(WaitEnterScene(sceneName));
     }
 
 
@@ -193,5 +196,19 @@ public class PlayerCommands : NetworkBehaviour
     {
         SceneManager.Instance.EnterNetworkedScene(netIdentity, sceneName);
     }
+
+    IEnumerator WaitEnterScene(string sceneName)
+    {
+        UIManager.Instance.ToggleLoadingScreen(true);
+
+        while (PlayerData.activeSubScene != sceneName)
+            yield return null;
+        while (GameObject.Find("Environment") == null)
+            yield return null;
+
+        UIManager.Instance.ToggleLoadingScreen(false);
+    }
+
+  
 
 }

@@ -12,6 +12,9 @@ public class LoginManager : MonoBehaviour
     [SerializeField]
     private InputField InputField_Email, InputField_Password;
 
+    [SerializeField]
+    private GameObject LoadingScreen;
+
     private PostLoginInfoGetter postLoginInfoGetter;
 
 
@@ -32,6 +35,7 @@ public class LoginManager : MonoBehaviour
 
         // LOGIN
         PlayerData.ResetData();
+        LoadingScreen.gameObject.SetActive(true);
 
         // Set Player Details/Data in PLayerData
         StartCoroutine(DoSendLoginInfoEmail());
@@ -71,10 +75,12 @@ public class LoginManager : MonoBehaviour
                 break;
             case UnityWebRequest.Result.ProtocolError:
                 confirmationText.text = webreq.downloadHandler.text;
+                LoadingScreen.gameObject.SetActive(false);
                 break;
             default:
                 Debug.Log(webreq.downloadHandler.text);
                 confirmationText.text = "Server error";
+                LoadingScreen.gameObject.SetActive(false);
                 break;
         }
     }
@@ -94,15 +100,17 @@ public class LoginManager : MonoBehaviour
             case UnityWebRequest.Result.Success:
                 Debug.Log(webreq.downloadHandler.text);
                 ServerManager.Instance.OfflineSetted = false;
-
+                LoadingScreen.gameObject.SetActive(false);
                 //Connect only if login is successful
                 ConnectToServer();
                 break;
             case UnityWebRequest.Result.ProtocolError:
                 confirmationText.text = webreq.downloadHandler.text;
+                LoadingScreen.gameObject.SetActive(false);
                 break;
             default:
                 confirmationText.text = "Server error";
+                LoadingScreen.gameObject.SetActive(false);
                 break;
         }
     }
