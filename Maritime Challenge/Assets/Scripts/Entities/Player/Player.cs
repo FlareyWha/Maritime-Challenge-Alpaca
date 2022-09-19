@@ -39,7 +39,6 @@ public class Player : BaseEntity
     private void Start()
     {
         gameObject.SetActive(isVisible);
-        base.InitSpriteSize();
     }
 
     public override void OnStartLocalPlayer()
