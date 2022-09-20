@@ -59,7 +59,7 @@ public class Player : BaseEntity
 
 
         // Load Player into World Hub
-        gameObject.GetComponent<PlayerCommands>().EnterSubScene("WorldHubScene");
+        gameObject.GetComponent<PlayerCommands>().EnterSubScene("WorldHubScene", SceneManager.StartWorldHubSpawnPos);
     }
 
 
