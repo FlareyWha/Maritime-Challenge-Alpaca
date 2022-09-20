@@ -198,8 +198,8 @@ public class Player : BaseEntity
         if (isLocalPlayer)
         {
             LinkedBattleship.InitShip(username);
-            OnEntityHPChanged += LinkedBattleship.SetHP;
         }
+         OnEntityHPChanged += LinkedBattleship.SetHP;
     }
 
     // ================= GETTERS =====================
