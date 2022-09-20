@@ -167,34 +167,34 @@ public class PlayerCommands : NetworkBehaviour
         }
     }
 
-    public void SwitchSubScene(string sceneName)
+    public void SwitchSubScene(string sceneName, Vector2 spawnPos)
     {
         PlayerInteract.ClearInteractables();
-        RequestSwitchToSubScene(PlayerData.activeSubScene, sceneName);
+        RequestSwitchToSubScene(PlayerData.activeSubScene, sceneName, spawnPos);
         //PlayerData.activeSubScene = sceneName;
 
         StartCoroutine(WaitEnterScene(sceneName));
     }
 
-    public void EnterSubScene(string sceneName)
+    public void EnterSubScene(string sceneName, Vector2 spawnPos)
     {
         Debug.Log("Send request to enter");
-        RequestEnterSubScene(sceneName);
+        RequestEnterSubScene(sceneName, spawnPos);
         //PlayerData.activeSubScene = sceneName;
         StartCoroutine(WaitEnterScene(sceneName));
     }
 
 
     [Command]
-    private void RequestSwitchToSubScene(string currSceneName, string sceneName)
+    private void RequestSwitchToSubScene(string currSceneName, string sceneName, Vector2 spawnPos)
     {
-        SceneManager.Instance.EnterNetworkedSubScene(netIdentity, currSceneName, sceneName);
+        SceneManager.Instance.EnterNetworkedSubScene(netIdentity, currSceneName, sceneName, spawnPos);
     }
 
     [Command]
-    private void RequestEnterSubScene(string sceneName)
+    private void RequestEnterSubScene(string sceneName, Vector2 spawnPos)
     {
-        SceneManager.Instance.EnterNetworkedScene(netIdentity, sceneName);
+        SceneManager.Instance.EnterNetworkedScene(netIdentity, sceneName, spawnPos);
     }
 
 
@@ -203,7 +203,6 @@ public class PlayerCommands : NetworkBehaviour
     {
         SetPlayerSeated(sitID, player);
     }
-
 
     [ClientRpc]
     public void SetPlayerSeated(int sitID, Player player)
@@ -222,5 +221,12 @@ public class PlayerCommands : NetworkBehaviour
             yield return null;
 
         UIManager.Instance.ToggleLoadingScreen(false);
+    }
+
+    [ClientRpc]
+    public void ForceMovePlayer(Vector2 pos)
+    {
+        if (hasAuthority)
+            transform.position = pos;
     }
 }

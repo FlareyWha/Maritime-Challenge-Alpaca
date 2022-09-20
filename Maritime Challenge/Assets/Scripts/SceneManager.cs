@@ -7,6 +7,10 @@ using Mirror;
 public class SceneManager : MonoBehaviourSingleton<SceneManager>
 {
 
+    public static Vector2 EnterCafeSpawnPos = new Vector2(0.0f, 4.0f);
+    public static Vector2 ExitCafeSpawnPos = new Vector2(-12.0f, -8.0f);
+    public static Vector2 StartWorldHubSpawnPos = new Vector2(6.0f, -8.0f);
+
     private void Start()
     {
         UnityEngine.SceneManagement.SceneManager.sceneLoaded += OnSceneLoaded;
@@ -29,7 +33,7 @@ public class SceneManager : MonoBehaviourSingleton<SceneManager>
     }
 
     [Server]
-    public void EnterNetworkedSubScene(NetworkIdentity playerNetIdentity, string currSceneName, string newSceneName)
+    public void EnterNetworkedSubScene(NetworkIdentity playerNetIdentity, string currSceneName, string newSceneName, Vector2 spawnPos)
     {
         //// Unload Current SubScene
         SceneMessage message = new SceneMessage { sceneName = currSceneName, sceneOperation = SceneOperation.UnloadAdditive };
@@ -41,11 +45,11 @@ public class SceneManager : MonoBehaviourSingleton<SceneManager>
         UnityEngine.SceneManagement.SceneManager.MoveGameObjectToScene(playerNetIdentity.gameObject,
             UnityEngine.SceneManagement.SceneManager.GetSceneByName(newSceneName));
         // Reposition Player
-        playerNetIdentity.gameObject.transform.position = Vector3.zero;
+        playerNetIdentity.gameObject.GetComponent<PlayerCommands>().ForceMovePlayer(spawnPos);
     }
 
     [Server]
-    public void EnterNetworkedScene(NetworkIdentity playerNetIdentity, string newSceneName)
+    public void EnterNetworkedScene(NetworkIdentity playerNetIdentity, string newSceneName, Vector2 spawnPos)
     {
         // Load SubScene
         SceneMessage message = new SceneMessage { sceneName = newSceneName, sceneOperation = SceneOperation.LoadAdditive };
@@ -54,14 +58,10 @@ public class SceneManager : MonoBehaviourSingleton<SceneManager>
         UnityEngine.SceneManagement.SceneManager.MoveGameObjectToScene(playerNetIdentity.gameObject,
             UnityEngine.SceneManagement.SceneManager.GetSceneByName(newSceneName));
         // Reposition Player
-        playerNetIdentity.gameObject.transform.position = new Vector3(0, 1, 0);
+        playerNetIdentity.gameObject.GetComponent<PlayerCommands>().ForceMovePlayer(spawnPos);
     }
 
-    //TEST-FOR INSPECTER
-    public void RequestEnterScene(string sceneName)
-    {
-        PlayerData.CommandsHandler.SwitchSubScene(sceneName);
-    }
+ 
 
 }
 

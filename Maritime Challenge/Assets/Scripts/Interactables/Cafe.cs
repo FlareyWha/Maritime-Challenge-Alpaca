@@ -14,7 +14,7 @@ public class Cafe : Interactable
     {
         Debug.Log("Cafe: Interact function called");
 
-        PlayerData.CommandsHandler.SwitchSubScene("CafeScene");
+        PlayerData.CommandsHandler.SwitchSubScene("CafeScene", SceneManager.EnterCafeSpawnPos);
        
     }
 }

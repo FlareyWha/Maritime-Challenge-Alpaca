@@ -59,7 +59,7 @@ public class Player : BaseEntity
 
 
         // Load Player into World Hub
-        gameObject.GetComponent<PlayerCommands>().EnterSubScene("WorldHubScene");
+        gameObject.GetComponent<PlayerCommands>().EnterSubScene("WorldHubScene", SceneManager.StartWorldHubSpawnPos);
     }
 
 
@@ -198,8 +198,8 @@ public class Player : BaseEntity
         if (isLocalPlayer)
         {
             LinkedBattleship.InitShip(username);
-            OnEntityHPChanged += LinkedBattleship.SetHP;
         }
+         OnEntityHPChanged += LinkedBattleship.SetHP;
     }
 
     // ================= GETTERS =====================
