@@ -141,6 +141,12 @@ public static class PlayerData // Local Player's Data
         OnPlayerDataUpdated?.Invoke();
     }
 
+    public static void SetBio(string bio)
+    {
+        Biography = bio;
+        OnPlayerDataUpdated?.Invoke();
+    }
+
 }
 
 public class BasicInfo

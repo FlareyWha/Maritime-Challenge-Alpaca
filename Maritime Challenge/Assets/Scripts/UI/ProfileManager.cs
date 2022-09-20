@@ -88,9 +88,8 @@ public class ProfileManager : MonoBehaviour
             case UnityWebRequest.Result.Success:
                 //Deseralize the data
                 Debug.Log(webreq.downloadHandler.text);
-
+                PlayerData.SetBio(biographyInputField.text);
                 EditBiographyText();
-
                 break;
             case UnityWebRequest.Result.ProtocolError:
                 Debug.LogError(webreq.downloadHandler.text);
@@ -137,7 +136,7 @@ public class ProfileManager : MonoBehaviour
     void EditNameText()
     {
         nameText.text = "Name: " + PlayerData.Name;
-        nameInputField.text = "";
+        nameInputField.text = PlayerData.Name;
     }
 
     void EditGuildText()
@@ -182,6 +181,7 @@ public class ProfileManager : MonoBehaviour
     void EditBiographyText()
     {
         biographyText.text = PlayerData.Biography;
+        biographyInputField.text = PlayerData.Biography;
     }
 
     public void LogOut()
