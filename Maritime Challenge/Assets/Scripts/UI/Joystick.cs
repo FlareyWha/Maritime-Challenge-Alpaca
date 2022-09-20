@@ -56,7 +56,6 @@ public class Joystick : MonoBehaviour
                 Debug.Log("Joystick Released");
                 isHeld = false;
                 InnerCircle.transform.position = OuterCircle.transform.position;
-                Debug.Log("iNNER POS:" + InnerCircle.transform.position + "  outer shit: " + OuterCircle.transform.position);
                 if (!GameSettings.LOCK_JOYSTICK)
                     HideJoystick();
                 return;
