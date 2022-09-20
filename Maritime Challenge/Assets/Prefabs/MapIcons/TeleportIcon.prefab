@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2744229280487282483}
   - component: {fileID: 6759302413954314677}
+  - component: {fileID: 6584036935281001515}
+  - component: {fileID: 7338422161876795352}
   m_Layer: 7
   m_Name: TeleportIcon
   m_TagString: Untagged
@@ -44,6 +46,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e078d0f35c1d794d86dc34653d4906f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6584036935281001515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 570683647798269212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d02b5fd3351c2b34b9782fb04b3e6f15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teleportPointName: 
+  teleportPointDescription: 
+--- !u!58 &7338422161876795352
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 570683647798269212}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 20
 --- !u!1 &5003486835137543329
 GameObject:
   m_ObjectHideFlags: 0

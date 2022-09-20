@@ -8,7 +8,7 @@ public class MapBehaviour : MonoBehaviour
     [SerializeField]
     private Camera mapCamera;
 
-    private Vector2 previousTapPoint;
+    private Vector2 previousTapPosition;
 
     private float previousDoubleTapDistance;
 
@@ -29,6 +29,9 @@ public class MapBehaviour : MonoBehaviour
     private float mapImageWidth;
     private float mapImageHeight;
 
+    [SerializeField]
+    private LayerMask mapIconLayerMask;
+
     private void Start()
     {
         mapImageWidth = mapImageRectTransform.rect.width;
@@ -38,34 +41,35 @@ public class MapBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ChangeMapSize();
-    }
-
-    void ChangeMapSize()
-    {
-        if (!isHeld && InputManager.InputActions.Main.Tap.WasPressedThisFrame())
+        if (isHeld || (InputManager.InputActions.Main.Tap.WasPressedThisFrame() && CheckTouchWithinBounds()))
         {
-            isHeld = true;
-            firstTouch = true;
-            doubleTapFirstTouch = true;
-        }
-        
-        if (isHeld)
-        {
-            //Find tap point
-            Vector2 tapPoint = InputManager.InputActions.Main.TouchPosition.ReadValue<Vector2>();
-
-            if (!CheckTouchWithinBounds(tapPoint))
+            if (!isHeld)
             {
-                isHeld = false;
-                return;
+                isHeld = true;
+                firstTouch = true;
+                doubleTapFirstTouch = true;
             }
 
+            //Find tap point
+            Vector2 tapPosition = InputManager.InputActions.Main.TouchPosition.ReadValue<Vector2>();
+
+            Debug.Log(InputManager.InputActions.Main.TouchPosition.ReadValue<Vector2>());
+            Debug.Log(mapCamera.ScreenToWorldPoint(InputManager.InputActions.Main.TouchPosition.ReadValue<Vector2>()));
+
+            ChangeMapSize(tapPosition);
+            CheckTeleportPointTap(tapPosition);
+        }
+    }
+
+    void ChangeMapSize(Vector2 tapPosition)
+    {
+        if (isHeld)
+        {
             //Do zooming in and out if two taps are detected
             if (InputManager.InputActions.Main.Tap2.IsPressed())
             {
                 //Gets the distance between the 2 touch positions
-                float distance = Vector2.Distance(tapPoint, InputManager.InputActions.Main.TouchPosition2.ReadValue<Vector2>());
+                float distance = Vector2.Distance(tapPosition, InputManager.InputActions.Main.TouchPosition2.ReadValue<Vector2>());
 
                 //Dont account for the first touch as things will break then
                 if (!doubleTapFirstTouch)
@@ -92,7 +96,7 @@ public class MapBehaviour : MonoBehaviour
                 if (!firstTouch)
                 {
                     //Find direction to move camera in
-                    Vector2 direction = previousTapPoint - tapPoint;
+                    Vector2 direction = previousTapPosition - tapPosition;
 
                     //Move camera
                     mapCamera.transform.position += new Vector3(direction.x, direction.y, 0) * mapCamera.orthographicSize * 0.1f * Time.deltaTime;
@@ -105,7 +109,7 @@ public class MapBehaviour : MonoBehaviour
                 else
                     firstTouch = false;
 
-                previousTapPoint = tapPoint;
+                previousTapPosition = tapPosition;
             }
 
             if (InputManager.InputActions.Main.Tap.WasReleasedThisFrame())
@@ -113,7 +117,24 @@ public class MapBehaviour : MonoBehaviour
         }
     }
 
-    bool CheckTouchWithinBounds(Vector2 tapPoint)
+    void CheckTeleportPointTap(Vector2 tapPosition)
+    {
+        if (InputManager.InputActions.Main.Tap.WasPressedThisFrame())
+        {
+            Vector3 worldPointTap = mapCamera.ScreenToWorldPoint(tapPosition);
+            Debug.Log(worldPointTap);
+            Collider2D teleportPoint = Physics2D.OverlapCircle(worldPointTap, 500f, mapIconLayerMask);
+
+            if (teleportPoint != null)
+                teleportPoint.GetComponent<TeleportPointBehaviour>().ShowTeleportInfo();
+
+            //TeleportPointBehaviour teleportPoint = TeleportManager.Instance.FindClosestTeleportPoint(worldPointTap);
+
+            //teleportPoint.ShowTeleportInfo();
+        }
+    }
+
+    bool CheckTouchWithinBounds()
     {
         float minX, maxX, minY, maxY;
 
@@ -121,6 +142,8 @@ public class MapBehaviour : MonoBehaviour
         maxX = mapImageRectTransform.position.x + mapImageWidth * 0.5f;
         minY = mapImageRectTransform.position.y - mapImageHeight * 0.5f;
         maxY = mapImageRectTransform.position.y + mapImageHeight * 0.5f;
+
+        Vector2 tapPoint = InputManager.InputActions.Main.TouchPosition.ReadValue<Vector2>();
 
         if (tapPoint.x < maxX && tapPoint.x > minX
             && tapPoint.y > minY && tapPoint.y < maxY)
