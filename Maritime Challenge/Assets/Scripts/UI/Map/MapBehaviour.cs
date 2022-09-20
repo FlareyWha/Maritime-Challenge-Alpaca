@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MapBehaviour : MonoBehaviour
 {
@@ -22,6 +23,18 @@ public class MapBehaviour : MonoBehaviour
     [SerializeField]
     private Vector2 cameraPositionLowerLimit = new Vector2(-250, -250), cameraPositionUpperLimit = new Vector2(250, 250);
 
+    [SerializeField]
+    private RectTransform mapImageRectTransform;
+
+    private float mapImageWidth;
+    private float mapImageHeight;
+
+    private void Start()
+    {
+        mapImageWidth = mapImageRectTransform.rect.width;
+        mapImageHeight = mapImageRectTransform.rect.height;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -39,11 +52,20 @@ public class MapBehaviour : MonoBehaviour
         
         if (isHeld)
         {
+            //Find tap point
+            Vector2 tapPoint = InputManager.InputActions.Main.TouchPosition.ReadValue<Vector2>();
+
+            if (!CheckTouchWithinBounds(tapPoint))
+            {
+                isHeld = false;
+                return;
+            }
+
             //Do zooming in and out if two taps are detected
             if (InputManager.InputActions.Main.Tap2.IsPressed())
             {
                 //Gets the distance between the 2 touch positions
-                float distance = Vector2.Distance(InputManager.InputActions.Main.TouchPosition.ReadValue<Vector2>(), InputManager.InputActions.Main.TouchPosition2.ReadValue<Vector2>());
+                float distance = Vector2.Distance(tapPoint, InputManager.InputActions.Main.TouchPosition2.ReadValue<Vector2>());
 
                 //Dont account for the first touch as things will break then
                 if (!doubleTapFirstTouch)
@@ -66,9 +88,6 @@ public class MapBehaviour : MonoBehaviour
             //Do moving of the camera if only one tap is detected
             else
             {
-                //Find tap point
-                Vector2 tapPoint = InputManager.InputActions.Main.TouchPosition.ReadValue<Vector2>();
-
                 //Dont account for first touch as it might break again
                 if (!firstTouch)
                 {
@@ -92,5 +111,23 @@ public class MapBehaviour : MonoBehaviour
             if (InputManager.InputActions.Main.Tap.WasReleasedThisFrame())
                 isHeld = false;
         }
+    }
+
+    bool CheckTouchWithinBounds(Vector2 tapPoint)
+    {
+        float minX, maxX, minY, maxY;
+
+        minX = mapImageRectTransform.position.x - mapImageWidth * 0.5f;
+        maxX = mapImageRectTransform.position.x + mapImageWidth * 0.5f;
+        minY = mapImageRectTransform.position.y - mapImageHeight * 0.5f;
+        maxY = mapImageRectTransform.position.y + mapImageHeight * 0.5f;
+
+        if (tapPoint.x < maxX && tapPoint.x > minX
+            && tapPoint.y > minY && tapPoint.y < maxY)
+        {
+            return true;
+        }
+
+        return false;
     }
 }

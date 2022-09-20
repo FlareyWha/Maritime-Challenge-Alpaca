@@ -149,6 +149,12 @@ public class Joystick : MonoBehaviour
 
         Vector2 touchPos = InputManager.InputActions.Main.TouchPosition.ReadValue<Vector2>();
 
+        //Debug.Log("Tap point: " + touchPos);
+        //Debug.Log("Min X: " + minX);
+        //Debug.Log("Max X: " + maxX);
+        //Debug.Log("Min Y: " + minY);
+        //Debug.Log("Max Y: " + maxY);
+
         if (touchPos.x < maxX && touchPos.x > minX
             && touchPos.y > minY && touchPos.y < maxY)
         {

@@ -137,17 +137,17 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
 
     public void ShowInteractNamecard()
     {
-        StartCoroutine(ToggleFlyInAnim(InteractNamecard.gameObject, new Vector3(0, -900, 0), Vector3.zero, 1.0f, null));
+        StartCoroutine(ToggleFlyInAnim(InteractNamecard.gameObject, true, new Vector3(0, -900, 0), Vector3.zero, 1.0f, null));
     }
 
     public void ShowInteractNamecard(Button button)
     {
-        StartCoroutine(ToggleFlyInAnim(InteractNamecard.gameObject, new Vector3(0, -900, 0), Vector3.zero, 0.5f, button));
+        StartCoroutine(ToggleFlyInAnim(InteractNamecard.gameObject, true, new Vector3(0, -900, 0), Vector3.zero, 0.5f, button));
     }
 
     public void HideInteractNamecard(Button button)
     {
-        StartCoroutine(ToggleFlyOutAnim(InteractNamecard.gameObject, Vector3.zero, new Vector3(0, -900, 0), 0.3f, button));
+        StartCoroutine(ToggleFlyOutAnim(InteractNamecard.gameObject, true, Vector3.zero, new Vector3(0, -900, 0), 0.3f, button));
         PlayerUI.interactPlayer = null;
     }
 
@@ -199,12 +199,33 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
             mask.gameObject.SetActive(false);
     }
 
-    static public IEnumerator ToggleFlyInAnim(GameObject uiGO, Vector3 startPos, Vector3 targetPos, float anim_time, Button button)
+    static public IEnumerator ToggleFlyInAnim(RectTransform rectTransform, Vector3 startPos, Vector3 targetPos, float anim_time, Button button)
     {
         if (button != null)
             button.interactable = false;
 
-        uiGO.gameObject.SetActive(true);
+        rectTransform.anchoredPosition = startPos;
+        Vector2 fly_rate = (targetPos - startPos) / anim_time;
+
+        float timer = anim_time;
+        while (timer > 0.0f)
+        {
+            timer -= Time.deltaTime;
+            rectTransform.anchoredPosition += fly_rate * Time.deltaTime;
+            yield return null;
+        }
+
+        if (button != null)
+            button.interactable = true;
+    }
+
+    static public IEnumerator ToggleFlyInAnim(GameObject uiGO, bool changeActive, Vector3 startPos, Vector3 targetPos, float anim_time, Button button)
+    {
+        if (button != null)
+            button.interactable = false;
+
+        if (changeActive)
+            uiGO.gameObject.SetActive(true);
 
         uiGO.transform.localPosition = startPos;
         Vector3 fly_rate = (targetPos - startPos) / anim_time;
@@ -222,7 +243,27 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
      
     }
 
-    static public IEnumerator ToggleFlyOutAnim(GameObject uiGO, Vector3 startPos, Vector3 targetPos, float anim_time, Button button)
+    static public IEnumerator ToggleFlyOutAnim(RectTransform rectTransform, Vector3 startPos, Vector3 targetPos, float anim_time, Button button)
+    {
+        if (button != null)
+            button.interactable = false;
+
+        rectTransform.anchoredPosition = startPos;
+        Vector2 fly_rate = (targetPos - startPos) / anim_time;
+
+        float timer = anim_time;
+        while (timer > 0.0f)
+        {
+            timer -= Time.deltaTime;
+            rectTransform.anchoredPosition += fly_rate * Time.deltaTime;
+            yield return null;
+        }
+
+        if (button != null)
+            button.interactable = true;
+    }
+
+    static public IEnumerator ToggleFlyOutAnim(GameObject uiGO, bool changeActive, Vector3 startPos, Vector3 targetPos, float anim_time, Button button)
     {
         if (button != null)
             button.interactable = false;
@@ -241,7 +282,8 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
         if (button != null)
             button.interactable = true;
 
-        uiGO.gameObject.SetActive(false);
+        if (changeActive)
+            uiGO.gameObject.SetActive(false);
     }
 
     private IEnumerator ExtendNamecardAnim(float anim_time, Button button)

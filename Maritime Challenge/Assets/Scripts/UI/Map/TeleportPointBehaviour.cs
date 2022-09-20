@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class TeleportPointBehaviour : MonoBehaviour
 {
-    [SerializeField]
-    private TeleportPanelManager teleportInfoPanel;
+    private TeleportPanelManager teleportPanelManager;
 
     [SerializeField]
     private string teleportPointName, teleportPointDescription;
@@ -15,6 +14,7 @@ public class TeleportPointBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        teleportPanelManager = TeleportPanelManager.Instance;
         teleportCoordinates = transform.position;
     }
 
@@ -26,6 +26,6 @@ public class TeleportPointBehaviour : MonoBehaviour
 
     public void ShowTeleportInfo()
     {
-        teleportInfoPanel.UpdateTeleportInfoPanel(teleportPointName, teleportPointDescription, teleportCoordinates);
+        teleportPanelManager.UpdateTeleportInfoPanel(teleportPointName, teleportPointDescription, teleportCoordinates);
     }
 }
