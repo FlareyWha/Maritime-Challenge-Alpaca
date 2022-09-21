@@ -17484,7 +17484,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 86.51
+  orthographic size: 15
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -18497,6 +18497,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mapCamera: {fileID: 1645600172}
+  mapImageTransform: {fileID: 255099555}
   scrollSpeed: 25
   minCameraZoom: 5
   maxCameraZoom: 300
