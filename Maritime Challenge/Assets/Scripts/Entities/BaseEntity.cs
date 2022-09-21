@@ -57,6 +57,13 @@ public class BaseEntity : NetworkBehaviour
     protected delegate void EntityHPChanged(int oldHP, int newHP);
     protected event EntityHPChanged OnEntityHPChanged;
 
+    protected GameObject killer;
+    public GameObject Killer
+    {
+        get { return killer; }
+        set { killer = value; }
+    }
+
     [Server]
     public void TakeDamage(int damageAmount, GameObject attacker)
     {
@@ -66,7 +73,7 @@ public class BaseEntity : NetworkBehaviour
         if (hp <= 0)
         {
             InvokeOnEntityDied();
-            HandleDeath();
+            HandleDeath(attacker);
         }
 
         OnDamageDealtOrTaken(damageAmount, false, attacker);
@@ -88,8 +95,10 @@ public class BaseEntity : NetworkBehaviour
     {
         OnEntityDied?.Invoke();
     }
-    protected virtual void HandleDeath()
+
+    protected virtual void HandleDeath(GameObject attacker)
     {
+        killer = attacker;
     }
 
     private void OnHPChanged(int oldHP, int newHP)
