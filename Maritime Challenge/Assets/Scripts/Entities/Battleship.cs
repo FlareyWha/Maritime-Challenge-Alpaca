@@ -135,7 +135,9 @@ public class Battleship : NetworkBehaviour
         if (prevFacing != currFacing)
             SyncShipSprite((int)currFacing);
 
-
+        // Update Rotation
+        float theta = Vector2.SignedAngle(Vector2.up, velocity);
+        rb.rotation = theta;
 
         // Update Ship Attack
         if (currTarget != null)
@@ -237,7 +239,7 @@ public class Battleship : NetworkBehaviour
         transform.position = refTransform.position;
         transform.rotation = refTransform.rotation;
         currFacing = SHIPFACING.LEFT;
-        SyncShipSprite((int)currFacing);
+        //SyncShipSprite((int)currFacing);
         SyncShipStatus(true);
     }
 
