@@ -56,10 +56,9 @@ public class MapBehaviour : MonoBehaviour
             Vector2 tapPosition = InputManager.InputActions.Main.TouchPosition.ReadValue<Vector2>();
             float scale = (mapCamera.orthographicSize * 2) / Screen.width;
             Vector2 dis = tapPosition - new Vector2(mapImageTransform.position.x, mapImageTransform.position.y);
-            Debug.Log("Dis: " + dis);
             Vector3 screenPos = new Vector3(dis.x, dis.y, 1);
             //Debug.Log(InputManager.InputActions.Main.TouchPosition.ReadValue<Vector2>());
-            Debug.Log("Camera World Pos: " + mapCamera.ScreenToWorldPoint(screenPos));
+    
             Debug.Log("My World Pos: " + screenPos * scale);
 
             ChangeMapSize(tapPosition);
