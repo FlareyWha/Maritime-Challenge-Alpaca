@@ -47,7 +47,7 @@ public class TeleportManager : MonoBehaviourSingleton<TeleportManager>
     public void Teleport()
     {
         PlayerData.MyPlayer.gameObject.transform.position = currentTeleportCoordinates;
-        gameObject.transform.localPosition = hiddenCoords;
+        rectTransform.anchoredPosition = hiddenCoords;
 
         //Call loading screen or smth
     }
