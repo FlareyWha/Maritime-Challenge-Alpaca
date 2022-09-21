@@ -17484,7 +17484,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 15
+  orthographic size: 80
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -19748,7 +19748,7 @@ MonoBehaviour:
   rectTransform: {fileID: 1449868564}
   teleportPointNameText: {fileID: 419840495}
   teleportPointDescriptionText: {fileID: 1148250108}
-  teleportPoints: []
+  backButton: {fileID: 894546739}
 --- !u!1 &1835724891
 GameObject:
   m_ObjectHideFlags: 0

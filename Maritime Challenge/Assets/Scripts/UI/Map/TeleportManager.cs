@@ -20,20 +20,18 @@ public class TeleportManager : MonoBehaviourSingleton<TeleportManager>
     private Vector3 stayingCoords = new Vector3(0, 15, 0);
 
     [SerializeField]
-    private List<TeleportPointBehaviour> teleportPoints = new List<TeleportPointBehaviour>();
+    private Button backButton;
 
     private void Start()
     {
         rectTransform.anchoredPosition = new Vector3(0, -330, 0);
-
-        AddTeleportPoints();
     }
 
     public void UpdateTeleportInfoPanel(string teleportPointName, string teleportPointDescription, Vector3 teleportCoordinates)
     {
-        if (Vector3.Distance(rectTransform.anchoredPosition, hiddenCoords) < 0.2f)
+        if (Vector3.Distance(rectTransform.anchoredPosition, hiddenCoords) < 5f)
         {
-            StartCoroutine(UIManager.ToggleFlyInAnim(rectTransform, hiddenCoords, stayingCoords, 0.5f, null));
+            StartCoroutine(UIManager.ToggleFlyInAnim(rectTransform, hiddenCoords, stayingCoords, 0.5f, backButton));
         }
 
         teleportPointNameText.text = teleportPointName;
@@ -43,7 +41,7 @@ public class TeleportManager : MonoBehaviourSingleton<TeleportManager>
 
     public void DeactivateTeleportInfoPanel()
     {
-        StartCoroutine(UIManager.ToggleFlyOutAnim(rectTransform, stayingCoords, hiddenCoords, 0.5f, null));
+        StartCoroutine(UIManager.ToggleFlyOutAnim(rectTransform, stayingCoords, hiddenCoords, 0.5f, backButton));
     }
 
     public void Teleport()
@@ -52,29 +50,5 @@ public class TeleportManager : MonoBehaviourSingleton<TeleportManager>
         gameObject.transform.localPosition = hiddenCoords;
 
         //Call loading screen or smth
-    }
-
-    public TeleportPointBehaviour FindClosestTeleportPoint(Vector3 worldTouchPoint)
-    {
-        int closestTeleportPointIndex = 0;
-        float distance = float.MaxValue;
-
-        for (int i = 0; i < teleportPoints.Count; ++i)
-        {
-            float currentDistance = Vector3.Distance(worldTouchPoint, teleportPoints[i].transform.position);
-            if (currentDistance < distance)
-            {
-                closestTeleportPointIndex = i;
-                distance = currentDistance;
-            }
-        }
-
-        return teleportPoints[closestTeleportPointIndex];
-    }
-
-    public void AddTeleportPoints()
-    {
-        teleportPoints.Clear();
-        teleportPoints.AddRange(FindObjectsOfType<TeleportPointBehaviour>());
     }
 }
