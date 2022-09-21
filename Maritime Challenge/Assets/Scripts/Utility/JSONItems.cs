@@ -71,7 +71,6 @@ public class JSONFriendData
     public int iDepartment;
     public int iGuildID;
     public int iCountry;
-    public bool bOnline;
     public int iFriendshipLevel;
 }
 

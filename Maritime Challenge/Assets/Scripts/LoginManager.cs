@@ -40,12 +40,6 @@ public class LoginManager : MonoBehaviour
         // Set Player Details/Data in PLayerData
         StartCoroutine(DoSendLoginInfoEmail());
     }
-
-
-    public void SetOnline()
-    {
-        StartCoroutine(StartSetOnline());
-    }
  
     IEnumerator DoSendLoginInfoEmail()
     {
@@ -85,41 +79,9 @@ public class LoginManager : MonoBehaviour
         }
     }
 
-    IEnumerator StartSetOnline()
-    {
-        url = ServerDataManager.URL_updateOnlineStatus;
-        Debug.Log(url);
-
-        WWWForm form = new WWWForm();
-        form.AddField("bOnline", 1);
-        form.AddField("UID", PlayerData.UID);
-        using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
-        yield return webreq.SendWebRequest();
-        switch (webreq.result)
-        {
-            case UnityWebRequest.Result.Success:
-                Debug.Log(webreq.downloadHandler.text);
-                ServerManager.Instance.OfflineSetted = false;
-                LoadingScreen.gameObject.SetActive(false);
-                //Connect only if login is successful
-                ConnectToServer();
-                break;
-            case UnityWebRequest.Result.ProtocolError:
-                confirmationText.text = webreq.downloadHandler.text;
-                LoadingScreen.gameObject.SetActive(false);
-                break;
-            default:
-                confirmationText.text = "Server error";
-                LoadingScreen.gameObject.SetActive(false);
-                break;
-        }
-    }
-
     public void ConnectToServer()
     {
         // Connect to Server
         ServerManager.Instance.ConnectToServer();
-
-      
     }
 }

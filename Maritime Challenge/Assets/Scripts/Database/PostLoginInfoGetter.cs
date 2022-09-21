@@ -26,8 +26,8 @@ public class PostLoginInfoGetter : MonoBehaviour
         //Wait for all the coroutines to finish running before continuing
         yield return coroutineCollectionManager;
 
-        //Set online once all the info has been recieved
-        loginManager.SetOnline();
+        //Connect to server once all the info has been recieved
+        loginManager.ConnectToServer();
     }
 
     IEnumerator GetPlayerData()
