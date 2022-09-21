@@ -5,7 +5,7 @@ using UnityEngine;
 public class Door : Interactable
 {
     [SerializeField]
-    private string InteractMessageText, NewSceneName;
+    private string InteractMessageText, TargetScene;
 
     void Start()
     {
@@ -14,6 +14,6 @@ public class Door : Interactable
 
     public override void Interact()
     {
-        PlayerData.CommandsHandler.SwitchSubScene(NewSceneName, SceneManager.ExitCafeSpawnPos);
+        PlayerData.CommandsHandler.SwitchSubScene(TargetScene, SceneManager.ExitCafeSpawnPos);
     }
 }

@@ -6,11 +6,23 @@ using Mirror;
 public class Server : Mirror.Examples.MultipleAdditiveScenes.MultiSceneNetManager
 {
 
-    private List<Player> onlinePlayers = new List<Player>();
-
     public override void Start()
     {
         StartServer();
+    }
+
+    public override void OnServerAddPlayer(NetworkConnectionToClient conn)
+    {
+        base.OnServerAddPlayer(conn);
+
+        GameHandler.Instance.OnNewPlayerJoined(conn);
+    }
+
+    public override void OnServerDisconnect(NetworkConnectionToClient conn)
+    {
+        base.OnServerDisconnect(conn);
+
+
     }
 
 }
