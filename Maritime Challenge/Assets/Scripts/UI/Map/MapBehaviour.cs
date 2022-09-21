@@ -54,13 +54,6 @@ public class MapBehaviour : MonoBehaviour
 
             //Find tap point
             Vector2 tapPosition = InputManager.InputActions.Main.TouchPosition.ReadValue<Vector2>();
-            float scale = (mapCamera.orthographicSize * 2) / Screen.width;
-            Vector2 dis = tapPosition - new Vector2(mapImageTransform.position.x, mapImageTransform.position.y);
-            Debug.Log("Dis: " + dis);
-            Vector3 screenPos = new Vector3(dis.x, dis.y, 1);
-            //Debug.Log(InputManager.InputActions.Main.TouchPosition.ReadValue<Vector2>());
-            Debug.Log("Camera World Pos: " + mapCamera.ScreenToWorldPoint(screenPos));
-            Debug.Log("My World Pos: " + screenPos * scale);
 
             ChangeMapSize(tapPosition);
             CheckTeleportPointTap(tapPosition);
@@ -128,9 +121,19 @@ public class MapBehaviour : MonoBehaviour
 
         if (InputManager.InputActions.Main.Tap.WasPressedThisFrame())
         {
-            Vector3 worldPointTap = mapCamera.ScreenToWorldPoint(tapPosition);
-            Debug.Log(worldPointTap);
-            Collider2D teleportPoint = Physics2D.OverlapCircle(worldPointTap, 500f, mapIconLayerMask);
+            //Scales the camera ortho size based off screen width
+            float scale = (mapCamera.orthographicSize * 2) / Screen.width;
+            //Find the displacement from the tap position and the map image transform position
+            Vector2 dis = tapPosition - new Vector2(mapImageTransform.position.x, mapImageTransform.position.y);
+            //Debug.Log("Dis: " + dis);
+
+            //Get the screen pos of displacement
+            Vector3 screenPos = new Vector3(dis.x, dis.y, 1);
+            //Debug.Log("Camera World Pos: " + mapCamera.ScreenToWorldPoint(screenPos));
+            //Debug.Log("My World Pos: " + (screenPos * scale + mapCamera.transform.position));
+
+            //Get the teleport point
+            Collider2D teleportPoint = Physics2D.OverlapCircle(screenPos * scale + mapCamera.transform.position, 5f, mapIconLayerMask);
 
             if (teleportPoint != null)
                 teleportPoint.GetComponent<TeleportPointBehaviour>().ShowTeleportInfo();
