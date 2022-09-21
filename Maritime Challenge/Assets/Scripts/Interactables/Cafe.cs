@@ -7,13 +7,11 @@ public class Cafe : Interactable
 
     void Start()
     {
-        interactMessage = "Enter cafe?";
+        interactMessage = "Enter Cafe?";
     }
 
     public override void Interact()
     {
-        Debug.Log("Cafe: Interact function called");
-
         PlayerData.CommandsHandler.SwitchSubScene("CafeScene", SceneManager.EnterCafeSpawnPos);
        
     }

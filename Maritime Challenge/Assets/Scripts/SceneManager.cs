@@ -7,9 +7,13 @@ using Mirror;
 public class SceneManager : MonoBehaviourSingleton<SceneManager>
 {
 
-    public static Vector2 EnterCafeSpawnPos = new Vector2(0.0f, 4.0f);
-    public static Vector2 ExitCafeSpawnPos = new Vector2(-12.0f, -8.0f);
     public static Vector2 StartWorldHubSpawnPos = new Vector2(6.0f, -8.0f);
+    public static Vector2 EnterCafeSpawnPos = new Vector2(0.0f, 4.0f);
+    public static Vector2 EnterArcadeSpawnPos = new Vector2(0.0f, 4.0f);
+    public static Vector2 EnterMallSpawnPos = new Vector2(0.0f, 4.0f);
+    public static Vector2 ExitCafeSpawnPos = new Vector2(-12.0f, -8.0f);
+    public static Vector2 ExitArcadeSpawnPos = new Vector2(-12.0f, -8.0f);
+    public static Vector2 ExitMallSpawnPos = new Vector2(-12.0f, -8.0f);
 
     private void Start()
     {
@@ -74,20 +78,8 @@ public enum SCENE_ID
     // SUB SCENE START
     HOME = 3,
     CAFE,
-
-    NUM_TOTAL
-}
-
-public enum SERVER_SCENE_ID
-{
-    SERVER = 0,
-    SPLASH,
-    LOGIN,
-    // MAIN EMPTY SCENE
-    MAIN_EMPTY = 3,
-    // SUB SCENE START
-    HOME = 4,
-    CAFE,
+    ARCADE,
+    SHOPPINGMALL,
 
     NUM_TOTAL
 }

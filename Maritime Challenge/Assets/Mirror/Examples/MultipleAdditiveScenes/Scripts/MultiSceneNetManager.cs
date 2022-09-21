@@ -18,7 +18,7 @@ namespace Mirror.Examples.MultipleAdditiveScenes
         //public GameObject rewardPrefab;
 
         [Header("MultiScene Setup")]
-        public int instances = 3;
+        //public int instances = 3;
 
         [SerializeField]
         private string gameScene;

@@ -26,4 +26,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WorldScenes/CafeScene.unity
     guid: b669b764b05f3f245aa6c0938be5a58e
+  - enabled: 1
+    path: Assets/Scenes/WorldScenes/ArcadeScene.unity
+    guid: cb89d0976ee47c84fad5f388ed7be20a
+  - enabled: 1
+    path: Assets/Scenes/WorldScenes/ShoppingMallScene.unity
+    guid: 87a35edb89c498e478dc17a71327c264
   m_configObjects: {}
