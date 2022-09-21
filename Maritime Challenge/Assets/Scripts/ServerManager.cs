@@ -25,7 +25,6 @@ public class ServerManager : NetworkManager
        // manager = GameObject.Find("NetworkManager").GetComponent<NetworkManager>();
     }
 
-   
 
     public void ConnectToServer()
     {
@@ -36,52 +35,6 @@ public class ServerManager : NetworkManager
     public void DisconnectFromServer()
     {
         StopClient();
-    }
-
-    public override void OnClientDisconnect()
-    {
-        TrySetOffline();
-    }
-
-    public override void OnApplicationQuit()
-    {
-        TrySetOffline();
-    }
-
-    public void TrySetOffline()
-    {
-        if (!offlineSetted)
-        {
-            StartCoroutine(SetOffline());
-            offlineSetted = true;
-        }
-      
-    }
-
-
-    IEnumerator SetOffline()
-    {
-        string url = ServerDataManager.URL_updateOnlineStatus;
-        Debug.Log(url);
-
-        WWWForm form = new WWWForm();
-        form.AddField("bOnline", 0);
-        form.AddField("UID", PlayerData.UID);
-        using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
-        yield return webreq.SendWebRequest();
-        switch (webreq.result)
-        {
-            case UnityWebRequest.Result.Success:
-                Debug.Log(webreq.downloadHandler.text);
-                LogOutOfGame();
-                break;
-            case UnityWebRequest.Result.ProtocolError:
-                Debug.LogError(webreq.downloadHandler.text);
-                break;
-            default:
-                Debug.LogError("Server error");
-                break;
-        }
     }
 
     private void LogOutOfGame()

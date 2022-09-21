@@ -33,7 +33,6 @@ public class ServerDataManager : MonoBehaviour
     public static string URL_updateUsername = serverURL + "UpdateUsername.php";
     public static string URL_updateBiography = serverURL + "UpdateBiography.php";
     public static string URL_updateTitle = serverURL + "UpdateTitle.php";
-    public static string URL_updateOnlineStatus = serverURL + "UpdateOnlineStatus.php";
     #endregion
 
     #region Handling Friends & Friend Requests

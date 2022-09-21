@@ -81,7 +81,6 @@ public class JSONDeseralizer : MonoBehaviour
         friendInfo.Department = jsonFriendData.iDepartment;
         friendInfo.GuildID = jsonFriendData.iGuildID;
         friendInfo.Country = jsonFriendData.iCountry;
-        friendInfo.Online = jsonFriendData.bOnline;
         friendInfo.FriendshipLevel = jsonFriendData.iFriendshipLevel;
 
         PlayerData.FriendDataList.Add(friendInfo);
