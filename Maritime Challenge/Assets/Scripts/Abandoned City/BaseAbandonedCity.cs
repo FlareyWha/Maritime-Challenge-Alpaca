@@ -127,7 +127,7 @@ public class BaseAbandonedCity : MonoBehaviour
 
     public void ClearAbandonedCity(Player enemyKiller)
     {
-        cleared = true;
+        captured = true;
         capturedGuildID = enemyKiller.GetGuildID();
         //clearedGuildName.text = ???
     }
