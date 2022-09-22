@@ -9,7 +9,7 @@ public class AbandonedCityManager : MonoBehaviourSingleton<AbandonedCityManager>
     // Start is called before the first frame update
     void Start()
     {
-        FindAbandonedCities();
+        CreateAbandonedCities();
     }
 
     // Update is called once per frame
@@ -18,10 +18,10 @@ public class AbandonedCityManager : MonoBehaviourSingleton<AbandonedCityManager>
         
     }
 
-    void FindAbandonedCities()
+    void CreateAbandonedCities()
     {
         //Get the abandoned cities from database???
-        abandonedCities.Clear();
-        abandonedCities.AddRange(FindObjectsOfType<BaseAbandonedCity>());
+        //abandonedCities.Clear();
+        //abandonedCities.AddRange(FindObjectsOfType<BaseAbandonedCity>());
     }
 }

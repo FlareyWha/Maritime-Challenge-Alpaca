@@ -63,6 +63,8 @@ public class BaseAbandonedCity : MonoBehaviour
     //[ClientRpc]
     public void ResizeColliderSize(Grid grid)
     {
+        //Server must call and reflect on all clients cus apprently it doesnt work otherwise????
+
         //Set the size for the collider
         BoxCollider2D boxCollider2D = GetComponent<BoxCollider2D>();
         boxCollider2D.size = new Vector2(abandonedCityAreaCellWidth * grid.cellSize.x, abandonedCityAreaCellHeight * grid.cellSize.y);
@@ -115,23 +117,33 @@ public class BaseAbandonedCity : MonoBehaviour
     {
         if (enemyList.Count == 0)
         {
-            cleared = true;
-            capturedGuildID = enemyKiller.GetGuildID();
-            //clearedGuildName.text = ???
+            ClearAbandonedCity(enemyKiller);
 
             //Set info in database
+            StartCoroutine(UpdateClearedGuildID());
         }
+    }
+
+    public void ClearAbandonedCity(Player enemyKiller)
+    {
+        cleared = true;
+        capturedGuildID = enemyKiller.GetGuildID();
+        //clearedGuildName.text = ???
     }
 
     public void SpawnEnemies()
     {
         //Spawn enemies and make sure to set the abandoned city variable in the enemies to this one.
 
+        //Server must call and reflect on all clients
+
         Debug.Log("Spawned enemies");
     }
 
     public void ResetAbandonedCity()
     {
+        //Server must call and reflect on all clients
+
         enemyList.Clear();
         playerList.Clear();
 
@@ -172,6 +184,29 @@ public class BaseAbandonedCity : MonoBehaviour
                     cleared = true;
                     capturedGuildID = iCapturedGuildID;
                 }
+                break;
+            case UnityWebRequest.Result.ProtocolError:
+                Debug.LogError(webreq.downloadHandler.text);
+                break;
+            default:
+                Debug.LogError(webreq.downloadHandler.text);
+                break;
+        }
+    }
+
+    IEnumerator UpdateClearedGuildID()
+    {
+        string url = ServerDataManager.URL_updateAbandonedCityCapturedGuildID;
+        Debug.Log(url);
+
+        WWWForm form = new WWWForm();
+        form.AddField("iAbandonedCityID", abandonedCityID);
+        using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
+        yield return webreq.SendWebRequest();
+        switch (webreq.result)
+        {
+            case UnityWebRequest.Result.Success:
+                Debug.Log(webreq.downloadHandler.text);
                 break;
             case UnityWebRequest.Result.ProtocolError:
                 Debug.LogError(webreq.downloadHandler.text);
