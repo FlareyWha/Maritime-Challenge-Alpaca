@@ -17,7 +17,7 @@ public class BaseAbandonedCity : MonoBehaviour
     protected Vector2 abandonedCityAreaLowerLimit, abandonedCityAreaUpperLimit;
     protected Vector3Int gridMovementAreaLowerLimit, gridMovementAreaUpperLimit;
 
-    protected bool cleared = false;
+    protected bool captured = false;
     protected int capturedGuildID = 0;
     [SerializeField]
     protected Text capturedGuildName;
@@ -29,11 +29,18 @@ public class BaseAbandonedCity : MonoBehaviour
         Gizmos.DrawWireCube(transform.position, new Vector3(abandonedCityAreaUpperLimit.x - abandonedCityAreaLowerLimit.x, abandonedCityAreaUpperLimit.y - abandonedCityAreaLowerLimit.y, 0));
     }
 
-    // Start is called before the first frame update
-    void Start()
+    public void InitAbandonedCity(int id, int areaCellWidth, int areaCellHeight, Vector2 position, int guildID)
     {
-        //Check whether abandoned city with this id has been cleared or not
-        //StartCoroutine(CheckClearedGuildID());
+        abandonedCityID = id;
+        abandonedCityAreaCellWidth = areaCellWidth;
+        abandonedCityAreaCellHeight = areaCellHeight;
+        transform.position = position;
+        capturedGuildID = guildID;
+
+        if (capturedGuildID != -1)
+        {
+            captured = true;
+        }
 
         //if (!isServer)
         //    return;
@@ -53,16 +60,12 @@ public class BaseAbandonedCity : MonoBehaviour
         abandonedCityAreaLowerLimit = grid.CellToWorld(gridMovementAreaLowerLimit);
         abandonedCityAreaUpperLimit = grid.CellToWorld(gridMovementAreaUpperLimit);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-         
-    }
     
     //[ClientRpc]
     public void ResizeColliderSize(Grid grid)
     {
+        //Server must call and reflect on all clients cus apprently it doesnt work otherwise????
+
         //Set the size for the collider
         BoxCollider2D boxCollider2D = GetComponent<BoxCollider2D>();
         boxCollider2D.size = new Vector2(abandonedCityAreaCellWidth * grid.cellSize.x, abandonedCityAreaCellHeight * grid.cellSize.y);
@@ -115,23 +118,33 @@ public class BaseAbandonedCity : MonoBehaviour
     {
         if (enemyList.Count == 0)
         {
-            cleared = true;
-            capturedGuildID = enemyKiller.GetGuildID();
-            //clearedGuildName.text = ???
+            ClearAbandonedCity(enemyKiller);
 
             //Set info in database
+            StartCoroutine(UpdateClearedGuildID());
         }
+    }
+
+    public void ClearAbandonedCity(Player enemyKiller)
+    {
+        cleared = true;
+        capturedGuildID = enemyKiller.GetGuildID();
+        //clearedGuildName.text = ???
     }
 
     public void SpawnEnemies()
     {
         //Spawn enemies and make sure to set the abandoned city variable in the enemies to this one.
 
+        //Server must call and reflect on all clients
+
         Debug.Log("Spawned enemies");
     }
 
     public void ResetAbandonedCity()
     {
+        //Server must call and reflect on all clients
+
         enemyList.Clear();
         playerList.Clear();
 
@@ -154,9 +167,9 @@ public class BaseAbandonedCity : MonoBehaviour
         }
     }
 
-    IEnumerator CheckClearedGuildID()
+    IEnumerator UpdateClearedGuildID()
     {
-        string url = ServerDataManager.URL_getAbandonedCityCapturedGuildID;
+        string url = ServerDataManager.URL_updateAbandonedCityCapturedGuildID;
         Debug.Log(url);
 
         WWWForm form = new WWWForm();
@@ -166,12 +179,7 @@ public class BaseAbandonedCity : MonoBehaviour
         switch (webreq.result)
         {
             case UnityWebRequest.Result.Success:
-                int iCapturedGuildID = int.Parse(webreq.downloadHandler.text);
-                if (iCapturedGuildID != -1)
-                {
-                    cleared = true;
-                    capturedGuildID = iCapturedGuildID;
-                }
+                Debug.Log(webreq.downloadHandler.text);
                 break;
             case UnityWebRequest.Result.ProtocolError:
                 Debug.LogError(webreq.downloadHandler.text);

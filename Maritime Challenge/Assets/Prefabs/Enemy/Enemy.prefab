@@ -232,13 +232,14 @@ MonoBehaviour:
   spawnPoint: {x: 0, y: -100}
   movementAreaCellWidth: 20
   movementAreaCellHeight: 20
-  detectionDistance: 10
-  findPlayerDistance: 20
+  detectionDistance: 20
+  findPlayerDistance: 40
   maxIdleTime: 5
   maxPatrolTime: 10
   maxSpotTime: 1
   maxChaseTime: 5
-  attackDistance: 2
+  maxFreezeTime: 2
+  attackDistance: 0.01
   HPFill: {fileID: 3534962956498540744}
 --- !u!1 &6337410864340519515
 GameObject:
