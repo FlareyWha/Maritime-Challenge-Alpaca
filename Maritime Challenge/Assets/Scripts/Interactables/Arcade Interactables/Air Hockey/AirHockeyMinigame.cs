@@ -35,7 +35,8 @@ public class AirHockeyMinigame : NetworkBehaviour
 
         // Assign Player Paddle
         playersList.Add(seatID, player);
-        AirHockeySeat.GetSeat(seatID).AssignPaddleControl(player);
+        // AirHockeySeat.GetSeat(seatID).AssignPaddleControl(player);
+        PlayerPaddle[0].netIdentity.AssignClientAuthority(player.connectionToClient);
 
         // Update All Clients
         OnPlayerJoinGameCallback(seatID);

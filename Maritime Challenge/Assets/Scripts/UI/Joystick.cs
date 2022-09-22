@@ -39,7 +39,6 @@ public class Joystick : MonoBehaviour
         if (!isHeld && InputManager.InputActions.Main.Tap.WasPressedThisFrame()
              && IsWithinTouchArea())
         {
-            Debug.Log("Joystick Held");
             isHeld = true;
             if (!GameSettings.LOCK_JOYSTICK)
             {
@@ -53,7 +52,6 @@ public class Joystick : MonoBehaviour
         {
             if (InputManager.InputActions.Main.Tap.WasReleasedThisFrame())
             {
-                Debug.Log("Joystick Released");
                 isHeld = false;
                 InnerCircle.transform.position = OuterCircle.transform.position;
                 if (!GameSettings.LOCK_JOYSTICK)

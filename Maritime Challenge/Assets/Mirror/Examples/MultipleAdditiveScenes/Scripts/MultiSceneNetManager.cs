@@ -103,6 +103,12 @@ namespace Mirror.Examples.MultipleAdditiveScenes
                 subScenes.Add(newScene);
             }
             subscenesLoaded = true;
+            NetworkServer.SpawnObjects();
+            Debug.Log("Spawned Network GOs Count: " + NetworkServer.spawned.Count);
+            foreach (KeyValuePair<uint, NetworkIdentity> spawned in NetworkServer.spawned)
+            {
+                Debug.Log("Spawned: " + spawned.Value.gameObject.name);
+            }
         }
 
         /// <summary>

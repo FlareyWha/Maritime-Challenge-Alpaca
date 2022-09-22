@@ -56,7 +56,6 @@ public class Battleship : NetworkBehaviour
 
     public override void OnStartAuthority()
     {
-        Debug.Log("BattleShip: Taken Authority Over BattleShip");
     }
 
     public void SetOwner(Player player)

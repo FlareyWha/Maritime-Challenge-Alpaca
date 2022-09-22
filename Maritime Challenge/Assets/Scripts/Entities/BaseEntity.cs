@@ -128,7 +128,6 @@ public class BaseEntity : NetworkBehaviour
         if (touchPos.x < entityPos.x + spriteSize.x * 0.5f && touchPos.x > entityPos.x - spriteSize.x * 0.5f
             && touchPos.y > entityPos.y - spriteSize.y * 0.5f && touchPos.y < entityPos.y + spriteSize.y * 0.5f)
         {
-            Debug.Log("Entity Clicked| : " + gameObject.name);
             return true;
         }
 

@@ -20,12 +20,12 @@ public class EnemySpawner : NetworkBehaviour
     {
         Instance = this;
 
-        NetworkServer.SpawnObjects();
-        Debug.Log("Spawned Network GOs Count: " + NetworkServer.spawned.Count);
-        foreach (KeyValuePair<uint, NetworkIdentity> spawned in NetworkServer.spawned)
-        {
-            Debug.Log("Spawned: " + spawned.Value.gameObject.name);
-        }
+        //NetworkServer.SpawnObjects();
+        //Debug.Log("Spawned Network GOs Count: " + NetworkServer.spawned.Count);
+        //foreach (KeyValuePair<uint, NetworkIdentity> spawned in NetworkServer.spawned)
+        //{
+        //    Debug.Log("Spawned: " + spawned.Value.gameObject.name);
+        //}
 
     }
 

@@ -24,6 +24,8 @@ public class AirHockeyPaddle : NetworkBehaviour
         if (!hasAuthority)
             return;
 
+        Debug.Log("HAS AUTHOROYTY");
+
         if (isHeld)
         {
 
