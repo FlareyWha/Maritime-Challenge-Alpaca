@@ -3273,6 +3273,10 @@ PrefabInstance:
       propertyPath: sceneId
       value: 1094715095
       objectReference: {fileID: 0}
+    - target: {fileID: 2696401116161882547, guid: 2716639459e443f46b7efacff488f231, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2880123258973544020, guid: 2716639459e443f46b7efacff488f231, type: 3}
       propertyPath: sceneId
       value: 1910147216
@@ -3299,15 +3303,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3023359793369798420, guid: 2716639459e443f46b7efacff488f231, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3023359793369798420, guid: 2716639459e443f46b7efacff488f231, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3023359793369798420, guid: 2716639459e443f46b7efacff488f231, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3023359793369798420, guid: 2716639459e443f46b7efacff488f231, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3329,9 +3333,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: AirHockeyMinigame
       objectReference: {fileID: 0}
+    - target: {fileID: 4674696949503442560, guid: 2716639459e443f46b7efacff488f231, type: 3}
+      propertyPath: sceneId
+      value: 4112359470
+      objectReference: {fileID: 0}
     - target: {fileID: 5682671690110805727, guid: 2716639459e443f46b7efacff488f231, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7135350957074365323, guid: 2716639459e443f46b7efacff488f231, type: 3}
       propertyPath: sceneId
@@ -3339,7 +3347,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7771160456136221704, guid: 2716639459e443f46b7efacff488f231, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8975234048263222954, guid: 2716639459e443f46b7efacff488f231, type: 3}
       propertyPath: m_IsActive

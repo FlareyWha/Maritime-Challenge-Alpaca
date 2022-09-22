@@ -9,22 +9,23 @@ public class AirHockeySeat : Interactable
     private AirHockeyMinigame AirHockeyGameManager;
     [SerializeField]
     private AirHockeyPaddle PlayerPaddle;
+    [SerializeField]
+    private bool IsOppositeSide;
+
+    //public bool OnOppositeSide { get { return IsOppositeSide; } }
 
     private int UID = -1;
-    private static List<AirHockeySeat> airHockeySeatsList = new List<AirHockeySeat>();
-
 
     void Start()
     {
         interactMessage = "Play Air Hockey";
 
-        UID = airHockeySeatsList.Count;
-        airHockeySeatsList.Add(this);
+        UID = AirHockeyGameManager.GetAssignedSeatID(this);
     }
 
     public override void Interact()
     {
-        AirHockeyGameManager.PlayerJoinGame(this.UID, PlayerData.MyPlayer);
+        AirHockeyGameManager.PlayerJoinGame(this.UID, IsOppositeSide, PlayerData.MyPlayer);
     }
 
     
@@ -39,17 +40,6 @@ public class AirHockeySeat : Interactable
     public void RevokePaddleControl()
     {
         PlayerPaddle.RevokeControl();
-    }
-
-    public static AirHockeySeat GetSeat(int id)
-    {
-        foreach (AirHockeySeat seat in airHockeySeatsList)
-        {
-            if (seat.UID == id)
-                return seat;
-        }
-        Debug.LogError("Could Not Find Seat of ID " + id);
-        return null;
     }
 
 }

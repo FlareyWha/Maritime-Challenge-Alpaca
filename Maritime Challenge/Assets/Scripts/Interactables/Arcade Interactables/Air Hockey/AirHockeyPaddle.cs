@@ -18,38 +18,55 @@ public class AirHockeyPaddle : NetworkBehaviour
         Debug.Log("Taken Control of Paddle");
     }
 
+    [Client]
+    private void Awake()
+    {
+       // StartCoroutine(InitOnSpawn());
+    }
+
+
+    IEnumerator InitOnSpawn()
+    {
+        yield return null;
+    }
+
     private void Update()
     {
-        
+       
+
         if (!hasAuthority)
             return;
 
-        Debug.Log("HAS AUTHOROYTY");
 
         if (isHeld)
         {
 
             if (InputManager.InputActions.Main.Tap.WasReleasedThisFrame())
             {
+                Debug.Log("Air Hockey Paddle Released");
                 isHeld = false;
                 return;
             }
 
             // Get Delta Pos
             Vector2 dis = InputManager.GetTouchPos() - lastHeldPos;
-            Vector3 deltaPos = Camera.main.ScreenToWorldPoint(new Vector3(dis.x, dis.y, 1));
+            Vector2 deltaPos = DisplayUtility.ConvertScreenToWorld(dis);
+            Debug.Log("Delta Pos: " + deltaPos);
             // Move Paddle
             rb.position += new Vector2(deltaPos.x, deltaPos.y);
 
             lastHeldPos = InputManager.GetTouchPos();
         }
-        else if ( IsWithinSprite() && InputManager.InputActions.Main.Tap.WasPressedThisFrame())// &&)
+        else if (InputManager.InputActions.Main.Tap.WasPressedThisFrame()
+            && SpriteHandler.IsWithinSprite(transform.position, GetComponent<SpriteRenderer>()))
         {
+            Debug.Log("Air Hockey Paddle Held");
             isHeld = true;
             lastHeldPos = InputManager.GetTouchPos();
         }
     }
 
+    
     [Server]
     public void AssignController(NetworkIdentity player)
     { 
@@ -62,22 +79,7 @@ public class AirHockeyPaddle : NetworkBehaviour
         netIdentity.RemoveClientAuthority();
     }
 
-    protected bool IsWithinSprite()
-    {
-        // Get Player Sprite Size
-        Vector2 spriteSize = GetSpriteSize();
-
-        Vector2 touchPos = InputManager.GetTouchPos();
-        Vector3 entityPos = UIManager.Instance.Camera.GetComponent<Camera>().WorldToScreenPoint(transform.position);
-        if (touchPos.x < entityPos.x + spriteSize.x * 0.5f && touchPos.x > entityPos.x - spriteSize.x * 0.5f
-            && touchPos.y > entityPos.y - spriteSize.y * 0.5f && touchPos.y < entityPos.y + spriteSize.y * 0.5f)
-        {
-            Debug.Log("Player Paddle Within Sprite");
-            return true;
-        }
-        Debug.Log($"====Air Hockey Paddle IsWithinEntity()====\nTouch Pos: {touchPos} \nEntity Pos: {entityPos} \nSprite Size: {spriteSize}");
-        return false;
-    }
+   
 
     public Vector2 GetSpriteSize()
     {

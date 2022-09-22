@@ -13,18 +13,27 @@ public class AirHockeyMinigame : NetworkBehaviour
     private GameObject Puck;
     [SerializeField]
     private AirHockeyPaddle[] PlayerPaddle;
+    [SerializeField]
+    private AirHockeySeat[] PlayerSeats;
 
 
     private readonly SyncDictionary<int, Player> playersList = new SyncDictionary<int, Player>();
 
     private int zoomValue = 5;
 
-
-
-
-    public void PlayerJoinGame(int seatID, Player player)
+    [Client]
+    private void Start()
     {
-        EnterTable(playersList.Count == 1);
+        AirHockeyGamePanel.SetActive(false);
+        Puck.gameObject.SetActive(false);
+        for (int i = 0; i < PlayerPaddle.Length; i++)
+            PlayerPaddle[i].gameObject.SetActive(false);
+    }
+
+
+    public void PlayerJoinGame(int seatID, bool oppSide, Player player)
+    {
+        EnterTable(oppSide);
         // Send to Server
         ServerOnPlayerJoinGame(seatID, PlayerData.MyPlayer);
     }
@@ -34,9 +43,10 @@ public class AirHockeyMinigame : NetworkBehaviour
     {
 
         // Assign Player Paddle
+        if (playersList.ContainsKey(seatID))
+            playersList.Remove(seatID);
         playersList.Add(seatID, player);
-        // AirHockeySeat.GetSeat(seatID).AssignPaddleControl(player);
-        PlayerPaddle[0].netIdentity.AssignClientAuthority(player.connectionToClient);
+        PlayerSeats[seatID].AssignPaddleControl(player);
 
         // Update All Clients
         OnPlayerJoinGameCallback(seatID);
@@ -50,7 +60,7 @@ public class AirHockeyMinigame : NetworkBehaviour
     private void OnPlayerJoinGameCallback(int seatID)
     {
         // Take Up Seat
-        AirHockeySeat seat = AirHockeySeat.GetSeat(seatID);
+        AirHockeySeat seat = PlayerSeats[seatID];
         if (seat == null)
             return;
 
@@ -63,7 +73,7 @@ public class AirHockeyMinigame : NetworkBehaviour
         int seatID = GetPlayerSeatID(player);
         playersList.Remove(seatID);
 
-        AirHockeySeat.GetSeat(seatID).RevokePaddleControl();
+        PlayerSeats[seatID].RevokePaddleControl();
 
         OnPlayerLeftGameCallback(seatID);
     }
@@ -71,7 +81,7 @@ public class AirHockeyMinigame : NetworkBehaviour
     [ClientRpc]
     private void OnPlayerLeftGameCallback(int seatID)
     {
-        AirHockeySeat seat = AirHockeySeat.GetSeat(seatID);
+        AirHockeySeat seat = PlayerSeats[seatID];
         if (seat == null)
             return;
 
@@ -92,7 +102,9 @@ public class AirHockeyMinigame : NetworkBehaviour
         PlayerFollowCamera.Instance.SetFollowTarget(this.gameObject);
         PlayerFollowCamera.Instance.ZoomCameraInOut(zoomValue, 0.7f);
         if (oppSide)
-            PlayerFollowCamera.Instance.FlipCamera(0.5f);
+            PlayerFollowCamera.Instance.RotateCamera(transform.rotation.eulerAngles.z + 180, 0.5f);
+        else
+            PlayerFollowCamera.Instance.RotateCamera(transform.rotation.eulerAngles.z, 0.5f);
     }
 
     [Client]
@@ -137,6 +149,17 @@ public class AirHockeyMinigame : NetworkBehaviour
                 return info.Key;
         }
         Debug.LogError("Player not recorded in list of seated players!");
+        return -1;
+    }
+
+    public int GetAssignedSeatID(AirHockeySeat seat)
+    {
+        for (int i = 0; i < PlayerSeats.Length; i++)
+        {
+            if (PlayerSeats[i] == seat)
+                return i;
+        }
+        Debug.Log("Could not find seat!");
         return -1;
     }
 }

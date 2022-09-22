@@ -46,8 +46,7 @@ public class Player : BaseEntity
         PlayerData.MyPlayer = this;
         // Init Synced Player Vars
         SetDetails(PlayerData.UID, PlayerData.Name, PlayerData.Biography, PlayerData.CurrentTitleID, PlayerData.GuildID, PlayerData.Country, PlayerData.CurrLevel);
-        Debug.Log("Setting Player Name.." + username);
-
+       
         PlayerData.OnPlayerDataUpdated += SetDetails;
 
         //Init My BattleShip
@@ -56,7 +55,6 @@ public class Player : BaseEntity
 
         //DontDestroyOnLoad(this);
         //transform.position = new Vector3(-10, -10, 0);
-
 
         // Load Player into World Hub
         gameObject.GetComponent<PlayerCommands>().EnterSubScene("WorldHubScene", SceneManager.StartWorldHubSpawnPos);

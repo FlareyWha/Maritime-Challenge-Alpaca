@@ -85,6 +85,11 @@ public class PlayerFollowCamera : MonoBehaviourSingleton<PlayerFollowCamera>
         RotateCameraAnim(180.0f, anim_time);
     }
 
+    public void RotateCamera(float theta, float anim_time)
+    {
+        RotateCameraAnim(theta, anim_time);
+    }
+
     IEnumerator RotateCameraAnim(float theta, float anim_time)
     {
         if (cam.transform.rotation.eulerAngles.z == theta)

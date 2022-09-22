@@ -118,45 +118,22 @@ public class BaseEntity : NetworkBehaviour
     {
     }
 
-    protected bool IsWithinEntity()
+    public bool IsWithinEntity()
     {
-        // Get Player Sprite Size
-        Vector2 spriteSize = GetSpriteSize();
-
-        Vector2 touchPos = InputManager.GetTouchPos();
-        Vector3 entityPos = UIManager.Instance.Camera.GetComponent<Camera>().WorldToScreenPoint(transform.position);
-        if (touchPos.x < entityPos.x + spriteSize.x * 0.5f && touchPos.x > entityPos.x - spriteSize.x * 0.5f
-            && touchPos.y > entityPos.y - spriteSize.y * 0.5f && touchPos.y < entityPos.y + spriteSize.y * 0.5f)
-        {
-            return true;
-        }
-
-        return false;
+        return SpriteHandler.IsWithinSprite(transform.position, GetComponent<SpriteRenderer>());
     }
 
-    public Vector2 GetSpriteSize()
-    {
-        Vector2 spriteSize = GetComponent<SpriteRenderer>().bounds.size;
-        //spriteSize.x *= transform.lossyScale.x;
-        //spriteSize.y *= transform.lossyScale.y;
-        float world_units_x = Camera.main.orthographicSize * 2.0f * ((float)Screen.width / Screen.height);
-        float world_units_y = Camera.main.orthographicSize * 2.0f;
-        float sizeX = (spriteSize.x / world_units_x) * Screen.width;
-        float sizeY = (spriteSize.y / world_units_y) * Screen.height;
-      
-        return new Vector2(sizeX, sizeY);
-        
-    }
+   
 
     public float GetSpriteRadius()
     {
-        Vector2 spriteSize = GetSpriteSize();
-        return (spriteSize.x + spriteSize.y) * 0.5f;
+        Vector2 spriteSize = SpriteHandler.GetSpriteSizeInPixels(GetComponent<SpriteRenderer>());
+        return (spriteSize.x + spriteSize.y) * 0.25f;
     }
 
     public float GetSpriteSizeMax()
     {
-        Vector2 spriteSize = GetSpriteSize();
+        Vector2 spriteSize = SpriteHandler.GetSpriteSizeInPixels(GetComponent<SpriteRenderer>());
         return spriteSize.x > spriteSize.y ? spriteSize.x : spriteSize.y;
     }
 

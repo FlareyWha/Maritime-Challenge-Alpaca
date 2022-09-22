@@ -107,7 +107,7 @@ namespace Mirror.Examples.MultipleAdditiveScenes
             Debug.Log("Spawned Network GOs Count: " + NetworkServer.spawned.Count);
             foreach (KeyValuePair<uint, NetworkIdentity> spawned in NetworkServer.spawned)
             {
-                Debug.Log("Spawned: " + spawned.Value.gameObject.name);
+                Debug.Log("Spawned: " + spawned.Value.gameObject.name + " Net ID: " + spawned.Value.netId);
             }
         }
 
