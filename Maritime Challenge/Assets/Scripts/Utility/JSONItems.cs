@@ -103,3 +103,21 @@ public class JSONReceivedFriendRequestList
 {
     public List<JSONReceivedFriendRequest> receivedFriendRequests = new List<JSONReceivedFriendRequest>();
 }
+
+[Serializable]
+public class JSONAbandonedCity
+{
+    public int iAbandonedCityID;
+    public string sAbandonedCityName;
+    public int iAbandonedCityAreaCellWidth;
+    public int iAbandonedCityAreaCellHeight;
+    public int fAbandonedCityXPos;
+    public int fAbandonedCityYPos;
+    public int iCapturedGuildID;
+}
+
+[Serializable]
+public class JSONAbandonedCityList
+{
+    public List<JSONAbandonedCity> abandonedCities = new List<JSONAbandonedCity>();
+}

@@ -67,7 +67,7 @@ public class ServerDataManager : MonoBehaviour
 
     #region Handling Guilds & Abandoned Cities
 
-    public static string URL_getAbandonedCityCapturedGuildID = serverURL + "GetAbandonedCityCapturedGuildID.php";
+    public static string URL_getAbandonedCityInfo = serverURL + "GetAbandonedCityInfo.php";
     public static string URL_updateAbandonedCityCapturedGuildID = serverURL + "UpdateAbandonedCityCapturedGuildID.php";
 
     #endregion

@@ -107,4 +107,11 @@ public class JSONDeseralizer : MonoBehaviour
             PlayerData.ReceivedFriendRequestList.Add(receivedFriendRequestList.receivedFriendRequests[i].iOwnerUID);
         }
     }
+
+    public static List<JSONAbandonedCity> DeseralizeAbandonedCityInfo(string abandonedCityJSON)
+    {
+        JSONAbandonedCityList abandonedCityList = JsonUtility.FromJson<JSONAbandonedCityList>(abandonedCityJSON);
+
+        return abandonedCityList.abandonedCities;
+    }
 }

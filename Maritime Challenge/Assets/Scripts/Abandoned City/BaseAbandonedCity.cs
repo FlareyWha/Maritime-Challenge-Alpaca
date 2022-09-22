@@ -29,9 +29,14 @@ public class BaseAbandonedCity : MonoBehaviour
         Gizmos.DrawWireCube(transform.position, new Vector3(abandonedCityAreaUpperLimit.x - abandonedCityAreaLowerLimit.x, abandonedCityAreaUpperLimit.y - abandonedCityAreaLowerLimit.y, 0));
     }
 
-    // Start is called before the first frame update
-    void Start()
+    public void InitAbandonedCity(int id, int areaCellWidth, int areaCellHeight, Vector2 position, int guildID)
     {
+        abandonedCityID = id;
+        abandonedCityAreaCellWidth = areaCellWidth;
+        abandonedCityAreaCellHeight = areaCellHeight;
+        transform.position = position;
+        capturedGuildID = guildID;
+
         //Check whether abandoned city with this id has been cleared or not
         //StartCoroutine(CheckClearedGuildID());
 
@@ -52,12 +57,6 @@ public class BaseAbandonedCity : MonoBehaviour
         gridMovementAreaUpperLimit = new Vector3Int(gridSpawnPoint.x + abandonedCityAreaCellWidth / 2, gridSpawnPoint.y + abandonedCityAreaCellHeight / 2, 0);
         abandonedCityAreaLowerLimit = grid.CellToWorld(gridMovementAreaLowerLimit);
         abandonedCityAreaUpperLimit = grid.CellToWorld(gridMovementAreaUpperLimit);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-         
     }
     
     //[ClientRpc]
@@ -163,34 +162,6 @@ public class BaseAbandonedCity : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             RemoveFromPlayerList(collision.GetComponent<Player>());
-        }
-    }
-
-    IEnumerator CheckClearedGuildID()
-    {
-        string url = ServerDataManager.URL_getAbandonedCityCapturedGuildID;
-        Debug.Log(url);
-
-        WWWForm form = new WWWForm();
-        form.AddField("iAbandonedCityID", abandonedCityID);
-        using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
-        yield return webreq.SendWebRequest();
-        switch (webreq.result)
-        {
-            case UnityWebRequest.Result.Success:
-                int iCapturedGuildID = int.Parse(webreq.downloadHandler.text);
-                if (iCapturedGuildID != -1)
-                {
-                    cleared = true;
-                    capturedGuildID = iCapturedGuildID;
-                }
-                break;
-            case UnityWebRequest.Result.ProtocolError:
-                Debug.LogError(webreq.downloadHandler.text);
-                break;
-            default:
-                Debug.LogError(webreq.downloadHandler.text);
-                break;
         }
     }
 
