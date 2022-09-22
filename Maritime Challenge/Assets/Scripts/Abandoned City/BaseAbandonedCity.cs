@@ -2,9 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Networking;
 
 public class BaseAbandonedCity : MonoBehaviour
 {
+    [SerializeField]  //Honestly idk i need to find a way to do this better but else uhhhhhhhh
+    protected int abandonedCityID;
+
     protected List<BaseEnemy> enemyList = new List<BaseEnemy>();
     protected List<Player> playerList = new List<Player>();
 
@@ -14,9 +18,9 @@ public class BaseAbandonedCity : MonoBehaviour
     protected Vector3Int gridMovementAreaLowerLimit, gridMovementAreaUpperLimit;
 
     protected bool cleared = false;
-    protected int clearedGuildID = 0;
+    protected int capturedGuildID = 0;
     [SerializeField]
-    protected Text clearedGuildName;
+    protected Text capturedGuildName;
 
     protected void OnDrawGizmos()
     {
@@ -28,11 +32,19 @@ public class BaseAbandonedCity : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Check whether abandoned city with this id has been cleared or not
+        //StartCoroutine(CheckClearedGuildID());
+
+        //if (!isServer)
+        //    return;
+
         Grid grid = GameObject.Find("Grid").GetComponent<Grid>();
 
         //Make sure cell width and height will always fit cell size
         abandonedCityAreaCellWidth -= Mathf.RoundToInt(abandonedCityAreaCellWidth % grid.cellSize.x);
         abandonedCityAreaCellHeight -= Mathf.RoundToInt(abandonedCityAreaCellHeight % grid.cellSize.y);
+
+        ResizeColliderSize(grid);
 
         //Can delete these late this is just to see whether the sizes work
         Vector3Int gridSpawnPoint = grid.WorldToCell(transform.position);
@@ -46,6 +58,16 @@ public class BaseAbandonedCity : MonoBehaviour
     void Update()
     {
          
+    }
+    
+    //[ClientRpc]
+    public void ResizeColliderSize(Grid grid)
+    {
+        //Set the size for the collider
+        BoxCollider2D boxCollider2D = GetComponent<BoxCollider2D>();
+        boxCollider2D.size = new Vector2(abandonedCityAreaCellWidth * grid.cellSize.x, abandonedCityAreaCellHeight * grid.cellSize.y);
+
+        Debug.Log(boxCollider2D.size);
     }
 
     public void OnFirstPlayerEnterArea()
@@ -64,6 +86,8 @@ public class BaseAbandonedCity : MonoBehaviour
 
         if (playerList.Count == 1)
             OnFirstPlayerEnterArea();
+
+        Debug.Log("Player added");
     }
 
     public void RemoveFromPlayerList(Player player)
@@ -72,6 +96,8 @@ public class BaseAbandonedCity : MonoBehaviour
 
         if (playerList.Count == 0)
             OnLastPlayerLeaveArea();
+
+        Debug.Log("Player removed");
     }
 
     public void AddToEnemyList(BaseEnemy enemy)
@@ -90,7 +116,7 @@ public class BaseAbandonedCity : MonoBehaviour
         if (enemyList.Count == 0)
         {
             cleared = true;
-            clearedGuildID = enemyKiller.GetGuildID();
+            capturedGuildID = enemyKiller.GetGuildID();
             //clearedGuildName.text = ???
 
             //Set info in database
@@ -100,11 +126,59 @@ public class BaseAbandonedCity : MonoBehaviour
     public void SpawnEnemies()
     {
         //Spawn enemies and make sure to set the abandoned city variable in the enemies to this one.
+
+        Debug.Log("Spawned enemies");
     }
 
     public void ResetAbandonedCity()
     {
         enemyList.Clear();
         playerList.Clear();
+
+        Debug.Log("Resetted abandoned city");
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            AddToPlayerList(collision.GetComponent<Player>());
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            RemoveFromPlayerList(collision.GetComponent<Player>());
+        }
+    }
+
+    IEnumerator CheckClearedGuildID()
+    {
+        string url = ServerDataManager.URL_getAbandonedCityCapturedGuildID;
+        Debug.Log(url);
+
+        WWWForm form = new WWWForm();
+        form.AddField("iAbandonedCityID", abandonedCityID);
+        using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
+        yield return webreq.SendWebRequest();
+        switch (webreq.result)
+        {
+            case UnityWebRequest.Result.Success:
+                int iCapturedGuildID = int.Parse(webreq.downloadHandler.text);
+                if (iCapturedGuildID != -1)
+                {
+                    cleared = true;
+                    capturedGuildID = iCapturedGuildID;
+                }
+                break;
+            case UnityWebRequest.Result.ProtocolError:
+                Debug.LogError(webreq.downloadHandler.text);
+                break;
+            default:
+                Debug.LogError(webreq.downloadHandler.text);
+                break;
+        }
     }
 }

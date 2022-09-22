@@ -33,6 +33,7 @@ public class ServerDataManager : MonoBehaviour
     public static string URL_updateUsername = serverURL + "UpdateUsername.php";
     public static string URL_updateBiography = serverURL + "UpdateBiography.php";
     public static string URL_updateTitle = serverURL + "UpdateTitle.php";
+
     #endregion
 
     #region Handling Friends & Friend Requests
@@ -61,6 +62,13 @@ public class ServerDataManager : MonoBehaviour
 
     public static string URL_getMissionStatus = serverURL + "GetMissionStatus.php";
     public static string URL_getAchievementStatus = serverURL + "GetAchievementStatus.php";
+
+    #endregion
+
+    #region Handling Guilds & Abandoned Cities
+
+    public static string URL_getAbandonedCityCapturedGuildID = serverURL + "GetAbandonedCityCapturedGuildID.php";
+    public static string URL_updateAbandonedCityCapturedGuildID = serverURL + "UpdateAbandonedCityCapturedGuildID.php";
 
     #endregion
 }
