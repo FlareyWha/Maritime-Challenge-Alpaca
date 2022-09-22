@@ -16,7 +16,7 @@ public class PlayerMovement : NetworkBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (!isLocalPlayer)
             return;

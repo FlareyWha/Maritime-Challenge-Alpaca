@@ -38,5 +38,8 @@ public class InputManager : MonoBehaviour
         actionMap.Enable();
     }
 
-
+    public static Vector2 GetTouchPos()
+    {
+        return InputActions.Main.TouchPosition.ReadValue<Vector2>();
+    }
 }

@@ -8,7 +8,7 @@ public class GameHandler : NetworkBehaviour
     #region Singleton
     public static GameHandler Instance = null;
     #endregion
-    private SyncList<Player> onlinePlayers = new SyncList<Player>();
+    private readonly SyncList<Player> onlinePlayers = new SyncList<Player>();
 
     private void Awake()
     {
