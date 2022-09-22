@@ -66,6 +66,13 @@ public class BaseEnemy : BaseEntity
     protected Vector2 currentMovementDirection;
     protected int pathIncrement;
 
+    protected BaseAbandonedCity linkedAbandonedCity = null;
+    public BaseAbandonedCity LinkedAbandonedCity
+    {
+        get { return linkedAbandonedCity; }
+        set { linkedAbandonedCity = value; }
+    }
+
     protected void OnDrawGizmos()
     {
         //Draw something to visualize the box area
@@ -373,8 +380,9 @@ public class BaseEnemy : BaseEntity
     }
 
     [Server]
-    protected override void HandleDeath()
+    protected override void HandleDeath(GameObject attacker)
     {
+        linkedAbandonedCity.RemoveFromEnemyList(this, attacker.GetComponent<Player>());
         NetworkServer.Destroy(gameObject);
     }
 
