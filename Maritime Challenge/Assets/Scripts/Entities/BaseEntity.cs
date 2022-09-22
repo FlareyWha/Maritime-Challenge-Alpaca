@@ -128,6 +128,7 @@ public class BaseEntity : NetworkBehaviour
         if (touchPos.x < entityPos.x + spriteSize.x * 0.5f && touchPos.x > entityPos.x - spriteSize.x * 0.5f
             && touchPos.y > entityPos.y - spriteSize.y * 0.5f && touchPos.y < entityPos.y + spriteSize.y * 0.5f)
         {
+            Debug.Log("Entity Clicked| : " + gameObject.name);
             return true;
         }
 
@@ -136,13 +137,16 @@ public class BaseEntity : NetworkBehaviour
 
     public Vector2 GetSpriteSize()
     {
-        Vector2 spriteSize = GetComponent<SpriteRenderer>().bounds.size * 0.5f;
-        float pixelsPerUnit = GetComponent<SpriteRenderer>().sprite.pixelsPerUnit;
-
-        spriteSize.x *= pixelsPerUnit;
-        spriteSize.y *= pixelsPerUnit;
-
-        return spriteSize;
+        Vector2 spriteSize = GetComponent<SpriteRenderer>().bounds.size;
+        //spriteSize.x *= transform.lossyScale.x;
+        //spriteSize.y *= transform.lossyScale.y;
+        float world_units_x = Camera.main.orthographicSize * 2.0f * ((float)Screen.width / Screen.height);
+        float world_units_y = Camera.main.orthographicSize * 2.0f;
+        float sizeX = (spriteSize.x / world_units_x) * Screen.width;
+        float sizeY = (spriteSize.y / world_units_y) * Screen.height;
+      
+        return new Vector2(sizeX, sizeY);
+        
     }
 
     public float GetSpriteRadius()
