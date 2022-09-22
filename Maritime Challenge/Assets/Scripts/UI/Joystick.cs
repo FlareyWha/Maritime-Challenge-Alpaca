@@ -44,7 +44,7 @@ public class Joystick : MonoBehaviour
             if (!GameSettings.LOCK_JOYSTICK)
             {
                 ShowJoystick();
-                Vector2 touchWorldPos = InputManager.InputActions.Main.TouchPosition.ReadValue<Vector2>();
+                Vector2 touchWorldPos = InputManager.GetTouchPos();
                 MoveJoystick(touchWorldPos);
                 ConstraintWithinScreen();
             }
@@ -61,7 +61,7 @@ public class Joystick : MonoBehaviour
                 return;
             }
 
-            Vector2 touchWorldPos = InputManager.InputActions.Main.TouchPosition.ReadValue<Vector2>();
+            Vector2 touchWorldPos = InputManager.GetTouchPos();
 
             Vector2 oriPos = new Vector2(OuterCircle.transform.position.x, OuterCircle.transform.position.y);
             if (Vector2.Distance(touchWorldPos, oriPos) > max_delta_radius)

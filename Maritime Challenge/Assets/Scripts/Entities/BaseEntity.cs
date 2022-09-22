@@ -120,11 +120,10 @@ public class BaseEntity : NetworkBehaviour
 
     protected bool IsWithinEntity()
     {
-
         // Get Player Sprite Size
         Vector2 spriteSize = GetSpriteSize();
 
-        Vector2 touchPos = InputManager.InputActions.Main.TouchPosition.ReadValue<Vector2>();
+        Vector2 touchPos = InputManager.GetTouchPos();
         Vector3 entityPos = UIManager.Instance.Camera.GetComponent<Camera>().WorldToScreenPoint(transform.position);
         if (touchPos.x < entityPos.x + spriteSize.x * 0.5f && touchPos.x > entityPos.x - spriteSize.x * 0.5f
             && touchPos.y > entityPos.y - spriteSize.y * 0.5f && touchPos.y < entityPos.y + spriteSize.y * 0.5f)

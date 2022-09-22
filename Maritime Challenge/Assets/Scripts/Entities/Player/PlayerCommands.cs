@@ -211,6 +211,17 @@ public class PlayerCommands : NetworkBehaviour
         Sit.Sits[sitID].UpdateInteractMessage();
     }
 
+   
+    public void SendJoinGameEvent(AirHockeyMinigame gameManager, int seatID)
+    {
+        gameManager.ServerOnPlayerJoinGame(seatID, PlayerData.MyPlayer);
+    }
+
+    public void SendLeaveGameEvent(AirHockeyMinigame gameManager)
+    {
+        gameManager.ServerOnPlayerLeftGame(PlayerData.MyPlayer);
+    }
+
     IEnumerator WaitEnterScene(string sceneName)
     {
         UIManager.Instance.ToggleLoadingScreen(true);
