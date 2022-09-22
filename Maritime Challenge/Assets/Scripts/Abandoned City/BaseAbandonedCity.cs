@@ -17,7 +17,7 @@ public class BaseAbandonedCity : MonoBehaviour
     protected Vector2 abandonedCityAreaLowerLimit, abandonedCityAreaUpperLimit;
     protected Vector3Int gridMovementAreaLowerLimit, gridMovementAreaUpperLimit;
 
-    protected bool cleared = false;
+    protected bool captured = false;
     protected int capturedGuildID = 0;
     [SerializeField]
     protected Text capturedGuildName;
@@ -37,8 +37,10 @@ public class BaseAbandonedCity : MonoBehaviour
         transform.position = position;
         capturedGuildID = guildID;
 
-        //Check whether abandoned city with this id has been cleared or not
-        //StartCoroutine(CheckClearedGuildID());
+        if (capturedGuildID != -1)
+        {
+            captured = true;
+        }
 
         //if (!isServer)
         //    return;
