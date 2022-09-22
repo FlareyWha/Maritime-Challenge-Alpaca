@@ -212,15 +212,7 @@ public class PlayerCommands : NetworkBehaviour
     }
 
    
-    public void SendJoinGameEvent(AirHockeyMinigame gameManager, int seatID)
-    {
-        gameManager.ServerOnPlayerJoinGame(seatID, PlayerData.MyPlayer);
-    }
-
-    public void SendLeaveGameEvent(AirHockeyMinigame gameManager)
-    {
-        gameManager.ServerOnPlayerLeftGame(PlayerData.MyPlayer);
-    }
+    
 
     IEnumerator WaitEnterScene(string sceneName)
     {

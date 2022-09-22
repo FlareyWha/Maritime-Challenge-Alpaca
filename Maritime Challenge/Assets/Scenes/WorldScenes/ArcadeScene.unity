@@ -3261,6 +3261,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 931602503}
     m_Modifications:
+    - target: {fileID: 901517970600426947, guid: 2716639459e443f46b7efacff488f231, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1954065359930885874, guid: 2716639459e443f46b7efacff488f231, type: 3}
       propertyPath: sceneId
       value: 1147983220
@@ -3325,9 +3329,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: AirHockeyMinigame
       objectReference: {fileID: 0}
+    - target: {fileID: 5682671690110805727, guid: 2716639459e443f46b7efacff488f231, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7135350957074365323, guid: 2716639459e443f46b7efacff488f231, type: 3}
       propertyPath: sceneId
       value: 3160435612
+      objectReference: {fileID: 0}
+    - target: {fileID: 7771160456136221704, guid: 2716639459e443f46b7efacff488f231, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8975234048263222954, guid: 2716639459e443f46b7efacff488f231, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2716639459e443f46b7efacff488f231, type: 3}

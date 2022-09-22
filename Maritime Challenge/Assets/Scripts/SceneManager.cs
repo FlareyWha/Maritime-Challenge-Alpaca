@@ -22,8 +22,10 @@ public class SceneManager : MonoBehaviourSingleton<SceneManager>
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (mode == LoadSceneMode.Additive)
+        if (mode == LoadSceneMode.Additive && PlayerData.activeSubScene != scene.name)
+        {
             PlayerData.activeSubScene = scene.name;
+        }
     }
 
     public void LoadScene(string name)

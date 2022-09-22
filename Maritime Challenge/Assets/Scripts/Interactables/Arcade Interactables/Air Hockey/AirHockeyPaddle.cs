@@ -15,10 +15,12 @@ public class AirHockeyPaddle : NetworkBehaviour
     public override void OnStartAuthority()
     {
         rb = GetComponent<Rigidbody2D>();
+        Debug.Log("Taken Control of Paddle");
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
+        
         if (!hasAuthority)
             return;
 
@@ -39,7 +41,7 @@ public class AirHockeyPaddle : NetworkBehaviour
 
             lastHeldPos = InputManager.GetTouchPos();
         }
-        else if (InputManager.InputActions.Main.Tap.WasPressedThisFrame() && IsWithinSprite())
+        else if ( IsWithinSprite() && InputManager.InputActions.Main.Tap.WasPressedThisFrame())// &&)
         {
             isHeld = true;
             lastHeldPos = InputManager.GetTouchPos();
@@ -47,9 +49,9 @@ public class AirHockeyPaddle : NetworkBehaviour
     }
 
     [Server]
-    public void AssignController(NetworkConnectionToClient conn)
-    {
-        netIdentity.AssignClientAuthority(conn);
+    public void AssignController(NetworkIdentity player)
+    { 
+        this.netIdentity.AssignClientAuthority(player.connectionToClient);
     }
 
     [Server]
@@ -68,7 +70,7 @@ public class AirHockeyPaddle : NetworkBehaviour
         if (touchPos.x < entityPos.x + spriteSize.x * 0.5f && touchPos.x > entityPos.x - spriteSize.x * 0.5f
             && touchPos.y > entityPos.y - spriteSize.y * 0.5f && touchPos.y < entityPos.y + spriteSize.y * 0.5f)
         {
-            Debug.Log("Player Paddle Pressed");
+            Debug.Log("Player Paddle Within Sprite");
             return true;
         }
         Debug.Log($"====Air Hockey Paddle IsWithinEntity()====\nTouch Pos: {touchPos} \nEntity Pos: {entityPos} \nSprite Size: {spriteSize}");

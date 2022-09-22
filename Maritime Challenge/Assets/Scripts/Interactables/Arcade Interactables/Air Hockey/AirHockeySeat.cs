@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
 public class AirHockeySeat : Interactable
 {
     [SerializeField]
-    private AirHockeyMinigame AirHockeyGame;
+    private AirHockeyMinigame AirHockeyGameManager;
+    [SerializeField]
+    private AirHockeyPaddle PlayerPaddle;
 
     private int UID = -1;
     private static List<AirHockeySeat> airHockeySeatsList = new List<AirHockeySeat>();
@@ -21,7 +24,21 @@ public class AirHockeySeat : Interactable
 
     public override void Interact()
     {
-        AirHockeyGame.PlayerJoinGame(this.UID, PlayerData.MyPlayer);
+        AirHockeyGameManager.PlayerJoinGame(this.UID, PlayerData.MyPlayer);
+    }
+
+    
+    [Server]
+    public void AssignPaddleControl(Player player)
+    {
+        Debug.Log("Assigning Authority to " + player.GetUsername());
+        PlayerPaddle.AssignController(player.netIdentity);
+    }
+
+    [Server]
+    public void RevokePaddleControl()
+    {
+        PlayerPaddle.RevokeControl();
     }
 
     public static AirHockeySeat GetSeat(int id)

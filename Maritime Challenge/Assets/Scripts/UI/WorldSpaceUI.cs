@@ -6,6 +6,6 @@ public class WorldSpaceUI : MonoBehaviour
 {
     private void FixedUpdate()
     {
-        transform.rotation = Quaternion.Euler(Camera.main.transform.forward);
+        transform.rotation = Camera.main.transform.rotation;
     }
 }

@@ -15,7 +15,7 @@ public class AirHockeyMinigame : NetworkBehaviour
     private AirHockeyPaddle[] PlayerPaddle;
 
 
-    private readonly SyncDictionary<int, Player> players = new SyncDictionary<int, Player>();
+    private readonly SyncDictionary<int, Player> playersList = new SyncDictionary<int, Player>();
 
     private int zoomValue = 5;
 
@@ -24,24 +24,24 @@ public class AirHockeyMinigame : NetworkBehaviour
 
     public void PlayerJoinGame(int seatID, Player player)
     {
-        EnterTable(players.Count == 1);
+        EnterTable(playersList.Count == 1);
         // Send to Server
-        PlayerData.CommandsHandler.SendJoinGameEvent(this, seatID);
+        ServerOnPlayerJoinGame(seatID, PlayerData.MyPlayer);
     }
 
-    [Command]
+    [Command(requiresAuthority = false)]
     public void ServerOnPlayerJoinGame(int seatID, Player player)
     {
 
         // Assign Player Paddle
-        players.Add(seatID, player);
-        PlayerPaddle[players.Count - 1].AssignController(player.connectionToClient);
+        playersList.Add(seatID, player);
+        AirHockeySeat.GetSeat(seatID).AssignPaddleControl(player);
 
         // Update All Clients
         OnPlayerJoinGameCallback(seatID);
 
         // Start Game
-        if (players.Count == 2)
+        if (playersList.Count == 2)
             StartGame();
     }
 
@@ -56,11 +56,14 @@ public class AirHockeyMinigame : NetworkBehaviour
         seat.enabled = false;
     }
 
-    [Command]
+    [Command(requiresAuthority = false)]
     public void ServerOnPlayerLeftGame(Player player)
     {
         int seatID = GetPlayerSeatID(player);
-        players.Remove(seatID);
+        playersList.Remove(seatID);
+
+        AirHockeySeat.GetSeat(seatID).RevokePaddleControl();
+
         OnPlayerLeftGameCallback(seatID);
     }
 
@@ -122,12 +125,12 @@ public class AirHockeyMinigame : NetworkBehaviour
         LeaveTable();
 
         // Send to Server
-        PlayerData.CommandsHandler.SendLeaveGameEvent(this);
+        ServerOnPlayerLeftGame(PlayerData.MyPlayer);
     }
 
     private int GetPlayerSeatID(Player player)
     {
-        foreach (KeyValuePair<int, Player> info in players)
+        foreach (KeyValuePair<int, Player> info in playersList)
         {
             if (info.Value == player)
                 return info.Key;
