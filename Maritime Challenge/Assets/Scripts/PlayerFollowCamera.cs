@@ -16,7 +16,7 @@ public class PlayerFollowCamera : MonoBehaviourSingleton<PlayerFollowCamera>
         defaultOrthoSize = cam.orthographicSize;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (followTarget != null)
         {
@@ -116,5 +116,6 @@ public class PlayerFollowCamera : MonoBehaviourSingleton<PlayerFollowCamera>
     {
         StartCoroutine(RotateCameraAnim(0, anim_time));
         ResetCameraZoom(anim_time);
+        SetFollowTarget(PlayerData.MyPlayer.gameObject);
     }
 }

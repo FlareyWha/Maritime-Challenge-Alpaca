@@ -31,7 +31,7 @@ public class AirHockeySeat : Interactable
             if (seat.UID == id)
                 return seat;
         }
-        Debug.Log("Could Not Find Seat of ID " + id);
+        Debug.LogError("Could Not Find Seat of ID " + id);
         return null;
     }
 

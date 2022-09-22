@@ -24,6 +24,13 @@ public class AirHockeyPaddle : NetworkBehaviour
 
         if (isHeld)
         {
+
+            if (InputManager.InputActions.Main.Tap.WasReleasedThisFrame())
+            {
+                isHeld = false;
+                return;
+            }
+
             // Get Delta Pos
             Vector2 dis = InputManager.GetTouchPos() - lastHeldPos;
             Vector3 deltaPos = Camera.main.ScreenToWorldPoint(new Vector3(dis.x, dis.y, 1));
@@ -56,14 +63,15 @@ public class AirHockeyPaddle : NetworkBehaviour
         // Get Player Sprite Size
         Vector2 spriteSize = GetSpriteSize();
 
-        Vector2 touchPos = InputManager.InputActions.Main.TouchPosition.ReadValue<Vector2>();
+        Vector2 touchPos = InputManager.GetTouchPos();
         Vector3 entityPos = UIManager.Instance.Camera.GetComponent<Camera>().WorldToScreenPoint(transform.position);
         if (touchPos.x < entityPos.x + spriteSize.x * 0.5f && touchPos.x > entityPos.x - spriteSize.x * 0.5f
             && touchPos.y > entityPos.y - spriteSize.y * 0.5f && touchPos.y < entityPos.y + spriteSize.y * 0.5f)
         {
+            Debug.Log("Player Paddle Pressed");
             return true;
         }
-
+        Debug.Log($"====Air Hockey Paddle IsWithinEntity()====\nTouch Pos: {touchPos} \nEntity Pos: {entityPos} \nSprite Size: {spriteSize}");
         return false;
     }
 

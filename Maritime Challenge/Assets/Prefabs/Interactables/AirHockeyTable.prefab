@@ -290,6 +290,9 @@ Transform:
   - {fileID: 3791476932684936838}
   - {fileID: 9043629409150874664}
   - {fileID: 2194434065780184573}
+  - {fileID: 482322184981953720}
+  - {fileID: 4967399345186826148}
+  - {fileID: 1348670648967764852}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -507,8 +510,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  Puck: {fileID: 7771160456136221704}
   AirHockeyGamePanel: {fileID: 8975234048263222954}
+  Puck: {fileID: 7771160456136221704}
   PlayerPaddle:
   - {fileID: 1450703871533018921}
   - {fileID: 6232943840492237877}
@@ -632,7 +635,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8795636547074033452}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4070121627111080301}
+        m_TargetAssemblyTypeName: AirHockeyMinigame, Assembly-CSharp
+        m_MethodName: OnLeaveGameClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7771160456136221704
 GameObject:
   m_ObjectHideFlags: 0
@@ -654,7 +669,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1348670648967764852
 Transform:
   m_ObjectHideFlags: 0
@@ -666,8 +681,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
-  m_Father: {fileID: 2194434065780184573}
-  m_RootOrder: 2
+  m_Father: {fileID: 3023359793369798420}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7522353075684954852
 SpriteRenderer:
@@ -771,7 +786,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 0
   serverOnly: 0
-  visible: 0
+  visible: 1
   m_AssetId: 2716639459e443f46b7efacff488f231
   hasSpawned: 0
 --- !u!114 &1629271808794726386
@@ -925,7 +940,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2194434065780184573
 Transform:
   m_ObjectHideFlags: 0
@@ -939,9 +954,6 @@ Transform:
   m_Children:
   - {fileID: 3125290702728134244}
   - {fileID: 7175824918421159052}
-  - {fileID: 1348670648967764852}
-  - {fileID: 482322184981953720}
-  - {fileID: 4967399345186826148}
   m_Father: {fileID: 3023359793369798420}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -962,11 +974,11 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 2194434065780184573}
+    m_TransformParent: {fileID: 3023359793369798420}
     m_Modifications:
     - target: {fileID: 59145987402794706, guid: 200c3e463b3e8f7489e0ce8ab094c135, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 59145987402794706, guid: 200c3e463b3e8f7489e0ce8ab094c135, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1012,6 +1024,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Paddle
       objectReference: {fileID: 0}
+    - target: {fileID: 5241990155221474485, guid: 200c3e463b3e8f7489e0ce8ab094c135, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7306657645744751073, guid: 200c3e463b3e8f7489e0ce8ab094c135, type: 3}
+      propertyPath: visible
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7306657645744751073, guid: 200c3e463b3e8f7489e0ce8ab094c135, type: 3}
       propertyPath: m_AssetId
       value: 2716639459e443f46b7efacff488f231
@@ -1044,7 +1064,7 @@ PrefabInstance:
     - target: {fileID: 4232143378964692471, guid: 72320e30dd9756d4fb57caabb17d1125, type: 3}
       propertyPath: AirHockeyGame
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 4070121627111080301}
     - target: {fileID: 7456361120195047102, guid: 72320e30dd9756d4fb57caabb17d1125, type: 3}
       propertyPath: m_Name
       value: AirHockeySeat (1)
@@ -1114,7 +1134,7 @@ PrefabInstance:
     - target: {fileID: 4232143378964692471, guid: 72320e30dd9756d4fb57caabb17d1125, type: 3}
       propertyPath: AirHockeyGame
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 4070121627111080301}
     - target: {fileID: 7456361120195047102, guid: 72320e30dd9756d4fb57caabb17d1125, type: 3}
       propertyPath: m_Name
       value: AirHockeySeat
@@ -1179,11 +1199,11 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 2194434065780184573}
+    m_TransformParent: {fileID: 3023359793369798420}
     m_Modifications:
     - target: {fileID: 59145987402794706, guid: 200c3e463b3e8f7489e0ce8ab094c135, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 59145987402794706, guid: 200c3e463b3e8f7489e0ce8ab094c135, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1228,6 +1248,14 @@ PrefabInstance:
     - target: {fileID: 5241990155221474485, guid: 200c3e463b3e8f7489e0ce8ab094c135, type: 3}
       propertyPath: m_Name
       value: Paddle (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5241990155221474485, guid: 200c3e463b3e8f7489e0ce8ab094c135, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7306657645744751073, guid: 200c3e463b3e8f7489e0ce8ab094c135, type: 3}
+      propertyPath: visible
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7306657645744751073, guid: 200c3e463b3e8f7489e0ce8ab094c135, type: 3}
       propertyPath: m_AssetId

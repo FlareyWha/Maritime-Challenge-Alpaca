@@ -15,6 +15,8 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
     public Joystick Joystick;
 
     [SerializeField]
+    private GameObject MenuGO, ChatGO;
+    [SerializeField]
     private Image MenuPanelMask;
     [SerializeField]
     private Image ChatPanelMask;
@@ -49,6 +51,15 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
         FriendsManager.OnNewFriendDataSaved += OnFriendDataSaved;
         FriendRequestHandler.OnFriendRequestSent += OnFriendRequestsUpdated;
         FriendRequestHandler.OnFriendRequestDeleted += OnFriendRequestsUpdated;
+    }
+
+    public void ToggleMainUI(bool show)
+    {
+        ToggleJoystick(show);
+        MenuGO.SetActive(show);
+        ChatGO.SetActive(show);
+        InteractButton.gameObject.SetActive(show);
+
     }
 
     public void ToggleMenu(Button button)
@@ -132,7 +143,6 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
 
         FriendsManager.Instance.GetFriendDataInfo(id);
     }
-
 
 
     public void ShowInteractNamecard()

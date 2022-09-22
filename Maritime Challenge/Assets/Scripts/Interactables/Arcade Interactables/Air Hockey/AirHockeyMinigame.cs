@@ -14,16 +14,11 @@ public class AirHockeyMinigame : NetworkBehaviour
     [SerializeField]
     private AirHockeyPaddle[] PlayerPaddle;
 
-    
-    private readonly SyncList<Player> players = new SyncList<Player>();
+
+    private readonly SyncDictionary<int, Player> players = new SyncDictionary<int, Player>();
 
     private int zoomValue = 5;
 
-
-    void Awake()
-    {
-        AirHockeyGamePanel.SetActive(false);
-    }
 
 
 
@@ -31,19 +26,19 @@ public class AirHockeyMinigame : NetworkBehaviour
     {
         EnterTable(players.Count == 1);
         // Send to Server
-        ServerOnPlayerJoinGame(seatID, player);
+        PlayerData.CommandsHandler.SendJoinGameEvent(this, seatID);
     }
 
     [Command]
-    private void ServerOnPlayerJoinGame(int seatID, Player player)
+    public void ServerOnPlayerJoinGame(int seatID, Player player)
     {
-     
+
         // Assign Player Paddle
-        players.Add(player);
+        players.Add(seatID, player);
         PlayerPaddle[players.Count - 1].AssignController(player.connectionToClient);
 
         // Update All Clients
-        ClientOnPlayerJoinGame(seatID);
+        OnPlayerJoinGameCallback(seatID);
 
         // Start Game
         if (players.Count == 2)
@@ -51,7 +46,7 @@ public class AirHockeyMinigame : NetworkBehaviour
     }
 
     [ClientRpc]
-    private void ClientOnPlayerJoinGame(int seatID)
+    private void OnPlayerJoinGameCallback(int seatID)
     {
         // Take Up Seat
         AirHockeySeat seat = AirHockeySeat.GetSeat(seatID);
@@ -61,12 +56,36 @@ public class AirHockeyMinigame : NetworkBehaviour
         seat.enabled = false;
     }
 
+    [Command]
+    public void ServerOnPlayerLeftGame(Player player)
+    {
+        int seatID = GetPlayerSeatID(player);
+        players.Remove(seatID);
+        OnPlayerLeftGameCallback(seatID);
+    }
+
+    [ClientRpc]
+    private void OnPlayerLeftGameCallback(int seatID)
+    {
+        AirHockeySeat seat = AirHockeySeat.GetSeat(seatID);
+        if (seat == null)
+            return;
+
+        seat.enabled = true;
+    }
 
     [Client]
     private void EnterTable(bool oppSide)
     {
+        // Hide Main UI
+        UIManager.Instance.ToggleMainUI(false);
+        // Show Air Hockey Game GOs
         AirHockeyGamePanel.SetActive(true);
-
+        Puck.gameObject.SetActive(true);
+        for (int i = 0; i < PlayerPaddle.Length; i++)
+            PlayerPaddle[i].gameObject.SetActive(true);
+        // Camera ANims
+        PlayerFollowCamera.Instance.SetFollowTarget(this.gameObject);
         PlayerFollowCamera.Instance.ZoomCameraInOut(zoomValue, 0.7f);
         if (oppSide)
             PlayerFollowCamera.Instance.FlipCamera(0.5f);
@@ -75,8 +94,14 @@ public class AirHockeyMinigame : NetworkBehaviour
     [Client]
     private void LeaveTable()
     {
+        // Show Main UI
+        UIManager.Instance.ToggleMainUI(true);
+        // Hide Air Hockey Game GOs
         AirHockeyGamePanel.SetActive(false);
-
+        Puck.gameObject.SetActive(false);
+        for (int i = 0; i < PlayerPaddle.Length; i++)
+            PlayerPaddle[i].gameObject.SetActive(false);
+        // Reset Camera Anims
         PlayerFollowCamera.Instance.ResetAll(0.7f);
     }
 
@@ -96,6 +121,18 @@ public class AirHockeyMinigame : NetworkBehaviour
     {
         LeaveTable();
 
-        // server things
+        // Send to Server
+        PlayerData.CommandsHandler.SendLeaveGameEvent(this);
+    }
+
+    private int GetPlayerSeatID(Player player)
+    {
+        foreach (KeyValuePair<int, Player> info in players)
+        {
+            if (info.Value == player)
+                return info.Key;
+        }
+        Debug.LogError("Player not recorded in list of seated players!");
+        return -1;
     }
 }
