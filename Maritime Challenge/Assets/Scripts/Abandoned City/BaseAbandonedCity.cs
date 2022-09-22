@@ -33,7 +33,10 @@ public class BaseAbandonedCity : MonoBehaviour
     void Start()
     {
         //Check whether abandoned city with this id has been cleared or not
-        StartCoroutine(CheckClearedGuildID());
+        //StartCoroutine(CheckClearedGuildID());
+
+        //if (!isServer)
+        //    return;
 
         Grid grid = GameObject.Find("Grid").GetComponent<Grid>();
 
@@ -41,22 +44,30 @@ public class BaseAbandonedCity : MonoBehaviour
         abandonedCityAreaCellWidth -= Mathf.RoundToInt(abandonedCityAreaCellWidth % grid.cellSize.x);
         abandonedCityAreaCellHeight -= Mathf.RoundToInt(abandonedCityAreaCellHeight % grid.cellSize.y);
 
+        ResizeColliderSize(grid);
+
         //Can delete these late this is just to see whether the sizes work
         Vector3Int gridSpawnPoint = grid.WorldToCell(transform.position);
         gridMovementAreaLowerLimit = new Vector3Int(gridSpawnPoint.x - abandonedCityAreaCellWidth / 2, gridSpawnPoint.y - abandonedCityAreaCellHeight / 2, 0);
         gridMovementAreaUpperLimit = new Vector3Int(gridSpawnPoint.x + abandonedCityAreaCellWidth / 2, gridSpawnPoint.y + abandonedCityAreaCellHeight / 2, 0);
         abandonedCityAreaLowerLimit = grid.CellToWorld(gridMovementAreaLowerLimit);
         abandonedCityAreaUpperLimit = grid.CellToWorld(gridMovementAreaUpperLimit);
-
-        BoxCollider2D boxCollider2D = GetComponent<BoxCollider2D>();
-
-        boxCollider2D.size = new Vector2(abandonedCityAreaCellWidth, abandonedCityAreaCellHeight);
     }
 
     // Update is called once per frame
     void Update()
     {
          
+    }
+    
+    //[ClientRpc]
+    public void ResizeColliderSize(Grid grid)
+    {
+        //Set the size for the collider
+        BoxCollider2D boxCollider2D = GetComponent<BoxCollider2D>();
+        boxCollider2D.size = new Vector2(abandonedCityAreaCellWidth * grid.cellSize.x, abandonedCityAreaCellHeight * grid.cellSize.y);
+
+        Debug.Log(boxCollider2D.size);
     }
 
     public void OnFirstPlayerEnterArea()
@@ -75,6 +86,8 @@ public class BaseAbandonedCity : MonoBehaviour
 
         if (playerList.Count == 1)
             OnFirstPlayerEnterArea();
+
+        Debug.Log("Player added");
     }
 
     public void RemoveFromPlayerList(Player player)
@@ -83,6 +96,8 @@ public class BaseAbandonedCity : MonoBehaviour
 
         if (playerList.Count == 0)
             OnLastPlayerLeaveArea();
+
+        Debug.Log("Player removed");
     }
 
     public void AddToEnemyList(BaseEnemy enemy)
@@ -111,12 +126,32 @@ public class BaseAbandonedCity : MonoBehaviour
     public void SpawnEnemies()
     {
         //Spawn enemies and make sure to set the abandoned city variable in the enemies to this one.
+
+        Debug.Log("Spawned enemies");
     }
 
     public void ResetAbandonedCity()
     {
         enemyList.Clear();
         playerList.Clear();
+
+        Debug.Log("Resetted abandoned city");
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            AddToPlayerList(collision.GetComponent<Player>());
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            RemoveFromPlayerList(collision.GetComponent<Player>());
+        }
     }
 
     IEnumerator CheckClearedGuildID()
