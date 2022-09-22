@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5790801874766008407}
   - component: {fileID: 4189220138252397911}
   - component: {fileID: 7855122233307762988}
+  - component: {fileID: 1771988706346974671}
   m_Layer: 0
   m_Name: AbandonedCity
   m_TagString: Untagged
@@ -96,9 +97,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aea5e33feae8b82408325a7db35c0722, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  abandonedCityID: 0
   abandonedCityAreaCellWidth: 50
   abandonedCityAreaCellHeight: 50
-  clearedGuildName: {fileID: 6031496230787156070}
+  capturedGuildName: {fileID: 0}
+--- !u!61 &1771988706346974671
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410607568657538083}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 26.130001, y: 19.661295}
+    newSize: {x: 0.69, y: 0.71}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 40, y: 40}
+  m_EdgeRadius: 0
 --- !u!1 &4728638781621404735
 GameObject:
   m_ObjectHideFlags: 0
@@ -306,7 +334,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 200}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &4674022533375722616
 Canvas:

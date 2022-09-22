@@ -2,9 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Networking;
 
 public class BaseAbandonedCity : MonoBehaviour
 {
+    [SerializeField]  //Honestly idk i need to find a way to do this better but else uhhhhhhhh
+    protected int abandonedCityID;
+
     protected List<BaseEnemy> enemyList = new List<BaseEnemy>();
     protected List<Player> playerList = new List<Player>();
 
@@ -14,9 +18,9 @@ public class BaseAbandonedCity : MonoBehaviour
     protected Vector3Int gridMovementAreaLowerLimit, gridMovementAreaUpperLimit;
 
     protected bool cleared = false;
-    protected int clearedGuildID = 0;
+    protected int capturedGuildID = 0;
     [SerializeField]
-    protected Text clearedGuildName;
+    protected Text capturedGuildName;
 
     protected void OnDrawGizmos()
     {
@@ -28,6 +32,9 @@ public class BaseAbandonedCity : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Check whether abandoned city with this id has been cleared or not
+        StartCoroutine(CheckClearedGuildID());
+
         Grid grid = GameObject.Find("Grid").GetComponent<Grid>();
 
         //Make sure cell width and height will always fit cell size
@@ -40,6 +47,10 @@ public class BaseAbandonedCity : MonoBehaviour
         gridMovementAreaUpperLimit = new Vector3Int(gridSpawnPoint.x + abandonedCityAreaCellWidth / 2, gridSpawnPoint.y + abandonedCityAreaCellHeight / 2, 0);
         abandonedCityAreaLowerLimit = grid.CellToWorld(gridMovementAreaLowerLimit);
         abandonedCityAreaUpperLimit = grid.CellToWorld(gridMovementAreaUpperLimit);
+
+        BoxCollider2D boxCollider2D = GetComponent<BoxCollider2D>();
+
+        boxCollider2D.size = new Vector2(abandonedCityAreaCellWidth, abandonedCityAreaCellHeight);
     }
 
     // Update is called once per frame
@@ -90,7 +101,7 @@ public class BaseAbandonedCity : MonoBehaviour
         if (enemyList.Count == 0)
         {
             cleared = true;
-            clearedGuildID = enemyKiller.GetGuildID();
+            capturedGuildID = enemyKiller.GetGuildID();
             //clearedGuildName.text = ???
 
             //Set info in database
@@ -106,5 +117,33 @@ public class BaseAbandonedCity : MonoBehaviour
     {
         enemyList.Clear();
         playerList.Clear();
+    }
+
+    IEnumerator CheckClearedGuildID()
+    {
+        string url = ServerDataManager.URL_getAbandonedCityCapturedGuildID;
+        Debug.Log(url);
+
+        WWWForm form = new WWWForm();
+        form.AddField("iAbandonedCityID", abandonedCityID);
+        using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
+        yield return webreq.SendWebRequest();
+        switch (webreq.result)
+        {
+            case UnityWebRequest.Result.Success:
+                int iCapturedGuildID = int.Parse(webreq.downloadHandler.text);
+                if (iCapturedGuildID != -1)
+                {
+                    cleared = true;
+                    capturedGuildID = iCapturedGuildID;
+                }
+                break;
+            case UnityWebRequest.Result.ProtocolError:
+                Debug.LogError(webreq.downloadHandler.text);
+                break;
+            default:
+                Debug.LogError(webreq.downloadHandler.text);
+                break;
+        }
     }
 }
