@@ -67,7 +67,7 @@ public class AbandonedCityManager : MonoBehaviourSingleton<AbandonedCityManager>
 
             abandonedCity.InitAbandonedCity(abandonedCityInfo[i].iAbandonedCityID, abandonedCityInfo[i].iAbandonedCityAreaCellWidth, abandonedCityInfo[i].iAbandonedCityAreaCellHeight, new Vector2(abandonedCityInfo[i].fAbandonedCityXPos, abandonedCityInfo[i].fAbandonedCityYPos), abandonedCityInfo[i].iCapturedGuildID);
 
-            UnityEngine.SceneManagement.SceneManager.MoveGameObjectToScene(abandonedCity.gameObject, UnityEngine.SceneManagement.SceneManager.GetSceneByName(PlayerData.activeSubScene));
+            //UnityEngine.SceneManagement.SceneManager.MoveGameObjectToScene(abandonedCity.gameObject, UnityEngine.SceneManagement.SceneManager.GetSceneByName("WorldHubScene"));
         }
     }
 }

@@ -383,9 +383,12 @@ public class BaseEnemy : BaseEntity
     protected override void HandleDeath(GameObject attacker)
     {
         if (linkedAbandonedCity != null)
+        {
             linkedAbandonedCity.RemoveFromEnemyList(this, attacker.GetComponent<Player>());
-
-        NetworkServer.Destroy(gameObject);
+            gameObject.SetActive(false);
+        }
+        else
+            NetworkServer.Destroy(gameObject);
     }
 
     [Client]
