@@ -6,7 +6,7 @@ using Mirror;
 public class AirHockeyMinigame : NetworkBehaviour
 {
     [SerializeField]
-    private GameObject AirHockeyGamePanel;
+    private GameObject AirHockeyGamePanel, GameCanvas;
 
     [SerializeField]
     private GameObject Puck;
@@ -18,12 +18,12 @@ public class AirHockeyMinigame : NetworkBehaviour
 
     private readonly SyncDictionary<int, Player> playersList = new SyncDictionary<int, Player>();
 
-    private int zoomValue = 5;
+    private int zoomValue = 28;
 
-    [Client]
     private void Start()
     {
         AirHockeyGamePanel.SetActive(false);
+        GameCanvas.SetActive(false);
         Puck.gameObject.SetActive(false);
         for (int i = 0; i < PlayerPaddle.Length; i++)
             PlayerPaddle[i].gameObject.SetActive(false);
@@ -40,6 +40,7 @@ public class AirHockeyMinigame : NetworkBehaviour
     [Command(requiresAuthority = false)]
     public void ServerOnPlayerJoinGame(int seatID, Player player)
     {
+        AirHockeyGamePanel.SetActive(true); // for server
 
         // Assign Player Paddle
         if (playersList.ContainsKey(seatID))
@@ -71,6 +72,8 @@ public class AirHockeyMinigame : NetworkBehaviour
     {
         int seatID = GetPlayerSeatID(player);
         playersList.Remove(seatID);
+        if (playersList.Count == 0)
+            AirHockeyGamePanel.SetActive(false);
 
         PlayerSeats[seatID].RevokePaddleControl();
 
@@ -94,16 +97,15 @@ public class AirHockeyMinigame : NetworkBehaviour
         UIManager.Instance.ToggleMainUI(false);
         // Show Air Hockey Game GOs
         AirHockeyGamePanel.SetActive(true);
+        GameCanvas.SetActive(true);
         Puck.gameObject.SetActive(true);
         for (int i = 0; i < PlayerPaddle.Length; i++)
             PlayerPaddle[i].gameObject.SetActive(true);
         // Camera ANims
-        PlayerFollowCamera.Instance.SetFollowTarget(this.gameObject);
-        PlayerFollowCamera.Instance.ZoomCameraInOut(zoomValue, 0.7f);
+        PlayerFollowCamera.Instance.SetFollowTarget(AirHockeyGamePanel.gameObject);
+        PlayerFollowCamera.Instance.ZoomCameraInOut(zoomValue, 1.0f);
         if (oppSide)
-            PlayerFollowCamera.Instance.RotateCamera(transform.rotation.eulerAngles.z + 180, 0.5f);
-        else
-            PlayerFollowCamera.Instance.RotateCamera(transform.rotation.eulerAngles.z, 0.5f);
+            PlayerFollowCamera.Instance.RotateCamera(180, 1.0f);
     }
 
     [Client]
@@ -113,6 +115,7 @@ public class AirHockeyMinigame : NetworkBehaviour
         UIManager.Instance.ToggleMainUI(true);
         // Hide Air Hockey Game GOs
         AirHockeyGamePanel.SetActive(false);
+        GameCanvas.SetActive(false);
         Puck.gameObject.SetActive(false);
         for (int i = 0; i < PlayerPaddle.Length; i++)
             PlayerPaddle[i].gameObject.SetActive(false);
@@ -123,7 +126,7 @@ public class AirHockeyMinigame : NetworkBehaviour
     [Server]
     private void StartGame()
     {
-
+        
     }
 
     [Server]

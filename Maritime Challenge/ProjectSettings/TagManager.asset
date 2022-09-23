@@ -7,6 +7,9 @@ TagManager:
   - DontDestroy
   - Dock
   - Enemy
+  - AirHockeyPuck
+  - Wall
+  - AirHockeyPaddle
   layers:
   - Default
   - TransparentFX
