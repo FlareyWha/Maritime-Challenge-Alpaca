@@ -146,14 +146,14 @@ public class BaseAbandonedCity : NetworkBehaviour
     {
         if (enemyList.Count == 0)
         {
-            ClearAbandonedCity(enemyKiller);
+            CaptureAbandonedCity(enemyKiller);
 
             //Set info in database
             StartCoroutine(UpdateClearedGuildID());
         }
     }
 
-    public void ClearAbandonedCity(Player enemyKiller)
+    public void CaptureAbandonedCity(Player enemyKiller)
     {
         captured = true;
         capturedGuildID = enemyKiller.GetGuildID();
