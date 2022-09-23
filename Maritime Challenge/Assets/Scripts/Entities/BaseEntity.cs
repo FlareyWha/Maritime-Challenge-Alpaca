@@ -127,13 +127,13 @@ public class BaseEntity : NetworkBehaviour
 
     public float GetSpriteRadius()
     {
-        Vector2 spriteSize = SpriteHandler.GetSpriteSizeInPixels(GetComponent<SpriteRenderer>());
+        Vector2 spriteSize = SpriteHandler.GetSpriteSize(GetComponent<SpriteRenderer>());
         return (spriteSize.x + spriteSize.y) * 0.25f;
     }
 
     public float GetSpriteSizeMax()
     {
-        Vector2 spriteSize = SpriteHandler.GetSpriteSizeInPixels(GetComponent<SpriteRenderer>());
+        Vector2 spriteSize = SpriteHandler.GetSpriteSize(GetComponent<SpriteRenderer>());
         return spriteSize.x > spriteSize.y ? spriteSize.x : spriteSize.y;
     }
 

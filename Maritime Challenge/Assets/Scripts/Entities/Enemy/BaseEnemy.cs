@@ -225,7 +225,7 @@ public class BaseEnemy : BaseEntity
             currEnemyState = ENEMY_STATES.IDLE;
             ResetTimer(maxIdleTime);
         }
-        else if (distanceToPlayer < attackDistance + currentTargetPlayer.GetOwner().GetSpriteRadius() + GetSpriteRadius())
+        else if (distanceToPlayer < (attackDistance + SpriteHandler.GetSpriteSize(currentTargetPlayer.GetComponent<SpriteRenderer>()).x + GetSpriteRadius()))
         {
             currEnemyState = ENEMY_STATES.ATTACK;
             timer = 0.5f * attack_interval;
@@ -383,9 +383,12 @@ public class BaseEnemy : BaseEntity
     protected override void HandleDeath(GameObject attacker)
     {
         if (linkedAbandonedCity != null)
+        {
             linkedAbandonedCity.RemoveFromEnemyList(this, attacker.GetComponent<Player>());
-
-        NetworkServer.Destroy(gameObject);
+            gameObject.SetActive(false);
+        }
+        else
+            NetworkServer.Destroy(gameObject);
     }
 
     [Client]

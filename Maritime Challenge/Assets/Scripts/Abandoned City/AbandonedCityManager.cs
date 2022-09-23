@@ -6,11 +6,13 @@ using Mirror;
 
 public class AbandonedCityManager : MonoBehaviourSingleton<AbandonedCityManager>
 {
-    private List<BaseAbandonedCity> abandonedCities = new List<BaseAbandonedCity>();
-
     private List<JSONAbandonedCity> abandonedCityInfo = new List<JSONAbandonedCity>();
 
+    [SerializeField]
     private GameObject abandonedCityPrefab;
+
+    [SerializeField]
+    private Transform abandonedCityContainer;
 
     // Start is called before the first frame update
     void Start()
@@ -26,11 +28,11 @@ public class AbandonedCityManager : MonoBehaviourSingleton<AbandonedCityManager>
         
     }
 
+    [Server]
     void CreateAbandonedCities()
     {
-        //Get the abandoned cities from database???
-        //abandonedCities.Clear();
-        //abandonedCities.AddRange(FindObjectsOfType<BaseAbandonedCity>());
+        //Get the abandoned cities from database
+        StartCoroutine(GetAbandonedCityInfo());
     }
 
     IEnumerator GetAbandonedCityInfo()
@@ -56,14 +58,16 @@ public class AbandonedCityManager : MonoBehaviourSingleton<AbandonedCityManager>
         }
     }
     
-    [Server]
     void SpawnAbandonedCities()
     {
         for (int i = 0; i < abandonedCityInfo.Count; ++i)
         {
-            BaseAbandonedCity abandonedCity = Instantiate(abandonedCityPrefab, new Vector3(abandonedCityInfo[i].fAbandonedCityXPos, abandonedCityInfo[i].fAbandonedCityYPos, 0), Quaternion.identity).GetComponent<BaseAbandonedCity>();
+            BaseAbandonedCity abandonedCity = Instantiate(abandonedCityPrefab, new Vector3(abandonedCityInfo[i].fAbandonedCityXPos, abandonedCityInfo[i].fAbandonedCityYPos, 0), Quaternion.identity, abandonedCityContainer).GetComponent<BaseAbandonedCity>();
             NetworkServer.Spawn(abandonedCity.gameObject);
+
             abandonedCity.InitAbandonedCity(abandonedCityInfo[i].iAbandonedCityID, abandonedCityInfo[i].iAbandonedCityAreaCellWidth, abandonedCityInfo[i].iAbandonedCityAreaCellHeight, new Vector2(abandonedCityInfo[i].fAbandonedCityXPos, abandonedCityInfo[i].fAbandonedCityYPos), abandonedCityInfo[i].iCapturedGuildID);
+
+            //UnityEngine.SceneManagement.SceneManager.MoveGameObjectToScene(abandonedCity.gameObject, UnityEngine.SceneManagement.SceneManager.GetSceneByName("WorldHubScene"));
         }
     }
 }

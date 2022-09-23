@@ -10,6 +10,7 @@ public class BaseAbandonedCity : NetworkBehaviour
     [SerializeField]  //Honestly idk i need to find a way to do this better but else uhhhhhhhh
     protected int abandonedCityID;
 
+    protected List<BaseEnemy> allEnemies = new List<BaseEnemy>();
     protected List<BaseEnemy> enemyList = new List<BaseEnemy>();
     protected List<Player> playerList = new List<Player>();
 
@@ -75,6 +76,24 @@ public class BaseAbandonedCity : NetworkBehaviour
         gridMovementAreaUpperLimit = new Vector3Int(gridSpawnPoint.x + abandonedCityAreaCellWidth / 2, gridSpawnPoint.y + abandonedCityAreaCellHeight / 2, 0);
         abandonedCityAreaLowerLimit = grid.CellToWorld(gridMovementAreaLowerLimit);
         abandonedCityAreaUpperLimit = grid.CellToWorld(gridMovementAreaUpperLimit);
+
+        InitEnemies();
+    }
+
+    public void InitEnemies()
+    {
+        for (int i = 0; i < 5; ++i)
+        {
+            GameObject baseEnemyGameObject = Instantiate(EnemyAssetManager.Instance.BlobTheFish, transform.position + new Vector3(0, 0, 0), Quaternion.identity);
+
+            NetworkServer.Spawn(baseEnemyGameObject);
+
+            UnityEngine.SceneManagement.SceneManager.MoveGameObjectToScene(baseEnemyGameObject, UnityEngine.SceneManagement.SceneManager.GetSceneByName("WorldHubScene"));
+
+            baseEnemyGameObject.SetActive(false);
+
+            allEnemies.Add(baseEnemyGameObject.GetComponent<BaseEnemy>());
+        }
     }
     
     public void ResizeColliderSize(Grid grid)
@@ -127,34 +146,62 @@ public class BaseAbandonedCity : NetworkBehaviour
     {
         if (enemyList.Count == 0)
         {
-            ClearAbandonedCity(enemyKiller);
+            CaptureAbandonedCity(enemyKiller);
 
             //Set info in database
             StartCoroutine(UpdateClearedGuildID());
         }
     }
 
-    public void ClearAbandonedCity(Player enemyKiller)
+    public void CaptureAbandonedCity(Player enemyKiller)
     {
         captured = true;
         capturedGuildID = enemyKiller.GetGuildID();
         //clearedGuildName.text = ???
+
+        DestroyEnemies();
     }
 
     public void SpawnEnemies()
     {
         //Spawn enemies and make sure to set the abandoned city variable in the enemies to this one.
+        foreach (BaseEnemy enemy in allEnemies)
+        {
+            enemy.gameObject.SetActive(true);
+        }
 
-        //Server must call and reflect on all clients
+        enemyList = allEnemies;
 
         Debug.Log("Spawned enemies");
     }
 
-    public void ResetAbandonedCity()
+    public void UnspawnEnemies()
     {
-        //Server must call and reflect on all clients
+        foreach (BaseEnemy enemy in enemyList)
+        {
+            enemy.gameObject.SetActive(false);
+        }
 
         enemyList.Clear();
+    }
+
+    public void DestroyEnemies()
+    {
+        enemyList.Clear();
+
+        foreach (BaseEnemy enemy in allEnemies)
+        {
+            NetworkServer.Destroy(enemy.gameObject);
+        }
+
+        allEnemies.Clear();
+    }
+
+    public void ResetAbandonedCity()
+    {
+        //Unspawn all the enemies
+        UnspawnEnemies();
+
         playerList.Clear();
 
        // Debug.Log("Resetted abandoned city");
