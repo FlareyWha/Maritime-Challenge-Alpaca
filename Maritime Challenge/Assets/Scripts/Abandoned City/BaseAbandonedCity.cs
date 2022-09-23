@@ -23,6 +23,8 @@ public class BaseAbandonedCity : NetworkBehaviour
     [SerializeField]
     protected Text capturedGuildName;
 
+    protected Grid grid;
+
     protected void OnDrawGizmos()
     {
         //Draw something to visualize the box area
@@ -30,10 +32,21 @@ public class BaseAbandonedCity : NetworkBehaviour
         Gizmos.DrawWireCube(transform.position, new Vector3(abandonedCityAreaUpperLimit.x - abandonedCityAreaLowerLimit.x, abandonedCityAreaUpperLimit.y - abandonedCityAreaLowerLimit.y, 0));
     }
 
-    private void Awake()
+    IEnumerator GetGrid()
     {
-        Grid grid = GameObject.Find("Grid").GetComponent<Grid>();
+        while (GridManager.Instance == null)
+        {
+            yield return null;
+        }
+
+        grid = GridManager.Instance.Grid;
+
         ResizeColliderSize(grid);
+    }
+
+    private void Start()
+    {
+        StartCoroutine(GetGrid());
     }
 
     [Server]
@@ -49,7 +62,6 @@ public class BaseAbandonedCity : NetworkBehaviour
         {
             captured = true;
         }
-
       
         Grid grid = GameObject.Find("Grid").GetComponent<Grid>();
 
