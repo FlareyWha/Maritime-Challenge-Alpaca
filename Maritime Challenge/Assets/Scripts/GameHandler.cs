@@ -73,7 +73,7 @@ public static class SpriteHandler
 
 public static class DisplayUtility
 {
-    public static Vector2 ConvertScreenToWorld(Vector2 screenVec)
+    public static Vector2 ConvertWorldToScreen(Vector2 screenVec)
     {
         float cam_world_units_x = Camera.main.orthographicSize * 2.0f * ((float)Screen.width / Screen.height);
         float cam_world_units_y = Camera.main.orthographicSize * 2.0f;
@@ -82,7 +82,7 @@ public static class DisplayUtility
         return new Vector2(sizeX, sizeY);
     }
 
-    public static Vector2 ConvertWorldToScreen(Vector2 screenVec)
+    public static Vector2 ConvertScreenToWorld(Vector2 screenVec)
     {
         float cam_world_units_x = Camera.main.orthographicSize * 2.0f * ((float)Screen.width / Screen.height);
         float cam_world_units_y = Camera.main.orthographicSize * 2.0f;

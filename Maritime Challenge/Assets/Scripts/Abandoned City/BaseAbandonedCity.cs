@@ -90,8 +90,6 @@ public class BaseAbandonedCity : NetworkBehaviour
 
         if (playerList.Count == 1)
             OnFirstPlayerEnterArea();
-
-        Debug.Log("Player added");
     }
 
     public void RemoveFromPlayerList(Player player)
@@ -100,8 +98,6 @@ public class BaseAbandonedCity : NetworkBehaviour
 
         if (playerList.Count == 0)
             OnLastPlayerLeaveArea();
-
-        Debug.Log("Player removed");
     }
 
     public void AddToEnemyList(BaseEnemy enemy)
@@ -149,7 +145,7 @@ public class BaseAbandonedCity : NetworkBehaviour
         enemyList.Clear();
         playerList.Clear();
 
-        Debug.Log("Resetted abandoned city");
+       // Debug.Log("Resetted abandoned city");
     }
 
     [ServerCallback]
