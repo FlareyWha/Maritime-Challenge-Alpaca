@@ -7,27 +7,28 @@ public class AirHockeyPaddle : NetworkBehaviour
 {
 
 
+    private Rigidbody2D rb = null;
+
     private bool isHeld = false;
     private Vector2 lastHeldPos = Vector2.zero;
 
-    private Rigidbody2D rb = null;
+    private Vector2 assumedVel = Vector2.zero;
+    private Vector3 lastPosition = Vector3.zero;
 
     public override void OnStartAuthority()
     {
-        rb = GetComponent<Rigidbody2D>();
         Debug.Log("Taken Control of Paddle");
     }
 
     private void Awake()
     {
+        rb = GetComponent<Rigidbody2D>();
     }
 
 
 
     private void Update()
     {
-       
-
         if (!hasAuthority)
             return;
 
@@ -45,9 +46,8 @@ public class AirHockeyPaddle : NetworkBehaviour
             // Get Delta Pos
             Vector2 dis = InputManager.GetTouchPos() - lastHeldPos;
             Vector2 deltaPos = DisplayUtility.ConvertScreenToWorld(dis);
-            Debug.Log("Delta Pos: " + deltaPos);
             // Move Paddle
-            rb.position += new Vector2(deltaPos.x, deltaPos.y);
+            rb.position += deltaPos;
 
             lastHeldPos = InputManager.GetTouchPos();
         }
@@ -60,7 +60,16 @@ public class AirHockeyPaddle : NetworkBehaviour
         }
     }
 
-    
+    private void FixedUpdate()
+    {
+        if (isServer)
+        {
+            assumedVel = (transform.position - lastPosition) / Time.deltaTime;
+            lastPosition = transform.position;
+        }
+    }
+
+
     [Server]
     public void AssignController(NetworkIdentity player)
     { 
@@ -73,5 +82,11 @@ public class AirHockeyPaddle : NetworkBehaviour
         netIdentity.RemoveClientAuthority();
     }
 
-   
+
+    public Vector2 GetVelocity()
+    {
+        return assumedVel;
+    }
+
+
 }

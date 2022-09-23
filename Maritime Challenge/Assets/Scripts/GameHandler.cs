@@ -59,7 +59,7 @@ public static class SpriteHandler
         Vector2 spriteSize = SpriteHandler.GetSpriteSizeInPixels(sprite);
 
         Vector2 touchPos = InputManager.GetTouchPos();
-        Vector3 spriteScreenPos = UIManager.Instance.Camera.GetComponent<Camera>().WorldToScreenPoint(spritePos);
+        Vector3 spriteScreenPos = PlayerFollowCamera.Instance.GetComponent<Camera>().WorldToScreenPoint(spritePos);
         if (touchPos.x < spriteScreenPos.x + spriteSize.x * 0.5f && touchPos.x > spriteScreenPos.x - spriteSize.x * 0.5f
             && touchPos.y > spriteScreenPos.y - spriteSize.y * 0.5f && touchPos.y < spriteScreenPos.y + spriteSize.y * 0.5f)
         {
