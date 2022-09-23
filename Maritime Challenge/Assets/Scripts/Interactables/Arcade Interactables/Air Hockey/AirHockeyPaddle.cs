@@ -18,17 +18,11 @@ public class AirHockeyPaddle : NetworkBehaviour
         Debug.Log("Taken Control of Paddle");
     }
 
-    [Client]
     private void Awake()
     {
-       // StartCoroutine(InitOnSpawn());
     }
 
 
-    IEnumerator InitOnSpawn()
-    {
-        yield return null;
-    }
 
     private void Update()
     {
@@ -80,15 +74,4 @@ public class AirHockeyPaddle : NetworkBehaviour
     }
 
    
-
-    public Vector2 GetSpriteSize()
-    {
-        Vector2 spriteSize = GetComponent<SpriteRenderer>().bounds.size * 0.5f;
-        float pixelsPerUnit = GetComponent<SpriteRenderer>().sprite.pixelsPerUnit;
-
-        spriteSize.x *= pixelsPerUnit;
-        spriteSize.y *= pixelsPerUnit;
-
-        return spriteSize;
-    }
 }

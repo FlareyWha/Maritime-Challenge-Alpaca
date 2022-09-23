@@ -43,7 +43,7 @@ public static class SpriteHandler
     {
         Vector2 spriteSize = GetSpriteSize(sprite);
 
-        return DisplayUtility.ConvertScreenToWorld(spriteSize);
+        return DisplayUtility.ConvertWorldToScreen(spriteSize);
     }
 
     public static Vector2 GetSpriteSize(SpriteRenderer sprite)
