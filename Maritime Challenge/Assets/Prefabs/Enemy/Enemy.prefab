@@ -239,7 +239,7 @@ MonoBehaviour:
   maxSpotTime: 1
   maxChaseTime: 5
   maxFreezeTime: 2
-  attackDistance: 0.01
+  attackDistance: 2
   HPFill: {fileID: 3534962956498540744}
 --- !u!1 &6337410864340519515
 GameObject:

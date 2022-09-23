@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEditor;
 using Mirror;
 using UnityEngine.Networking;
@@ -114,6 +115,9 @@ public class Player : BaseEntity
         Battleship bs = ship.GetComponent<Battleship>();
         bs.ServerInits();
         bs.SetOwner(connectionToClient.identity.gameObject.GetComponent<Player>());
+
+        UnityEngine.SceneManagement.SceneManager.MoveGameObjectToScene(ship, UnityEngine.SceneManagement.SceneManager.GetSceneByName("WorldHubScene"));
+
        
     }
 
