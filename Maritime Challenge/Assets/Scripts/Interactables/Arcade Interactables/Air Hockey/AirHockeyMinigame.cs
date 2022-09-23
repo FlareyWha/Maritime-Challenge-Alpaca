@@ -5,7 +5,6 @@ using Mirror;
 
 public class AirHockeyMinigame : NetworkBehaviour
 {
-
     [SerializeField]
     private GameObject AirHockeyGamePanel;
 

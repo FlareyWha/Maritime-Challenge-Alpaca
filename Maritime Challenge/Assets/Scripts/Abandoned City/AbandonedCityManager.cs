@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
+using Mirror;
 
 public class AbandonedCityManager : MonoBehaviourSingleton<AbandonedCityManager>
 {
@@ -55,12 +56,13 @@ public class AbandonedCityManager : MonoBehaviourSingleton<AbandonedCityManager>
         }
     }
     
+    [Server]
     void SpawnAbandonedCities()
     {
         for (int i = 0; i < abandonedCityInfo.Count; ++i)
         {
             BaseAbandonedCity abandonedCity = Instantiate(abandonedCityPrefab, new Vector3(abandonedCityInfo[i].fAbandonedCityXPos, abandonedCityInfo[i].fAbandonedCityYPos, 0), Quaternion.identity).GetComponent<BaseAbandonedCity>();
-
+            NetworkServer.Spawn(abandonedCity.gameObject);
             abandonedCity.InitAbandonedCity(abandonedCityInfo[i].iAbandonedCityID, abandonedCityInfo[i].iAbandonedCityAreaCellWidth, abandonedCityInfo[i].iAbandonedCityAreaCellHeight, new Vector2(abandonedCityInfo[i].fAbandonedCityXPos, abandonedCityInfo[i].fAbandonedCityYPos), abandonedCityInfo[i].iCapturedGuildID);
         }
     }

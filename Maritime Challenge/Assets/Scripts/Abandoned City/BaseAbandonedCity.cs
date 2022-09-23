@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Networking;
+using Mirror;
 
-public class BaseAbandonedCity : MonoBehaviour
+public class BaseAbandonedCity : NetworkBehaviour
 {
     [SerializeField]  //Honestly idk i need to find a way to do this better but else uhhhhhhhh
     protected int abandonedCityID;
@@ -29,6 +30,13 @@ public class BaseAbandonedCity : MonoBehaviour
         Gizmos.DrawWireCube(transform.position, new Vector3(abandonedCityAreaUpperLimit.x - abandonedCityAreaLowerLimit.x, abandonedCityAreaUpperLimit.y - abandonedCityAreaLowerLimit.y, 0));
     }
 
+    private void Awake()
+    {
+        Grid grid = GameObject.Find("Grid").GetComponent<Grid>();
+        ResizeColliderSize(grid);
+    }
+
+    [Server]
     public void InitAbandonedCity(int id, int areaCellWidth, int areaCellHeight, Vector2 position, int guildID)
     {
         abandonedCityID = id;
@@ -42,16 +50,12 @@ public class BaseAbandonedCity : MonoBehaviour
             captured = true;
         }
 
-        //if (!isServer)
-        //    return;
-
+      
         Grid grid = GameObject.Find("Grid").GetComponent<Grid>();
 
         //Make sure cell width and height will always fit cell size
         abandonedCityAreaCellWidth -= Mathf.RoundToInt(abandonedCityAreaCellWidth % grid.cellSize.x);
         abandonedCityAreaCellHeight -= Mathf.RoundToInt(abandonedCityAreaCellHeight % grid.cellSize.y);
-
-        ResizeColliderSize(grid);
 
         //Can delete these late this is just to see whether the sizes work
         Vector3Int gridSpawnPoint = grid.WorldToCell(transform.position);
@@ -61,11 +65,8 @@ public class BaseAbandonedCity : MonoBehaviour
         abandonedCityAreaUpperLimit = grid.CellToWorld(gridMovementAreaUpperLimit);
     }
     
-    //[ClientRpc]
     public void ResizeColliderSize(Grid grid)
     {
-        //Server must call and reflect on all clients cus apprently it doesnt work otherwise????
-
         //Set the size for the collider
         BoxCollider2D boxCollider2D = GetComponent<BoxCollider2D>();
         boxCollider2D.size = new Vector2(abandonedCityAreaCellWidth * grid.cellSize.x, abandonedCityAreaCellHeight * grid.cellSize.y);
@@ -151,6 +152,7 @@ public class BaseAbandonedCity : MonoBehaviour
         Debug.Log("Resetted abandoned city");
     }
 
+    [ServerCallback]
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -159,6 +161,7 @@ public class BaseAbandonedCity : MonoBehaviour
         }
     }
 
+    [ServerCallback]
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
