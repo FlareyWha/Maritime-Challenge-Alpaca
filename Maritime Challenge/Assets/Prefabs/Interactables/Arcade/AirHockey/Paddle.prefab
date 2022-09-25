@@ -11,12 +11,10 @@ GameObject:
   - component: {fileID: 1304970981937623795}
   - component: {fileID: 1304970981937623792}
   - component: {fileID: 1304970981937623799}
-  - component: {fileID: 1304970981937623797}
   - component: {fileID: 1304970981937623794}
   - component: {fileID: 1330022958751298257}
   - component: {fileID: 8814923675952806242}
   - component: {fileID: 1528921702076866583}
-  - component: {fileID: 8199612033073774886}
   m_Layer: 0
   m_Name: Paddle
   m_TagString: AirHockeyPaddle
@@ -97,7 +95,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1304970981937623793}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -105,27 +103,11 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 6200000, guid: 67d2eb493668b8747b7b3fc207d82654, type: 2}
+  m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!58 &1304970981937623797
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1304970981937623793}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 67d2eb493668b8747b7b3fc207d82654, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 8
 --- !u!58 &1304970981937623794
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -135,8 +117,8 @@ CircleCollider2D:
   m_GameObject: {fileID: 1304970981937623793}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 67d2eb493668b8747b7b3fc207d82654, type: 2}
-  m_IsTrigger: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -187,7 +169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  clientAuthority: 1
+  clientAuthority: 0
   sendInterval: 0.01
   syncPosition: 1
   syncRotation: 1
@@ -207,25 +189,3 @@ MonoBehaviour:
   showGizmos: 0
   showOverlay: 0
   overlayColor: {r: 0, g: 0, b: 0, a: 0.5}
---- !u!114 &8199612033073774886
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1304970981937623793}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab2cbc52526ea384ba280d13cd1a57b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
-  target: {fileID: 1304970981937623799}
-  clientAuthority: 0
-  syncVelocity: 1
-  clearVelocity: 0
-  velocitySensitivity: 0.1
-  syncAngularVelocity: 1
-  clearAngularVelocity: 0
-  angularVelocitySensitivity: 0.1
