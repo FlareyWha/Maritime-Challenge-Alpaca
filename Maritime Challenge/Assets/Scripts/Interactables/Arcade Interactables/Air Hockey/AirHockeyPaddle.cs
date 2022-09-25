@@ -10,7 +10,7 @@ public class AirHockeyPaddle : NetworkBehaviour
     private Rigidbody2D rb = null;
 
     private bool isHeld = false;
-    private Vector2 lastHeldPos = Vector2.zero;
+    private Vector2 offset = Vector2.zero;
 
 
     public override void OnStartAuthority()
@@ -45,19 +45,19 @@ public class AirHockeyPaddle : NetworkBehaviour
             }
 
             // Get Delta Pos
-            Vector2 dis = InputManager.GetTouchPos() - lastHeldPos;
-            Vector2 deltaPos = DisplayUtility.ConvertScreenToWorld(dis);
+            Vector2 touchPos = InputManager.GetTouchPos();
+            Vector2 worldTouchPos = Camera.main.ScreenToWorldPoint(touchPos);
             // Move Paddle
-            MoveRigidbody(new Vector2(transform.position.x, transform.position.y) + deltaPos);
+            MoveRigidbody(worldTouchPos + offset);
 
-            lastHeldPos = InputManager.GetTouchPos();
         }
         else if (InputManager.InputActions.Main.Tap.WasPressedThisFrame()
             && SpriteHandler.IsWithinSprite(transform.position, GetComponent<SpriteRenderer>()))
         {
             Debug.Log("Air Hockey Paddle Held");
             isHeld = true;
-            lastHeldPos = InputManager.GetTouchPos();
+
+            offset = transform.position - Camera.main.ScreenToWorldPoint(InputManager.GetTouchPos());
         }
     }
 
