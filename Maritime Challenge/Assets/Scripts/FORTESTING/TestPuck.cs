@@ -48,22 +48,22 @@ public class TestPuck : MonoBehaviour
         //velocity.x = Mathf.Clamp(velocity.x, -MAX_VEL, MAX_VEL);
         //velocity.y = Mathf.Clamp(velocity.y, -MAX_VEL, MAX_VEL);
 
-       
-        rb.position += velocity * Time.deltaTime;
+
+       // rb.MovePosition(rb.position + velocity * Time.deltaTime);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Wall"))
-        {
-            TestWall wall = collision.gameObject.GetComponent<TestWall>();
-            accel = -2 * Vector2.Dot(velocity, wall.Normal) * (wall.Normal);
-            velocity += accel;
-            velocity *= (1.0f - inelasticWallConst);
-        }
-        else if (collision.isTrigger && collision.gameObject.CompareTag("AirHockeyPaddle"))
-        {
-            OnPaddleHitApplyForce(collision.gameObject.GetComponent<TestPaddle>());
-        }
+        //if (collision.gameObject.CompareTag("Wall"))
+        //{
+        //    TestWall wall = collision.gameObject.GetComponent<TestWall>();
+        //    accel = -2 * Vector2.Dot(velocity, wall.Normal) * (wall.Normal);
+        //    velocity += accel;
+        //    velocity *= (1.0f - inelasticWallConst);
+        //}
+        //else if (collision.isTrigger && collision.gameObject.CompareTag("AirHockeyPaddle"))
+        //{
+        //    OnPaddleHitApplyForce(collision.gameObject.GetComponent<TestPaddle>());
+        //}
     }
 }

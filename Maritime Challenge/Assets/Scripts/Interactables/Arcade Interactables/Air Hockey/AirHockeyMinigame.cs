@@ -18,7 +18,7 @@ public class AirHockeyMinigame : NetworkBehaviour
 
     private readonly SyncDictionary<int, Player> playersList = new SyncDictionary<int, Player>();
 
-    private int zoomValue = 28;
+    private int zoomValue = 3;
 
     private void Start()
     {

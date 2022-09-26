@@ -22,7 +22,7 @@ public class TestPaddle : MonoBehaviour
 
 
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (isHeld)
         {
@@ -38,8 +38,7 @@ public class TestPaddle : MonoBehaviour
             Vector2 dis = InputManager.GetTouchPos() - lastHeldPos;
             Vector2 deltaPos = DisplayUtility.ConvertScreenToWorld(dis);
             // Move Paddle
-            rb.position += new Vector2(deltaPos.x, deltaPos.y);
-
+            rb.MovePosition(rb.position + deltaPos);
             lastHeldPos = InputManager.GetTouchPos();
         }
         else if (InputManager.InputActions.Main.Tap.WasPressedThisFrame()
@@ -51,12 +50,12 @@ public class TestPaddle : MonoBehaviour
         }
     }
 
-    private void FixedUpdate()
-    {
-        assumedVel = (transform.position - lastPosition) / Time.deltaTime;
-        lastPosition = transform.position;
+    //private void FixedUpdate()
+    //{
+    //    assumedVel = (transform.position - lastPosition) / Time.deltaTime;
+    //    lastPosition = transform.position;
 
-    }
+    //}
 
 
 

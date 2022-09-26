@@ -10,24 +10,25 @@ public class AirHockeyPaddle : NetworkBehaviour
     private Rigidbody2D rb = null;
 
     private bool isHeld = false;
-    private Vector2 lastHeldPos = Vector2.zero;
+    private Vector2 offset = Vector2.zero;
 
-    private Vector2 assumedVel = Vector2.zero;
-    private Vector3 lastPosition = Vector3.zero;
 
     public override void OnStartAuthority()
     {
         Debug.Log("Taken Control of Paddle");
     }
 
+  
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        rb.isKinematic = true;
     }
 
 
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (!hasAuthority)
             return;
@@ -44,29 +45,26 @@ public class AirHockeyPaddle : NetworkBehaviour
             }
 
             // Get Delta Pos
-            Vector2 dis = InputManager.GetTouchPos() - lastHeldPos;
-            Vector2 deltaPos = DisplayUtility.ConvertScreenToWorld(dis);
+            Vector2 touchPos = InputManager.GetTouchPos();
+            Vector2 worldTouchPos = Camera.main.ScreenToWorldPoint(touchPos);
             // Move Paddle
-            rb.position += deltaPos;
+            MoveRigidbody(worldTouchPos + offset);
 
-            lastHeldPos = InputManager.GetTouchPos();
         }
         else if (InputManager.InputActions.Main.Tap.WasPressedThisFrame()
             && SpriteHandler.IsWithinSprite(transform.position, GetComponent<SpriteRenderer>()))
         {
             Debug.Log("Air Hockey Paddle Held");
             isHeld = true;
-            lastHeldPos = InputManager.GetTouchPos();
+
+            offset = transform.position - Camera.main.ScreenToWorldPoint(InputManager.GetTouchPos());
         }
     }
 
-    private void FixedUpdate()
+    [Command]
+    private void MoveRigidbody(Vector2 newPos)
     {
-        if (isServer)
-        {
-            assumedVel = (transform.position - lastPosition) / Time.deltaTime;
-            lastPosition = transform.position;
-        }
+        rb.MovePosition(newPos);
     }
 
 
@@ -80,12 +78,6 @@ public class AirHockeyPaddle : NetworkBehaviour
     public void RevokeControl()
     {
         netIdentity.RemoveClientAuthority();
-    }
-
-
-    public Vector2 GetVelocity()
-    {
-        return assumedVel;
     }
 
 
