@@ -6,8 +6,11 @@ using Mirror;
 public class AirHockeyPaddle : NetworkBehaviour
 {
 
+    [SerializeField]
+    private Transform BoundaryUp, BoundaryDown, BoundaryLeft, BoundaryRight;
 
     private Rigidbody2D rb = null;
+    private SpriteRenderer spriteRenderer = null;
 
     private bool isHeld = false;
     private Vector2 offset = Vector2.zero;
@@ -22,6 +25,7 @@ public class AirHockeyPaddle : NetworkBehaviour
 
     private void Awake()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
         rb.isKinematic = true;
     }
@@ -47,12 +51,13 @@ public class AirHockeyPaddle : NetworkBehaviour
             // Get Delta Pos
             Vector2 touchPos = InputManager.GetTouchPos();
             Vector2 worldTouchPos = Camera.main.ScreenToWorldPoint(touchPos);
+            Vector2 paddlePos = ConstraintWithinBoundary(worldTouchPos) + offset;
             // Move Paddle
-            MoveRigidbody(worldTouchPos + offset);
+            MoveRigidbody(paddlePos);
 
         }
         else if (InputManager.InputActions.Main.Tap.WasPressedThisFrame()
-            && SpriteHandler.IsWithinSprite(transform.position, GetComponent<SpriteRenderer>()))
+            && SpriteHandler.IsWithinSprite(transform.position, spriteRenderer))
         {
             Debug.Log("Air Hockey Paddle Held");
             isHeld = true;
@@ -80,5 +85,14 @@ public class AirHockeyPaddle : NetworkBehaviour
         netIdentity.RemoveClientAuthority();
     }
 
+    private Vector2 ConstraintWithinBoundary(Vector2 pos)
+    {
+        pos.x = Mathf.Clamp(pos.x, BoundaryLeft.position.x + SpriteHandler.GetSpriteRadius(spriteRenderer)
+            , BoundaryRight.position.x - SpriteHandler.GetSpriteRadius(spriteRenderer));
+        pos.y = Mathf.Clamp(pos.y, BoundaryDown.position.y + SpriteHandler.GetSpriteRadius(spriteRenderer)
+          , BoundaryUp.position.y - SpriteHandler.GetSpriteRadius(spriteRenderer));
+
+        return pos;
+    }
 
 }

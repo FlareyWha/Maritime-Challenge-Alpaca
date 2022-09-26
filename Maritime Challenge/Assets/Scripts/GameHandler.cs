@@ -69,6 +69,24 @@ public static class SpriteHandler
         return false;
     }
 
+    public static float GetSpriteRadius(SpriteRenderer spriteR)
+    {
+        Vector2 spriteSize = SpriteHandler.GetSpriteSize(spriteR);
+        return (spriteSize.x + spriteSize.y) * 0.25f;
+    }
+
+    public static float GetSpriteSizeMax(SpriteRenderer spriteR)
+    {
+        Vector2 spriteSize = SpriteHandler.GetSpriteSize(spriteR);
+        return spriteSize.x > spriteSize.y ? spriteSize.x : spriteSize.y;
+    }
+
+    public static float GetSpriteSizeMin(SpriteRenderer spriteR)
+    {
+        Vector2 spriteSize = SpriteHandler.GetSpriteSize(spriteR);
+        return spriteSize.x < spriteSize.y ? spriteSize.x : spriteSize.y;
+    }
+
 }
 
 public static class DisplayUtility
