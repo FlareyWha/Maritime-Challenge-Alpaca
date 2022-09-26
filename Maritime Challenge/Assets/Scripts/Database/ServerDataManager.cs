@@ -30,6 +30,7 @@ public class ServerDataManager : MonoBehaviour
     public static string URL_updateTotalEventCurrency = serverURL + "UpdateTotalEventCurrency.php";
 
     //Profile data
+    public static string URL_getUsername = serverURL + "GetUsername.php";
     public static string URL_updateUsername = serverURL + "UpdateUsername.php";
     public static string URL_updateBiography = serverURL + "UpdateBiography.php";
     public static string URL_updateTitle = serverURL + "UpdateTitle.php";
