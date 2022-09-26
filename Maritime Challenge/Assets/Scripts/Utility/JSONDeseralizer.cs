@@ -114,4 +114,11 @@ public class JSONDeseralizer : MonoBehaviour
 
         return abandonedCityList.abandonedCities;
     }
+
+    public static JSONGuildInfo DeseralizeGuildInfo(string guildInfoJSON)
+    {
+        JSONGuildInfoList guildInfoList = JsonUtility.FromJson<JSONGuildInfoList>(guildInfoJSON);
+
+        return guildInfoList.guildInfo[0];
+    }
 }

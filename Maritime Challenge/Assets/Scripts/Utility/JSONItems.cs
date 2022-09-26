@@ -121,3 +121,17 @@ public class JSONAbandonedCityList
 {
     public List<JSONAbandonedCity> abandonedCities = new List<JSONAbandonedCity>();
 }
+
+[Serializable]
+public class JSONGuildInfo
+{
+    public string sGuildName;
+    public string sGuildDescription;
+    public int iOwnerUID;
+}
+
+[Serializable]
+public class JSONGuildInfoList
+{
+    public List<JSONGuildInfo> guildInfo = new List<JSONGuildInfo>();
+}
