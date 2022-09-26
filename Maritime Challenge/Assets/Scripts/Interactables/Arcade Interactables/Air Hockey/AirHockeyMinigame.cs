@@ -24,9 +24,9 @@ public class AirHockeyMinigame : NetworkBehaviour
     {
         AirHockeyGamePanel.SetActive(false);
         GameCanvas.SetActive(false);
-        Puck.gameObject.SetActive(false);
-        for (int i = 0; i < PlayerPaddle.Length; i++)
-            PlayerPaddle[i].gameObject.SetActive(false);
+     //   Puck.gameObject.SetActive(false);
+     //   for (int i = 0; i < PlayerPaddle.Length; i++)
+      //      PlayerPaddle[i].gameObject.SetActive(false);
     }
 
 
@@ -101,9 +101,9 @@ public class AirHockeyMinigame : NetworkBehaviour
         // Show Air Hockey Game GOs
         AirHockeyGamePanel.SetActive(true);
         GameCanvas.SetActive(true);
-        Puck.gameObject.SetActive(true);
-        for (int i = 0; i < PlayerPaddle.Length; i++)
-            PlayerPaddle[i].gameObject.SetActive(true);
+      //  Puck.gameObject.SetActive(true);
+      //  for (int i = 0; i < PlayerPaddle.Length; i++)
+      //      PlayerPaddle[i].gameObject.SetActive(true);
         // Camera ANims
         PlayerFollowCamera.Instance.SetFollowTarget(AirHockeyGamePanel.gameObject);
         PlayerFollowCamera.Instance.ZoomCameraInOut(zoomValue, 1.0f);
@@ -126,9 +126,9 @@ public class AirHockeyMinigame : NetworkBehaviour
         // Hide Air Hockey Game GOs
         AirHockeyGamePanel.SetActive(false);
         GameCanvas.SetActive(false);
-        Puck.gameObject.SetActive(false);
-        for (int i = 0; i < PlayerPaddle.Length; i++)
-            PlayerPaddle[i].gameObject.SetActive(false);
+     //   Puck.gameObject.SetActive(false);
+     //   for (int i = 0; i < PlayerPaddle.Length; i++)
+     //       PlayerPaddle[i].gameObject.SetActive(false);
         // Reset Camera Anims
         PlayerFollowCamera.Instance.ResetAll(0.7f);
         // Player tings
