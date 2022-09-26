@@ -7,6 +7,9 @@ public class GuildInfo : Interactable
 {
     private JSONGuildInfo guildInfo;
 
+    [SerializeField]
+    private GuildInfoPanel guildInfoPanel;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,7 +42,7 @@ public class GuildInfo : Interactable
             case UnityWebRequest.Result.Success:
                 //Deseralize and instantiate somehow idk tbh
                 guildInfo = JSONDeseralizer.DeseralizeGuildInfo(webreq.downloadHandler.text);
-                UpdateGuildInfoPanel();
+                guildInfoPanel.UpdateGuildInfoPanel(guildInfo.sGuildName, guildInfo.sGuildDescription, guildInfo.iOwnerUID);
                 break;
             case UnityWebRequest.Result.ProtocolError:
                 Debug.LogError(webreq.downloadHandler.text);
@@ -48,10 +51,5 @@ public class GuildInfo : Interactable
                 Debug.LogError(webreq.downloadHandler.text);
                 break;
         }
-    }
-
-    void UpdateGuildInfoPanel()
-    {
-
     }
 }
