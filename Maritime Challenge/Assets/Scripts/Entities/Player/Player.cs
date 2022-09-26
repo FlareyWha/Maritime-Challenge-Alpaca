@@ -125,6 +125,7 @@ public class Player : BaseEntity
     {
         base.CheckForEntityClick();
     }
+
     public override void OnEntityClicked()
     {
         Debug.Log("Player Entity Click Called");
@@ -202,6 +203,11 @@ public class Player : BaseEntity
             LinkedBattleship.InitShip(username);
         }
          OnEntityHPChanged += LinkedBattleship.SetHP;
+    }
+
+    public void SetOrderInLayer(int what)
+    {
+        GetComponent<SpriteRenderer>().sortingOrder = what;
     }
 
     // ================= GETTERS =====================

@@ -32,7 +32,7 @@ public class AirHockeyPaddle : NetworkBehaviour
 
 
 
-    private void FixedUpdate()
+    private void Update()
     {
         if (!hasAuthority)
             return;
