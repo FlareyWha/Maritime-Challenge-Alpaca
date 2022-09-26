@@ -30,9 +30,9 @@ public class AirHockeyMinigame : NetworkBehaviour
     }
 
 
-    public void PlayerJoinGame(int seatID, bool oppSide, Player player)
+    public void PlayerJoinGame(int seatID, Player player)
     {
-        EnterTable(oppSide);
+        EnterTable(seatID);
         // Send to Server
         ServerOnPlayerJoinGame(seatID, PlayerData.MyPlayer);
     }
@@ -49,7 +49,7 @@ public class AirHockeyMinigame : NetworkBehaviour
         PlayerSeats[seatID].AssignPaddleControl(player);
 
         // Update All Clients
-        OnPlayerJoinGameCallback(seatID);
+        OnPlayerJoinGameCallback(seatID, player);
 
         // Start Game
         if (playersList.Count == 2)
@@ -57,7 +57,7 @@ public class AirHockeyMinigame : NetworkBehaviour
     }
 
     [ClientRpc]
-    private void OnPlayerJoinGameCallback(int seatID)
+    private void OnPlayerJoinGameCallback(int seatID, Player player)
     {
         // Take Up Seat
         AirHockeySeat seat = PlayerSeats[seatID];
@@ -65,6 +65,7 @@ public class AirHockeyMinigame : NetworkBehaviour
             return;
 
         seat.enabled = false;
+     
     }
 
     [Command(requiresAuthority = false)]
@@ -77,12 +78,13 @@ public class AirHockeyMinigame : NetworkBehaviour
 
         PlayerSeats[seatID].RevokePaddleControl();
 
-        OnPlayerLeftGameCallback(seatID);
+        OnPlayerLeftGameCallback(seatID, player);
     }
 
     [ClientRpc]
-    private void OnPlayerLeftGameCallback(int seatID)
+    private void OnPlayerLeftGameCallback(int seatID, Player player)
     {
+        // Free Seat
         AirHockeySeat seat = PlayerSeats[seatID];
         if (seat == null)
             return;
@@ -91,8 +93,9 @@ public class AirHockeyMinigame : NetworkBehaviour
     }
 
     [Client]
-    private void EnterTable(bool oppSide)
+    private void EnterTable(int seatID)
     {
+        AirHockeySeat seat = PlayerSeats[seatID];
         // Hide Main UI
         UIManager.Instance.ToggleMainUI(false);
         // Show Air Hockey Game GOs
@@ -104,8 +107,15 @@ public class AirHockeyMinigame : NetworkBehaviour
         // Camera ANims
         PlayerFollowCamera.Instance.SetFollowTarget(AirHockeyGamePanel.gameObject);
         PlayerFollowCamera.Instance.ZoomCameraInOut(zoomValue, 1.0f);
-        if (oppSide)
-            PlayerFollowCamera.Instance.RotateCamera(180, 1.0f);
+        if (seat.OnOppositeSide)
+            PlayerFollowCamera.Instance.RotateCamera(transform.rotation.eulerAngles.z + 180, 1.0f);
+        else
+            PlayerFollowCamera.Instance.RotateCamera(transform.rotation.eulerAngles.z, 1.0f);
+
+        // Player Things
+        PlayerData.MyPlayer.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+        PlayerData.MyPlayer.transform.position = seat.transform.position;
+        PlayerData.MyPlayer.SetOrderInLayer(1);
     }
 
     [Client]
@@ -121,6 +131,8 @@ public class AirHockeyMinigame : NetworkBehaviour
             PlayerPaddle[i].gameObject.SetActive(false);
         // Reset Camera Anims
         PlayerFollowCamera.Instance.ResetAll(0.7f);
+        // Player tings
+        PlayerData.MyPlayer.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
     }
 
     [Server]

@@ -12,7 +12,7 @@ public class AirHockeySeat : Interactable
     [SerializeField]
     private bool IsOppositeSide;
 
-    //public bool OnOppositeSide { get { return IsOppositeSide; } }
+    public bool OnOppositeSide { get { return IsOppositeSide; } }
 
     private int UID = -1;
 
@@ -25,7 +25,7 @@ public class AirHockeySeat : Interactable
 
     public override void Interact()
     {
-        AirHockeyGameManager.PlayerJoinGame(this.UID, IsOppositeSide, PlayerData.MyPlayer);
+        AirHockeyGameManager.PlayerJoinGame(this.UID, PlayerData.MyPlayer);
     }
 
     

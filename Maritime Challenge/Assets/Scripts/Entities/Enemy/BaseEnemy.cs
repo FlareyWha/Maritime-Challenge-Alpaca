@@ -225,7 +225,7 @@ public class BaseEnemy : BaseEntity
             currEnemyState = ENEMY_STATES.IDLE;
             ResetTimer(maxIdleTime);
         }
-        else if (distanceToPlayer < (attackDistance + SpriteHandler.GetSpriteSize(currentTargetPlayer.GetComponent<SpriteRenderer>()).x + GetSpriteRadius()))
+        else if (distanceToPlayer < (attackDistance + SpriteHandler.GetSpriteSize(currentTargetPlayer.GetComponent<SpriteRenderer>()).x + SpriteHandler.GetSpriteRadius(GetComponent<SpriteRenderer>())))
         {
             currEnemyState = ENEMY_STATES.ATTACK;
             timer = 0.5f * attack_interval;

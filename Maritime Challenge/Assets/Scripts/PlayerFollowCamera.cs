@@ -40,17 +40,11 @@ public class PlayerFollowCamera : MonoBehaviourSingleton<PlayerFollowCamera>
 
     public void ZoomCameraInOut(float orthoDis, float anim_time = 1.0f)
     {
-        if (in_anim)
-            return;
-
         StartCoroutine(ZoomCameraAnim(cam.orthographicSize, orthoDis, anim_time));
     }
 
     public void ResetCameraZoom(float anim_time = 1.0f)
     {
-        if (in_anim)
-            return;
-
         StartCoroutine(ZoomCameraAnim(cam.orthographicSize, defaultOrthoSize, anim_time));
     }
 
@@ -82,12 +76,12 @@ public class PlayerFollowCamera : MonoBehaviourSingleton<PlayerFollowCamera>
 
     public void FlipCamera(float anim_time)
     {
-        RotateCameraAnim(180.0f, anim_time);
+        StartCoroutine(RotateCameraAnim(180.0f, anim_time));
     }
 
     public void RotateCamera(float theta, float anim_time)
     {
-        RotateCameraAnim(theta, anim_time);
+        StartCoroutine(RotateCameraAnim(theta, anim_time));
     }
 
     IEnumerator RotateCameraAnim(float theta, float anim_time)
