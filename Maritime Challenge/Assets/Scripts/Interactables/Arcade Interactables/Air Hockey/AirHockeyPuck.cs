@@ -16,5 +16,11 @@ public class AirHockeyPuck : NetworkBehaviour
             rb.isKinematic = true;
     }
 
+    [Server]
+    public void ForceStop()
+    {
+        rb.velocity = Vector2.zero;
+    }
+
    
 }

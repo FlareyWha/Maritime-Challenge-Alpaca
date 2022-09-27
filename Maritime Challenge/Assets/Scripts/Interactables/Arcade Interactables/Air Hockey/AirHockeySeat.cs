@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Mirror;
 
 public class AirHockeySeat : Interactable
@@ -10,17 +11,23 @@ public class AirHockeySeat : Interactable
     [SerializeField]
     private AirHockeyPaddle PlayerPaddle;
     [SerializeField]
+    private AirHockeyGoal LinkedGoal;
+    [SerializeField]
+    private Text PlayerNameText, PlayerScoreText;
+    [SerializeField]
     private bool IsOppositeSide;
 
     public bool OnOppositeSide { get { return IsOppositeSide; } }
 
     private int UID = -1;
+    private int playerScore = 0;
 
     void Start()
     {
         interactMessage = "Play Air Hockey";
 
         UID = AirHockeyGameManager.GetAssignedSeatID(this);
+        LinkedGoal.SetSeatID(UID);
     }
 
     public override void Interact()
@@ -40,6 +47,18 @@ public class AirHockeySeat : Interactable
     public void RevokePaddleControl()
     {
         PlayerPaddle.RevokeControl();
+    }
+
+
+    public void UpdateScoreDisplay(int score)
+    {
+        PlayerScoreText.text = score.ToString();
+    }
+
+
+    public void UpdateNameDisplay(string text)
+    {
+        PlayerNameText.text = text;
     }
 
 }

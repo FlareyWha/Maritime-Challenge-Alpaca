@@ -6,27 +6,45 @@ using Mirror;
 public class AirHockeyMinigame : NetworkBehaviour
 {
     [SerializeField]
+    private int zoomValue = 3;
+    [SerializeField]
     private GameObject AirHockeyGamePanel, GameCanvas;
 
     [SerializeField]
-    private GameObject Puck;
-    [SerializeField]
-    private AirHockeyPaddle[] PlayerPaddle;
+    private AirHockeyPuck Puck;
+  //  [SerializeField]
+  //  private AirHockeyPaddle[] PlayerPaddle;
     [SerializeField]
     private AirHockeySeat[] PlayerSeats;
 
+    private readonly SyncDictionary<int, uint> playersList = new SyncDictionary<int, uint>();
+    private readonly SyncDictionary<int, int> scoresList = new SyncDictionary<int, int>();
 
-    private readonly SyncDictionary<int, Player> playersList = new SyncDictionary<int, Player>();
-
-    private int zoomValue = 3;
 
     private void Start()
     {
         AirHockeyGamePanel.SetActive(false);
         GameCanvas.SetActive(false);
-     //   Puck.gameObject.SetActive(false);
-     //   for (int i = 0; i < PlayerPaddle.Length; i++)
-      //      PlayerPaddle[i].gameObject.SetActive(false);
+        Puck.gameObject.SetActive(false);
+        //   for (int i = 0; i < PlayerPaddle.Length; i++)
+        //      PlayerPaddle[i].gameObject.SetActive(false);
+        
+        for (int i = 0; i < PlayerSeats.Length; i++)
+        {
+            if (playersList.ContainsKey(i))
+                PlayerSeats[i].UpdateNameDisplay(GetPlayer(playersList[i]).GetUsername());
+            else
+                PlayerSeats[i].UpdateNameDisplay("Waiting for Player...");
+        }
+
+    }
+
+    public override void OnStartServer()
+    {
+        for (int i = 0; i < PlayerSeats.Length; i++)
+        {
+            scoresList.Add(i, 0);
+        }
     }
 
 
@@ -45,7 +63,7 @@ public class AirHockeyMinigame : NetworkBehaviour
         // Assign Player Paddle
         if (playersList.ContainsKey(seatID))
             playersList.Remove(seatID);
-        playersList.Add(seatID, player);
+        playersList.Add(seatID, player.netId);
         PlayerSeats[seatID].AssignPaddleControl(player);
 
         // Update All Clients
@@ -65,7 +83,9 @@ public class AirHockeyMinigame : NetworkBehaviour
             return;
 
         seat.enabled = false;
-     
+        seat.UpdateNameDisplay(player.GetUsername());
+
+
     }
 
     [Command(requiresAuthority = false)]
@@ -90,6 +110,7 @@ public class AirHockeyMinigame : NetworkBehaviour
             return;
 
         seat.enabled = true;
+        seat.UpdateNameDisplay("Waiting for Player...");
     }
 
     [Client]
@@ -138,13 +159,27 @@ public class AirHockeyMinigame : NetworkBehaviour
     [Server]
     private void StartGame()
     {
-        
+        Puck.gameObject.SetActive(true);
+        StartGameCallback();
+    }
+
+    [ClientRpc]
+    private void StartGameCallback()
+    {
+        Puck.gameObject.SetActive(true);
     }
 
     [Server]
     public void StopGame()
     {
+        Puck.gameObject.SetActive(false);
+        StopGameCallback();
+    }
 
+    [ClientRpc]
+    private void StopGameCallback()
+    {
+        Puck.gameObject.SetActive(false);
     }
 
     public void OnLeaveGameClicked()
@@ -155,11 +190,31 @@ public class AirHockeyMinigame : NetworkBehaviour
         ServerOnPlayerLeftGame(PlayerData.MyPlayer);
     }
 
+    [Server]
+    public void OnPuckEnteredGoal(int seatID)
+    {
+        Puck.transform.localPosition = Vector3.zero;
+        Puck.ForceStop();
+
+        int score = scoresList[seatID];
+        score++;
+        scoresList[seatID] = score;
+        UpdateScoreDisplay(seatID, score);
+    }
+
+    [ClientRpc]
+    private void UpdateScoreDisplay(int seatID, int score)
+    {
+        PlayerSeats[seatID].UpdateScoreDisplay(score);
+    }
+
+
+
     private int GetPlayerSeatID(Player player)
     {
-        foreach (KeyValuePair<int, Player> info in playersList)
+        foreach (KeyValuePair<int, uint> info in playersList)
         {
-            if (info.Value == player)
+            if (info.Value == player.netId)
                 return info.Key;
         }
         Debug.LogError("Player not recorded in list of seated players!");
@@ -176,4 +231,14 @@ public class AirHockeyMinigame : NetworkBehaviour
         Debug.Log("Could not find seat!");
         return -1;
     }
+
+    private Player GetPlayer(uint playerNetID)
+    {
+        if (NetworkClient.spawned.TryGetValue(playerNetID, out NetworkIdentity identity))
+            return identity.gameObject.GetComponent<Player>();
+        else
+            return null;
+    }
+
+  
 }
