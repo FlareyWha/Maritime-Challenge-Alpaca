@@ -38,6 +38,13 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
     // Interaction UIs
     [SerializeField]
     private ProfileNamecard InteractNamecard;
+    [SerializeField]
+    private GuildInfoPanel guildInfoPanel;
+    public GuildInfoPanel GuildInfoPanel
+    {
+        get { return guildInfoPanel; }
+        private set { }
+    }
 
 
     private const float OPEN_MENU_ANIM_TIME = 0.5f;
