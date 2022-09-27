@@ -48,8 +48,7 @@ public class SceneManager : MonoBehaviourSingleton<SceneManager>
         message = new SceneMessage { sceneName = newSceneName, sceneOperation = SceneOperation.LoadAdditive };
         playerNetIdentity.connectionToClient.Send(message);
         // Then move the player object to the subscene
-        UnityEngine.SceneManagement.SceneManager.MoveGameObjectToScene(playerNetIdentity.gameObject,
-            UnityEngine.SceneManagement.SceneManager.GetSceneByName(newSceneName));
+        MoveGameObjectToScene(playerNetIdentity.gameObject, newSceneName);
         // Reposition Player
         playerNetIdentity.gameObject.GetComponent<PlayerCommands>().ForceMovePlayer(spawnPos);
     }
@@ -65,6 +64,16 @@ public class SceneManager : MonoBehaviourSingleton<SceneManager>
             UnityEngine.SceneManagement.SceneManager.GetSceneByName(newSceneName));
         // Reposition Player
         playerNetIdentity.gameObject.GetComponent<PlayerCommands>().ForceMovePlayer(spawnPos);
+    }
+
+ 
+    [Server]
+    public void MoveGameObjectToScene(GameObject go, string sceneName)
+    {
+        // Then move the player object to the subscene on server
+        UnityEngine.SceneManagement.SceneManager.MoveGameObjectToScene(go,
+            UnityEngine.SceneManagement.SceneManager.GetSceneByName(sceneName));
+        // Move it for Everyone
     }
 
  

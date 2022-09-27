@@ -80,6 +80,7 @@ public class BaseAbandonedCity : NetworkBehaviour
         InitEnemies();
     }
 
+    [Server]
     public void InitEnemies()
     {
         for (int i = 0; i < 5; ++i)
