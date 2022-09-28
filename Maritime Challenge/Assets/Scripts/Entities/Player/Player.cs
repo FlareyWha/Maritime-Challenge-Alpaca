@@ -116,7 +116,7 @@ public class Player : BaseEntity
         bs.ServerInits();
         bs.SetOwner(connectionToClient.identity.gameObject.GetComponent<Player>());
 
-        UnityEngine.SceneManagement.SceneManager.MoveGameObjectToScene(ship, UnityEngine.SceneManagement.SceneManager.GetSceneByName("WorldHubScene"));
+        //UnityEngine.SceneManagement.SceneManager.MoveGameObjectToScene(ship, UnityEngine.SceneManagement.SceneManager.GetSceneByName("WorldHubScene"));
 
        
     }
