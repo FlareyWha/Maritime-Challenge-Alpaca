@@ -44,14 +44,14 @@ public class SceneManager : MonoBehaviourSingleton<SceneManager>
         //// Unload Current SubScene
         SceneMessage message = new SceneMessage { sceneName = currSceneName, sceneOperation = SceneOperation.UnloadAdditive };
         playerNetIdentity.connectionToClient.Send(message);
-        //// Load New SubScene
-        message = new SceneMessage { sceneName = newSceneName, sceneOperation = SceneOperation.LoadAdditive };
-        playerNetIdentity.connectionToClient.Send(message);
         // Then move the player object to the subscene
         MoveGameObjectToScene(playerNetIdentity.gameObject, newSceneName);
         MoveGameObjectToScene(playerNetIdentity.gameObject.GetComponent<Player>().BattleshipGO, newSceneName);
         // Reposition Player
         playerNetIdentity.gameObject.GetComponent<PlayerCommands>().ForceMovePlayer(spawnPos);
+        //// Load New SubScene
+        message = new SceneMessage { sceneName = newSceneName, sceneOperation = SceneOperation.LoadAdditive };
+        playerNetIdentity.connectionToClient.Send(message);
     }
 
    

@@ -171,31 +171,15 @@ public class PlayerCommands : NetworkBehaviour
     {
         PlayerInteract.ClearInteractables();
         RequestSwitchToSubScene(PlayerData.activeSubScene, sceneName, spawnPos);
-        //PlayerData.activeSubScene = sceneName;
 
         StartCoroutine(WaitEnterScene(sceneName));
     }
-
-    //public void EnterSubScene(string sceneName, Vector2 spawnPos)
-    //{
-    //    Debug.Log("Send request to enter");
-    //    RequestEnterSubScene(sceneName, spawnPos);
-    //    //PlayerData.activeSubScene = sceneName;
-    //    StartCoroutine(WaitEnterScene(sceneName));
-    //}
-
 
     [Command]
     private void RequestSwitchToSubScene(string currSceneName, string sceneName, Vector2 spawnPos)
     {
         SceneManager.Instance.EnterNetworkedSubScene(netIdentity, currSceneName, sceneName, spawnPos);
     }
-
-    //[Command]
-    //private void RequestEnterSubScene(string sceneName, Vector2 spawnPos)
-    //{
-    //    SceneManager.Instance.EnterNetworkedScene(netIdentity, sceneName, spawnPos);
-    //}
 
 
     [Command]
@@ -216,6 +200,7 @@ public class PlayerCommands : NetworkBehaviour
 
     IEnumerator WaitEnterScene(string sceneName)
     {
+        Debug.Log("Ënabling Loading Screen");
         UIManager.Instance.ToggleLoadingScreen(true);
 
         while (PlayerData.activeSubScene != sceneName)
@@ -224,6 +209,7 @@ public class PlayerCommands : NetworkBehaviour
             yield return null;
 
         UIManager.Instance.ToggleLoadingScreen(false);
+        Debug.Log("Disabling Loading Screen");
     }
 
     [ClientRpc]
