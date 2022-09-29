@@ -55,7 +55,7 @@ namespace Mirror.Examples.MultipleAdditiveScenes
                 yield return null;
 
             // Send Scene message to client to additively load the game scene
-            //conn.Send(new SceneMessage { sceneName = gameScene, sceneOperation = SceneOperation.LoadAdditive });
+            conn.Send(new SceneMessage { sceneName = subScenesList[0], sceneOperation = SceneOperation.LoadAdditive });
 
             // Wait for end of frame before adding the player to ensure Scene Message goes first
             yield return new WaitForEndOfFrame();
@@ -70,7 +70,7 @@ namespace Mirror.Examples.MultipleAdditiveScenes
             //    Scene startScene = SceneManager.GetSceneByName(subScenesList[0]);
             //    SceneManager.MoveGameObjectToScene(conn.identity.gameObject, SceneManager.GetSceneByName(subScenesList[0]));
             //}
-
+            SceneManager.MoveGameObjectToScene(conn.identity.gameObject, SceneManager.GetSceneByName(subScenesList[0]));
             clientIndex++;
         }
 
