@@ -18,8 +18,8 @@ public class AbandonedCityManager : MonoBehaviourSingleton<AbandonedCityManager>
     void Start()
     {
         //Only server should call this
-
-        CreateAbandonedCities();
+        if (GameHandler.Instance.isServer)
+            CreateAbandonedCities();
     }
 
     // Update is called once per frame

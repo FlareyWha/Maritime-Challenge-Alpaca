@@ -51,14 +51,14 @@ public class Player : BaseEntity
         PlayerData.OnPlayerDataUpdated += SetDetails;
 
         //Init My BattleShip
-        SpawnBattleShip();
+        if (LinkedBattleshipGO == null)
+            SpawnBattleShip();
 
 
         //DontDestroyOnLoad(this);
         //transform.position = new Vector3(-10, -10, 0);
 
-        // Load Player into World Hub
-        gameObject.GetComponent<PlayerCommands>().EnterSubScene("WorldHubScene", SceneManager.StartWorldHubSpawnPos);
+      
     }
 
 
@@ -117,8 +117,6 @@ public class Player : BaseEntity
         bs.SetOwner(connectionToClient.identity.gameObject.GetComponent<Player>());
 
         //UnityEngine.SceneManagement.SceneManager.MoveGameObjectToScene(ship, UnityEngine.SceneManagement.SceneManager.GetSceneByName("WorldHubScene"));
-
-       
     }
 
     private void Update()
