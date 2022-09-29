@@ -6,29 +6,31 @@ using UnityEngine.UI;
 public class AdminAppManager : MonoBehaviour
 {
     [SerializeField]
-    private GameObject registerPanel, redemptionPanel;
+    private GameObject registerPanel, redemptionItemPanel, redemptionPanel;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [SerializeField]
+    private RedemptionItemManager redemptionItemManager;
 
     public void OnRegisterPanelButtonClicked()
     {
+        redemptionItemPanel.SetActive(false);
         redemptionPanel.SetActive(false);
         registerPanel.SetActive(true);
+    }
+
+    public void OnRedemptionItemPanelButtonClicked()
+    {
+        registerPanel.SetActive(false);
+        redemptionPanel.SetActive(false);
+        redemptionItemPanel.SetActive(true);
+
+        redemptionItemManager.GetRedemptionItems();
     }
 
     public void OnRedemptionPanelButtonClicked()
     {
         registerPanel.SetActive(false);
+        redemptionItemPanel.SetActive(false);
         redemptionPanel.SetActive(true);
     }
 }
