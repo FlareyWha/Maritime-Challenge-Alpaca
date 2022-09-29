@@ -124,8 +124,6 @@ public class Player : BaseEntity
     {
         base.CheckForEntityClick();
 
-        if (isServer && InputManager.InputActions.Main.Tap.WasPressedThisFrame())
-            SceneManager.Instance.MoveGameObjectToScene(LinkedBattleshipGO, "WorldHubScene");
     }
 
     public override void OnEntityClicked()
