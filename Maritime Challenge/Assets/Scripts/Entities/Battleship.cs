@@ -188,13 +188,12 @@ public class Battleship : NetworkBehaviour
     private void LaunchCannonBall(GameObject target, string currSceneName)
     {
         GameObject ball = Instantiate(CannonBallPrefab, transform.position, Quaternion.identity);
+        SceneManager.Instance.MoveGameObjectToScene(ball, currSceneName);
         NetworkServer.Spawn(ball);
 
         CannonBall cannonBall = ball.GetComponent<CannonBall>();
         cannonBall.Init(target, ownerPlayer);
 
-        UnityEngine.SceneManagement.SceneManager.MoveGameObjectToScene(ball,
-            UnityEngine.SceneManagement.SceneManager.GetSceneByName(currSceneName));
     }
 
     private void OnTargetDiedCallback()

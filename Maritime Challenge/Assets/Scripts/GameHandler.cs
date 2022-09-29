@@ -33,18 +33,5 @@ public class GameHandler : NetworkBehaviour
     }
 
 
-    [ClientRpc]
-    public void OnGameObjectMoved(GameObject go, string sceneName)
-    {
-        //check if scene valid
-        SceneManager.Instance.MoveGameObjectToScene(go, sceneName);
-    }
-
-    [Command]
-    public void RequestMoveGameObjectToScene(GameObject go, string sceneName)
-    {
-        SceneManager.Instance.GlobalMoveGameObjectToScene(go, sceneName);
-    }
-
 
 }

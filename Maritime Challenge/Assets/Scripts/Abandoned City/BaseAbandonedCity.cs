@@ -108,6 +108,7 @@ public class BaseAbandonedCity : NetworkBehaviour
 
     public void OnFirstPlayerEnterArea()
     {
+        Debug.Log("Player In Range - Spawning Enemies..");
         SpawnEnemies();
     }
 

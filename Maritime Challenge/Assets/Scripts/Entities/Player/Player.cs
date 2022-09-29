@@ -31,6 +31,7 @@ public class Player : BaseEntity
     private bool isVisible = true;
     [SyncVar(hook = nameof(OnShipSet))]
     private GameObject LinkedBattleshipGO = null;
+    public GameObject BattleshipGO { get { return LinkedBattleshipGO; } }
 
     private PlayerUI playerUI = null;
     private Battleship LinkedBattleship = null;
@@ -109,6 +110,7 @@ public class Player : BaseEntity
     void SpawnBattleShip()
     {
         GameObject ship = Instantiate(BattleShipPrefab);
+        SceneManager.Instance.MoveGameObjectToScene(ship, "WorldHubScene");
         NetworkServer.Spawn(ship, connectionToClient);
         LinkedBattleshipGO = ship;
 
@@ -116,12 +118,14 @@ public class Player : BaseEntity
         bs.ServerInits();
         bs.SetOwner(connectionToClient.identity.gameObject.GetComponent<Player>());
 
-        //UnityEngine.SceneManagement.SceneManager.MoveGameObjectToScene(ship, UnityEngine.SceneManagement.SceneManager.GetSceneByName("WorldHubScene"));
     }
 
     private void Update()
     {
         base.CheckForEntityClick();
+
+        if (isServer && InputManager.InputActions.Main.Tap.WasPressedThisFrame())
+            SceneManager.Instance.MoveGameObjectToScene(LinkedBattleshipGO, "WorldHubScene");
     }
 
     public override void OnEntityClicked()

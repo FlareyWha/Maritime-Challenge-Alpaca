@@ -48,42 +48,20 @@ public class SceneManager : MonoBehaviourSingleton<SceneManager>
         message = new SceneMessage { sceneName = newSceneName, sceneOperation = SceneOperation.LoadAdditive };
         playerNetIdentity.connectionToClient.Send(message);
         // Then move the player object to the subscene
-        GlobalMoveGameObjectToScene(playerNetIdentity.gameObject, newSceneName);
+        MoveGameObjectToScene(playerNetIdentity.gameObject, newSceneName);
+        MoveGameObjectToScene(playerNetIdentity.gameObject.GetComponent<Player>().BattleshipGO, newSceneName);
         // Reposition Player
         playerNetIdentity.gameObject.GetComponent<PlayerCommands>().ForceMovePlayer(spawnPos);
     }
 
-    //[Server]
-    //public void EnterNetworkedScene(NetworkIdentity playerNetIdentity, string newSceneName, Vector2 spawnPos)
-    //{
-    //    // Load SubScene
-    //    SceneMessage message = new SceneMessage { sceneName = newSceneName, sceneOperation = SceneOperation.LoadAdditive };
-    //    playerNetIdentity.connectionToClient.Send(message);
-    //    // Then move the player object to the subscene
-    //    GlobalMoveGameObjectToScene(playerNetIdentity.gameObject, newSceneName);
-    //    // Reposition Player
-    //    playerNetIdentity.gameObject.GetComponent<PlayerCommands>().ForceMovePlayer(spawnPos);
-    //}
-
+   
     [Server]
-    public void GlobalMoveGameObjectToScene(GameObject go, string sceneName)
-    {
-        MoveGameObjectToScene(go, sceneName);
-        // Move it for Everyone
-        //GameHandler.Instance.OnGameObjectMoved(go, sceneName);
-    }
- 
     public void MoveGameObjectToScene(GameObject go, string sceneName)
     {
-        // Then move the player object to the subscene on server
         UnityEngine.SceneManagement.SceneManager.MoveGameObjectToScene(go,
             UnityEngine.SceneManagement.SceneManager.GetSceneByName(sceneName));
     }
-
-   
-
  
-
 }
 
 public enum SCENE_ID
