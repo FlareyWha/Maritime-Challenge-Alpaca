@@ -48,33 +48,39 @@ public class SceneManager : MonoBehaviourSingleton<SceneManager>
         message = new SceneMessage { sceneName = newSceneName, sceneOperation = SceneOperation.LoadAdditive };
         playerNetIdentity.connectionToClient.Send(message);
         // Then move the player object to the subscene
-        MoveGameObjectToScene(playerNetIdentity.gameObject, newSceneName);
+        GlobalMoveGameObjectToScene(playerNetIdentity.gameObject, newSceneName);
         // Reposition Player
         playerNetIdentity.gameObject.GetComponent<PlayerCommands>().ForceMovePlayer(spawnPos);
     }
 
+    //[Server]
+    //public void EnterNetworkedScene(NetworkIdentity playerNetIdentity, string newSceneName, Vector2 spawnPos)
+    //{
+    //    // Load SubScene
+    //    SceneMessage message = new SceneMessage { sceneName = newSceneName, sceneOperation = SceneOperation.LoadAdditive };
+    //    playerNetIdentity.connectionToClient.Send(message);
+    //    // Then move the player object to the subscene
+    //    GlobalMoveGameObjectToScene(playerNetIdentity.gameObject, newSceneName);
+    //    // Reposition Player
+    //    playerNetIdentity.gameObject.GetComponent<PlayerCommands>().ForceMovePlayer(spawnPos);
+    //}
+
     [Server]
-    public void EnterNetworkedScene(NetworkIdentity playerNetIdentity, string newSceneName, Vector2 spawnPos)
+    public void GlobalMoveGameObjectToScene(GameObject go, string sceneName)
     {
-        // Load SubScene
-        SceneMessage message = new SceneMessage { sceneName = newSceneName, sceneOperation = SceneOperation.LoadAdditive };
-        playerNetIdentity.connectionToClient.Send(message);
-        // Then move the player object to the subscene
-        UnityEngine.SceneManagement.SceneManager.MoveGameObjectToScene(playerNetIdentity.gameObject,
-            UnityEngine.SceneManagement.SceneManager.GetSceneByName(newSceneName));
-        // Reposition Player
-        playerNetIdentity.gameObject.GetComponent<PlayerCommands>().ForceMovePlayer(spawnPos);
+        MoveGameObjectToScene(go, sceneName);
+        // Move it for Everyone
+        //GameHandler.Instance.OnGameObjectMoved(go, sceneName);
     }
-
  
-    [Server]
     public void MoveGameObjectToScene(GameObject go, string sceneName)
     {
         // Then move the player object to the subscene on server
         UnityEngine.SceneManagement.SceneManager.MoveGameObjectToScene(go,
             UnityEngine.SceneManagement.SceneManager.GetSceneByName(sceneName));
-        // Move it for Everyone
     }
+
+   
 
  
 

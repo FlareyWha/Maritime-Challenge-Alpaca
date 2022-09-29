@@ -176,13 +176,13 @@ public class PlayerCommands : NetworkBehaviour
         StartCoroutine(WaitEnterScene(sceneName));
     }
 
-    public void EnterSubScene(string sceneName, Vector2 spawnPos)
-    {
-        Debug.Log("Send request to enter");
-        RequestEnterSubScene(sceneName, spawnPos);
-        //PlayerData.activeSubScene = sceneName;
-        StartCoroutine(WaitEnterScene(sceneName));
-    }
+    //public void EnterSubScene(string sceneName, Vector2 spawnPos)
+    //{
+    //    Debug.Log("Send request to enter");
+    //    RequestEnterSubScene(sceneName, spawnPos);
+    //    //PlayerData.activeSubScene = sceneName;
+    //    StartCoroutine(WaitEnterScene(sceneName));
+    //}
 
 
     [Command]
@@ -191,11 +191,11 @@ public class PlayerCommands : NetworkBehaviour
         SceneManager.Instance.EnterNetworkedSubScene(netIdentity, currSceneName, sceneName, spawnPos);
     }
 
-    [Command]
-    private void RequestEnterSubScene(string sceneName, Vector2 spawnPos)
-    {
-        SceneManager.Instance.EnterNetworkedScene(netIdentity, sceneName, spawnPos);
-    }
+    //[Command]
+    //private void RequestEnterSubScene(string sceneName, Vector2 spawnPos)
+    //{
+    //    SceneManager.Instance.EnterNetworkedScene(netIdentity, sceneName, spawnPos);
+    //}
 
 
     [Command]

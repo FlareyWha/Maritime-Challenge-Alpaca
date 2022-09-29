@@ -20,7 +20,6 @@ public class AirHockeySeat : Interactable
     public bool OnOppositeSide { get { return IsOppositeSide; } }
 
     private int UID = -1;
-    private int playerScore = 0;
 
     void Start()
     {
