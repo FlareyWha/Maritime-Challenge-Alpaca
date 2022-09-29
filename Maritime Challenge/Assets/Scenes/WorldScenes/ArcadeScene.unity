@@ -3265,7 +3265,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3
+  orthographic size: 15
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -3452,6 +3452,10 @@ PrefabInstance:
       propertyPath: sceneId
       value: 3049553129
       objectReference: {fileID: 0}
+    - target: {fileID: 2399485862755039261, guid: 2716639459e443f46b7efacff488f231, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1.97
+      objectReference: {fileID: 0}
     - target: {fileID: 2403772103738581143, guid: 2716639459e443f46b7efacff488f231, type: 3}
       propertyPath: sceneId
       value: 1094715095
@@ -3470,11 +3474,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3023359793369798420, guid: 2716639459e443f46b7efacff488f231, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2
+      value: 5.8
       objectReference: {fileID: 0}
     - target: {fileID: 3023359793369798420, guid: 2716639459e443f46b7efacff488f231, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7
+      value: 10.13
       objectReference: {fileID: 0}
     - target: {fileID: 3023359793369798420, guid: 2716639459e443f46b7efacff488f231, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3562,7 +3566,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7011034235522670036, guid: 2716639459e443f46b7efacff488f231, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7135350957074365323, guid: 2716639459e443f46b7efacff488f231, type: 3}
       propertyPath: sceneId
@@ -3571,6 +3575,10 @@ PrefabInstance:
     - target: {fileID: 7771160456136221704, guid: 2716639459e443f46b7efacff488f231, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8648410877387455647, guid: 2716639459e443f46b7efacff488f231, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 8975234048263222954, guid: 2716639459e443f46b7efacff488f231, type: 3}
       propertyPath: m_IsActive

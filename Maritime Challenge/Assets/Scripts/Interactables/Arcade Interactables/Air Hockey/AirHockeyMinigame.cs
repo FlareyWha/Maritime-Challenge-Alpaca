@@ -20,6 +20,8 @@ public class AirHockeyMinigame : NetworkBehaviour
     private readonly SyncDictionary<int, uint> playersList = new SyncDictionary<int, uint>();
     private readonly SyncDictionary<int, int> scoresList = new SyncDictionary<int, int>();
 
+    private Vector3 startPuckPos;
+
 
     private void Start()
     {
@@ -28,6 +30,7 @@ public class AirHockeyMinigame : NetworkBehaviour
         Puck.gameObject.SetActive(false);
         //   for (int i = 0; i < PlayerPaddle.Length; i++)
         //      PlayerPaddle[i].gameObject.SetActive(false);
+        startPuckPos = Puck.transform.position;
         
         for (int i = 0; i < PlayerSeats.Length; i++)
         {
@@ -160,6 +163,7 @@ public class AirHockeyMinigame : NetworkBehaviour
     private void StartGame()
     {
         Puck.gameObject.SetActive(true);
+        ResetPuck();
         StartGameCallback();
     }
 
@@ -193,8 +197,7 @@ public class AirHockeyMinigame : NetworkBehaviour
     [Server]
     public void OnPuckEnteredGoal(int seatID)
     {
-        Puck.transform.localPosition = Vector3.zero;
-        Puck.ForceStop();
+        ResetPuck();
 
         int score = scoresList[seatID];
         score++;
@@ -208,7 +211,11 @@ public class AirHockeyMinigame : NetworkBehaviour
         PlayerSeats[seatID].UpdateScoreDisplay(score);
     }
 
-
+    private void ResetPuck()
+    {
+        Puck.transform.localPosition = startPuckPos;
+        Puck.ForceStop();
+    }
 
     private int GetPlayerSeatID(Player player)
     {

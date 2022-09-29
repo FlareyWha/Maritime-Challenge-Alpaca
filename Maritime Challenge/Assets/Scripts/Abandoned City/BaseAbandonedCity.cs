@@ -10,8 +10,8 @@ public class BaseAbandonedCity : NetworkBehaviour
     [SerializeField]  //Honestly idk i need to find a way to do this better but else uhhhhhhhh
     protected int abandonedCityID;
 
-    protected List<BaseEnemy> allEnemies = new List<BaseEnemy>();
-    protected List<BaseEnemy> enemyList = new List<BaseEnemy>();
+    protected SyncList<BaseEnemy> allEnemies = new SyncList<BaseEnemy>();
+    protected SyncList<BaseEnemy> enemyList = new SyncList<BaseEnemy>();
     protected List<Player> playerList = new List<Player>();
 
     [SerializeField]
@@ -26,11 +26,19 @@ public class BaseAbandonedCity : NetworkBehaviour
 
     protected Grid grid;
 
+    [SyncVar(hook = nameof(OnEnemiesVisibilityChanged))]
+    private bool isEnemiesVisible = false;
+
     protected void OnDrawGizmos()
     {
         //Draw something to visualize the box area
         Gizmos.color = Color.green;
         Gizmos.DrawWireCube(transform.position, new Vector3(abandonedCityAreaUpperLimit.x - abandonedCityAreaLowerLimit.x, abandonedCityAreaUpperLimit.y - abandonedCityAreaLowerLimit.y, 0));
+    }
+
+    public override void OnStartServer()
+    {
+        isEnemiesVisible = false;
     }
 
     IEnumerator GetGrid()
@@ -63,7 +71,7 @@ public class BaseAbandonedCity : NetworkBehaviour
         {
             captured = true;
         }
-      
+
         Grid grid = GameObject.Find("Grid").GetComponent<Grid>();
 
         //Make sure cell width and height will always fit cell size
@@ -86,17 +94,18 @@ public class BaseAbandonedCity : NetworkBehaviour
         for (int i = 0; i < 5; ++i)
         {
             GameObject baseEnemyGameObject = Instantiate(EnemyAssetManager.Instance.BlobTheFish, transform.position + new Vector3(0, 0, 0), Quaternion.identity);
+            UnityEngine.SceneManagement.SceneManager.MoveGameObjectToScene(baseEnemyGameObject, UnityEngine.SceneManagement.SceneManager.GetSceneByName("WorldHubScene"));
 
             NetworkServer.Spawn(baseEnemyGameObject);
 
-            UnityEngine.SceneManagement.SceneManager.MoveGameObjectToScene(baseEnemyGameObject, UnityEngine.SceneManagement.SceneManager.GetSceneByName("WorldHubScene"));
 
             baseEnemyGameObject.SetActive(false);
 
             allEnemies.Add(baseEnemyGameObject.GetComponent<BaseEnemy>());
         }
+        isEnemiesVisible = false;
     }
-    
+
     public void ResizeColliderSize(Grid grid)
     {
         //Set the size for the collider
@@ -173,6 +182,7 @@ public class BaseAbandonedCity : NetworkBehaviour
         }
 
         enemyList = allEnemies;
+        isEnemiesVisible = true;
 
         Debug.Log("Spawned enemies");
     }
@@ -206,7 +216,15 @@ public class BaseAbandonedCity : NetworkBehaviour
 
         playerList.Clear();
 
-       // Debug.Log("Resetted abandoned city");
+        // Debug.Log("Resetted abandoned city");
+    }
+
+    private void OnEnemiesVisibilityChanged(bool _old, bool _new)
+    {
+        foreach (BaseEnemy enemy in allEnemies)
+        {
+            enemy.gameObject.SetActive(_new);
+        }
     }
 
     [ServerCallback]
@@ -248,5 +266,14 @@ public class BaseAbandonedCity : NetworkBehaviour
                 Debug.LogError(webreq.downloadHandler.text);
                 break;
         }
+    }
+
+
+    private BaseEnemy GetEnemyFromList(uint enemyNetID)
+    {
+        if (NetworkClient.spawned.TryGetValue(enemyNetID, out NetworkIdentity identity))
+            return identity.gameObject.GetComponent<BaseEnemy>();
+        else
+            return null;
     }
 }
