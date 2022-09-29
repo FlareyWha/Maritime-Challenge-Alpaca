@@ -74,4 +74,10 @@ public class ServerDataManager : MonoBehaviour
     public static string URL_updateAbandonedCityCapturedGuildID = serverURL + "UpdateAbandonedCityCapturedGuildID.php";
 
     #endregion
+
+    #region Handling Admin Stuff
+
+    public static string URL_getRedemptionRequests = serverURL + "GetRedemptionRequests.php";
+
+    #endregion
 }

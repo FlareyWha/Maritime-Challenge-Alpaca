@@ -135,3 +135,16 @@ public class JSONGuildInfoList
 {
     public List<JSONGuildInfo> guildInfo = new List<JSONGuildInfo>();
 }
+
+[Serializable]
+public class JSONRedemptionRequest
+{
+    public string sUsername;
+    public string sRedemptionItemName;
+}
+
+[Serializable]
+public class JSONRedemptionRequestList
+{
+    public List<JSONRedemptionRequest> redemptionRequests = new List<JSONRedemptionRequest>();
+}

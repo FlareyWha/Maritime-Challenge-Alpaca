@@ -121,4 +121,11 @@ public class JSONDeseralizer : MonoBehaviour
 
         return guildInfoList.guildInfo[0];
     }
+
+    public static List<JSONRedemptionRequest> DeseralizeRedemptionRequests(string redemptionRequestJSON)
+    {
+        JSONRedemptionRequestList redemptionRequestList = JsonUtility.FromJson<JSONRedemptionRequestList>(redemptionRequestJSON);
+
+        return redemptionRequestList.redemptionRequests;
+    }
 }

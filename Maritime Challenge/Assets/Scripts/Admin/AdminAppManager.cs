@@ -11,6 +11,9 @@ public class AdminAppManager : MonoBehaviour
     [SerializeField]
     private RedemptionItemManager redemptionItemManager;
 
+    [SerializeField]
+    private RedemptionRequestManager redemptionRequestManager;
+
     public void OnRegisterPanelButtonClicked()
     {
         redemptionItemPanel.SetActive(false);
@@ -32,5 +35,7 @@ public class AdminAppManager : MonoBehaviour
         registerPanel.SetActive(false);
         redemptionItemPanel.SetActive(false);
         redemptionPanel.SetActive(true);
+
+        redemptionRequestManager.GetRedemptionRequests();
     }
 }
