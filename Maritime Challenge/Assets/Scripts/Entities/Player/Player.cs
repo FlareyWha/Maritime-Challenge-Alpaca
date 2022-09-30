@@ -10,6 +10,9 @@ public class Player : BaseEntity
 {
     [SerializeField]
     private GameObject BattleShipPrefab;
+    [SerializeField]
+    private SpriteRenderer BodyReferenceSprite;
+    public SpriteRenderer RefSprite { get { return BodyReferenceSprite; } }
 
 
     [SyncVar]
@@ -51,15 +54,13 @@ public class Player : BaseEntity
        
         PlayerData.OnPlayerDataUpdated += SetDetails;
 
+        // Enable My Player Components
+        GetComponent<PlayerAnimationsManager>().enabled = true;
+
         //Init My BattleShip
         if (LinkedBattleshipGO == null)
             SpawnBattleShip();
 
-
-        //DontDestroyOnLoad(this);
-        //transform.position = new Vector3(-10, -10, 0);
-
-      
     }
 
 
@@ -122,11 +123,12 @@ public class Player : BaseEntity
 
     private void Update()
     {
-        base.CheckForEntityClick();
+        if (InputManager.InputActions.Main.Tap.WasPressedThisFrame() && SpriteHandler.IsWithinSprite(transform.position, BodyReferenceSprite))
+            OnPlayerClicked();
 
     }
 
-    public override void OnEntityClicked()
+    private void OnPlayerClicked()
     {
         Debug.Log("Player Entity Click Called");
         playerUI.OpenInteractPanel();

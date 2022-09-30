@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1127d983dab5e946ac3886167ae1ce1, type: 3}
+  m_Name: Avatar
+  m_EditorClassIdentifier: Assembly-CSharp::SO_Avatar
+  avatarHair:
+    bodyPartName: Hair
+    bodyPart: {fileID: 11400000, guid: 5a995fc1ff19337498a0170eb9c74eab, type: 2}
+  avatarBody:
+    bodyPartName: Body
+    bodyPart: {fileID: 11400000, guid: b9388ad028959464ea8e36a4987ba2ab, type: 2}
+  avatarTop:
+    bodyPartName: Top
+    bodyPart: {fileID: 11400000, guid: 4ed7db9fdaa0fa7429b9c478486570a7, type: 2}
+  avatarBottom:
+    bodyPartName: Bottom
+    bodyPart: {fileID: 11400000, guid: 3fe6d975f261d8b4082e6d4d15bb97c1, type: 2}
+  avatarShoe:
+    bodyPartName: Shoe
+    bodyPart: {fileID: 11400000, guid: 5a995fc1ff19337498a0170eb9c74eab, type: 2}
