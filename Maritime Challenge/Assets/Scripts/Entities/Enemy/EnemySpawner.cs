@@ -38,7 +38,9 @@ public class EnemySpawner : NetworkBehaviour
     private void Spawn(Vector2 spawnPos)
     {
         GameObject newEnemy = Instantiate(enemyPrefab, spawnPos, Quaternion.identity);
+        SceneManager.Instance.MoveGameObjectToScene(newEnemy, "WorldHubScene");
         NetworkServer.Spawn(newEnemy);
+        newEnemy.GetComponent<BaseEnemy>().InitEnemy(spawnPos);
     }
 
     [Command]

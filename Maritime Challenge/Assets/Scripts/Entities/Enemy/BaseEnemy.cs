@@ -94,10 +94,44 @@ public class BaseEnemy : BaseEntity
         rb = GetComponent<Rigidbody2D>();
         OnEntityHPChanged += OnHPChanged;
 
+        //if (!isServer)
+        //    return;
+
+        //// Debug.Log("Enemy Start Called");
+
+        //Grid grid = GameObject.Find("Grid").GetComponent<Grid>();
+
+        ////Make sure spawn point will start from the edge of the grid
+        //spawnPoint.x -= spawnPoint.x % grid.cellSize.x;
+        //spawnPoint.y -= spawnPoint.y % grid.cellSize.y;
+
+        ////Set current position to spawn point
+        //transform.position = spawnPoint;
+
+        //Vector3Int gridSpawnPoint = grid.WorldToCell(spawnPoint);
+
+        ////Make sure cell width and height will always fit cell size
+        //movementAreaCellWidth -= Mathf.RoundToInt(movementAreaCellWidth % grid.cellSize.x);
+        //movementAreaCellHeight -= Mathf.RoundToInt(movementAreaCellHeight % grid.cellSize.y);
+
+        ////Save this for later for a*
+        //gridMovementAreaLowerLimit = new Vector3Int(gridSpawnPoint.x - movementAreaCellWidth / 2, gridSpawnPoint.y - movementAreaCellHeight / 2, 0);
+        //gridMovementAreaUpperLimit = new Vector3Int(gridSpawnPoint.x + movementAreaCellWidth / 2, gridSpawnPoint.y + movementAreaCellHeight / 2, 0);
+
+        ////Set the limits for where the enemy can go
+        //movementAreaLowerLimit = grid.CellToWorld(gridMovementAreaLowerLimit);
+        //movementAreaUpperLimit = grid.CellToWorld(gridMovementAreaUpperLimit);
+
+        //FindPlayerToTarget();
+    }
+
+
+    public void InitEnemy(Vector3 spawnPoint, BaseAbandonedCity baseAbandonedCity = null)
+    {
         if (!isServer)
             return;
 
-       // Debug.Log("Enemy Start Called");
+        // Debug.Log("Enemy Start Called");
 
         Grid grid = GameObject.Find("Grid").GetComponent<Grid>();
 
@@ -121,6 +155,8 @@ public class BaseEnemy : BaseEntity
         //Set the limits for where the enemy can go
         movementAreaLowerLimit = grid.CellToWorld(gridMovementAreaLowerLimit);
         movementAreaUpperLimit = grid.CellToWorld(gridMovementAreaUpperLimit);
+
+        linkedAbandonedCity = baseAbandonedCity;
 
         FindPlayerToTarget();
     }
@@ -331,7 +367,7 @@ public class BaseEnemy : BaseEntity
         {
             FindAStarPath(currentTargetPlayer.transform.position);
 
-            aStarTimer = 1.25f;
+            aStarTimer = 1f;
         }
 
         aStarTimer -= Time.deltaTime;

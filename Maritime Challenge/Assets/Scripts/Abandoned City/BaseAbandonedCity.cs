@@ -41,6 +41,10 @@ public class BaseAbandonedCity : NetworkBehaviour
         isEnemiesVisible = false;
     }
 
+    public override void OnStartClient()
+    {
+    }
+
     IEnumerator GetGrid()
     {
         while (GridManager.Instance == null)
@@ -56,6 +60,10 @@ public class BaseAbandonedCity : NetworkBehaviour
     private void Start()
     {
         StartCoroutine(GetGrid());
+        foreach (uint enemyID in allEnemies)
+        {
+            GetEnemyFromList(enemyID).gameObject.SetActive(isEnemiesVisible);
+        }
     }
 
     [Server]
@@ -93,11 +101,14 @@ public class BaseAbandonedCity : NetworkBehaviour
     {
         for (int i = 0; i < 5; ++i)
         {
-            GameObject baseEnemyGameObject = Instantiate(EnemyAssetManager.Instance.BlobTheFish, transform.position + new Vector3(0, 0, 0), Quaternion.identity);
+            GameObject baseEnemyGameObject = Instantiate(EnemyAssetManager.Instance.BlobTheFish, transform.position, Quaternion.identity);
+            BaseEnemy baseEnemy = baseEnemyGameObject.GetComponent<BaseEnemy>();
+
             UnityEngine.SceneManagement.SceneManager.MoveGameObjectToScene(baseEnemyGameObject, UnityEngine.SceneManagement.SceneManager.GetSceneByName("WorldHubScene"));
 
             NetworkServer.Spawn(baseEnemyGameObject);
 
+            baseEnemy.InitEnemy(new Vector3(Random.Range(abandonedCityAreaLowerLimit.x, abandonedCityAreaUpperLimit.x), Random.Range(abandonedCityAreaLowerLimit.y, abandonedCityAreaUpperLimit.y), 0), this);
 
             baseEnemyGameObject.SetActive(false);
 
@@ -123,6 +134,7 @@ public class BaseAbandonedCity : NetworkBehaviour
 
     public void OnLastPlayerLeaveArea()
     {
+        Debug.Log("Last Player Left");
         ResetAbandonedCity();
     }
 
@@ -181,10 +193,12 @@ public class BaseAbandonedCity : NetworkBehaviour
             GetEnemyFromList(enemyID).gameObject.SetActive(true);
         }
 
-        enemyList = allEnemies;
+        enemyList.AddRange(allEnemies);
+
         isEnemiesVisible = true;
 
-        Debug.Log("Spawned enemies");
+        Debug.Log("Enemy List Count: " + enemyList.Count);
+        Debug.Log("All Enemy List Count: " + allEnemies.Count);
     }
 
     public void UnspawnEnemies()
@@ -194,7 +208,12 @@ public class BaseAbandonedCity : NetworkBehaviour
             GetEnemyFromList(enemyID).gameObject.SetActive(false);
         }
 
+        isEnemiesVisible = false;
+
         enemyList.Clear();
+
+        Debug.Log("Enemy List Count Unspawn: " + enemyList.Count);
+        Debug.Log("All Enemy List Count Unspawn: " + allEnemies.Count);
     }
 
     public void DestroyEnemies()
