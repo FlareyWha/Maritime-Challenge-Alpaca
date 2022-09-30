@@ -10,8 +10,8 @@ public class BaseAbandonedCity : NetworkBehaviour
     [SerializeField]  //Honestly idk i need to find a way to do this better but else uhhhhhhhh
     protected int abandonedCityID;
 
-    protected SyncList<BaseEnemy> allEnemies = new SyncList<BaseEnemy>();
-    protected SyncList<BaseEnemy> enemyList = new SyncList<BaseEnemy>();
+    protected SyncList<uint> allEnemies = new SyncList<uint>();
+    protected SyncList<uint> enemyList = new SyncList<uint>();
     protected List<Player> playerList = new List<Player>();
 
     [SerializeField]
@@ -101,7 +101,7 @@ public class BaseAbandonedCity : NetworkBehaviour
 
             baseEnemyGameObject.SetActive(false);
 
-            allEnemies.Add(baseEnemyGameObject.GetComponent<BaseEnemy>());
+            allEnemies.Add(baseEnemyGameObject.GetComponent<BaseEnemy>().netId);
         }
         isEnemiesVisible = false;
     }
@@ -144,12 +144,12 @@ public class BaseAbandonedCity : NetworkBehaviour
 
     public void AddToEnemyList(BaseEnemy enemy)
     {
-        enemyList.Add(enemy);
+        enemyList.Add(enemy.netId);
     }
 
     public void RemoveFromEnemyList(BaseEnemy enemy, Player enemyKiller)
     {
-        enemyList.Remove(enemy);
+        enemyList.Remove(enemy.netId);
         CheckAreaCleared(enemyKiller);
     }
 
@@ -176,9 +176,9 @@ public class BaseAbandonedCity : NetworkBehaviour
     public void SpawnEnemies()
     {
         //Spawn enemies and make sure to set the abandoned city variable in the enemies to this one.
-        foreach (BaseEnemy enemy in allEnemies)
+        foreach (uint enemyID in allEnemies)
         {
-            enemy.gameObject.SetActive(true);
+            GetEnemyFromList(enemyID).gameObject.SetActive(true);
         }
 
         enemyList = allEnemies;
@@ -189,9 +189,9 @@ public class BaseAbandonedCity : NetworkBehaviour
 
     public void UnspawnEnemies()
     {
-        foreach (BaseEnemy enemy in enemyList)
+        foreach (uint enemyID in enemyList)
         {
-            enemy.gameObject.SetActive(false);
+            GetEnemyFromList(enemyID).gameObject.SetActive(false);
         }
 
         enemyList.Clear();
@@ -201,9 +201,9 @@ public class BaseAbandonedCity : NetworkBehaviour
     {
         enemyList.Clear();
 
-        foreach (BaseEnemy enemy in allEnemies)
+        foreach (uint enemyID in allEnemies)
         {
-            NetworkServer.Destroy(enemy.gameObject);
+            NetworkServer.Destroy(GetEnemyFromList(enemyID).gameObject);
         }
 
         allEnemies.Clear();
@@ -221,9 +221,9 @@ public class BaseAbandonedCity : NetworkBehaviour
 
     private void OnEnemiesVisibilityChanged(bool _old, bool _new)
     {
-        foreach (BaseEnemy enemy in allEnemies)
+        foreach (uint enemyID in allEnemies)
         {
-            enemy.gameObject.SetActive(_new);
+            GetEnemyFromList(enemyID).gameObject.SetActive(_new);
         }
     }
 
@@ -271,7 +271,10 @@ public class BaseAbandonedCity : NetworkBehaviour
 
     private BaseEnemy GetEnemyFromList(uint enemyNetID)
     {
-        if (NetworkClient.spawned.TryGetValue(enemyNetID, out NetworkIdentity identity))
+        NetworkIdentity identity;
+        if (isClient && NetworkClient.spawned.TryGetValue(enemyNetID, out identity))
+            return identity.gameObject.GetComponent<BaseEnemy>();
+        else if (isServer && NetworkServer.spawned.TryGetValue(enemyNetID, out identity))
             return identity.gameObject.GetComponent<BaseEnemy>();
         else
             return null;
