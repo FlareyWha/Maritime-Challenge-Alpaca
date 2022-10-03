@@ -119,7 +119,7 @@ public class PostLoginInfoGetter : MonoBehaviour
         switch (webreq.result)
         {
             case UnityWebRequest.Result.Success:
-                GameSettings.AllCosmeticsList.AddRange(JSONDeseralizer.DeseralizeCosmeticData(webreq.downloadHandler.text));
+                GameSettings.CosmeticsList = JSONDeseralizer.DeseralizeCosmeticData(webreq.downloadHandler.text);
                 break;
             case UnityWebRequest.Result.ProtocolError:
                 Debug.LogError(webreq.downloadHandler.text);
