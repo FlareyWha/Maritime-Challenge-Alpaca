@@ -22,6 +22,8 @@ public class PostLoginInfoGetter : MonoBehaviour
         StartCoroutine(coroutineCollectionManager.CollectCoroutine(GetPhonebookData()));
         StartCoroutine(coroutineCollectionManager.CollectCoroutine(FriendRequestHandler.GetSentFriendRequests()));
         StartCoroutine(coroutineCollectionManager.CollectCoroutine(FriendRequestHandler.GetRecievedFriendRequests()));
+        StartCoroutine(coroutineCollectionManager.CollectCoroutine(DoGetCosmetics()));
+        StartCoroutine(coroutineCollectionManager.CollectCoroutine(DoGetCosmeticStatusList()));
 
         //Wait for all the coroutines to finish running before continuing
         yield return coroutineCollectionManager;
@@ -97,6 +99,51 @@ public class PostLoginInfoGetter : MonoBehaviour
                 //Deseralize the data
                 JSONDeseralizer.DeseralizePhonebookData(webreq.downloadHandler.text);
 
+                break;
+            case UnityWebRequest.Result.ProtocolError:
+                Debug.LogError(webreq.downloadHandler.text);
+                break;
+            default:
+                Debug.LogError("Server error");
+                break;
+        }
+    }
+
+    IEnumerator DoGetCosmetics()
+    {
+        string url = ServerDataManager.URL_getCosmeticData;
+        Debug.Log(url);
+
+        using UnityWebRequest webreq = UnityWebRequest.Get(url);
+        yield return webreq.SendWebRequest();
+        switch (webreq.result)
+        {
+            case UnityWebRequest.Result.Success:
+                GameSettings.AllCosmeticsList.AddRange(JSONDeseralizer.DeseralizeCosmeticData(webreq.downloadHandler.text));
+                break;
+            case UnityWebRequest.Result.ProtocolError:
+                Debug.LogError(webreq.downloadHandler.text);
+                break;
+            default:
+                Debug.LogError("Server error");
+                break;
+        }
+    }
+
+    IEnumerator DoGetCosmeticStatusList()
+    {
+        string url = ServerDataManager.URL_getCosmeticStatusList;
+        Debug.Log(url);
+
+        WWWForm form = new WWWForm();
+        form.AddField("iOwnerUID", PlayerData.UID);
+        using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
+        yield return webreq.SendWebRequest();
+        switch (webreq.result)
+        {
+            case UnityWebRequest.Result.Success:
+                //I sure hope this wont break things in the future
+                GameSettings.CosmeticsStatusDict = JSONDeseralizer.DeseralizeCosmeticStatusList(webreq.downloadHandler.text);
                 break;
             case UnityWebRequest.Result.ProtocolError:
                 Debug.LogError(webreq.downloadHandler.text);

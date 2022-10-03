@@ -10,9 +10,9 @@ public class AvatarItemUI : MonoBehaviour
     [SerializeField]
     private Image itemIcon;
 
-    private AvatarBodyPart item;
+    private AvatarCosmetic item;
 
-    private Action<AvatarBodyPart> onSelectAction;
+    private Action<AvatarCosmetic> onSelectAction;
 
 
     private void Start()
@@ -21,7 +21,7 @@ public class AvatarItemUI : MonoBehaviour
     }
 
 
-    public void Init(Action<AvatarBodyPart> action)
+    public void Init(Action<AvatarCosmetic> action)
     {
         onSelectAction = action;
     }

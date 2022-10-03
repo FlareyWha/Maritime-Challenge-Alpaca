@@ -11,5 +11,5 @@ public class AvatarSO : ScriptableObject
 public class AvatarPart
 {
     public string bodyPartName;
-    public AvatarBodyPart bodyPart;
+    public AvatarCosmetic cosmetic;
 }

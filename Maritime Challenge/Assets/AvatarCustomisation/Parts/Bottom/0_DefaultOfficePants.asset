@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c7a9f46d422cfd47b9f51a85a7fc34f, type: 3}
   m_Name: 0_DefaultOfficePants
   m_EditorClassIdentifier: 
-  bodyPartName: Default Office Pants
-  bodyPartAnimationID: 0
+  bodyPartID: 0
+  bodyPartType: 4
   allBodyPartAnimations:
   - {fileID: 7400000, guid: e570f54c3ade84d428e9d93a8f50dbd3, type: 2}
