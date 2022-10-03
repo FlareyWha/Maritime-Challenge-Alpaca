@@ -152,6 +152,7 @@ public class JSONRedemptionRequestList
 [Serializable]
 public class JSONCosmeticData
 {
+    public int iCosmeticID;
     public string sCosmeticName;
     public int iCosmeticCost;
     public int iCosmeticRarity;
@@ -162,4 +163,30 @@ public class JSONCosmeticData
 public class JSONCosmeticDataList
 {
     public List<JSONCosmeticData> cosmeticData = new List<JSONCosmeticData>();
+}
+
+[Serializable]
+public class JSONCosmeticStatus
+{
+    public int iCosmeticID;
+    public bool bCosmeticUnlocked;
+}
+
+[Serializable]
+public class JSONCosmeticStatusList
+{
+    public List<JSONCosmeticStatus> cosmeticStatusList = new List<JSONCosmeticStatus>();
+}
+
+[Serializable]
+public class JSONTitleData
+{
+    public int iTitleID;
+    public bool sTitleName;
+}
+
+[Serializable]
+public class JSONTitleDataList
+{
+    public List<JSONTitleData> titleData = new List<JSONTitleData>();
 }

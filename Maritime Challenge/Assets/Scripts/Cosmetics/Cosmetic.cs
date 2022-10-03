@@ -5,12 +5,13 @@ using UnityEngine;
 public class Cosmetic
 {
     public int cosmeticID;
+    public int cosmeticBodyPartID;
     public string cosmeticName;
     public int cosmeticPrice;
     public CosmeticRarity cosmeticRarity;
     public AvatarBodyPartType cosmeticBodyPartType;
 
-    public Cosmetic(string name, int price, CosmeticRarity rarity, AvatarBodyPartType bodyPartType)
+    public Cosmetic(int cosmeticID, string name, int price, CosmeticRarity rarity, AvatarBodyPartType bodyPartType)
     {
         cosmeticName = name;
         cosmeticPrice = price;

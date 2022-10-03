@@ -37,6 +37,7 @@ public class ServerDataManager : MonoBehaviour
 
     //Cosmetics
     public static string URL_getCosmeticData = serverURL + "GetCosmeticData.php";
+    public static string URL_getCosmeticStatusList = serverURL + "GetCosmeticStatusList.php";
 
     #endregion
 

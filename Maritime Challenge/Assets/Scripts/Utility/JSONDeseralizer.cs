@@ -137,11 +137,25 @@ public class JSONDeseralizer : MonoBehaviour
 
         foreach (JSONCosmeticData cosmeticData in cosmeticDataList.cosmeticData)
         {
-            Cosmetic cosmetic = new Cosmetic(cosmeticData.sCosmeticName, cosmeticData.iCosmeticCost, (CosmeticRarity)cosmeticData.iCosmeticRarity, (AvatarBodyPartType)cosmeticData.iCosmeticType);
+            Cosmetic cosmetic = new Cosmetic(cosmeticData.iCosmeticID, cosmeticData.sCosmeticName, cosmeticData.iCosmeticCost, (CosmeticRarity)cosmeticData.iCosmeticRarity, (AvatarBodyPartType)cosmeticData.iCosmeticType);
 
             cosmeticList.Add(cosmetic);
         }
 
         return cosmeticList;
+    }
+
+    public static Dictionary<int, bool> DeseralizeCosmeticStatusList(string cosmeticStatusListJSON)
+    {
+        JSONCosmeticStatusList jsonCosmeticStatusList = JsonUtility.FromJson<JSONCosmeticStatusList>(cosmeticStatusListJSON);
+
+        Dictionary<int, bool> cosmeticStatusList = new Dictionary<int, bool>();
+
+        foreach (JSONCosmeticStatus cosmeticStatus in jsonCosmeticStatusList.cosmeticStatusList)
+        {
+            cosmeticStatusList.Add(cosmeticStatus.iCosmeticID, cosmeticStatus.bCosmeticUnlocked);
+        }
+
+        return cosmeticStatusList;
     }
 }
