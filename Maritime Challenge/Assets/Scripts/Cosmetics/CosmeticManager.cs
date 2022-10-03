@@ -7,16 +7,26 @@ public class CosmeticManager : MonoBehaviour
 {
     [SerializeField]
     private List<AvatarCosmetic> avatarCosmeticsList;
-   
-   
 
-    public void GetCosmetics()
+    void Awake()
     {
-        StartCoroutine(DoGetCosmetics());
-        StartCoroutine(DoGetCosmeticStatusList());
+        foreach (Cosmetic cosmetic in GameSettings.AllCosmeticsList)
+        {
+            cosmetic.LinkedCosmetic = FindCosmeticByID(cosmetic.cosmeticID);
+        }
     }
 
-   
+    private AvatarCosmetic FindCosmeticByID(int id)
+    {
+        foreach (AvatarCosmetic cos in avatarCosmeticsList)
+        {
+            if (cos.ID == id)
+                return cos;
+        }
+        Debug.LogWarning("Could not find Avatar Cosmetic of ID " + id + "!");
+        return null;
+    }
+
 }
 
 

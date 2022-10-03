@@ -26,7 +26,7 @@ public class AnimatorHandler : MonoBehaviour
 
     public void SetAnimations(AvatarPart part)
     {
-        string partId = part.cosmetic.bodyPartID.ToString();
+        string partId = part.cosmetic.ID.ToString();
         string partType = part.bodyPartName;
         foreach (string state in playerStatesList)
         {

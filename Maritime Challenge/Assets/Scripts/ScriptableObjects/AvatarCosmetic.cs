@@ -8,7 +8,7 @@ public class AvatarCosmetic : ScriptableObject
 
     // Body Part Details
     //public string bodyPartName;
-    public int bodyPartID;
+    public int ID;
     public AvatarBodyPartType bodyPartType;
 
     // List Containing All Body Part Animations

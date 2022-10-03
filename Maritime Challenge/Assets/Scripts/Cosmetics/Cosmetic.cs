@@ -11,6 +11,8 @@ public class Cosmetic
     public CosmeticRarity cosmeticRarity;
     public AvatarBodyPartType cosmeticBodyPartType;
 
+    public AvatarCosmetic LinkedCosmetic;
+
     public Cosmetic(int cosmeticID, string name, int price, CosmeticRarity rarity, AvatarBodyPartType bodyPartType)
     {
         cosmeticName = name;
