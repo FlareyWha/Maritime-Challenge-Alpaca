@@ -44,7 +44,7 @@ public class ChatManager : MonoBehaviourSingleton<ChatManager>
             return;
 
         // Send Message
-        PlayerData.CommandsHandler.SendChatMessage(InputField_Message.text);
+        GameHandler.Instance.SendChatMessage(InputField_Message.text);
         InputField_Message.text = "";
     }
 

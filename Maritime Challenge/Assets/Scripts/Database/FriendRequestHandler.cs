@@ -28,7 +28,7 @@ public static class FriendRequestHandler
                 Debug.Log(webreq.downloadHandler.text);
                 // PlayerData.SentFriendRequestList.Add(friendUID);
                 // OnFriendRequestSent?.Invoke(friendUID);
-                PlayerData.CommandsHandler.SendFriendRequestEvent(PlayerData.UID, friendUID);
+                GameHandler.Instance.SendFriendRequestEvent(PlayerData.UID, friendUID);
                 break;
             case UnityWebRequest.Result.ProtocolError:
                 Debug.LogError(webreq.downloadHandler.text);
@@ -54,7 +54,7 @@ public static class FriendRequestHandler
             case UnityWebRequest.Result.Success:
                 //Deseralize the data
                 Debug.Log(webreq.downloadHandler.text);
-                PlayerData.CommandsHandler.SendDeletedFriendRequestEvent(senderID, recID);
+                GameHandler.Instance.SendDeletedFriendRequestEvent(senderID, recID);
                 break;
             case UnityWebRequest.Result.ProtocolError:
                 Debug.LogError(webreq.downloadHandler.text);
