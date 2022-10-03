@@ -19,7 +19,7 @@ public class ServerDataManager : MonoBehaviour
 
     #endregion
 
-    #region Handling Player Data
+    #region Handling Player Data & Cosmetics
 
     public static string URL_getPlayerData = serverURL + "GetPlayerData.php";
 
@@ -34,6 +34,9 @@ public class ServerDataManager : MonoBehaviour
     public static string URL_updateUsername = serverURL + "UpdateUsername.php";
     public static string URL_updateBiography = serverURL + "UpdateBiography.php";
     public static string URL_updateTitle = serverURL + "UpdateTitle.php";
+
+    //Cosmetics
+    public static string URL_getCosmeticData = serverURL + "GetCosmeticData.php";
 
     #endregion
 

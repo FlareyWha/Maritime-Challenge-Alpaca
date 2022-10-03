@@ -128,4 +128,20 @@ public class JSONDeseralizer : MonoBehaviour
 
         return redemptionRequestList.redemptionRequests;
     }
+
+    public static List<Cosmetic> DeseralizeCosmeticData(string cosmeticDataJSON)
+    {
+        JSONCosmeticDataList cosmeticDataList = JsonUtility.FromJson<JSONCosmeticDataList>(cosmeticDataJSON);
+
+        List<Cosmetic> cosmeticList = new List<Cosmetic>();
+
+        foreach (JSONCosmeticData cosmeticData in cosmeticDataList.cosmeticData)
+        {
+            Cosmetic cosmetic = new Cosmetic(cosmeticData.sCosmeticName, cosmeticData.iCosmeticCost, (CosmeticRarity)cosmeticData.iCosmeticRarity, (AvatarBodyPartType)cosmeticData.iCosmeticType);
+
+            cosmeticList.Add(cosmetic);
+        }
+
+        return cosmeticList;
+    }
 }

@@ -148,3 +148,18 @@ public class JSONRedemptionRequestList
 {
     public List<JSONRedemptionRequest> redemptionRequests = new List<JSONRedemptionRequest>();
 }
+
+[Serializable]
+public class JSONCosmeticData
+{
+    public string sCosmeticName;
+    public int iCosmeticCost;
+    public int iCosmeticRarity;
+    public int iCosmeticType;
+}
+
+[Serializable]
+public class JSONCosmeticDataList
+{
+    public List<JSONCosmeticData> cosmeticData = new List<JSONCosmeticData>();
+}
