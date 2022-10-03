@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4189220138252397911}
   - component: {fileID: 7855122233307762988}
   - component: {fileID: 1771988706346974671}
+  - component: {fileID: 179021817311274387}
   m_Layer: 0
   m_Name: AbandonedCity
   m_TagString: Untagged
@@ -97,6 +98,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aea5e33feae8b82408325a7db35c0722, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   abandonedCityID: 0
   abandonedCityAreaCellWidth: 50
   abandonedCityAreaCellHeight: 50
@@ -127,6 +130,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 40, y: 40}
   m_EdgeRadius: 0
+--- !u!114 &179021817311274387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410607568657538083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 0
+  serverOnly: 0
+  visible: 0
+  m_AssetId: dc4c6b47099bc484aa093533e4717d03
+  hasSpawned: 0
 --- !u!1 &4728638781621404735
 GameObject:
   m_ObjectHideFlags: 0
