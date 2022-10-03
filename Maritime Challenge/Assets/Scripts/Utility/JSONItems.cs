@@ -182,11 +182,24 @@ public class JSONCosmeticStatusList
 public class JSONTitleData
 {
     public int iTitleID;
-    public bool sTitleName;
+    public string sTitleName;
 }
 
 [Serializable]
 public class JSONTitleDataList
 {
     public List<JSONTitleData> titleData = new List<JSONTitleData>();
+}
+
+[Serializable]
+public class JSONTitleStatus
+{
+    public int iTitleID;
+    public bool bTitleUnlocked;
+}
+
+[Serializable]
+public class JSONTitleStatusList
+{
+    public List<JSONTitleStatus> titleStatusList = new List<JSONTitleStatus>();
 }

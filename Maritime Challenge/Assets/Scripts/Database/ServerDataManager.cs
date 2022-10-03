@@ -33,6 +33,8 @@ public class ServerDataManager : MonoBehaviour
     public static string URL_getUsername = serverURL + "GetUsername.php";
     public static string URL_updateUsername = serverURL + "UpdateUsername.php";
     public static string URL_updateBiography = serverURL + "UpdateBiography.php";
+    public static string URL_getTitleData = serverURL + "GetTitleData.php";
+    public static string URL_getTitleStatusList = serverURL + "GetTitleStatusList.php";
     public static string URL_updateTitle = serverURL + "UpdateTitle.php";
 
     //Cosmetics
