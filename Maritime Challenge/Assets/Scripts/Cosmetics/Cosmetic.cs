@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Cosmetic
 {
+    public int cosmeticID;
     public string cosmeticName;
     public int cosmeticPrice;
     public CosmeticRarity cosmeticRarity;
