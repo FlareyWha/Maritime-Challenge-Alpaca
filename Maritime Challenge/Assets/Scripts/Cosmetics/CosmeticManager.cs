@@ -10,9 +10,9 @@ public class CosmeticManager : MonoBehaviour
 
     void Awake()
     {
-        foreach (Cosmetic cosmetic in GameSettings.AllCosmeticsList)
+        foreach (KeyValuePair<Cosmetic, bool> cosmetic in GameSettings.CosmeticsList)
         {
-            cosmetic.LinkedCosmetic = FindCosmeticByID(cosmetic.cosmeticID);
+            cosmetic.Key.LinkedCosmetic = FindCosmeticByID(cosmetic.Key.cosmeticID);
         }
     }
 

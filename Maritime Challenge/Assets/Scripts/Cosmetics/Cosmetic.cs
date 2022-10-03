@@ -9,11 +9,11 @@ public class Cosmetic
     public string cosmeticName;
     public int cosmeticPrice;
     public CosmeticRarity cosmeticRarity;
-    public AvatarBodyPartType cosmeticBodyPartType;
+    public CosmeticType cosmeticBodyPartType;
 
     public AvatarCosmetic LinkedCosmetic;
 
-    public Cosmetic(int cosmeticID, string name, int price, CosmeticRarity rarity, AvatarBodyPartType bodyPartType)
+    public Cosmetic(int cosmeticID, string name, int price, CosmeticRarity rarity, CosmeticType bodyPartType)
     {
         cosmeticName = name;
         cosmeticPrice = price;

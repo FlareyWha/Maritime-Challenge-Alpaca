@@ -13,16 +13,33 @@ public class NewBehaviourScript : MonoBehaviour
     private Transform[] CustomisablesRect;
 
 
-
-     
-    private void UpdateInventoryRect(Transform inventoryRect)
+    private void UpdateAllInventoryRects()
     {
-        foreach (Transform child in inventoryRect)
+        // Clear
+        foreach (Transform rectTransform in CustomisablesRect)
+        {
+            foreach (Transform child in rectTransform)
+            {
+                Destroy(child.gameObject);
+            }
+        }
+
+        foreach (KeyValuePair<Cosmetic, bool> cos in GameSettings.CosmeticsList)
+        {
+            AvatarItemUI item = Instantiate(AvatarItemUIPrefab, CustomisablesRect[(int)cos.Key.cosmeticBodyPartType]).GetComponent<AvatarItemUI>();
+        }
+    }
+     
+    private void UpdateInventoryRect(CosmeticType type)
+    {
+        // Clear
+        Transform rect = CustomisablesRect[(int)type];
+        foreach (Transform child in rect)
         {
             Destroy(child.gameObject);
         }
 
-        foreach (KeyValuePair<int, bool> cos in GameSettings.CosmeticsStatusDict)
+        foreach (KeyValuePair<Cosmetic, bool> cos in GameSettings.CosmeticsList)
         {
 
         }

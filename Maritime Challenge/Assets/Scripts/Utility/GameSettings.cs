@@ -6,8 +6,8 @@ public static class GameSettings
 {
     public static bool LOCK_JOYSTICK = false;
 
-    public static List<Cosmetic> AllCosmeticsList = new List<Cosmetic>();
-    public static Dictionary<int, bool> CosmeticsStatusDict = new Dictionary<int, bool>();
+    //public static List<Cosmetic> AllCosmeticsList = new List<Cosmetic>();
+    //public static Dictionary<int, bool> CosmeticsStatusDict = new Dictionary<int, bool>();
 
     public static Dictionary<Cosmetic, bool> CosmeticsList = new Dictionary<Cosmetic, bool>();
 
