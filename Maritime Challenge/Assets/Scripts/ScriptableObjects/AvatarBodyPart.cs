@@ -13,3 +13,15 @@ public class AvatarBodyPart : ScriptableObject
     // List Containing All Body Part Animations
     public List<AnimationClip> allBodyPartAnimations = new List<AnimationClip>();
 }
+
+public enum AvatarBodyPartType
+{
+    HAIR,
+    HEADWEAR,
+    BODY,
+    TOP,
+    BOTTOM,
+    SHOE,
+
+    NUM_TOTAL = 6
+}

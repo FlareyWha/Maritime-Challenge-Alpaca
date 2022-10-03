@@ -4,7 +4,7 @@ using UnityEngine;
 public class AvatarSO : ScriptableObject
 {
     // ~~ 1. Holds details about the full character body
-    public AvatarPart avatarHair, avatarBody, avatarTop, avatarBottom, avatarShoe;
+    public AvatarPart[] avatarParts;
 }
 
 [System.Serializable]

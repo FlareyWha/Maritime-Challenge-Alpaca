@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerAnimationsManager : MonoBehaviour
 {
     [SerializeField]
-    private AnimatorHandler hairAnimatorHandler, bodyAnimatorHandler, topAnimatorHandler, bottomAnimatorHandler, shoeAnimatorHandler;
+    private AnimatorHandler[] animatorHandlers;
     [SerializeField]
     private AvatarSO myAvatar;
 
@@ -17,10 +17,9 @@ public class PlayerAnimationsManager : MonoBehaviour
 
     private void UpdateAvatarAnimations()
     {
-        hairAnimatorHandler.SetAnimations(myAvatar.avatarHair);
-        bodyAnimatorHandler.SetAnimations(myAvatar.avatarBody);
-        topAnimatorHandler.SetAnimations(myAvatar.avatarTop);
-        bottomAnimatorHandler.SetAnimations(myAvatar.avatarBottom);
-        shoeAnimatorHandler.SetAnimations(myAvatar.avatarShoe);
+        for (int i = 0; i < (int)AvatarBodyPartType.NUM_TOTAL; i++)
+        {
+            animatorHandlers[i].SetAnimations(myAvatar.avatarParts[i]);
+        }
     }
 }

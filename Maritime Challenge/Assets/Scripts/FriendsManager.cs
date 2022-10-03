@@ -102,7 +102,7 @@ public class FriendsManager : MonoBehaviourSingleton<FriendsManager>
                     Name = name
                 };
                 PlayerData.FriendList.Add(basicInfo);
-                PlayerData.CommandsHandler.SendFriendAddedEvent(otherUID);
+                GameHandler.Instance.SendFriendAddedEvent(otherUID);
                 OnFriendListUpdated?.Invoke();
                 break;
             case UnityWebRequest.Result.ProtocolError:
@@ -134,7 +134,7 @@ public class FriendsManager : MonoBehaviourSingleton<FriendsManager>
                 Debug.Log(webreq.downloadHandler.text);
                 PlayerData.FriendList.Remove(PlayerData.FindPlayerInfoByID(otherUID));
                 PlayerData.FriendDataList.Remove(PlayerData.FindFriendInfoByID(otherUID));
-                PlayerData.CommandsHandler.SendFriendRemovedEvent(otherUID);
+                GameHandler.Instance.SendFriendRemovedEvent(otherUID);
                 OnFriendListUpdated?.Invoke();
                 break;
             case UnityWebRequest.Result.ProtocolError:
