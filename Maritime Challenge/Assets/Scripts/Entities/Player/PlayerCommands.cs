@@ -21,7 +21,7 @@ public class PlayerCommands : NetworkBehaviour
         PlayerInteract.ClearInteractables();
         RequestSwitchToSubScene(PlayerData.activeSubScene, sceneName, spawnPos);
 
-        StartCoroutine(WaitEnterScene(sceneName));
+        //StartCoroutine(WaitEnterScene(sceneName));
     }
 
     [Command]

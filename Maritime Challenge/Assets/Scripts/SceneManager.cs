@@ -42,7 +42,7 @@ public class SceneManager : MonoBehaviourSingleton<SceneManager>
     public void EnterNetworkedSubScene(NetworkIdentity playerNetIdentity, string currSceneName, string newSceneName, Vector2 spawnPos)
     {
         //// Unload Current SubScene
-        SceneMessage message = new SceneMessage { sceneName = currSceneName, sceneOperation = SceneOperation.UnloadAdditive };
+        SceneMessage message = new SceneMessage { sceneName = currSceneName, sceneOperation = SceneOperation.UnloadAdditive, customHandling = true};
         playerNetIdentity.connectionToClient.Send(message);
         // Then move the player object to the subscene
         MoveGameObjectToScene(playerNetIdentity.gameObject, newSceneName);
@@ -50,7 +50,7 @@ public class SceneManager : MonoBehaviourSingleton<SceneManager>
         // Reposition Player
         playerNetIdentity.gameObject.GetComponent<PlayerCommands>().ForceMovePlayer(spawnPos);
         //// Load New SubScene
-        message = new SceneMessage { sceneName = newSceneName, sceneOperation = SceneOperation.LoadAdditive };
+        message = new SceneMessage { sceneName = newSceneName, sceneOperation = SceneOperation.LoadAdditive, customHandling = true };
         playerNetIdentity.connectionToClient.Send(message);
     }
 

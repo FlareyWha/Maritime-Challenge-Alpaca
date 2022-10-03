@@ -38,28 +38,26 @@ public class GameHandler : NetworkBehaviour
         SendMessageToServer(ChatManager.Instance.GetChatType(), PlayerData.MyPlayer, message);
     }
 
-    [Command]
+    [Command(requiresAuthority = false)]
     private void SendMessageToServer(CHAT_TYPE type, Player player, string message)
     {
         Debug.Log("Sending Message to Server");
-        UpdateChatLog(type, player, message);
+        UpdateChatLog(type, player, player.GetGuildID(), player.GetUsername(), message);
     }
 
     [ClientRpc]
-    private void UpdateChatLog(CHAT_TYPE chat_type, Player player, string message)
+    private void UpdateChatLog(CHAT_TYPE chat_type, Player player, int guildID, string playerName, string message)
     {
         Debug.Log("Received RPC from Server, Updating Chat Log...");
+        if (chat_type == CHAT_TYPE.GUILD && guildID != PlayerData.GuildID)
+            return;
+
+        ChatManager.Instance.UpdateChatLog(chat_type, playerName, message);
 
         if (player == null)
-        {
-            Debug.Log("Player was NULL!!");
-            return;
-        }
-
-        if (chat_type == CHAT_TYPE.GUILD && player.GetGuildID() != PlayerData.GuildID)
             return;
 
-        ChatManager.Instance.UpdateChatLog(chat_type, player.GetUsername(), message);
+
         PlayerUI playerUI = player.gameObject.GetComponent<PlayerUI>();
         playerUI.AddChatBubble(message);
     }
@@ -69,7 +67,7 @@ public class GameHandler : NetworkBehaviour
         SendDeletedFriendRequestEventToServer(sender_id, rec_id);
     }
 
-    [Command]
+    [Command(requiresAuthority = false)]
     private void SendDeletedFriendRequestEventToServer(int senderID, int recID)
     {
         DeleteFriendRequest(senderID, recID);
@@ -97,7 +95,7 @@ public class GameHandler : NetworkBehaviour
         SendFriendRequestEventToServer(sender_id, rec_id);
     }
 
-    [Command]
+    [Command(requiresAuthority = false)]
     private void SendFriendRequestEventToServer(int senderID, int recID)
     {
         SendSentFriendRequest(senderID, recID);
@@ -128,7 +126,7 @@ public class GameHandler : NetworkBehaviour
         SendFriendAddedEventtoServer(recID, PlayerData.UID, PlayerData.Name);
     }
 
-    [Command]
+    [Command(requiresAuthority = false)]
     private void SendFriendAddedEventtoServer(int recID, int otherID, string otherName)
     {
         Debug.Log("SERVER RECEIVED COMMAND: Sending Friend Addd Event for: " + recID + "from " + otherID);
@@ -158,7 +156,7 @@ public class GameHandler : NetworkBehaviour
         SendFriendRemovedEventtoServer(recID, PlayerData.UID);
     }
 
-    [Command]
+    [Command(requiresAuthority = false)]
     private void SendFriendRemovedEventtoServer(int recID, int otherID)
     {
         Debug.Log("SERVER RECEIVED COMMAND: Sending Friend Removed Event for: " + recID + "from " + otherID);
