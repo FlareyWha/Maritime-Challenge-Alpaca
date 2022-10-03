@@ -23,7 +23,7 @@ public class PostLoginInfoGetter : MonoBehaviour
         StartCoroutine(coroutineCollectionManager.CollectCoroutine(FriendRequestHandler.GetSentFriendRequests()));
         StartCoroutine(coroutineCollectionManager.CollectCoroutine(FriendRequestHandler.GetRecievedFriendRequests()));
         StartCoroutine(coroutineCollectionManager.CollectCoroutine(DoGetCosmetics()));
-        StartCoroutine(coroutineCollectionManager.CollectCoroutine(DoGetCosmeticStatusList()));
+        //StartCoroutine(coroutineCollectionManager.CollectCoroutine(DoGetCosmeticStatusList()));
 
         //Wait for all the coroutines to finish running before continuing
         yield return coroutineCollectionManager;

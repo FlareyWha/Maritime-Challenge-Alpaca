@@ -10,8 +10,8 @@ public class BaseAbandonedCity : NetworkBehaviour
     [SerializeField]  //Honestly idk i need to find a way to do this better but else uhhhhhhhh
     protected int abandonedCityID;
 
-    protected SyncList<uint> allEnemies = new SyncList<uint>();
-    protected SyncList<uint> enemyList = new SyncList<uint>();
+    protected readonly SyncList<uint> allEnemies = new SyncList<uint>();
+    protected readonly SyncList<uint> enemyList = new SyncList<uint>();
     protected List<Player> playerList = new List<Player>();
 
     [SerializeField]

@@ -9,15 +9,23 @@ public class NewBehaviourScript : MonoBehaviour
     private AvatarSO MyAvatar;
     [SerializeField]
     private GameObject AvatarItemUIPrefab;
-   // [SerializeField]
-   // private Transform 
+    [SerializeField]
+    private Transform[] CustomisablesRect;
 
 
 
      
-    private void UpdateInventoryRect()
+    private void UpdateInventoryRect(Transform inventoryRect)
     {
+        foreach (Transform child in inventoryRect)
+        {
+            Destroy(child.gameObject);
+        }
 
+        foreach (KeyValuePair<int, bool> cos in GameSettings.CosmeticsStatusDict)
+        {
+
+        }
     }
 
     private void EquipAccessory(AvatarCosmetic part)
