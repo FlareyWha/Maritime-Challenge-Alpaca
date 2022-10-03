@@ -10,6 +10,7 @@ public class AvatarCosmetic : ScriptableObject
     //public string bodyPartName;
     public int ID;
     public CosmeticType bodyPartType;
+    public Sprite IconSprite;
 
     // List Containing All Body Part Animations
     public List<AnimationClip> allBodyPartAnimations = new List<AnimationClip>();

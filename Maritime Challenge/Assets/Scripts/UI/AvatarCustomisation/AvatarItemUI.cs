@@ -24,6 +24,7 @@ public class AvatarItemUI : MonoBehaviour
     public void Init(AvatarCosmetic cosmetic, Action<AvatarCosmetic> action)
     {
         item = cosmetic;
+        itemIcon.sprite = cosmetic.IconSprite;
         onSelectAction = action;
     }
 

@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0c7a9f46d422cfd47b9f51a85a7fc34f, type: 3}
-  m_Name: 0_DefaultManHair
+  m_Name: 1_SteampunkPants
   m_EditorClassIdentifier: 
-  ID: 0
-  bodyPartType: 0
-  IconSprite: {fileID: 21300000, guid: 1390391b4073b164c8ded08ca3f97517, type: 3}
+  ID: 1
+  bodyPartType: 4
+  IconSprite: {fileID: 0}
   allBodyPartAnimations:
-  - {fileID: 7400000, guid: 743e0f3609f60254d92ab03fcfbc465f, type: 2}
+  - {fileID: 7400000, guid: 1ad5db371705b3b4b9aa50446dd1b115, type: 2}

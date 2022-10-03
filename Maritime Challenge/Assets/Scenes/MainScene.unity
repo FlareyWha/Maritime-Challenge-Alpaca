@@ -5438,11 +5438,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7924643139462398264, guid: ada5c6b9b6c64f548865e5d0eb7b5a0e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 350
+      value: 140
       objectReference: {fileID: 0}
     - target: {fileID: 7924643139462398264, guid: ada5c6b9b6c64f548865e5d0eb7b5a0e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -90.5
+      value: -309.5
       objectReference: {fileID: 0}
     - target: {fileID: 7924643139462398264, guid: ada5c6b9b6c64f548865e5d0eb7b5a0e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -11424,7 +11424,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7924643139462398264, guid: ada5c6b9b6c64f548865e5d0eb7b5a0e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -90.5
+      value: -200
       objectReference: {fileID: 0}
     - target: {fileID: 7924643139462398264, guid: ada5c6b9b6c64f548865e5d0eb7b5a0e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -18425,7 +18425,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17f0345b204467d4e834fd304777238d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  avatarCosmeticsList: []
+  avatarCosmeticsList:
+  - {fileID: 11400000, guid: b9388ad028959464ea8e36a4987ba2ab, type: 2}
+  - {fileID: 11400000, guid: 5a995fc1ff19337498a0170eb9c74eab, type: 2}
+  - {fileID: 11400000, guid: 4ed7db9fdaa0fa7429b9c478486570a7, type: 2}
+  - {fileID: 11400000, guid: 3fe6d975f261d8b4082e6d4d15bb97c1, type: 2}
+  - {fileID: 11400000, guid: d12398ca06f436643951576b805b74df, type: 2}
+  - {fileID: 11400000, guid: 0c6fb753d9c3fd249b06bddcf593761f, type: 2}
 --- !u!1 &1566766839
 GameObject:
   m_ObjectHideFlags: 0
@@ -24549,7 +24555,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2109214384
 RectTransform:
   m_ObjectHideFlags: 0

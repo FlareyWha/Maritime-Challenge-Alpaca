@@ -10,8 +10,11 @@ public class PlayerAnimationsManager : MonoBehaviour
     private AvatarSO myAvatar;
 
 
+
+
     private void Start()
     {
+        AvatarCustomisationManager.OnAvatarUpdated += UpdateAvatarAnimations;
         UpdateAvatarAnimations();
     }
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class NewBehaviourScript : MonoBehaviour
+public class AvatarCustomisationManager : MonoBehaviourSingleton<AvatarCustomisationManager>
 {
     [SerializeField]
     private AvatarSO MyAvatar;
@@ -12,6 +12,13 @@ public class NewBehaviourScript : MonoBehaviour
     [SerializeField]
     private Transform[] CustomisablesRect;
 
+    public delegate void AvatarSaved();
+    public static event AvatarSaved OnAvatarUpdated;
+
+    void Start()
+    {
+        UpdateAllInventoryRects();
+    }
 
     private void UpdateAllInventoryRects()
     {
@@ -27,6 +34,7 @@ public class NewBehaviourScript : MonoBehaviour
         foreach (KeyValuePair<Cosmetic, bool> cos in GameSettings.CosmeticsList)
         {
             AvatarItemUI item = Instantiate(AvatarItemUIPrefab, CustomisablesRect[(int)cos.Key.cosmeticBodyPartType]).GetComponent<AvatarItemUI>();
+            item.Init(cos.Key.LinkedCosmetic, EquipAccessory);
         }
     }
      
@@ -41,12 +49,17 @@ public class NewBehaviourScript : MonoBehaviour
 
         foreach (KeyValuePair<Cosmetic, bool> cos in GameSettings.CosmeticsList)
         {
+            if (cos.Key.cosmeticBodyPartType != type)
+                return;
 
+            AvatarItemUI item = Instantiate(AvatarItemUIPrefab, rect).GetComponent<AvatarItemUI>();
+            item.Init(cos.Key.LinkedCosmetic, EquipAccessory);
         }
     }
 
     private void EquipAccessory(AvatarCosmetic part)
     {
         MyAvatar.avatarParts[(int)part.bodyPartType].cosmetic = part;
+        OnAvatarUpdated?.Invoke();
     }
 }

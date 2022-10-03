@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c7a9f46d422cfd47b9f51a85a7fc34f, type: 3}
   m_Name: 0_DefaultOfficeShirt
   m_EditorClassIdentifier: 
-  bodyPartID: 0
+  ID: 0
   bodyPartType: 3
+  IconSprite: {fileID: 21300000, guid: 1390391b4073b164c8ded08ca3f97517, type: 3}
   allBodyPartAnimations:
   - {fileID: 7400000, guid: 9c54540be608708458fcd5bb8e039266, type: 2}
