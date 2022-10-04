@@ -66,7 +66,7 @@ public class TitlesManager : MonoBehaviour
 
         WWWForm form = new WWWForm();
         form.AddField("UID", PlayerData.UID);
-        form.AddField("iTitle", currSelected.LinkedTitle.titleID); //Change later btw
+        form.AddField("iTitleID", currSelected.LinkedTitle.titleID); //Change later btw
         using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
         yield return webreq.SendWebRequest();
         switch (webreq.result)
@@ -74,9 +74,6 @@ public class TitlesManager : MonoBehaviour
             case UnityWebRequest.Result.Success:
                 //Deseralize the data
                 Debug.Log(webreq.downloadHandler.text);
-
-                EditTitle();
-
                 break;
             case UnityWebRequest.Result.ProtocolError:
                 Debug.LogError(webreq.downloadHandler.text);
