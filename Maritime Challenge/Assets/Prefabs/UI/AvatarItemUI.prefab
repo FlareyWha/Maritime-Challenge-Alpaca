@@ -215,6 +215,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectButton: {fileID: 7924643139462398265}
   itemIcon: {fileID: 7924643139462398266}
+  equippedOverlay: {fileID: 9072451155055591584}
 --- !u!1 &9072451155055591584
 GameObject:
   m_ObjectHideFlags: 0

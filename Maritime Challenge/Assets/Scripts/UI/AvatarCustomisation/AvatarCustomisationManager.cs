@@ -42,6 +42,7 @@ public class AvatarCustomisationManager : MonoBehaviourSingleton<AvatarCustomisa
             if (MyAvatar.avatarParts[(int)cos.Key.cosmeticBodyPartType].cosmetic == cos.Key.LinkedCosmetic)
             {
                 currentEquippedItem[(int)cos.Key.cosmeticBodyPartType] = item;
+                item.SetEquippedOverlay(true);
             }
         }
     }
