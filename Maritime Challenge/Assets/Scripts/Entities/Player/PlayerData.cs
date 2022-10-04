@@ -37,6 +37,11 @@ public static class PlayerData // Local Player's Data
     //Stores all the friend requests you have recieved from other people
     public static List<int> ReceivedFriendRequestList = new List<int>();
 
+    // Stores all the Titles in game, and whether you have unlocked them
+    public static Dictionary<Title, bool> titleDictionary = new Dictionary<Title, bool>();
+    // Stores all the cosmetics in game, and whether you have unlocked them
+    public static Dictionary<Cosmetic, bool> CosmeticsList = new Dictionary<Cosmetic, bool>();
+
 
     public delegate void PlayerDataUpdated();
     public static event PlayerDataUpdated OnPlayerDataUpdated;

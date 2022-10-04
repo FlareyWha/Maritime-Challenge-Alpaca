@@ -7,14 +7,15 @@ public class PlayerAnimationsManager : MonoBehaviour
     [SerializeField]
     private AnimatorHandler[] animatorHandlers;
     [SerializeField]
+    private Player player;
+
     private AvatarSO myAvatar;
-
-
 
 
     private void Start()
     {
-        AvatarCustomisationManager.OnAvatarUpdated += UpdateAvatarAnimations;
+        if (player != null)
+            SetAvatar(player);
         UpdateAvatarAnimations();
     }
 
@@ -25,4 +26,15 @@ public class PlayerAnimationsManager : MonoBehaviour
             animatorHandlers[i].SetAnimations(myAvatar.avatarParts[i]);
         }
     }
+
+    private void SetAvatar(Player player)
+    {
+        if (player == PlayerData.MyPlayer)
+            AvatarCustomisationManager.OnAvatarUpdated += UpdateAvatarAnimations;
+
+        myAvatar = player.PlayerAvatar;
+
+    }
+
+    
 }

@@ -33,7 +33,7 @@ public class AvatarCustomisationManager : MonoBehaviourSingleton<AvatarCustomisa
             }
         }
 
-        foreach (KeyValuePair<Cosmetic, bool> cos in GameSettings.CosmeticsList)
+        foreach (KeyValuePair<Cosmetic, bool> cos in PlayerData.CosmeticsList)
         {
             AvatarItemUI item = Instantiate(AvatarItemUIPrefab, CustomisablesRect[(int)cos.Key.cosmeticBodyPartType]).GetComponent<AvatarItemUI>();
             item.Init(cos.Key.LinkedCosmetic, EquipAccessory);
@@ -55,7 +55,7 @@ public class AvatarCustomisationManager : MonoBehaviourSingleton<AvatarCustomisa
             Destroy(child.gameObject);
         }
 
-        foreach (KeyValuePair<Cosmetic, bool> cos in GameSettings.CosmeticsList)
+        foreach (KeyValuePair<Cosmetic, bool> cos in PlayerData.CosmeticsList)
         {
             if (cos.Key.cosmeticBodyPartType != type)
                 return;

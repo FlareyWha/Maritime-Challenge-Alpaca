@@ -1611,6 +1611,7 @@ MonoBehaviour:
   critrate: 0.1
   critdmg: 0.5
   movespd: 1
+  Avatar: {fileID: 11400000, guid: 047e97fd606b794419c762b21a7a8cd5, type: 2}
   BattleShipPrefab: {fileID: 2042507932746732076, guid: b8ed2059b8897514fa98360bc451be85, type: 3}
   BodyReferenceSprite: {fileID: 2281672732284213407}
 --- !u!114 &9116503974399402979
@@ -1678,7 +1679,7 @@ MonoBehaviour:
   - {fileID: 1183674550607232837}
   - {fileID: 4094357339714646145}
   - {fileID: 8124456436019200357}
-  myAvatar: {fileID: 11400000, guid: 047e97fd606b794419c762b21a7a8cd5, type: 2}
+  player: {fileID: 9181191743022904711}
 --- !u!114 &560335285860505812
 MonoBehaviour:
   m_ObjectHideFlags: 0

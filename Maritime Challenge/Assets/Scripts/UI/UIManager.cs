@@ -88,9 +88,9 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
     public void ToggleNamecard(Button arrowButton)
     {
         if (arrowButton.transform.rotation.eulerAngles.z == 0)
-            StartCoroutine(ExtendNamecardAnim(1.0f, arrowButton));
+            StartCoroutine(ExtendNamecardAnim(0.6f, arrowButton));
         else
-            StartCoroutine(RetractNamecardAnim(1.0f, arrowButton));
+            StartCoroutine(RetractNamecardAnim(0.6f, arrowButton));
     }
 
     public void EnableInteractButton(string interact_text)

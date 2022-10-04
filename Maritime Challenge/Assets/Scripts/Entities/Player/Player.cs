@@ -9,6 +9,10 @@ using UnityEngine.Networking;
 public class Player : BaseEntity
 {
     [SerializeField]
+    private AvatarSO Avatar;
+    public AvatarSO PlayerAvatar { get { return Avatar;  } }
+
+    [SerializeField]
     private GameObject BattleShipPrefab;
     [SerializeField]
     private SpriteRenderer BodyReferenceSprite;

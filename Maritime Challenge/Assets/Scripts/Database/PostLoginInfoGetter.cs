@@ -23,6 +23,7 @@ public class PostLoginInfoGetter : MonoBehaviour
         StartCoroutine(coroutineCollectionManager.CollectCoroutine(FriendRequestHandler.GetSentFriendRequests()));
         StartCoroutine(coroutineCollectionManager.CollectCoroutine(FriendRequestHandler.GetRecievedFriendRequests()));
         StartCoroutine(coroutineCollectionManager.CollectCoroutine(DoGetCosmetics()));
+        StartCoroutine(coroutineCollectionManager.CollectCoroutine(DoGetTitles()));
         //StartCoroutine(coroutineCollectionManager.CollectCoroutine(DoGetCosmeticStatusList()));
 
         //Wait for all the coroutines to finish running before continuing
@@ -121,7 +122,7 @@ public class PostLoginInfoGetter : MonoBehaviour
         switch (webreq.result)
         {
             case UnityWebRequest.Result.Success:
-                GameSettings.CosmeticsList = JSONDeseralizer.DeseralizeCosmeticData(webreq.downloadHandler.text);
+                PlayerData.CosmeticsList = JSONDeseralizer.DeseralizeCosmeticData(webreq.downloadHandler.text);
                 break;
             case UnityWebRequest.Result.ProtocolError:
                 Debug.LogError(webreq.downloadHandler.text);
@@ -153,6 +154,27 @@ public class PostLoginInfoGetter : MonoBehaviour
     //        default:
     //            Debug.LogError("Server error");
     //            break;
-    //    }
+    // }
     //}
+
+    IEnumerator DoGetTitles()
+    {
+        string url = ServerDataManager.URL_getTitleData;
+        Debug.Log(url);
+
+        using UnityWebRequest webreq = UnityWebRequest.Get(url);
+        yield return webreq.SendWebRequest();
+        switch (webreq.result)
+        {
+            case UnityWebRequest.Result.Success:
+                PlayerData.titleDictionary = JSONDeseralizer.DeseralizeTitleData(webreq.downloadHandler.text);
+                break;
+            case UnityWebRequest.Result.ProtocolError:
+                Debug.LogError(webreq.downloadHandler.text);
+                break;
+            default:
+                Debug.LogError("Server error");
+                break;
+        }
+    }
 }

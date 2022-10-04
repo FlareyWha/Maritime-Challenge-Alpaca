@@ -5,34 +5,14 @@ using UnityEngine.Networking;
 
 public class TitleManager : MonoBehaviour
 {
-    private Dictionary<Title, bool> titleDictionary = new Dictionary<Title, bool>();
 
-    public void GetTitles()
-    {
-        StartCoroutine(DoGetTitles());
-        //StartCoroutine(DoGetTitleStatusList());
-    }
+    //public void GetTitles()
+    //{
+    //    StartCoroutine(DoGetTitles());
+    //    //StartCoroutine(DoGetTitleStatusList());
+    //}
 
-    IEnumerator DoGetTitles()
-    {
-        string url = ServerDataManager.URL_getTitleData;
-        Debug.Log(url);
-
-        using UnityWebRequest webreq = UnityWebRequest.Get(url);
-        yield return webreq.SendWebRequest();
-        switch (webreq.result)
-        {
-            case UnityWebRequest.Result.Success:
-                titleDictionary = JSONDeseralizer.DeseralizeTitleData(webreq.downloadHandler.text);
-                break;
-            case UnityWebRequest.Result.ProtocolError:
-                Debug.LogError(webreq.downloadHandler.text);
-                break;
-            default:
-                Debug.LogError("Server error");
-                break;
-        }
-    }
+   
 
     //IEnumerator DoGetTitleStatusList()
     //{
