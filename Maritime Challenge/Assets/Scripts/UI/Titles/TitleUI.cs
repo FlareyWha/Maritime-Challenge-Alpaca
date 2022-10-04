@@ -23,7 +23,7 @@ public class TitleUI : MonoBehaviour
         button.onClick.AddListener(OnTitleSelected);
     }
 
-    public void Init(Title title, bool unlocked)
+    public void Init(Title title, bool unlocked, Action<TitleUI> action)
     {
         this.title = title;
         TitleArt.sprite = title.LinkedTitle.TitleSprite;
@@ -35,6 +35,8 @@ public class TitleUI : MonoBehaviour
             TitleArt.color = Color.white;
         else
             TitleArt.color = lockedColor;
+
+        onSelectAction = action;
     }
 
 

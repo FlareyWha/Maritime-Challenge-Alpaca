@@ -16,7 +16,7 @@ public class TitlesManager : MonoBehaviour
 
     private TitleUI currSelected;
 
-    void Awake()
+    void Start()
     {
         UpdateTitlesRect();
     }
@@ -32,7 +32,7 @@ public class TitlesManager : MonoBehaviour
         foreach (KeyValuePair<Title, bool> title in PlayerData.titleDictionary)
         {
             TitleUI titleUI = Instantiate(TitleUIPrefab, TitlesRect).GetComponent<TitleUI>();
-            titleUI.Init(title.Key, title.Value);
+            titleUI.Init(title.Key, title.Value, SwitchTitle);
 
             // If Is Currently Equipped
             if (PlayerData.CurrentTitleID == title.Key.titleID)

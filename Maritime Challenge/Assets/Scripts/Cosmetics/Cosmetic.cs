@@ -15,6 +15,7 @@ public class Cosmetic
 
     public Cosmetic(int cosmeticID, string name, int price, CosmeticRarity rarity, CosmeticType bodyPartType)
     {
+        this.cosmeticID = cosmeticID;
         cosmeticName = name;
         cosmeticPrice = price;
         cosmeticRarity = rarity;

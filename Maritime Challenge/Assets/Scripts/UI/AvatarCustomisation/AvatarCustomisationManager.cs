@@ -15,7 +15,7 @@ public class AvatarCustomisationManager : MonoBehaviourSingleton<AvatarCustomisa
     public delegate void AvatarSaved();
     public static event AvatarSaved OnAvatarUpdated;
 
-    private AvatarItemUI[] currentEquippedItem;
+    private AvatarItemUI[] currentEquippedItem = new AvatarItemUI[(int)CosmeticType.NUM_TOTAL];
 
     void Start()
     {
