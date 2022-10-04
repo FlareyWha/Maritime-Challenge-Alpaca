@@ -84,6 +84,10 @@ public class ServerDataManager : MonoBehaviour
     #region Handling Admin Stuff
 
     public static string URL_getRedemptionRequests = serverURL + "GetRedemptionRequests.php";
+    public static string URL_addAchievementListData = serverURL + "AddAchievementListData.php";
+    public static string URL_addBattleshipListData = serverURL + "AddBattleshipListData.php";
+    public static string URL_addCosmeticListData = serverURL + "AddCosmeticListData.php";
+    public static string URL_addTitleListData = serverURL + "AddTitleListData.php";
 
     #endregion
 }
