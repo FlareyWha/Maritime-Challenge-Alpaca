@@ -6,7 +6,10 @@ using UnityEngine.UI;
 public class AdminAppManager : MonoBehaviour
 {
     [SerializeField]
-    private GameObject registerPanel, redemptionItemPanel, redemptionPanel;
+    private GameObject registerPanel, refreshDatabasePanel, redemptionItemPanel, redemptionPanel;
+
+    [SerializeField]
+    private RefreshDatabaseManager refreshDatabaseManager;
 
     [SerializeField]
     private RedemptionItemManager redemptionItemManager;
@@ -16,14 +19,26 @@ public class AdminAppManager : MonoBehaviour
 
     public void OnRegisterPanelButtonClicked()
     {
+        refreshDatabasePanel.SetActive(false);
         redemptionItemPanel.SetActive(false);
         redemptionPanel.SetActive(false);
         registerPanel.SetActive(true);
     }
 
+    public void OnRefreshDatabasePanelButtonClicked()
+    {
+        registerPanel.SetActive(false);
+        redemptionItemPanel.SetActive(false);
+        redemptionPanel.SetActive(false);
+        refreshDatabasePanel.SetActive(true);
+
+        refreshDatabaseManager.RefreshDatabase();
+    }
+
     public void OnRedemptionItemPanelButtonClicked()
     {
         registerPanel.SetActive(false);
+        refreshDatabasePanel.SetActive(false);
         redemptionPanel.SetActive(false);
         redemptionItemPanel.SetActive(true);
 
@@ -33,6 +48,7 @@ public class AdminAppManager : MonoBehaviour
     public void OnRedemptionPanelButtonClicked()
     {
         registerPanel.SetActive(false);
+        refreshDatabasePanel.SetActive(false);
         redemptionItemPanel.SetActive(false);
         redemptionPanel.SetActive(true);
 
