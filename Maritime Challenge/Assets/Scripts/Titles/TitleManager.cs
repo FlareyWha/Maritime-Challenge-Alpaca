@@ -5,8 +5,7 @@ using UnityEngine.Networking;
 
 public class TitleManager : MonoBehaviour
 {
-    private List<Title> titleList = new List<Title>();
-    private Dictionary<int, bool> titleStatusDictionary = new Dictionary<int, bool>();
+    private Dictionary<Title, bool> titleDictionary = new Dictionary<Title, bool>();
 
     public void GetTitles()
     {
@@ -24,7 +23,7 @@ public class TitleManager : MonoBehaviour
         switch (webreq.result)
         {
             case UnityWebRequest.Result.Success:
-                titleList.AddRange(JSONDeseralizer.DeseralizeTitleData(webreq.downloadHandler.text));
+                titleDictionary = JSONDeseralizer.DeseralizeTitleData(webreq.downloadHandler.text);
                 break;
             case UnityWebRequest.Result.ProtocolError:
                 Debug.LogError(webreq.downloadHandler.text);

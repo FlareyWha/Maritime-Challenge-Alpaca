@@ -195,28 +195,42 @@ public class JSONCosmeticDataList
     public List<JSONCosmeticData> cosmeticData = new List<JSONCosmeticData>();
 }
 
+//[Serializable]
+//public class JSONTitleData
+//{
+//    public int iTitleID;
+//    public string sTitleName;
+//}
+
+//[Serializable]
+//public class JSONTitleDataList
+//{
+//    public List<JSONTitleData> titleData = new List<JSONTitleData>();
+//}
+
+//[Serializable]
+//public class JSONTitleStatus
+//{
+//    public int iTitleID;
+//    public bool bTitleUnlocked;
+//}
+
+//[Serializable]
+//public class JSONTitleStatusList
+//{
+//    public List<JSONTitleStatus> titleStatusList = new List<JSONTitleStatus>();
+//}
+
 [Serializable]
 public class JSONTitleData
 {
     public int iTitleID;
     public string sTitleName;
+    public bool bTitleUnlocked;
 }
 
 [Serializable]
 public class JSONTitleDataList
 {
     public List<JSONTitleData> titleData = new List<JSONTitleData>();
-}
-
-[Serializable]
-public class JSONTitleStatus
-{
-    public int iTitleID;
-    public bool bTitleUnlocked;
-}
-
-[Serializable]
-public class JSONTitleStatusList
-{
-    public List<JSONTitleStatus> titleStatusList = new List<JSONTitleStatus>();
 }
