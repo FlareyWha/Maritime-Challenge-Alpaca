@@ -5,11 +5,11 @@ require("dbconn_inc.php");
 //check if POST fields are received, else quit
 try
 {
-    if(!isset($_POST["UID"])||!isset($_POST["iOwnerUID"]))
+    if(!isset($_POST["iOwnerUID"])||!isset($_POST["iOtherUID"]))
         throw new Exception("not posted!");
 
-    $uid = $_POST["UID"];
     $iOwnerUID = $_POST["iOwnerUID"];
+    $iOtherUID = $_POST["iOtherUID"];
 }
 catch (Exception $e)
 {
@@ -21,7 +21,7 @@ catch (Exception $e)
 //Remove the friend request
 $query="delete from tb_friendRequestList where iOwnerUID=? and iOtherUID=?";
 $stmt=$conn->prepare($query);
-$stmt->bind_param("ii", $iOwnerUID, $uid);
+$stmt->bind_param("ii", $iOwnerUID, $iOtherUID);
 $stmt->execute();
 $stmt->fetch(); 
 if ($stmt->affected_rows < 0)

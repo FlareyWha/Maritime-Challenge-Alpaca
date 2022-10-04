@@ -30,10 +30,10 @@ $sPassword = hash("sha256", $sPassword);
 
 $iTotalPlayers = require "GetTotalPlayersStatement.php";
 
-$iGuildID = 3 - (180 - $iTotalPlayers) % 4;
+$iGuildID = 4 - (180 - $iTotalPlayers) % 4;
 
 //Create account here
-$query="insert into tb_account values (0,?,?,?,0,?,0,1,\"\",0,0,0,?,0,0,0,0,0,0,0,0)";
+$query="insert into tb_account values (0,?,?,?,0,?,0,1,\"\",0,0,0,?,0,0,0,0,1,0,0,0)";
 $stmt=$conn->prepare($query);
 //s - string, i - integer...make sure it matches the data types!
 $stmt->bind_param("ssssi",$sUsername,$sEmail,$sPassword,$dBirthday,$iGuildID);

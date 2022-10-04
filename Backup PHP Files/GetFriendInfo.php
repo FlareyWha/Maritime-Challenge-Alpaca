@@ -18,11 +18,11 @@ catch (Exception $e)
 }
 
 // Prepare statement to get the necessary stats from friendUID, using iOwnerUID (which is you)
-$query = "select sUsername, dBirthday, iCurrentTitleID, sBiography, iLevel, iDepartment, iGuildID, iCountry, bOnline, iFriendshipLevel from tb_account inner join tb_friendList on tb_account.UID=tb_friendList.iFriendUID where iOwnerUID=? and iFriendUID=?";
+$query = "select sUsername, dBirthday, iCurrentTitleID, sBiography, iLevel, iDepartment, iGuildID, iCountry, iFriendshipLevel from tb_account inner join tb_friendList on tb_account.UID=tb_friendList.iFriendUID where iOwnerUID=? and iFriendUID=?";
 $stmt = $conn->prepare($query);
 $stmt->bind_param("ii", $uid, $iFriendUID);
 $stmt->execute();
-$stmt->bind_result($sUsername, $dBirthday, $iCurrentTitleID, $sBiography, $iLevel, $iDepartment, $iGuildID, $iCountry, $bOnline, $iFriendshipLevel);
+$stmt->bind_result($sUsername, $dBirthday, $iCurrentTitleID, $sBiography, $iLevel, $iDepartment, $iGuildID, $iCountry, $iFriendshipLevel);
 
 //Bind into array to send as json
 $arr = Array();
@@ -39,7 +39,6 @@ while ($stmt->fetch())
         "iDepartment" => $iDepartment,
         "iGuildID" => $iGuildID,
         "iCountry" => $iCountry,
-        "bOnline" => $bOnline,
         "iFriendshipLevel" => $iFriendshipLevel
     );
     array_push($arr["friendData"], $JSONFriendData);

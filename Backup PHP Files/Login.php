@@ -35,15 +35,6 @@ if ($sPassword != $sHashedPassword)
 
 //$sPassword = $sHashedPassword;
 
-$bOnline = require "CheckOnlineStatement.php";
-
-if ($bOnline)
-{
-    http_response_code(400);
-    echo "User already online. Login failed.";
-    die();
-}
-
 //Get the uid
 $uid = require "GetUidStatement.php";
 

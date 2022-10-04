@@ -18,7 +18,7 @@ catch (Exception $e)
     die();
 }
 
-//Prepare statement to check if the uid that uses the username and password exists
+//Prepare statement
 $query="select * from tb_friendRequestList where iOwnerUID=? and iOtherUID=?";
 $stmt=$conn->prepare($query);
 $stmt->bind_param("ii", $uid, $iOtherUid);
@@ -33,7 +33,7 @@ if ($stmt->affected_rows > 0)
 $stmt->close();
 
 
-//Prepare statement to check if the uid that uses the username and password exists
+//Prepare statement
 $query="insert into tb_friendRequestList values (?, ?)";
 $stmt2=$conn->prepare($query);
 $stmt2->bind_param("ii", $uid, $iOtherUid);
