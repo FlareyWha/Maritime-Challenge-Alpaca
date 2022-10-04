@@ -114,7 +114,9 @@ public class PostLoginInfoGetter : MonoBehaviour
         string url = ServerDataManager.URL_getCosmeticData;
         Debug.Log(url);
 
-        using UnityWebRequest webreq = UnityWebRequest.Get(url);
+        WWWForm form = new WWWForm();
+        form.AddField("iOwnerUID", PlayerData.UID);
+        using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
         yield return webreq.SendWebRequest();
         switch (webreq.result)
         {
