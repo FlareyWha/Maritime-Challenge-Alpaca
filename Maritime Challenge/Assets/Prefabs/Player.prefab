@@ -509,6 +509,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 548986ca072bad243a66dd0c9f1aa796, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultID: 4
+  FileHeader: Hair
 --- !u!1 &5300436063019523554
 GameObject:
   m_ObjectHideFlags: 0
@@ -624,6 +626,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 548986ca072bad243a66dd0c9f1aa796, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultID: 0
+  FileHeader: Shoe
 --- !u!1 &5419289292348981002
 GameObject:
   m_ObjectHideFlags: 0
@@ -1030,6 +1034,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 548986ca072bad243a66dd0c9f1aa796, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultID: 0
+  FileHeader: Bottom
 --- !u!1 &7412352763219698844
 GameObject:
   m_ObjectHideFlags: 0
@@ -1207,6 +1213,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 548986ca072bad243a66dd0c9f1aa796, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultID: 2
+  FileHeader: Top
 --- !u!1 &7885934357493370052
 GameObject:
   m_ObjectHideFlags: 0
@@ -1322,6 +1330,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 548986ca072bad243a66dd0c9f1aa796, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultID: 1
+  FileHeader: Body
 --- !u!1 &8058870723630215280
 GameObject:
   m_ObjectHideFlags: 0
@@ -1880,6 +1890,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 548986ca072bad243a66dd0c9f1aa796, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultID: 0
+  FileHeader: Headwear
 --- !u!1001 &8457046520676816261
 PrefabInstance:
   m_ObjectHideFlags: 0

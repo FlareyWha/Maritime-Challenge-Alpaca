@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class AnimatorHandler : MonoBehaviour
 {
+    [SerializeField]
+    private int defaultID = 0;
+    [SerializeField]
+    private string FileHeader = "";
+
     private Animator animator;
     private AnimationClip animationClip;
     private AnimatorOverrideController animatorOverrideController;
@@ -26,16 +31,19 @@ public class AnimatorHandler : MonoBehaviour
 
     public void SetAnimations(AvatarPart part)
     {
+        if (part.cosmetic == null)
+            return;
+
         string partId = part.cosmetic.ID.ToString();
         string partType = part.bodyPartName;
         foreach (string state in playerStatesList)
         {
             foreach (string dir in playerDirectionsList)
             {
-                animationClip = Resources.Load<AnimationClip>("PlayerAnimations/" + partType + "/" + partType + "_" + partId + "_" + state + "_" + dir);
+                animationClip = Resources.Load<AnimationClip>("PlayerAnimations/" + FileHeader + "/" + partType + "_" + partId + "_" + state + "_" + dir);
 
                 // Override default animation
-                defaultAnimationClips[partType + "_" + 0 + "_" + state + "_" + dir] = animationClip;
+                defaultAnimationClips[partType + "_" + defaultID + "_" + state + "_" + dir] = animationClip;
             }
         }
       

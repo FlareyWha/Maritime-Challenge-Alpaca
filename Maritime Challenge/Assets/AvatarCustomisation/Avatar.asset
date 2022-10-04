@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: Avatar
   m_EditorClassIdentifier: Assembly-CSharp::SO_Avatar
   avatarParts:
-  - bodyPartName: Hair
+  - bodyPartName: hair
     cosmetic: {fileID: 11400000, guid: 5a995fc1ff19337498a0170eb9c74eab, type: 2}
-  - bodyPartName: Headwear
+  - bodyPartName: headwear
     cosmetic: {fileID: 0}
-  - bodyPartName: Body
+  - bodyPartName: body
     cosmetic: {fileID: 11400000, guid: b9388ad028959464ea8e36a4987ba2ab, type: 2}
-  - bodyPartName: Top
+  - bodyPartName: top
     cosmetic: {fileID: 11400000, guid: 4ed7db9fdaa0fa7429b9c478486570a7, type: 2}
-  - bodyPartName: Bottom
+  - bodyPartName: bottom
     cosmetic: {fileID: 11400000, guid: 3fe6d975f261d8b4082e6d4d15bb97c1, type: 2}
-  - bodyPartName: Shoe
+  - bodyPartName: shoe
     cosmetic: {fileID: 0}

@@ -15,6 +15,8 @@ public class AvatarCustomisationManager : MonoBehaviourSingleton<AvatarCustomisa
     public delegate void AvatarSaved();
     public static event AvatarSaved OnAvatarUpdated;
 
+    private AvatarItemUI[] currentEquippedItem;
+
     void Start()
     {
         UpdateAllInventoryRects();
@@ -35,6 +37,12 @@ public class AvatarCustomisationManager : MonoBehaviourSingleton<AvatarCustomisa
         {
             AvatarItemUI item = Instantiate(AvatarItemUIPrefab, CustomisablesRect[(int)cos.Key.cosmeticBodyPartType]).GetComponent<AvatarItemUI>();
             item.Init(cos.Key.LinkedCosmetic, EquipAccessory);
+
+            // If Equipped
+            if (MyAvatar.avatarParts[(int)cos.Key.cosmeticBodyPartType].cosmetic == cos.Key.LinkedCosmetic)
+            {
+                currentEquippedItem[(int)cos.Key.cosmeticBodyPartType] = item;
+            }
         }
     }
      
@@ -59,7 +67,11 @@ public class AvatarCustomisationManager : MonoBehaviourSingleton<AvatarCustomisa
 
     private void EquipAccessory(AvatarCosmetic part)
     {
+        if (currentEquippedItem[(int)part.bodyPartType] != null)
+            currentEquippedItem[(int)part.bodyPartType].SetEquippedOverlay(false);
+
         MyAvatar.avatarParts[(int)part.bodyPartType].cosmetic = part;
+
         OnAvatarUpdated?.Invoke();
     }
 }

@@ -18,12 +18,12 @@ public class AvatarCosmetic : ScriptableObject
 
 public enum CosmeticType
 {
-    HAIR,
-    HEADWEAR,
-    BODY,
-    TOP,
-    BOTTOM,
-    SHOE,
+    HAIR = 0,
+    HEADWEAR = 1,
+    BODY = 2,
+    TOP = 3,
+    BOTTOM = 4,
+    SHOE = 5,
 
     NUM_TOTAL = 6
 }

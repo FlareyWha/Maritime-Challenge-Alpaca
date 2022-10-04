@@ -20,9 +20,9 @@ public class PlayerAnimationsManager : MonoBehaviour
 
     private void UpdateAvatarAnimations()
     {
-       // for (int i = 0; i < (int)AvatarBodyPartType.NUM_TOTAL; i++)
-       // {
-       //     animatorHandlers[i].SetAnimations(myAvatar.avatarParts[i]);
-       // }
+        for (int i = 0; i < (int)CosmeticType.NUM_TOTAL; i++)
+        {
+            animatorHandlers[i].SetAnimations(myAvatar.avatarParts[i]);
+        }
     }
 }
