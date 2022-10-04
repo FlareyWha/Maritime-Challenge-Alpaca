@@ -66,7 +66,7 @@ public class TitlesManager : MonoBehaviour
 
         WWWForm form = new WWWForm();
         form.AddField("UID", PlayerData.UID);
-        form.AddField("iTitleID", currSelected.LinkedTitle.titleID); //Change later btw
+        form.AddField("iCurrentTitleID", currSelected.LinkedTitle.titleID); //Change later btw
         using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
         yield return webreq.SendWebRequest();
         switch (webreq.result)
