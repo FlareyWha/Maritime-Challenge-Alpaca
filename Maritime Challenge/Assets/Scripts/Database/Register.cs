@@ -17,6 +17,9 @@ public class Register : MonoBehaviour
     [SerializeField]
     private RefreshDatabaseManager refreshDatabaseManager;
 
+    [SerializeField]
+    private GameObject fields, loadingScreenSpin;
+
     bool CheckBirthdayInfo()
     {
         //Checks the birthday info if they are correct.
@@ -100,6 +103,9 @@ public class Register : MonoBehaviour
         string url = ServerDataManager.URL_register;
         Debug.Log(url);
 
+        fields.SetActive(false);
+        loadingScreenSpin.SetActive(true);
+
         //Create the birthday text
         string birthdayText = birthdayYearInputField.text + "-" + birthdayMonthInputField.text + "-" + birthdayDayInputField.text;
 
@@ -127,6 +133,8 @@ public class Register : MonoBehaviour
                 confirmationText.text = "server error";
                 break;
         }
+        fields.SetActive(true);
+        loadingScreenSpin.SetActive(false);
     }
 
     IEnumerator GetUID()
@@ -160,7 +168,8 @@ public class Register : MonoBehaviour
     {
         CoroutineCollection coroutineCollectionManager = new CoroutineCollection();
 
-        StartCoroutine(coroutineCollectionManager.CollectCoroutine(SetDefaultCosmetics(uid)));
+        StartCoroutine(coroutineCollectionManager.CollectCoroutine(UnlockDefaultCosmetics(uid)));
+        StartCoroutine(coroutineCollectionManager.CollectCoroutine(SetDefaultEquippedCosmetics(uid)));
         StartCoroutine(coroutineCollectionManager.CollectCoroutine(SetDefaultBattleship(uid)));
         StartCoroutine(coroutineCollectionManager.CollectCoroutine(SetDefaultTitles(uid)));
 
@@ -168,7 +177,31 @@ public class Register : MonoBehaviour
         yield return coroutineCollectionManager;
     }
 
-    IEnumerator SetDefaultCosmetics(int uid)
+    IEnumerator UnlockDefaultCosmetics(int uid)
+    {
+        string url = "";
+        Debug.Log(url);
+
+        WWWForm form = new WWWForm();
+        form.AddField("UID", uid);
+        using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
+        yield return webreq.SendWebRequest();
+        switch (webreq.result)
+        {
+            case UnityWebRequest.Result.Success:
+                Debug.Log(webreq.downloadHandler.text);
+                break;
+            case UnityWebRequest.Result.ProtocolError:
+                Debug.LogError(webreq.downloadHandler.text);
+                break;
+            default:
+                Debug.Log(webreq.downloadHandler.text);
+                Debug.LogError("Server error");
+                break;
+        }
+    }
+
+    IEnumerator SetDefaultEquippedCosmetics(int uid)
     {
         string url = "";
         Debug.Log(url);

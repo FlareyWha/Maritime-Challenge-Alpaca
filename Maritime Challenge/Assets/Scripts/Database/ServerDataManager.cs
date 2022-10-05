@@ -12,10 +12,14 @@ public class ServerDataManager : MonoBehaviour
 
     #region Handling Login & Register
 
-    //Login & Register
+    //Login
     public static string URL_login = serverURL + "Login.php";
+
+    //Register
     public static string URL_verifyEmail = serverURL + "VerifyEmail.php";
     public static string URL_register = serverURL + "Register.php";
+    public static string URL_updateDefaultUnlockedCosmetics = serverURL + "UpdateDefaultUnlockedCosmetics.php";
+    public static string URL_addDefaultEquippedCosmetics = serverURL + "AddDefaultEquippedCosmetics.php";
 
     #endregion
 
@@ -40,6 +44,8 @@ public class ServerDataManager : MonoBehaviour
     //Cosmetics
     public static string URL_getCosmeticData = serverURL + "GetCosmeticData.php";
     public static string URL_getCosmeticStatusList = serverURL + "GetCosmeticStatusList.php";
+    public static string URL_updateCosmeticList = serverURL + "UpdateCosmeticList.php";
+    public static string URL_updateEquippedCosmeticList = serverURL + "UpdateEquippedCosmeticList.php";
 
     #endregion
 
@@ -83,7 +89,10 @@ public class ServerDataManager : MonoBehaviour
 
     #region Handling Admin Stuff
 
+    //Redemptions
     public static string URL_getRedemptionRequests = serverURL + "GetRedemptionRequests.php";
+
+    //Refresh database
     public static string URL_addAchievementListData = serverURL + "AddAchievementListData.php";
     public static string URL_addBattleshipListData = serverURL + "AddBattleshipListData.php";
     public static string URL_addCosmeticListData = serverURL + "AddCosmeticListData.php";
