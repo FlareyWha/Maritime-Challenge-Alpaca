@@ -36,7 +36,7 @@ public class TitlesManager : MonoBehaviour
             titleUI.Init(title.Key, title.Value, SwitchTitle);
 
             // If Is Currently Equipped
-            if (PlayerData.CurrentTitleID == title.Key.titleID)
+            if (PlayerData.CurrentTitleID == title.Key.TitleID)
             {
                 currSelected = titleUI;
                 currSelected.ToggleEquippedOverlay(true);
@@ -66,7 +66,7 @@ public class TitlesManager : MonoBehaviour
 
         WWWForm form = new WWWForm();
         form.AddField("UID", PlayerData.UID);
-        form.AddField("iCurrentTitleID", currSelected.LinkedTitle.titleID); //Change later btw
+        form.AddField("iCurrentTitleID", currSelected.LinkedTitle.TitleID); //Change later btw
         using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
         yield return webreq.SendWebRequest();
         switch (webreq.result)

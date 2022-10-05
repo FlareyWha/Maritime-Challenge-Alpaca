@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Title
 {
-    public int titleID;
-    public string titleName;
+    public int TitleID;
+    public string TitleName;
 
     public TitleSO LinkedTitle;
 
     public Title(int ID, string name)
     {
-        titleID = ID;
-        titleName = name;
+        TitleID = ID;
+        TitleName = name;
     }
 }

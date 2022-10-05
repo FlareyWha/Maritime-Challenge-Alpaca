@@ -19,7 +19,7 @@ public class RefreshDatabaseManager : MonoBehaviour
         StartCoroutine(DoRefreshDatabase());
     }
 
-    IEnumerator DoRefreshDatabase()
+    public IEnumerator DoRefreshDatabase()
     {
         CoroutineCollection coroutineCollectionManager = new CoroutineCollection();
 

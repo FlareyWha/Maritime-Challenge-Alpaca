@@ -7,11 +7,43 @@ using UnityEngine.SceneManagement;
 
 public class Register : MonoBehaviour
 {
-    private string url;
     [SerializeField]
     private Text confirmationText;
     [SerializeField]
     private InputField usernameInputField, emailInputField, passwordInputField, birthdayYearInputField, birthdayMonthInputField, birthdayDayInputField;
+    [SerializeField]
+    private Dropdown genderDropdown;
+
+    [SerializeField]
+    private RefreshDatabaseManager refreshDatabaseManager;
+
+    bool CheckBirthdayInfo()
+    {
+        //Checks the birthday info if they are correct.
+        int birthdayYear = int.Parse(birthdayYearInputField.text);
+        int birthdayMonth = int.Parse(birthdayMonthInputField.text);
+        int birthdayDay = int.Parse(birthdayDayInputField.text);
+
+        if (birthdayYear < 1000 || birthdayYear > 9999)
+        {
+            confirmationText.text = "Birthday Year is invalid. Try again.";
+            return false;
+        }
+
+        if (birthdayMonth < 1 || birthdayMonth > 12)
+        {
+            confirmationText.text = "Birthday Month is invalid. Try again.";
+            return false;
+        }
+
+        if (birthdayDay < 1 || birthdayDay > 31)
+        {
+            confirmationText.text = "Birthday Day is invalid. Try again.";
+            return false;
+        }
+
+        return true;
+    }
 
     public void SendRegisterInfo() //to be involved by button click
     {
@@ -40,7 +72,7 @@ public class Register : MonoBehaviour
 
     IEnumerator DoVerifyEmail()
     {
-        url = ServerDataManager.URL_verifyEmail;
+        string url = ServerDataManager.URL_verifyEmail;
         Debug.Log(url);
 
         WWWForm form = new WWWForm();
@@ -65,7 +97,7 @@ public class Register : MonoBehaviour
 
     IEnumerator DoRegister()
     {
-        url = ServerDataManager.URL_register;
+        string url = ServerDataManager.URL_register;
         Debug.Log(url);
 
         //Create the birthday text
@@ -78,11 +110,14 @@ public class Register : MonoBehaviour
         form.AddField("sEmail", emailInputField.text);
         form.AddField("sPassword", passwordInputField.text);
         form.AddField("dBirthday", birthdayText);
+        form.AddField("iGender", genderDropdown.value);
         using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
         yield return webreq.SendWebRequest();
         switch (webreq.result)
         {
             case UnityWebRequest.Result.Success:
+                yield return StartCoroutine(refreshDatabaseManager.DoRefreshDatabase());
+                yield return StartCoroutine(GetUID());
                 confirmationText.text = webreq.downloadHandler.text;
                 break;
             case UnityWebRequest.Result.ProtocolError:
@@ -94,31 +129,114 @@ public class Register : MonoBehaviour
         }
     }
 
-    bool CheckBirthdayInfo()
+    IEnumerator GetUID()
     {
-        //Checks the birthday info if they are correct.
-        int birthdayYear = int.Parse(birthdayYearInputField.text);
-        int birthdayMonth = int.Parse(birthdayMonthInputField.text);
-        int birthdayDay = int.Parse(birthdayDayInputField.text);
+        //Set the URL to the getUID one
+        string url = ServerDataManager.URL_login;
+        Debug.Log(url);
 
-        if (birthdayYear < 1000 || birthdayYear > 9999)
+        WWWForm form = new WWWForm();
+        form.AddField("sEmail", emailInputField.text);
+        form.AddField("sPassword", passwordInputField.text);
+        using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
+        yield return webreq.SendWebRequest();
+        switch (webreq.result)
         {
-            confirmationText.text = "Birthday Year is invalid. Try again.";
-            return false;
+            case UnityWebRequest.Result.Success:
+                int uid = int.Parse(webreq.downloadHandler.text);
+                yield return StartCoroutine(UpdateData(uid));
+                break;
+            case UnityWebRequest.Result.ProtocolError:
+                Debug.LogError(webreq.downloadHandler.text);
+                break;
+            default:
+                Debug.Log(webreq.downloadHandler.text);
+                Debug.LogError("Server error");
+                break;
         }
+    }
 
-        if (birthdayMonth < 1 || birthdayMonth > 12)
+    IEnumerator UpdateData(int uid)
+    {
+        CoroutineCollection coroutineCollectionManager = new CoroutineCollection();
+
+        StartCoroutine(coroutineCollectionManager.CollectCoroutine(SetDefaultCosmetics(uid)));
+        StartCoroutine(coroutineCollectionManager.CollectCoroutine(SetDefaultBattleship(uid)));
+        StartCoroutine(coroutineCollectionManager.CollectCoroutine(SetDefaultTitles(uid)));
+
+        //Wait for all the coroutines to finish running before continuing
+        yield return coroutineCollectionManager;
+    }
+
+    IEnumerator SetDefaultCosmetics(int uid)
+    {
+        string url = "";
+        Debug.Log(url);
+
+        WWWForm form = new WWWForm();
+        form.AddField("UID", uid);
+        using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
+        yield return webreq.SendWebRequest();
+        switch (webreq.result)
         {
-            confirmationText.text = "Birthday Month is invalid. Try again.";
-            return false;
+            case UnityWebRequest.Result.Success:
+                Debug.Log(webreq.downloadHandler.text);
+                break;
+            case UnityWebRequest.Result.ProtocolError:
+                Debug.LogError(webreq.downloadHandler.text);
+                break;
+            default:
+                Debug.Log(webreq.downloadHandler.text);
+                Debug.LogError("Server error");
+                break;
         }
+    }
 
-        if (birthdayDay < 1 || birthdayDay > 31)
+    IEnumerator SetDefaultBattleship(int uid)
+    {
+        string url = "";
+        Debug.Log(url);
+
+        WWWForm form = new WWWForm();
+        form.AddField("UID", uid);
+        using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
+        yield return webreq.SendWebRequest();
+        switch (webreq.result)
         {
-            confirmationText.text = "Birthday Day is invalid. Try again.";
-            return false;
+            case UnityWebRequest.Result.Success:
+                Debug.Log(webreq.downloadHandler.text);
+                break;
+            case UnityWebRequest.Result.ProtocolError:
+                Debug.LogError(webreq.downloadHandler.text);
+                break;
+            default:
+                Debug.Log(webreq.downloadHandler.text);
+                Debug.LogError("Server error");
+                break;
         }
+    }
 
-        return true;
+    IEnumerator SetDefaultTitles(int uid)
+    {
+        string url = "";
+        Debug.Log(url);
+
+        WWWForm form = new WWWForm();
+        form.AddField("UID", uid);
+        using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
+        yield return webreq.SendWebRequest();
+        switch (webreq.result)
+        {
+            case UnityWebRequest.Result.Success:
+                Debug.Log(webreq.downloadHandler.text);
+                break;
+            case UnityWebRequest.Result.ProtocolError:
+                Debug.LogError(webreq.downloadHandler.text);
+                break;
+            default:
+                Debug.Log(webreq.downloadHandler.text);
+                Debug.LogError("Server error");
+                break;
+        }
     }
 }

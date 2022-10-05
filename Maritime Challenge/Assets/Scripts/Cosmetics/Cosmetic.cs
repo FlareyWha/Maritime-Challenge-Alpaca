@@ -4,22 +4,22 @@ using UnityEngine;
 
 public class Cosmetic
 {
-    public int cosmeticID;
-    public int cosmeticBodyPartID;
-    public string cosmeticName;
-    public int cosmeticPrice;
-    public CosmeticRarity cosmeticRarity;
-    public CosmeticType cosmeticBodyPartType;
+    public int CosmeticID;
+    public int CosmeticBodyPartID;
+    public string CosmeticName;
+    public int CosmeticPrice;
+    public CosmeticRarity CosmeticRarity;
+    public CosmeticType CosmeticBodyPartType;
 
     public AvatarCosmetic LinkedCosmetic;
 
     public Cosmetic(int cosmeticID, string name, int price, CosmeticRarity rarity, CosmeticType bodyPartType)
     {
-        this.cosmeticID = cosmeticID;
-        cosmeticName = name;
-        cosmeticPrice = price;
-        cosmeticRarity = rarity;
-        cosmeticBodyPartType = bodyPartType;
+        CosmeticID = cosmeticID;
+        CosmeticName = name;
+        CosmeticPrice = price;
+        CosmeticRarity = rarity;
+        CosmeticBodyPartType = bodyPartType;
     }
 }
 

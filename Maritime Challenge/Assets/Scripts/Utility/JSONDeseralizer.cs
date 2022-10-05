@@ -129,36 +129,6 @@ public class JSONDeseralizer : MonoBehaviour
         return redemptionRequestList.redemptionRequests;
     }
 
-    //public static List<Cosmetic> DeseralizeCosmeticData(string cosmeticDataJSON)
-    //{
-    //    JSONCosmeticDataList cosmeticDataList = JsonUtility.FromJson<JSONCosmeticDataList>(cosmeticDataJSON);
-
-    //    List<Cosmetic> cosmeticList = new List<Cosmetic>();
-
-    //    foreach (JSONCosmeticData cosmeticData in cosmeticDataList.cosmeticData)
-    //    {
-    //        Cosmetic cosmetic = new Cosmetic(cosmeticData.iCosmeticID, cosmeticData.sCosmeticName, cosmeticData.iCosmeticCost, (CosmeticRarity)cosmeticData.iCosmeticRarity, (AvatarBodyPartType)cosmeticData.iCosmeticType);
-
-    //        cosmeticList.Add(cosmetic);
-    //    }
-
-    //    return cosmeticList;
-    //}
-
-    //public static Dictionary<int, bool> DeseralizeCosmeticStatusList(string cosmeticStatusListJSON)
-    //{
-    //    JSONCosmeticStatusList jsonCosmeticStatusList = JsonUtility.FromJson<JSONCosmeticStatusList>(cosmeticStatusListJSON);
-
-    //    Dictionary<int, bool> cosmeticStatusList = new Dictionary<int, bool>();
-
-    //    foreach (JSONCosmeticStatus cosmeticStatus in jsonCosmeticStatusList.cosmeticStatusList)
-    //    {
-    //        cosmeticStatusList.Add(cosmeticStatus.iCosmeticID, cosmeticStatus.bCosmeticUnlocked);
-    //    }
-
-    //    return cosmeticStatusList;
-    //}
-
     public static Dictionary<Cosmetic, bool> DeseralizeCosmeticData(string cosmeticDataJSON)
     {
         JSONCosmeticDataList cosmeticDataList = JsonUtility.FromJson<JSONCosmeticDataList>(cosmeticDataJSON);
@@ -174,36 +144,6 @@ public class JSONDeseralizer : MonoBehaviour
 
         return cosmeticDataDictionary;
     }
-
-    //public static List<Title> DeseralizeTitleData(string titleDataJSON)
-    //{
-    //    JSONTitleDataList titleDataList = JsonUtility.FromJson<JSONTitleDataList>(titleDataJSON);
-
-    //    List<Title> titleList = new List<Title>();
-
-    //    foreach (JSONTitleData titleData in titleDataList.titleData)
-    //    {
-    //        Title title = new Title(titleData.iTitleID, titleData.sTitleName);
-
-    //        titleList.Add(title);
-    //    }
-
-    //    return titleList;
-    //}
-
-    //public static Dictionary<int, bool> DeseralizeTitleStatusList(string titleStatusListJSON)
-    //{
-    //    JSONTitleStatusList jsonTitleStatusList = JsonUtility.FromJson<JSONTitleStatusList>(titleStatusListJSON);
-
-    //    Dictionary<int, bool> titleStatusList = new Dictionary<int, bool>();
-
-    //    foreach (JSONTitleStatus titleStatus in jsonTitleStatusList.titleStatusList)
-    //    {
-    //        titleStatusList.Add(titleStatus.iTitleID, titleStatus.bTitleUnlocked);
-    //    }
-
-    //    return titleStatusList;
-    //}
 
     public static Dictionary<Title, bool> DeseralizeTitleData(string titleDataJSON)
     {

@@ -12,7 +12,7 @@ public class CosmeticManager : MonoBehaviour
     {
         foreach (KeyValuePair<Cosmetic, bool> cosmetic in PlayerData.CosmeticsList)
         {
-            cosmetic.Key.LinkedCosmetic = FindCosmeticByID(cosmetic.Key.cosmeticID);
+            cosmetic.Key.LinkedCosmetic = FindCosmeticByID(cosmetic.Key.CosmeticID);
         }
     }
 

@@ -12,7 +12,7 @@ public class TitleManager : MonoBehaviour
     {
         foreach (KeyValuePair<Title, bool> title in PlayerData.titleDictionary)
         {
-            title.Key.LinkedTitle = FindCosmeticByID(title.Key.titleID);
+            title.Key.LinkedTitle = FindCosmeticByID(title.Key.TitleID);
         }
     }
 

@@ -35,13 +35,13 @@ public class AvatarCustomisationManager : MonoBehaviourSingleton<AvatarCustomisa
 
         foreach (KeyValuePair<Cosmetic, bool> cos in PlayerData.CosmeticsList)
         {
-            AvatarItemUI item = Instantiate(AvatarItemUIPrefab, CustomisablesRect[(int)cos.Key.cosmeticBodyPartType]).GetComponent<AvatarItemUI>();
+            AvatarItemUI item = Instantiate(AvatarItemUIPrefab, CustomisablesRect[(int)cos.Key.CosmeticBodyPartType]).GetComponent<AvatarItemUI>();
             item.Init(cos.Key.LinkedCosmetic, EquipAccessory);
 
             // If Equipped
-            if (MyAvatar.avatarParts[(int)cos.Key.cosmeticBodyPartType].cosmetic == cos.Key.LinkedCosmetic)
+            if (MyAvatar.avatarParts[(int)cos.Key.CosmeticBodyPartType].cosmetic == cos.Key.LinkedCosmetic)
             {
-                currentEquippedItem[(int)cos.Key.cosmeticBodyPartType] = item;
+                currentEquippedItem[(int)cos.Key.CosmeticBodyPartType] = item;
                 item.SetEquippedOverlay(true);
             }
         }
@@ -58,7 +58,7 @@ public class AvatarCustomisationManager : MonoBehaviourSingleton<AvatarCustomisa
 
         foreach (KeyValuePair<Cosmetic, bool> cos in PlayerData.CosmeticsList)
         {
-            if (cos.Key.cosmeticBodyPartType != type)
+            if (cos.Key.CosmeticBodyPartType != type)
                 return;
 
             AvatarItemUI item = Instantiate(AvatarItemUIPrefab, rect).GetComponent<AvatarItemUI>();
