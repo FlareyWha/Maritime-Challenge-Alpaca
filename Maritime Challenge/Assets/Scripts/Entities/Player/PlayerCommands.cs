@@ -45,7 +45,25 @@ public class PlayerCommands : NetworkBehaviour
     }
 
    
-    
+    public void SendAvatarChanged(CosmeticType type, int cosmeticID, string partTypeName)
+    {
+        Debug.Log("SendAvatarChanged()");
+        CallAvatarChanged(type, cosmeticID, partTypeName);
+    }
+
+    [Command]
+    private void CallAvatarChanged(CosmeticType type, int cosmeticID, string partTypeName)
+    {
+        Debug.Log("Command Received: Call Avatar Changed()");
+        InvokeAvatarChanged(type, cosmeticID, partTypeName);
+    }
+
+    [ClientRpc]
+    private void InvokeAvatarChanged(CosmeticType type, int cosmeticID, string partTypeName)
+    {
+        Debug.Log("ClientRpc Received, Invoke Avatar Changed");
+        GetComponent<Player>().InvokeAvatarChangedEvent(type, cosmeticID, partTypeName);
+    }
 
     IEnumerator WaitEnterScene(string sceneName)
     {

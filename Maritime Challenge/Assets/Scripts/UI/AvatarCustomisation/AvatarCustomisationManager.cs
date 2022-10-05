@@ -12,14 +12,22 @@ public class AvatarCustomisationManager : MonoBehaviourSingleton<AvatarCustomisa
     [SerializeField]
     private Transform[] CustomisablesRect;
 
-    public delegate void AvatarSaved();
-    public static event AvatarSaved OnAvatarUpdated;
+    private PlayerAnimationsManager myPlayerAnimationsManager;
 
     private AvatarItemUI[] currentEquippedItem = new AvatarItemUI[(int)CosmeticType.NUM_TOTAL];
 
     void Start()
     {
+        StartCoroutine(Inits());
+    }
+
+    IEnumerator Inits()
+    {
+        while (PlayerData.MyPlayer == null)
+            yield return null;
+        myPlayerAnimationsManager = PlayerData.MyPlayer.gameObject.GetComponent<PlayerAnimationsManager>();
         UpdateAllInventoryRects();
+
     }
 
     private void UpdateAllInventoryRects()
@@ -66,13 +74,13 @@ public class AvatarCustomisationManager : MonoBehaviourSingleton<AvatarCustomisa
         }
     }
 
-    private void EquipAccessory(AvatarCosmetic part)
+    private void EquipAccessory(AvatarItemUI item)
     {
-        if (currentEquippedItem[(int)part.bodyPartType] != null)
-            currentEquippedItem[(int)part.bodyPartType].SetEquippedOverlay(false);
+        if (currentEquippedItem[(int)item.Cosmetic.bodyPartType] != null)
+            currentEquippedItem[(int)item.Cosmetic.bodyPartType].SetEquippedOverlay(false);
+        currentEquippedItem[(int)item.Cosmetic.bodyPartType] = item;
+        MyAvatar.avatarParts[(int)item.Cosmetic.bodyPartType].cosmetic = item.Cosmetic;
 
-        MyAvatar.avatarParts[(int)part.bodyPartType].cosmetic = part;
-
-        OnAvatarUpdated?.Invoke();
+        PlayerData.CommandsHandler.SendAvatarChanged(item.Cosmetic.bodyPartType, item.Cosmetic.ID, MyAvatar.avatarParts[(int)item.Cosmetic.bodyPartType].bodyPartName);
     }
 }

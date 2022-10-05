@@ -21,17 +21,23 @@ public class PlayerAnimationsManager : MonoBehaviour
 
     private void UpdateAvatarAnimations()
     {
+        Debug.Log("Avatar Animations Updated");
         for (int i = 0; i < (int)CosmeticType.NUM_TOTAL; i++)
         {
             animatorHandlers[i].SetAnimations(myAvatar.avatarParts[i]);
         }
     }
 
+    private void UpdateSpecificAnimations(CosmeticType type, int cosmeticID, string partTypeName)
+    {
+        animatorHandlers[(int)type].SetAnimations(type, cosmeticID, partTypeName);
+    }
+
+
     private void SetAvatar(Player player)
     {
-        if (player == PlayerData.MyPlayer)
-            AvatarCustomisationManager.OnAvatarUpdated += UpdateAvatarAnimations;
-
+        Debug.Log("Assigned to Event");
+        player.OnAvatarChanged += UpdateSpecificAnimations;
         myAvatar = player.PlayerAvatar;
 
     }

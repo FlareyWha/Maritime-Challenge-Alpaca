@@ -43,6 +43,8 @@ public class Player : BaseEntity
     private PlayerUI playerUI = null;
     private Battleship LinkedBattleship = null;
 
+    public delegate void AvatarChanged(CosmeticType type, int cosmeticID, string partTypeName);
+    public event AvatarChanged OnAvatarChanged;
 
     private void Start()
     {
@@ -58,8 +60,6 @@ public class Player : BaseEntity
        
         PlayerData.OnPlayerDataUpdated += SetDetails;
 
-        // Enable My Player Components
-        GetComponent<PlayerAnimationsManager>().enabled = true;
 
         //Init My BattleShip
         if (LinkedBattleshipGO == null)
@@ -183,6 +183,11 @@ public class Player : BaseEntity
         gameObject.SetActive(show);
     }
 
+    public void InvokeAvatarChangedEvent(CosmeticType type, int cosmeticID, string partTypeName)
+    {
+        OnAvatarChanged?.Invoke(type, cosmeticID, partTypeName);
+    }
+
     // ============ SYNCVAR CALLBACKS ====================
 
     void OnUsernameChanged(string prev_name, string new_name)
@@ -213,7 +218,7 @@ public class Player : BaseEntity
 
     public void SetOrderInLayer(int what)
     {
-        GetComponent<SpriteRenderer>().sortingOrder = what;
+        //GetComponent<SpriteRenderer>().sortingOrder = what;
     }
 
     // ================= GETTERS =====================
