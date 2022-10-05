@@ -145,6 +145,20 @@ public class JSONDeseralizer : MonoBehaviour
         return cosmeticDataDictionary;
     }
 
+    public static List<int> DeseralizeEquippedCosmeticList(string equippedCosmeticListJSON)
+    {
+        JSONEquippedCosmeticList equippedCosmeticList = JsonUtility.FromJson<JSONEquippedCosmeticList>(equippedCosmeticListJSON);
+
+        List<int> equippedCosmeticIDList = new List<int>();
+
+        for (int i = 0; i < equippedCosmeticList.equippedCosmetics.Count; ++i)
+        {
+            equippedCosmeticIDList.Add(equippedCosmeticList.equippedCosmetics[i].iCosmeticID);
+        }
+
+        return equippedCosmeticIDList;
+    }
+
     public static Dictionary<Title, bool> DeseralizeTitleData(string titleDataJSON)
     {
         JSONTitleDataList titleDataList = JsonUtility.FromJson<JSONTitleDataList>(titleDataJSON);

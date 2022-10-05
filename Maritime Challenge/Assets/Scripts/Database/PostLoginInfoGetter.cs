@@ -24,7 +24,6 @@ public class PostLoginInfoGetter : MonoBehaviour
         StartCoroutine(coroutineCollectionManager.CollectCoroutine(FriendRequestHandler.GetRecievedFriendRequests()));
         StartCoroutine(coroutineCollectionManager.CollectCoroutine(DoGetCosmetics()));
         StartCoroutine(coroutineCollectionManager.CollectCoroutine(DoGetTitles()));
-        //StartCoroutine(coroutineCollectionManager.CollectCoroutine(DoGetCosmeticStatusList()));
 
         //Wait for all the coroutines to finish running before continuing
         yield return coroutineCollectionManager;
@@ -123,6 +122,46 @@ public class PostLoginInfoGetter : MonoBehaviour
         {
             case UnityWebRequest.Result.Success:
                 PlayerData.CosmeticsList = JSONDeseralizer.DeseralizeCosmeticData(webreq.downloadHandler.text);
+
+                yield return StartCoroutine(GetEquippedCosmetics());
+                break;
+            case UnityWebRequest.Result.ProtocolError:
+                Debug.LogError(webreq.downloadHandler.text);
+                break;
+            default:
+                Debug.LogError("Server error");
+                break;
+        }
+    }
+
+    IEnumerator GetEquippedCosmetics()
+    {
+        string url = ServerDataManager.URL_getCosmeticData;
+        Debug.Log(url);
+
+        WWWForm form = new WWWForm();
+        form.AddField("iOwnerUID", PlayerData.UID);
+        using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
+        yield return webreq.SendWebRequest();
+        switch (webreq.result)
+        {
+            case UnityWebRequest.Result.Success:
+                List<int> equippedCosmeticListIDList = JSONDeseralizer.DeseralizeEquippedCosmeticList(webreq.downloadHandler.text);
+
+                for (int i = 0; i < equippedCosmeticListIDList.Count; ++i)
+                {
+                    foreach (KeyValuePair<Cosmetic, bool> cosmetic in PlayerData.CosmeticsList)
+                    {
+                        if (cosmetic.Value == true)
+                        {
+                            if (cosmetic.Key.CosmeticID == equippedCosmeticListIDList[i])
+                            {
+                                PlayerData.EquippedCosmeticsList.Add(cosmetic.Key);
+                                break;
+                            }
+                        }
+                    }
+                }
                 break;
             case UnityWebRequest.Result.ProtocolError:
                 Debug.LogError(webreq.downloadHandler.text);

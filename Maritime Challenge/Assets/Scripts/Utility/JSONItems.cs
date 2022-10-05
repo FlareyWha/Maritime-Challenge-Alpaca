@@ -167,6 +167,18 @@ public class JSONCosmeticDataList
 }
 
 [Serializable]
+public class JSONEquippedCosmetic
+{
+    public int iCosmeticID;
+}
+
+[Serializable]
+public class JSONEquippedCosmeticList
+{
+    public List<JSONEquippedCosmetic> equippedCosmetics = new List<JSONEquippedCosmetic>();
+}
+
+[Serializable]
 public class JSONTitleData
 {
     public int iTitleID;
