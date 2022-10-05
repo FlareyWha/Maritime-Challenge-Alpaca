@@ -14,10 +14,10 @@ public class AnimatorHandler : MonoBehaviour
     private AnimatorOverrideController animatorOverrideController;
     private AnimationClipOverrides defaultAnimationClips;
 
-    private List<string> playerStatesList = new List<string>() { "idle", "walk" };
-    private List<string> playerDirectionsList = new List<string>() { "up", "down", "left", "right" };
+    private List<string> playerStatesList = new List<string>() { "idle" };//, "walk" };
+    private List<string> playerDirectionsList = new List<string>() { "down", };//"up", "down", "left", "right" };
 
-    private void Start()
+    private void Awake()
     {
         // Set animator
         animator = GetComponent<Animator>();
@@ -41,12 +41,41 @@ public class AnimatorHandler : MonoBehaviour
             foreach (string dir in playerDirectionsList)
             {
                 animationClip = Resources.Load<AnimationClip>("PlayerAnimations/" + FileHeader + "/" + partType + "_" + partId + "_" + state + "_" + dir);
+        
+                // TEMP
+                if (defaultID == 0)
+                {
+                    return;
+                }
 
                 // Override default animation
                 defaultAnimationClips[partType + "_" + defaultID + "_" + state + "_" + dir] = animationClip;
             }
         }
       
+        // Apply updated animations
+        animatorOverrideController.ApplyOverrides(defaultAnimationClips);
+    }
+
+    public void SetAnimations(int cosmeticID, string partTypeName)
+    {
+        foreach (string state in playerStatesList)
+        {
+            foreach (string dir in playerDirectionsList)
+            {
+                animationClip = Resources.Load<AnimationClip>("PlayerAnimations/" + FileHeader + "/" + partTypeName + "_" + cosmeticID + "_" + state + "_" + dir);
+
+                // TEMP
+                if (defaultID == 0)
+                {
+                    return;
+                }
+
+                // Override default animation
+                defaultAnimationClips[partTypeName + "_" + defaultID + "_" + state + "_" + dir] = animationClip;
+            }
+        }
+
         // Apply updated animations
         animatorOverrideController.ApplyOverrides(defaultAnimationClips);
     }

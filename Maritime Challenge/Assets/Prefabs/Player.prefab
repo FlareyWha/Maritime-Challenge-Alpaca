@@ -1034,7 +1034,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 548986ca072bad243a66dd0c9f1aa796, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultID: 0
+  defaultID: 3
   FileHeader: Bottom
 --- !u!1 &7412352763219698844
 GameObject:
@@ -1667,7 +1667,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8779834002269100689}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 20338a81fe29ce84c9e6e6a91fa3e2f5, type: 3}
   m_Name: 
@@ -1870,7 +1870,7 @@ Animator:
   m_GameObject: {fileID: 9177410304660845624}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f1fdef344c231bd429f16b95a9f6e5cb, type: 2}
+  m_Controller: {fileID: 9100000, guid: 06d1a6d3d0d62f0469f3c478abd04e3f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
