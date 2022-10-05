@@ -41,6 +41,8 @@ public static class PlayerData // Local Player's Data
     public static Dictionary<Title, bool> titleDictionary = new Dictionary<Title, bool>();
     // Stores all the cosmetics in game, and whether you have unlocked them
     public static Dictionary<Cosmetic, bool> CosmeticsList = new Dictionary<Cosmetic, bool>();
+    // Stores all the equipped cosmetics
+    public static List<Cosmetic> EquippedCosmeticsList = new List<Cosmetic>();
 
 
     public delegate void PlayerDataUpdated();

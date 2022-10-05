@@ -170,8 +170,8 @@ public class Register : MonoBehaviour
 
         StartCoroutine(coroutineCollectionManager.CollectCoroutine(UnlockDefaultCosmetics(uid)));
         StartCoroutine(coroutineCollectionManager.CollectCoroutine(SetDefaultEquippedCosmetics(uid)));
-        StartCoroutine(coroutineCollectionManager.CollectCoroutine(SetDefaultBattleship(uid)));
-        StartCoroutine(coroutineCollectionManager.CollectCoroutine(SetDefaultTitles(uid)));
+        StartCoroutine(coroutineCollectionManager.CollectCoroutine(UnlockDefaultBattleship(uid)));
+        StartCoroutine(coroutineCollectionManager.CollectCoroutine(UnlockDefaultTitle(uid)));
 
         //Wait for all the coroutines to finish running before continuing
         yield return coroutineCollectionManager;
@@ -179,11 +179,12 @@ public class Register : MonoBehaviour
 
     IEnumerator UnlockDefaultCosmetics(int uid)
     {
-        string url = "";
+        string url = ServerDataManager.URL_updateDefaultUnlockedCosmetics;
         Debug.Log(url);
 
         WWWForm form = new WWWForm();
         form.AddField("UID", uid);
+        form.AddField("iGender", genderDropdown.value);
         using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
         yield return webreq.SendWebRequest();
         switch (webreq.result)
@@ -203,11 +204,12 @@ public class Register : MonoBehaviour
 
     IEnumerator SetDefaultEquippedCosmetics(int uid)
     {
-        string url = "";
+        string url = ServerDataManager.URL_addDefaultEquippedCosmetics;
         Debug.Log(url);
 
         WWWForm form = new WWWForm();
         form.AddField("UID", uid);
+        form.AddField("iGender", genderDropdown.value);
         using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
         yield return webreq.SendWebRequest();
         switch (webreq.result)
@@ -225,13 +227,14 @@ public class Register : MonoBehaviour
         }
     }
 
-    IEnumerator SetDefaultBattleship(int uid)
+    IEnumerator UnlockDefaultBattleship(int uid)
     {
-        string url = "";
+        string url = ServerDataManager.URL_updateBattleshipList;
         Debug.Log(url);
 
         WWWForm form = new WWWForm();
         form.AddField("UID", uid);
+        form.AddField("iBattleshipID", 1);
         using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
         yield return webreq.SendWebRequest();
         switch (webreq.result)
@@ -249,13 +252,14 @@ public class Register : MonoBehaviour
         }
     }
 
-    IEnumerator SetDefaultTitles(int uid)
+    IEnumerator UnlockDefaultTitle(int uid)
     {
-        string url = "";
+        string url = ServerDataManager.URL_updateTitleList;
         Debug.Log(url);
 
         WWWForm form = new WWWForm();
         form.AddField("UID", uid);
+        form.AddField("iTitleID", 1);
         using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
         yield return webreq.SendWebRequest();
         switch (webreq.result)
