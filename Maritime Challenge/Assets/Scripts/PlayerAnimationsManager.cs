@@ -30,7 +30,7 @@ public class PlayerAnimationsManager : MonoBehaviour
 
     private void UpdateSpecificAnimations(CosmeticType type, int cosmeticID, string partTypeName)
     {
-        animatorHandlers[(int)type].SetAnimations(cosmeticID, partTypeName);
+        animatorHandlers[(int)type].SetAnimations(type, cosmeticID, partTypeName);
     }
 
 

@@ -218,7 +218,7 @@ public class Player : BaseEntity
 
     public void SetOrderInLayer(int what)
     {
-        GetComponent<SpriteRenderer>().sortingOrder = what;
+        //GetComponent<SpriteRenderer>().sortingOrder = what;
     }
 
     // ================= GETTERS =====================
