@@ -511,6 +511,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultID: 4
   FileHeader: Hair
+  AnimPartName: hairback
 --- !u!1 &5300436063019523554
 GameObject:
   m_ObjectHideFlags: 0
@@ -628,6 +629,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultID: 0
   FileHeader: Shoe
+  AnimPartName: shoe
 --- !u!1 &5419289292348981002
 GameObject:
   m_ObjectHideFlags: 0
@@ -1036,6 +1038,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultID: 4
   FileHeader: Hair
+  AnimPartName: hairfront
 --- !u!1 &7230950417349455460
 GameObject:
   m_ObjectHideFlags: 0
@@ -1153,6 +1156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultID: 3
   FileHeader: Bottom
+  AnimPartName: bottom
 --- !u!1 &7412352763219698844
 GameObject:
   m_ObjectHideFlags: 0
@@ -1332,6 +1336,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultID: 2
   FileHeader: Top
+  AnimPartName: top
 --- !u!1 &7885934357493370052
 GameObject:
   m_ObjectHideFlags: 0
@@ -1449,6 +1454,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultID: 1
   FileHeader: Body
+  AnimPartName: body
 --- !u!1 &8058870723630215280
 GameObject:
   m_ObjectHideFlags: 0
@@ -1791,12 +1797,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animatorHandlers:
-  - {fileID: 7637044336230447112}
+  - {fileID: 5880137284040802452}
   - {fileID: 4912471776485065140}
   - {fileID: 2105671807482991916}
   - {fileID: 1183674550607232837}
   - {fileID: 4094357339714646145}
   - {fileID: 8124456436019200357}
+  - {fileID: 7637044336230447112}
   player: {fileID: 9181191743022904711}
 --- !u!114 &560335285860505812
 MonoBehaviour:
@@ -2011,6 +2018,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultID: 0
   FileHeader: Headwear
+  AnimPartName: headwear
 --- !u!1001 &8457046520676816261
 PrefabInstance:
   m_ObjectHideFlags: 0

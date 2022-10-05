@@ -43,7 +43,7 @@ public class Player : BaseEntity
     private PlayerUI playerUI = null;
     private Battleship LinkedBattleship = null;
 
-    public delegate void AvatarChanged(CosmeticType type, int cosmeticID, string partTypeName);
+    public delegate void AvatarChanged(BodyPartType type, int cosmeticID);
     public event AvatarChanged OnAvatarChanged;
 
     private void Start()
@@ -183,9 +183,9 @@ public class Player : BaseEntity
         gameObject.SetActive(show);
     }
 
-    public void InvokeAvatarChangedEvent(CosmeticType type, int cosmeticID, string partTypeName)
+    public void InvokeAvatarChangedEvent(BodyPartType type, int cosmeticID)
     {
-        OnAvatarChanged?.Invoke(type, cosmeticID, partTypeName);
+        OnAvatarChanged?.Invoke(type, cosmeticID);
     }
 
     // ============ SYNCVAR CALLBACKS ====================

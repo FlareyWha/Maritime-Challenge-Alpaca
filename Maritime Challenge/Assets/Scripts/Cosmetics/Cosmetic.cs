@@ -32,3 +32,14 @@ public enum CosmeticRarity
     NO_COSMETIC_RARITY
 }
 
+public enum CosmeticType
+{
+    HAIR = 0,
+    HEADWEAR = 1,
+    BODY = 2,
+    TOP = 3,
+    BOTTOM = 4,
+    SHOE = 5,
+
+    NUM_TOTAL = 6
+}

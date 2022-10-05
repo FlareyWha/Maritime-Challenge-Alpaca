@@ -44,7 +44,7 @@ public class AvatarCustomisationManager : MonoBehaviourSingleton<AvatarCustomisa
         foreach (KeyValuePair<Cosmetic, bool> cos in PlayerData.CosmeticsList)
         {
             AvatarItemUI item = Instantiate(AvatarItemUIPrefab, CustomisablesRect[(int)cos.Key.CosmeticBodyPartType]).GetComponent<AvatarItemUI>();
-            item.Init(cos.Key.LinkedCosmetic, EquipAccessory);
+            item.Init(cos.Key, EquipAccessory);
 
             // If Equipped
             if (MyAvatar.avatarParts[(int)cos.Key.CosmeticBodyPartType].cosmetic == cos.Key.LinkedCosmetic)
@@ -70,17 +70,37 @@ public class AvatarCustomisationManager : MonoBehaviourSingleton<AvatarCustomisa
                 return;
 
             AvatarItemUI item = Instantiate(AvatarItemUIPrefab, rect).GetComponent<AvatarItemUI>();
-            item.Init(cos.Key.LinkedCosmetic, EquipAccessory);
+            item.Init(cos.Key, EquipAccessory);
         }
     }
 
     private void EquipAccessory(AvatarItemUI item)
     {
-        if (currentEquippedItem[(int)item.Cosmetic.bodyPartType] != null)
-            currentEquippedItem[(int)item.Cosmetic.bodyPartType].SetEquippedOverlay(false);
-        currentEquippedItem[(int)item.Cosmetic.bodyPartType] = item;
-        MyAvatar.avatarParts[(int)item.Cosmetic.bodyPartType].cosmetic = item.Cosmetic;
+        if (currentEquippedItem[(int)item.Cosmetic.CosmeticBodyPartType] != null)
+            currentEquippedItem[(int)item.Cosmetic.CosmeticBodyPartType].SetEquippedOverlay(false);
+        currentEquippedItem[(int)item.Cosmetic.CosmeticBodyPartType] = item;
 
-        PlayerData.CommandsHandler.SendAvatarChanged(item.Cosmetic.bodyPartType, item.Cosmetic.ID, MyAvatar.avatarParts[(int)item.Cosmetic.bodyPartType].bodyPartName);
+
+        // Update My Avatar
+        UpdateAvatar(item.Cosmetic);
+    }
+
+    private void UpdateAvatar(Cosmetic cos)
+    {
+
+        switch (cos.CosmeticBodyPartType)
+        {
+            case CosmeticType.HAIR:
+                MyAvatar.avatarParts[(int)BodyPartType.HAIR_FRONT].cosmetic = cos.LinkedCosmetic;
+                PlayerData.CommandsHandler.SendAvatarChanged(BodyPartType.HAIR_FRONT, cos.CosmeticBodyPartID);
+                MyAvatar.avatarParts[(int)BodyPartType.HAIR_BACK].cosmetic = cos.LinkedCosmetic;
+                PlayerData.CommandsHandler.SendAvatarChanged(BodyPartType.HAIR_BACK, cos.CosmeticBodyPartID);
+                break;
+            default:
+                MyAvatar.avatarParts[(int)cos.CosmeticBodyPartType].cosmetic = cos.LinkedCosmetic;
+                PlayerData.CommandsHandler.SendAvatarChanged((BodyPartType)cos.CosmeticBodyPartType, cos.CosmeticBodyPartID);
+                break;
+        }
+        
     }
 }

@@ -8,6 +8,8 @@ public class AnimatorHandler : MonoBehaviour
     private int defaultID = 0;
     [SerializeField]
     private string FileHeader = "";
+    [SerializeField]
+    private string AnimPartName = "";
 
     private Animator animator;
     private AnimationClip animationClip;
@@ -35,20 +37,11 @@ public class AnimatorHandler : MonoBehaviour
             return;
 
         string partId = part.cosmetic.ID.ToString();
-        string partType = part.bodyPartName;
         foreach (string state in playerStatesList)
         {
             foreach (string dir in playerDirectionsList)
             {
-                if (part.cosmetic.bodyPartType == CosmeticType.HAIR)
-                {
-                    UpdateAnimationClip(state, dir, partType, "front", partId);
-                    UpdateAnimationClip(state, dir, partType, "back", partId);
-                }
-                else
-                {
-                    UpdateAnimationClip(state, dir, partType, "", partId);
-                }
+                UpdateAnimationClip(state, dir, partId);
             }
         }
       
@@ -56,21 +49,13 @@ public class AnimatorHandler : MonoBehaviour
         animatorOverrideController.ApplyOverrides(defaultAnimationClips);
     }
 
-    public void SetAnimations(CosmeticType type, int cosmeticID, string partTypeName)
+    public void SetAnimations(BodyPartType type, int cosmeticID)
     {
         foreach (string state in playerStatesList)
         {
             foreach (string dir in playerDirectionsList)
             {
-                if (type == CosmeticType.HAIR)
-                {
-                    UpdateAnimationClip(state, dir, partTypeName, "front", cosmeticID.ToString());
-                    UpdateAnimationClip(state, dir, partTypeName, "back", cosmeticID.ToString());
-                }
-                else
-                {
-                    UpdateAnimationClip(state, dir, partTypeName, "" , cosmeticID.ToString());
-                }
+                UpdateAnimationClip(state, dir, cosmeticID.ToString());
             }
         }
 
@@ -78,11 +63,11 @@ public class AnimatorHandler : MonoBehaviour
         animatorOverrideController.ApplyOverrides(defaultAnimationClips);
     }
 
-    private void UpdateAnimationClip(string state, string dir, string partTypeName, string detail, string cosmeticID)
+    private void UpdateAnimationClip(string state, string dir, string cosmeticID)
     {
-        animationClip = Resources.Load<AnimationClip>("PlayerAnimations/" + FileHeader + "/" + partTypeName + detail + "_" + cosmeticID + "_" + state + "_" + dir);
+        animationClip = Resources.Load<AnimationClip>("PlayerAnimations/" + FileHeader + "/" + AnimPartName + "_" + cosmeticID + "_" + state + "_" + dir);
         // Override default animation
-        defaultAnimationClips[partTypeName + detail + "_" + defaultID + "_" + state + "_" + dir] = animationClip;
+        defaultAnimationClips[AnimPartName + "_" + defaultID + "_" + state + "_" + dir] = animationClip;
     }
 
     public class AnimationClipOverrides : List<KeyValuePair<AnimationClip, AnimationClip>>

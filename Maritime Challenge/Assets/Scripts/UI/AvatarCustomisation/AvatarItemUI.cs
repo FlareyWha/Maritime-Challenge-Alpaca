@@ -12,8 +12,8 @@ public class AvatarItemUI : MonoBehaviour
     [SerializeField]
     private GameObject equippedOverlay;
 
-    private AvatarCosmetic item;
-    public AvatarCosmetic Cosmetic { get { return item;  } }
+    private Cosmetic item;
+    public Cosmetic Cosmetic { get { return item;  } }
 
     private Action<AvatarItemUI> onSelectAction;
 
@@ -24,10 +24,10 @@ public class AvatarItemUI : MonoBehaviour
     }
 
 
-    public void Init(AvatarCosmetic cosmetic, Action<AvatarItemUI> action)
+    public void Init(Cosmetic cosmetic, Action<AvatarItemUI> action)
     {
         item = cosmetic;
-        itemIcon.sprite = cosmetic.IconSprite;
+        itemIcon.sprite = cosmetic.LinkedCosmetic.IconSprite;
         onSelectAction = action;
     }
 

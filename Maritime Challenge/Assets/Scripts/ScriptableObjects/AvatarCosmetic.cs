@@ -9,21 +9,22 @@ public class AvatarCosmetic : ScriptableObject
     // Body Part Details
     //public string bodyPartName;
     public int ID;
-    public CosmeticType bodyPartType;
+    public BodyPartType bodyPartType;
     public Sprite IconSprite;
 
     // List Containing All Body Part Animations
     public List<AnimationClip> allBodyPartAnimations = new List<AnimationClip>();
 }
 
-public enum CosmeticType
+public enum BodyPartType
 {
-    HAIR = 0,
+    HAIR_FRONT,
     HEADWEAR = 1,
     BODY = 2,
     TOP = 3,
     BOTTOM = 4,
     SHOE = 5,
+    HAIR_BACK,
 
-    NUM_TOTAL = 6
+    NUM_TOTAL
 }
