@@ -50,6 +50,23 @@ public class AchievementsManager : MonoBehaviour
     public void ClaimAchievement(ACHIEVEMENT_ID achievementID)
     {
         StartCoroutine(DoClaimAchievement((int)achievementID));
+        Achievement achievement = GetAchievement((int)achievementID);
+
+        PlayerData.AchievementList[achievement] = true;
+        int earnedTitleID = achievement.EarnedTitleID;
+
+        if (earnedTitleID != -1)
+        {
+            foreach (KeyValuePair<Title, bool> title in PlayerData.TitleDictionary)
+            {
+                if (title.Key.TitleID == earnedTitleID)
+                {
+                    UnlockTitle(achievement.EarnedTitleID);
+                    PlayerData.TitleDictionary[title.Key] = true;
+                    break;
+                }
+            }
+        }
     }
 
     IEnumerator DoClaimAchievement(int achievementID)
@@ -74,5 +91,42 @@ public class AchievementsManager : MonoBehaviour
                 Debug.LogError("Server error");
                 break;
         }
+    }
+
+    IEnumerator UnlockTitle(int iTitleID)
+    {
+        string url = ServerDataManager.URL_updateTitleList;
+        Debug.Log(url);
+
+        WWWForm form = new WWWForm();
+        form.AddField("iOwnerUID", PlayerData.UID);
+        form.AddField("iTitleID", iTitleID);
+        using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
+        yield return webreq.SendWebRequest();
+        switch (webreq.result)
+        {
+            case UnityWebRequest.Result.Success:
+                Debug.Log(webreq.downloadHandler.text);
+                break;
+            case UnityWebRequest.Result.ProtocolError:
+                Debug.LogError(webreq.downloadHandler.text);
+                break;
+            default:
+                Debug.LogError("Server error");
+                break;
+        }
+    }
+
+    Achievement GetAchievement(int achievementID)
+    {
+        foreach (KeyValuePair<Achievement, bool> achievement in PlayerData.AchievementList)
+        {
+            if (achievement.Key.AchievementID == achievementID)
+            {
+                return achievement.Key;
+            }
+        }
+
+        return null;
     }
 }

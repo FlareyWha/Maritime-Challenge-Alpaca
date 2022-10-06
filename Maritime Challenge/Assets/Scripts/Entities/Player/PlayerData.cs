@@ -83,11 +83,6 @@ public static class PlayerData // Local Player's Data
         return "Guild does not exist";
     }
 
-    public static Sprite GetTitleByID(int id)
-    {
-        return null;
-    }
-
     public static string FindPlayerNameByID(int id)
     {
         foreach (KeyValuePair<int, BasicInfo> info in PhonebookData)

@@ -42,7 +42,7 @@ public class ServerDataManager : MonoBehaviour
     public static string URL_updateUsername = serverURL + "UpdateUsername.php";
     public static string URL_updateBiography = serverURL + "UpdateBiography.php";
     public static string URL_getTitleData = serverURL + "GetTitleData.php";
-    public static string URL_updateTitle = serverURL + "UpdateTitle.php";
+    public static string URL_updateCurrentTitle = serverURL + "UpdateCurrentTitle.php";
     public static string URL_updateTitleList = serverURL + "UpdateTitleList.php";
 
     //Cosmetics

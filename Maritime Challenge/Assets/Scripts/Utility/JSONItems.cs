@@ -218,6 +218,7 @@ public class JSONAchievementData
     public string sAchievementName;
     public string sAchievementDescription;
     public int iAchievementRequirementMaxNumber;
+    public int iEarnedTitleID;
     public bool bAchievementClaimed;
 }
 

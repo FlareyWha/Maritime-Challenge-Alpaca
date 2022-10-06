@@ -61,7 +61,7 @@ public class TitlesManager : MonoBehaviour
 
     IEnumerator StartEditTitle()
     {
-        string url = ServerDataManager.URL_updateTitle;
+        string url = ServerDataManager.URL_updateCurrentTitle;
         Debug.Log(url);
 
         WWWForm form = new WWWForm();

@@ -8,12 +8,14 @@ public class Achievement
     public string AchievementName;
     public string AchievementDescription;
     public int AchievementRequirementMaxNumber;
+    public int EarnedTitleID;
 
-    public Achievement(int ID, string name, string description, int requirementMaxNumber)
+    public Achievement(int ID, string name, string description, int requirementMaxNumber, int titleID)
     {
         AchievementID = ID;
         AchievementName = name;
         AchievementDescription = description;
         AchievementRequirementMaxNumber = requirementMaxNumber;
+        EarnedTitleID = titleID;
     }
 }
