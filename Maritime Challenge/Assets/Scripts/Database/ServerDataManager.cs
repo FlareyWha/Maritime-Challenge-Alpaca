@@ -76,7 +76,8 @@ public class ServerDataManager : MonoBehaviour
     #region Handling Missions & Achievements
 
     public static string URL_getMissionStatus = serverURL + "GetMissionStatus.php";
-    public static string URL_getAchievementStatus = serverURL + "GetAchievementStatus.php";
+    public static string URL_getAchievementData = serverURL + "GetAchievementData.php";
+    public static string URL_updateAchievementClaimed = serverURL + "UpdateAchievementClaimed.php";
 
     #endregion
 

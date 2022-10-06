@@ -174,4 +174,20 @@ public class JSONDeseralizer : MonoBehaviour
 
         return titleDictionary;
     }
+
+    public static Dictionary<Achievement, bool> DeseralizeAchievementData(string achievementDataJSON)
+    {
+        JSONAchievementDataList achievementDataList = JsonUtility.FromJson<JSONAchievementDataList>(achievementDataJSON);
+
+        Dictionary<Achievement, bool> achievementDataDictionary = new Dictionary<Achievement, bool>();
+
+        foreach (JSONAchievementData achievementData in achievementDataList.achievementData)
+        {
+            Achievement title = new Achievement(achievementData.iAchievementID, achievementData.sAchievementName, achievementData.sAchievementDescription, achievementData.iAchievementRequirementMaxNumber);
+
+            achievementDataDictionary.Add(title, achievementData.bAchievementClaimed);
+        }
+
+        return achievementDataDictionary;
+    }
 }

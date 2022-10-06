@@ -191,3 +191,19 @@ public class JSONTitleDataList
 {
     public List<JSONTitleData> titleData = new List<JSONTitleData>();
 }
+
+[Serializable]
+public class JSONAchievementData
+{
+    public int iAchievementID;
+    public string sAchievementName;
+    public string sAchievementDescription;
+    public int iAchievementRequirementMaxNumber;
+    public bool bAchievementClaimed;
+}
+
+[Serializable]
+public class JSONAchievementDataList
+{
+    public List<JSONAchievementData> achievementData = new List<JSONAchievementData>();
+}

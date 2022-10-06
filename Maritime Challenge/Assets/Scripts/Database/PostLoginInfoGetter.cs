@@ -24,6 +24,7 @@ public class PostLoginInfoGetter : MonoBehaviour
         StartCoroutine(coroutineCollectionManager.CollectCoroutine(FriendRequestHandler.GetRecievedFriendRequests()));
         StartCoroutine(coroutineCollectionManager.CollectCoroutine(DoGetCosmetics()));
         StartCoroutine(coroutineCollectionManager.CollectCoroutine(DoGetTitles()));
+        StartCoroutine(coroutineCollectionManager.CollectCoroutine(DoGetAchievements()));
 
         //Wait for all the coroutines to finish running before continuing
         yield return coroutineCollectionManager;
@@ -184,7 +185,30 @@ public class PostLoginInfoGetter : MonoBehaviour
         switch (webreq.result)
         {
             case UnityWebRequest.Result.Success:
-                PlayerData.titleDictionary = JSONDeseralizer.DeseralizeTitleData(webreq.downloadHandler.text);
+                PlayerData.TitleDictionary = JSONDeseralizer.DeseralizeTitleData(webreq.downloadHandler.text);
+                break;
+            case UnityWebRequest.Result.ProtocolError:
+                Debug.LogError(webreq.downloadHandler.text);
+                break;
+            default:
+                Debug.LogError("Server error");
+                break;
+        }
+    }
+
+    IEnumerator DoGetAchievements()
+    {
+        string url = ServerDataManager.URL_getAchievementData;
+        Debug.Log(url);
+
+        WWWForm form = new WWWForm();
+        form.AddField("iOwnerUID", PlayerData.UID);
+        using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
+        yield return webreq.SendWebRequest();
+        switch (webreq.result)
+        {
+            case UnityWebRequest.Result.Success:
+                PlayerData.AchievementList = JSONDeseralizer.DeseralizeAchievementData(webreq.downloadHandler.text);
                 break;
             case UnityWebRequest.Result.ProtocolError:
                 Debug.LogError(webreq.downloadHandler.text);
