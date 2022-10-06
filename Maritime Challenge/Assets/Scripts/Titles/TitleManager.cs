@@ -10,7 +10,7 @@ public class TitleManager : MonoBehaviour
 
     void Awake()
     {
-        foreach (KeyValuePair<Title, bool> title in PlayerData.titleDictionary)
+        foreach (KeyValuePair<Title, bool> title in PlayerData.TitleDictionary)
         {
             title.Key.LinkedTitle = FindCosmeticByID(title.Key.TitleID);
         }

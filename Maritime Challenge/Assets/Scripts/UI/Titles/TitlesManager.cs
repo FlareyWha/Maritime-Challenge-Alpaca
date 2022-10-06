@@ -30,7 +30,7 @@ public class TitlesManager : MonoBehaviour
         }
 
 
-        foreach (KeyValuePair<Title, bool> title in PlayerData.titleDictionary)
+        foreach (KeyValuePair<Title, bool> title in PlayerData.TitleDictionary)
         {
             TitleUI titleUI = Instantiate(TitleUIPrefab, TitlesRect).GetComponent<TitleUI>();
             titleUI.Init(title.Key, title.Value, SwitchTitle);
