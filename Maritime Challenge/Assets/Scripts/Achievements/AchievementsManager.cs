@@ -1,6 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
+using UnityEngine.Networking;
+
+public enum ACHIEVEMENT_ID
+{
+    //Idk what im putting here just some stuff but make sure to put in order unless u wanna make the thing like ur cosmetic
+
+}
 
 public class AchievementsManager : MonoBehaviour
 {
@@ -14,5 +22,57 @@ public class AchievementsManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void CheckAchievementUnlocked(ACHIEVEMENT_ID achievementID, int progressNumber)
+    {
+        foreach (KeyValuePair<Achievement, bool> achievement in PlayerData.AchievementList)
+        {
+            if (achievement.Key.AchievementID == (int)achievementID)
+            {
+                SetAchievementUI(progressNumber >= achievement.Key.AchievementRequirementMaxNumber);
+            }
+        }
+    }
+
+    void SetAchievementUI(bool unlocked)
+    {
+        if (unlocked)
+        {
+
+        }
+        else
+        {
+
+        }
+    }
+
+    public void ClaimAchievement(ACHIEVEMENT_ID achievementID)
+    {
+        StartCoroutine(DoClaimAchievement((int)achievementID));
+    }
+
+    IEnumerator DoClaimAchievement(int achievementID)
+    {
+        string url = ServerDataManager.URL_updateAchievementClaimed;
+        Debug.Log(url);
+
+        WWWForm form = new WWWForm();
+        form.AddField("iOwnerUID", PlayerData.UID);
+        form.AddField("iAchievementID", achievementID);
+        using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
+        yield return webreq.SendWebRequest();
+        switch (webreq.result)
+        {
+            case UnityWebRequest.Result.Success:
+                Debug.Log(webreq.downloadHandler.text);
+                break;
+            case UnityWebRequest.Result.ProtocolError:
+                Debug.LogError(webreq.downloadHandler.text);
+                break;
+            default:
+                Debug.LogError("Server error");
+                break;
+        }
     }
 }
