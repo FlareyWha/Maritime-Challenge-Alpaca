@@ -32,6 +32,25 @@ public class JSONPlayerDataList
 }
 
 [Serializable]
+public class JSONPlayerStats
+{
+    public int iEnemiesDefeated;
+    public int iBossesDefeated;
+    public int iFriendsAdded;
+    public int iRightshipediaEntriesUnlocked;
+    public int iBattleshipsOwned;
+    public int iCosmeticsOwned;
+    public int iTitlesUnlocked;
+    public int iAchievementsCompleted;
+}
+
+[Serializable]
+public class JSONPlayerStatsList
+{
+    public List<JSONPlayerStats> playerStats = new List<JSONPlayerStats>();
+}
+
+[Serializable]
 public class JSONFriends
 {
     public int iFriendUID;

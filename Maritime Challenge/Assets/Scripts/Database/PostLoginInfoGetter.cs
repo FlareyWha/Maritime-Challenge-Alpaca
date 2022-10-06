@@ -18,6 +18,7 @@ public class PostLoginInfoGetter : MonoBehaviour
         CoroutineCollection coroutineCollectionManager = new CoroutineCollection();
 
         StartCoroutine(coroutineCollectionManager.CollectCoroutine(GetPlayerData()));
+        StartCoroutine(coroutineCollectionManager.CollectCoroutine(GetPlayerStats()));
         StartCoroutine(coroutineCollectionManager.CollectCoroutine(GetFriends()));
         StartCoroutine(coroutineCollectionManager.CollectCoroutine(GetPhonebookData()));
         StartCoroutine(coroutineCollectionManager.CollectCoroutine(FriendRequestHandler.GetSentFriendRequests()));
@@ -59,6 +60,29 @@ public class PostLoginInfoGetter : MonoBehaviour
         }
     }
 
+    IEnumerator GetPlayerStats()
+    {
+        string url = ServerDataManager.URL_getPlayerStats;
+        Debug.Log(url);
+
+        WWWForm form = new WWWForm();
+        form.AddField("iOwnerUID", PlayerData.UID);
+        using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
+        yield return webreq.SendWebRequest();
+        switch (webreq.result)
+        {
+            case UnityWebRequest.Result.Success:
+                //Deseralize the data
+                JSONDeseralizer.DeseralizePlayerStats(webreq.downloadHandler.text);
+                break;
+            case UnityWebRequest.Result.ProtocolError:
+                Debug.LogError(webreq.downloadHandler.text);
+                break;
+            default:
+                Debug.LogError("Server error");
+                break;
+        }
+    }
     IEnumerator GetFriends()
     {
         string url = ServerDataManager.URL_getFriends;

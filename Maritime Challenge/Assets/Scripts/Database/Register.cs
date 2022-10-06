@@ -168,6 +168,7 @@ public class Register : MonoBehaviour
     {
         CoroutineCollection coroutineCollectionManager = new CoroutineCollection();
 
+        StartCoroutine(coroutineCollectionManager.CollectCoroutine(AddPlayerStats(uid)));
         StartCoroutine(coroutineCollectionManager.CollectCoroutine(UnlockDefaultCosmetics(uid)));
         StartCoroutine(coroutineCollectionManager.CollectCoroutine(SetDefaultEquippedCosmetics(uid)));
         StartCoroutine(coroutineCollectionManager.CollectCoroutine(UnlockDefaultBattleship(uid)));
@@ -175,6 +176,30 @@ public class Register : MonoBehaviour
 
         //Wait for all the coroutines to finish running before continuing
         yield return coroutineCollectionManager;
+    }
+
+    IEnumerator AddPlayerStats(int uid)
+    {
+        string url = ServerDataManager.URL_addPlayerStats;
+        Debug.Log(url);
+
+        WWWForm form = new WWWForm();
+        form.AddField("iOwnerUID", uid);
+        using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
+        yield return webreq.SendWebRequest();
+        switch (webreq.result)
+        {
+            case UnityWebRequest.Result.Success:
+                Debug.Log(webreq.downloadHandler.text);
+                break;
+            case UnityWebRequest.Result.ProtocolError:
+                Debug.LogError(webreq.downloadHandler.text);
+                break;
+            default:
+                Debug.Log(webreq.downloadHandler.text);
+                Debug.LogError("Server error");
+                break;
+        }
     }
 
     IEnumerator UnlockDefaultCosmetics(int uid)
