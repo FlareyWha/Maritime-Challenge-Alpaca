@@ -61,7 +61,7 @@ public class AchievementsManager : MonoBehaviour
             {
                 if (title.Key.TitleID == earnedTitleID)
                 {
-                    UnlockTitle(achievement.EarnedTitleID);
+                    StartCoroutine(UnlockTitle(achievement.EarnedTitleID));
                     PlayerData.TitleDictionary[title.Key] = true;
                     break;
                 }
