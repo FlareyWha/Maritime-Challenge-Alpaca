@@ -217,6 +217,7 @@ public class JSONAchievementData
     public int iAchievementID;
     public string sAchievementName;
     public string sAchievementDescription;
+    public int iAchievementTier;
     public int iAchievementRequirementMaxNumber;
     public int iEarnedTitleID;
     public bool bAchievementClaimed;
