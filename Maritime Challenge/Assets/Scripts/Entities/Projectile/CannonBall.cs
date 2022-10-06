@@ -62,7 +62,7 @@ public class CannonBall : BaseProjectile
             Debug.Log("Cannonball Hit Enemy");
             BaseEntity enemy = collision.gameObject.GetComponent<BaseEntity>();
             enemy.TakeDamage(ownerPlayer.ATK, ownerPlayer.gameObject);
-            //NetworkServer.Destroy(gameObject);
+
             Deactivate();
         }
     }

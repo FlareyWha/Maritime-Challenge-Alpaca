@@ -216,13 +216,7 @@ public class Battleship : NetworkBehaviour
     [Command]
     private void LaunchCannonBall(GameObject target, Vector3 spawnPos, Vector3 shipDir, string currSceneName)
     {
-        //GameObject ball = Instantiate(CannonBallPrefab, spawnPos, Quaternion.identity);
-        //SceneManager.Instance.MoveGameObjectToScene(ball, currSceneName);
-        //NetworkServer.Spawn(ball);
-
-        //CannonBall cannonBall = ball.GetComponent<CannonBall>();
-        //cannonBall.Init(target, shipDir, ownerPlayer);
-
+      
         CannonBall ball = ProjectileManager.Instance.GetActiveCannonBall();
         ball.transform.position = spawnPos;
         ball.Activate();
