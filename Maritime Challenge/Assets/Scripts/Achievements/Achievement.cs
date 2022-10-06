@@ -19,3 +19,9 @@ public class Achievement
         EarnedTitleID = titleID;
     }
 }
+
+public enum ACHIEVEMENT_ID
+{
+    
+
+}

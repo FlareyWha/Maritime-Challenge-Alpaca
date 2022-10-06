@@ -4,24 +4,24 @@ using System;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public enum ACHIEVEMENT_ID
-{
-    //Idk what im putting here just some stuff but make sure to put in order unless u wanna make the thing like ur cosmetic
-
-}
-
 public class AchievementsManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    private Transform AchievementsRect;
+    [SerializeField]
+    private GameObject AchievementsUIPrefab;
 
-    // Update is called once per frame
-    void Update()
+
+    private void Start()
     {
-        
+        InitAchievementsRect();
+    }
+    private void InitAchievementsRect()
+    {
+        foreach (KeyValuePair<Achievement, bool> achievement in PlayerData.AchievementList)
+        {
+            // ...
+        }
     }
 
     public void CheckAchievementUnlocked(ACHIEVEMENT_ID achievementID, int progressNumber)

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
 
-public class TitlesManager : MonoBehaviour
+public class TitlesUIManager : MonoBehaviour
 {
     [SerializeField]
     private GameObject TitleUIPrefab;
