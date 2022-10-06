@@ -20,6 +20,8 @@ public class Battleship : NetworkBehaviour
     private Image HPFill;
     [SerializeField]
     private Sprite UpwardSprite, DownwardSprite, LeftSprite, RightSprite;
+    [SerializeField]
+    private Transform TurretHoleRef_Up, TurretHoleRef_Down, TurretHoleRef_Left, TurretHoleRef_Right;
     private SHIPFACING currFacing, prevFacing;
 
     [SerializeField]
@@ -141,6 +143,15 @@ public class Battleship : NetworkBehaviour
         // Update Ship Attack
         if (currTarget != null)
         {   
+            // Check for Disable (?)
+            if (!currTarget.gameObject.activeSelf)
+            {
+                currTarget = null;
+                UpdateSelectedTargetUI();
+                return;
+            }
+
+
             // Check for Stop Attack when out of range
             Vector3 dis = currTarget.transform.position - transform.position;
             dis.z = 0;
@@ -181,18 +192,35 @@ public class Battleship : NetworkBehaviour
 
     private void FireCannon()
     {
-        LaunchCannonBall(currTarget.gameObject, PlayerData.activeSubScene);
+        LaunchCannonBall(currTarget.gameObject, GetTurretHoleRefPos(), velocity.normalized, PlayerData.activeSubScene);
+    }
+
+    private Vector3 GetTurretHoleRefPos()
+    {
+        switch (currFacing)
+        {
+            case SHIPFACING.LEFT:
+                return TurretHoleRef_Left.position;
+            case SHIPFACING.RIGHT:
+                return TurretHoleRef_Right.position;
+            case SHIPFACING.UP:
+                return TurretHoleRef_Up.position;
+            case SHIPFACING.DOWN:
+                return TurretHoleRef_Down.position;
+            default:
+                return Vector3.zero;
+        }
     }
 
     [Command]
-    private void LaunchCannonBall(GameObject target, string currSceneName)
+    private void LaunchCannonBall(GameObject target, Vector3 spawnPos, Vector3 shipDir, string currSceneName)
     {
-        GameObject ball = Instantiate(CannonBallPrefab, transform.position, Quaternion.identity);
+        GameObject ball = Instantiate(CannonBallPrefab, spawnPos, Quaternion.identity);
         SceneManager.Instance.MoveGameObjectToScene(ball, currSceneName);
         NetworkServer.Spawn(ball);
 
         CannonBall cannonBall = ball.GetComponent<CannonBall>();
-        cannonBall.Init(target, ownerPlayer);
+        cannonBall.Init(target, shipDir, ownerPlayer);
 
     }
 

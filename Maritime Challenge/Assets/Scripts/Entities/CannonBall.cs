@@ -6,8 +6,6 @@ using Mirror;
 public class CannonBall : BaseProjectile
 {
 
-   
-
     public override void Awake()
     {
         base.Awake();
@@ -17,11 +15,11 @@ public class CannonBall : BaseProjectile
     }
 
     [Server]
-    public void Init(GameObject target, Player owner)
+    public void Init(GameObject target, Vector3 initialDir, Player owner)
     {
         this.target = target.GetComponent<BaseEnemy>();
         this.ownerPlayer = owner;
-        velocity = (target.transform.position - transform.position).normalized * SPEED;
+        velocity = initialDir * SPEED;// (target.transform.position - transform.position).normalized * SPEED;
 
         target.GetComponent<BaseEntity>().OnEntityDied += OnTargetDiedCallback;
         Show();
@@ -58,15 +56,10 @@ public class CannonBall : BaseProjectile
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
-        {
-            Debug.Log("Cannonball Hit Enemy");
-        }
-
         if (!isServer)
             return;
 
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject == this.target.gameObject)
         {
             Debug.Log("Cannonball Hit Enemy");
             BaseEntity enemy = collision.gameObject.GetComponent<BaseEntity>();

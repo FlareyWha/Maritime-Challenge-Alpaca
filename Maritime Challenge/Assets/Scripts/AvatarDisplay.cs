@@ -4,4 +4,6 @@ using UnityEngine;
 
 public class AvatarDisplay : MonoBehaviour
 {
+    [SerializeField]
+    private PlayerAnimationsManager animsManager;
 }

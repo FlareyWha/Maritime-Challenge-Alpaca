@@ -12,7 +12,9 @@ public class AvatarCustomisationManager : MonoBehaviourSingleton<AvatarCustomisa
     [SerializeField]
     private Transform[] CustomisablesRect;
 
-    private PlayerAnimationsManager myPlayerAnimationsManager;
+    [SerializeField]
+    private AvatarDisplay displayAvatar;
+
 
     private AvatarItemUI[] currentEquippedItem = new AvatarItemUI[(int)CosmeticType.NUM_TOTAL];
 
@@ -25,8 +27,10 @@ public class AvatarCustomisationManager : MonoBehaviourSingleton<AvatarCustomisa
     {
         while (PlayerData.MyPlayer == null)
             yield return null;
-        myPlayerAnimationsManager = PlayerData.MyPlayer.gameObject.GetComponent<PlayerAnimationsManager>();
+
+        //displayAvatar.set
         UpdateAllInventoryRects();
+    
 
     }
 
