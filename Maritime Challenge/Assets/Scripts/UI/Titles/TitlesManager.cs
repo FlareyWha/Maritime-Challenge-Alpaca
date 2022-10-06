@@ -30,7 +30,7 @@ public class TitlesManager : MonoBehaviour
         }
 
 
-        foreach (KeyValuePair<Title, bool> title in PlayerData.titleDictionary)
+        foreach (KeyValuePair<Title, bool> title in PlayerData.TitleDictionary)
         {
             TitleUI titleUI = Instantiate(TitleUIPrefab, TitlesRect).GetComponent<TitleUI>();
             titleUI.Init(title.Key, title.Value, SwitchTitle);
@@ -61,7 +61,7 @@ public class TitlesManager : MonoBehaviour
 
     IEnumerator StartEditTitle()
     {
-        string url = ServerDataManager.URL_updateTitle;
+        string url = ServerDataManager.URL_updateCurrentTitle;
         Debug.Log(url);
 
         WWWForm form = new WWWForm();

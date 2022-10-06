@@ -28,6 +28,23 @@ public class JSONDeseralizer : MonoBehaviour
         PlayerData.PlayerPosition = new Vector3(jsonPlayerData.fPlayerXPos, jsonPlayerData.fPlayerYPos, jsonPlayerData.fPlayerZPos);
     }
 
+    public static void DeseralizePlayerStats(string playerStatsJSON)
+    {
+        JSONPlayerStatsList playerStatsList = JsonUtility.FromJson<JSONPlayerStatsList>(playerStatsJSON);
+
+        JSONPlayerStats jsonPlayerStats = playerStatsList.playerStats[0];
+
+        //Set all the info needed
+        PlayerData.PlayerStats.EnemiesDefeated = jsonPlayerStats.iEnemiesDefeated;
+        PlayerData.PlayerStats.BossesDefeated = jsonPlayerStats.iBossesDefeated;
+        PlayerData.PlayerStats.FriendsAdded = jsonPlayerStats.iFriendsAdded;
+        PlayerData.PlayerStats.RightshipediaEntriesUnlocked = jsonPlayerStats.iRightshipediaEntriesUnlocked;
+        PlayerData.PlayerStats.BattleshipsOwned = jsonPlayerStats.iBattleshipsOwned;
+        PlayerData.PlayerStats.CosmeticsOwned = jsonPlayerStats.iCosmeticsOwned;
+        PlayerData.PlayerStats.TitlesUnlocked = jsonPlayerStats.iTitlesUnlocked;
+        PlayerData.PlayerStats.AchievementsCompleted = jsonPlayerStats.iAchievementsCompleted;
+    }
+
     public static void DeseralizeFriends(string friendsJSON)
     {
         JSONFriendList friendList = JsonUtility.FromJson<JSONFriendList>(friendsJSON);
@@ -173,5 +190,21 @@ public class JSONDeseralizer : MonoBehaviour
         }
 
         return titleDictionary;
+    }
+
+    public static Dictionary<Achievement, bool> DeseralizeAchievementData(string achievementDataJSON)
+    {
+        JSONAchievementDataList achievementDataList = JsonUtility.FromJson<JSONAchievementDataList>(achievementDataJSON);
+
+        Dictionary<Achievement, bool> achievementDataDictionary = new Dictionary<Achievement, bool>();
+
+        foreach (JSONAchievementData achievementData in achievementDataList.achievementData)
+        {
+            Achievement title = new Achievement(achievementData.iAchievementID, achievementData.sAchievementName, achievementData.sAchievementDescription, achievementData.iAchievementRequirementMaxNumber, achievementData.iEarnedTitleID);
+
+            achievementDataDictionary.Add(title, achievementData.bAchievementClaimed);
+        }
+
+        return achievementDataDictionary;
     }
 }

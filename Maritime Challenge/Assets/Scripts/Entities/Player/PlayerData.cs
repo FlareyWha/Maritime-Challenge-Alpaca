@@ -20,6 +20,7 @@ public static class PlayerData // Local Player's Data
     public static int NumEventCurrency = 0;
     public static int CurrentBattleship = 1;
     public static Vector3 PlayerPosition;
+    public static PlayerStats PlayerStats;
 
     public static string activeSubScene = "WorldHubScene";
 
@@ -38,11 +39,13 @@ public static class PlayerData // Local Player's Data
     public static List<int> ReceivedFriendRequestList = new List<int>();
 
     // Stores all the Titles in game, and whether you have unlocked them
-    public static Dictionary<Title, bool> titleDictionary = new Dictionary<Title, bool>();
+    public static Dictionary<Title, bool> TitleDictionary = new Dictionary<Title, bool>();
     // Stores all the cosmetics in game, and whether you have unlocked them
     public static Dictionary<Cosmetic, bool> CosmeticsList = new Dictionary<Cosmetic, bool>();
     // Stores all the equipped cosmetics
     public static List<Cosmetic> EquippedCosmeticsList = new List<Cosmetic>();
+    // Stores all the equipped cosmetics
+    public static Dictionary<Achievement, bool> AchievementList = new Dictionary<Achievement, bool>();
 
 
     public delegate void PlayerDataUpdated();
@@ -78,11 +81,6 @@ public static class PlayerData // Local Player's Data
                 return "Guild4";
         }
         return "Guild does not exist";
-    }
-
-    public static Sprite GetTitleByID(int id)
-    {
-        return null;
     }
 
     public static string FindPlayerNameByID(int id)

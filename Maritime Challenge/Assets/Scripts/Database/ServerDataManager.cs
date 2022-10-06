@@ -18,14 +18,16 @@ public class ServerDataManager : MonoBehaviour
     //Register
     public static string URL_verifyEmail = serverURL + "VerifyEmail.php";
     public static string URL_register = serverURL + "Register.php";
+    public static string URL_addPlayerStats = serverURL + "AddPlayerStats.php";
     public static string URL_updateDefaultUnlockedCosmetics = serverURL + "UpdateDefaultUnlockedCosmetics.php";
     public static string URL_addDefaultEquippedCosmetics = serverURL + "AddDefaultEquippedCosmetics.php";
 
     #endregion
 
-    #region Handling Player Data & Cosmetics
+    #region Handling Player Data & Stats & Cosmetics
 
     public static string URL_getPlayerData = serverURL + "GetPlayerData.php";
+    public static string URL_getPlayerStats = serverURL + "GetPlayerStats.php";
 
     //Game data
     public static string URL_updateAccountXPLevels = serverURL + "UpdateAccountXPLevels.php";
@@ -40,7 +42,7 @@ public class ServerDataManager : MonoBehaviour
     public static string URL_updateUsername = serverURL + "UpdateUsername.php";
     public static string URL_updateBiography = serverURL + "UpdateBiography.php";
     public static string URL_getTitleData = serverURL + "GetTitleData.php";
-    public static string URL_updateTitle = serverURL + "UpdateTitle.php";
+    public static string URL_updateCurrentTitle = serverURL + "UpdateCurrentTitle.php";
     public static string URL_updateTitleList = serverURL + "UpdateTitleList.php";
 
     //Cosmetics
@@ -76,7 +78,8 @@ public class ServerDataManager : MonoBehaviour
     #region Handling Missions & Achievements
 
     public static string URL_getMissionStatus = serverURL + "GetMissionStatus.php";
-    public static string URL_getAchievementStatus = serverURL + "GetAchievementStatus.php";
+    public static string URL_getAchievementData = serverURL + "GetAchievementData.php";
+    public static string URL_updateAchievementClaimed = serverURL + "UpdateAchievementClaimed.php";
 
     #endregion
 
