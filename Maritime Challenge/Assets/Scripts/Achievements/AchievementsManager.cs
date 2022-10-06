@@ -24,11 +24,11 @@ public class AchievementsManager : MonoBehaviour
         }
     }
 
-    public void CheckAchievementUnlocked(ACHIEVEMENT_ID achievementID, int progressNumber)
+    public void CheckAchievementUnlocked(int achievementID, int progressNumber)
     {
         foreach (KeyValuePair<Achievement, bool> achievement in PlayerData.AchievementList)
         {
-            if (achievement.Key.AchievementID == (int)achievementID)
+            if (achievement.Key.AchievementID == achievementID)
             {
                 SetAchievementUI(progressNumber >= achievement.Key.AchievementRequirementMaxNumber);
             }
@@ -47,10 +47,10 @@ public class AchievementsManager : MonoBehaviour
         }
     }
 
-    public void ClaimAchievement(ACHIEVEMENT_ID achievementID)
+    public void ClaimAchievement(int achievementID)
     {
-        StartCoroutine(DoClaimAchievement((int)achievementID));
-        Achievement achievement = GetAchievement((int)achievementID);
+        StartCoroutine(DoClaimAchievement(achievementID));
+        Achievement achievement = GetAchievement(achievementID);
 
         PlayerData.AchievementList[achievement] = true;
         int earnedTitleID = achievement.EarnedTitleID;
