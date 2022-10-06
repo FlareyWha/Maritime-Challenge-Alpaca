@@ -5,11 +5,14 @@ using Mirror;
 
 public class BaseProjectile : NetworkBehaviour
 {
+    public bool active = false;
+
     protected Vector2 velocity = Vector2.zero;
     protected float homing_rate = 20.0f;
 
+    protected float INITIAL_SPEED = 15.0f;
     protected float SPEED = 15.0f;
-    protected float accel_rate = 0.5f;
+    protected float accel_rate = 0.2f;
 
     protected Rigidbody2D rb = null;
 
@@ -18,6 +21,7 @@ public class BaseProjectile : NetworkBehaviour
 
     protected int damage = 0;
     private float lifetime = 10.0f;
+    private float lifetime_timer = 10.0f;
 
     public virtual void Awake()
     {
@@ -39,20 +43,48 @@ public class BaseProjectile : NetworkBehaviour
                 return;
             }
 
-
             Vector2 dis = target.TargetTransform.position - transform.position;
             Vector2 homingDir = dis.normalized - velocity.normalized;
             velocity += homingDir * homing_rate * Time.deltaTime;
         }
 
-        lifetime -= Time.deltaTime;
+        lifetime_timer -= Time.deltaTime;
 
         SPEED += accel_rate * Time.deltaTime;
         rb.position += velocity.normalized * SPEED * Time.deltaTime;
 
-        if (lifetime <= 0.0f)
+        if (lifetime_timer <= 0.0f)
         {
-            NetworkServer.Destroy(this.gameObject);
+            //NetworkServer.Destroy(this.gameObject);
+            Deactivate();
         }
     }
+
+    [Server]
+    public void Activate()
+    {
+        active = true;
+        gameObject.SetActive(true);
+        ToggleVisibility(true);
+        Debug.Log("Projectile Activated.");
+
+        lifetime_timer = lifetime;
+        SPEED = INITIAL_SPEED;
+    }
+
+    [Server]
+    public void Deactivate()
+    {
+        active = false;
+        gameObject.SetActive(false);
+        ToggleVisibility(false);
+    }
+
+    [ClientRpc]
+    private void ToggleVisibility(bool show)
+    {
+        gameObject.SetActive(show);
+    }
 }
+
+

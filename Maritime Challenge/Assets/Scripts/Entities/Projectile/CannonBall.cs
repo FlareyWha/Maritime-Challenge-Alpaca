@@ -22,14 +22,14 @@ public class CannonBall : BaseProjectile
         velocity = initialDir * SPEED;// (target.transform.position - transform.position).normalized * SPEED;
 
         target.GetComponent<BaseEntity>().OnEntityDied += OnTargetDiedCallback;
-        Show();
+        //Show();
     }
     
-    [ClientRpc]
-    private void Show()
-    {
-        gameObject.SetActive(true);
-    }
+    //[ClientRpc]
+    //private void Show()
+    //{
+    //    gameObject.SetActive(true);
+    //}
 
     public override void FixedUpdate()
     {
@@ -45,8 +45,6 @@ public class CannonBall : BaseProjectile
             transform.rotation = Quaternion.Euler(rot);
         }
 
-
-
     }
 
     private void OnTargetDiedCallback()
@@ -59,12 +57,13 @@ public class CannonBall : BaseProjectile
         if (!isServer)
             return;
 
-        if (collision.gameObject == this.target.gameObject)
+        if (target != null && collision.gameObject == this.target.gameObject)
         {
             Debug.Log("Cannonball Hit Enemy");
             BaseEntity enemy = collision.gameObject.GetComponent<BaseEntity>();
             enemy.TakeDamage(ownerPlayer.ATK, ownerPlayer.gameObject);
-            NetworkServer.Destroy(gameObject);
+            //NetworkServer.Destroy(gameObject);
+            Deactivate();
         }
     }
 

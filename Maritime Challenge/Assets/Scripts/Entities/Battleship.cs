@@ -24,8 +24,8 @@ public class Battleship : NetworkBehaviour
     private Transform TurretHoleRef_Up, TurretHoleRef_Down, TurretHoleRef_Left, TurretHoleRef_Right;
     private SHIPFACING currFacing, prevFacing;
 
-    [SerializeField]
-    private GameObject CannonBallPrefab;
+ //   [SerializeField]
+  //  private GameObject CannonBallPrefab;
 
     private Rigidbody2D rb = null;
     private SpriteRenderer shipSprite = null;
@@ -166,7 +166,7 @@ public class Battleship : NetworkBehaviour
             fire_timer -= Time.deltaTime;
             if (fire_timer <= 0.0f)
             {
-                FireCannon();
+                FireCannon(rb.rotation);
                 fire_timer = FIRE_INTERVAL;
             }
 
@@ -190,9 +190,10 @@ public class Battleship : NetworkBehaviour
         }
     }
 
-    private void FireCannon()
+    private void FireCannon(float theta)
     {
-        LaunchCannonBall(currTarget.gameObject, GetTurretHoleRefPos(), velocity.normalized, PlayerData.activeSubScene);
+        float rad = Mathf.Deg2Rad * theta;
+        LaunchCannonBall(currTarget.gameObject, GetTurretHoleRefPos(), new Vector3(Mathf.Sin(rad), Mathf.Cos(rad), 0), PlayerData.activeSubScene);
     }
 
     private Vector3 GetTurretHoleRefPos()
@@ -215,13 +216,19 @@ public class Battleship : NetworkBehaviour
     [Command]
     private void LaunchCannonBall(GameObject target, Vector3 spawnPos, Vector3 shipDir, string currSceneName)
     {
-        GameObject ball = Instantiate(CannonBallPrefab, spawnPos, Quaternion.identity);
-        SceneManager.Instance.MoveGameObjectToScene(ball, currSceneName);
-        NetworkServer.Spawn(ball);
+        //GameObject ball = Instantiate(CannonBallPrefab, spawnPos, Quaternion.identity);
+        //SceneManager.Instance.MoveGameObjectToScene(ball, currSceneName);
+        //NetworkServer.Spawn(ball);
 
-        CannonBall cannonBall = ball.GetComponent<CannonBall>();
-        cannonBall.Init(target, shipDir, ownerPlayer);
+        //CannonBall cannonBall = ball.GetComponent<CannonBall>();
+        //cannonBall.Init(target, shipDir, ownerPlayer);
 
+        CannonBall ball = ProjectileManager.Instance.GetActiveCannonBall();
+        ball.transform.position = spawnPos;
+        ball.Activate();
+        SceneManager.Instance.MoveGameObjectToScene(ball.gameObject, currSceneName);
+
+        ball.Init(target, shipDir, ownerPlayer);
     }
 
     private void OnTargetDiedCallback()
