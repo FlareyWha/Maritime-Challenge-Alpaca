@@ -45,8 +45,10 @@ public static class PlayerData // Local Player's Data
     public static Dictionary<Cosmetic, bool> CosmeticsList = new Dictionary<Cosmetic, bool>();
     // Stores all the equipped cosmetics
     public static List<Cosmetic> EquippedCosmeticsList = new List<Cosmetic>();
-    // Stores all the equipped cosmetics
+    // Stores all the achievements and whether they are claimed
     public static Dictionary<Achievement, bool> AchievementList = new Dictionary<Achievement, bool>();
+    // Stores all the battleships in the game, and whether you have unlocked them
+    public static Dictionary<Battleship, bool> BattleshipList = new Dictionary<Battleship, bool>();
 
 
     public delegate void PlayerDataUpdated();
