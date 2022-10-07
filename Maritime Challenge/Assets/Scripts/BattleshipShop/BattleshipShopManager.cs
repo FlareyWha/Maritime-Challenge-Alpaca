@@ -78,4 +78,33 @@ public class BattleshipShopManager : MonoBehaviour
     {
         //Update UI to show that battleship has been bought alr
     }
+
+    public void UpdateCurrentBattleship(int battleshipID)
+    {
+        StartCoroutine(DoUpdateCurrentBattleship(battleshipID));
+    }
+
+    IEnumerator DoUpdateCurrentBattleship(int battleshipID)
+    {
+        string url = ServerDataManager.URL_updateCurrentBattleship;
+        Debug.Log(url);
+
+        WWWForm form = new WWWForm();
+        form.AddField("iOwnerUID", PlayerData.UID);
+        form.AddField("iCurrentBattleshipID", battleshipID);
+        using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
+        yield return webreq.SendWebRequest();
+        switch (webreq.result)
+        {
+            case UnityWebRequest.Result.Success:
+                Debug.Log(webreq.downloadHandler.text);
+                break;
+            case UnityWebRequest.Result.ProtocolError:
+                Debug.LogError(webreq.downloadHandler.text);
+                break;
+            default:
+                Debug.LogError("Server error");
+                break;
+        }
+    }
 }

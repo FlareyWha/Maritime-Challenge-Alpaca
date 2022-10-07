@@ -1,0 +1,852 @@
+fileFormatVersion: 2
+guid: f90658f47c7ccc14b950c3255666f9ba
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6687027279588644202
+    second: Idle_Front_Skirt_SpriteSheet_0
+  - first:
+      213: -7502915760478973719
+    second: Idle_Front_Skirt_SpriteSheet_1
+  - first:
+      213: 9010666798554390467
+    second: Idle_Front_Skirt_SpriteSheet_2
+  - first:
+      213: 2662069969074766327
+    second: Idle_Front_Skirt_SpriteSheet_3
+  - first:
+      213: -4642259333311515469
+    second: Idle_Front_Skirt_SpriteSheet_4
+  - first:
+      213: 6236303774364969329
+    second: Idle_Front_Skirt_SpriteSheet_5
+  - first:
+      213: -3727757090168399593
+    second: Idle_Front_Skirt_SpriteSheet_6
+  - first:
+      213: -4138553105873655763
+    second: Idle_Front_Skirt_SpriteSheet_7
+  - first:
+      213: 6250523645993054316
+    second: Idle_Front_Skirt_SpriteSheet_8
+  - first:
+      213: -8114447911124727635
+    second: Idle_Front_Skirt_SpriteSheet_9
+  - first:
+      213: 8046879215111290017
+    second: Idle_Front_Skirt_SpriteSheet_10
+  - first:
+      213: 2925293080637901296
+    second: Idle_Front_Skirt_SpriteSheet_11
+  - first:
+      213: 7683353134561799743
+    second: Idle_Front_Skirt_SpriteSheet_12
+  - first:
+      213: 11472327913269597
+    second: Idle_Front_Skirt_SpriteSheet_13
+  - first:
+      213: -5442926772904628936
+    second: Idle_Front_Skirt_SpriteSheet_14
+  - first:
+      213: -17610033976029448
+    second: Idle_Front_Skirt_SpriteSheet_15
+  - first:
+      213: -7208130127416428841
+    second: Idle_Front_Skirt_SpriteSheet_16
+  - first:
+      213: -7841461142198237136
+    second: Idle_Front_Skirt_SpriteSheet_17
+  - first:
+      213: 88571963501996968
+    second: Idle_Front_Skirt_SpriteSheet_18
+  - first:
+      213: 1750700688962992494
+    second: Idle_Front_Skirt_SpriteSheet_19
+  - first:
+      213: -2838075841717417768
+    second: Idle_Front_Skirt_SpriteSheet_20
+  - first:
+      213: 5268116664083287382
+    second: Idle_Front_Skirt_SpriteSheet_21
+  - first:
+      213: 7994347208337559748
+    second: Idle_Front_Skirt_SpriteSheet_22
+  - first:
+      213: 3410921767848985009
+    second: Idle_Front_Skirt_SpriteSheet_23
+  - first:
+      213: -259084664211013262
+    second: Idle_Front_Skirt_SpriteSheet_24
+  - first:
+      213: -7276017551753162072
+    second: Idle_Front_Skirt_SpriteSheet_25
+  - first:
+      213: -7821636959086821790
+    second: Idle_Front_Skirt_SpriteSheet_26
+  - first:
+      213: -5298028741778773917
+    second: Idle_Front_Skirt_SpriteSheet_27
+  - first:
+      213: -5456033360345534926
+    second: Idle_Front_Skirt_SpriteSheet_28
+  - first:
+      213: 4579141552366146366
+    second: Idle_Front_Skirt_SpriteSheet_29
+  - first:
+      213: -7291663498975771230
+    second: Idle_Front_Skirt_SpriteSheet_30
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Idle_Front_Skirt_SpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1648
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a655a33a1e71dcc50800000000000000
+      internalID: 6687027279588644202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Front_Skirt_SpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1648
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e098f43ed940e790800000000000000
+      internalID: -7502915760478973719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Front_Skirt_SpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1648
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cf9d3576b15c0d70800000000000000
+      internalID: 9010666798554390467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Front_Skirt_SpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1648
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f1cfe9588291f420800000000000000
+      internalID: 2662069969074766327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Front_Skirt_SpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1648
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b4b9ba6bb1639fb0800000000000000
+      internalID: -4642259333311515469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Front_Skirt_SpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1648
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 179a37ecd3dcb8650800000000000000
+      internalID: 6236303774364969329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Front_Skirt_SpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1648
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 719919f4da8544cc0800000000000000
+      internalID: -3727757090168399593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Front_Skirt_SpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1648
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d28af4090e7e096c0800000000000000
+      internalID: -4138553105873655763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Front_Skirt_SpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1248
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c60789ba3225eb650800000000000000
+      internalID: 6250523645993054316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Front_Skirt_SpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1248
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da80005fd90b36f80800000000000000
+      internalID: -8114447911124727635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Front_Skirt_SpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1248
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1acbe2f03024caf60800000000000000
+      internalID: 8046879215111290017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Front_Skirt_SpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1248
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f98457de8ab89820800000000000000
+      internalID: 2925293080637901296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Front_Skirt_SpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1248
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3ea07db7f0c0aa60800000000000000
+      internalID: 7683353134561799743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Front_Skirt_SpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1248
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d59640e7502c82000800000000000000
+      internalID: 11472327913269597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Front_Skirt_SpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1248
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83d6e8a10f6d674b0800000000000000
+      internalID: -5442926772904628936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Front_Skirt_SpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1248
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fe406474cf61cff0800000000000000
+      internalID: -17610033976029448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Front_Skirt_SpriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 848
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d67d84e6d397fb90800000000000000
+      internalID: -7208130127416428841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Front_Skirt_SpriteSheet_17
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 848
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 038ce3313a88d2390800000000000000
+      internalID: -7841461142198237136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Front_Skirt_SpriteSheet_18
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 848
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ab68954bbbaa3100800000000000000
+      internalID: 88571963501996968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Front_Skirt_SpriteSheet_19
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 848
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e69bba1400dbb4810800000000000000
+      internalID: 1750700688962992494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Front_Skirt_SpriteSheet_20
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 848
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d8c0d80f012d98d0800000000000000
+      internalID: -2838075841717417768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Front_Skirt_SpriteSheet_21
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 848
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65d000eb13c1c1940800000000000000
+      internalID: 5268116664083287382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Front_Skirt_SpriteSheet_22
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 848
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c0981c1e60a1fe60800000000000000
+      internalID: 7994347208337559748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Front_Skirt_SpriteSheet_23
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 848
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b14949a647065f20800000000000000
+      internalID: 3410921767848985009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Front_Skirt_SpriteSheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 448
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27183fededb876cf0800000000000000
+      internalID: -259084664211013262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Front_Skirt_SpriteSheet_25
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 448
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a2de303694660b90800000000000000
+      internalID: -7276017551753162072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Front_Skirt_SpriteSheet_26
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 448
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26e309360a6f37390800000000000000
+      internalID: -7821636959086821790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Front_Skirt_SpriteSheet_27
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 448
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3686774fdee9976b0800000000000000
+      internalID: -5298028741778773917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Front_Skirt_SpriteSheet_28
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 448
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23e6ce9e0964844b0800000000000000
+      internalID: -5456033360345534926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Front_Skirt_SpriteSheet_29
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 448
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e33d3050bf06c8f30800000000000000
+      internalID: 4579141552366146366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Front_Skirt_SpriteSheet_30
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 448
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a50ed93eaececa90800000000000000
+      internalID: -7291663498975771230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

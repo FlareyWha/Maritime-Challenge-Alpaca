@@ -1,0 +1,852 @@
+fileFormatVersion: 2
+guid: 1095bd29d96eae64db661d3c2f0ee81b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5238467369676640051
+    second: Sprite_Front_Idle_Shoes_SpriteSheet_0
+  - first:
+      213: -2617467033401033922
+    second: Sprite_Front_Idle_Shoes_SpriteSheet_1
+  - first:
+      213: -4029454707561214310
+    second: Sprite_Front_Idle_Shoes_SpriteSheet_2
+  - first:
+      213: -4811548874591239263
+    second: Sprite_Front_Idle_Shoes_SpriteSheet_3
+  - first:
+      213: -6299912579160996214
+    second: Sprite_Front_Idle_Shoes_SpriteSheet_4
+  - first:
+      213: 4499440873619982731
+    second: Sprite_Front_Idle_Shoes_SpriteSheet_5
+  - first:
+      213: -8372117216574424894
+    second: Sprite_Front_Idle_Shoes_SpriteSheet_6
+  - first:
+      213: 7776304611419835670
+    second: Sprite_Front_Idle_Shoes_SpriteSheet_7
+  - first:
+      213: -1177524053524086117
+    second: Sprite_Front_Idle_Shoes_SpriteSheet_8
+  - first:
+      213: -5326620663940309594
+    second: Sprite_Front_Idle_Shoes_SpriteSheet_9
+  - first:
+      213: -6545647603825607796
+    second: Sprite_Front_Idle_Shoes_SpriteSheet_10
+  - first:
+      213: 8572352752448809605
+    second: Sprite_Front_Idle_Shoes_SpriteSheet_11
+  - first:
+      213: 3273752893376811538
+    second: Sprite_Front_Idle_Shoes_SpriteSheet_12
+  - first:
+      213: -767158753997940511
+    second: Sprite_Front_Idle_Shoes_SpriteSheet_13
+  - first:
+      213: -2703861234583032260
+    second: Sprite_Front_Idle_Shoes_SpriteSheet_14
+  - first:
+      213: 2826507660978277129
+    second: Sprite_Front_Idle_Shoes_SpriteSheet_15
+  - first:
+      213: 6942592301689632429
+    second: Sprite_Front_Idle_Shoes_SpriteSheet_16
+  - first:
+      213: 3714700620065348015
+    second: Sprite_Front_Idle_Shoes_SpriteSheet_17
+  - first:
+      213: 8785463299537722932
+    second: Sprite_Front_Idle_Shoes_SpriteSheet_18
+  - first:
+      213: 508683533738728449
+    second: Sprite_Front_Idle_Shoes_SpriteSheet_19
+  - first:
+      213: -284423565822029508
+    second: Sprite_Front_Idle_Shoes_SpriteSheet_20
+  - first:
+      213: 5388873805864503000
+    second: Sprite_Front_Idle_Shoes_SpriteSheet_21
+  - first:
+      213: 5333890519296277409
+    second: Sprite_Front_Idle_Shoes_SpriteSheet_22
+  - first:
+      213: 6317320290258925826
+    second: Sprite_Front_Idle_Shoes_SpriteSheet_23
+  - first:
+      213: 7559738377252461932
+    second: Sprite_Front_Idle_Shoes_SpriteSheet_24
+  - first:
+      213: -85920232576064180
+    second: Sprite_Front_Idle_Shoes_SpriteSheet_25
+  - first:
+      213: -2616218184793888810
+    second: Sprite_Front_Idle_Shoes_SpriteSheet_26
+  - first:
+      213: 6840944263070327101
+    second: Sprite_Front_Idle_Shoes_SpriteSheet_27
+  - first:
+      213: 344641824432750284
+    second: Sprite_Front_Idle_Shoes_SpriteSheet_28
+  - first:
+      213: -8793472171163325037
+    second: Sprite_Front_Idle_Shoes_SpriteSheet_29
+  - first:
+      213: -3140514481885984893
+    second: Sprite_Front_Idle_Shoes_SpriteSheet_30
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Sprite_Front_Idle_Shoes_SpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1648
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33f0d017156c2b840800000000000000
+      internalID: 5238467369676640051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Front_Idle_Shoes_SpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1648
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3bf5ded993ecabd0800000000000000
+      internalID: -2617467033401033922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Front_Idle_Shoes_SpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1648
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9ec94dda408418c0800000000000000
+      internalID: -4029454707561214310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Front_Idle_Shoes_SpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1648
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a30f8e8ac1f93db0800000000000000
+      internalID: -4811548874591239263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Front_Idle_Shoes_SpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1648
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a86081b33e63298a0800000000000000
+      internalID: -6299912579160996214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Front_Idle_Shoes_SpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1648
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b890effa2a9317e30800000000000000
+      internalID: 4499440873619982731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Front_Idle_Shoes_SpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1648
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c83628bfb340db80800000000000000
+      internalID: -8372117216574424894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Front_Idle_Shoes_SpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1648
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61d49ece7dbfaeb60800000000000000
+      internalID: 7776304611419835670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Front_Idle_Shoes_SpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1248
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b920833bc1898afe0800000000000000
+      internalID: -1177524053524086117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Front_Idle_Shoes_SpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1248
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ad15905aba0416b0800000000000000
+      internalID: -5326620663940309594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Front_Idle_Shoes_SpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1248
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8b76154f203925a0800000000000000
+      internalID: -6545647603825607796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Front_Idle_Shoes_SpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1248
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58aad0bf86d17f670800000000000000
+      internalID: 8572352752448809605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Front_Idle_Shoes_SpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1248
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 212d12459e4be6d20800000000000000
+      internalID: 3273752893376811538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Front_Idle_Shoes_SpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1248
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e81f958d218a55f0800000000000000
+      internalID: -767158753997940511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Front_Idle_Shoes_SpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1248
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3eaab66884f97ad0800000000000000
+      internalID: -2703861234583032260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Front_Idle_Shoes_SpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1248
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90bc78ffdb5c93720800000000000000
+      internalID: 2826507660978277129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Front_Idle_Shoes_SpriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 848
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da6729a3aea095060800000000000000
+      internalID: 6942592301689632429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Front_Idle_Shoes_SpriteSheet_17
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 848
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa91be958844d8330800000000000000
+      internalID: 3714700620065348015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Front_Idle_Shoes_SpriteSheet_18
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 848
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43e5d24d25c3ce970800000000000000
+      internalID: 8785463299537722932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Front_Idle_Shoes_SpriteSheet_19
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 848
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10c56939af43f0700800000000000000
+      internalID: 508683533738728449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Front_Idle_Shoes_SpriteSheet_20
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 848
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c319d6916468d0cf0800000000000000
+      internalID: -284423565822029508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Front_Idle_Shoes_SpriteSheet_21
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 848
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d606f9cc2029ca40800000000000000
+      internalID: 5388873805864503000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Front_Idle_Shoes_SpriteSheet_22
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 848
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ab7a79ca29c50a40800000000000000
+      internalID: 5333890519296277409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Front_Idle_Shoes_SpriteSheet_23
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 848
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20930495551aba750800000000000000
+      internalID: 6317320290258925826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Front_Idle_Shoes_SpriteSheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 448
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6d550b300699e860800000000000000
+      internalID: 7559738377252461932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Front_Idle_Shoes_SpriteSheet_25
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 448
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c45e842f000cecef0800000000000000
+      internalID: -85920232576064180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Front_Idle_Shoes_SpriteSheet_26
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 448
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d761781c6351bbd0800000000000000
+      internalID: -2616218184793888810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Front_Idle_Shoes_SpriteSheet_27
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 448
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d31ad88ff8aefee50800000000000000
+      internalID: 6840944263070327101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Front_Idle_Shoes_SpriteSheet_28
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 448
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cce7e00d9e968c400800000000000000
+      internalID: 344641824432750284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Front_Idle_Shoes_SpriteSheet_29
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 448
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39de68f66af47f580800000000000000
+      internalID: -8793472171163325037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Front_Idle_Shoes_SpriteSheet_30
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 448
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3874737c7b6aa64d0800000000000000
+      internalID: -3140514481885984893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

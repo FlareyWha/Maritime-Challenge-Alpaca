@@ -35,14 +35,14 @@ public class JSONDeseralizer : MonoBehaviour
         JSONPlayerStats jsonPlayerStats = playerStatsList.playerStats[0];
 
         //Set all the info needed
-        PlayerData.PlayerStats.EnemiesDefeated = jsonPlayerStats.iEnemiesDefeated;
-        PlayerData.PlayerStats.BossesDefeated = jsonPlayerStats.iBossesDefeated;
-        PlayerData.PlayerStats.FriendsAdded = jsonPlayerStats.iFriendsAdded;
-        PlayerData.PlayerStats.RightshipediaEntriesUnlocked = jsonPlayerStats.iRightshipediaEntriesUnlocked;
-        PlayerData.PlayerStats.BattleshipsOwned = jsonPlayerStats.iBattleshipsOwned;
-        PlayerData.PlayerStats.CosmeticsOwned = jsonPlayerStats.iCosmeticsOwned;
-        PlayerData.PlayerStats.TitlesUnlocked = jsonPlayerStats.iTitlesUnlocked;
-        PlayerData.PlayerStats.AchievementsCompleted = jsonPlayerStats.iAchievementsCompleted;
+        PlayerData.PlayerStats.PlayerStat[(int)PLAYER_STAT.ENEMIES_DEFEATED] = jsonPlayerStats.iEnemiesDefeated;
+        PlayerData.PlayerStats.PlayerStat[(int)PLAYER_STAT.BOSSES_DEFEATED] = jsonPlayerStats.iBossesDefeated;
+        PlayerData.PlayerStats.PlayerStat[(int)PLAYER_STAT.FRIENDS_ADDED] = jsonPlayerStats.iFriendsAdded;
+        PlayerData.PlayerStats.PlayerStat[(int)PLAYER_STAT.RIGHTSHIPEDIA_ENTRIES_UNLOCKED] = jsonPlayerStats.iRightshipediaEntriesUnlocked;
+        PlayerData.PlayerStats.PlayerStat[(int)PLAYER_STAT.BATTLESHIPS_OWNED] = jsonPlayerStats.iBattleshipsOwned;
+        PlayerData.PlayerStats.PlayerStat[(int)PLAYER_STAT.COSMETICS_OWNED] = jsonPlayerStats.iCosmeticsOwned;
+        PlayerData.PlayerStats.PlayerStat[(int)PLAYER_STAT.TITLES_UNLOCKED] = jsonPlayerStats.iTitlesUnlocked;
+        PlayerData.PlayerStats.PlayerStat[(int)PLAYER_STAT.ACHIEVEMENTS_COMPLETED] = jsonPlayerStats.iAchievementsCompleted;
     }
 
     public static void DeseralizeFriends(string friendsJSON)
