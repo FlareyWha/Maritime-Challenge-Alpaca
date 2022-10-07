@@ -38,6 +38,17 @@ public class AchievementsUI : MonoBehaviour
         UpdateUI(achvment, currProg, maxProg);
     }
 
+    public void SetCompleted(Achievement achvment)
+    {
+        // Set Background+Title
+        BackgroundImage.sprite = achvment.AchievementData.BackgroundSprite;
+        // Star Icons
+        for (int i = 0; i < achvment.AchievementData.Tier - 1; i++)
+        {
+            StarsImage[i].sprite = FilledStarSprite;
+        }
+
+    }
     private void UpdateUI(Achievement achvment, int currProg, int maxProg)
     {
         // Set Background+Title

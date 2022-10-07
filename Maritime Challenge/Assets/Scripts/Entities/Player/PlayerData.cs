@@ -161,6 +161,11 @@ public static class PlayerData // Local Player's Data
         OnPlayerDataUpdated?.Invoke();
     }
 
+    public static void InvokePlayerStatsUpdated()
+    {
+        OnPlayerStatsUpdated.Invoke();
+    }
+
 }
 
 public class BasicInfo
