@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
 
-public class TitlesUIManager : MonoBehaviour
+public class TitlesUIManager : MonoBehaviourSingleton<TitlesUIManager>
 {
     [SerializeField]
     private GameObject TitleUIPrefab;
@@ -22,7 +22,7 @@ public class TitlesUIManager : MonoBehaviour
         UpdateTitlesRect();
     }
 
-    private void UpdateTitlesRect()
+    public void UpdateTitlesRect()
     {
         foreach (Transform child in TitlesRect)
         {
