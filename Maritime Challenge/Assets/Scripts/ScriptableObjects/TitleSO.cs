@@ -7,5 +7,4 @@ public class TitleSO : ScriptableObject
     public int ID;
     public string Name;
     public Sprite TitleSprite;
-    public Sprite AchievementBackgroundSprite;
 }

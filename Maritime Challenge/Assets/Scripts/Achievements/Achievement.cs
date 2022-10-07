@@ -7,17 +7,29 @@ public class Achievement
     public int AchievementID;
     public string AchievementName;
     public string AchievementDescription;
-    public int AchievementTier;
-    public int AchievementRequirementMaxNumber;
+   // public int AchievementTier;
+   // public int AchievementRequirementMaxNumber
     public int EarnedTitleID;
+
+    public AchievementSO AchievementData;
 
     public Achievement(int ID, string name, string description, int tier, int requirementMaxNumber, int titleID)
     {
         AchievementID = ID;
         AchievementName = name;
         AchievementDescription = description;
-        AchievementTier = tier;
-        AchievementRequirementMaxNumber = requirementMaxNumber;
+       // AchievementTier = tier;
+      //  AchievementRequirementMaxNumber = requirementMaxNumber;
         EarnedTitleID = titleID;
     }
+}
+
+
+public enum AchievementType
+{
+    Friends,
+    RightShipeida,
+    BattleshipsOwned,
+
+    NumTotal
 }

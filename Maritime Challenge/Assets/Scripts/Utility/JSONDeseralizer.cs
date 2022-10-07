@@ -35,14 +35,14 @@ public class JSONDeseralizer : MonoBehaviour
         JSONPlayerStats jsonPlayerStats = playerStatsList.playerStats[0];
 
         //Set all the info needed
-        PlayerData.PlayerStats.EnemiesDefeated = jsonPlayerStats.iEnemiesDefeated;
-        PlayerData.PlayerStats.BossesDefeated = jsonPlayerStats.iBossesDefeated;
-        PlayerData.PlayerStats.FriendsAdded = jsonPlayerStats.iFriendsAdded;
-        PlayerData.PlayerStats.RightshipediaEntriesUnlocked = jsonPlayerStats.iRightshipediaEntriesUnlocked;
-        PlayerData.PlayerStats.BattleshipsOwned = jsonPlayerStats.iBattleshipsOwned;
-        PlayerData.PlayerStats.CosmeticsOwned = jsonPlayerStats.iCosmeticsOwned;
-        PlayerData.PlayerStats.TitlesUnlocked = jsonPlayerStats.iTitlesUnlocked;
-        PlayerData.PlayerStats.AchievementsCompleted = jsonPlayerStats.iAchievementsCompleted;
+        PlayerStats.EnemiesDefeated = jsonPlayerStats.iEnemiesDefeated;
+        PlayerStats.BossesDefeated = jsonPlayerStats.iBossesDefeated;
+        PlayerStats.FriendsAdded = jsonPlayerStats.iFriendsAdded;
+        PlayerStats.RightshipediaEntriesUnlocked = jsonPlayerStats.iRightshipediaEntriesUnlocked;
+        PlayerStats.BattleshipsOwned = jsonPlayerStats.iBattleshipsOwned;
+        PlayerStats.CosmeticsOwned = jsonPlayerStats.iCosmeticsOwned;
+        PlayerStats.TitlesUnlocked = jsonPlayerStats.iTitlesUnlocked;
+        PlayerStats.AchievementsCompleted = jsonPlayerStats.iAchievementsCompleted;
     }
 
     public static void DeseralizeFriends(string friendsJSON)
