@@ -1,0 +1,612 @@
+fileFormatVersion: 2
+guid: 0ff665189ed12c2419698df4c435141e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7806668144784411619
+    second: Idle_Side_Hair_SpriteSheet_R_0
+  - first:
+      213: -1616709432905324723
+    second: Idle_Side_Hair_SpriteSheet_R_1
+  - first:
+      213: -4146782050490072409
+    second: Idle_Side_Hair_SpriteSheet_R_2
+  - first:
+      213: 7823703793871847644
+    second: Idle_Side_Hair_SpriteSheet_R_3
+  - first:
+      213: 968696782016169328
+    second: Idle_Side_Hair_SpriteSheet_R_4
+  - first:
+      213: 2229997187773883582
+    second: Idle_Side_Hair_SpriteSheet_R_5
+  - first:
+      213: -6757269258483688735
+    second: Idle_Side_Hair_SpriteSheet_R_6
+  - first:
+      213: -8870239338797442997
+    second: Idle_Side_Hair_SpriteSheet_R_7
+  - first:
+      213: -2837816878105886406
+    second: Idle_Side_Hair_SpriteSheet_R_8
+  - first:
+      213: -5391702410362193092
+    second: Idle_Side_Hair_SpriteSheet_R_9
+  - first:
+      213: -3821680503553342748
+    second: Idle_Side_Hair_SpriteSheet_R_10
+  - first:
+      213: -4281642145075767343
+    second: Idle_Side_Hair_SpriteSheet_R_11
+  - first:
+      213: 9015161881472204610
+    second: Idle_Side_Hair_SpriteSheet_R_12
+  - first:
+      213: 1178714020394650388
+    second: Idle_Side_Hair_SpriteSheet_R_13
+  - first:
+      213: 900203202601632656
+    second: Idle_Side_Hair_SpriteSheet_R_14
+  - first:
+      213: -7107195918342110064
+    second: Idle_Side_Hair_SpriteSheet_R_15
+  - first:
+      213: 3685708722235502708
+    second: Idle_Side_Hair_SpriteSheet_R_16
+  - first:
+      213: -8756307839538812058
+    second: Idle_Side_Hair_SpriteSheet_R_17
+  - first:
+      213: 612951055632169117
+    second: Idle_Side_Hair_SpriteSheet_R_18
+  - first:
+      213: 8681410509018626632
+    second: Idle_Side_Hair_SpriteSheet_R_19
+  - first:
+      213: 3749123138283699769
+    second: Idle_Side_Hair_SpriteSheet_R_20
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Idle_Side_Hair_SpriteSheet_R_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1598
+        width: 256
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3eb8b31f05bd65c60800000000000000
+      internalID: 7806668144784411619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Side_Hair_SpriteSheet_R_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1598
+        width: 256
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d47a7a2265b4099e0800000000000000
+      internalID: -1616709432905324723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Side_Hair_SpriteSheet_R_2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1598
+        width: 256
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a2c29712bba376c0800000000000000
+      internalID: -4146782050490072409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Side_Hair_SpriteSheet_R_3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1598
+        width: 256
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd08b951621639c60800000000000000
+      internalID: 7823703793871847644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Side_Hair_SpriteSheet_R_4
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1598
+        width: 256
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07543234790817d00800000000000000
+      internalID: 968696782016169328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Side_Hair_SpriteSheet_R_5
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1598
+        width: 256
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb4e16390aa82fe10800000000000000
+      internalID: 2229997187773883582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Side_Hair_SpriteSheet_R_6
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1598
+        width: 256
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ea9964396b5932a0800000000000000
+      internalID: -6757269258483688735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Side_Hair_SpriteSheet_R_7
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1598
+        width: 256
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b485842615496e480800000000000000
+      internalID: -8870239338797442997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Side_Hair_SpriteSheet_R_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1148
+        width: 256
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3104e2b59c0e98d0800000000000000
+      internalID: -2837816878105886406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Side_Hair_SpriteSheet_R_9
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1148
+        width: 256
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3b7eb76933dc25b0800000000000000
+      internalID: -5391702410362193092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Side_Hair_SpriteSheet_R_10
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1148
+        width: 256
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e2caa484d9a6fac0800000000000000
+      internalID: -3821680503553342748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Side_Hair_SpriteSheet_R_11
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1148
+        width: 256
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d7da67772d8494c0800000000000000
+      internalID: -4281642145075767343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Side_Hair_SpriteSheet_R_12
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1148
+        width: 256
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24ffac187f94c1d70800000000000000
+      internalID: 9015161881472204610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Side_Hair_SpriteSheet_R_13
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1148
+        width: 256
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41b456d0822ab5010800000000000000
+      internalID: 1178714020394650388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Side_Hair_SpriteSheet_R_14
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1148
+        width: 256
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0934db41b0a2e7c00800000000000000
+      internalID: 900203202601632656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Side_Hair_SpriteSheet_R_15
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1148
+        width: 256
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 094cc12c7fa2e5d90800000000000000
+      internalID: -7107195918342110064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Side_Hair_SpriteSheet_R_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 698
+        width: 256
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 470f76e1e84462330800000000000000
+      internalID: 3685708722235502708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Side_Hair_SpriteSheet_R_17
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 698
+        width: 256
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66b2250b9685b7680800000000000000
+      internalID: -8756307839538812058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Side_Hair_SpriteSheet_R_18
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 698
+        width: 256
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d98f7afccb3a18800800000000000000
+      internalID: 612951055632169117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Side_Hair_SpriteSheet_R_19
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 698
+        width: 256
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84af563acd09a7870800000000000000
+      internalID: 8681410509018626632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Side_Hair_SpriteSheet_R_20
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 698
+        width: 256
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93ef89c61af870430800000000000000
+      internalID: 3749123138283699769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
