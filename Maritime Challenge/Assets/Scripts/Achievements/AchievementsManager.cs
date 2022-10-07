@@ -31,7 +31,7 @@ public class AchievementsManager : MonoBehaviour
         {
             if (achievement.Key.AchievementID == achievementID)
             {
-                UpdateAchievementUI(progressNumber >= achievement.Key.AchievementRequirementMaxNumber);
+                //UpdateAchievementUI(progressNumber >= achievement.Key.AchievementRequirementMaxNumber);
             }
         }
     }
