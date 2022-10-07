@@ -19,6 +19,13 @@ public class AchievementsManager : MonoBehaviour
 
     void Awake()
     {
+        // Init AchievementStatus Array
+        for (int i = 0; i < achievements.Length; i++)
+        {
+            achievements[i] = new AchievementStatus();
+        }
+
+        // Link Achievement Scriptable Object to Achievement Class from database
         foreach (KeyValuePair<Achievement, bool> achvment in PlayerData.AchievementList)
         {
             achvment.Key.AchievementData = FindTitleByID(achvment.Key.AchievementID);
@@ -36,23 +43,31 @@ public class AchievementsManager : MonoBehaviour
     }
     private void Start()
     {
-        SetAchievements();
+        PlayerData.OnPlayerStatsUpdated += CheckAchievementUnlocked;
 
-        InitAchievementsRect();
+        SetAchievementsStatus();
+        UpdateAchievementsRect();
     }
 
-    private void SetAchievements()
+    private void SetAchievementsStatus()
     {
         foreach (KeyValuePair<Achievement, bool> achievement in PlayerData.AchievementList)
         {
             AchievementSO data = achievement.Key.AchievementData;
-            achievements[(int)data.Type].achievementsList[data.Tier] = achievement.Key;
+            achievements[(int)data.Type].achievementsList[data.Tier - 1] = achievement.Key;
             if (achievement.Value)
                 achievements[(int)data.Type].CheckCurrentTierByUnlocked(data.Tier);
         }
     }
-    private void InitAchievementsRect()
+    private void UpdateAchievementsRect()
     {
+        // Clear Rect
+        foreach (Transform child in AchievementsRect)
+        {
+            Destroy(child.gameObject);
+        }
+
+        // Init Rect
         foreach (AchievementStatus achievementStat in achievements)
         {
             Achievement achievement = achievementStat.GetCurrentAchievement();
@@ -75,64 +90,58 @@ public class AchievementsManager : MonoBehaviour
                 return 0;
         }
     }
-    public void CheckAchievementUnlocked(int achievementID, int progressNumber)
+
+    public void CheckAchievementUnlocked() // Call Whenever PlayerStats is Updated
     {
-        foreach (KeyValuePair<Achievement, bool> achievement in PlayerData.AchievementList)
-        {
-            if (achievement.Key.AchievementID == achievementID)
-            {
-                UpdateAchievementUI(progressNumber >= achievement.Key.AchievementData.RequirementNum);
-            }
-        }
+        //SetAchievementsStatus();
+        UpdateAchievementsRect();
     }
 
-    void UpdateAchievementUI(bool unlocked)
-    {
-        if (unlocked)
-        {
-
-        }
-        else
-        {
-
-        }
-    }
-
+   
     public void ClaimAchievement(Achievement achievement)
     {
-        StartCoroutine(DoClaimAchievement(achievement.AchievementID));
+        Debug.Log("Achievement Manager: Claiming Achievement.." + achievement.AchievementName);
+        StartCoroutine(DoClaimAchievement(achievement));
         //Achievement achievement = GetAchievement(achievementID);
 
         PlayerData.AchievementList[achievement] = true;
         int earnedTitleID = achievement.EarnedTitleID;
 
-        if (earnedTitleID != -1)
+        if (earnedTitleID == -1)
         {
-            foreach (KeyValuePair<Title, bool> title in PlayerData.TitleDictionary)
+            Debug.Log("Title ID was -1! Cannot Earn/Unlock");
+            return;
+        }
+
+        // Unlock Title
+        foreach (KeyValuePair<Title, bool> title in PlayerData.TitleDictionary)
+        {
+            if (title.Key.TitleID == earnedTitleID)
             {
-                if (title.Key.TitleID == earnedTitleID)
-                {
-                    StartCoroutine(UnlockTitle(achievement.EarnedTitleID));
-                    PlayerData.TitleDictionary[title.Key] = true;
-                    break;
-                }
+                StartCoroutine(UnlockTitle(achievement.EarnedTitleID));
+                PlayerData.TitleDictionary[title.Key] = true;
+                break;
             }
         }
+
     }
 
-    IEnumerator DoClaimAchievement(int achievementID)
+    IEnumerator DoClaimAchievement(Achievement achvment)
     {
         string url = ServerDataManager.URL_updateAchievementClaimed;
         Debug.Log(url);
 
         WWWForm form = new WWWForm();
         form.AddField("iOwnerUID", PlayerData.UID);
-        form.AddField("iAchievementID", achievementID);
+        form.AddField("iAchievementID", achvment.AchievementID);
         using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
         yield return webreq.SendWebRequest();
         switch (webreq.result)
         {
             case UnityWebRequest.Result.Success:
+                PlayerData.SetAchievementClaimed(achvment);
+                SetAchievementsStatus();
+                UpdateAchievementsRect();
                 Debug.Log(webreq.downloadHandler.text);
                 break;
             case UnityWebRequest.Result.ProtocolError:
@@ -184,10 +193,10 @@ public class AchievementsManager : MonoBehaviour
 
 public class AchievementStatus
 {
-    public Achievement[] achievementsList;
+    public Achievement[] achievementsList = new Achievement[MaxTier];
     private int currTier = 1;
 
-    private int MaxTier = 3;
+    private const int MaxTier = 3;
 
 
     public void CheckCurrentTierByUnlocked(int unlocked_tier)

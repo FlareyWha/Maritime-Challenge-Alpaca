@@ -54,6 +54,9 @@ public static class PlayerData // Local Player's Data
     public delegate void PlayerDataUpdated();
     public static event PlayerDataUpdated OnPlayerDataUpdated;
 
+    public delegate void PlayerStatsUpdated();
+    public static event PlayerStatsUpdated OnPlayerStatsUpdated;
+
     public static string GetCountryName(int id)
     {
         switch (id)
@@ -142,7 +145,10 @@ public static class PlayerData // Local Player's Data
         ReceivedFriendRequestList.Clear();
     }
 
-
+    public static void SetAchievementClaimed(Achievement achvment)
+    {
+        AchievementList[achvment] = true;
+    }
     public static void SetUsername(string name)
     {
         Name = name;

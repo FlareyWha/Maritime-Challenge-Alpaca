@@ -15,7 +15,8 @@ public class AchievementsUI : MonoBehaviour
 
     [SerializeField]
     private Text TitleText, DescText;
-
+    [SerializeField]
+    private Image BackgroundImage;
     [SerializeField]
     private Image ProgressFill;
     [SerializeField]
@@ -32,9 +33,33 @@ public class AchievementsUI : MonoBehaviour
 
     public void Init(Achievement achvment, int currProg, int maxProg, Action<Achievement> action)
     {
+        achievement = achvment;
+        onSelectAction = action;
+        UpdateUI(achvment, currProg, maxProg);
+    }
+
+    private void UpdateUI(Achievement achvment, int currProg, int maxProg)
+    {
+        // Set Background+Title
+        BackgroundImage.sprite = achvment.AchievementData.BackgroundSprite;
+
         // Set Achievement Text
         TitleText.text = achvment.AchievementName;
         DescText.text = achvment.AchievementDescription;
+
+        // Set Progress
+        bool requirementMet = currProg >= maxProg;
+        ProgressFill.fillAmount = (float)currProg / maxProg;
+        if (requirementMet)
+        {
+            ProgressText.text = "COMPLETED!";
+        }
+        else
+        {
+            ProgressText.text = currProg + "/" + maxProg;
+        }
+
+        button.interactable = requirementMet;
 
         // Star Icons
         for (int i = 0; i < achvment.AchievementData.Tier - 1; i++)
@@ -43,9 +68,11 @@ public class AchievementsUI : MonoBehaviour
         }
     }
 
+
     private void OnAchievementUIClicked()
     {
         onSelectAction?.Invoke(achievement);
+        Debug.Log("Achievement Claim Clicked");
     }
 
 }

@@ -785,7 +785,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -818,6 +818,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 6362058043959109794}
   FilledStarSprite: {fileID: 21300000, guid: 41ef303656053674c81be001d7b1d7ec, type: 3}
-  StarsImage: []
+  StarsImage:
+  - {fileID: 3490075261462299126}
+  - {fileID: 3490075262709461875}
+  - {fileID: 3490075263163218768}
+  TitleText: {fileID: 3490075262024678955}
+  DescText: {fileID: 3490075262885971845}
+  BackgroundImage: {fileID: 3490075263169380756}
   ProgressFill: {fileID: 3490075262092004713}
   ProgressText: {fileID: 3490075262606116639}
