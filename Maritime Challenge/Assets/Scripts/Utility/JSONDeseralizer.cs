@@ -199,7 +199,7 @@ public class JSONDeseralizer : MonoBehaviour
 
         foreach (JSONAchievementData achievementData in achievementDataList.achievementData)
         {
-            Achievement title = new Achievement(achievementData.iAchievementID, achievementData.sAchievementName, achievementData.sAchievementDescription, achievementData.iAchievementTier, achievementData.iAchievementRequirementMaxNumber, achievementData.iEarnedTitleID);
+            Achievement title = new Achievement(achievementData.iAchievementID, achievementData.sAchievementName, achievementData.sAchievementDescription, achievementData.iEarnedTitleID);
 
             achievementDataDictionary.Add(title, achievementData.bAchievementClaimed);
         }
