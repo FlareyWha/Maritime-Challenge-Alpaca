@@ -79,7 +79,7 @@ public class BattleshipShopManager : MonoBehaviour
         //Update UI to show that battleship has been bought alr
     }
 
-    void UpdateCurrentBattleship(int battleshipID)
+    public void UpdateCurrentBattleship(int battleshipID)
     {
         StartCoroutine(DoUpdateCurrentBattleship(battleshipID));
     }
