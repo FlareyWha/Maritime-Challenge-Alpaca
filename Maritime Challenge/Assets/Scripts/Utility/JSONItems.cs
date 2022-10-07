@@ -226,3 +226,23 @@ public class JSONAchievementDataList
 {
     public List<JSONAchievementData> achievementData = new List<JSONAchievementData>();
 }
+
+[Serializable]
+public class JSONBattleshipData
+{
+    public int iBattleshipID;
+    public string sBattleshipName;
+    public int iHP;
+    public int iAtk;
+    public int fAtkSpd;
+    public int fCritRate;
+    public int fCritDmg;
+    public int fMoveSpd;
+    public bool bBattleshipUnlocked;
+}
+
+[Serializable]
+public class JSONBattleshipDataList
+{
+    public List<JSONBattleshipData> battleshipData = new List<JSONBattleshipData>();
+}

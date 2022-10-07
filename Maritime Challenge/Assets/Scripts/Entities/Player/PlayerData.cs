@@ -48,7 +48,7 @@ public static class PlayerData // Local Player's Data
     // Stores all the achievements and whether they are claimed
     public static Dictionary<Achievement, bool> AchievementList = new Dictionary<Achievement, bool>();
     // Stores all the battleships in the game, and whether you have unlocked them
-    public static Dictionary<Battleship, bool> BattleshipList = new Dictionary<Battleship, bool>();
+    public static Dictionary<BattleshipInfo, bool> BattleshipList = new Dictionary<BattleshipInfo, bool>();
 
 
     public delegate void PlayerDataUpdated();

@@ -346,3 +346,26 @@ enum SHIPFACING
     NUM_TOTAL
 }
 
+public struct BattleshipInfo
+{
+    public int BattleshipID;
+    public string BattleshipName;
+    public int HP;
+    public int Atk;
+    public float AtkSpd;
+    public float CritRate;
+    public float CritDmg;
+    public float MoveSpd;
+
+    public BattleshipInfo(int ID, string name, int hp, int atk, float atkSpd, float critRate, float critDmg, float moveSpd)
+    {
+        BattleshipID = ID;
+        BattleshipName = name;
+        HP = hp;
+        Atk = atk;
+        AtkSpd = atkSpd;
+        CritRate = critRate;
+        CritDmg = critDmg;
+        MoveSpd = moveSpd;
+    }
+}

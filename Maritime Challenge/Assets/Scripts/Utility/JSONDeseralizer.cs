@@ -206,4 +206,20 @@ public class JSONDeseralizer : MonoBehaviour
 
         return achievementDataDictionary;
     }
+
+    public static Dictionary<BattleshipInfo, bool> DeseralizeBattleshipData(string battleshipDataJSON)
+    {
+        JSONBattleshipDataList battleshipDataList = JsonUtility.FromJson<JSONBattleshipDataList>(battleshipDataJSON);
+
+        Dictionary<BattleshipInfo, bool> battleshipDataDictionary = new Dictionary<BattleshipInfo, bool>();
+
+        foreach (JSONBattleshipData battleshipData in battleshipDataList.battleshipData)
+        {
+            BattleshipInfo battleshipInfo = new BattleshipInfo(battleshipData.iBattleshipID, battleshipData.sBattleshipName, battleshipData.iHP, battleshipData.iAtk, battleshipData.fAtkSpd, battleshipData.fCritRate, battleshipData.fCritDmg, battleshipData.fMoveSpd);
+
+            battleshipDataDictionary.Add(battleshipInfo, battleshipData.bBattleshipUnlocked);
+        }
+
+        return battleshipDataDictionary;
+    }
 }
