@@ -21,6 +21,8 @@ public static class PlayerData // Local Player's Data
     public static int CurrentBattleship = 1;
     public static Vector3 PlayerPosition;
 
+    public static PlayerStats PlayerStats;
+
     public static string activeSubScene = "WorldHubScene";
 
     public static Player MyPlayer = null;

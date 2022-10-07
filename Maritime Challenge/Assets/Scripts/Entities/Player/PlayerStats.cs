@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class PlayerStats 
+public class PlayerStats 
 {
-    public static int EnemiesDefeated;
-    public static int BossesDefeated;
-    public static int FriendsAdded;
-    public static int RightshipediaEntriesUnlocked;
-    public static int BattleshipsOwned;
-    public static int CosmeticsOwned;
-    public static int TitlesUnlocked;
-    public static int AchievementsCompleted;
+    public int EnemiesDefeated;
+    public int BossesDefeated;
+    public int FriendsAdded;
+    public int RightshipediaEntriesUnlocked;
+    public int BattleshipsOwned;
+    public int CosmeticsOwned;
+    public int TitlesUnlocked;
+    public int AchievementsCompleted;
 }

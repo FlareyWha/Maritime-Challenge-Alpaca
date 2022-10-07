@@ -66,11 +66,11 @@ public class AchievementsManager : MonoBehaviour
         switch (type)
         {
             case AchievementType.Friends:
-                return PlayerStats.FriendsAdded;
+                return PlayerData.PlayerStats.FriendsAdded;
             case AchievementType.RightShipeida:
-                return PlayerStats.RightshipediaEntriesUnlocked;
+                return PlayerData.PlayerStats.RightshipediaEntriesUnlocked;
             case AchievementType.BattleshipsOwned:
-                return PlayerStats.BattleshipsOwned;
+                return PlayerData.PlayerStats.BattleshipsOwned;
             default:
                 return 0;
         }
