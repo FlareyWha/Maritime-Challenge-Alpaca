@@ -150,6 +150,10 @@ public static class PlayerData // Local Player's Data
     {
         AchievementList[achvment] = true;
     }
+    public static void SetTitleUnlocked(Title title)
+    {
+        TitleDictionary[title] = true;
+    }
     public static void SetUsername(string name)
     {
         Name = name;
@@ -160,6 +164,11 @@ public static class PlayerData // Local Player's Data
     {
         Biography = bio;
         OnPlayerDataUpdated?.Invoke();
+    }
+
+    public static void InvokePlayerStatsUpdated()
+    {
+        OnPlayerStatsUpdated.Invoke();
     }
 
 }

@@ -16,11 +16,13 @@ public class AchievementsUI : MonoBehaviour
     [SerializeField]
     private Text TitleText, DescText;
     [SerializeField]
-    private Image BackgroundImage;
+    private Image BackgroundImage, MaskOverlayImage;
     [SerializeField]
     private Image ProgressFill;
     [SerializeField]
     private Text ProgressText;
+    [SerializeField]
+    private GameObject CompletedOverlay;
 
     private Achievement achievement;
     private Action<Achievement> onSelectAction;
@@ -38,10 +40,27 @@ public class AchievementsUI : MonoBehaviour
         UpdateUI(achvment, currProg, maxProg);
     }
 
+    public void SetCompleted(Achievement achvment)
+    {
+        // Set Background+Title
+        BackgroundImage.sprite = achvment.AchievementData.BackgroundSprite;
+        // Star Icons
+        for (int i = 0; i < achvment.AchievementData.Tier - 1; i++)
+        {
+            StarsImage[i].sprite = FilledStarSprite;
+        }
+        // Set Achievement Text
+        TitleText.text = achvment.AchievementName;
+        DescText.text = achvment.AchievementDescription;
+        ProgressText.text = "COMPLETED!";
+        CompletedOverlay.SetActive(true);
+
+    }
     private void UpdateUI(Achievement achvment, int currProg, int maxProg)
     {
         // Set Background+Title
         BackgroundImage.sprite = achvment.AchievementData.BackgroundSprite;
+        MaskOverlayImage.sprite = achvment.AchievementData.BackgroundSprite;
 
         // Set Achievement Text
         TitleText.text = achvment.AchievementName;

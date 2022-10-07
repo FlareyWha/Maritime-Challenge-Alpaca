@@ -72,7 +72,12 @@ public class AchievementsManager : MonoBehaviour
         {
             Achievement achievement = achievementStat.GetCurrentAchievement();
             AchievementsUI ui = Instantiate(AchievementsUIPrefab, AchievementsRect).GetComponent<AchievementsUI>();
-            ui.Init(achievement, GetCurrentProgressNum(achievement.AchievementData.Type), achievement.AchievementData.RequirementNum, ClaimAchievement);
+            int currProgress = GetCurrentProgressNum(achievement.AchievementData.Type);
+            int reqProgress = achievement.AchievementData.RequirementNum;
+            if (achievementStat.OnFinalTier() && currProgress >= reqProgress)
+                ui.SetCompleted(achievement);
+            else
+                ui.Init(achievement, currProgress , reqProgress, ClaimAchievement);
         }
     }
 
@@ -118,12 +123,17 @@ public class AchievementsManager : MonoBehaviour
         {
             if (title.Key.TitleID == earnedTitleID)
             {
-                StartCoroutine(UnlockTitle(achievement.EarnedTitleID));
-                PlayerData.TitleDictionary[title.Key] = true;
+                StartCoroutine(UnlockTitle(title.Key));
                 break;
             }
         }
 
+    }
+
+    private void OnTitleUnlocked(Title title)
+    {
+        PlayerData.SetTitleUnlocked(title);
+        TitlesUIManager.Instance.UpdateTitlesRect();
     }
 
     IEnumerator DoClaimAchievement(Achievement achvment)
@@ -153,19 +163,20 @@ public class AchievementsManager : MonoBehaviour
         }
     }
 
-    IEnumerator UnlockTitle(int iTitleID)
+    IEnumerator UnlockTitle(Title title)
     {
         string url = ServerDataManager.URL_updateTitleList;
         Debug.Log(url);
 
         WWWForm form = new WWWForm();
         form.AddField("iOwnerUID", PlayerData.UID);
-        form.AddField("iTitleID", iTitleID);
+        form.AddField("iTitleID", title.TitleID);
         using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
         yield return webreq.SendWebRequest();
         switch (webreq.result)
         {
             case UnityWebRequest.Result.Success:
+                OnTitleUnlocked(title);
                 Debug.Log(webreq.downloadHandler.text);
                 break;
             case UnityWebRequest.Result.ProtocolError:
@@ -212,5 +223,10 @@ public class AchievementStatus
     public Achievement GetCurrentAchievement()
     {
         return achievementsList[currTier - 1];
+    }
+
+    public bool OnFinalTier()
+    {
+        return currTier == MaxTier;
     }
 }
