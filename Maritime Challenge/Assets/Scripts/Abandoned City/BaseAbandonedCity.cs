@@ -78,6 +78,7 @@ public class BaseAbandonedCity : NetworkBehaviour
         if (capturedGuildID != -1)
         {
             captured = true;
+            SetCapturedInfo(guildID);
         }
 
         Grid grid = GameObject.Find("Grid").GetComponent<Grid>();
@@ -179,10 +180,15 @@ public class BaseAbandonedCity : NetworkBehaviour
     public void CaptureAbandonedCity(Player enemyKiller)
     {
         captured = true;
-        capturedGuildID = enemyKiller.GetGuildID();
-        //clearedGuildName.text = ???
+        SetCapturedInfo(enemyKiller.GetGuildID());
 
         DestroyEnemies();
+    }
+
+    void SetCapturedInfo(int guildID)
+    {
+        capturedGuildID = guildID;
+        capturedGuildName.text = PlayerData.GetGuildName(guildID);
     }
 
     public void SpawnEnemies()
