@@ -1,0 +1,780 @@
+fileFormatVersion: 2
+guid: 5d1ab9cd85bdb4947b635d279bae512b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2681417172786185735
+    second: Walk_Hair_SpriteSheet_L_0
+  - first:
+      213: -3534258688222135405
+    second: Walk_Hair_SpriteSheet_L_1
+  - first:
+      213: 1546110703522782426
+    second: Walk_Hair_SpriteSheet_L_2
+  - first:
+      213: -7444368441643251469
+    second: Walk_Hair_SpriteSheet_L_3
+  - first:
+      213: 2868122949023716770
+    second: Walk_Hair_SpriteSheet_L_4
+  - first:
+      213: 1859885332434989911
+    second: Walk_Hair_SpriteSheet_L_5
+  - first:
+      213: -1209518643542470340
+    second: Walk_Hair_SpriteSheet_L_6
+  - first:
+      213: 5982717019660474931
+    second: Walk_Hair_SpriteSheet_L_7
+  - first:
+      213: -3427897334471813103
+    second: Walk_Hair_SpriteSheet_L_8
+  - first:
+      213: 6918566541508830548
+    second: Walk_Hair_SpriteSheet_L_9
+  - first:
+      213: 7581923137003010906
+    second: Walk_Hair_SpriteSheet_L_10
+  - first:
+      213: -2147137437364212771
+    second: Walk_Hair_SpriteSheet_L_11
+  - first:
+      213: 2755552531980736735
+    second: Walk_Hair_SpriteSheet_L_12
+  - first:
+      213: 4186580722941630081
+    second: Walk_Hair_SpriteSheet_L_13
+  - first:
+      213: 8749366299864570004
+    second: Walk_Hair_SpriteSheet_L_14
+  - first:
+      213: -1076306412962504975
+    second: Walk_Hair_SpriteSheet_L_15
+  - first:
+      213: 8833579938213705777
+    second: Walk_Hair_SpriteSheet_L_16
+  - first:
+      213: 1534428573386928668
+    second: Walk_Hair_SpriteSheet_L_17
+  - first:
+      213: -4995724391399220850
+    second: Walk_Hair_SpriteSheet_L_18
+  - first:
+      213: 771013939331253306
+    second: Walk_Hair_SpriteSheet_L_19
+  - first:
+      213: 6018595226751199670
+    second: Walk_Hair_SpriteSheet_L_20
+  - first:
+      213: 7675298016772672325
+    second: Walk_Hair_SpriteSheet_L_21
+  - first:
+      213: 971225433552630115
+    second: Walk_Hair_SpriteSheet_L_22
+  - first:
+      213: -96947567791610582
+    second: Walk_Hair_SpriteSheet_L_23
+  - first:
+      213: -4399551349183729240
+    second: Walk_Hair_SpriteSheet_L_24
+  - first:
+      213: 2391611150310139233
+    second: Walk_Hair_SpriteSheet_L_25
+  - first:
+      213: -6737974232166575451
+    second: Walk_Hair_SpriteSheet_L_26
+  - first:
+      213: 4676258998449606866
+    second: Walk_Hair_SpriteSheet_L_27
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Walk_Hair_SpriteSheet_L_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1598
+        width: 270
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f97271c941b9cad0800000000000000
+      internalID: -2681417172786185735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Hair_SpriteSheet_L_1
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 1598
+        width: 270
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39b7e28c27ac3fec0800000000000000
+      internalID: -3534258688222135405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Hair_SpriteSheet_L_2
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 1598
+        width: 270
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adc97e24e73e47510800000000000000
+      internalID: 1546110703522782426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Hair_SpriteSheet_L_3
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 1598
+        width: 270
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f8c9b2285a40b890800000000000000
+      internalID: -7444368441643251469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Hair_SpriteSheet_L_4
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 1598
+        width: 270
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a554bc40ae9dc720800000000000000
+      internalID: 2868122949023716770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Hair_SpriteSheet_L_5
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 1598
+        width: 270
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7533fb21bd3afc910800000000000000
+      internalID: 1859885332434989911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Hair_SpriteSheet_L_6
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 1598
+        width: 270
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c315076b33de63fe0800000000000000
+      internalID: -1209518643542470340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Hair_SpriteSheet_L_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1148
+        width: 270
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33adb8c7e61e60350800000000000000
+      internalID: 5982717019660474931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Hair_SpriteSheet_L_8
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 1148
+        width: 270
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1189c4c3989ad60d0800000000000000
+      internalID: -3427897334471813103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Hair_SpriteSheet_L_9
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 1148
+        width: 270
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45569850d9fa30060800000000000000
+      internalID: 6918566541508830548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Hair_SpriteSheet_L_10
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 1148
+        width: 270
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5b316f1ce6683960800000000000000
+      internalID: 7581923137003010906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Hair_SpriteSheet_L_11
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 1148
+        width: 270
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddba6f170e5d332e0800000000000000
+      internalID: -2147137437364212771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Hair_SpriteSheet_L_12
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 1148
+        width: 270
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd8d3a4ad60bd3620800000000000000
+      internalID: 2755552531980736735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Hair_SpriteSheet_L_13
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 1148
+        width: 270
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1861f6e6cf8b91a30800000000000000
+      internalID: 4186580722941630081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Hair_SpriteSheet_L_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 698
+        width: 270
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49893392b4efb6970800000000000000
+      internalID: 8749366299864570004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Hair_SpriteSheet_L_15
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 698
+        width: 270
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fe15e915013011f0800000000000000
+      internalID: -1076306412962504975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Hair_SpriteSheet_L_16
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 698
+        width: 270
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 138be38c62e279a70800000000000000
+      internalID: 8833579938213705777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Hair_SpriteSheet_L_17
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 698
+        width: 270
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c12ffe168a26b4510800000000000000
+      internalID: 1534428573386928668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Hair_SpriteSheet_L_18
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 698
+        width: 270
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8915ee622f9baab0800000000000000
+      internalID: -4995724391399220850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Hair_SpriteSheet_L_19
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 698
+        width: 270
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a34c6b2c71133ba00800000000000000
+      internalID: 771013939331253306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Hair_SpriteSheet_L_20
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 698
+        width: 270
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b9ed598878568350800000000000000
+      internalID: 6018595226751199670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Hair_SpriteSheet_L_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 248
+        width: 270
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54bcefa71e2248a60800000000000000
+      internalID: 7675298016772672325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Hair_SpriteSheet_L_22
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 248
+        width: 270
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 361bab3d26c7a7d00800000000000000
+      internalID: 971225433552630115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Hair_SpriteSheet_L_23
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 248
+        width: 270
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2561f363b297aef0800000000000000
+      internalID: -96947567791610582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Hair_SpriteSheet_L_24
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 248
+        width: 270
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a130d49b57a1f2c0800000000000000
+      internalID: -4399551349183729240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Hair_SpriteSheet_L_25
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 248
+        width: 270
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 165691f7ba5b03120800000000000000
+      internalID: 2391611150310139233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Hair_SpriteSheet_L_26
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 248
+        width: 270
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a2d9f99228ed72a0800000000000000
+      internalID: -6737974232166575451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Hair_SpriteSheet_L_27
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 248
+        width: 270
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d0105088c865e040800000000000000
+      internalID: 4676258998449606866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

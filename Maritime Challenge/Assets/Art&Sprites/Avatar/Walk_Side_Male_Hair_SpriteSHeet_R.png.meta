@@ -1,0 +1,780 @@
+fileFormatVersion: 2
+guid: 5d253539156f5a54793d7564cd1fa0b4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8338201404530700857
+    second: Walk_Side_Male_Hair_SpriteSHeet_R_0
+  - first:
+      213: 8456278925937644989
+    second: Walk_Side_Male_Hair_SpriteSHeet_R_1
+  - first:
+      213: 3992153461512427127
+    second: Walk_Side_Male_Hair_SpriteSHeet_R_2
+  - first:
+      213: -6298665916589226067
+    second: Walk_Side_Male_Hair_SpriteSHeet_R_3
+  - first:
+      213: 7927987499307871458
+    second: Walk_Side_Male_Hair_SpriteSHeet_R_4
+  - first:
+      213: -6392060798081312731
+    second: Walk_Side_Male_Hair_SpriteSHeet_R_5
+  - first:
+      213: 7774218812233347088
+    second: Walk_Side_Male_Hair_SpriteSHeet_R_6
+  - first:
+      213: -169998782044413201
+    second: Walk_Side_Male_Hair_SpriteSHeet_R_7
+  - first:
+      213: -1310969016972779262
+    second: Walk_Side_Male_Hair_SpriteSHeet_R_8
+  - first:
+      213: 6004382087366141982
+    second: Walk_Side_Male_Hair_SpriteSHeet_R_9
+  - first:
+      213: -3290669262134653335
+    second: Walk_Side_Male_Hair_SpriteSHeet_R_10
+  - first:
+      213: -913340975998915298
+    second: Walk_Side_Male_Hair_SpriteSHeet_R_11
+  - first:
+      213: -8787625234334043344
+    second: Walk_Side_Male_Hair_SpriteSHeet_R_12
+  - first:
+      213: 4881221025138130128
+    second: Walk_Side_Male_Hair_SpriteSHeet_R_13
+  - first:
+      213: 8104720335031299565
+    second: Walk_Side_Male_Hair_SpriteSHeet_R_14
+  - first:
+      213: -6505150570248972323
+    second: Walk_Side_Male_Hair_SpriteSHeet_R_15
+  - first:
+      213: 2552352449823006835
+    second: Walk_Side_Male_Hair_SpriteSHeet_R_16
+  - first:
+      213: -1424115266886513420
+    second: Walk_Side_Male_Hair_SpriteSHeet_R_17
+  - first:
+      213: -913827159121214323
+    second: Walk_Side_Male_Hair_SpriteSHeet_R_18
+  - first:
+      213: -3979980342925183217
+    second: Walk_Side_Male_Hair_SpriteSHeet_R_19
+  - first:
+      213: 1840110946364197066
+    second: Walk_Side_Male_Hair_SpriteSHeet_R_20
+  - first:
+      213: -2285953279409668997
+    second: Walk_Side_Male_Hair_SpriteSHeet_R_21
+  - first:
+      213: -1046719730577609332
+    second: Walk_Side_Male_Hair_SpriteSHeet_R_22
+  - first:
+      213: -8347746145780954549
+    second: Walk_Side_Male_Hair_SpriteSHeet_R_23
+  - first:
+      213: -1898109865128126752
+    second: Walk_Side_Male_Hair_SpriteSHeet_R_24
+  - first:
+      213: -3390604293015231507
+    second: Walk_Side_Male_Hair_SpriteSHeet_R_25
+  - first:
+      213: 7834325501810403198
+    second: Walk_Side_Male_Hair_SpriteSHeet_R_26
+  - first:
+      213: -5410718802717051925
+    second: Walk_Side_Male_Hair_SpriteSHeet_R_27
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Walk_Side_Male_Hair_SpriteSHeet_R_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1598
+        width: 200
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93237beeffd37b370800000000000000
+      internalID: 8338201404530700857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_Male_Hair_SpriteSHeet_R_1
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1598
+        width: 200
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db5922e31ecba5570800000000000000
+      internalID: 8456278925937644989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_Male_Hair_SpriteSHeet_R_2
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1598
+        width: 200
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7765b420c6af66730800000000000000
+      internalID: 3992153461512427127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_Male_Hair_SpriteSHeet_R_3
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1598
+        width: 200
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da7c6da78b4a698a0800000000000000
+      internalID: -6298665916589226067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_Male_Hair_SpriteSHeet_R_4
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1598
+        width: 200
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ecabf750aed50e60800000000000000
+      internalID: 7927987499307871458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_Male_Hair_SpriteSHeet_R_5
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1598
+        width: 200
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 528d9ab1296da47a0800000000000000
+      internalID: -6392060798081312731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_Male_Hair_SpriteSHeet_R_6
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1598
+        width: 200
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 010f355f1d293eb60800000000000000
+      internalID: 7774218812233347088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_Male_Hair_SpriteSHeet_R_7
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 1598
+        width: 200
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe26ef7220b04adf0800000000000000
+      internalID: -169998782044413201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_Male_Hair_SpriteSHeet_R_8
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 1598
+        width: 200
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2016bc7ff908ecde0800000000000000
+      internalID: -1310969016972779262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_Male_Hair_SpriteSHeet_R_9
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 1598
+        width: 200
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e186d2522b9d35350800000000000000
+      internalID: 6004382087366141982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_Male_Hair_SpriteSHeet_R_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1148
+        width: 200
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96eca25adb13552d0800000000000000
+      internalID: -3290669262134653335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_Male_Hair_SpriteSHeet_R_11
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1148
+        width: 200
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1da6cea8392353f0800000000000000
+      internalID: -913340975998915298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_Male_Hair_SpriteSHeet_R_12
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1148
+        width: 200
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 033b24088651c0680800000000000000
+      internalID: -8787625234334043344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_Male_Hair_SpriteSHeet_R_13
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1148
+        width: 200
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dcb68919a49db340800000000000000
+      internalID: 4881221025138130128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_Male_Hair_SpriteSHeet_R_14
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1148
+        width: 200
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dedec6d3430c97070800000000000000
+      internalID: 8104720335031299565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_Male_Hair_SpriteSHeet_R_15
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1148
+        width: 200
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd751e9a50019b5a0800000000000000
+      internalID: -6505150570248972323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_Male_Hair_SpriteSHeet_R_16
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1148
+        width: 200
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3706c49b707cb6320800000000000000
+      internalID: 2552352449823006835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_Male_Hair_SpriteSHeet_R_17
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 1148
+        width: 200
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fcc406c5b68c3ce0800000000000000
+      internalID: -1424115266886513420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_Male_Hair_SpriteSHeet_R_18
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 1148
+        width: 200
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d84c97a5a0f6153f0800000000000000
+      internalID: -913827159121214323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_Male_Hair_SpriteSHeet_R_19
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 1148
+        width: 200
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0738e607f444c8c0800000000000000
+      internalID: -3979980342925183217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_Male_Hair_SpriteSHeet_R_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 698
+        width: 200
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac888590823698910800000000000000
+      internalID: 1840110946364197066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_Male_Hair_SpriteSHeet_R_21
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 698
+        width: 200
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7cb5a79a99a640e0800000000000000
+      internalID: -2285953279409668997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_Male_Hair_SpriteSHeet_R_22
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 698
+        width: 200
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8d678763fd4971f0800000000000000
+      internalID: -1046719730577609332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_Male_Hair_SpriteSHeet_R_23
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 698
+        width: 200
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4a0791db19d62c80800000000000000
+      internalID: -8347746145780954549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_Male_Hair_SpriteSHeet_R_24
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 698
+        width: 200
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e69f50622f88a5e0800000000000000
+      internalID: -1898109865128126752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_Male_Hair_SpriteSHeet_R_25
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 698
+        width: 200
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de3a9e41c5722f0d0800000000000000
+      internalID: -3390604293015231507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_Male_Hair_SpriteSHeet_R_26
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 698
+        width: 200
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e77613e298d19bc60800000000000000
+      internalID: 7834325501810403198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_Male_Hair_SpriteSHeet_R_27
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 698
+        width: 200
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be3f5888ae349e4b0800000000000000
+      internalID: -5410718802717051925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
