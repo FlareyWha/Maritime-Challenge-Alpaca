@@ -26,6 +26,7 @@ public class PostLoginInfoGetter : MonoBehaviour
         StartCoroutine(coroutineCollectionManager.CollectCoroutine(DoGetCosmetics()));
         StartCoroutine(coroutineCollectionManager.CollectCoroutine(DoGetTitles()));
         StartCoroutine(coroutineCollectionManager.CollectCoroutine(DoGetAchievements()));
+        StartCoroutine(coroutineCollectionManager.CollectCoroutine(DoGetBattleships()));
 
         //Wait for all the coroutines to finish running before continuing
         yield return coroutineCollectionManager;
@@ -233,6 +234,29 @@ public class PostLoginInfoGetter : MonoBehaviour
         {
             case UnityWebRequest.Result.Success:
                 PlayerData.AchievementList = JSONDeseralizer.DeseralizeAchievementData(webreq.downloadHandler.text);
+                break;
+            case UnityWebRequest.Result.ProtocolError:
+                Debug.LogError(webreq.downloadHandler.text);
+                break;
+            default:
+                Debug.LogError("Server error");
+                break;
+        }
+    }
+
+    IEnumerator DoGetBattleships()
+    {
+        string url = ServerDataManager.URL_getBattleshipData;
+        Debug.Log(url);
+
+        WWWForm form = new WWWForm();
+        form.AddField("iOwnerUID", PlayerData.UID);
+        using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
+        yield return webreq.SendWebRequest();
+        switch (webreq.result)
+        {
+            case UnityWebRequest.Result.Success:
+                PlayerData.BattleshipList = JSONDeseralizer.DeseralizeBattleshipData(webreq.downloadHandler.text);
                 break;
             case UnityWebRequest.Result.ProtocolError:
                 Debug.LogError(webreq.downloadHandler.text);

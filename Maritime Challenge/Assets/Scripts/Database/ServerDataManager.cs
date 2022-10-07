@@ -31,6 +31,7 @@ public class ServerDataManager : MonoBehaviour
 
     //Game data
     public static string URL_updateAccountXPLevels = serverURL + "UpdateAccountXPLevels.php";
+    public static string URL_getBattleshipData = serverURL + "GetBattleshipData.php";
     public static string URL_updateBattleshipList = serverURL + "UpdateBattleshipList.php";
     public static string URL_updateCurrentBattleship = serverURL + "UpdateCurrentBattleship.php";
     public static string URL_updateTotalRightshipRollars = serverURL + "UpdateTotalRightshipRollars.php";
@@ -50,6 +51,7 @@ public class ServerDataManager : MonoBehaviour
     public static string URL_updateCosmeticList = serverURL + "UpdateCosmeticList.php";
     public static string URL_getEquippedCosmeticList = serverURL + "GetEquippedCosmeticList.php";
     public static string URL_updateEquippedCosmeticList = serverURL + "UpdateEquippedCosmeticList.php";
+
 
     #endregion
 
