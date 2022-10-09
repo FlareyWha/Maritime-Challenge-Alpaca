@@ -28,10 +28,10 @@ public class AchievementsManager : MonoBehaviour
         // Link Achievement Scriptable Object to Achievement Class from database
         foreach (KeyValuePair<Achievement, bool> achvment in PlayerData.AchievementList)
         {
-            achvment.Key.AchievementData = FindTitleByID(achvment.Key.AchievementID);
+            achvment.Key.AchievementData = FindAchievementByID(achvment.Key.AchievementID);
         }
     }
-    private AchievementSO FindTitleByID(int id)
+    private AchievementSO FindAchievementByID(int id)
     {
         foreach (AchievementSO achvment in AchievementDataList)
         {
