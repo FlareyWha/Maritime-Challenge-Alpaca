@@ -19,6 +19,14 @@ public class PlayerMovement : NetworkBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
+    public override void OnStartLocalPlayer()
+    {
+        foreach (Animator animator in allPlayerAnimators)
+        {
+            animator.Play(0);
+        }
+    }
+
     void FixedUpdate()
     {
         if (!isLocalPlayer)
@@ -30,8 +38,11 @@ public class PlayerMovement : NetworkBehaviour
         foreach (Animator animator in allPlayerAnimators)
         {
             animator.SetBool("Walk", input.magnitude > 0);
-            animator.SetFloat("DirX", input.x);
-            animator.SetFloat("DirY", input.y);
+            if (input.magnitude > 0)
+            {
+                animator.SetFloat("DirX", input.x);
+                animator.SetFloat("DirY", input.y);
+            }
         }
     }
 

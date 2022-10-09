@@ -61,6 +61,9 @@ public class AchievementsManager : MonoBehaviour
     }
     private void UpdateAchievementsRect()
     {
+        if (PlayerData.AchievementList.Count == 0)
+            return;
+
         // Clear Rect
         foreach (Transform child in AchievementsRect)
         {
