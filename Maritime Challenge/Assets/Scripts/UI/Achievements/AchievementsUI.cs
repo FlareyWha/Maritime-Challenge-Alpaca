@@ -91,7 +91,6 @@ public class AchievementsUI : MonoBehaviour
     private void OnAchievementUIClicked()
     {
         onSelectAction?.Invoke(achievement);
-        Debug.Log("Achievement Claim Clicked");
     }
 
 }

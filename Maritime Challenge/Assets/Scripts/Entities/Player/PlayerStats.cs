@@ -3,41 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class PlayerStats : MonoBehaviour
+
+public class PlayerStats
 {
     public int[] PlayerStat = new int[(int)PLAYER_STAT.NO_PLAYER_STAT];
+    public readonly string[] statNames = { "iEnemiesDefeated", "iBossesDefeated", "iFriendsAdded", "iRightshipediaEntriesUnlocked", "iBattleshipsOwned", "iCosmeticsOwned", "iTitlesUnlocked", "iAchievementsCompleted" };
 
-    private readonly string[] statNames = { "iEnemiesDefeated", "iBossesDefeated", "iFriendsAdded", "iRightshipediaEntriesUnlocked", "iBattleshipsOwned", "iCosmeticsOwned", "iTitlesUnlocked", "iAchievementsCompleted" };
-
-    public void UpdatePlayerStat(PLAYER_STAT playerStat, int statAmount)
-    {
-        StartCoroutine(DoUpdatePlayerStat(statNames[(int)playerStat], statAmount));
-    }
-
-    IEnumerator DoUpdatePlayerStat(string statName, int statAmount)
-    {
-        string url = ServerDataManager.URL_updatePlayerStats;
-        Debug.Log(url);
-
-        WWWForm form = new WWWForm();
-        form.AddField("iOwnerUID", PlayerData.UID);
-        form.AddField("iStatName", statName);
-        form.AddField("iStatAmount", statAmount);
-        using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
-        yield return webreq.SendWebRequest();
-        switch (webreq.result)
-        {
-            case UnityWebRequest.Result.Success:
-                Debug.Log(webreq.downloadHandler.text);
-                break;
-            case UnityWebRequest.Result.ProtocolError:
-                Debug.LogError(webreq.downloadHandler.text);
-                break;
-            default:
-                Debug.LogError(webreq.downloadHandler.text);
-                break;
-        }
-    }
+  
 }
 
 public enum PLAYER_STAT

@@ -15,5 +15,11 @@ public class BattleshipStore : Interactable
     public override void Interact()
     {
         StoreUIPanel.SetActive(true);
+        UIManager.Instance.DisableInteractButton();
+    }
+
+    public void OnCloseStorePanel()
+    {
+        UIManager.Instance.EnableInteractButton(interactMessage);
     }
 }
