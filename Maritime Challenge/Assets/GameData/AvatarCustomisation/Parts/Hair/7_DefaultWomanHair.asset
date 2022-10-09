@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c7a9f46d422cfd47b9f51a85a7fc34f, type: 3}
+  m_Name: 7_DefaultWomanHair
+  m_EditorClassIdentifier: 
+  ID: 7
+  bodyPartType: 0
+  IconSprite: {fileID: 21300000, guid: 66d2b2f357f76374dbc28e5f4c0cfbd1, type: 3}
+  allBodyPartAnimations:
+  - {fileID: 7400000, guid: b5427eeab0b4f65488b941a2929c6d3c, type: 2}
+  - {fileID: 7400000, guid: 74f13d3eb473088458cfdb17486d2d7e, type: 2}
+  - {fileID: 7400000, guid: 77b7c77ae6ef3a545b67511f3b6875c9, type: 2}
+  - {fileID: 7400000, guid: cec5211478bc0e540ad3785672effe50, type: 2}
+  - {fileID: 7400000, guid: 233b99439e0485644819404fdb31a55f, type: 2}
+  - {fileID: 7400000, guid: b3a91851d39aa5948af15b8294a75ae3, type: 2}
+  - {fileID: 7400000, guid: 89c192e7de0f64b4ca05bd0a635595c3, type: 2}
+  - {fileID: 7400000, guid: 592e83abdae996243a9fb53beb8121e5, type: 2}

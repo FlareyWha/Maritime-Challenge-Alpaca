@@ -4651,6 +4651,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 116471533}
     m_Modifications:
+    - target: {fileID: 1766310980, guid: a7844430d224c0a4e8233752af998fae, type: 3}
+      propertyPath: m_Radius
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1766310980, guid: a7844430d224c0a4e8233752af998fae, type: 3}
+      propertyPath: m_Offset.x
+      value: 3.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 1766310982, guid: a7844430d224c0a4e8233752af998fae, type: 3}
+      propertyPath: StoreUIPanel
+      value: 
+      objectReference: {fileID: 1637026861}
     - target: {fileID: 8610587904907184597, guid: a7844430d224c0a4e8233752af998fae, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -4701,45 +4713,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7844430d224c0a4e8233752af998fae, type: 3}
---- !u!1 &1766310979 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8610587904907184599, guid: a7844430d224c0a4e8233752af998fae, type: 3}
-  m_PrefabInstance: {fileID: 1766310978}
-  m_PrefabAsset: {fileID: 0}
---- !u!58 &1766310980
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1766310979}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 1.28
 --- !u!4 &1766310981 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8610587904907184597, guid: a7844430d224c0a4e8233752af998fae, type: 3}
   m_PrefabInstance: {fileID: 1766310978}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1766310982
+--- !u!114 &1766310982 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 1766310982, guid: a7844430d224c0a4e8233752af998fae, type: 3}
+  m_PrefabInstance: {fileID: 1766310978}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1766310979}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a9bc05ed378b754b874415ec2a502b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StoreUIPanel: {fileID: 1637026861}
 --- !u!1 &1790535160
 GameObject:
   m_ObjectHideFlags: 0

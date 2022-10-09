@@ -6,7 +6,10 @@ using Mirror;
 
 public class PlayerMovement : NetworkBehaviour
 {
-  
+
+    [SerializeField]
+    private List<Animator> allPlayerAnimators;
+
     private const float WALK_SPEED = 5.0f;
 
     private Rigidbody2D rb = null;
@@ -22,8 +25,14 @@ public class PlayerMovement : NetworkBehaviour
             return;
 
         Vector2 input = UIManager.Instance.Joystick.GetDirection();
-
         rb.position += input * WALK_SPEED * Time.deltaTime;
+
+        foreach (Animator animator in allPlayerAnimators)
+        {
+            animator.SetBool("Walk", input.magnitude > 0);
+            animator.SetFloat("DirX", input.x);
+            animator.SetFloat("DirY", input.y);
+        }
     }
 
 }

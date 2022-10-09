@@ -509,7 +509,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 548986ca072bad243a66dd0c9f1aa796, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultID: 4
+  defaultID: 3
   FileHeader: Hair
   AnimPartName: hairback
 --- !u!1 &5300436063019523554
@@ -627,7 +627,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 548986ca072bad243a66dd0c9f1aa796, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultID: 0
+  defaultID: 5
   FileHeader: Shoe
   AnimPartName: shoe
 --- !u!1 &5419289292348981002
@@ -1036,7 +1036,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 548986ca072bad243a66dd0c9f1aa796, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultID: 4
+  defaultID: 3
   FileHeader: Hair
   AnimPartName: hairfront
 --- !u!1 &7230950417349455460
@@ -1154,7 +1154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 548986ca072bad243a66dd0c9f1aa796, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultID: 3
+  defaultID: 4
   FileHeader: Bottom
   AnimPartName: bottom
 --- !u!1 &7412352763219698844
@@ -1334,7 +1334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 548986ca072bad243a66dd0c9f1aa796, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultID: 2
+  defaultID: 1
   FileHeader: Top
   AnimPartName: top
 --- !u!1 &7885934357493370052
@@ -1452,7 +1452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 548986ca072bad243a66dd0c9f1aa796, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultID: 1
+  defaultID: 2
   FileHeader: Body
   AnimPartName: body
 --- !u!1 &8058870723630215280
@@ -1714,6 +1714,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  allPlayerAnimators:
+  - {fileID: 8029997214271889164}
+  - {fileID: 265808385365591700}
+  - {fileID: 3045004736510988409}
+  - {fileID: 2473084929414549253}
+  - {fileID: 4618263655241512286}
+  - {fileID: 8266499074715506729}
+  - {fileID: 5068429581049363927}
 --- !u!114 &9181191743022904711
 MonoBehaviour:
   m_ObjectHideFlags: 0

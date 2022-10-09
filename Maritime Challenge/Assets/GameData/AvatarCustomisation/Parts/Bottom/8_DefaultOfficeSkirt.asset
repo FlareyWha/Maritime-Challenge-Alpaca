@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c7a9f46d422cfd47b9f51a85a7fc34f, type: 3}
+  m_Name: 8_DefaultOfficeSkirt
+  m_EditorClassIdentifier: 
+  ID: 8
+  bodyPartType: 4
+  IconSprite: {fileID: 21300000, guid: 90de3649a0016a94c8b3137ea602fada, type: 3}
+  allBodyPartAnimations:
+  - {fileID: 7400000, guid: 815b73952116cb045bbce11c4511354a, type: 2}
+  - {fileID: 7400000, guid: 315290e6ca919b240bf2e551e7a3be50, type: 2}
+  - {fileID: 7400000, guid: 2cc3d66db3022b643a93cc8aa641c347, type: 2}
+  - {fileID: 7400000, guid: c76bfc230626d3742985dd335b35c39e, type: 2}
