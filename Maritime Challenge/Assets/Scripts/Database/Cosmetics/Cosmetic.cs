@@ -11,7 +11,7 @@ public class Cosmetic
     public COSMETIC_RARITY CosmeticRarity;
     public COSMETIC_TYPE CosmeticBodyPartType;
 
-    public AvatarCosmetic LinkedCosmetic;
+    public CosmeticSO LinkedCosmetic;
 
     public Cosmetic(int cosmeticID, string name, int price, COSMETIC_RARITY rarity, COSMETIC_TYPE bodyPartType)
     {

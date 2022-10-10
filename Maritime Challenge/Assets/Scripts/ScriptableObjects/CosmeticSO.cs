@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Cosmetic", menuName = "Cosmetic")]
-public class AvatarCosmetic : ScriptableObject
+public class CosmeticSO : ScriptableObject
 {
     // ~~ 1. Holds details about a body part's animations
 
