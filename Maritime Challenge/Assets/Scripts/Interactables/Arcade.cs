@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Arcade : Interactable
+public class Arcade : BaseInteractable
 {
     void Start()
     {
