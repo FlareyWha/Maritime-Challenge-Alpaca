@@ -14,7 +14,6 @@ public class TitlesUIManager : MonoBehaviourSingleton<TitlesUIManager>
     [SerializeField]
     private Image ProfileDisplayTitle;
 
-
     private TitleUI currSelected;
 
     void Start()
@@ -40,6 +39,8 @@ public class TitlesUIManager : MonoBehaviourSingleton<TitlesUIManager>
             {
                 currSelected = titleUI;
                 currSelected.ToggleEquippedOverlay(true);
+
+                ProfileDisplayTitle.sprite = title.Key.LinkedTitle.TitleSprite;
             }
         }
     }
