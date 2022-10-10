@@ -82,6 +82,6 @@ public class LoginManager : MonoBehaviour
     public void ConnectToServer()
     {
         // Connect to Server
-        ServerManager.Instance.ConnectToServer();
+        ConnectionManager.Instance.ConnectToServer();
     }
 }

@@ -5,10 +5,10 @@ using UnityEngine.SceneManagement;
 using Mirror;
 using UnityEngine.Networking;
 
-public class ServerManager : NetworkManager
+public class ConnectionManager : NetworkManager
 {
     #region Singleton
-    public static ServerManager Instance = null;
+    public static ConnectionManager Instance = null;
     #endregion
 
     private bool offlineSetted = false;

@@ -155,7 +155,7 @@ public class ProfileManager : MonoBehaviour
 
     public void LogOut()
     {
-        ServerManager.Instance.DisconnectFromServer();
+        ConnectionManager.Instance.DisconnectFromServer();
         
     }
 }
