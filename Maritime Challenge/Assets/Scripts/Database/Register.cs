@@ -208,8 +208,7 @@ public class Register : MonoBehaviour
         Debug.Log(url);
 
         WWWForm form = new WWWForm();
-        form.AddField("UID", uid);
-        form.AddField("iGender", genderDropdown.value);
+        form.AddField("iOwnerUID", uid);
         using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
         yield return webreq.SendWebRequest();
         switch (webreq.result)
@@ -233,7 +232,7 @@ public class Register : MonoBehaviour
         Debug.Log(url);
 
         WWWForm form = new WWWForm();
-        form.AddField("UID", uid);
+        form.AddField("iOwnerUID", uid);
         form.AddField("iGender", genderDropdown.value);
         using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
         yield return webreq.SendWebRequest();
