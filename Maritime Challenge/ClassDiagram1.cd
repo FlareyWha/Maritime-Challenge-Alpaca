@@ -8,8 +8,8 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="AbandonedCityManager" Collapsed="true">
-    <Position X="2" Y="2" Width="1.5" />
+  <Class Name="AbandonedCityManager">
+    <Position X="2" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAADAAAAAAIAAAAQAAQAAgAAAAAAAAAAAAAAI=</HashCode>
       <FileName>Assets\Scripts\Abandoned City\AbandonedCityManager.cs</FileName>
@@ -78,8 +78,8 @@
       <FileName>Assets\Scripts\AvatarDisplay.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Achievement" Collapsed="true">
-    <Position X="37.75" Y="0.5" Width="1.5" />
+  <Class Name="Achievement">
+    <Position X="11" Y="25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAEAABAAQAAAgAAAAAAAAAAAAAAAAAAAAAAAAgAAA=</HashCode>
       <FileName>Assets\Scripts\Database\Achievements\Achievement.cs</FileName>
@@ -155,8 +155,20 @@
       <FileName>Assets\Scripts\Database\Titles\TitleManager.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="BaseEntity" Collapsed="true">
-    <Position X="1.75" Y="6.5" Width="1.5" />
+  <Class Name="BaseEntity">
+    <Position X="1.5" Y="8.75" Width="1.5" />
+    <NestedTypes>
+      <Delegate Name="BaseEntity.EntityDied" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Entities\BaseEntity.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="BaseEntity.EntityHPChanged" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Entities\BaseEntity.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
     <TypeIdentifier>
       <HashCode>kAAGAACAAAhAAEAAAAAAEAAAUCAAAAADgAJAkFABAgA=</HashCode>
       <FileName>Assets\Scripts\Entities\BaseEntity.cs</FileName>
@@ -169,15 +181,15 @@
       <FileName>Assets\Scripts\Entities\Battleship.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="BaseEnemy" Collapsed="true">
-    <Position X="0.5" Y="8" Width="1.5" />
+  <Class Name="BaseEnemy">
+    <Position X="0.5" Y="16" Width="1.5" />
     <TypeIdentifier>
       <HashCode>KAQGBQIAAKCMIUAEANACCBEYjSRMBFAhAALQpACQwAA=</HashCode>
       <FileName>Assets\Scripts\Entities\Enemy\BaseEnemy.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="EelBoss" Collapsed="true">
-    <Position X="0.5" Y="9.5" Width="1.5" />
+  <Class Name="EelBoss">
+    <Position X="0.5" Y="29" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Entities\Enemy\EelBoss.cs</FileName>
@@ -190,8 +202,15 @@
       <FileName>Assets\Scripts\Entities\Enemy\EnemySpawner.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Player" Collapsed="true">
-    <Position X="2.75" Y="8" Width="1.5" />
+  <Class Name="Player">
+    <Position X="2.5" Y="16" Width="1.5" />
+    <NestedTypes>
+      <Delegate Name="Player.AvatarChanged" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Entities\Player\Player.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
     <TypeIdentifier>
       <HashCode>ARRVEAEhASBIAAEGEBQAERUBDQEQIAAAAgAASAggGAQ=</HashCode>
       <FileName>Assets\Scripts\Entities\Player\Player.cs</FileName>
@@ -211,15 +230,15 @@
       <FileName>Assets\Scripts\Entities\Player\PlayerData.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="BasicInfo" Collapsed="true">
-    <Position X="3.5" Y="9.5" Width="1.5" />
+  <Class Name="BasicInfo">
+    <Position X="2.5" Y="27" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAABAAAQAAAAAAAAAAAAAAAAAEAA=</HashCode>
       <FileName>Assets\Scripts\Entities\Player\PlayerData.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="FriendInfo" Collapsed="true">
-    <Position X="3.5" Y="10.75" Width="1.5" />
+  <Class Name="FriendInfo">
+    <Position X="2.5" Y="29.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>gAAAAAAAAAAABAAAAAAAEAAAMAIIAAQAAAAAgAAAAEA=</HashCode>
       <FileName>Assets\Scripts\Entities\Player\PlayerData.cs</FileName>
@@ -253,8 +272,8 @@
       <FileName>Assets\Scripts\Entities\Player\PlayerStats.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="PlayerStatsManager" Collapsed="true">
-    <Position X="8.75" Y="2" Width="1.5" />
+  <Class Name="PlayerStatsManager">
+    <Position X="8.75" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAggAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Entities\Player\PlayerStatsManager.cs</FileName>
@@ -267,29 +286,29 @@
       <FileName>Assets\Scripts\Entities\Player\PlayerUI.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="BaseProjectile" Collapsed="true">
-    <Position X="8.5" Y="6.5" Width="1.5" />
+  <Class Name="BaseProjectile">
+    <Position X="5.5" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAABAAgBAgABEIEAIAAAAAAEgAAEAAAUAIABAAEA=</HashCode>
       <FileName>Assets\Scripts\Entities\Projectile\BaseProjectile.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="CannonBall" Collapsed="true">
-    <Position X="8.5" Y="8" Width="1.5" />
+  <Class Name="CannonBall">
+    <Position X="5.5" Y="14.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAACAAAIAEA=</HashCode>
       <FileName>Assets\Scripts\Entities\Projectile\CannonBall.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ProjectileManager" Collapsed="true">
-    <Position X="20" Y="2" Width="1.5" />
+  <Class Name="ProjectileManager">
+    <Position X="20" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAICAgAAAAAABAAAAAAAAAAAAAACAAgAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Entities\Projectile\ProjectileManager.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="FriendsManager" Collapsed="true">
-    <Position X="24.5" Y="2" Width="1.5" />
+  <Class Name="FriendsManager">
+    <Position X="24.5" Y="3.75" Width="1.5" />
     <NestedTypes>
       <Delegate Name="FriendsManager.FriendListUpdated" Collapsed="true">
         <TypeIdentifier>
@@ -314,8 +333,8 @@
       <FileName>Assets\Scripts\GameHandler.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="GridManager" Collapsed="true">
-    <Position X="31.25" Y="2" Width="1.5" />
+  <Class Name="GridManager">
+    <Position X="31.25" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAgAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\GridManager.cs</FileName>
@@ -349,85 +368,88 @@
       <FileName>Assets\Scripts\Interactables\Arcade Interactables\Air Hockey\AirHockeyPuck.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="AirHockeySeat" Collapsed="true">
-    <Position X="6" Y="5" Width="1.5" />
+  <Class Name="AirHockeySeat">
+    <Position X="12.75" Y="16.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AACAMAAAACABAAAAAAgAQAAAIAAEAABAgAAAAIAAEAA=</HashCode>
       <FileName>Assets\Scripts\Interactables\Arcade Interactables\Air Hockey\AirHockeySeat.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Arcade" Collapsed="true">
-    <Position X="8.25" Y="5" Width="1.5" />
+  <Class Name="Arcade">
+    <Position X="15" Y="16.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Interactables\Arcade.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="BattleshipStore" Collapsed="true">
-    <Position X="10.5" Y="5" Width="1.5" />
+  <Class Name="BattleshipStore">
+    <Position X="17.25" Y="16.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAAAAAAAgAAAAAAIAAAAAABAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Interactables\BattleshipStore.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="BuyDrink" Collapsed="true">
-    <Position X="12.75" Y="5" Width="1.5" />
+  <Class Name="BuyDrink">
+    <Position X="19.5" Y="16.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAACAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Interactables\Cafe Interactables\BuyDrink.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Sit" Collapsed="true">
-    <Position X="15" Y="5" Width="1.5" />
+  <Class Name="Sit">
+    <Position X="21.75" Y="16.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAgAAgAAACACAAAAAAAAAgAAIAAAAAAAAAAAAgAAAAA=</HashCode>
       <FileName>Assets\Scripts\Interactables\Cafe Interactables\Sit.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Cafe" Collapsed="true">
-    <Position X="17.25" Y="5" Width="1.5" />
+  <Class Name="Cafe">
+    <Position X="24" Y="16.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Interactables\Cafe.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Dock" Collapsed="true">
-    <Position X="19.5" Y="5" Width="1.5" />
+  <Class Name="Dock">
+    <Position X="26.25" Y="16.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAgCAAAAACAAAAAAACAAAAAAIAAIAAAAAIAAAAAAAAI=</HashCode>
       <FileName>Assets\Scripts\Interactables\Dock.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Door" Collapsed="true">
-    <Position X="21.75" Y="5" Width="1.5" />
+  <Class Name="Door">
+    <Position X="28.5" Y="16.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAABAACAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAQ=</HashCode>
       <FileName>Assets\Scripts\Interactables\Door.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="GachaWheel" Collapsed="true">
-    <Position X="24" Y="5" Width="1.5" />
+  <Class Name="GachaWheel">
+    <Position X="30.75" Y="16.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Interactables\GachaWheel.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="GuildInfo" Collapsed="true">
-    <Position X="1.5" Y="5" Width="1.5" />
+  <Class Name="GuildInfo">
+    <Position X="8.25" Y="16.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAACAAAAEAQAAAAAAAIAQAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Interactables\GuildInfo.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Interactable" Collapsed="true">
-    <Position X="12.75" Y="3.5" Width="1.5" />
+  <Class Name="Interactable">
+    <Position X="19.5" Y="12.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAACAIIAAEAAAAAAAAAAAIEAAAAAAAAAAAAAAAEA=</HashCode>
       <FileName>Assets\Scripts\Interactables\Interactable.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="myPlayer" />
+    </ShowAsAssociation>
   </Class>
-  <Class Name="ShoppingMall" Collapsed="true">
-    <Position X="3.75" Y="5" Width="1.5" />
+  <Class Name="ShoppingMall">
+    <Position X="10.5" Y="16.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Interactables\ShoppingMall.cs</FileName>
@@ -447,8 +469,8 @@
       <FileName>Assets\Scripts\OnTriggerSetOrder.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="AStarPathfinding" Collapsed="true">
-    <Position X="11" Y="2" Width="1.5" />
+  <Class Name="AStarPathfinding">
+    <Position X="11" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAQBABQCACIAAAAACAAAAAAAEAAAAIAAAAAAAAAAAAI=</HashCode>
       <FileName>Assets\Scripts\Pathfinding\AStarPathfinding.cs</FileName>
@@ -468,22 +490,22 @@
       <FileName>Assets\Scripts\PlayerAnimationsManager.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="PlayerFollowCamera" Collapsed="true">
-    <Position X="15.5" Y="2" Width="1.5" />
+  <Class Name="PlayerFollowCamera">
+    <Position X="15.5" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQCBAAAAiAAAkCAAAAAIAAAAAAAAEAAAgAgAgIAAAA=</HashCode>
       <FileName>Assets\Scripts\PlayerFollowCamera.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SceneManager" Collapsed="true">
-    <Position X="22.25" Y="2" Width="1.5" />
+  <Class Name="SceneManager">
+    <Position X="22.25" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAAAAgAAACAgAAACAABACAEAAgAAAABAAAIAAACAAAA=</HashCode>
       <FileName>Assets\Scripts\SceneManager.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="AchievementSO" Collapsed="true">
-    <Position X="41.25" Y="0.5" Width="1.5" />
+  <Class Name="AchievementSO">
+    <Position X="13.5" Y="27.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAgEAAACAAAAQAAAAAAAAAAQAQgAAAAAA=</HashCode>
       <FileName>Assets\Scripts\ScriptableObjects\AchievementSO.cs</FileName>
@@ -492,7 +514,7 @@
   <Class Name="AvatarCosmetic" Collapsed="true">
     <Position X="37.75" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAIAACAAABAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAIAIAAAAAABAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\ScriptableObjects\AvatarCosmetic.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -545,19 +567,26 @@
       <FileName>Assets\Scripts\SplashScreen.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="AchievementsManager" Collapsed="true">
-    <Position X="39.5" Y="0.5" Width="1.5" />
+  <Class Name="AchievementsManager">
+    <Position X="8" Y="26.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAAACAAIACAGAAAAAAAAAgABAAgAAAAACAAAATABAEA=</HashCode>
       <FileName>Assets\Scripts\UI\Achievements\AchievementsManager.cs</FileName>
     </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="AchievementDataList" />
+      <Field Name="achievements" />
+    </ShowAsCollectionAssociation>
   </Class>
-  <Class Name="AchievementStatus" Collapsed="true">
-    <Position X="43" Y="0.5" Width="1.5" />
+  <Class Name="AchievementStatus">
+    <Position X="15.75" Y="25.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAJAAAAAAAAAAAIgAAgg=</HashCode>
       <FileName>Assets\Scripts\UI\Achievements\AchievementsManager.cs</FileName>
     </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="achievementsList" />
+    </ShowAsCollectionAssociation>
   </Class>
   <Class Name="AchievementsUI" Collapsed="true">
     <Position X="44.75" Y="0.5" Width="1.5" />
@@ -566,8 +595,8 @@
       <FileName>Assets\Scripts\UI\Achievements\AchievementsUI.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="AvatarCustomisationManager" Collapsed="true">
-    <Position X="29" Y="2" Width="1.5" />
+  <Class Name="AvatarCustomisationManager">
+    <Position X="29" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAWCABBAABAAEAAAAAFAAAAAAAAIAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\UI\AvatarCustomisation\AvatarCustomisationManager.cs</FileName>
@@ -587,8 +616,8 @@
       <FileName>Assets\Scripts\UI\Chat\ChatBubbleUI.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ChatManager" Collapsed="true">
-    <Position X="4.25" Y="2" Width="1.5" />
+  <Class Name="ChatManager">
+    <Position X="4.25" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>QAAEAQAAAGIAAAAAACQAAAAAAAoACAAAAAAAAAAAAAQ=</HashCode>
       <FileName>Assets\Scripts\UI\Chat\ChatManager.cs</FileName>
@@ -657,8 +686,8 @@
       <FileName>Assets\Scripts\UI\Map\MapBehaviour.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="TeleportManager" Collapsed="true">
-    <Position X="33.5" Y="2" Width="1.5" />
+  <Class Name="TeleportManager">
+    <Position X="33.5" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>IAAEEAQAACAAAADAEAAAAAAAAQAAAAAAAAAgBAEAAAA=</HashCode>
       <FileName>Assets\Scripts\UI\Map\TeleportManager.cs</FileName>
@@ -685,22 +714,22 @@
       <FileName>Assets\Scripts\UI\PasswordShowHide.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="HPPopUp" Collapsed="true">
-    <Position X="5.5" Y="8" Width="1.5" />
+  <Class Name="HPPopUp">
+    <Position X="3.5" Y="12.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AQQAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAACAABAAAA=</HashCode>
       <FileName>Assets\Scripts\UI\PopUps\HPPopUp.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="PopUp" Collapsed="true">
-    <Position X="5.5" Y="6.5" Width="1.5" />
+  <Class Name="PopUp">
+    <Position X="3.5" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
       <FileName>Assets\Scripts\UI\PopUps\PopUp.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="PopUpManager" Collapsed="true">
-    <Position X="13.25" Y="2" Width="1.5" />
+  <Class Name="PopUpManager">
+    <Position X="13.25" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAEAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
       <FileName>Assets\Scripts\UI\PopUps\PopUpManager.cs</FileName>
@@ -720,8 +749,8 @@
       <FileName>Assets\Scripts\UI\ProfileNamecard.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="TitlesUIManager" Collapsed="true">
-    <Position X="17.75" Y="2" Width="1.5" />
+  <Class Name="TitlesUIManager">
+    <Position X="17.75" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAIACkAAAAAAAAAAAAAIAAAAIAAAAAEIAACAAA=</HashCode>
       <FileName>Assets\Scripts\UI\Titles\TitlesUIManager.cs</FileName>
@@ -734,8 +763,8 @@
       <FileName>Assets\Scripts\UI\Titles\TitleUI.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="UIManager" Collapsed="true">
-    <Position X="26.75" Y="2" Width="1.5" />
+  <Class Name="UIManager">
+    <Position X="26.75" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ABIKAQCAASAJCQGBEQQAEEIADAApggCAAABAQ48AEBQ=</HashCode>
       <FileName>Assets\Scripts\UI\UIManager.cs</FileName>
@@ -770,8 +799,8 @@
       <FileName>Assets\Scripts\Utility\DontDestroy.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="EnemyAssetManager" Collapsed="true">
-    <Position X="6.5" Y="2" Width="1.5" />
+  <Class Name="EnemyAssetManager">
+    <Position X="6.5" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAEAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Utility\EnemyAssetManager.cs</FileName>
@@ -1022,7 +1051,7 @@
       <FileName>Assets\Scripts\Utility\JSONItems.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="MonoBehaviourSingleton&lt;T&gt;" Collapsed="true">
+  <Class Name="MonoBehaviourSingleton&lt;T&gt;">
     <Position X="17.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAEA=</HashCode>
@@ -1043,35 +1072,35 @@
       <FileName>Assets\Scripts\Entities\Battleship.cs</FileName>
     </TypeIdentifier>
   </Struct>
-  <Enum Name="TileType" Collapsed="true">
+  <Enum Name="TILE_TYPE" Collapsed="true">
     <Position X="51.75" Y="12" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAABAAIAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Abandoned City\TilemapPainter.cs</FileName>
     </TypeIdentifier>
   </Enum>
-  <Enum Name="AchievementType" Collapsed="true">
+  <Enum Name="ACHIEVEMENT_TYPE" Collapsed="true">
     <Position X="36" Y="12" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAABAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAMAA=</HashCode>
+      <HashCode>AAAAAFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARAA=</HashCode>
       <FileName>Assets\Scripts\Database\Achievements\Achievement.cs</FileName>
     </TypeIdentifier>
   </Enum>
-  <Enum Name="CosmeticRarity" Collapsed="true">
+  <Enum Name="COSMETIC_RARITY" Collapsed="true">
     <Position X="41.25" Y="12" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAEAAAAAAABAAAAAAAAAAAsAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Database\Cosmetics\Cosmetic.cs</FileName>
     </TypeIdentifier>
   </Enum>
-  <Enum Name="CosmeticType" Collapsed="true">
+  <Enum Name="COSMETIC_TYPE" Collapsed="true">
     <Position X="43" Y="12" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAgAAAIAAAAgBAQAAAAAIAAAAAAAAAAAAAAAQA=</HashCode>
       <FileName>Assets\Scripts\Database\Cosmetics\Cosmetic.cs</FileName>
     </TypeIdentifier>
   </Enum>
-  <Enum Name="SHIPFACING" Collapsed="true">
+  <Enum Name="SHIP_FACING" Collapsed="true">
     <Position X="50" Y="12" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAgAAgAAAAAAAAAICAAAgAAAAAAAAAAA=</HashCode>
@@ -1099,7 +1128,7 @@
       <FileName>Assets\Scripts\SceneManager.cs</FileName>
     </TypeIdentifier>
   </Enum>
-  <Enum Name="BodyPartType" Collapsed="true">
+  <Enum Name="BODY_PART_TYPE" Collapsed="true">
     <Position X="37.75" Y="12" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAIAAAAgBAQAAgAAIAAAAAAAAQAAAAAAQA=</HashCode>

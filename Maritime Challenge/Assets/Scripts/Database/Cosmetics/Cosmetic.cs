@@ -8,12 +8,12 @@ public class Cosmetic
     public int CosmeticBodyPartID;
     public string CosmeticName;
     public int CosmeticPrice;
-    public CosmeticRarity CosmeticRarity;
-    public CosmeticType CosmeticBodyPartType;
+    public COSMETIC_RARITY CosmeticRarity;
+    public COSMETIC_TYPE CosmeticBodyPartType;
 
     public AvatarCosmetic LinkedCosmetic;
 
-    public Cosmetic(int cosmeticID, string name, int price, CosmeticRarity rarity, CosmeticType bodyPartType)
+    public Cosmetic(int cosmeticID, string name, int price, COSMETIC_RARITY rarity, COSMETIC_TYPE bodyPartType)
     {
         CosmeticID = cosmeticID;
         CosmeticName = name;
@@ -23,7 +23,7 @@ public class Cosmetic
     }
 }
 
-public enum CosmeticRarity
+public enum COSMETIC_RARITY
 { 
     COMMON,
     RARE,
@@ -32,7 +32,7 @@ public enum CosmeticRarity
     NO_COSMETIC_RARITY
 }
 
-public enum CosmeticType
+public enum COSMETIC_TYPE
 {
     HAIR = 0,
     HEADWEAR = 1,

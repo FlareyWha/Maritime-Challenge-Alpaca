@@ -16,7 +16,7 @@ public class AvatarCustomisationManager : MonoBehaviourSingleton<AvatarCustomisa
     private AvatarDisplay displayAvatar;
 
 
-    private AvatarItemUI[] currentEquippedItem = new AvatarItemUI[(int)CosmeticType.NUM_TOTAL];
+    private AvatarItemUI[] currentEquippedItem = new AvatarItemUI[(int)COSMETIC_TYPE.NUM_TOTAL];
 
     void Start()
     {
@@ -59,7 +59,7 @@ public class AvatarCustomisationManager : MonoBehaviourSingleton<AvatarCustomisa
         }
     }
      
-    private void UpdateInventoryRect(CosmeticType type)
+    private void UpdateInventoryRect(COSMETIC_TYPE type)
     {
         // Clear
         Transform rect = CustomisablesRect[(int)type];
@@ -94,15 +94,15 @@ public class AvatarCustomisationManager : MonoBehaviourSingleton<AvatarCustomisa
 
         switch (cos.CosmeticBodyPartType)
         {
-            case CosmeticType.HAIR:
-                MyAvatar.avatarParts[(int)BodyPartType.HAIR_FRONT].cosmetic = cos.LinkedCosmetic;
-                PlayerData.CommandsHandler.SendAvatarChanged(BodyPartType.HAIR_FRONT, cos.CosmeticBodyPartID);
-                MyAvatar.avatarParts[(int)BodyPartType.HAIR_BACK].cosmetic = cos.LinkedCosmetic;
-                PlayerData.CommandsHandler.SendAvatarChanged(BodyPartType.HAIR_BACK, cos.CosmeticBodyPartID);
+            case COSMETIC_TYPE.HAIR:
+                MyAvatar.avatarParts[(int)BODY_PART_TYPE.HAIR_FRONT].cosmetic = cos.LinkedCosmetic;
+                PlayerData.CommandsHandler.SendAvatarChanged(BODY_PART_TYPE.HAIR_FRONT, cos.CosmeticBodyPartID);
+                MyAvatar.avatarParts[(int)BODY_PART_TYPE.HAIR_BACK].cosmetic = cos.LinkedCosmetic;
+                PlayerData.CommandsHandler.SendAvatarChanged(BODY_PART_TYPE.HAIR_BACK, cos.CosmeticBodyPartID);
                 break;
             default:
                 MyAvatar.avatarParts[(int)cos.CosmeticBodyPartType].cosmetic = cos.LinkedCosmetic;
-                PlayerData.CommandsHandler.SendAvatarChanged((BodyPartType)cos.CosmeticBodyPartType, cos.CosmeticBodyPartID);
+                PlayerData.CommandsHandler.SendAvatarChanged((BODY_PART_TYPE)cos.CosmeticBodyPartType, cos.CosmeticBodyPartID);
                 break;
         }
         

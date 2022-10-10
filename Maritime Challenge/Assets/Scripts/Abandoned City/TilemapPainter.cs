@@ -26,7 +26,7 @@ public class TilemapPainter : MonoBehaviour
         
     }
 
-    public void PaintTiles(Vector3Int gridMovementAreaLowerLimit, Vector3Int gridMovementAreaUpperLimit, TileType tileType)
+    public void PaintTiles(Vector3Int gridMovementAreaLowerLimit, Vector3Int gridMovementAreaUpperLimit, TILE_TYPE tileType)
     {
         Tile groundTile, foregroundTile;
 
@@ -50,7 +50,7 @@ public class TilemapPainter : MonoBehaviour
     }
 }
 
-public enum TileType
+public enum TILE_TYPE   
 {
     GUILD1,
     GUILD2,
