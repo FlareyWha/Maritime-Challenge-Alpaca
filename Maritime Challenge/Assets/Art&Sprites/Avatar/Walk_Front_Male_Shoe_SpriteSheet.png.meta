@@ -1,91 +1,91 @@
 fileFormatVersion: 2
-guid: 804be617257bf2243ac749f73748e3e9
+guid: 709307aaae056dc4e83fad9be1cddd50
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4130628695873986634
-    second: Walk_Front_Male_Shoes_SpriteSheet_0
+      213: -7260700496174145345
+    second: Walk_Front_MaleShoeTest_0
   - first:
-      213: 2849385238122997109
-    second: Walk_Front_Male_Shoes_SpriteSheet_1
+      213: 3255253597047401042
+    second: Walk_Front_MaleShoeTest_1
   - first:
-      213: -1838204552349408850
-    second: Walk_Front_Male_Shoes_SpriteSheet_2
+      213: -5571928912064343806
+    second: Walk_Front_MaleShoeTest_2
   - first:
-      213: 1663518645571030533
-    second: Walk_Front_Male_Shoes_SpriteSheet_3
+      213: 8437840440761832183
+    second: Walk_Front_MaleShoeTest_3
   - first:
-      213: 8804456892026841689
-    second: Walk_Front_Male_Shoes_SpriteSheet_4
+      213: -1689000714764840817
+    second: Walk_Front_MaleShoeTest_4
   - first:
-      213: -8995855608134977628
-    second: Walk_Front_Male_Shoes_SpriteSheet_5
+      213: -4158846464401580717
+    second: Walk_Front_MaleShoeTest_5
   - first:
-      213: -6071253068368844814
-    second: Walk_Front_Male_Shoes_SpriteSheet_6
+      213: 947362601632209477
+    second: Walk_Front_MaleShoeTest_6
   - first:
-      213: -8852284146444789017
-    second: Walk_Front_Male_Shoes_SpriteSheet_7
+      213: 647902783511578967
+    second: Walk_Front_MaleShoeTest_7
   - first:
-      213: 106148685355543093
-    second: Walk_Front_Male_Shoes_SpriteSheet_8
+      213: 1217189243645911332
+    second: Walk_Front_MaleShoeTest_8
   - first:
-      213: 4450024596148148321
-    second: Walk_Front_Male_Shoes_SpriteSheet_9
+      213: -1138977731504781428
+    second: Walk_Front_MaleShoeTest_9
   - first:
-      213: -8512554847047452754
-    second: Walk_Front_Male_Shoes_SpriteSheet_10
+      213: 7176351296592352958
+    second: Walk_Front_MaleShoeTest_10
   - first:
-      213: -7847479908678073976
-    second: Walk_Front_Male_Shoes_SpriteSheet_11
+      213: -3986550693758444760
+    second: Walk_Front_MaleShoeTest_11
   - first:
-      213: -8107040308026118988
-    second: Walk_Front_Male_Shoes_SpriteSheet_12
+      213: -2980235470001960411
+    second: Walk_Front_MaleShoeTest_12
   - first:
-      213: 5482952005962583518
-    second: Walk_Front_Male_Shoes_SpriteSheet_13
+      213: 3214143888996598882
+    second: Walk_Front_MaleShoeTest_13
   - first:
-      213: 9032335142526189292
-    second: Walk_Front_Male_Shoes_SpriteSheet_14
+      213: 6129966062209309369
+    second: Walk_Front_MaleShoeTest_14
   - first:
-      213: -9021969963569711507
-    second: Walk_Front_Male_Shoes_SpriteSheet_15
+      213: -5465449817398355538
+    second: Walk_Front_MaleShoeTest_15
   - first:
-      213: 5343963914746700135
-    second: Walk_Front_Male_Shoes_SpriteSheet_16
+      213: 5476607999250227667
+    second: Walk_Front_MaleShoeTest_16
   - first:
-      213: 2755734501019048484
-    second: Walk_Front_Male_Shoes_SpriteSheet_17
+      213: -574879379257681069
+    second: Walk_Front_MaleShoeTest_17
   - first:
-      213: -1031302944586007902
-    second: Walk_Front_Male_Shoes_SpriteSheet_18
+      213: -3866672269906037186
+    second: Walk_Front_MaleShoeTest_18
   - first:
-      213: -598709482688448297
-    second: Walk_Front_Male_Shoes_SpriteSheet_19
+      213: -8488244914520327723
+    second: Walk_Front_MaleShoeTest_19
   - first:
-      213: -6520534501062185496
-    second: Walk_Front_Male_Shoes_SpriteSheet_20
+      213: 8909738790318751554
+    second: Walk_Front_MaleShoeTest_20
   - first:
-      213: 3654049458896276496
-    second: Walk_Front_Male_Shoes_SpriteSheet_21
+      213: 1118548892181042210
+    second: Walk_Front_MaleShoeTest_21
   - first:
-      213: -1621855417833420609
-    second: Walk_Front_Male_Shoes_SpriteSheet_22
+      213: -5782940427754311404
+    second: Walk_Front_MaleShoeTest_22
   - first:
-      213: -8226700887260860462
-    second: Walk_Front_Male_Shoes_SpriteSheet_23
+      213: -3393238367523551811
+    second: Walk_Front_MaleShoeTest_23
   - first:
-      213: 7993615227372376015
-    second: Walk_Front_Male_Shoes_SpriteSheet_24
+      213: -6265284512153595556
+    second: Walk_Front_MaleShoeTest_24
   - first:
-      213: -8778241655685561856
-    second: Walk_Front_Male_Shoes_SpriteSheet_25
+      213: -7274564389066356460
+    second: Walk_Front_MaleShoeTest_25
   - first:
-      213: -7866140444746154865
-    second: Walk_Front_Male_Shoes_SpriteSheet_26
+      213: -113791791663447712
+    second: Walk_Front_MaleShoeTest_26
   - first:
-      213: 2086630025628719333
-    second: Walk_Front_Male_Shoes_SpriteSheet_27
+      213: -9090066022601392900
+    second: Walk_Front_MaleShoeTest_27
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -171,17 +171,41 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Walk_Front_Male_Shoes_SpriteSheet_0
+      name: Walk_Front_MaleShoeTest_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 1648
+        y: 1638
         width: 256
-        height: 400
+        height: 410
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,20 +213,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a40aa94f9e0f25930800000000000000
-      internalID: 4130628695873986634
+      spriteID: fb0a9091e5fcc3b90800000000000000
+      internalID: -7260700496174145345
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Front_Male_Shoes_SpriteSheet_1
+      name: Walk_Front_MaleShoeTest_1
       rect:
         serializedVersion: 2
         x: 256
-        y: 1648
+        y: 1638
         width: 256
-        height: 400
+        height: 410
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -210,20 +234,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 575209207cc0b8720800000000000000
-      internalID: 2849385238122997109
+      spriteID: 25aa2d146ebfc2d20800000000000000
+      internalID: 3255253597047401042
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Front_Male_Shoes_SpriteSheet_2
+      name: Walk_Front_MaleShoeTest_2
       rect:
         serializedVersion: 2
         x: 512
-        y: 1648
+        y: 1638
         width: 256
-        height: 400
+        height: 410
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -231,20 +255,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea125b8e2b26d76e0800000000000000
-      internalID: -1838204552349408850
+      spriteID: 2011da20d288ca2b0800000000000000
+      internalID: -5571928912064343806
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Front_Male_Shoes_SpriteSheet_3
+      name: Walk_Front_MaleShoeTest_3
       rect:
         serializedVersion: 2
         x: 768
-        y: 1648
+        y: 1638
         width: 256
-        height: 400
+        height: 410
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -252,20 +276,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50e008af461061710800000000000000
-      internalID: 1663518645571030533
+      spriteID: 7f2d80fdc2b391570800000000000000
+      internalID: 8437840440761832183
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Front_Male_Shoes_SpriteSheet_4
+      name: Walk_Front_MaleShoeTest_4
       rect:
         serializedVersion: 2
         x: 1024
-        y: 1648
+        y: 1638
         width: 256
-        height: 400
+        height: 410
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -273,20 +297,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95aef7135e6bf2a70800000000000000
-      internalID: 8804456892026841689
+      spriteID: f809f037cc67f88e0800000000000000
+      internalID: -1689000714764840817
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Front_Male_Shoes_SpriteSheet_5
+      name: Walk_Front_MaleShoeTest_5
       rect:
         serializedVersion: 2
         x: 1280
-        y: 1648
+        y: 1638
         width: 256
-        height: 400
+        height: 410
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -294,20 +318,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a7b86a8cfc482380800000000000000
-      internalID: -8995855608134977628
+      spriteID: 35d54f5dc2fc846c0800000000000000
+      internalID: -4158846464401580717
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Front_Male_Shoes_SpriteSheet_6
+      name: Walk_Front_MaleShoeTest_6
       rect:
         serializedVersion: 2
         x: 1536
-        y: 1648
+        y: 1638
         width: 256
-        height: 400
+        height: 410
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -315,20 +339,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f7ef5e40839ebba0800000000000000
-      internalID: -6071253068368844814
+      spriteID: 54a17cf4445b52d00800000000000000
+      internalID: 947362601632209477
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Front_Male_Shoes_SpriteSheet_7
+      name: Walk_Front_MaleShoeTest_7
       rect:
         serializedVersion: 2
         x: 1792
-        y: 1648
+        y: 1638
         width: 256
-        height: 400
+        height: 410
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -336,20 +360,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7ea1650687e562580800000000000000
-      internalID: -8852284146444789017
+      spriteID: 759c13c1620ddf800800000000000000
+      internalID: 647902783511578967
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Front_Male_Shoes_SpriteSheet_8
+      name: Walk_Front_MaleShoeTest_8
       rect:
         serializedVersion: 2
         x: 0
-        y: 1248
+        y: 1228
         width: 256
-        height: 400
+        height: 410
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -357,20 +381,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 53aedfbbaad197100800000000000000
-      internalID: 106148685355543093
+      spriteID: 421e0fb0b2354e010800000000000000
+      internalID: 1217189243645911332
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Front_Male_Shoes_SpriteSheet_9
+      name: Walk_Front_MaleShoeTest_9
       rect:
         serializedVersion: 2
         x: 256
-        y: 1248
+        y: 1228
         width: 256
-        height: 400
+        height: 410
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -378,20 +402,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 168592ffac9a1cd30800000000000000
-      internalID: 4450024596148148321
+      spriteID: c87c39aa9c98130f0800000000000000
+      internalID: -1138977731504781428
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Front_Male_Shoes_SpriteSheet_10
+      name: Walk_Front_MaleShoeTest_10
       rect:
         serializedVersion: 2
         x: 512
-        y: 1248
+        y: 1228
         width: 256
-        height: 400
+        height: 410
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -399,20 +423,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea7f4b2d7745dd980800000000000000
-      internalID: -8512554847047452754
+      spriteID: eb61dc87b75879360800000000000000
+      internalID: 7176351296592352958
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Front_Male_Shoes_SpriteSheet_11
+      name: Walk_Front_MaleShoeTest_11
       rect:
         serializedVersion: 2
         x: 768
-        y: 1248
+        y: 1228
         width: 256
-        height: 400
+        height: 410
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -420,20 +444,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8818a3dc996281390800000000000000
-      internalID: -7847479908678073976
+      spriteID: 82bd073044deca8c0800000000000000
+      internalID: -3986550693758444760
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Front_Male_Shoes_SpriteSheet_12
+      name: Walk_Front_MaleShoeTest_12
       rect:
         serializedVersion: 2
         x: 1024
-        y: 1248
+        y: 1228
         width: 256
-        height: 400
+        height: 410
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -441,20 +465,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4bc6454fac10e7f80800000000000000
-      internalID: -8107040308026118988
+      spriteID: 52a838741a314a6d0800000000000000
+      internalID: -2980235470001960411
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Front_Male_Shoes_SpriteSheet_13
+      name: Walk_Front_MaleShoeTest_13
       rect:
         serializedVersion: 2
         x: 1280
-        y: 1248
+        y: 1228
         width: 256
-        height: 400
+        height: 410
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -462,20 +486,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: edd4aebaccb571c40800000000000000
-      internalID: 5482952005962583518
+      spriteID: 26482a876deea9c20800000000000000
+      internalID: 3214143888996598882
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Front_Male_Shoes_SpriteSheet_14
+      name: Walk_Front_MaleShoeTest_14
       rect:
         serializedVersion: 2
         x: 1536
-        y: 1248
+        y: 1228
         width: 256
-        height: 400
+        height: 410
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -483,20 +507,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ceefc8ee4fc495d70800000000000000
-      internalID: 9032335142526189292
+      spriteID: 9ba9f27d7a3021550800000000000000
+      internalID: 6129966062209309369
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Front_Male_Shoes_SpriteSheet_15
+      name: Walk_Front_MaleShoeTest_15
       rect:
         serializedVersion: 2
         x: 1792
-        y: 1248
+        y: 1228
         width: 256
-        height: 400
+        height: 410
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -504,20 +528,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d66fe2b5e168bc280800000000000000
-      internalID: -9021969963569711507
+      spriteID: ea95f382952d624b0800000000000000
+      internalID: -5465449817398355538
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Front_Male_Shoes_SpriteSheet_16
+      name: Walk_Front_MaleShoeTest_16
       rect:
         serializedVersion: 2
         x: 0
-        y: 848
+        y: 818
         width: 256
-        height: 400
+        height: 410
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -525,20 +549,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 761abfeedd2992a40800000000000000
-      internalID: 5343963914746700135
+      spriteID: 3d16f5185f1d00c40800000000000000
+      internalID: 5476607999250227667
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Front_Male_Shoes_SpriteSheet_17
+      name: Walk_Front_MaleShoeTest_17
       rect:
         serializedVersion: 2
         x: 256
-        y: 848
+        y: 818
         width: 256
-        height: 400
+        height: 410
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -546,20 +570,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 42a578c9de55e3620800000000000000
-      internalID: 2755734501019048484
+      spriteID: 35b16aa104e9508f0800000000000000
+      internalID: -574879379257681069
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Front_Male_Shoes_SpriteSheet_18
+      name: Walk_Front_MaleShoeTest_18
       rect:
         serializedVersion: 2
         x: 512
-        y: 848
+        y: 818
         width: 256
-        height: 400
+        height: 410
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -567,20 +591,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2aaf22c9f6310b1f0800000000000000
-      internalID: -1031302944586007902
+      spriteID: e36b5699e02d65ac0800000000000000
+      internalID: -3866672269906037186
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Front_Male_Shoes_SpriteSheet_19
+      name: Walk_Front_MaleShoeTest_19
       rect:
         serializedVersion: 2
         x: 768
-        y: 848
+        y: 818
         width: 256
-        height: 400
+        height: 410
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -588,20 +612,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d872b8c5e4f0b7f0800000000000000
-      internalID: -598709482688448297
+      spriteID: 5d9ff7f0932b33a80800000000000000
+      internalID: -8488244914520327723
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Front_Male_Shoes_SpriteSheet_20
+      name: Walk_Front_MaleShoeTest_20
       rect:
         serializedVersion: 2
         x: 1024
-        y: 848
+        y: 818
         width: 256
-        height: 400
+        height: 410
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -609,20 +633,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ed62862b686285a0800000000000000
-      internalID: -6520534501062185496
+      spriteID: 24fb7765930c5ab70800000000000000
+      internalID: 8909738790318751554
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Front_Male_Shoes_SpriteSheet_21
+      name: Walk_Front_MaleShoeTest_21
       rect:
         serializedVersion: 2
         x: 1280
-        y: 848
+        y: 818
         width: 256
-        height: 400
+        height: 410
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -630,20 +654,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 01c88357f9ac5b230800000000000000
-      internalID: 3654049458896276496
+      spriteID: 2249b568a42e58f00800000000000000
+      internalID: 1118548892181042210
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Front_Male_Shoes_SpriteSheet_22
+      name: Walk_Front_MaleShoeTest_22
       rect:
         serializedVersion: 2
         x: 1536
-        y: 848
+        y: 818
         width: 256
-        height: 400
+        height: 410
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -651,20 +675,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb80ff627130e79e0800000000000000
-      internalID: -1621855417833420609
+      spriteID: 411757ef15edebfa0800000000000000
+      internalID: -5782940427754311404
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Front_Male_Shoes_SpriteSheet_23
+      name: Walk_Front_MaleShoeTest_23
       rect:
         serializedVersion: 2
         x: 1792
-        y: 848
+        y: 818
         width: 256
-        height: 400
+        height: 410
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -672,20 +696,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2dfec654123e4dd80800000000000000
-      internalID: -8226700887260860462
+      spriteID: db54881deabc8e0d0800000000000000
+      internalID: -3393238367523551811
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Front_Male_Shoes_SpriteSheet_24
+      name: Walk_Front_MaleShoeTest_24
       rect:
         serializedVersion: 2
         x: 0
-        y: 448
+        y: 408
         width: 256
-        height: 400
+        height: 410
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -693,20 +717,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fcf0fa282b60fee60800000000000000
-      internalID: 7993615227372376015
+      spriteID: c51145c5eec3d09a0800000000000000
+      internalID: -6265284512153595556
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Front_Male_Shoes_SpriteSheet_25
+      name: Walk_Front_MaleShoeTest_25
       rect:
         serializedVersion: 2
         x: 256
-        y: 448
+        y: 408
         width: 256
-        height: 400
+        height: 410
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -714,20 +738,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 002435829bb6d2680800000000000000
-      internalID: -8778241655685561856
+      spriteID: 4194efdfa3e8b0b90800000000000000
+      internalID: -7274564389066356460
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Front_Male_Shoes_SpriteSheet_26
+      name: Walk_Front_MaleShoeTest_26
       rect:
         serializedVersion: 2
         x: 512
-        y: 448
+        y: 408
         width: 256
-        height: 400
+        height: 410
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -735,20 +759,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f8c729d21fad5d290800000000000000
-      internalID: -7866140444746154865
+      spriteID: 0618b87e7fabb6ef0800000000000000
+      internalID: -113791791663447712
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Front_Male_Shoes_SpriteSheet_27
+      name: Walk_Front_MaleShoeTest_27
       rect:
         serializedVersion: 2
         x: 768
-        y: 448
+        y: 408
         width: 256
-        height: 400
+        height: 410
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -756,8 +780,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e8934fe3f235fc10800000000000000
-      internalID: 2086630025628719333
+      spriteID: cfcfef91d1999d180800000000000000
+      internalID: -9090066022601392900
       vertices: []
       indices: 
       edges: []
