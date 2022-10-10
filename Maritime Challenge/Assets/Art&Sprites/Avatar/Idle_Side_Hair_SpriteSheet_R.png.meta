@@ -1,70 +1,70 @@
 fileFormatVersion: 2
-guid: 0ff665189ed12c2419698df4c435141e
+guid: c4491a054e1278442910e8f1e99cb84f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7806668144784411619
-    second: Idle_Side_Hair_SpriteSheet_R_0
+      213: 1958148600058190667
+    second: Idle_Side_MaleHair_R_Test_0
   - first:
-      213: -1616709432905324723
-    second: Idle_Side_Hair_SpriteSheet_R_1
+      213: -1272791720034518295
+    second: Idle_Side_MaleHair_R_Test_1
   - first:
-      213: -4146782050490072409
-    second: Idle_Side_Hair_SpriteSheet_R_2
+      213: 1846037918023753860
+    second: Idle_Side_MaleHair_R_Test_2
   - first:
-      213: 7823703793871847644
-    second: Idle_Side_Hair_SpriteSheet_R_3
+      213: -5030545265871907313
+    second: Idle_Side_MaleHair_R_Test_3
   - first:
-      213: 968696782016169328
-    second: Idle_Side_Hair_SpriteSheet_R_4
+      213: 3294497875993025946
+    second: Idle_Side_MaleHair_R_Test_4
   - first:
-      213: 2229997187773883582
-    second: Idle_Side_Hair_SpriteSheet_R_5
+      213: -6410550553937325410
+    second: Idle_Side_MaleHair_R_Test_5
   - first:
-      213: -6757269258483688735
-    second: Idle_Side_Hair_SpriteSheet_R_6
+      213: 2240118160702056816
+    second: Idle_Side_MaleHair_R_Test_6
   - first:
-      213: -8870239338797442997
-    second: Idle_Side_Hair_SpriteSheet_R_7
+      213: -328465541856767760
+    second: Idle_Side_MaleHair_R_Test_7
   - first:
-      213: -2837816878105886406
-    second: Idle_Side_Hair_SpriteSheet_R_8
+      213: -5430156919151703981
+    second: Idle_Side_MaleHair_R_Test_8
   - first:
-      213: -5391702410362193092
-    second: Idle_Side_Hair_SpriteSheet_R_9
+      213: 9003910966192640719
+    second: Idle_Side_MaleHair_R_Test_9
   - first:
-      213: -3821680503553342748
-    second: Idle_Side_Hair_SpriteSheet_R_10
+      213: 7552711766215934216
+    second: Idle_Side_MaleHair_R_Test_10
   - first:
-      213: -4281642145075767343
-    second: Idle_Side_Hair_SpriteSheet_R_11
+      213: 473392181847029208
+    second: Idle_Side_MaleHair_R_Test_11
   - first:
-      213: 9015161881472204610
-    second: Idle_Side_Hair_SpriteSheet_R_12
+      213: -8459092991270350886
+    second: Idle_Side_MaleHair_R_Test_12
   - first:
-      213: 1178714020394650388
-    second: Idle_Side_Hair_SpriteSheet_R_13
+      213: 8010192253206558326
+    second: Idle_Side_MaleHair_R_Test_13
   - first:
-      213: 900203202601632656
-    second: Idle_Side_Hair_SpriteSheet_R_14
+      213: 8628966569675528889
+    second: Idle_Side_MaleHair_R_Test_14
   - first:
-      213: -7107195918342110064
-    second: Idle_Side_Hair_SpriteSheet_R_15
+      213: 5983741295362454763
+    second: Idle_Side_MaleHair_R_Test_15
   - first:
-      213: 3685708722235502708
-    second: Idle_Side_Hair_SpriteSheet_R_16
+      213: 4992744548632272944
+    second: Idle_Side_MaleHair_R_Test_16
   - first:
-      213: -8756307839538812058
-    second: Idle_Side_Hair_SpriteSheet_R_17
+      213: -6642703945597484838
+    second: Idle_Side_MaleHair_R_Test_17
   - first:
-      213: 612951055632169117
-    second: Idle_Side_Hair_SpriteSheet_R_18
+      213: -851475085775310645
+    second: Idle_Side_MaleHair_R_Test_18
   - first:
-      213: 8681410509018626632
-    second: Idle_Side_Hair_SpriteSheet_R_19
+      213: -8867803748078651682
+    second: Idle_Side_MaleHair_R_Test_19
   - first:
-      213: 3749123138283699769
-    second: Idle_Side_Hair_SpriteSheet_R_20
+      213: -8949193854908365166
+    second: Idle_Side_MaleHair_R_Test_20
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -150,11 +150,35 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle_Side_Hair_SpriteSheet_R_0
+      name: Idle_Side_MaleHair_R_Test_0
       rect:
         serializedVersion: 2
         x: 0
@@ -168,14 +192,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3eb8b31f05bd65c60800000000000000
-      internalID: 7806668144784411619
+      spriteID: b4b95ebe6cdbc2b10800000000000000
+      internalID: 1958148600058190667
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Side_Hair_SpriteSheet_R_1
+      name: Idle_Side_MaleHair_R_Test_1
       rect:
         serializedVersion: 2
         x: 256
@@ -189,14 +213,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d47a7a2265b4099e0800000000000000
-      internalID: -1616709432905324723
+      spriteID: 9eab8469ca2265ee0800000000000000
+      internalID: -1272791720034518295
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Side_Hair_SpriteSheet_R_2
+      name: Idle_Side_MaleHair_R_Test_2
       rect:
         serializedVersion: 2
         x: 512
@@ -210,14 +234,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a2c29712bba376c0800000000000000
-      internalID: -4146782050490072409
+      spriteID: 48025b9a4b17e9910800000000000000
+      internalID: 1846037918023753860
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Side_Hair_SpriteSheet_R_3
+      name: Idle_Side_MaleHair_R_Test_3
       rect:
         serializedVersion: 2
         x: 768
@@ -231,14 +255,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd08b951621639c60800000000000000
-      internalID: 7823703793871847644
+      spriteID: f069e21dbb9ef2ab0800000000000000
+      internalID: -5030545265871907313
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Side_Hair_SpriteSheet_R_4
+      name: Idle_Side_MaleHair_R_Test_4
       rect:
         serializedVersion: 2
         x: 1024
@@ -252,14 +276,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07543234790817d00800000000000000
-      internalID: 968696782016169328
+      spriteID: a9dd7dbfc5868bd20800000000000000
+      internalID: 3294497875993025946
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Side_Hair_SpriteSheet_R_5
+      name: Idle_Side_MaleHair_R_Test_5
       rect:
         serializedVersion: 2
         x: 1280
@@ -273,14 +297,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb4e16390aa82fe10800000000000000
-      internalID: 2229997187773883582
+      spriteID: e92d1e95c362907a0800000000000000
+      internalID: -6410550553937325410
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Side_Hair_SpriteSheet_R_6
+      name: Idle_Side_MaleHair_R_Test_6
       rect:
         serializedVersion: 2
         x: 1536
@@ -294,14 +318,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ea9964396b5932a0800000000000000
-      internalID: -6757269258483688735
+      spriteID: 0792c87399f761f10800000000000000
+      internalID: 2240118160702056816
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Side_Hair_SpriteSheet_R_7
+      name: Idle_Side_MaleHair_R_Test_7
       rect:
         serializedVersion: 2
         x: 1792
@@ -315,14 +339,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b485842615496e480800000000000000
-      internalID: -8870239338797442997
+      spriteID: 0f0dba8745e017bf0800000000000000
+      internalID: -328465541856767760
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Side_Hair_SpriteSheet_R_8
+      name: Idle_Side_MaleHair_R_Test_8
       rect:
         serializedVersion: 2
         x: 0
@@ -336,14 +360,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3104e2b59c0e98d0800000000000000
-      internalID: -2837816878105886406
+      spriteID: 358455f5d0534a4b0800000000000000
+      internalID: -5430156919151703981
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Side_Hair_SpriteSheet_R_9
+      name: Idle_Side_MaleHair_R_Test_9
       rect:
         serializedVersion: 2
         x: 256
@@ -357,14 +381,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3b7eb76933dc25b0800000000000000
-      internalID: -5391702410362193092
+      spriteID: fc21829a15154fc70800000000000000
+      internalID: 9003910966192640719
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Side_Hair_SpriteSheet_R_10
+      name: Idle_Side_MaleHair_R_Test_10
       rect:
         serializedVersion: 2
         x: 512
@@ -378,14 +402,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e2caa484d9a6fac0800000000000000
-      internalID: -3821680503553342748
+      spriteID: 801c63cd55f90d860800000000000000
+      internalID: 7552711766215934216
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Side_Hair_SpriteSheet_R_11
+      name: Idle_Side_MaleHair_R_Test_11
       rect:
         serializedVersion: 2
         x: 768
@@ -399,14 +423,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d7da67772d8494c0800000000000000
-      internalID: -4281642145075767343
+      spriteID: 8d570766ea3d19600800000000000000
+      internalID: 473392181847029208
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Side_Hair_SpriteSheet_R_12
+      name: Idle_Side_MaleHair_R_Test_12
       rect:
         serializedVersion: 2
         x: 1024
@@ -420,14 +444,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 24ffac187f94c1d70800000000000000
-      internalID: 9015161881472204610
+      spriteID: adf855d1eb34b9a80800000000000000
+      internalID: -8459092991270350886
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Side_Hair_SpriteSheet_R_13
+      name: Idle_Side_MaleHair_R_Test_13
       rect:
         serializedVersion: 2
         x: 1280
@@ -441,14 +465,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41b456d0822ab5010800000000000000
-      internalID: 1178714020394650388
+      spriteID: 67676fa1a6be92f60800000000000000
+      internalID: 8010192253206558326
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Side_Hair_SpriteSheet_R_14
+      name: Idle_Side_MaleHair_R_Test_14
       rect:
         serializedVersion: 2
         x: 1536
@@ -462,14 +486,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0934db41b0a2e7c00800000000000000
-      internalID: 900203202601632656
+      spriteID: 9ba1b3c706f30c770800000000000000
+      internalID: 8628966569675528889
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Side_Hair_SpriteSheet_R_15
+      name: Idle_Side_MaleHair_R_Test_15
       rect:
         serializedVersion: 2
         x: 1792
@@ -483,14 +507,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 094cc12c7fa2e5d90800000000000000
-      internalID: -7107195918342110064
+      spriteID: be43ae141058a0350800000000000000
+      internalID: 5983741295362454763
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Side_Hair_SpriteSheet_R_16
+      name: Idle_Side_MaleHair_R_Test_16
       rect:
         serializedVersion: 2
         x: 0
@@ -504,14 +528,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 470f76e1e84462330800000000000000
-      internalID: 3685708722235502708
+      spriteID: 030ae7bd6bac94540800000000000000
+      internalID: 4992744548632272944
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Side_Hair_SpriteSheet_R_17
+      name: Idle_Side_MaleHair_R_Test_17
       rect:
         serializedVersion: 2
         x: 256
@@ -525,14 +549,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 66b2250b9685b7680800000000000000
-      internalID: -8756307839538812058
+      spriteID: ad0839eb4ff50d3a0800000000000000
+      internalID: -6642703945597484838
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Side_Hair_SpriteSheet_R_18
+      name: Idle_Side_MaleHair_R_Test_18
       rect:
         serializedVersion: 2
         x: 512
@@ -546,14 +570,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d98f7afccb3a18800800000000000000
-      internalID: 612951055632169117
+      spriteID: bc07449bbe3fe24f0800000000000000
+      internalID: -851475085775310645
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Side_Hair_SpriteSheet_R_19
+      name: Idle_Side_MaleHair_R_Test_19
       rect:
         serializedVersion: 2
         x: 768
@@ -567,14 +591,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 84af563acd09a7870800000000000000
-      internalID: 8681410509018626632
+      spriteID: ed6f4e9897b3fe480800000000000000
+      internalID: -8867803748078651682
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Side_Hair_SpriteSheet_R_20
+      name: Idle_Side_MaleHair_R_Test_20
       rect:
         serializedVersion: 2
         x: 1024
@@ -588,8 +612,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 93ef89c61af870430800000000000000
-      internalID: 3749123138283699769
+      spriteID: 29604149a931ec380800000000000000
+      internalID: -8949193854908365166
       vertices: []
       indices: 
       edges: []
