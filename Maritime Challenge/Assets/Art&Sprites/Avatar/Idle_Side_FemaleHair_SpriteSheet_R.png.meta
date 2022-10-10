@@ -1,70 +1,70 @@
 fileFormatVersion: 2
-guid: 19337f9b381a7074a9f86295f76f4128
+guid: d74de9616868baf4392e738bdd6fb3a1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4358876181414402563
-    second: Idle_Side_FemaleHair_SpriteSheet_R_0
+      213: -951214386835146785
+    second: Idle_Side_FemaleHair_R_TEST_0
   - first:
-      213: -7908571666427781258
-    second: Idle_Side_FemaleHair_SpriteSheet_R_1
+      213: -2746469898128735688
+    second: Idle_Side_FemaleHair_R_TEST_1
   - first:
-      213: 4861367876637449236
-    second: Idle_Side_FemaleHair_SpriteSheet_R_2
+      213: -5280057553031217895
+    second: Idle_Side_FemaleHair_R_TEST_2
   - first:
-      213: -8416890473447451586
-    second: Idle_Side_FemaleHair_SpriteSheet_R_3
+      213: -2032637941358999678
+    second: Idle_Side_FemaleHair_R_TEST_3
   - first:
-      213: -3046134037751075077
-    second: Idle_Side_FemaleHair_SpriteSheet_R_4
+      213: 8432517238204158096
+    second: Idle_Side_FemaleHair_R_TEST_4
   - first:
-      213: 6051829318570781708
-    second: Idle_Side_FemaleHair_SpriteSheet_R_5
+      213: -2540950522739245644
+    second: Idle_Side_FemaleHair_R_TEST_5
   - first:
-      213: -8723764259889569626
-    second: Idle_Side_FemaleHair_SpriteSheet_R_6
+      213: 5121037534980462249
+    second: Idle_Side_FemaleHair_R_TEST_6
   - first:
-      213: -1450042948437849464
-    second: Idle_Side_FemaleHair_SpriteSheet_R_7
+      213: 3860298517201053327
+    second: Idle_Side_FemaleHair_R_TEST_7
   - first:
-      213: -3649937300168471551
-    second: Idle_Side_FemaleHair_SpriteSheet_R_8
+      213: -3070705159870394835
+    second: Idle_Side_FemaleHair_R_TEST_8
   - first:
-      213: 277946932065419399
-    second: Idle_Side_FemaleHair_SpriteSheet_R_9
+      213: 4365172449675101184
+    second: Idle_Side_FemaleHair_R_TEST_9
   - first:
-      213: 4209307474089587146
-    second: Idle_Side_FemaleHair_SpriteSheet_R_10
+      213: 2548553640827026022
+    second: Idle_Side_FemaleHair_R_TEST_10
   - first:
-      213: 2216674986892912863
-    second: Idle_Side_FemaleHair_SpriteSheet_R_11
+      213: 8916744642455939159
+    second: Idle_Side_FemaleHair_R_TEST_11
   - first:
-      213: -2651942056959624625
-    second: Idle_Side_FemaleHair_SpriteSheet_R_12
+      213: -1635823680003006600
+    second: Idle_Side_FemaleHair_R_TEST_12
   - first:
-      213: 2837059167102857204
-    second: Idle_Side_FemaleHair_SpriteSheet_R_13
+      213: 7314674557485888023
+    second: Idle_Side_FemaleHair_R_TEST_13
   - first:
-      213: -115739490103408252
-    second: Idle_Side_FemaleHair_SpriteSheet_R_14
+      213: 7560820327453578122
+    second: Idle_Side_FemaleHair_R_TEST_14
   - first:
-      213: 7711185678360321498
-    second: Idle_Side_FemaleHair_SpriteSheet_R_15
+      213: -8847550023956139490
+    second: Idle_Side_FemaleHair_R_TEST_15
   - first:
-      213: -8237362077868651333
-    second: Idle_Side_FemaleHair_SpriteSheet_R_16
+      213: -3099941304566281953
+    second: Idle_Side_FemaleHair_R_TEST_16
   - first:
-      213: 6394018181662081796
-    second: Idle_Side_FemaleHair_SpriteSheet_R_17
+      213: 4133654897645658929
+    second: Idle_Side_FemaleHair_R_TEST_17
   - first:
-      213: 5936368715970593205
-    second: Idle_Side_FemaleHair_SpriteSheet_R_18
+      213: -1548894821040331080
+    second: Idle_Side_FemaleHair_R_TEST_18
   - first:
-      213: -3890025627184878880
-    second: Idle_Side_FemaleHair_SpriteSheet_R_19
+      213: -6137924777837051021
+    second: Idle_Side_FemaleHair_R_TEST_19
   - first:
-      213: 8114888100364474296
-    second: Idle_Side_FemaleHair_SpriteSheet_R_20
+      213: 6217124203833714752
+    second: Idle_Side_FemaleHair_R_TEST_20
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -150,16 +150,40 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle_Side_FemaleHair_SpriteSheet_R_0
+      name: Idle_Side_FemaleHair_R_TEST_0
       rect:
         serializedVersion: 2
         x: 0
         y: 1598
-        width: 210
+        width: 200
         height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -168,19 +192,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df522e215392283c0800000000000000
-      internalID: -4358876181414402563
+      spriteID: fd7337f0e8b9cc2f0800000000000000
+      internalID: -951214386835146785
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Side_FemaleHair_SpriteSheet_R_1
+      name: Idle_Side_FemaleHair_R_TEST_1
       rect:
         serializedVersion: 2
-        x: 210
+        x: 200
         y: 1598
-        width: 210
+        width: 200
         height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -189,19 +213,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 67f5ad588fb1f3290800000000000000
-      internalID: -7908571666427781258
+      spriteID: 832cbb7dd2492e9d0800000000000000
+      internalID: -2746469898128735688
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Side_FemaleHair_SpriteSheet_R_2
+      name: Idle_Side_FemaleHair_R_TEST_2
       rect:
         serializedVersion: 2
-        x: 420
+        x: 400
         y: 1598
-        width: 210
+        width: 200
         height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -210,19 +234,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41c5871c35c077340800000000000000
-      internalID: 4861367876637449236
+      spriteID: 91db4f561a779b6b0800000000000000
+      internalID: -5280057553031217895
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Side_FemaleHair_SpriteSheet_R_3
+      name: Idle_Side_FemaleHair_R_TEST_3
       rect:
         serializedVersion: 2
-        x: 630
+        x: 600
         y: 1598
-        width: 210
+        width: 200
         height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -231,19 +255,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e349bc085b2313b80800000000000000
-      internalID: -8416890473447451586
+      spriteID: 287c05ccf8e9ac3e0800000000000000
+      internalID: -2032637941358999678
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Side_FemaleHair_SpriteSheet_R_4
+      name: Idle_Side_FemaleHair_R_TEST_4
       rect:
         serializedVersion: 2
-        x: 840
+        x: 800
         y: 1598
-        width: 210
+        width: 200
         height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -252,19 +276,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bfeee955b35f9b5d0800000000000000
-      internalID: -3046134037751075077
+      spriteID: 090548130c1560570800000000000000
+      internalID: 8432517238204158096
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Side_FemaleHair_SpriteSheet_R_5
+      name: Idle_Side_FemaleHair_R_TEST_5
       rect:
         serializedVersion: 2
-        x: 1050
+        x: 1000
         y: 1598
-        width: 210
+        width: 200
         height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -273,19 +297,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0ca4b683ba6cf350800000000000000
-      internalID: 6051829318570781708
+      spriteID: 4bdb84c46fabcbcd0800000000000000
+      internalID: -2540950522739245644
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Side_FemaleHair_SpriteSheet_R_6
+      name: Idle_Side_FemaleHair_R_TEST_6
       rect:
         serializedVersion: 2
-        x: 1260
+        x: 1200
         y: 1598
-        width: 210
+        width: 200
         height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -294,19 +318,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a0a80940a6fee680800000000000000
-      internalID: -8723764259889569626
+      spriteID: 9a6d3f17184911740800000000000000
+      internalID: 5121037534980462249
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Side_FemaleHair_SpriteSheet_R_7
+      name: Idle_Side_FemaleHair_R_TEST_7
       rect:
         serializedVersion: 2
-        x: 1470
+        x: 1400
         y: 1598
-        width: 210
+        width: 200
         height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -315,19 +339,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88a4d4dfe9960ebe0800000000000000
-      internalID: -1450042948437849464
+      spriteID: f866cb47c09829530800000000000000
+      internalID: 3860298517201053327
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Side_FemaleHair_SpriteSheet_R_8
+      name: Idle_Side_FemaleHair_R_TEST_8
       rect:
         serializedVersion: 2
-        x: 1680
+        x: 1600
         y: 1598
-        width: 210
+        width: 200
         height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -336,19 +360,40 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 10c820b1d51d85dc0800000000000000
-      internalID: -3649937300168471551
+      spriteID: d2e47f72de9a265d0800000000000000
+      internalID: -3070705159870394835
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Side_FemaleHair_SpriteSheet_R_9
+      name: Idle_Side_FemaleHair_R_TEST_9
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 1598
+        width: 200
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 004c43e1735349c30800000000000000
+      internalID: 4365172449675101184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Side_FemaleHair_R_TEST_10
       rect:
         serializedVersion: 2
         x: 0
         y: 1148
-        width: 210
+        width: 200
         height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -357,19 +402,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7804b2813477bd300800000000000000
-      internalID: 277946932065419399
+      spriteID: 66af58498084e5320800000000000000
+      internalID: 2548553640827026022
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Side_FemaleHair_SpriteSheet_R_10
+      name: Idle_Side_FemaleHair_R_TEST_11
       rect:
         serializedVersion: 2
-        x: 210
+        x: 200
         y: 1148
-        width: 210
+        width: 200
         height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -378,19 +423,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac1b18788d67a6a30800000000000000
-      internalID: 4209307474089587146
+      spriteID: 75824766204aebb70800000000000000
+      internalID: 8916744642455939159
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Side_FemaleHair_SpriteSheet_R_11
+      name: Idle_Side_FemaleHair_R_TEST_12
       rect:
         serializedVersion: 2
-        x: 420
+        x: 400
         y: 1148
-        width: 210
+        width: 200
         height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -399,19 +444,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd8ee38f72633ce10800000000000000
-      internalID: 2216674986892912863
+      spriteID: 87f9f3ea7036c49e0800000000000000
+      internalID: -1635823680003006600
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Side_FemaleHair_SpriteSheet_R_12
+      name: Idle_Side_FemaleHair_R_TEST_13
       rect:
         serializedVersion: 2
-        x: 630
+        x: 600
         y: 1148
-        width: 210
+        width: 200
         height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -420,19 +465,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f4ab002ffb8623bd0800000000000000
-      internalID: -2651942056959624625
+      spriteID: 712b88651c1f28560800000000000000
+      internalID: 7314674557485888023
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Side_FemaleHair_SpriteSheet_R_13
+      name: Idle_Side_FemaleHair_R_TEST_14
       rect:
         serializedVersion: 2
-        x: 840
+        x: 800
         y: 1148
-        width: 210
+        width: 200
         height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -441,19 +486,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ff6ee5f7424f5720800000000000000
-      internalID: 2837059167102857204
+      spriteID: a835c64670e6de860800000000000000
+      internalID: 7560820327453578122
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Side_FemaleHair_SpriteSheet_R_14
+      name: Idle_Side_FemaleHair_R_TEST_15
       rect:
         serializedVersion: 2
-        x: 1050
+        x: 1000
         y: 1148
-        width: 210
+        width: 200
         height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -462,19 +507,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 489c6e50c8fc46ef0800000000000000
-      internalID: -115739490103408252
+      spriteID: e1278992120373580800000000000000
+      internalID: -8847550023956139490
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Side_FemaleHair_SpriteSheet_R_15
+      name: Idle_Side_FemaleHair_R_TEST_16
       rect:
         serializedVersion: 2
-        x: 1260
+        x: 1200
         y: 1148
-        width: 210
+        width: 200
         height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -483,19 +528,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: add1fb3d482a30b60800000000000000
-      internalID: 7711185678360321498
+      spriteID: f1904c4cecbcaf4d0800000000000000
+      internalID: -3099941304566281953
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Side_FemaleHair_SpriteSheet_R_16
+      name: Idle_Side_FemaleHair_R_TEST_17
       rect:
         serializedVersion: 2
-        x: 1470
+        x: 1400
         y: 1148
-        width: 210
+        width: 200
         height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -504,19 +549,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bbc8d5665d20fad80800000000000000
-      internalID: -8237362077868651333
+      spriteID: 13329367a31bd5930800000000000000
+      internalID: 4133654897645658929
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Side_FemaleHair_SpriteSheet_R_17
+      name: Idle_Side_FemaleHair_R_TEST_18
       rect:
         serializedVersion: 2
-        x: 1680
+        x: 1600
         y: 1148
-        width: 210
+        width: 200
         height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -525,19 +570,40 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4038b55c8ad1cb850800000000000000
-      internalID: 6394018181662081796
+      spriteID: 8b6e27ddd58318ae0800000000000000
+      internalID: -1548894821040331080
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Side_FemaleHair_SpriteSheet_R_18
+      name: Idle_Side_FemaleHair_R_TEST_19
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 1148
+        width: 200
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37344f64fe5b1daa0800000000000000
+      internalID: -6137924777837051021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Side_FemaleHair_R_TEST_20
       rect:
         serializedVersion: 2
         x: 0
         y: 698
-        width: 210
+        width: 200
         height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -546,50 +612,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b14b2b15e7326250800000000000000
-      internalID: 5936368715970593205
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle_Side_FemaleHair_SpriteSheet_R_19
-      rect:
-        serializedVersion: 2
-        x: 210
-        y: 698
-        width: 210
-        height: 450
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0eaaa746d4ad30ac0800000000000000
-      internalID: -3890025627184878880
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle_Side_FemaleHair_SpriteSheet_R_20
-      rect:
-        serializedVersion: 2
-        x: 420
-        y: 698
-        width: 210
-        height: 450
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8b7d4469bbfdd9070800000000000000
-      internalID: 8114888100364474296
+      spriteID: 048edfd0689a74650800000000000000
+      internalID: 6217124203833714752
       vertices: []
       indices: 
       edges: []
