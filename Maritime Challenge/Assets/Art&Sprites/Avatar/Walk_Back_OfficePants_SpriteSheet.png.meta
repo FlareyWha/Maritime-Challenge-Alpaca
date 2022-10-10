@@ -1,0 +1,780 @@
+fileFormatVersion: 2
+guid: b6fe9ca71f5273d4b891872992dd4221
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3667340032073641823
+    second: Walk_Back_OfficePants_SpriteSheet_0
+  - first:
+      213: 3429933172157669036
+    second: Walk_Back_OfficePants_SpriteSheet_1
+  - first:
+      213: -1208612186299888419
+    second: Walk_Back_OfficePants_SpriteSheet_2
+  - first:
+      213: 2486559907919540244
+    second: Walk_Back_OfficePants_SpriteSheet_3
+  - first:
+      213: -6014966956069229858
+    second: Walk_Back_OfficePants_SpriteSheet_4
+  - first:
+      213: -1565297009196546864
+    second: Walk_Back_OfficePants_SpriteSheet_5
+  - first:
+      213: 6045513988106600319
+    second: Walk_Back_OfficePants_SpriteSheet_6
+  - first:
+      213: -8327490267234392794
+    second: Walk_Back_OfficePants_SpriteSheet_7
+  - first:
+      213: -8502286769923301507
+    second: Walk_Back_OfficePants_SpriteSheet_8
+  - first:
+      213: 5456693759526310410
+    second: Walk_Back_OfficePants_SpriteSheet_9
+  - first:
+      213: 7250218388483746766
+    second: Walk_Back_OfficePants_SpriteSheet_10
+  - first:
+      213: -3704341595209411827
+    second: Walk_Back_OfficePants_SpriteSheet_11
+  - first:
+      213: -3270357036785272277
+    second: Walk_Back_OfficePants_SpriteSheet_12
+  - first:
+      213: -5206863751134957418
+    second: Walk_Back_OfficePants_SpriteSheet_13
+  - first:
+      213: 3257478409677027196
+    second: Walk_Back_OfficePants_SpriteSheet_14
+  - first:
+      213: -8482927452077391376
+    second: Walk_Back_OfficePants_SpriteSheet_15
+  - first:
+      213: 7274762942564978039
+    second: Walk_Back_OfficePants_SpriteSheet_16
+  - first:
+      213: -2645533560643336255
+    second: Walk_Back_OfficePants_SpriteSheet_17
+  - first:
+      213: -1710535365265940311
+    second: Walk_Back_OfficePants_SpriteSheet_18
+  - first:
+      213: -4052396590635757697
+    second: Walk_Back_OfficePants_SpriteSheet_19
+  - first:
+      213: 6488308125980761140
+    second: Walk_Back_OfficePants_SpriteSheet_20
+  - first:
+      213: 4818949895485162501
+    second: Walk_Back_OfficePants_SpriteSheet_21
+  - first:
+      213: 908924738626297731
+    second: Walk_Back_OfficePants_SpriteSheet_22
+  - first:
+      213: -594905297128763242
+    second: Walk_Back_OfficePants_SpriteSheet_23
+  - first:
+      213: 4575103103175297006
+    second: Walk_Back_OfficePants_SpriteSheet_24
+  - first:
+      213: 526083610318177142
+    second: Walk_Back_OfficePants_SpriteSheet_25
+  - first:
+      213: 5194457462115886769
+    second: Walk_Back_OfficePants_SpriteSheet_26
+  - first:
+      213: -6780002633572109599
+    second: Walk_Back_OfficePants_SpriteSheet_27
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Walk_Back_OfficePants_SpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1647
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5fa15a245205e230800000000000000
+      internalID: 3667340032073641823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_OfficePants_SpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1647
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cae59c92c02999f20800000000000000
+      internalID: 3429933172157669036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_OfficePants_SpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1647
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddc036cbe952a3fe0800000000000000
+      internalID: -1208612186299888419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_OfficePants_SpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1647
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 410b548df09028220800000000000000
+      internalID: 2486559907919540244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_OfficePants_SpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1647
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edae7cf0c6b868ca0800000000000000
+      internalID: -6014966956069229858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_OfficePants_SpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1647
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d4cbd6d9a2f64ae0800000000000000
+      internalID: -1565297009196546864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_OfficePants_SpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1647
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7fbfb111faf5e350800000000000000
+      internalID: 6045513988106600319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_OfficePants_SpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1647
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 625a8fe09bfce6c80800000000000000
+      internalID: -8327490267234392794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_OfficePants_SpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1246
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7fd734da3fc10a80800000000000000
+      internalID: -8502286769923301507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_OfficePants_SpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1246
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0218a040121abb40800000000000000
+      internalID: 5456693759526310410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_OfficePants_SpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1246
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecb24950633fd9460800000000000000
+      internalID: 7250218388483746766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_OfficePants_SpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1246
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d03d6d212f8879cc0800000000000000
+      internalID: -3704341595209411827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_OfficePants_SpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1246
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2af6b52a9b5d92d0800000000000000
+      internalID: -3270357036785272277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_OfficePants_SpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1246
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6903eb761018db7b0800000000000000
+      internalID: -5206863751134957418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_OfficePants_SpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1246
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c77bd40da53e43d20800000000000000
+      internalID: 3257478409677027196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_OfficePants_SpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1246
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f184834d66964a80800000000000000
+      internalID: -8482927452077391376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_OfficePants_SpriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 845
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77dc2c85a5625f460800000000000000
+      internalID: 7274762942564978039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_OfficePants_SpriteSheet_17
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 845
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c7ca744e3d294bd0800000000000000
+      internalID: -2645533560643336255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_OfficePants_SpriteSheet_18
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 845
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a0a499e525f248e0800000000000000
+      internalID: -1710535365265940311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_OfficePants_SpriteSheet_19
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 845
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7fc62675cef2c7c0800000000000000
+      internalID: -4052396590635757697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_OfficePants_SpriteSheet_20
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 845
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43c1d523dd91b0a50800000000000000
+      internalID: 6488308125980761140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_OfficePants_SpriteSheet_21
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 845
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5048cc6e56950e240800000000000000
+      internalID: 4818949895485162501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_OfficePants_SpriteSheet_22
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 845
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38f926deb362d9c00800000000000000
+      internalID: 908924738626297731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_OfficePants_SpriteSheet_23
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 845
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69054a1c8c87eb7f0800000000000000
+      internalID: -594905297128763242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_OfficePants_SpriteSheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 444
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee70d8b48080e7f30800000000000000
+      internalID: 4575103103175297006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_OfficePants_SpriteSheet_25
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 444
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6738b2b91460d4700800000000000000
+      internalID: 526083610318177142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_OfficePants_SpriteSheet_26
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 444
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b66b465a8b661840800000000000000
+      internalID: 5194457462115886769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_OfficePants_SpriteSheet_27
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 444
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e2b8b9d68798e1a0800000000000000
+      internalID: -6780002633572109599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,780 @@
+fileFormatVersion: 2
+guid: dad4d25e3d9f8f74598f78b73d156c89
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5639965943025405066
+    second: Walk_Back_Office_Skirt_SpriteSheet_0
+  - first:
+      213: 238404112157281198
+    second: Walk_Back_Office_Skirt_SpriteSheet_1
+  - first:
+      213: -8682313754864860872
+    second: Walk_Back_Office_Skirt_SpriteSheet_2
+  - first:
+      213: -2508999744360983681
+    second: Walk_Back_Office_Skirt_SpriteSheet_3
+  - first:
+      213: 2951114657840884564
+    second: Walk_Back_Office_Skirt_SpriteSheet_4
+  - first:
+      213: 4566166214467405999
+    second: Walk_Back_Office_Skirt_SpriteSheet_5
+  - first:
+      213: 4207687399362995358
+    second: Walk_Back_Office_Skirt_SpriteSheet_6
+  - first:
+      213: 2284832399866604884
+    second: Walk_Back_Office_Skirt_SpriteSheet_7
+  - first:
+      213: -7274205209092411028
+    second: Walk_Back_Office_Skirt_SpriteSheet_8
+  - first:
+      213: 5554063880891987278
+    second: Walk_Back_Office_Skirt_SpriteSheet_9
+  - first:
+      213: -5650998717942964733
+    second: Walk_Back_Office_Skirt_SpriteSheet_10
+  - first:
+      213: -7512365643950472595
+    second: Walk_Back_Office_Skirt_SpriteSheet_11
+  - first:
+      213: 6589595118413021983
+    second: Walk_Back_Office_Skirt_SpriteSheet_12
+  - first:
+      213: 1860837756666459726
+    second: Walk_Back_Office_Skirt_SpriteSheet_13
+  - first:
+      213: -4133492510133337833
+    second: Walk_Back_Office_Skirt_SpriteSheet_14
+  - first:
+      213: 4061434197898897661
+    second: Walk_Back_Office_Skirt_SpriteSheet_15
+  - first:
+      213: -8668681390548795147
+    second: Walk_Back_Office_Skirt_SpriteSheet_16
+  - first:
+      213: -5712374694263058668
+    second: Walk_Back_Office_Skirt_SpriteSheet_17
+  - first:
+      213: 8778740651059879789
+    second: Walk_Back_Office_Skirt_SpriteSheet_18
+  - first:
+      213: 5733383286673643042
+    second: Walk_Back_Office_Skirt_SpriteSheet_19
+  - first:
+      213: 5575631240298903703
+    second: Walk_Back_Office_Skirt_SpriteSheet_20
+  - first:
+      213: -290557166964757602
+    second: Walk_Back_Office_Skirt_SpriteSheet_21
+  - first:
+      213: 3940001900840022872
+    second: Walk_Back_Office_Skirt_SpriteSheet_22
+  - first:
+      213: -2009600596034112723
+    second: Walk_Back_Office_Skirt_SpriteSheet_23
+  - first:
+      213: 8769032520937621993
+    second: Walk_Back_Office_Skirt_SpriteSheet_24
+  - first:
+      213: -2540463728381857215
+    second: Walk_Back_Office_Skirt_SpriteSheet_25
+  - first:
+      213: -690731472392010436
+    second: Walk_Back_Office_Skirt_SpriteSheet_26
+  - first:
+      213: 6411099184457101738
+    second: Walk_Back_Office_Skirt_SpriteSheet_27
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Walk_Back_Office_Skirt_SpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1647
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8c8453b42f254e40800000000000000
+      internalID: 5639965943025405066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_Office_Skirt_SpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1647
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eab8022e64bfe4300800000000000000
+      internalID: 238404112157281198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_Office_Skirt_SpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1647
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 831cacc04a9328780800000000000000
+      internalID: -8682313754864860872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_Office_Skirt_SpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1647
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7351d7960e3e2dd0800000000000000
+      internalID: -2508999744360983681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_Office_Skirt_SpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1647
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45bed08452774f820800000000000000
+      internalID: 2951114657840884564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_Office_Skirt_SpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1647
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa848bebaf74e5f30800000000000000
+      internalID: 4566166214467405999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_Office_Skirt_SpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1647
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e942bec7565b46a30800000000000000
+      internalID: 4207687399362995358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_Office_Skirt_SpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1647
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45d2a5d46fa55bf10800000000000000
+      internalID: 2284832399866604884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_Office_Skirt_SpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1246
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6130c817e4dc0b90800000000000000
+      internalID: -7274205209092411028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_Office_Skirt_SpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1246
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e45f4684caff31d40800000000000000
+      internalID: 5554063880891987278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_Office_Skirt_SpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1246
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30e52d63b9e9391b0800000000000000
+      internalID: -5650998717942964733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_Office_Skirt_SpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1246
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d62cb71cf37beb790800000000000000
+      internalID: -7512365643950472595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_Office_Skirt_SpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1246
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1308a6d8d1f27b50800000000000000
+      internalID: 6589595118413021983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_Office_Skirt_SpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1246
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e463dbe941603d910800000000000000
+      internalID: 1860837756666459726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_Office_Skirt_SpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1246
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 711c3c35672e2a6c0800000000000000
+      internalID: -4133492510133337833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_Office_Skirt_SpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1246
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df8236472ec1d5830800000000000000
+      internalID: 4061434197898897661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_Office_Skirt_SpriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 845
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f0cc453438a2b780800000000000000
+      internalID: -8668681390548795147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_Office_Skirt_SpriteSheet_17
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 845
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41f05842b7199b0b0800000000000000
+      internalID: -5712374694263058668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_Office_Skirt_SpriteSheet_18
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 845
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6f94b14c1a54d970800000000000000
+      internalID: 8778740651059879789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_Office_Skirt_SpriteSheet_19
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 845
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2261853f8b1119f40800000000000000
+      internalID: 5733383286673643042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_Office_Skirt_SpriteSheet_20
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 845
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7983694721f906d40800000000000000
+      internalID: 5575631240298903703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_Office_Skirt_SpriteSheet_21
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 845
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9b2f1ccbcbb7fbf0800000000000000
+      internalID: -290557166964757602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_Office_Skirt_SpriteSheet_22
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 845
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 853fee19ad2bda630800000000000000
+      internalID: 3940001900840022872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_Office_Skirt_SpriteSheet_23
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 845
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2339fcb7e67c14e0800000000000000
+      internalID: -2009600596034112723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_Office_Skirt_SpriteSheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 444
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e9c5521e9cd1b970800000000000000
+      internalID: 8769032520937621993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_Office_Skirt_SpriteSheet_25
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 444
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 142f801f2b57ebcd0800000000000000
+      internalID: -2540463728381857215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_Office_Skirt_SpriteSheet_26
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 444
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3544e0b2670a66f0800000000000000
+      internalID: -690731472392010436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_Office_Skirt_SpriteSheet_27
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 444
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa1bc55adbcc8f850800000000000000
+      internalID: 6411099184457101738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

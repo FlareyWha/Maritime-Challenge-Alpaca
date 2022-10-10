@@ -1,0 +1,780 @@
+fileFormatVersion: 2
+guid: 35a90228a6471bb41a64c16d3515ed85
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1306525558266692260
+    second: Walk_Back_FemaleHair_SpriteSheet_0
+  - first:
+      213: 4663402477354317220
+    second: Walk_Back_FemaleHair_SpriteSheet_1
+  - first:
+      213: 5514910053562035879
+    second: Walk_Back_FemaleHair_SpriteSheet_2
+  - first:
+      213: 7117870891228933922
+    second: Walk_Back_FemaleHair_SpriteSheet_3
+  - first:
+      213: 2812804226596299060
+    second: Walk_Back_FemaleHair_SpriteSheet_4
+  - first:
+      213: -8599921475554880395
+    second: Walk_Back_FemaleHair_SpriteSheet_5
+  - first:
+      213: 800773131136180057
+    second: Walk_Back_FemaleHair_SpriteSheet_6
+  - first:
+      213: 4044743780290514203
+    second: Walk_Back_FemaleHair_SpriteSheet_7
+  - first:
+      213: -6150914915900985122
+    second: Walk_Back_FemaleHair_SpriteSheet_8
+  - first:
+      213: 2843312068866719208
+    second: Walk_Back_FemaleHair_SpriteSheet_9
+  - first:
+      213: -9206469429674900754
+    second: Walk_Back_FemaleHair_SpriteSheet_10
+  - first:
+      213: 7231698164545333738
+    second: Walk_Back_FemaleHair_SpriteSheet_11
+  - first:
+      213: -8834045934749063661
+    second: Walk_Back_FemaleHair_SpriteSheet_12
+  - first:
+      213: 1703683766333372038
+    second: Walk_Back_FemaleHair_SpriteSheet_13
+  - first:
+      213: 6173666877522248861
+    second: Walk_Back_FemaleHair_SpriteSheet_14
+  - first:
+      213: 7806554446472089936
+    second: Walk_Back_FemaleHair_SpriteSheet_15
+  - first:
+      213: 8875265572586850690
+    second: Walk_Back_FemaleHair_SpriteSheet_16
+  - first:
+      213: -1109227671122432257
+    second: Walk_Back_FemaleHair_SpriteSheet_17
+  - first:
+      213: 5783988750431965621
+    second: Walk_Back_FemaleHair_SpriteSheet_18
+  - first:
+      213: -8328553397330694917
+    second: Walk_Back_FemaleHair_SpriteSheet_19
+  - first:
+      213: -1443499656095280378
+    second: Walk_Back_FemaleHair_SpriteSheet_20
+  - first:
+      213: -7710050314486683366
+    second: Walk_Back_FemaleHair_SpriteSheet_21
+  - first:
+      213: -4353376784407181617
+    second: Walk_Back_FemaleHair_SpriteSheet_22
+  - first:
+      213: -7902514605514801431
+    second: Walk_Back_FemaleHair_SpriteSheet_23
+  - first:
+      213: -4818986261469764099
+    second: Walk_Back_FemaleHair_SpriteSheet_24
+  - first:
+      213: 3789308674519246378
+    second: Walk_Back_FemaleHair_SpriteSheet_25
+  - first:
+      213: 4810689992994596043
+    second: Walk_Back_FemaleHair_SpriteSheet_26
+  - first:
+      213: 660133264233907859
+    second: Walk_Back_FemaleHair_SpriteSheet_27
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Walk_Back_FemaleHair_SpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1597
+        width: 256
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5d7b815de94edde0800000000000000
+      internalID: -1306525558266692260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_FemaleHair_SpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1597
+        width: 256
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a5716b68dbb7b040800000000000000
+      internalID: 4663402477354317220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_FemaleHair_SpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1597
+        width: 256
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aeabc67975e88c40800000000000000
+      internalID: 5514910053562035879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_FemaleHair_SpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1597
+        width: 256
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22f2bcc0dd1c7c260800000000000000
+      internalID: 7117870891228933922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_FemaleHair_SpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1597
+        width: 256
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4316dfc8a86190720800000000000000
+      internalID: 2812804226596299060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_FemaleHair_SpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1597
+        width: 256
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5745c497bf0f6a880800000000000000
+      internalID: -8599921475554880395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_FemaleHair_SpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1597
+        width: 256
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95f9c0b8beaec1b00800000000000000
+      internalID: 800773131136180057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_FemaleHair_SpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1597
+        width: 256
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1dcfa7c901d12830800000000000000
+      internalID: 4044743780290514203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_FemaleHair_SpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1146
+        width: 256
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed0f112197f83aaa0800000000000000
+      internalID: -6150914915900985122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_FemaleHair_SpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1146
+        width: 256
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8edb16a1349757720800000000000000
+      internalID: 2843312068866719208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_FemaleHair_SpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1146
+        width: 256
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee20cb8e4dc0c3080800000000000000
+      internalID: -9206469429674900754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_FemaleHair_SpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1146
+        width: 256
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae9a19c5a272c5460800000000000000
+      internalID: 7231698164545333738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_FemaleHair_SpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1146
+        width: 256
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3166cc1f60a276580800000000000000
+      internalID: -8834045934749063661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_FemaleHair_SpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1146
+        width: 256
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68676e5eb53b4a710800000000000000
+      internalID: 1703683766333372038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_FemaleHair_SpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1146
+        width: 256
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d940f4cc0554da550800000000000000
+      internalID: 6173666877522248861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_FemaleHair_SpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1146
+        width: 256
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05117bd78e3765c60800000000000000
+      internalID: 7806554446472089936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_FemaleHair_SpriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 695
+        width: 256
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2890b4dd3074b2b70800000000000000
+      internalID: 8875265572586850690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_FemaleHair_SpriteSheet_17
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 695
+        width: 256
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffea6bf5f4b3b90f0800000000000000
+      internalID: -1109227671122432257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_FemaleHair_SpriteSheet_18
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 695
+        width: 256
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b15a56af1bd44050800000000000000
+      internalID: 5783988750431965621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_FemaleHair_SpriteSheet_19
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 695
+        width: 256
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfc2b3bcfc80b6c80800000000000000
+      internalID: -8328553397330694917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_FemaleHair_SpriteSheet_20
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 695
+        width: 256
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 603da05f5b8a7fbe0800000000000000
+      internalID: -1443499656095280378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_FemaleHair_SpriteSheet_21
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 695
+        width: 256
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a19e1aca616600590800000000000000
+      internalID: -7710050314486683366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_FemaleHair_SpriteSheet_22
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 695
+        width: 256
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc64af731e2b593c0800000000000000
+      internalID: -4353376784407181617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_FemaleHair_SpriteSheet_23
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 695
+        width: 256
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ee34f9e5d0a45290800000000000000
+      internalID: -7902514605514801431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_FemaleHair_SpriteSheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 244
+        width: 256
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df56b9bf6858f1db0800000000000000
+      internalID: -4818986261469764099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_FemaleHair_SpriteSheet_25
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 244
+        width: 256
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a26a601b924569430800000000000000
+      internalID: 3789308674519246378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_FemaleHair_SpriteSheet_26
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 244
+        width: 256
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc428fc7f0103c240800000000000000
+      internalID: 4810689992994596043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_FemaleHair_SpriteSheet_27
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 244
+        width: 256
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 396c41fc4b3492900800000000000000
+      internalID: 660133264233907859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
