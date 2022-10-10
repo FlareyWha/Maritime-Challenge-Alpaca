@@ -1,0 +1,780 @@
+fileFormatVersion: 2
+guid: f48968f76a8472749b2c41c4f5c8f1c4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 371089689256317436
+    second: Walk_Back_MaleHair_SpriteSheet_0
+  - first:
+      213: 4174703769537838718
+    second: Walk_Back_MaleHair_SpriteSheet_1
+  - first:
+      213: -4443994348764110372
+    second: Walk_Back_MaleHair_SpriteSheet_2
+  - first:
+      213: -1068187209368115
+    second: Walk_Back_MaleHair_SpriteSheet_3
+  - first:
+      213: 3720430167184180237
+    second: Walk_Back_MaleHair_SpriteSheet_4
+  - first:
+      213: 4595542854090935757
+    second: Walk_Back_MaleHair_SpriteSheet_5
+  - first:
+      213: -4722575559374894550
+    second: Walk_Back_MaleHair_SpriteSheet_6
+  - first:
+      213: 6782436164196786863
+    second: Walk_Back_MaleHair_SpriteSheet_7
+  - first:
+      213: 8154081841765582735
+    second: Walk_Back_MaleHair_SpriteSheet_8
+  - first:
+      213: 7958187902450527023
+    second: Walk_Back_MaleHair_SpriteSheet_9
+  - first:
+      213: -2580507386810814191
+    second: Walk_Back_MaleHair_SpriteSheet_10
+  - first:
+      213: 2803467138749532472
+    second: Walk_Back_MaleHair_SpriteSheet_11
+  - first:
+      213: 8075281425268272282
+    second: Walk_Back_MaleHair_SpriteSheet_12
+  - first:
+      213: 6499963493768145687
+    second: Walk_Back_MaleHair_SpriteSheet_13
+  - first:
+      213: 2324534893162976999
+    second: Walk_Back_MaleHair_SpriteSheet_14
+  - first:
+      213: 5225721859023728459
+    second: Walk_Back_MaleHair_SpriteSheet_15
+  - first:
+      213: -8545948215775871807
+    second: Walk_Back_MaleHair_SpriteSheet_16
+  - first:
+      213: 1243559853216265165
+    second: Walk_Back_MaleHair_SpriteSheet_17
+  - first:
+      213: 2850468299477315125
+    second: Walk_Back_MaleHair_SpriteSheet_18
+  - first:
+      213: 3354266518081682382
+    second: Walk_Back_MaleHair_SpriteSheet_19
+  - first:
+      213: 8517600689603944299
+    second: Walk_Back_MaleHair_SpriteSheet_20
+  - first:
+      213: -8360925598134004002
+    second: Walk_Back_MaleHair_SpriteSheet_21
+  - first:
+      213: -5061527996042133185
+    second: Walk_Back_MaleHair_SpriteSheet_22
+  - first:
+      213: -2738192434463870425
+    second: Walk_Back_MaleHair_SpriteSheet_23
+  - first:
+      213: -3821073704558053360
+    second: Walk_Back_MaleHair_SpriteSheet_24
+  - first:
+      213: 2665440705644201946
+    second: Walk_Back_MaleHair_SpriteSheet_25
+  - first:
+      213: 4842819958802009223
+    second: Walk_Back_MaleHair_SpriteSheet_26
+  - first:
+      213: 4255025647590986616
+    second: Walk_Back_MaleHair_SpriteSheet_27
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Walk_Back_MaleHair_SpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1597
+        width: 256
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf1dee33b10662500800000000000000
+      internalID: 371089689256317436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_MaleHair_SpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1597
+        width: 256
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7e79c9b5f68fe930800000000000000
+      internalID: 4174703769537838718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_MaleHair_SpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1597
+        width: 256
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd162126fa2c352c0800000000000000
+      internalID: -4443994348764110372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_MaleHair_SpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1597
+        width: 256
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcdf4d84d743cfff0800000000000000
+      internalID: -1068187209368115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_MaleHair_SpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1597
+        width: 256
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0409ae768f91a330800000000000000
+      internalID: 3720430167184180237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_MaleHair_SpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1597
+        width: 256
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcdcc28a0e5a6cf30800000000000000
+      internalID: 4595542854090935757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_MaleHair_SpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1597
+        width: 256
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2a848ecc8a067eb0800000000000000
+      internalID: -4722575559374894550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_MaleHair_SpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1597
+        width: 256
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa266b6a1cd002e50800000000000000
+      internalID: 6782436164196786863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_MaleHair_SpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1146
+        width: 256
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8786ef9b3e192170800000000000000
+      internalID: 8154081841765582735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_MaleHair_SpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1146
+        width: 256
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2bef55abb9217e60800000000000000
+      internalID: 7958187902450527023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_MaleHair_SpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1146
+        width: 256
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 111bedc2432303cd0800000000000000
+      internalID: -2580507386810814191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_MaleHair_SpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1146
+        width: 256
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83985a0628ae7e620800000000000000
+      internalID: 2803467138749532472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_MaleHair_SpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1146
+        width: 256
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9cec6eeba9211070800000000000000
+      internalID: 8075281425268272282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_MaleHair_SpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1146
+        width: 256
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71bae0bfb52843a50800000000000000
+      internalID: 6499963493768145687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_MaleHair_SpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1146
+        width: 256
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e6dafe5b28624020800000000000000
+      internalID: 2324534893162976999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_MaleHair_SpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1146
+        width: 256
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4f6a1ef75e758840800000000000000
+      internalID: 5225721859023728459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_MaleHair_SpriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 695
+        width: 256
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ccbbc94061b66980800000000000000
+      internalID: -8545948215775871807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_MaleHair_SpriteSheet_17
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 695
+        width: 256
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc374eb0913024110800000000000000
+      internalID: 1243559853216265165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_MaleHair_SpriteSheet_18
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 695
+        width: 256
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53e6bd1e0d5ee8720800000000000000
+      internalID: 2850468299477315125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_MaleHair_SpriteSheet_19
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 695
+        width: 256
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecbbe3460afbc8e20800000000000000
+      internalID: 3354266518081682382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_MaleHair_SpriteSheet_20
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 695
+        width: 256
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6f1772f2b8943670800000000000000
+      internalID: 8517600689603944299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_MaleHair_SpriteSheet_21
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 695
+        width: 256
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed690c1777608fb80800000000000000
+      internalID: -8360925598134004002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_MaleHair_SpriteSheet_22
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 695
+        width: 256
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f31c63fca17d1c9b0800000000000000
+      internalID: -5061527996042133185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_MaleHair_SpriteSheet_23
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 695
+        width: 256
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7227e190d7cfff9d0800000000000000
+      internalID: -2738192434463870425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_MaleHair_SpriteSheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 244
+        width: 256
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0183b3be5b1d8fac0800000000000000
+      internalID: -3821073704558053360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_MaleHair_SpriteSheet_25
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 244
+        width: 256
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad70acd133c8df420800000000000000
+      internalID: 2665440705644201946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_MaleHair_SpriteSheet_26
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 244
+        width: 256
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78cc09b1817253340800000000000000
+      internalID: 4842819958802009223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_MaleHair_SpriteSheet_27
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 244
+        width: 256
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87356da4843ec0b30800000000000000
+      internalID: 4255025647590986616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

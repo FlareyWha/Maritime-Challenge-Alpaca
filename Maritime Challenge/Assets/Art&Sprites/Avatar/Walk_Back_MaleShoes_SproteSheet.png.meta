@@ -1,0 +1,780 @@
+fileFormatVersion: 2
+guid: fa8cda58dd8175042af593bb6cbbb533
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1194928780948926555
+    second: Walk_Back_MaleShoes_SproteSheet_0
+  - first:
+      213: 2923457995412777948
+    second: Walk_Back_MaleShoes_SproteSheet_1
+  - first:
+      213: 4470643963233866807
+    second: Walk_Back_MaleShoes_SproteSheet_2
+  - first:
+      213: -1021501423841968727
+    second: Walk_Back_MaleShoes_SproteSheet_3
+  - first:
+      213: -4299293452726465779
+    second: Walk_Back_MaleShoes_SproteSheet_4
+  - first:
+      213: 3647356172997789780
+    second: Walk_Back_MaleShoes_SproteSheet_5
+  - first:
+      213: 5477855115473720803
+    second: Walk_Back_MaleShoes_SproteSheet_6
+  - first:
+      213: -7497891588126642543
+    second: Walk_Back_MaleShoes_SproteSheet_7
+  - first:
+      213: 9060363035041865667
+    second: Walk_Back_MaleShoes_SproteSheet_8
+  - first:
+      213: -7989233796987771931
+    second: Walk_Back_MaleShoes_SproteSheet_9
+  - first:
+      213: 7911779768163121262
+    second: Walk_Back_MaleShoes_SproteSheet_10
+  - first:
+      213: 4460712677334639399
+    second: Walk_Back_MaleShoes_SproteSheet_11
+  - first:
+      213: 470652598467215412
+    second: Walk_Back_MaleShoes_SproteSheet_12
+  - first:
+      213: 4897339022437917709
+    second: Walk_Back_MaleShoes_SproteSheet_13
+  - first:
+      213: -8606356638485754090
+    second: Walk_Back_MaleShoes_SproteSheet_14
+  - first:
+      213: 3887657878325882175
+    second: Walk_Back_MaleShoes_SproteSheet_15
+  - first:
+      213: -2765525443154536659
+    second: Walk_Back_MaleShoes_SproteSheet_16
+  - first:
+      213: -633901399512509380
+    second: Walk_Back_MaleShoes_SproteSheet_17
+  - first:
+      213: -5899716693504974079
+    second: Walk_Back_MaleShoes_SproteSheet_18
+  - first:
+      213: 8168829599126527894
+    second: Walk_Back_MaleShoes_SproteSheet_19
+  - first:
+      213: -5754216727928616277
+    second: Walk_Back_MaleShoes_SproteSheet_20
+  - first:
+      213: -8896906274703923948
+    second: Walk_Back_MaleShoes_SproteSheet_21
+  - first:
+      213: 3687148509175896853
+    second: Walk_Back_MaleShoes_SproteSheet_22
+  - first:
+      213: 4509965934527195921
+    second: Walk_Back_MaleShoes_SproteSheet_23
+  - first:
+      213: 3964555900485767414
+    second: Walk_Back_MaleShoes_SproteSheet_24
+  - first:
+      213: 5332725194168811421
+    second: Walk_Back_MaleShoes_SproteSheet_25
+  - first:
+      213: 7545742853998536331
+    second: Walk_Back_MaleShoes_SproteSheet_26
+  - first:
+      213: -6403782627130638237
+    second: Walk_Back_MaleShoes_SproteSheet_27
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Walk_Back_MaleShoes_SproteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1647
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5af06afca92ca6fe0800000000000000
+      internalID: -1194928780948926555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_MaleShoes_SproteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1647
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdbaa54ce85329820800000000000000
+      internalID: 2923457995412777948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_MaleShoes_SproteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1647
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7349cc18ffaea0e30800000000000000
+      internalID: 4470643963233866807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_MaleShoes_SproteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1647
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9adf75efdd5e2d1f0800000000000000
+      internalID: -1021501423841968727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_MaleShoes_SproteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1647
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0b83152267d554c0800000000000000
+      internalID: -4299293452726465779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_MaleShoes_SproteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1647
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4588cd46d130e9230800000000000000
+      internalID: 3647356172997789780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_MaleShoes_SproteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1647
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e51ed06430450c40800000000000000
+      internalID: 5477855115473720803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_MaleShoes_SproteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1647
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19e625d735322f790800000000000000
+      internalID: -7497891588126642543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_MaleShoes_SproteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1246
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cf10cf2d20ecbd70800000000000000
+      internalID: 9060363035041865667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_MaleShoes_SproteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1246
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e3affeb03a802190800000000000000
+      internalID: -7989233796987771931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_MaleShoes_SproteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1246
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e683c7ed7c94ccd60800000000000000
+      internalID: 7911779768163121262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_MaleShoes_SproteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1246
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 723ec91db82a7ed30800000000000000
+      internalID: 4460712677334639399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_MaleShoes_SproteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1246
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 430c0407b08188600800000000000000
+      internalID: 470652598467215412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_MaleShoes_SproteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1246
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d042219c4e7d6f340800000000000000
+      internalID: 4897339022437917709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_MaleShoes_SproteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1246
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61f4bb85c34109880800000000000000
+      internalID: -8606356638485754090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_MaleShoes_SproteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1246
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3decdd1e3cb3f530800000000000000
+      internalID: 3887657878325882175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_MaleShoes_SproteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 845
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2718770341ee99d0800000000000000
+      internalID: -2765525443154536659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_MaleShoes_SproteSheet_17
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 845
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c341f63290ee337f0800000000000000
+      internalID: -633901399512509380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_MaleShoes_SproteSheet_18
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 845
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 103a130eceeff1ea0800000000000000
+      internalID: -5899716693504974079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_MaleShoes_SproteSheet_19
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 845
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69f12a67d338d5170800000000000000
+      internalID: 8168829599126527894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_MaleShoes_SproteSheet_20
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 845
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baa44338f5ae420b0800000000000000
+      internalID: -5754216727928616277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_MaleShoes_SproteSheet_21
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 845
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 415245881e6d78480800000000000000
+      internalID: -8896906274703923948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_MaleShoes_SproteSheet_22
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 845
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51b5a83a8026b2330800000000000000
+      internalID: 3687148509175896853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_MaleShoes_SproteSheet_23
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 845
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11b2b946f1e969e30800000000000000
+      internalID: 4509965934527195921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_MaleShoes_SproteSheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 444
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f012ac169ee40730800000000000000
+      internalID: 3964555900485767414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_MaleShoes_SproteSheet_25
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 444
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9f35336f45a10a40800000000000000
+      internalID: 5332725194168811421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_MaleShoes_SproteSheet_26
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 444
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b86660b852dd7b860800000000000000
+      internalID: 7545742853998536331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_MaleShoes_SproteSheet_27
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 444
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3608f0b11a13127a0800000000000000
+      internalID: -6403782627130638237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

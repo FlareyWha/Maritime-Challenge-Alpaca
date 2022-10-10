@@ -1,0 +1,780 @@
+fileFormatVersion: 2
+guid: 4e65825d104682340ace7eebfbb8c097
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5545220831235960685
+    second: Walk_Back_FemaleShoes_SpriteSheet_0
+  - first:
+      213: -4154626673078874993
+    second: Walk_Back_FemaleShoes_SpriteSheet_1
+  - first:
+      213: 5777507587396428653
+    second: Walk_Back_FemaleShoes_SpriteSheet_2
+  - first:
+      213: 8120754490439034453
+    second: Walk_Back_FemaleShoes_SpriteSheet_3
+  - first:
+      213: 4978677139234849250
+    second: Walk_Back_FemaleShoes_SpriteSheet_4
+  - first:
+      213: -4455129580514033946
+    second: Walk_Back_FemaleShoes_SpriteSheet_5
+  - first:
+      213: -2823596139151508198
+    second: Walk_Back_FemaleShoes_SpriteSheet_6
+  - first:
+      213: 8236442693297745058
+    second: Walk_Back_FemaleShoes_SpriteSheet_7
+  - first:
+      213: 4340750590441650248
+    second: Walk_Back_FemaleShoes_SpriteSheet_8
+  - first:
+      213: 6505997248066654435
+    second: Walk_Back_FemaleShoes_SpriteSheet_9
+  - first:
+      213: -3687913607508319272
+    second: Walk_Back_FemaleShoes_SpriteSheet_10
+  - first:
+      213: 7574761838404746360
+    second: Walk_Back_FemaleShoes_SpriteSheet_11
+  - first:
+      213: -2868764657386450998
+    second: Walk_Back_FemaleShoes_SpriteSheet_12
+  - first:
+      213: -3469379891535621975
+    second: Walk_Back_FemaleShoes_SpriteSheet_13
+  - first:
+      213: -5866726098247255131
+    second: Walk_Back_FemaleShoes_SpriteSheet_14
+  - first:
+      213: 4643384565803725156
+    second: Walk_Back_FemaleShoes_SpriteSheet_15
+  - first:
+      213: 6523080818693038399
+    second: Walk_Back_FemaleShoes_SpriteSheet_16
+  - first:
+      213: -5590696996094887266
+    second: Walk_Back_FemaleShoes_SpriteSheet_17
+  - first:
+      213: 3285204464882594877
+    second: Walk_Back_FemaleShoes_SpriteSheet_18
+  - first:
+      213: -751933705264776462
+    second: Walk_Back_FemaleShoes_SpriteSheet_19
+  - first:
+      213: -8109526123439108722
+    second: Walk_Back_FemaleShoes_SpriteSheet_20
+  - first:
+      213: 8465369931798217801
+    second: Walk_Back_FemaleShoes_SpriteSheet_21
+  - first:
+      213: -4350008917695097867
+    second: Walk_Back_FemaleShoes_SpriteSheet_22
+  - first:
+      213: 486842526716967461
+    second: Walk_Back_FemaleShoes_SpriteSheet_23
+  - first:
+      213: -8872444290836219788
+    second: Walk_Back_FemaleShoes_SpriteSheet_24
+  - first:
+      213: 5500924726702230937
+    second: Walk_Back_FemaleShoes_SpriteSheet_25
+  - first:
+      213: 4248322756728740382
+    second: Walk_Back_FemaleShoes_SpriteSheet_26
+  - first:
+      213: -3749926002631080867
+    second: Walk_Back_FemaleShoes_SpriteSheet_27
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Walk_Back_FemaleShoes_SpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1647
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6f6ae657f494fc40800000000000000
+      internalID: 5545220831235960685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_FemaleShoes_SpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1647
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8c45c09d0dc756c0800000000000000
+      internalID: -4154626673078874993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_FemaleShoes_SpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1647
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6363e94a84dd2050800000000000000
+      internalID: 5777507587396428653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_FemaleShoes_SpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1647
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 556e6c6fe27b2b070800000000000000
+      internalID: 8120754490439034453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_FemaleShoes_SpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1647
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e1837fda70d71540800000000000000
+      internalID: 4978677139234849250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_FemaleShoes_SpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1647
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ee302530433c22c0800000000000000
+      internalID: -4455129580514033946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_FemaleShoes_SpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1647
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1db5b0854290d8d0800000000000000
+      internalID: -2823596139151508198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_FemaleShoes_SpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1647
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2acafd2bdf8bd4270800000000000000
+      internalID: 8236442693297745058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_FemaleShoes_SpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1246
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84877d9e9a17d3c30800000000000000
+      internalID: 4340750590441650248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_FemaleShoes_SpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1246
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e09ea0e602f94a50800000000000000
+      internalID: 6505997248066654435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_FemaleShoes_SpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1246
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d323260d16e1dcc0800000000000000
+      internalID: -3687913607508319272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_FemaleShoes_SpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1246
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87cbc4c52c5fe1960800000000000000
+      internalID: 7574761838404746360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_FemaleShoes_SpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1246
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acf09445eb91038d0800000000000000
+      internalID: -2868764657386450998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_FemaleShoes_SpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1246
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a0d226ce594adfc0800000000000000
+      internalID: -3469379891535621975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_FemaleShoes_SpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1246
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ab757762b3359ea0800000000000000
+      internalID: -5866726098247255131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_FemaleShoes_SpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1246
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 461334039ad907040800000000000000
+      internalID: 4643384565803725156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_FemaleShoes_SpriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 845
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f31ec5f9173a68a50800000000000000
+      internalID: 6523080818693038399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_FemaleShoes_SpriteSheet_17
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 845
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9abbece3bad962b0800000000000000
+      internalID: -5590696996094887266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_FemaleShoes_SpriteSheet_18
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 845
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d34bad71e04679d20800000000000000
+      internalID: 3285204464882594877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_FemaleShoes_SpriteSheet_19
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 845
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fabc0b67489095f0800000000000000
+      internalID: -751933705264776462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_FemaleShoes_SpriteSheet_20
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 845
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8d49a3f4fc257f80800000000000000
+      internalID: -8109526123439108722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_FemaleShoes_SpriteSheet_21
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 845
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9440b1df9190b7570800000000000000
+      internalID: 8465369931798217801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_FemaleShoes_SpriteSheet_22
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 845
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f3900bcfe9a1a3c0800000000000000
+      internalID: -4350008917695097867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_FemaleShoes_SpriteSheet_23
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 845
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52ab48ad2bc91c600800000000000000
+      internalID: 486842526716967461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_FemaleShoes_SpriteSheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 444
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 478b34bfceebed480800000000000000
+      internalID: -8872444290836219788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_FemaleShoes_SpriteSheet_25
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 444
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99dcf3fc4e5375c40800000000000000
+      internalID: 5500924726702230937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_FemaleShoes_SpriteSheet_26
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 444
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1a5606e90315fa30800000000000000
+      internalID: 4248322756728740382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Back_FemaleShoes_SpriteSheet_27
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 444
+        width: 256
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d548c272b2695fbc0800000000000000
+      internalID: -3749926002631080867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
