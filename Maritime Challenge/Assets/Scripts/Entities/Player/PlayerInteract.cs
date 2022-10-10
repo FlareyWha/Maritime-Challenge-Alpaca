@@ -7,7 +7,7 @@ using Mirror;
 public class PlayerInteract : NetworkBehaviour
 {
 
-    public static List<Interactable> InRangeList = new List<Interactable>();
+    public static List<BaseInteractable> InRangeList = new List<BaseInteractable>();
 
    
 
@@ -30,7 +30,7 @@ public class PlayerInteract : NetworkBehaviour
         }
     }
 
-    public static void OnEnterInteractable(Interactable interactable)
+    public static void OnEnterInteractable(BaseInteractable interactable)
     {
         if (InRangeList.Count == 0)
         {
@@ -41,7 +41,7 @@ public class PlayerInteract : NetworkBehaviour
         InRangeList.Add(interactable);
     }
 
-    public static void OnLeaveInteractable(Interactable interactable)
+    public static void OnLeaveInteractable(BaseInteractable interactable)
     {
         InRangeList.Remove(interactable);
         if (InRangeList.Count == 0)

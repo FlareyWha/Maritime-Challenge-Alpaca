@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BattleshipStore : Interactable
+public class BattleshipStore : BaseInteractable
 {
     [SerializeField]
     private GameObject StoreUIPanel;

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Mirror;
 
-public class Sit : Interactable
+public class Sit : BaseInteractable
 {
     public static List<Sit> Sits = new List<Sit>();
 

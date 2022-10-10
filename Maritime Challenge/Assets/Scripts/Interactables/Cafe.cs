@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cafe : Interactable
+public class Cafe : BaseInteractable
 {
-
     void Start()
     {
         interactMessage = "Enter Cafe?";

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Mirror;
 
-public class AirHockeySeat : Interactable
+public class AirHockeySeat : BaseInteractable
 {
     [SerializeField]
     private AirHockeyMinigame AirHockeyGameManager;
