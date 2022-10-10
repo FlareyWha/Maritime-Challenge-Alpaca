@@ -43,7 +43,7 @@ public class Player : BaseEntity
     private PlayerUI playerUI = null;
     private Battleship LinkedBattleship = null;
 
-    public delegate void AvatarChanged(BodyPartType type, int cosmeticID);
+    public delegate void AvatarChanged(BODY_PART_TYPE type, int cosmeticID);
     public event AvatarChanged OnAvatarChanged;
 
     private void Start()
@@ -183,7 +183,7 @@ public class Player : BaseEntity
         gameObject.SetActive(show);
     }
 
-    public void InvokeAvatarChangedEvent(BodyPartType type, int cosmeticID)
+    public void InvokeAvatarChangedEvent(BODY_PART_TYPE type, int cosmeticID)
     {
         OnAvatarChanged?.Invoke(type, cosmeticID);
     }

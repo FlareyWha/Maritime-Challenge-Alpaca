@@ -1,91 +1,91 @@
 fileFormatVersion: 2
-guid: 1f9435f4f1c73694a886c096ec039867
+guid: 1ca70a99d4aa7394dab94fcff78d3d42
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -224737606778286626
-    second: Walk_Front_Work_Pants_SpriteSheet_0
+      213: 1895559732051076661
+    second: Walk_Side_FemaleShoes_L_0
   - first:
-      213: -4016784175048574364
-    second: Walk_Front_Work_Pants_SpriteSheet_1
+      213: -787243550474589591
+    second: Walk_Side_FemaleShoes_L_1
   - first:
-      213: 3255475049371350628
-    second: Walk_Front_Work_Pants_SpriteSheet_2
+      213: -6225882873556241677
+    second: Walk_Side_FemaleShoes_L_2
   - first:
-      213: 3692970269138649112
-    second: Walk_Front_Work_Pants_SpriteSheet_3
+      213: 513295199257009729
+    second: Walk_Side_FemaleShoes_L_3
   - first:
-      213: 8111829341032733252
-    second: Walk_Front_Work_Pants_SpriteSheet_4
+      213: -8065089159019601627
+    second: Walk_Side_FemaleShoes_L_4
   - first:
-      213: -7652712398304399666
-    second: Walk_Front_Work_Pants_SpriteSheet_5
+      213: -4066324201684601970
+    second: Walk_Side_FemaleShoes_L_5
   - first:
-      213: 5582326957658744398
-    second: Walk_Front_Work_Pants_SpriteSheet_6
+      213: 6855342114742615743
+    second: Walk_Side_FemaleShoes_L_6
   - first:
-      213: 4795254236584306830
-    second: Walk_Front_Work_Pants_SpriteSheet_7
+      213: -6513523111244758447
+    second: Walk_Side_FemaleShoes_L_7
   - first:
-      213: 5516065512746284033
-    second: Walk_Front_Work_Pants_SpriteSheet_8
+      213: 2896138814848181067
+    second: Walk_Side_FemaleShoes_L_8
   - first:
-      213: 4451432515924674724
-    second: Walk_Front_Work_Pants_SpriteSheet_9
+      213: 1675625775805293537
+    second: Walk_Side_FemaleShoes_L_9
   - first:
-      213: -4055179011885861865
-    second: Walk_Front_Work_Pants_SpriteSheet_10
+      213: 932556301938249690
+    second: Walk_Side_FemaleShoes_L_10
   - first:
-      213: 5501821068372454972
-    second: Walk_Front_Work_Pants_SpriteSheet_11
+      213: -5587777427209105692
+    second: Walk_Side_FemaleShoes_L_11
   - first:
-      213: -5836424440031102258
-    second: Walk_Front_Work_Pants_SpriteSheet_12
+      213: 8832930300082376499
+    second: Walk_Side_FemaleShoes_L_12
   - first:
-      213: -3929051744688806759
-    second: Walk_Front_Work_Pants_SpriteSheet_13
+      213: 2359576447429434527
+    second: Walk_Side_FemaleShoes_L_13
   - first:
-      213: -9066968294204358712
-    second: Walk_Front_Work_Pants_SpriteSheet_14
+      213: 1478524613951693710
+    second: Walk_Side_FemaleShoes_L_14
   - first:
-      213: 2023787261656783963
-    second: Walk_Front_Work_Pants_SpriteSheet_15
+      213: 2962013807377641365
+    second: Walk_Side_FemaleShoes_L_15
   - first:
-      213: 8660265820336452462
-    second: Walk_Front_Work_Pants_SpriteSheet_16
+      213: -6502811193594903499
+    second: Walk_Side_FemaleShoes_L_16
   - first:
-      213: 3282758025298713077
-    second: Walk_Front_Work_Pants_SpriteSheet_17
+      213: -8385244305955057167
+    second: Walk_Side_FemaleShoes_L_17
   - first:
-      213: -7564586199219631024
-    second: Walk_Front_Work_Pants_SpriteSheet_18
+      213: 4310239799812589869
+    second: Walk_Side_FemaleShoes_L_18
   - first:
-      213: -4710045556164729174
-    second: Walk_Front_Work_Pants_SpriteSheet_19
+      213: 5331113777068052178
+    second: Walk_Side_FemaleShoes_L_19
   - first:
-      213: 6103994563820332731
-    second: Walk_Front_Work_Pants_SpriteSheet_20
+      213: -5103033388304666186
+    second: Walk_Side_FemaleShoes_L_20
   - first:
-      213: -3060460319909976597
-    second: Walk_Front_Work_Pants_SpriteSheet_21
+      213: 6543324640957855235
+    second: Walk_Side_FemaleShoes_L_21
   - first:
-      213: 6994402998289865723
-    second: Walk_Front_Work_Pants_SpriteSheet_22
+      213: -2350278267085257704
+    second: Walk_Side_FemaleShoes_L_22
   - first:
-      213: 5683785867033104177
-    second: Walk_Front_Work_Pants_SpriteSheet_23
+      213: -144402460584175164
+    second: Walk_Side_FemaleShoes_L_23
   - first:
-      213: 322717730255690182
-    second: Walk_Front_Work_Pants_SpriteSheet_24
+      213: -7608581920870868460
+    second: Walk_Side_FemaleShoes_L_24
   - first:
-      213: -3012324167340843377
-    second: Walk_Front_Work_Pants_SpriteSheet_25
+      213: 1893694413193612411
+    second: Walk_Side_FemaleShoes_L_25
   - first:
-      213: 7881000852449686414
-    second: Walk_Front_Work_Pants_SpriteSheet_26
+      213: 8024630576576903057
+    second: Walk_Side_FemaleShoes_L_26
   - first:
-      213: -1813215083499015976
-    second: Walk_Front_Work_Pants_SpriteSheet_27
+      213: 4429380429715545140
+    second: Walk_Side_FemaleShoes_L_27
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -171,16 +171,40 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Walk_Front_Work_Pants_SpriteSheet_0
+      name: Walk_Side_FemaleShoes_L_0
       rect:
         serializedVersion: 2
         x: 0
         y: 1648
-        width: 256
+        width: 200
         height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -189,19 +213,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: edd0f4c565291ecf0800000000000000
-      internalID: -224737606778286626
+      spriteID: 536607f78816e4a10800000000000000
+      internalID: 1895559732051076661
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Front_Work_Pants_SpriteSheet_1
+      name: Walk_Side_FemaleShoes_L_1
       rect:
         serializedVersion: 2
-        x: 256
+        x: 200
         y: 1648
-        width: 256
+        width: 200
         height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -210,19 +234,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 46ab1da13148148c0800000000000000
-      internalID: -4016784175048574364
+      spriteID: 96aae3e69262315f0800000000000000
+      internalID: -787243550474589591
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Front_Work_Pants_SpriteSheet_2
+      name: Walk_Side_FemaleShoes_L_2
       rect:
         serializedVersion: 2
-        x: 512
+        x: 400
         y: 1648
-        width: 256
+        width: 200
         height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -231,19 +255,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4663de42f45cd2d20800000000000000
-      internalID: 3255475049371350628
+      spriteID: 3f2fd7c33883999a0800000000000000
+      internalID: -6225882873556241677
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Front_Work_Pants_SpriteSheet_3
+      name: Walk_Side_FemaleShoes_L_3
       rect:
         serializedVersion: 2
-        x: 768
+        x: 600
         y: 1648
-        width: 256
+        width: 200
         height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -252,19 +276,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8108612c4e0104330800000000000000
-      internalID: 3692970269138649112
+      spriteID: 14e90a0a3479f1700800000000000000
+      internalID: 513295199257009729
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Front_Work_Pants_SpriteSheet_4
+      name: Walk_Side_FemaleShoes_L_4
       rect:
         serializedVersion: 2
-        x: 1024
+        x: 800
         y: 1648
-        width: 256
+        width: 200
         height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -273,19 +297,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44ad8deaec1039070800000000000000
-      internalID: 8111829341032733252
+      spriteID: 52168caf32c031090800000000000000
+      internalID: -8065089159019601627
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Front_Work_Pants_SpriteSheet_5
+      name: Walk_Side_FemaleShoes_L_5
       rect:
         serializedVersion: 2
-        x: 1280
+        x: 1000
         y: 1648
-        width: 256
+        width: 200
         height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -294,19 +318,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ecea6da9e9a1cc590800000000000000
-      internalID: -7652712398304399666
+      spriteID: e83f301dea38197c0800000000000000
+      internalID: -4066324201684601970
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Front_Work_Pants_SpriteSheet_6
+      name: Walk_Side_FemaleShoes_L_6
       rect:
         serializedVersion: 2
-        x: 1536
+        x: 1200
         y: 1648
-        width: 256
+        width: 200
         height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -315,19 +339,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e462653aac8687d40800000000000000
-      internalID: 5582326957658744398
+      spriteID: fbe320b0551132f50800000000000000
+      internalID: 6855342114742615743
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Front_Work_Pants_SpriteSheet_7
+      name: Walk_Side_FemaleShoes_L_7
       rect:
         serializedVersion: 2
-        x: 1792
+        x: 1400
         y: 1648
-        width: 256
+        width: 200
         height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -336,19 +360,61 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e886b43625a2c8240800000000000000
-      internalID: 4795254236584306830
+      spriteID: 15285fd8d315b95a0800000000000000
+      internalID: -6513523111244758447
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Front_Work_Pants_SpriteSheet_8
+      name: Walk_Side_FemaleShoes_L_8
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 1648
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b432f3f58e6213820800000000000000
+      internalID: 2896138814848181067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_FemaleShoes_L_9
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 1648
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e3ec57e3c4014710800000000000000
+      internalID: 1675625775805293537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_FemaleShoes_L_10
       rect:
         serializedVersion: 2
         x: 0
         y: 1248
-        width: 256
+        width: 200
         height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -357,19 +423,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1047605cb500d8c40800000000000000
-      internalID: 5516065512746284033
+      spriteID: adfc416040b11fc00800000000000000
+      internalID: 932556301938249690
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Front_Work_Pants_SpriteSheet_9
+      name: Walk_Side_FemaleShoes_L_11
       rect:
         serializedVersion: 2
-        x: 256
+        x: 200
         y: 1248
-        width: 256
+        width: 200
         height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -378,19 +444,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a8405dd94aa6cd30800000000000000
-      internalID: 4451432515924674724
+      spriteID: 4ee4147090a3472b0800000000000000
+      internalID: -5587777427209105692
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Front_Work_Pants_SpriteSheet_10
+      name: Walk_Side_FemaleShoes_L_12
       rect:
         serializedVersion: 2
-        x: 512
+        x: 400
         y: 1248
-        width: 256
+        width: 200
         height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -399,19 +465,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7147ce78c2c19b7c0800000000000000
-      internalID: -4055179011885861865
+      spriteID: 33fc13e1f4fd49a70800000000000000
+      internalID: 8832930300082376499
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Front_Work_Pants_SpriteSheet_11
+      name: Walk_Side_FemaleShoes_L_13
       rect:
         serializedVersion: 2
-        x: 768
+        x: 600
         y: 1248
-        width: 256
+        width: 200
         height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -420,19 +486,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3ea91e9c156a5c40800000000000000
-      internalID: 5501821068372454972
+      spriteID: f9cd8610746eeb020800000000000000
+      internalID: 2359576447429434527
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Front_Work_Pants_SpriteSheet_12
+      name: Walk_Side_FemaleShoes_L_14
       rect:
         serializedVersion: 2
-        x: 1024
+        x: 800
         y: 1248
-        width: 256
+        width: 200
         height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -441,19 +507,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ecab98df4ead00fa0800000000000000
-      internalID: -5836424440031102258
+      spriteID: e8323468d46c48410800000000000000
+      internalID: 1478524613951693710
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Front_Work_Pants_SpriteSheet_13
+      name: Walk_Side_FemaleShoes_L_15
       rect:
         serializedVersion: 2
-        x: 1280
+        x: 1000
         y: 1248
-        width: 256
+        width: 200
         height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -462,19 +528,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 994e1b551443979c0800000000000000
-      internalID: -3929051744688806759
+      spriteID: 59feb884ddf2b1920800000000000000
+      internalID: 2962013807377641365
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Front_Work_Pants_SpriteSheet_14
+      name: Walk_Side_FemaleShoes_L_16
       rect:
         serializedVersion: 2
-        x: 1536
+        x: 1200
         y: 1248
-        width: 256
+        width: 200
         height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -483,19 +549,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8cf38321068ab2280800000000000000
-      internalID: -9066968294204358712
+      spriteID: 534875c3caf51c5a0800000000000000
+      internalID: -6502811193594903499
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Front_Work_Pants_SpriteSheet_15
+      name: Walk_Side_FemaleShoes_L_17
       rect:
         serializedVersion: 2
-        x: 1792
+        x: 1400
         y: 1248
-        width: 256
+        width: 200
         height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -504,19 +570,61 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b5c5300cacfe51c10800000000000000
-      internalID: 2023787261656783963
+      spriteID: 1f19eac0bb0a1ab80800000000000000
+      internalID: -8385244305955057167
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Front_Work_Pants_SpriteSheet_16
+      name: Walk_Side_FemaleShoes_L_18
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 1248
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d298494e24c01db30800000000000000
+      internalID: 4310239799812589869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_FemaleShoes_L_19
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 1248
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2de055b1cbbebf940800000000000000
+      internalID: 5331113777068052178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_FemaleShoes_L_20
       rect:
         serializedVersion: 2
         x: 0
         y: 848
-        width: 256
+        width: 200
         height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -525,19 +633,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e637c9921e17f2870800000000000000
-      internalID: 8660265820336452462
+      spriteID: 6b1742d9b226e29b0800000000000000
+      internalID: -5103033388304666186
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Front_Work_Pants_SpriteSheet_17
+      name: Walk_Side_FemaleShoes_L_21
       rect:
         serializedVersion: 2
-        x: 256
+        x: 200
         y: 848
-        width: 256
+        width: 200
         height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -546,19 +654,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5f91e7df703be8d20800000000000000
-      internalID: 3282758025298713077
+      spriteID: 3067a5ac71f8eca50800000000000000
+      internalID: 6543324640957855235
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Front_Work_Pants_SpriteSheet_18
+      name: Walk_Side_FemaleShoes_L_22
       rect:
         serializedVersion: 2
-        x: 512
+        x: 400
         y: 848
-        width: 256
+        width: 200
         height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -567,19 +675,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 05c01b24ee0350790800000000000000
-      internalID: -7564586199219631024
+      spriteID: 814001f4e52226fd0800000000000000
+      internalID: -2350278267085257704
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Front_Work_Pants_SpriteSheet_19
+      name: Walk_Side_FemaleShoes_L_23
       rect:
         serializedVersion: 2
-        x: 768
+        x: 600
         y: 848
-        width: 256
+        width: 200
         height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -588,19 +696,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa6e4e4858e82aeb0800000000000000
-      internalID: -4710045556164729174
+      spriteID: 4c910382abafefdf0800000000000000
+      internalID: -144402460584175164
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Front_Work_Pants_SpriteSheet_20
+      name: Walk_Side_FemaleShoes_L_24
       rect:
         serializedVersion: 2
-        x: 1024
+        x: 800
         y: 848
-        width: 256
+        width: 200
         height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -609,19 +717,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb62d6727beb5b450800000000000000
-      internalID: 6103994563820332731
+      spriteID: 41a58021e03e86690800000000000000
+      internalID: -7608581920870868460
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Front_Work_Pants_SpriteSheet_21
+      name: Walk_Side_FemaleShoes_L_25
       rect:
         serializedVersion: 2
-        x: 1280
+        x: 1000
         y: 848
-        width: 256
+        width: 200
         height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -630,19 +738,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be56696dd8f0785d0800000000000000
-      internalID: -3060460319909976597
+      spriteID: b7c0c8b1901c74a10800000000000000
+      internalID: 1893694413193612411
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Front_Work_Pants_SpriteSheet_22
+      name: Walk_Side_FemaleShoes_L_26
       rect:
         serializedVersion: 2
-        x: 1536
+        x: 1200
         y: 848
-        width: 256
+        width: 200
         height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -651,19 +759,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bfb9ef0187c111160800000000000000
-      internalID: 6994402998289865723
+      spriteID: 197ba9a3ef63d5f60800000000000000
+      internalID: 8024630576576903057
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Front_Work_Pants_SpriteSheet_23
+      name: Walk_Side_FemaleShoes_L_27
       rect:
         serializedVersion: 2
-        x: 1792
+        x: 1400
         y: 848
-        width: 256
+        width: 200
         height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -672,92 +780,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13fc4efc12dd0ee40800000000000000
-      internalID: 5683785867033104177
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Walk_Front_Work_Pants_SpriteSheet_24
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 448
-        width: 256
-        height: 400
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6c95c9ad0168a7400800000000000000
-      internalID: 322717730255690182
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Walk_Front_Work_Pants_SpriteSheet_25
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 448
-        width: 256
-        height: 400
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f8e135931231236d0800000000000000
-      internalID: -3012324167340843377
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Walk_Front_Work_Pants_SpriteSheet_26
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 448
-        width: 256
-        height: 400
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e8370dc1580fe5d60800000000000000
-      internalID: 7881000852449686414
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Walk_Front_Work_Pants_SpriteSheet_27
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 448
-        width: 256
-        height: 400
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8d039a60d7a26d6e0800000000000000
-      internalID: -1813215083499015976
+      spriteID: 43c13407802587d30800000000000000
+      internalID: 4429380429715545140
       vertices: []
       indices: 
       edges: []

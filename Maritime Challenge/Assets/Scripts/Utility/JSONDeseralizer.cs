@@ -153,7 +153,7 @@ public class JSONDeseralizer : MonoBehaviour
 
         foreach (JSONCosmeticData cosmeticData in cosmeticDataList.cosmeticData)
         {
-            Cosmetic cosmetic = new Cosmetic(cosmeticData.iCosmeticID, cosmeticData.sCosmeticName, cosmeticData.iCosmeticCost, (CosmeticRarity)cosmeticData.iCosmeticRarity, (CosmeticType)cosmeticData.iCosmeticType);
+            Cosmetic cosmetic = new Cosmetic(cosmeticData.iCosmeticID, cosmeticData.sCosmeticName, cosmeticData.iCosmeticCost, (COSMETIC_RARITY)cosmeticData.iCosmeticRarity, (COSMETIC_TYPE)cosmeticData.iCosmeticType);
 
             cosmeticDataDictionary.Add(cosmetic, cosmeticData.bCosmeticUnlocked);
         }

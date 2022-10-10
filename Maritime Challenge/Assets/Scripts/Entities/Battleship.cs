@@ -22,7 +22,7 @@ public class Battleship : NetworkBehaviour
     private Sprite UpwardSprite, DownwardSprite, LeftSprite, RightSprite;
     [SerializeField]
     private Transform TurretHoleRef_Up, TurretHoleRef_Down, TurretHoleRef_Left, TurretHoleRef_Right;
-    private SHIPFACING currFacing, prevFacing;
+    private SHIP_FACING currFacing, prevFacing;
 
  //   [SerializeField]
   //  private GameObject CannonBallPrefab;
@@ -50,7 +50,7 @@ public class Battleship : NetworkBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         shipSprite = GetComponent<SpriteRenderer>();
-        prevFacing = currFacing = SHIPFACING.LEFT;
+        prevFacing = currFacing = SHIP_FACING.LEFT;
 
         UpdateUI(ownerName, ownerName);
         gameObject.SetActive(false);
@@ -122,16 +122,16 @@ public class Battleship : NetworkBehaviour
         if (Mathf.Abs(velocity.x) > Mathf.Abs(velocity.y))
         {
             if (velocity.x > 0)
-                currFacing = SHIPFACING.RIGHT;
+                currFacing = SHIP_FACING.RIGHT;
             else
-                currFacing = SHIPFACING.LEFT;
+                currFacing = SHIP_FACING.LEFT;
         }
         else
         {
             if (velocity.y > 0)
-                currFacing = SHIPFACING.UP;
+                currFacing = SHIP_FACING.UP;
             else
-                currFacing = SHIPFACING.DOWN;
+                currFacing = SHIP_FACING.DOWN;
         }
         if (prevFacing != currFacing)
             SyncShipSprite((int)currFacing);
@@ -200,13 +200,13 @@ public class Battleship : NetworkBehaviour
     {
         switch (currFacing)
         {
-            case SHIPFACING.LEFT:
+            case SHIP_FACING.LEFT:
                 return TurretHoleRef_Left.position;
-            case SHIPFACING.RIGHT:
+            case SHIP_FACING.RIGHT:
                 return TurretHoleRef_Right.position;
-            case SHIPFACING.UP:
+            case SHIP_FACING.UP:
                 return TurretHoleRef_Up.position;
-            case SHIPFACING.DOWN:
+            case SHIP_FACING.DOWN:
                 return TurretHoleRef_Down.position;
             default:
                 return Vector3.zero;
@@ -265,7 +265,7 @@ public class Battleship : NetworkBehaviour
         Debug.Log("Ship Summoned");
         transform.position = refTransform.position;
         transform.rotation = refTransform.rotation;
-        currFacing = SHIPFACING.LEFT;
+        currFacing = SHIP_FACING.LEFT;
         //SyncShipSprite((int)currFacing);
         SyncShipStatus(true);
     }
@@ -286,18 +286,18 @@ public class Battleship : NetworkBehaviour
     private void SyncShipSprite(int facing)
     {
         SetShipSprite(facing);
-        switch ((SHIPFACING)facing)
+        switch ((SHIP_FACING)facing)
         {
-            case SHIPFACING.LEFT:
+            case SHIP_FACING.LEFT:
                 shipSprite.sprite = LeftSprite;
                 break;
-            case SHIPFACING.RIGHT:
+            case SHIP_FACING.RIGHT:
                 shipSprite.sprite = RightSprite;
                 break;
-            case SHIPFACING.UP:
+            case SHIP_FACING.UP:
                 shipSprite.sprite = UpwardSprite;
                 break;
-            case SHIPFACING.DOWN:
+            case SHIP_FACING.DOWN:
                 shipSprite.sprite = DownwardSprite;
                 break;
         }
@@ -312,18 +312,18 @@ public class Battleship : NetworkBehaviour
     [ClientRpc]
     private void SetShipSprite(int facing)
     {
-        switch ((SHIPFACING)facing)
+        switch ((SHIP_FACING)facing)
         {
-            case SHIPFACING.LEFT:
+            case SHIP_FACING.LEFT:
                 shipSprite.sprite = LeftSprite;
                 break;
-            case SHIPFACING.RIGHT:
+            case SHIP_FACING.RIGHT:
                 shipSprite.sprite = RightSprite;
                 break;
-            case SHIPFACING.UP:
+            case SHIP_FACING.UP:
                 shipSprite.sprite = UpwardSprite;
                 break;
-            case SHIPFACING.DOWN:
+            case SHIP_FACING.DOWN:
                 shipSprite.sprite = DownwardSprite;
                 break;
         }
@@ -336,7 +336,7 @@ public class Battleship : NetworkBehaviour
 
 }
 
-enum SHIPFACING
+enum SHIP_FACING
 {
     UP,
     DOWN,

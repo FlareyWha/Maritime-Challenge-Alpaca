@@ -49,7 +49,7 @@ public class AnimatorHandler : MonoBehaviour
         animatorOverrideController.ApplyOverrides(defaultAnimationClips);
     }
 
-    public void SetAnimations(BodyPartType type, int cosmeticID)
+    public void SetAnimations(BODY_PART_TYPE type, int cosmeticID)
     {
         foreach (string state in playerStatesList)
         {

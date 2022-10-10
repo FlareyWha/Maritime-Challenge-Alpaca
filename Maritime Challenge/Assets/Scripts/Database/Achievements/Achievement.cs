@@ -22,11 +22,11 @@ public class Achievement
 }
 
 
-public enum AchievementType
+public enum ACHIEVEMENT_TYPE
 {
-    Friends,
-    RightShipeida,
-    BattleshipsOwned,
+    FRIENDS,
+    RIGHTSHIPEDIA,
+    BATTLESHIPS_OWNED,
 
-    NumTotal
+    NUM_ACHIEVEMENT_TYPE
 }

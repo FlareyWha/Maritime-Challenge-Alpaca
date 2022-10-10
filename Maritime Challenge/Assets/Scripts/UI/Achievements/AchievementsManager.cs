@@ -15,7 +15,7 @@ public class AchievementsManager : MonoBehaviour
     [SerializeField]
     private GameObject AchievementsUIPrefab;
 
-    private AchievementStatus[] achievements = new AchievementStatus[(int)AchievementType.NumTotal];
+    private AchievementStatus[] achievements = new AchievementStatus[(int)ACHIEVEMENT_TYPE.NUM_ACHIEVEMENT_TYPE];
 
     void Awake()
     {
@@ -84,15 +84,15 @@ public class AchievementsManager : MonoBehaviour
         }
     }
 
-    private int GetCurrentProgressNum(AchievementType type)
+    private int GetCurrentProgressNum(ACHIEVEMENT_TYPE type)
     {
         switch (type)
         {
-            case AchievementType.Friends:
+            case ACHIEVEMENT_TYPE.FRIENDS:
                 return PlayerData.PlayerStats.PlayerStat[(int)PLAYER_STAT.FRIENDS_ADDED];
-            case AchievementType.RightShipeida:
+            case ACHIEVEMENT_TYPE.RIGHTSHIPEDIA:
                 return PlayerData.PlayerStats.PlayerStat[(int)PLAYER_STAT.RIGHTSHIPEDIA_ENTRIES_UNLOCKED];
-            case AchievementType.BattleshipsOwned:
+            case ACHIEVEMENT_TYPE.BATTLESHIPS_OWNED:
                 return PlayerData.PlayerStats.PlayerStat[(int)PLAYER_STAT.BATTLESHIPS_OWNED];
             default:
                 return 0;
