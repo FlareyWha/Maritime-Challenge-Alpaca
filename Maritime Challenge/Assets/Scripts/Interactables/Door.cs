@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Door : Interactable
+public class Door : BaseInteractable
 {
     [SerializeField]
     private string InteractMessageText, TargetScene;

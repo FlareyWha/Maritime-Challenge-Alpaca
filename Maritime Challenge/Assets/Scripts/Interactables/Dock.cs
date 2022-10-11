@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Dock : Interactable
+public class Dock : BaseInteractable
 {
-
 
     [SerializeField]
     private bool IsStartingDock = false;

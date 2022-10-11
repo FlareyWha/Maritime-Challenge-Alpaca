@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Interactable : MonoBehaviour
+public class BaseInteractable : MonoBehaviour
 {
    // [SerializeField]
    // private float InteractRadius = 3.0f;

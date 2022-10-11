@@ -1,91 +1,91 @@
 fileFormatVersion: 2
-guid: 5d1ab9cd85bdb4947b635d279bae512b
+guid: ee28ef24d12f884448949de61b13943e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2681417172786185735
-    second: Walk_Hair_SpriteSheet_L_0
+      213: -6036245023498144702
+    second: Walk_Side_FemaleHair_L_Test_0
   - first:
-      213: -3534258688222135405
-    second: Walk_Hair_SpriteSheet_L_1
+      213: 2833151638033017353
+    second: Walk_Side_FemaleHair_L_Test_1
   - first:
-      213: 1546110703522782426
-    second: Walk_Hair_SpriteSheet_L_2
+      213: 2996307175092521273
+    second: Walk_Side_FemaleHair_L_Test_2
   - first:
-      213: -7444368441643251469
-    second: Walk_Hair_SpriteSheet_L_3
+      213: 3320179391198683434
+    second: Walk_Side_FemaleHair_L_Test_3
   - first:
-      213: 2868122949023716770
-    second: Walk_Hair_SpriteSheet_L_4
+      213: -2695000369531307156
+    second: Walk_Side_FemaleHair_L_Test_4
   - first:
-      213: 1859885332434989911
-    second: Walk_Hair_SpriteSheet_L_5
+      213: 8281952402113570581
+    second: Walk_Side_FemaleHair_L_Test_5
   - first:
-      213: -1209518643542470340
-    second: Walk_Hair_SpriteSheet_L_6
+      213: -3513906372002955264
+    second: Walk_Side_FemaleHair_L_Test_6
   - first:
-      213: 5982717019660474931
-    second: Walk_Hair_SpriteSheet_L_7
+      213: -4412952025954464484
+    second: Walk_Side_FemaleHair_L_Test_7
   - first:
-      213: -3427897334471813103
-    second: Walk_Hair_SpriteSheet_L_8
+      213: -2743276106611269338
+    second: Walk_Side_FemaleHair_L_Test_8
   - first:
-      213: 6918566541508830548
-    second: Walk_Hair_SpriteSheet_L_9
+      213: -3857006204897989348
+    second: Walk_Side_FemaleHair_L_Test_9
   - first:
-      213: 7581923137003010906
-    second: Walk_Hair_SpriteSheet_L_10
+      213: 6663718343637399701
+    second: Walk_Side_FemaleHair_L_Test_10
   - first:
-      213: -2147137437364212771
-    second: Walk_Hair_SpriteSheet_L_11
+      213: -1060095886380033517
+    second: Walk_Side_FemaleHair_L_Test_11
   - first:
-      213: 2755552531980736735
-    second: Walk_Hair_SpriteSheet_L_12
+      213: -8956843759626357736
+    second: Walk_Side_FemaleHair_L_Test_12
   - first:
-      213: 4186580722941630081
-    second: Walk_Hair_SpriteSheet_L_13
+      213: -1177976514660977163
+    second: Walk_Side_FemaleHair_L_Test_13
   - first:
-      213: 8749366299864570004
-    second: Walk_Hair_SpriteSheet_L_14
+      213: 3229244317550219547
+    second: Walk_Side_FemaleHair_L_Test_14
   - first:
-      213: -1076306412962504975
-    second: Walk_Hair_SpriteSheet_L_15
+      213: -2360115497069672081
+    second: Walk_Side_FemaleHair_L_Test_15
   - first:
-      213: 8833579938213705777
-    second: Walk_Hair_SpriteSheet_L_16
+      213: 692480119362835752
+    second: Walk_Side_FemaleHair_L_Test_16
   - first:
-      213: 1534428573386928668
-    second: Walk_Hair_SpriteSheet_L_17
+      213: -6247791015401601115
+    second: Walk_Side_FemaleHair_L_Test_17
   - first:
-      213: -4995724391399220850
-    second: Walk_Hair_SpriteSheet_L_18
+      213: -8944942600047608802
+    second: Walk_Side_FemaleHair_L_Test_18
   - first:
-      213: 771013939331253306
-    second: Walk_Hair_SpriteSheet_L_19
+      213: 6120765815106690686
+    second: Walk_Side_FemaleHair_L_Test_19
   - first:
-      213: 6018595226751199670
-    second: Walk_Hair_SpriteSheet_L_20
+      213: 984624895326098068
+    second: Walk_Side_FemaleHair_L_Test_20
   - first:
-      213: 7675298016772672325
-    second: Walk_Hair_SpriteSheet_L_21
+      213: -673337279799461914
+    second: Walk_Side_FemaleHair_L_Test_21
   - first:
-      213: 971225433552630115
-    second: Walk_Hair_SpriteSheet_L_22
+      213: 6123647151070684690
+    second: Walk_Side_FemaleHair_L_Test_22
   - first:
-      213: -96947567791610582
-    second: Walk_Hair_SpriteSheet_L_23
+      213: 8269724326136053539
+    second: Walk_Side_FemaleHair_L_Test_23
   - first:
-      213: -4399551349183729240
-    second: Walk_Hair_SpriteSheet_L_24
+      213: -8704508479409180806
+    second: Walk_Side_FemaleHair_L_Test_24
   - first:
-      213: 2391611150310139233
-    second: Walk_Hair_SpriteSheet_L_25
+      213: -2543852312962049242
+    second: Walk_Side_FemaleHair_L_Test_25
   - first:
-      213: -6737974232166575451
-    second: Walk_Hair_SpriteSheet_L_26
+      213: 6516313641566588259
+    second: Walk_Side_FemaleHair_L_Test_26
   - first:
-      213: 4676258998449606866
-    second: Walk_Hair_SpriteSheet_L_27
+      213: 8201957722800539167
+    second: Walk_Side_FemaleHair_L_Test_27
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -171,11 +171,35 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Walk_Hair_SpriteSheet_L_0
+      name: Walk_Side_FemaleHair_L_Test_0
       rect:
         serializedVersion: 2
         x: 0
@@ -189,14 +213,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f97271c941b9cad0800000000000000
-      internalID: -2681417172786185735
+      spriteID: 2447c2de123fa3ca0800000000000000
+      internalID: -6036245023498144702
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Hair_SpriteSheet_L_1
+      name: Walk_Side_FemaleHair_L_Test_1
       rect:
         serializedVersion: 2
         x: 270
@@ -210,14 +234,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39b7e28c27ac3fec0800000000000000
-      internalID: -3534258688222135405
+      spriteID: 90a26c37760615720800000000000000
+      internalID: 2833151638033017353
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Hair_SpriteSheet_L_2
+      name: Walk_Side_FemaleHair_L_Test_2
       rect:
         serializedVersion: 2
         x: 540
@@ -231,14 +255,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: adc97e24e73e47510800000000000000
-      internalID: 1546110703522782426
+      spriteID: 93908592085059920800000000000000
+      internalID: 2996307175092521273
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Hair_SpriteSheet_L_3
+      name: Walk_Side_FemaleHair_L_Test_3
       rect:
         serializedVersion: 2
         x: 810
@@ -252,14 +276,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f8c9b2285a40b890800000000000000
-      internalID: -7444368441643251469
+      spriteID: a2168f2b095a31e20800000000000000
+      internalID: 3320179391198683434
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Hair_SpriteSheet_L_4
+      name: Walk_Side_FemaleHair_L_Test_4
       rect:
         serializedVersion: 2
         x: 1080
@@ -273,14 +297,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a554bc40ae9dc720800000000000000
-      internalID: 2868122949023716770
+      spriteID: c6b3a80517f699ad0800000000000000
+      internalID: -2695000369531307156
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Hair_SpriteSheet_L_5
+      name: Walk_Side_FemaleHair_L_Test_5
       rect:
         serializedVersion: 2
         x: 1350
@@ -294,14 +318,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7533fb21bd3afc910800000000000000
-      internalID: 1859885332434989911
+      spriteID: 5172cae74d76fe270800000000000000
+      internalID: 8281952402113570581
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Hair_SpriteSheet_L_6
+      name: Walk_Side_FemaleHair_L_Test_6
       rect:
         serializedVersion: 2
         x: 1620
@@ -315,14 +339,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c315076b33de63fe0800000000000000
-      internalID: -1209518643542470340
+      spriteID: 00048caa5c81c3fc0800000000000000
+      internalID: -3513906372002955264
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Hair_SpriteSheet_L_7
+      name: Walk_Side_FemaleHair_L_Test_7
       rect:
         serializedVersion: 2
         x: 0
@@ -336,14 +360,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 33adb8c7e61e60350800000000000000
-      internalID: 5982717019660474931
+      spriteID: c1dc422638b02c2c0800000000000000
+      internalID: -4412952025954464484
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Hair_SpriteSheet_L_8
+      name: Walk_Side_FemaleHair_L_Test_8
       rect:
         serializedVersion: 2
         x: 270
@@ -357,14 +381,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1189c4c3989ad60d0800000000000000
-      internalID: -3427897334471813103
+      spriteID: 6216e906aecede9d0800000000000000
+      internalID: -2743276106611269338
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Hair_SpriteSheet_L_9
+      name: Walk_Side_FemaleHair_L_Test_9
       rect:
         serializedVersion: 2
         x: 540
@@ -378,14 +402,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45569850d9fa30060800000000000000
-      internalID: 6918566541508830548
+      spriteID: c1de39cba49297ac0800000000000000
+      internalID: -3857006204897989348
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Hair_SpriteSheet_L_10
+      name: Walk_Side_FemaleHair_L_Test_10
       rect:
         serializedVersion: 2
         x: 810
@@ -399,14 +423,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a5b316f1ce6683960800000000000000
-      internalID: 7581923137003010906
+      spriteID: 598f2c317884a7c50800000000000000
+      internalID: 6663718343637399701
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Hair_SpriteSheet_L_11
+      name: Walk_Side_FemaleHair_L_Test_11
       rect:
         serializedVersion: 2
         x: 1080
@@ -420,14 +444,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ddba6f170e5d332e0800000000000000
-      internalID: -2147137437364212771
+      spriteID: 31a17707868c941f0800000000000000
+      internalID: -1060095886380033517
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Hair_SpriteSheet_L_12
+      name: Walk_Side_FemaleHair_L_Test_12
       rect:
         serializedVersion: 2
         x: 1350
@@ -441,14 +465,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd8d3a4ad60bd3620800000000000000
-      internalID: 2755552531980736735
+      spriteID: 814fbc65e06e2b380800000000000000
+      internalID: -8956843759626357736
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Hair_SpriteSheet_L_13
+      name: Walk_Side_FemaleHair_L_Test_13
       rect:
         serializedVersion: 2
         x: 1620
@@ -462,14 +486,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1861f6e6cf8b91a30800000000000000
-      internalID: 4186580722941630081
+      spriteID: 5f531e1e99cf6afe0800000000000000
+      internalID: -1177976514660977163
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Hair_SpriteSheet_L_14
+      name: Walk_Side_FemaleHair_L_Test_14
       rect:
         serializedVersion: 2
         x: 0
@@ -483,14 +507,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49893392b4efb6970800000000000000
-      internalID: 8749366299864570004
+      spriteID: b119788f89490dc20800000000000000
+      internalID: 3229244317550219547
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Hair_SpriteSheet_L_15
+      name: Walk_Side_FemaleHair_L_Test_15
       rect:
         serializedVersion: 2
         x: 270
@@ -504,14 +528,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1fe15e915013011f0800000000000000
-      internalID: -1076306412962504975
+      spriteID: f698448b57f2f3fd0800000000000000
+      internalID: -2360115497069672081
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Hair_SpriteSheet_L_16
+      name: Walk_Side_FemaleHair_L_Test_16
       rect:
         serializedVersion: 2
         x: 540
@@ -525,14 +549,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 138be38c62e279a70800000000000000
-      internalID: 8833579938213705777
+      spriteID: 82554a8effe2c9900800000000000000
+      internalID: 692480119362835752
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Hair_SpriteSheet_L_17
+      name: Walk_Side_FemaleHair_L_Test_17
       rect:
         serializedVersion: 2
         x: 810
@@ -546,14 +570,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c12ffe168a26b4510800000000000000
-      internalID: 1534428573386928668
+      spriteID: 5a74c187c236b49a0800000000000000
+      internalID: -6247791015401601115
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Hair_SpriteSheet_L_18
+      name: Walk_Side_FemaleHair_L_Test_18
       rect:
         serializedVersion: 2
         x: 1080
@@ -567,14 +591,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8915ee622f9baab0800000000000000
-      internalID: -4995724391399220850
+      spriteID: e1c37ebf81e2dd380800000000000000
+      internalID: -8944942600047608802
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Hair_SpriteSheet_L_19
+      name: Walk_Side_FemaleHair_L_Test_19
       rect:
         serializedVersion: 2
         x: 1350
@@ -588,14 +612,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a34c6b2c71133ba00800000000000000
-      internalID: 771013939331253306
+      spriteID: e7ed9c2641451f450800000000000000
+      internalID: 6120765815106690686
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Hair_SpriteSheet_L_20
+      name: Walk_Side_FemaleHair_L_Test_20
       rect:
         serializedVersion: 2
         x: 1620
@@ -609,14 +633,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6b9ed598878568350800000000000000
-      internalID: 6018595226751199670
+      spriteID: 4921be220271aad00800000000000000
+      internalID: 984624895326098068
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Hair_SpriteSheet_L_21
+      name: Walk_Side_FemaleHair_L_Test_21
       rect:
         serializedVersion: 2
         x: 0
@@ -630,14 +654,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54bcefa71e2248a60800000000000000
-      internalID: 7675298016772672325
+      spriteID: 6e7768fbf43d7a6f0800000000000000
+      internalID: -673337279799461914
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Hair_SpriteSheet_L_22
+      name: Walk_Side_FemaleHair_L_Test_22
       rect:
         serializedVersion: 2
         x: 270
@@ -651,14 +675,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 361bab3d26c7a7d00800000000000000
-      internalID: 971225433552630115
+      spriteID: 216a661b3a09bf450800000000000000
+      internalID: 6123647151070684690
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Hair_SpriteSheet_L_23
+      name: Walk_Side_FemaleHair_L_Test_23
       rect:
         serializedVersion: 2
         x: 540
@@ -672,14 +696,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a2561f363b297aef0800000000000000
-      internalID: -96947567791610582
+      spriteID: 32ffeb1b576f3c270800000000000000
+      internalID: 8269724326136053539
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Hair_SpriteSheet_L_24
+      name: Walk_Side_FemaleHair_L_Test_24
       rect:
         serializedVersion: 2
         x: 810
@@ -693,14 +717,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a130d49b57a1f2c0800000000000000
-      internalID: -4399551349183729240
+      spriteID: a7fa07c08af533780800000000000000
+      internalID: -8704508479409180806
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Hair_SpriteSheet_L_25
+      name: Walk_Side_FemaleHair_L_Test_25
       rect:
         serializedVersion: 2
         x: 1080
@@ -714,14 +738,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 165691f7ba5b03120800000000000000
-      internalID: 2391611150310139233
+      spriteID: 62b57dc9ccb62bcd0800000000000000
+      internalID: -2543852312962049242
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Hair_SpriteSheet_L_26
+      name: Walk_Side_FemaleHair_L_Test_26
       rect:
         serializedVersion: 2
         x: 1350
@@ -735,14 +759,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a2d9f99228ed72a0800000000000000
-      internalID: -6737974232166575451
+      spriteID: 36dcb9a6bb89e6a50800000000000000
+      internalID: 6516313641566588259
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Hair_SpriteSheet_L_27
+      name: Walk_Side_FemaleHair_L_Test_27
       rect:
         serializedVersion: 2
         x: 1620
@@ -756,8 +780,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d0105088c865e040800000000000000
-      internalID: 4676258998449606866
+      spriteID: f164c42d71533d170800000000000000
+      internalID: 8201957722800539167
       vertices: []
       indices: 
       edges: []

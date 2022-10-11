@@ -6,7 +6,7 @@ using UnityEngine.Networking;
 public class CosmeticManager : MonoBehaviour
 {
     [SerializeField]
-    private List<AvatarCosmetic> avatarCosmeticsList;
+    private List<CosmeticSO> avatarCosmeticsList;
 
     void Awake()
     {
@@ -16,9 +16,9 @@ public class CosmeticManager : MonoBehaviour
         }
     }
 
-    private AvatarCosmetic FindCosmeticByID(int id)
+    private CosmeticSO FindCosmeticByID(int id)
     {
-        foreach (AvatarCosmetic cos in avatarCosmeticsList)
+        foreach (CosmeticSO cos in avatarCosmeticsList)
         {
             if (cos.ID == id)
                 return cos;

@@ -1,0 +1,804 @@
+fileFormatVersion: 2
+guid: 5883aeea6ab6dc445a460d4b18fbf1e6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 632628340470237400
+    second: Walk_Side_FemaleShoes_R_0
+  - first:
+      213: 7306400226942676276
+    second: Walk_Side_FemaleShoes_R_1
+  - first:
+      213: 2547302408722104205
+    second: Walk_Side_FemaleShoes_R_2
+  - first:
+      213: 5219908634225867750
+    second: Walk_Side_FemaleShoes_R_3
+  - first:
+      213: -5272525308504118915
+    second: Walk_Side_FemaleShoes_R_4
+  - first:
+      213: -433471476951397792
+    second: Walk_Side_FemaleShoes_R_5
+  - first:
+      213: 5825388601645478885
+    second: Walk_Side_FemaleShoes_R_6
+  - first:
+      213: 5847387875185292677
+    second: Walk_Side_FemaleShoes_R_7
+  - first:
+      213: -2528855215935779631
+    second: Walk_Side_FemaleShoes_R_8
+  - first:
+      213: 7128933404593407472
+    second: Walk_Side_FemaleShoes_R_9
+  - first:
+      213: 4782022688045118436
+    second: Walk_Side_FemaleShoes_R_10
+  - first:
+      213: -5987144837211075354
+    second: Walk_Side_FemaleShoes_R_11
+  - first:
+      213: -3106030391335275890
+    second: Walk_Side_FemaleShoes_R_12
+  - first:
+      213: 2521801645925937626
+    second: Walk_Side_FemaleShoes_R_13
+  - first:
+      213: -7432549310965894142
+    second: Walk_Side_FemaleShoes_R_14
+  - first:
+      213: 9166561201558780789
+    second: Walk_Side_FemaleShoes_R_15
+  - first:
+      213: -1138749346605015466
+    second: Walk_Side_FemaleShoes_R_16
+  - first:
+      213: -2463369498018479156
+    second: Walk_Side_FemaleShoes_R_17
+  - first:
+      213: -2720178112090750551
+    second: Walk_Side_FemaleShoes_R_18
+  - first:
+      213: -1964227608949144009
+    second: Walk_Side_FemaleShoes_R_19
+  - first:
+      213: 8255793552133149052
+    second: Walk_Side_FemaleShoes_R_20
+  - first:
+      213: -4367561894212943802
+    second: Walk_Side_FemaleShoes_R_21
+  - first:
+      213: -6344975460237382694
+    second: Walk_Side_FemaleShoes_R_22
+  - first:
+      213: 1353705798897627255
+    second: Walk_Side_FemaleShoes_R_23
+  - first:
+      213: -4078418587972116308
+    second: Walk_Side_FemaleShoes_R_24
+  - first:
+      213: 2993264770663086387
+    second: Walk_Side_FemaleShoes_R_25
+  - first:
+      213: 4416764189907824898
+    second: Walk_Side_FemaleShoes_R_26
+  - first:
+      213: -5142521520514912999
+    second: Walk_Side_FemaleShoes_R_27
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Walk_Side_FemaleShoes_R_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1648
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d8c294bf1c87c800800000000000000
+      internalID: 632628340470237400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_FemaleShoes_R_1
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1648
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43d60c1ab4c856560800000000000000
+      internalID: 7306400226942676276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_FemaleShoes_R_2
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1648
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8fb0676b06d95320800000000000000
+      internalID: 2547302408722104205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_FemaleShoes_R_3
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1648
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ebf60f1f37d07840800000000000000
+      internalID: 5219908634225867750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_FemaleShoes_R_4
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1648
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d79ea5dba2a34d6b0800000000000000
+      internalID: -5272525308504118915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_FemaleShoes_R_5
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1648
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06a4c040dfffbf9f0800000000000000
+      internalID: -433471476951397792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_FemaleShoes_R_6
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1648
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e330b7a110f7d050800000000000000
+      internalID: 5825388601645478885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_FemaleShoes_R_7
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 1648
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 585785caa48162150800000000000000
+      internalID: 5847387875185292677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_FemaleShoes_R_8
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 1648
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dc01cd5493b7ecd0800000000000000
+      internalID: -2528855215935779631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_FemaleShoes_R_9
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 1648
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f5c438292f0fe260800000000000000
+      internalID: 7128933404593407472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_FemaleShoes_R_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1248
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e3b9cc6c482d5240800000000000000
+      internalID: 4782022688045118436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_FemaleShoes_R_11
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1248
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ec4837ed7369eca0800000000000000
+      internalID: -5987144837211075354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_FemaleShoes_R_12
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1248
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e82b4e6c0d925e4d0800000000000000
+      internalID: -3106030391335275890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_FemaleShoes_R_13
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1248
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad139636c3d3ff220800000000000000
+      internalID: 2521801645925937626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_FemaleShoes_R_14
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1248
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 204bd40f7c74ad890800000000000000
+      internalID: -7432549310965894142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_FemaleShoes_R_15
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1248
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57bf9c6a8da263f70800000000000000
+      internalID: 9166561201558780789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_FemaleShoes_R_16
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1248
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65e566ba0895230f0800000000000000
+      internalID: -1138749346605015466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_FemaleShoes_R_17
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 1248
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc383183e7a50ddd0800000000000000
+      internalID: -2463369498018479156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_FemaleShoes_R_18
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 1248
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a1c90f4b6cff3ad0800000000000000
+      internalID: -2720178112090750551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_FemaleShoes_R_19
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 1248
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73642968569adb4e0800000000000000
+      internalID: -1964227608949144009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_FemaleShoes_R_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 848
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c715bdd9e78729270800000000000000
+      internalID: 8255793552133149052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_FemaleShoes_R_21
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 848
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 640c7e8f89d4363c0800000000000000
+      internalID: -4367561894212943802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_FemaleShoes_R_22
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 848
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adbeaff9f6e12f7a0800000000000000
+      internalID: -6344975460237382694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_FemaleShoes_R_23
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 848
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 770fda9704459c210800000000000000
+      internalID: 1353705798897627255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_FemaleShoes_R_24
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 848
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca0629217eb8667c0800000000000000
+      internalID: -4078418587972116308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_FemaleShoes_R_25
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 848
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 339701e23763a8920800000000000000
+      internalID: 2993264770663086387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_FemaleShoes_R_26
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 848
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2013f1431af7b4d30800000000000000
+      internalID: 4416764189907824898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_FemaleShoes_R_27
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 848
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91d28ef5ce712a8b0800000000000000
+      internalID: -5142521520514912999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

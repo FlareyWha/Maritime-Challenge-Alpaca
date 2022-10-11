@@ -1,0 +1,780 @@
+fileFormatVersion: 2
+guid: af091f0708ee1954e80ed39419ac30a9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6965392772796939378
+    second: Walk_Side_OfficePants_Test_0
+  - first:
+      213: 5981686792814361118
+    second: Walk_Side_OfficePants_Test_1
+  - first:
+      213: -999433309903257753
+    second: Walk_Side_OfficePants_Test_2
+  - first:
+      213: -7980316234320820245
+    second: Walk_Side_OfficePants_Test_3
+  - first:
+      213: 566174766471221749
+    second: Walk_Side_OfficePants_Test_4
+  - first:
+      213: -4273273195129888456
+    second: Walk_Side_OfficePants_Test_5
+  - first:
+      213: -7238254590657224955
+    second: Walk_Side_OfficePants_Test_6
+  - first:
+      213: -5268707113635457545
+    second: Walk_Side_OfficePants_Test_7
+  - first:
+      213: 8766185045517341557
+    second: Walk_Side_OfficePants_Test_8
+  - first:
+      213: -4347262041379428593
+    second: Walk_Side_OfficePants_Test_9
+  - first:
+      213: -9048190869518167209
+    second: Walk_Side_OfficePants_Test_10
+  - first:
+      213: 5199405272821494612
+    second: Walk_Side_OfficePants_Test_11
+  - first:
+      213: 4914397230270111942
+    second: Walk_Side_OfficePants_Test_12
+  - first:
+      213: -1285661279708566985
+    second: Walk_Side_OfficePants_Test_13
+  - first:
+      213: -9125682218260096410
+    second: Walk_Side_OfficePants_Test_14
+  - first:
+      213: 33047602022307903
+    second: Walk_Side_OfficePants_Test_15
+  - first:
+      213: -1580089480900836691
+    second: Walk_Side_OfficePants_Test_16
+  - first:
+      213: -3837842811033457567
+    second: Walk_Side_OfficePants_Test_17
+  - first:
+      213: -164434546541323478
+    second: Walk_Side_OfficePants_Test_18
+  - first:
+      213: -936864233072576715
+    second: Walk_Side_OfficePants_Test_19
+  - first:
+      213: 1213363139434660123
+    second: Walk_Side_OfficePants_Test_20
+  - first:
+      213: -5081669850139129696
+    second: Walk_Side_OfficePants_Test_21
+  - first:
+      213: 4205548656555559396
+    second: Walk_Side_OfficePants_Test_22
+  - first:
+      213: -6114158469746901708
+    second: Walk_Side_OfficePants_Test_23
+  - first:
+      213: 4217656556209194693
+    second: Walk_Side_OfficePants_Test_24
+  - first:
+      213: 8245687637911997061
+    second: Walk_Side_OfficePants_Test_25
+  - first:
+      213: 3184911461052482707
+    second: Walk_Side_OfficePants_Test_26
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Walk_Side_OfficePants_Test_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1648
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27c72a792db0aa060800000000000000
+      internalID: 6965392772796939378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_OfficePants_Test_1
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1648
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1a785b1278330350800000000000000
+      internalID: 5981686792814361118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_OfficePants_Test_2
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1648
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76ff58a23bc4122f0800000000000000
+      internalID: -999433309903257753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_OfficePants_Test_3
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1648
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be7460a9aa8304190800000000000000
+      internalID: -7980316234320820245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_OfficePants_Test_4
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1648
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f19e4c43f47bd700800000000000000
+      internalID: 566174766471221749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_OfficePants_Test_5
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1648
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 831a5187ba842b4c0800000000000000
+      internalID: -4273273195129888456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_OfficePants_Test_6
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1648
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50f190abccd8c8b90800000000000000
+      internalID: -7238254590657224955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_OfficePants_Test_7
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 1648
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f55f228bcac1e6b0800000000000000
+      internalID: -5268707113635457545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_OfficePants_Test_8
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 1648
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57317698adeb7a970800000000000000
+      internalID: 8766185045517341557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_OfficePants_Test_9
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 1648
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f072a06c43c6ba3c0800000000000000
+      internalID: -4347262041379428593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_OfficePants_Test_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1248
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 753df62f75e5e6280800000000000000
+      internalID: -9048190869518167209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_OfficePants_Test_11
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1248
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45371d94c8ff72840800000000000000
+      internalID: 5199405272821494612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_OfficePants_Test_12
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1248
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c0e96b4e32733440800000000000000
+      internalID: 4914397230270111942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_OfficePants_Test_13
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1248
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73a2f79b0e9682ee0800000000000000
+      internalID: -1285661279708566985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_OfficePants_Test_14
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1248
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66a12875f501b5180800000000000000
+      internalID: -9125682218260096410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_OfficePants_Test_15
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1248
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f38d7337e98657000800000000000000
+      internalID: 33047602022307903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_OfficePants_Test_16
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1248
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da203912df4621ae0800000000000000
+      internalID: -1580089480900836691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_OfficePants_Test_17
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 1248
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16c60901c4e3dbac0800000000000000
+      internalID: -3837842811033457567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_OfficePants_Test_18
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 1248
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2b1a90b6afc7bdf0800000000000000
+      internalID: -164434546541323478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_OfficePants_Test_19
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 1248
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 537b0f891f69ff2f0800000000000000
+      internalID: -936864233072576715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_OfficePants_Test_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 848
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b114e8db85bb6d010800000000000000
+      internalID: 1213363139434660123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_OfficePants_Test_21
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 848
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a805a4f1384a79b0800000000000000
+      internalID: -5081669850139129696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_OfficePants_Test_22
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 848
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e98d9f983c1d5a30800000000000000
+      internalID: 4205548656555559396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_OfficePants_Test_23
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 848
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43d3a461445262ba0800000000000000
+      internalID: -6114158469746901708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_OfficePants_Test_24
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 848
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c64271ba40288a30800000000000000
+      internalID: 4217656556209194693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_OfficePants_Test_25
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 848
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58a039a18319e6270800000000000000
+      internalID: 8245687637911997061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_OfficePants_Test_26
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 848
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3948a157914133c20800000000000000
+      internalID: 3184911461052482707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -10,5 +10,5 @@ public class AvatarSO : ScriptableObject
 public class AvatarPart
 {
     public string partName; // for my own ref
-    public AvatarCosmetic cosmetic;
+    public CosmeticSO cosmetic;
 }

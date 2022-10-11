@@ -1,0 +1,804 @@
+fileFormatVersion: 2
+guid: 709307aaae056dc4e83fad9be1cddd50
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7260700496174145345
+    second: Walk_Front_MaleShoeTest_0
+  - first:
+      213: 3255253597047401042
+    second: Walk_Front_MaleShoeTest_1
+  - first:
+      213: -5571928912064343806
+    second: Walk_Front_MaleShoeTest_2
+  - first:
+      213: 8437840440761832183
+    second: Walk_Front_MaleShoeTest_3
+  - first:
+      213: -1689000714764840817
+    second: Walk_Front_MaleShoeTest_4
+  - first:
+      213: -4158846464401580717
+    second: Walk_Front_MaleShoeTest_5
+  - first:
+      213: 947362601632209477
+    second: Walk_Front_MaleShoeTest_6
+  - first:
+      213: 647902783511578967
+    second: Walk_Front_MaleShoeTest_7
+  - first:
+      213: 1217189243645911332
+    second: Walk_Front_MaleShoeTest_8
+  - first:
+      213: -1138977731504781428
+    second: Walk_Front_MaleShoeTest_9
+  - first:
+      213: 7176351296592352958
+    second: Walk_Front_MaleShoeTest_10
+  - first:
+      213: -3986550693758444760
+    second: Walk_Front_MaleShoeTest_11
+  - first:
+      213: -2980235470001960411
+    second: Walk_Front_MaleShoeTest_12
+  - first:
+      213: 3214143888996598882
+    second: Walk_Front_MaleShoeTest_13
+  - first:
+      213: 6129966062209309369
+    second: Walk_Front_MaleShoeTest_14
+  - first:
+      213: -5465449817398355538
+    second: Walk_Front_MaleShoeTest_15
+  - first:
+      213: 5476607999250227667
+    second: Walk_Front_MaleShoeTest_16
+  - first:
+      213: -574879379257681069
+    second: Walk_Front_MaleShoeTest_17
+  - first:
+      213: -3866672269906037186
+    second: Walk_Front_MaleShoeTest_18
+  - first:
+      213: -8488244914520327723
+    second: Walk_Front_MaleShoeTest_19
+  - first:
+      213: 8909738790318751554
+    second: Walk_Front_MaleShoeTest_20
+  - first:
+      213: 1118548892181042210
+    second: Walk_Front_MaleShoeTest_21
+  - first:
+      213: -5782940427754311404
+    second: Walk_Front_MaleShoeTest_22
+  - first:
+      213: -3393238367523551811
+    second: Walk_Front_MaleShoeTest_23
+  - first:
+      213: -6265284512153595556
+    second: Walk_Front_MaleShoeTest_24
+  - first:
+      213: -7274564389066356460
+    second: Walk_Front_MaleShoeTest_25
+  - first:
+      213: -113791791663447712
+    second: Walk_Front_MaleShoeTest_26
+  - first:
+      213: -9090066022601392900
+    second: Walk_Front_MaleShoeTest_27
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Walk_Front_MaleShoeTest_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1638
+        width: 256
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb0a9091e5fcc3b90800000000000000
+      internalID: -7260700496174145345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Front_MaleShoeTest_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1638
+        width: 256
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25aa2d146ebfc2d20800000000000000
+      internalID: 3255253597047401042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Front_MaleShoeTest_2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1638
+        width: 256
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2011da20d288ca2b0800000000000000
+      internalID: -5571928912064343806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Front_MaleShoeTest_3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1638
+        width: 256
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f2d80fdc2b391570800000000000000
+      internalID: 8437840440761832183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Front_MaleShoeTest_4
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1638
+        width: 256
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f809f037cc67f88e0800000000000000
+      internalID: -1689000714764840817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Front_MaleShoeTest_5
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1638
+        width: 256
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35d54f5dc2fc846c0800000000000000
+      internalID: -4158846464401580717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Front_MaleShoeTest_6
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1638
+        width: 256
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54a17cf4445b52d00800000000000000
+      internalID: 947362601632209477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Front_MaleShoeTest_7
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1638
+        width: 256
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 759c13c1620ddf800800000000000000
+      internalID: 647902783511578967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Front_MaleShoeTest_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1228
+        width: 256
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 421e0fb0b2354e010800000000000000
+      internalID: 1217189243645911332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Front_MaleShoeTest_9
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1228
+        width: 256
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c87c39aa9c98130f0800000000000000
+      internalID: -1138977731504781428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Front_MaleShoeTest_10
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1228
+        width: 256
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb61dc87b75879360800000000000000
+      internalID: 7176351296592352958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Front_MaleShoeTest_11
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1228
+        width: 256
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82bd073044deca8c0800000000000000
+      internalID: -3986550693758444760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Front_MaleShoeTest_12
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1228
+        width: 256
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52a838741a314a6d0800000000000000
+      internalID: -2980235470001960411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Front_MaleShoeTest_13
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1228
+        width: 256
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26482a876deea9c20800000000000000
+      internalID: 3214143888996598882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Front_MaleShoeTest_14
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1228
+        width: 256
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ba9f27d7a3021550800000000000000
+      internalID: 6129966062209309369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Front_MaleShoeTest_15
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1228
+        width: 256
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea95f382952d624b0800000000000000
+      internalID: -5465449817398355538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Front_MaleShoeTest_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 818
+        width: 256
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d16f5185f1d00c40800000000000000
+      internalID: 5476607999250227667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Front_MaleShoeTest_17
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 818
+        width: 256
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35b16aa104e9508f0800000000000000
+      internalID: -574879379257681069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Front_MaleShoeTest_18
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 818
+        width: 256
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e36b5699e02d65ac0800000000000000
+      internalID: -3866672269906037186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Front_MaleShoeTest_19
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 818
+        width: 256
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d9ff7f0932b33a80800000000000000
+      internalID: -8488244914520327723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Front_MaleShoeTest_20
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 818
+        width: 256
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24fb7765930c5ab70800000000000000
+      internalID: 8909738790318751554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Front_MaleShoeTest_21
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 818
+        width: 256
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2249b568a42e58f00800000000000000
+      internalID: 1118548892181042210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Front_MaleShoeTest_22
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 818
+        width: 256
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 411757ef15edebfa0800000000000000
+      internalID: -5782940427754311404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Front_MaleShoeTest_23
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 818
+        width: 256
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db54881deabc8e0d0800000000000000
+      internalID: -3393238367523551811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Front_MaleShoeTest_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 408
+        width: 256
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c51145c5eec3d09a0800000000000000
+      internalID: -6265284512153595556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Front_MaleShoeTest_25
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 408
+        width: 256
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4194efdfa3e8b0b90800000000000000
+      internalID: -7274564389066356460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Front_MaleShoeTest_26
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 408
+        width: 256
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0618b87e7fabb6ef0800000000000000
+      internalID: -113791791663447712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Front_MaleShoeTest_27
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 408
+        width: 256
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfcfef91d1999d180800000000000000
+      internalID: -9090066022601392900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

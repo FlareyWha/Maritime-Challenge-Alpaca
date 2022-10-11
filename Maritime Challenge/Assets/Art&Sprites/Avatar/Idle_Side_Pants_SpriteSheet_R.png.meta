@@ -1,70 +1,70 @@
 fileFormatVersion: 2
-guid: ad03110067c24fd4eaee4e68659c5e72
+guid: 70a49b68013f5024f892bb801c129a29
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -723637622896969376
-    second: Idle_Side_Pants_SpriteSheet_R_0
+      213: 8636354898207895726
+    second: Idle_Side_OfficePants_Test_0
   - first:
-      213: 3308004848480680020
-    second: Idle_Side_Pants_SpriteSheet_R_1
+      213: 3775982781399839408
+    second: Idle_Side_OfficePants_Test_1
   - first:
-      213: 5310652207093877647
-    second: Idle_Side_Pants_SpriteSheet_R_2
+      213: -7400532037153878265
+    second: Idle_Side_OfficePants_Test_2
   - first:
-      213: -5310466586690348980
-    second: Idle_Side_Pants_SpriteSheet_R_3
+      213: 4933984041520099941
+    second: Idle_Side_OfficePants_Test_3
   - first:
-      213: 4391968758097117117
-    second: Idle_Side_Pants_SpriteSheet_R_4
+      213: -7648593145533387793
+    second: Idle_Side_OfficePants_Test_4
   - first:
-      213: 2872749950499213344
-    second: Idle_Side_Pants_SpriteSheet_R_5
+      213: 626684431629030336
+    second: Idle_Side_OfficePants_Test_5
   - first:
-      213: -2453543814823364514
-    second: Idle_Side_Pants_SpriteSheet_R_6
+      213: 7287853541186920369
+    second: Idle_Side_OfficePants_Test_6
   - first:
-      213: -4976618098234033622
-    second: Idle_Side_Pants_SpriteSheet_R_7
+      213: -1420131569402572969
+    second: Idle_Side_OfficePants_Test_7
   - first:
-      213: 5263531399534817241
-    second: Idle_Side_Pants_SpriteSheet_R_8
+      213: -8506856119008140707
+    second: Idle_Side_OfficePants_Test_8
   - first:
-      213: 3075758619408411433
-    second: Idle_Side_Pants_SpriteSheet_R_9
+      213: -1789445594040219987
+    second: Idle_Side_OfficePants_Test_9
   - first:
-      213: 1906634178628329056
-    second: Idle_Side_Pants_SpriteSheet_R_10
+      213: 3470555056697232563
+    second: Idle_Side_OfficePants_Test_10
   - first:
-      213: 2987070595741324176
-    second: Idle_Side_Pants_SpriteSheet_R_11
+      213: 5584446421556406082
+    second: Idle_Side_OfficePants_Test_11
   - first:
-      213: -3408695054782972481
-    second: Idle_Side_Pants_SpriteSheet_R_12
+      213: -3272711563732707978
+    second: Idle_Side_OfficePants_Test_12
   - first:
-      213: 3811284326958387443
-    second: Idle_Side_Pants_SpriteSheet_R_13
+      213: 1885367998913039404
+    second: Idle_Side_OfficePants_Test_13
   - first:
-      213: 4677824865897603944
-    second: Idle_Side_Pants_SpriteSheet_R_14
+      213: -4464620163771628251
+    second: Idle_Side_OfficePants_Test_14
   - first:
-      213: -6857260811733150880
-    second: Idle_Side_Pants_SpriteSheet_R_15
+      213: -186562264983175589
+    second: Idle_Side_OfficePants_Test_15
   - first:
-      213: 930545216248641927
-    second: Idle_Side_Pants_SpriteSheet_R_16
+      213: -348387094252319614
+    second: Idle_Side_OfficePants_Test_16
   - first:
-      213: -1036432656780816082
-    second: Idle_Side_Pants_SpriteSheet_R_17
+      213: 3770308190094734665
+    second: Idle_Side_OfficePants_Test_17
   - first:
-      213: 273646747862453681
-    second: Idle_Side_Pants_SpriteSheet_R_18
+      213: -7068983742093926742
+    second: Idle_Side_OfficePants_Test_18
   - first:
-      213: -7405626441505443890
-    second: Idle_Side_Pants_SpriteSheet_R_19
+      213: -7124112404633400434
+    second: Idle_Side_OfficePants_Test_19
   - first:
-      213: 757427362753518630
-    second: Idle_Side_Pants_SpriteSheet_R_20
+      213: 1893060995409946054
+    second: Idle_Side_OfficePants_Test_20
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -150,11 +150,35 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle_Side_Pants_SpriteSheet_R_0
+      name: Idle_Side_OfficePants_Test_0
       rect:
         serializedVersion: 2
         x: 0
@@ -168,14 +192,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0693e1d7a6f15f5f0800000000000000
-      internalID: -723637622896969376
+      spriteID: ea0f2e5c50f7ad770800000000000000
+      internalID: 8636354898207895726
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Side_Pants_SpriteSheet_R_1
+      name: Idle_Side_OfficePants_Test_1
       rect:
         serializedVersion: 2
         x: 200
@@ -189,14 +213,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 458f5f412e468ed20800000000000000
-      internalID: 3308004848480680020
+      spriteID: 0b2345b655cf66430800000000000000
+      internalID: 3775982781399839408
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Side_Pants_SpriteSheet_R_2
+      name: Idle_Side_OfficePants_Test_2
       rect:
         serializedVersion: 2
         x: 400
@@ -210,14 +234,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f8b89799b0a33b940800000000000000
-      internalID: 5310652207093877647
+      spriteID: 70f8b8862570c4990800000000000000
+      internalID: -7400532037153878265
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Side_Pants_SpriteSheet_R_3
+      name: Idle_Side_OfficePants_Test_3
       rect:
         serializedVersion: 2
         x: 600
@@ -231,14 +255,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c489db486ce6d46b0800000000000000
-      internalID: -5310466586690348980
+      spriteID: 562704a2858097440800000000000000
+      internalID: 4933984041520099941
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Side_Pants_SpriteSheet_R_4
+      name: Idle_Side_OfficePants_Test_4
       rect:
         serializedVersion: 2
         x: 800
@@ -252,14 +276,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dbffdfad05863fc30800000000000000
-      internalID: 4391968758097117117
+      spriteID: febaef0ee0dbad590800000000000000
+      internalID: -7648593145533387793
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Side_Pants_SpriteSheet_R_5
+      name: Idle_Side_OfficePants_Test_5
       rect:
         serializedVersion: 2
         x: 1000
@@ -273,14 +297,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 020d6080cde0ed720800000000000000
-      internalID: 2872749950499213344
+      spriteID: 0c314859b2e62b800800000000000000
+      internalID: 626684431629030336
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Side_Pants_SpriteSheet_R_6
+      name: Idle_Side_OfficePants_Test_6
       rect:
         serializedVersion: 2
         x: 1200
@@ -294,14 +318,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e58b89c56e243fdd0800000000000000
-      internalID: -2453543814823364514
+      spriteID: 1bfd489de28a32560800000000000000
+      internalID: 7287853541186920369
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Side_Pants_SpriteSheet_R_7
+      name: Idle_Side_OfficePants_Test_7
       rect:
         serializedVersion: 2
         x: 1400
@@ -315,14 +339,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a2afaf7f4308feab0800000000000000
-      internalID: -4976618098234033622
+      spriteID: 75f017f9cddaa4ce0800000000000000
+      internalID: -1420131569402572969
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Side_Pants_SpriteSheet_R_8
+      name: Idle_Side_OfficePants_Test_8
       rect:
         serializedVersion: 2
         x: 1600
@@ -336,14 +360,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9df2365abe1db0940800000000000000
-      internalID: 5263531399534817241
+      spriteID: d5269275e6391f980800000000000000
+      internalID: -8506856119008140707
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Side_Pants_SpriteSheet_R_9
+      name: Idle_Side_OfficePants_Test_9
       rect:
         serializedVersion: 2
         x: 1800
@@ -357,14 +381,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92b2fa41b2a4faa20800000000000000
-      internalID: 3075758619408411433
+      spriteID: da6485e86bc9a27e0800000000000000
+      internalID: -1789445594040219987
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Side_Pants_SpriteSheet_R_10
+      name: Idle_Side_OfficePants_Test_10
       rect:
         serializedVersion: 2
         x: 0
@@ -378,14 +402,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 06e92c50fa9b57a10800000000000000
-      internalID: 1906634178628329056
+      spriteID: 3bccfdfaf63e92030800000000000000
+      internalID: 3470555056697232563
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Side_Pants_SpriteSheet_R_11
+      name: Idle_Side_OfficePants_Test_11
       rect:
         serializedVersion: 2
         x: 200
@@ -399,14 +423,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0931d2271e4347920800000000000000
-      internalID: 2987070595741324176
+      spriteID: 2472218ce60ff7d40800000000000000
+      internalID: 5584446421556406082
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Side_Pants_SpriteSheet_R_12
+      name: Idle_Side_OfficePants_Test_12
       rect:
         serializedVersion: 2
         x: 400
@@ -420,14 +444,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fbdb70068e1e1b0d0800000000000000
-      internalID: -3408695054782972481
+      spriteID: 675166f1c2ef492d0800000000000000
+      internalID: -3272711563732707978
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Side_Pants_SpriteSheet_R_13
+      name: Idle_Side_OfficePants_Test_13
       rect:
         serializedVersion: 2
         x: 600
@@ -441,14 +465,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f05e5ef6e664e430800000000000000
-      internalID: 3811284326958387443
+      spriteID: c2cc916b43c2a2a10800000000000000
+      internalID: 1885367998913039404
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Side_Pants_SpriteSheet_R_14
+      name: Idle_Side_OfficePants_Test_14
       rect:
         serializedVersion: 2
         x: 800
@@ -462,14 +486,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 863e05d6ee8fae040800000000000000
-      internalID: 4677824865897603944
+      spriteID: 52588599d9b7a02c0800000000000000
+      internalID: -4464620163771628251
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Side_Pants_SpriteSheet_R_15
+      name: Idle_Side_OfficePants_Test_15
       rect:
         serializedVersion: 2
         x: 1000
@@ -483,14 +507,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 06350708f9d16d0a0800000000000000
-      internalID: -6857260811733150880
+      spriteID: b5e7f23cb92396df0800000000000000
+      internalID: -186562264983175589
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Side_Pants_SpriteSheet_R_16
+      name: Idle_Side_OfficePants_Test_16
       rect:
         serializedVersion: 2
         x: 1200
@@ -504,14 +528,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78970f5a1f5f9ec00800000000000000
-      internalID: 930545216248641927
+      spriteID: 28c82ca98c74a2bf0800000000000000
+      internalID: -348387094252319614
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Side_Pants_SpriteSheet_R_17
+      name: Idle_Side_OfficePants_Test_17
       rect:
         serializedVersion: 2
         x: 1400
@@ -525,14 +549,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2117fa6df9dd91f0800000000000000
-      internalID: -1036432656780816082
+      spriteID: 945b75ca253d25430800000000000000
+      internalID: 3770308190094734665
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Side_Pants_SpriteSheet_R_18
+      name: Idle_Side_OfficePants_Test_18
       rect:
         serializedVersion: 2
         x: 1600
@@ -546,14 +570,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1bd484074403cc300800000000000000
-      internalID: 273646747862453681
+      spriteID: aaeda795dbce5ed90800000000000000
+      internalID: -7068983742093926742
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Side_Pants_SpriteSheet_R_19
+      name: Idle_Side_OfficePants_Test_19
       rect:
         serializedVersion: 2
         x: 1800
@@ -567,14 +591,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ecfe3d6fcfde93990800000000000000
-      internalID: -7405626441505443890
+      spriteID: e8b4fdd5381122d90800000000000000
+      internalID: -7124112404633400434
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Side_Pants_SpriteSheet_R_20
+      name: Idle_Side_OfficePants_Test_20
       rect:
         serializedVersion: 2
         x: 0
@@ -588,8 +612,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 62c95146c2ce28a00800000000000000
-      internalID: 757427362753518630
+      spriteID: 6c5ae8902f0854a10800000000000000
+      internalID: 1893060995409946054
       vertices: []
       indices: 
       edges: []

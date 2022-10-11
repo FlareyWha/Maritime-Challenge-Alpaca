@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShoppingMall : Interactable
+public class ShoppingMall : BaseInteractable
 {
     void Start()
     {
