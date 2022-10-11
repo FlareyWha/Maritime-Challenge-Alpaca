@@ -15,7 +15,7 @@
       </Interface>
     </NestedTypes>
     <TypeIdentifier>
-      <HashCode>AAACAAAAQiAAABAAAAUACBABAAAAAOAEAAAkAABQAAA=</HashCode>
+      <HashCode>AAACAAAAQiAAABAAAAUACBABAAAEAOAEAAAkAABQAAA=</HashCode>
       <FileName>Assets\Controls.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
@@ -33,7 +33,7 @@
   <Class Name="BaseAbandonedCity">
     <Position X="32.75" Y="25.25" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AICEJADBAGIhBEBGkAAIAYAgCEgIACCAkCQABAAMAAg=</HashCode>
+      <HashCode>AICEJADBAGIhBFBGkAAIAYAgCEgIACCAkCQABAAMAAg=</HashCode>
       <FileName>Assets\Scripts\Abandoned City\BaseAbandonedCity.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
@@ -54,13 +54,13 @@
       <FileName>Assets\Scripts\Admin\AdminAppManager.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
+      <Field Name="refreshDatabaseManager" />
       <Field Name="redemptionItemManager" />
       <Field Name="redemptionRequestManager" />
-      <Field Name="refreshDatabaseManager" />
     </ShowAsAssociation>
   </Class>
   <Class Name="RedemptionItemManager">
-    <Position X="8.75" Y="16.5" Width="2" />
+    <Position X="9.75" Y="16.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAACAAAAAAAAABAAAAAAAAAAAgAAAAAAAIAAA=</HashCode>
       <FileName>Assets\Scripts\Admin\Redemptions\RedemptionItemManager.cs</FileName>
@@ -141,9 +141,6 @@
       <HashCode>AAIAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
       <FileName>Assets\Scripts\Database\Cosmetics\CosmeticManager.cs</FileName>
     </TypeIdentifier>
-    <ShowAsCollectionAssociation>
-      <Field Name="avatarCosmeticsList" />
-    </ShowAsCollectionAssociation>
   </Class>
   <Class Name="CurrencyManager">
     <Position X="6.75" Y="24.25" Width="2.5" />
@@ -240,7 +237,7 @@
   <Class Name="Battleship">
     <Position X="33" Y="35" Width="2" />
     <TypeIdentifier>
-      <HashCode>QQQYEgIMRIACCQCUABgIAEAgKEIlCQIgkAwQQAAYAEo=</HashCode>
+      <HashCode>QQQYEgIMRIECCQCUEBgIAEAgKEIlCQIgkAwQQAAYAEo=</HashCode>
       <FileName>Assets\Scripts\Entities\Battleship.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -251,8 +248,8 @@
       <FileName>Assets\Scripts\Entities\Enemy\BaseEnemy.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Field Name="currEnemyState" />
       <Field Name="currentTargetPlayer" />
+      <Field Name="currEnemyState" />
       <Field Name="linkedAbandonedCity" />
     </ShowAsAssociation>
   </Class>
@@ -294,8 +291,8 @@
     </TypeIdentifier>
     <ShowAsAssociation>
       <Field Name="Avatar" />
-      <Field Name="LinkedBattleship" />
       <Field Name="playerUI" />
+      <Field Name="LinkedBattleship" />
     </ShowAsAssociation>
   </Class>
   <Class Name="PlayerCommands">
@@ -308,6 +305,11 @@
   <Class Name="PlayerData">
     <Position X="23.25" Y="16.5" Width="2" />
     <NestedTypes>
+      <Delegate Name="PlayerData.NumTokensUpdated" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Entities\Player\PlayerData.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
       <Delegate Name="PlayerData.PlayerDataUpdated" Collapsed="true">
         <TypeIdentifier>
           <NewMemberFileName>Assets\Scripts\Entities\Player\PlayerData.cs</NewMemberFileName>
@@ -320,16 +322,16 @@
       </Delegate>
     </NestedTypes>
     <TypeIdentifier>
-      <HashCode>hABAAUDoCAgCRICgABACFASAFAoIgAwQDAAjgAAAEEA=</HashCode>
+      <HashCode>lABAAUDoCAgCRICgABACFASAFAoIgAwQDAAjgAAAEEA=</HashCode>
       <FileName>Assets\Scripts\Entities\Player\PlayerData.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Field Name="CommandsHandler" />
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
-      <Field Name="EquippedCosmeticsList" />
-      <Field Name="FriendDataList" />
       <Field Name="FriendList" />
+      <Field Name="FriendDataList" />
+      <Field Name="EquippedCosmeticsList" />
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="BasicInfo">
@@ -399,6 +401,19 @@
   </Class>
   <Class Name="BaseProjectile">
     <Position X="26.75" Y="9.75" Width="1.5" />
+    <AssociationLine Name="ownerPlayer" Type="Player" ManuallyRouted="true">
+      <Path>
+        <Point X="28.25" Y="11.842" />
+        <Point X="28.625" Y="11.842" />
+        <Point X="28.625" Y="24.688" />
+        <Point X="29.198" Y="24.688" Type="JumpStart" />
+        <Point X="29.365" Y="24.688" Type="JumpEnd" />
+        <Point X="33.667" Y="24.688" Type="JumpStart" />
+        <Point X="33.833" Y="24.688" Type="JumpEnd" />
+        <Point X="37.125" Y="24.688" />
+        <Point X="37.125" Y="25.25" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAAAAABAAgBAgABEIEAIAAAAAAEgAAEAAAUAIABAAEA=</HashCode>
       <FileName>Assets\Scripts\Entities\Projectile\BaseProjectile.cs</FileName>
@@ -441,7 +456,7 @@
     </NestedTypes>
     <TypeIdentifier>
       <HashCode>ADEAAAAAAiAQCABAQAMAEACAAAAAYAAAEAIAAQAAIBA=</HashCode>
-      <FileName>Assets\Scripts\FriendsManager.cs</FileName>
+      <FileName>Assets\Scripts\UI\Friend\FriendsManager.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GameHandler">
@@ -503,8 +518,8 @@
     </TypeIdentifier>
     <ShowAsAssociation>
       <Field Name="AirHockeyGameManager" />
-      <Field Name="LinkedGoal" />
       <Field Name="PlayerPaddle" />
+      <Field Name="LinkedGoal" />
     </ShowAsAssociation>
   </Class>
   <Class Name="Arcade">
@@ -577,7 +592,7 @@
       <Field Name="guildInfoPanel" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="Interactable">
+  <Class Name="BaseInteractable">
     <Position X="58" Y="20" Width="1.5" />
     <AssociationLine Name="myPlayer" Type="Player" FixedFromPoint="true" FixedToPoint="true">
       <Path>
@@ -656,7 +671,7 @@
     </AssociationLine>
     <TypeIdentifier>
       <HashCode>AgAAAAAAACAABAAAAQAAAAEAAAAAAAABAAIAAAAAAQA=</HashCode>
-      <FileName>Assets\Scripts\PlayerAnimationsManager.cs</FileName>
+      <FileName>Assets\Scripts\Entities\Player\PlayerAnimationsManager.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Field Name="animatorHandlers" />
@@ -708,9 +723,6 @@
       <HashCode>AAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAACAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\ScriptableObjects\AvatarSO.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Field Name="cosmetic" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="TitleSO">
     <Position X="23.25" Y="14" Width="1.5" />
@@ -723,7 +735,7 @@
     <Position X="16.5" Y="42.75" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAIAAAAACAAAAQCAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Scripts\Server.cs</FileName>
+      <FileName>Assets\Scripts\Server\Server.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ServerManager">
@@ -785,9 +797,9 @@
       <FileName>Assets\Scripts\UI\AvatarCustomisation\AvatarCustomisationManager.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Field Name="currentEquippedItem" />
-      <Field Name="displayAvatar" />
       <Field Name="MyAvatar" />
+      <Field Name="displayAvatar" />
+      <Field Name="currentEquippedItem" />
     </ShowAsAssociation>
   </Class>
   <Class Name="AvatarItemUI">
@@ -831,8 +843,8 @@
       <FileName>Assets\Scripts\UI\Contacts\ContactsManager.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Field Name="currSelected" />
       <Field Name="DisplayNamecard" />
+      <Field Name="currSelected" />
     </ShowAsAssociation>
   </Class>
   <Class Name="ContactsUI">
@@ -883,7 +895,7 @@
   <Class Name="MapBehaviour">
     <Position X="52.5" Y="8" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>BCSACCEAAKBAAIBAAAACIAAAAAgAAAAAIAgDAQAAAAE=</HashCode>
+      <HashCode>BCSACCFAAKBAAIBAAAACAAAAAAgAAAAAIAgDAQAAAAE=</HashCode>
       <FileName>Assets\Scripts\UI\Map\MapBehaviour.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -987,9 +999,9 @@
     </TypeIdentifier>
     <ShowAsAssociation>
       <Field Name="Camera" />
-      <Field Name="guildInfoPanel" />
       <Field Name="Joystick" />
       <Field Name="InteractNamecard" />
+      <Field Name="guildInfoPanel" />
     </ShowAsAssociation>
   </Class>
   <Class Name="WorldSpaceUI">
@@ -1032,21 +1044,21 @@
     <Position X="17.75" Y="24.25" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAQAAAIAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Scripts\Utility\GameSettings.cs</FileName>
+      <FileName>Assets\Scripts\GameSettings.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpriteHandler">
     <Position X="4.25" Y="33" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAEAAABAAAAAYAAAAAAAAAAAAAAAAACAAAACAA=</HashCode>
-      <FileName>Assets\Scripts\Utility\GameSettings.cs</FileName>
+      <FileName>Assets\Scripts\GameSettings.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="DisplayUtility">
     <Position X="1.5" Y="26.25" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
-      <FileName>Assets\Scripts\Utility\GameSettings.cs</FileName>
+      <FileName>Assets\Scripts\GameSettings.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="InputManager">
@@ -1350,7 +1362,7 @@
     <Position X="3.75" Y="37.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAIAAAAgBAQAAgAAIAAAAAAAAQAAAAAAQA=</HashCode>
-      <FileName>Assets\Scripts\ScriptableObjects\AvatarCosmetic.cs</FileName>
+      <FileName>Assets\Scripts\ScriptableObjects\CosmeticSO.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="CHAT_TYPE">
