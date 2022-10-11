@@ -107,25 +107,15 @@
   <Class Name="AvatarDisplay">
     <Position X="44.5" Y="7.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAABAABAAAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\AvatarDisplay.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Field Name="animsManager" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="Achievement">
     <Position X="1.75" Y="10.75" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAEAABAAQAAAgAAAAAAAAAAAAAAAAAAAAAAAAgAAA=</HashCode>
       <FileName>Assets\Scripts\Database\Achievements\Achievement.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="BattleshipShopManager">
-    <Position X="56.75" Y="27.25" Width="2.25" />
-    <TypeIdentifier>
-      <HashCode>AAQQAAACJCAAAAAAAAAAAAAAQAAAAAAAQAAAAEEAAAA=</HashCode>
-      <FileName>Assets\Scripts\Database\BattleshipShop\BattleshipShopManager.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Cosmetic">
@@ -237,7 +227,7 @@
   <Class Name="Battleship">
     <Position X="33" Y="35" Width="2" />
     <TypeIdentifier>
-      <HashCode>QQQYEgIMRIECCQCUEBgIAEAgKEIlCQIgkAwQQAAYAEo=</HashCode>
+      <HashCode>QAQYEgIMRIECCRCEABgIAEAgKEIlCQIgkAwQQAAYAO4=</HashCode>
       <FileName>Assets\Scripts\Entities\Battleship.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -322,7 +312,7 @@
       </Delegate>
     </NestedTypes>
     <TypeIdentifier>
-      <HashCode>lABAAUDoCAgCRICgABACFASAFAoIgAwQDAAjgAAAEEA=</HashCode>
+      <HashCode>lABAAUDoCAgCRICgABACFASIFAoIgAwQDAAjgAAAEEA=</HashCode>
       <FileName>Assets\Scripts\Entities\Player\PlayerData.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
