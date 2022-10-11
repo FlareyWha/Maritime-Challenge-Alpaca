@@ -61,12 +61,26 @@ public class MapBehaviour : MonoBehaviour
     
             Debug.Log("My World Pos: " + screenPos * scale);
 
-            ChangeMapSize(tapPosition);
+            HandleMapMovement(tapPosition);
             CheckTeleportPointTap(tapPosition);
+        }
+
+        float scrollValue = InputManager.InputActions.Main.ScrollWheel.ReadValue<float>();
+
+        if (scrollValue != 0)
+        {
+            Debug.Log("Scroll value " + scrollValue);
+
+            HandleMapMovementScroll(scrollValue);
         }
     }
 
-    void ChangeMapSize(Vector2 tapPosition)
+    void HandleMapMovementScroll(float scrollValue)
+    {
+        mapCamera.orthographicSize = Mathf.Clamp(mapCamera.orthographicSize - (scrollValue * 0.1f), minCameraZoom, maxCameraZoom);
+    }
+
+    void HandleMapMovement(Vector2 tapPosition)
     {
         if (isHeld)
         {

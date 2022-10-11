@@ -17,7 +17,7 @@ public class TeleportManager : MonoBehaviourSingleton<TeleportManager>
     private Vector3 currentTeleportCoordinates = Vector3.zero;
 
     private Vector3 hiddenCoords = new Vector3(0, -330, 0);
-    private Vector3 stayingCoords = new Vector3(0, 15, 0);
+    private Vector3 stayingCoords = new Vector3(0, 0, 0);
 
     [SerializeField]
     private Button backButton;
@@ -29,6 +29,8 @@ public class TeleportManager : MonoBehaviourSingleton<TeleportManager>
 
     public void UpdateTeleportInfoPanel(string teleportPointName, string teleportPointDescription, Vector3 teleportCoordinates)
     {
+        Debug.Log(Vector3.Distance(rectTransform.anchoredPosition, hiddenCoords));
+
         if (Vector3.Distance(rectTransform.anchoredPosition, hiddenCoords) < 5f)
         {
             StartCoroutine(UIManager.ToggleFlyInAnim(rectTransform, hiddenCoords, stayingCoords, 0.5f, backButton));

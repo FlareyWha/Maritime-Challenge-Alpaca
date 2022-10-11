@@ -62,6 +62,15 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""ScrollWheel"",
+                    ""type"": ""Value"",
+                    ""id"": ""23ac0adf-996c-457d-bda6-86175612b9cf"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -152,6 +161,17 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""action"": ""Tap2"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""39948a7d-4e51-46d8-a481-77210717551f"",
+                    ""path"": ""<Mouse>/scroll/y"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ScrollWheel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -164,6 +184,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         m_Main_Tap2 = m_Main.FindAction("Tap2", throwIfNotFound: true);
         m_Main_TouchPosition = m_Main.FindAction("TouchPosition", throwIfNotFound: true);
         m_Main_TouchPosition2 = m_Main.FindAction("TouchPosition2", throwIfNotFound: true);
+        m_Main_ScrollWheel = m_Main.FindAction("ScrollWheel", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -227,6 +248,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
     private readonly InputAction m_Main_Tap2;
     private readonly InputAction m_Main_TouchPosition;
     private readonly InputAction m_Main_TouchPosition2;
+    private readonly InputAction m_Main_ScrollWheel;
     public struct MainActions
     {
         private @Controls m_Wrapper;
@@ -235,6 +257,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         public InputAction @Tap2 => m_Wrapper.m_Main_Tap2;
         public InputAction @TouchPosition => m_Wrapper.m_Main_TouchPosition;
         public InputAction @TouchPosition2 => m_Wrapper.m_Main_TouchPosition2;
+        public InputAction @ScrollWheel => m_Wrapper.m_Main_ScrollWheel;
         public InputActionMap Get() { return m_Wrapper.m_Main; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -256,6 +279,9 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 @TouchPosition2.started -= m_Wrapper.m_MainActionsCallbackInterface.OnTouchPosition2;
                 @TouchPosition2.performed -= m_Wrapper.m_MainActionsCallbackInterface.OnTouchPosition2;
                 @TouchPosition2.canceled -= m_Wrapper.m_MainActionsCallbackInterface.OnTouchPosition2;
+                @ScrollWheel.started -= m_Wrapper.m_MainActionsCallbackInterface.OnScrollWheel;
+                @ScrollWheel.performed -= m_Wrapper.m_MainActionsCallbackInterface.OnScrollWheel;
+                @ScrollWheel.canceled -= m_Wrapper.m_MainActionsCallbackInterface.OnScrollWheel;
             }
             m_Wrapper.m_MainActionsCallbackInterface = instance;
             if (instance != null)
@@ -272,6 +298,9 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 @TouchPosition2.started += instance.OnTouchPosition2;
                 @TouchPosition2.performed += instance.OnTouchPosition2;
                 @TouchPosition2.canceled += instance.OnTouchPosition2;
+                @ScrollWheel.started += instance.OnScrollWheel;
+                @ScrollWheel.performed += instance.OnScrollWheel;
+                @ScrollWheel.canceled += instance.OnScrollWheel;
             }
         }
     }
@@ -282,5 +311,6 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         void OnTap2(InputAction.CallbackContext context);
         void OnTouchPosition(InputAction.CallbackContext context);
         void OnTouchPosition2(InputAction.CallbackContext context);
+        void OnScrollWheel(InputAction.CallbackContext context);
     }
 }
