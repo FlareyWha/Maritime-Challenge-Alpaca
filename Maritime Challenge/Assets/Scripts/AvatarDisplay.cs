@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class AvatarDisplay : MonoBehaviour
 {
+    [SerializeField]
+    private Image[] AvatarDisplayParts;
   
     private Player player = null;
 
