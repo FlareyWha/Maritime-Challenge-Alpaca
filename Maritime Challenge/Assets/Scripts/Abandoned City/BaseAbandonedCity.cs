@@ -81,6 +81,9 @@ public class BaseAbandonedCity : NetworkBehaviour
             SetCapturedInfo(guildID);
         }
 
+        Debug.Log(id);
+        Debug.Log(capturedGuildID);
+
         Grid grid = GameObject.Find("Grid").GetComponent<Grid>();
 
         //Make sure cell width and height will always fit cell size
@@ -100,7 +103,7 @@ public class BaseAbandonedCity : NetworkBehaviour
     [Server]
     public void InitEnemies()
     {
-        for (int i = 0; i < 5; ++i)
+        for (int i = 0; i < 1; ++i)
         {
             GameObject baseEnemyGameObject = Instantiate(EnemyAssetManager.Instance.BlobTheFish, transform.position, Quaternion.identity);
             BaseEnemy baseEnemy = baseEnemyGameObject.GetComponent<BaseEnemy>();
@@ -162,6 +165,8 @@ public class BaseAbandonedCity : NetworkBehaviour
 
     public void RemoveFromEnemyList(BaseEnemy enemy, Player enemyKiller)
     {
+        Debug.Log("jfdjsfjjdksfjs");
+
         enemyList.Remove(enemy.netId);
         CheckAreaCleared(enemyKiller);
     }
@@ -173,7 +178,7 @@ public class BaseAbandonedCity : NetworkBehaviour
             CaptureAbandonedCity(enemyKiller);
 
             //Set info in database
-            StartCoroutine(UpdateClearedGuildID());
+            StartCoroutine(UpdateClearedGuildID(enemyKiller.GetGuildID()));
         }
     }
 
@@ -185,9 +190,16 @@ public class BaseAbandonedCity : NetworkBehaviour
         DestroyEnemies();
     }
 
+    [Server]
     void SetCapturedInfo(int guildID)
     {
         capturedGuildID = guildID;
+        UpdateGuildName(guildID);
+    }
+
+    [ClientRpc]
+    void UpdateGuildName(int guildID)
+    {
         capturedGuildName.text = PlayerData.GetGuildName(guildID);
     }
 
@@ -211,7 +223,9 @@ public class BaseAbandonedCity : NetworkBehaviour
     {
         foreach (uint enemyID in enemyList)
         {
-            GetEnemyFromList(enemyID).gameObject.SetActive(false);
+            BaseEnemy baseEnemy = GetEnemyFromList(enemyID);
+            baseEnemy.HP = baseEnemy.MaxHP;
+            baseEnemy.gameObject.SetActive(false);
         }
 
         isEnemiesVisible = false;
@@ -255,6 +269,9 @@ public class BaseAbandonedCity : NetworkBehaviour
     [ServerCallback]
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (captured)
+            return;
+
         if (collision.CompareTag("Player"))
         {
             AddToPlayerList(collision.GetComponent<Player>());
@@ -264,18 +281,22 @@ public class BaseAbandonedCity : NetworkBehaviour
     [ServerCallback]
     private void OnTriggerExit2D(Collider2D collision)
     {
+        if (captured)
+            return;
+
         if (collision.CompareTag("Player"))
         {
             RemoveFromPlayerList(collision.GetComponent<Player>());
         }
     }
 
-    IEnumerator UpdateClearedGuildID()
+    IEnumerator UpdateClearedGuildID(int guildID)
     {
         string url = ServerDataManager.URL_updateAbandonedCityCapturedGuildID;
         Debug.Log(url);
 
         WWWForm form = new WWWForm();
+        form.AddField("iCapturedGuildID", guildID);
         form.AddField("iAbandonedCityID", abandonedCityID);
         using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
         yield return webreq.SendWebRequest();
