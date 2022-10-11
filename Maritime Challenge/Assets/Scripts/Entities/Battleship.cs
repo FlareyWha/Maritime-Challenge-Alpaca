@@ -303,6 +303,12 @@ public class Battleship : NetworkBehaviour
         }
     }
 
+    [Command]
+    private void SyncNewSprites()
+    {
+
+    }
+
     public void OnShipStatusChanged(bool old, bool show)
     {
         Debug.Log("Ship Visibility Callback: Set To " + isVisible);
@@ -327,6 +333,16 @@ public class Battleship : NetworkBehaviour
                 shipSprite.sprite = DownwardSprite;
                 break;
         }
+    }
+
+
+
+    public void ChangeBattleShip(int shipID)
+    {
+       // LeftSprite = shipInfo.BattleshipData.LeftSprite;
+      //  RightSprite = shipInfo.BattleshipData.RightSprite;
+       // UpwardSprite = shipInfo.BattleshipData.UpwardSprite;
+        //DownwardSprite = shipInfo.BattleshipData.DownwardSprite;
     }
 
     public Player GetOwner()

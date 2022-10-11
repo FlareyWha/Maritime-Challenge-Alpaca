@@ -156,6 +156,7 @@ public class BattleshipStoreManager : MonoBehaviour
         BattleshipsManager.Instance.UpdateCurrentBattleship(currSelectedBattleship.BattleshipInfo.BattleshipID);
 
         // Change SHip Logic ...
+        PlayerData.MyPlayer.GetBattleShip().ChangeBattleShip(currSelectedBattleship.BattleshipInfo.BattleshipID);
         Debug.Log("Changed Battleship to " + currSelectedBattleship.BattleshipInfo.BattleshipName);
     }
 }

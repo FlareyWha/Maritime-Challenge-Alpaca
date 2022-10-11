@@ -81,8 +81,8 @@ public class BattleshipsManager : MonoBehaviourSingleton<BattleshipsManager>
         Debug.Log(url);
 
         WWWForm form = new WWWForm();
-        form.AddField("iOwnerUID", PlayerData.UID);
-        form.AddField("iCurrentBattleshipID", battleshipID);
+        form.AddField("UID", PlayerData.UID);
+        form.AddField("iCurrentBattleship", battleshipID);
         using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
         yield return webreq.SendWebRequest();
         switch (webreq.result)
