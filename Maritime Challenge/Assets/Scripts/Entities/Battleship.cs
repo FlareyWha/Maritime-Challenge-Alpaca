@@ -335,6 +335,9 @@ public class Battleship : NetworkBehaviour
     public void ChangeBattleShip(int id)
     {
         BattleshipInfo shipInfo = PlayerData.FindBattleshipInfoByID(id);
+        if (shipInfo == null)
+            return;
+
         LeftSprite = shipInfo.BattleshipData.LeftSprite;
         RightSprite = shipInfo.BattleshipData.RightSprite;
         UpwardSprite = shipInfo.BattleshipData.UpwardSprite;
