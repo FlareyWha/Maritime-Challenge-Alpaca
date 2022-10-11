@@ -58,6 +58,9 @@ public static class PlayerData // Local Player's Data
     public delegate void PlayerStatsUpdated();
     public static event PlayerStatsUpdated OnPlayerStatsUpdated;
 
+    public delegate void NumTokensUpdated();
+    public static event NumTokensUpdated OnNumTokensUpdated;
+
 
     public static string GetCountryName(int id)
     {
@@ -155,6 +158,10 @@ public static class PlayerData // Local Player's Data
     {
         TitleDictionary[title] = true;
     }
+    public static void SetBattleshipUnlocked(BattleshipInfo shipInfo)
+    {
+        BattleshipList[shipInfo] = true;
+    }
     public static void SetUsername(string name)
     {
         Name = name;
@@ -170,6 +177,11 @@ public static class PlayerData // Local Player's Data
     public static void InvokePlayerStatsUpdated()
     {
         OnPlayerStatsUpdated.Invoke();
+    }
+
+    public static void InvokeNumTokensUpdated()
+    {
+        OnNumTokensUpdated.Invoke();
     }
 
 }

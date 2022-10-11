@@ -249,7 +249,6 @@ public class Battleship : NetworkBehaviour
         currTarget.OnEntityDied += OnTargetDiedCallback;
         UpdateSelectedTargetUI();
 
-        fire_timer = 0.0f;
         return true;
     }
 
@@ -303,6 +302,12 @@ public class Battleship : NetworkBehaviour
         }
     }
 
+    [Command]
+    private void SyncNewSprites()
+    {
+
+    }
+
     public void OnShipStatusChanged(bool old, bool show)
     {
         Debug.Log("Ship Visibility Callback: Set To " + isVisible);
@@ -329,6 +334,16 @@ public class Battleship : NetworkBehaviour
         }
     }
 
+
+
+    public void ChangeBattleShip(int shipID)
+    {
+       // LeftSprite = shipInfo.BattleshipData.LeftSprite;
+      //  RightSprite = shipInfo.BattleshipData.RightSprite;
+       // UpwardSprite = shipInfo.BattleshipData.UpwardSprite;
+        //DownwardSprite = shipInfo.BattleshipData.DownwardSprite;
+    }
+
     public Player GetOwner()
     {
         return ownerPlayer;
@@ -346,26 +361,3 @@ enum SHIP_FACING
     NUM_TOTAL
 }
 
-public struct BattleshipInfo
-{
-    public int BattleshipID;
-    public string BattleshipName;
-    public int HP;
-    public int Atk;
-    public float AtkSpd;
-    public float CritRate;
-    public float CritDmg;
-    public float MoveSpd;
-
-    public BattleshipInfo(int ID, string name, int hp, int atk, float atkSpd, float critRate, float critDmg, float moveSpd)
-    {
-        BattleshipID = ID;
-        BattleshipName = name;
-        HP = hp;
-        Atk = atk;
-        AtkSpd = atkSpd;
-        CritRate = critRate;
-        CritDmg = critDmg;
-        MoveSpd = moveSpd;
-    }
-}

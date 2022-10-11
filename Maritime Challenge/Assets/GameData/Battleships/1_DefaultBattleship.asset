@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 555861e9910d95f4f90b720fbe470c01, type: 3}
+  m_Name: 1_DefaultBattleship
+  m_EditorClassIdentifier: 
+  ID: 1
+  Name: Default Battleship
+  ShopIconSprite: {fileID: 21300000, guid: 35aac3297e6795c4e933bc031469c6bc, type: 3}
+  ShipDescription: The Starter Battleship.
+  UpwardSprite: {fileID: 21300000, guid: 3374480f0e12b15458bca866fe070cf0, type: 3}
+  DownwardSprite: {fileID: 21300000, guid: dd7c4ffdc4c02de4bb13dad6613642bd, type: 3}
+  LeftSprite: {fileID: 21300000, guid: ae37a3edde070b24dbd7611fc8dddcdd, type: 3}
+  RightSprite: {fileID: 21300000, guid: 5cd9f5d0e400b4146b2b5b71e9aaa1c6, type: 3}
