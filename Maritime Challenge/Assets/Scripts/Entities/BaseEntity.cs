@@ -32,7 +32,7 @@ public class BaseEntity : NetworkBehaviour
     public int HP
     {
         get { return hp; }
-        private set { }
+        set { hp = value; }
     }
     public int MaxHP
     {
