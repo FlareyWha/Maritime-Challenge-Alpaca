@@ -15,11 +15,13 @@ public class BattleshipStore : BaseInteractable
     public override void Interact()
     {
         StoreUIPanel.SetActive(true);
+        UIManager.Instance.ToggleJoystick(false);
         UIManager.Instance.DisableInteractButton();
     }
 
     public void OnCloseStorePanel()
     {
         UIManager.Instance.EnableInteractButton(interactMessage);
+        UIManager.Instance.ToggleJoystick(true);
     }
 }
