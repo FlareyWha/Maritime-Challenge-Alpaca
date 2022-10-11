@@ -249,7 +249,6 @@ public class Battleship : NetworkBehaviour
         currTarget.OnEntityDied += OnTargetDiedCallback;
         UpdateSelectedTargetUI();
 
-        fire_timer = 0.0f;
         return true;
     }
 
