@@ -16,7 +16,7 @@ public class TeleportManager : MonoBehaviourSingleton<TeleportManager>
 
     private Vector3 currentTeleportCoordinates = Vector3.zero;
 
-    private Vector3 hiddenCoords = new Vector3(0, -330, 0);
+    private Vector3 hiddenCoords = new Vector3(0, -390, 0);
     private Vector3 stayingCoords = new Vector3(0, 0, 0);
 
     [SerializeField]
@@ -24,7 +24,7 @@ public class TeleportManager : MonoBehaviourSingleton<TeleportManager>
 
     private void Start()
     {
-        rectTransform.anchoredPosition = new Vector3(0, -330, 0);
+        rectTransform.anchoredPosition = hiddenCoords;
     }
 
     public void UpdateTeleportInfoPanel(string teleportPointName, string teleportPointDescription, Vector3 teleportCoordinates)

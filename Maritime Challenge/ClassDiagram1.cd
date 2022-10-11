@@ -305,17 +305,17 @@
   <Class Name="PlayerData">
     <Position X="23.25" Y="16.5" Width="2" />
     <NestedTypes>
-      <Delegate Name="PlayerData.NumTokensUpdated" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>Assets\Scripts\Entities\Player\PlayerData.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Delegate>
       <Delegate Name="PlayerData.PlayerDataUpdated" Collapsed="true">
         <TypeIdentifier>
           <NewMemberFileName>Assets\Scripts\Entities\Player\PlayerData.cs</NewMemberFileName>
         </TypeIdentifier>
       </Delegate>
       <Delegate Name="PlayerData.PlayerStatsUpdated" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Entities\Player\PlayerData.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="PlayerData.NumTokensUpdated" Collapsed="true">
         <TypeIdentifier>
           <NewMemberFileName>Assets\Scripts\Entities\Player\PlayerData.cs</NewMemberFileName>
         </TypeIdentifier>
