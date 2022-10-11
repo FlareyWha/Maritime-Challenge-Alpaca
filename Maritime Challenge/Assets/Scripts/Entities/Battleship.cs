@@ -58,6 +58,8 @@ public class Battleship : NetworkBehaviour
 
     public override void OnStartAuthority()
     {
+        base.OnStartAuthority();
+        SyncBattleshipSprites(PlayerData.CurrentBattleship);
     }
 
     public void SetOwner(Player player)
@@ -134,7 +136,7 @@ public class Battleship : NetworkBehaviour
                 currFacing = SHIP_FACING.DOWN;
         }
         if (prevFacing != currFacing)
-            SyncShipSprite((int)currFacing);
+            SyncShipFacing((int)currFacing);
 
         // Update Rotation
         float theta = Vector2.SignedAngle(Vector2.up, velocity);
@@ -282,10 +284,31 @@ public class Battleship : NetworkBehaviour
     }
 
     [Command]
-    private void SyncShipSprite(int facing)
+    private void SyncShipFacing(int facing)
     {
-        SetShipSprite(facing);
-        switch ((SHIP_FACING)facing)
+        SetShipFacing(facing);
+        currFacing = (SHIP_FACING)facing;
+        UpdateShipSpriteBaseOnFacing();
+    }
+
+
+
+    public void OnShipStatusChanged(bool old, bool show)
+    {
+        Debug.Log("Ship Visibility Callback: Set To " + isVisible);
+        gameObject.SetActive(isVisible);
+    }
+
+    [ClientRpc]
+    private void SetShipFacing(int facing)
+    {
+        currFacing = (SHIP_FACING)facing;
+        UpdateShipSpriteBaseOnFacing();
+    }
+
+    private void UpdateShipSpriteBaseOnFacing()
+    {
+        switch (currFacing)
         {
             case SHIP_FACING.LEFT:
                 shipSprite.sprite = LeftSprite;
@@ -303,45 +326,21 @@ public class Battleship : NetworkBehaviour
     }
 
     [Command]
-    private void SyncNewSprites()
+    public void SyncBattleshipSprites(int id)
     {
-
-    }
-
-    public void OnShipStatusChanged(bool old, bool show)
-    {
-        Debug.Log("Ship Visibility Callback: Set To " + isVisible);
-        gameObject.SetActive(isVisible);
+        ChangeBattleShip(id);
     }
 
     [ClientRpc]
-    private void SetShipSprite(int facing)
+    public void ChangeBattleShip(int id)
     {
-        switch ((SHIP_FACING)facing)
-        {
-            case SHIP_FACING.LEFT:
-                shipSprite.sprite = LeftSprite;
-                break;
-            case SHIP_FACING.RIGHT:
-                shipSprite.sprite = RightSprite;
-                break;
-            case SHIP_FACING.UP:
-                shipSprite.sprite = UpwardSprite;
-                break;
-            case SHIP_FACING.DOWN:
-                shipSprite.sprite = DownwardSprite;
-                break;
-        }
-    }
+        BattleshipInfo shipInfo = PlayerData.FindBattleshipInfoByID(id);
+        LeftSprite = shipInfo.BattleshipData.LeftSprite;
+        RightSprite = shipInfo.BattleshipData.RightSprite;
+        UpwardSprite = shipInfo.BattleshipData.UpwardSprite;
+        DownwardSprite = shipInfo.BattleshipData.DownwardSprite;
 
-
-
-    public void ChangeBattleShip(int shipID)
-    {
-       // LeftSprite = shipInfo.BattleshipData.LeftSprite;
-      //  RightSprite = shipInfo.BattleshipData.RightSprite;
-       // UpwardSprite = shipInfo.BattleshipData.UpwardSprite;
-        //DownwardSprite = shipInfo.BattleshipData.DownwardSprite;
+        UpdateShipSpriteBaseOnFacing();
     }
 
     public Player GetOwner()

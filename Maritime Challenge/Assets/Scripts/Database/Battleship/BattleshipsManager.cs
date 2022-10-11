@@ -98,6 +98,8 @@ public class BattleshipsManager : MonoBehaviourSingleton<BattleshipsManager>
                 break;
         }
     }
+
+   
 }
 
 public class BattleshipInfo

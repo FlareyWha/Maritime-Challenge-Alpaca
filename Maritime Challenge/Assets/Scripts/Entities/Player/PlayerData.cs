@@ -125,6 +125,19 @@ public static class PlayerData // Local Player's Data
         return null;
     }
 
+    public static BattleshipInfo FindBattleshipInfoByID(int ID)
+    {
+        foreach (KeyValuePair<BattleshipInfo, bool> shipData in BattleshipList)
+        {
+            if (shipData.Key.BattleshipID == ID)
+                return shipData.Key;
+        }
+
+        Debug.LogError("PlayerData: Could not Find BattleshipInfo of ID " + ID);
+        return null;
+
+    }
+
     public static void ResetData()
     {
         UID = 0;
