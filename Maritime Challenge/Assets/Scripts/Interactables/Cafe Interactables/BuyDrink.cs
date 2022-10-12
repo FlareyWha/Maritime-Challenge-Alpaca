@@ -19,5 +19,6 @@ public class BuyDrink : BaseInteractable
     public override void Interact()
     {
         Debug.Log("Bought drink");
+        CafeManager.Instance.HasDrink = true;
     }
 }
