@@ -17,18 +17,20 @@ public class AvatarDisplay : MonoBehaviour
 
     public void SetPlayer(Player player)
     {
-        if (this.player != null)
-            this.player.OnAvatarChanged -= OnPlayerAvatarUpdated;
-
-        this.player = player;
-
         if (player == null)
+        {
             SetUnknown();
+            return;
+        }
         else
         {
             SetAvatar(player.PlayerAvatar);
             player.OnAvatarChanged += OnPlayerAvatarUpdated;
         }
+        if (this.player != null)
+            this.player.OnAvatarChanged -= OnPlayerAvatarUpdated;
+
+        this.player = player;
 
     }
 
