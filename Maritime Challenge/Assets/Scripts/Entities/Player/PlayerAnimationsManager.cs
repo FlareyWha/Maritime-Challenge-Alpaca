@@ -16,10 +16,11 @@ public class PlayerAnimationsManager : MonoBehaviour
     {
         if (player != null)
             SetAvatar(player);
+
         UpdateAvatarAnimations();
     }
 
-    private void UpdateAvatarAnimations() // Uses Avatar, only works locally:") for local players
+    public void UpdateAvatarAnimations() 
     {
         Debug.Log("Avatar Animations Updated");
         for (int i = 0; i < (int)BODY_PART_TYPE.NUM_TOTAL; i++)
@@ -28,7 +29,7 @@ public class PlayerAnimationsManager : MonoBehaviour
         }
     }
 
-    private void UpdateSpecificAnimations(BODY_PART_TYPE type, int cosmeticID)
+    public void UpdateSpecificAnimations(BODY_PART_TYPE type, int cosmeticID)
     {
         animatorHandlers[(int)type].SetAnimations(type, cosmeticID);
     }
@@ -42,7 +43,7 @@ public class PlayerAnimationsManager : MonoBehaviour
 
     }
 
-    private AvatarPart GetAvatarPart(BODY_PART_TYPE type)  // Uses Avatar, only works locally:") for local players
+    private AvatarPart GetAvatarPart(BODY_PART_TYPE type)  
     {
         switch (type)
         {

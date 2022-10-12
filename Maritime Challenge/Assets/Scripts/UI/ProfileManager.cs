@@ -14,17 +14,26 @@ public class ProfileManager : MonoBehaviour
     private Image EXPFill;
     [SerializeField]
     private Text LevelNum;
+    [SerializeField]
+    private AvatarDisplay DisplayAvatar;
 
    
     void Start()
     {
         LoadData();
-
         //PlayerData.OnPlayerDataUpdated += LoadData;
     }
 
     public void LoadData()
     {
+        StartCoroutine(PlayerDataInits());
+    }
+
+    IEnumerator PlayerDataInits()
+    {
+        while (PlayerData.MyPlayer == null)
+            yield return null;
+
         //Edit all the text
         EditNameText();
         EditGuildText();
@@ -34,6 +43,7 @@ public class ProfileManager : MonoBehaviour
         EditBiographyText();
         EXPFill.fillAmount = PlayerData.CurrXP / GameSettings.GetEXPRequirement(PlayerData.CurrLevel);
         LevelNum.text = PlayerData.CurrLevel.ToString();
+        DisplayAvatar.SetPlayer(PlayerData.MyPlayer);
     }
 
     public void EditName()

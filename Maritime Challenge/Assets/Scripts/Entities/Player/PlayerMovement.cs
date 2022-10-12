@@ -35,15 +35,43 @@ public class PlayerMovement : NetworkBehaviour
         Vector2 input = UIManager.Instance.Joystick.GetDirection();
         rb.position += input * WALK_SPEED * Time.deltaTime;
 
+        SendUpdateAnimatorWalk(input.magnitude > 0);
+        if (input.magnitude > 0)
+        {
+            SendUpdateAnimatorDir(input.x, input.y);
+        }
+
+    }
+
+    [Command]
+    private void SendUpdateAnimatorWalk(bool walk)
+    {
+        UpdateAnimatorWalkBool(walk);
+    }
+
+    [Command]
+    private void SendUpdateAnimatorDir(float x, float y)
+    {
+        UpdateAnimatorDirValues(x, y);
+    }
+
+    [ClientRpc]
+    private void UpdateAnimatorWalkBool(bool walk)
+    {
         foreach (Animator animator in allPlayerAnimators)
         {
-            animator.SetBool("Walk", input.magnitude > 0);
-            if (input.magnitude > 0)
-            {
-                animator.SetFloat("DirX", input.x);
-                animator.SetFloat("DirY", input.y);
-            }
+            animator.SetBool("Walk", walk);
         }
     }
 
+
+    [ClientRpc]
+    private void UpdateAnimatorDirValues(float x, float y)
+    {
+        foreach (Animator animator in allPlayerAnimators)
+        {
+            animator.SetFloat("DirX", x);
+            animator.SetFloat("DirY", y);
+        }
+    }
 }

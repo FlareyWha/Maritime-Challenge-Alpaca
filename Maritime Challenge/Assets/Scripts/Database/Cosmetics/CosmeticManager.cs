@@ -44,6 +44,11 @@ public class CosmeticManager : MonoBehaviourSingleton<CosmeticManager>
 
     }
 
+    public void UpdateEquippedCosmetic(int oldID, int newID)
+    {
+        StartCoroutine(DoUpdateEquippedCosmeticList(newID, oldID));
+    }
+
     IEnumerator DoUpdateEquippedCosmeticList(int newCosmeticID, int oldCosmeticID)
     {
         string url = ServerDataManager.URL_updateEquippedCosmeticList;

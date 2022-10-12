@@ -43,6 +43,7 @@ public class Player : BaseEntity
     public GameObject BattleshipGO { get { return LinkedBattleshipGO; } }
 
     private PlayerUI playerUI = null;
+    private PlayerAnimationsManager playerAnimationsManager = null;
     private Battleship LinkedBattleship = null;
 
     public delegate void AvatarChanged(BODY_PART_TYPE type, int cosmeticID);
@@ -96,6 +97,7 @@ public class Player : BaseEntity
         for (int i = 0; i < PlayerData.EquippedCosmeticsList.Count; i++)
         {
             equipedList[(int)PlayerData.EquippedCosmeticsList[i].CosmeticBodyPartType] = PlayerData.EquippedCosmeticsList[i].CosmeticID;
+            Avatar.avatarParts[(int)PlayerData.EquippedCosmeticsList[i].CosmeticBodyPartType].cosmetic = CosmeticManager.Instance.FindCosmeticByID(PlayerData.EquippedCosmeticsList[i].CosmeticID);
         }
         SetDetails(PlayerData.UID, PlayerData.Name, PlayerData.Biography, PlayerData.CurrentTitleID, PlayerData.GuildID, PlayerData.Country, PlayerData.CurrLevel, equipedList);
     }
@@ -121,6 +123,8 @@ public class Player : BaseEntity
         // GO Inits
         if (playerUI == null)
             playerUI = GetComponent<PlayerUI>();
+        if (playerAnimationsManager == null)
+            playerAnimationsManager = GetComponent<PlayerAnimationsManager>();
     }
 
     [Command]
@@ -243,6 +247,7 @@ public class Player : BaseEntity
     private void UpdateAvatarSO(int index, int newID)
     {
         Avatar.avatarParts[index].cosmetic = CosmeticManager.Instance.FindCosmeticByID(newID);
+        Debug.Log("Player AvatarSO Updated: " + (COSMETIC_TYPE)index + " ID " + newID);
     }
 
     public void InvokeAvatarChangedEvent(BODY_PART_TYPE type, int cosmeticID)

@@ -84,14 +84,13 @@ public class AvatarCustomisationManager : MonoBehaviourSingleton<AvatarCustomisa
             currentEquippedItem[(int)item.Cosmetic.CosmeticBodyPartType].SetEquippedOverlay(false);
         currentEquippedItem[(int)item.Cosmetic.CosmeticBodyPartType] = item;
 
-
         // Update My Avatar
         UpdateAvatar(item.Cosmetic);
     }
 
     private void UpdateAvatar(Cosmetic cos)
     {
-
+        CosmeticManager.Instance.UpdateEquippedCosmetic(PlayerData.MyPlayer.PlayerAvatar.avatarParts[(int)cos.CosmeticBodyPartType].cosmetic.ID, cos.CosmeticID);
         switch (cos.CosmeticBodyPartType)
         {
             case COSMETIC_TYPE.HAIR:
@@ -104,6 +103,7 @@ public class AvatarCustomisationManager : MonoBehaviourSingleton<AvatarCustomisa
                 PlayerData.CommandsHandler.SendAvatarChanged((BODY_PART_TYPE)cos.CosmeticBodyPartType, cos.CosmeticID);
                 break;
         }
+
         
     }
 }
