@@ -19,7 +19,9 @@ public class BaseAbandonedCity : NetworkBehaviour
     protected Vector2 abandonedCityAreaLowerLimit, abandonedCityAreaUpperLimit;
     protected Vector3Int gridMovementAreaLowerLimit, gridMovementAreaUpperLimit;
 
+    [SyncVar]
     protected bool captured = false;
+    [SyncVar]
     protected int capturedGuildID = 0;
     [SerializeField]
     protected Text capturedGuildName;
@@ -43,6 +45,11 @@ public class BaseAbandonedCity : NetworkBehaviour
 
     public override void OnStartClient()
     {
+        if (captured)
+        {
+            capturedGuildName.text = PlayerData.GetGuildName(capturedGuildID);
+        }
+
     }
 
     IEnumerator GetGrid()
