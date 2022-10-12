@@ -31,7 +31,7 @@ public class TeleportManager : MonoBehaviourSingleton<TeleportManager>
     {
         Debug.Log(Vector3.Distance(rectTransform.anchoredPosition, hiddenCoords));
 
-        if (Vector3.Distance(rectTransform.anchoredPosition, hiddenCoords) < 5f)
+        if (Vector3.Distance(rectTransform.anchoredPosition, hiddenCoords) < 15f)
         {
             StartCoroutine(UIManager.ToggleFlyInAnim(rectTransform, hiddenCoords, stayingCoords, 0.5f, backButton));
         }
