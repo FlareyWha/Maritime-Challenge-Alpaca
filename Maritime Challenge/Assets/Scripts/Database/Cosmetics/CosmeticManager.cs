@@ -44,8 +44,30 @@ public class CosmeticManager : MonoBehaviourSingleton<CosmeticManager>
 
     }
 
-  
+    IEnumerator DoUpdateEquippedCosmeticList(int newCosmeticID, int oldCosmeticID)
+    {
+        string url = ServerDataManager.URL_updateEquippedCosmeticList;
+        Debug.Log(url);
 
+        WWWForm form = new WWWForm();
+        form.AddField("iOwnerUID", PlayerData.UID);
+        form.AddField("iNewCosmeticID", newCosmeticID);
+        form.AddField("iOldCosmeticID", oldCosmeticID);
+        using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
+        yield return webreq.SendWebRequest();
+        switch (webreq.result)
+        {
+            case UnityWebRequest.Result.Success:
+                Debug.Log(webreq.downloadHandler.text);
+                break;
+            case UnityWebRequest.Result.ProtocolError:
+                Debug.LogError(webreq.downloadHandler.text);
+                break;
+            default:
+                Debug.LogError("Server error");
+                break;
+        }
+    }
 }
 
 

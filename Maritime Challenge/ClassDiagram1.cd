@@ -107,7 +107,7 @@
   <Class Name="AvatarDisplay">
     <Position X="44.5" Y="7.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAABAABAAAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAARBAAFAAAAAAAAAAAAEABAAAAAAAAAAE=</HashCode>
       <FileName>Assets\Scripts\AvatarDisplay.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -128,7 +128,7 @@
   <Class Name="CosmeticManager">
     <Position X="39.25" Y="31.25" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAIAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <HashCode>AAIIAAAAAACBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
       <FileName>Assets\Scripts\Database\Cosmetics\CosmeticManager.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -268,15 +268,15 @@
     </NestedTypes>
     <AssociationLine Name="playerUI" Type="PlayerUI" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="38.25" Y="33.869" />
-        <Point X="39.01" Y="33.869" Type="JumpStart" />
-        <Point X="39.177" Y="33.869" Type="JumpEnd" />
-        <Point X="40.312" Y="33.869" />
+        <Point X="38.25" Y="35.034" />
+        <Point X="38.75" Y="35.034" />
+        <Point X="38.75" Y="34.75" />
+        <Point X="40.312" Y="34.75" />
         <Point X="40.312" Y="35" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>ARRVEAEhASBIAAEGEBQAERUBDQEQIAAAAgAASAggGAQ=</HashCode>
+      <HashCode>ARRVEAEhASBIAAEGEBQAEVURDQEQIAAAApAASAggOAQ=</HashCode>
       <FileName>Assets\Scripts\Entities\Player\Player.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -312,7 +312,7 @@
       </Delegate>
     </NestedTypes>
     <TypeIdentifier>
-      <HashCode>lABAAUDoCAgCRICgABACFASIFAoIgAwQDAAjgAAAEEA=</HashCode>
+      <HashCode>lABEAUDoCAgCRICgABACFASIFAoIgAwQDAAzgAAAEEA=</HashCode>
       <FileName>Assets\Scripts\Entities\Player\PlayerData.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -587,15 +587,17 @@
     <AssociationLine Name="myPlayer" Type="Player" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="58" Y="21.419" />
-        <Point X="48.458" Y="21.419" Type="JumpStart" />
-        <Point X="48.292" Y="21.419" Type="JumpEnd" />
+        <Point X="48.693" Y="21.419" Type="JumpStart" />
+        <Point X="48.526" Y="21.419" Type="JumpEnd" />
         <Point X="43.083" Y="21.419" Type="JumpStart" />
         <Point X="42.917" Y="21.419" Type="JumpEnd" />
         <Point X="42.833" Y="21.419" Type="JumpStart" />
         <Point X="42.667" Y="21.419" Type="JumpEnd" />
+        <Point X="39.455" Y="21.419" Type="JumpStart" />
+        <Point X="39.289" Y="21.419" Type="JumpEnd" />
         <Point X="38.625" Y="21.419" />
-        <Point X="38.625" Y="25.782" />
-        <Point X="38.25" Y="25.782" />
+        <Point X="38.625" Y="25.854" />
+        <Point X="38.25" Y="25.854" />
       </Path>
       <MemberNameLabel ManuallyPlaced="true">
         <Position X="0.563" Y="0.127" />
@@ -619,7 +621,7 @@
   <Class Name="LoginManager">
     <Position X="11.75" Y="12.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>AQAAAAgAACAAEACAAAAAAAAAAAAIAAAAAACYAAAAAAA=</HashCode>
+      <HashCode>AQAAgAgAACAAEACAAAAAAAAAAAAIAAAAAACYAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\LoginManager.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -957,7 +959,7 @@
   <Class Name="ProfileNamecard">
     <Position X="36.25" Y="14.25" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AAABEBAgBAEIAEQACACAAA0AcAIAAEABAAAAIAAgCEE=</HashCode>
+      <HashCode>AAABEBAgAAEIAEQACACAEA0AcAIAAEABAAAAIAAgCEE=</HashCode>
       <FileName>Assets\Scripts\UI\ProfileNamecard.cs</FileName>
     </TypeIdentifier>
   </Class>
