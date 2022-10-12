@@ -110,7 +110,7 @@ public class BaseAbandonedCity : NetworkBehaviour
     [Server]
     public void InitEnemies()
     {
-        for (int i = 0; i < 1; ++i)
+        for (int i = 0; i < 3; ++i)
         {
             GameObject baseEnemyGameObject = Instantiate(EnemyAssetManager.Instance.BlobTheFish, transform.position, Quaternion.identity);
             BaseEnemy baseEnemy = baseEnemyGameObject.GetComponent<BaseEnemy>();
