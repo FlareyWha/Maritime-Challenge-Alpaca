@@ -53,5 +53,5 @@ public class PlayerAnimationsManager : MonoBehaviour
                 return playerAvatar.avatarParts[(int)type];
         }
     }
-    
+
 }

@@ -28,7 +28,7 @@ public class AvatarCustomisationManager : MonoBehaviourSingleton<AvatarCustomisa
         while (PlayerData.MyPlayer == null)
             yield return null;
 
-        //displayAvatar.set
+        displayAvatar.SetPlayer(PlayerData.MyPlayer);
         UpdateAllInventoryRects();
     
 
@@ -95,14 +95,13 @@ public class AvatarCustomisationManager : MonoBehaviourSingleton<AvatarCustomisa
         switch (cos.CosmeticBodyPartType)
         {
             case COSMETIC_TYPE.HAIR:
-                MyAvatar.avatarParts[(int)BODY_PART_TYPE.HAIR_FRONT].cosmetic = cos.LinkedCosmetic;
+                MyAvatar.avatarParts[(int)COSMETIC_TYPE.HAIR].cosmetic = cos.LinkedCosmetic;
                 PlayerData.CommandsHandler.SendAvatarChanged(BODY_PART_TYPE.HAIR_FRONT, cos.CosmeticBodyPartID);
-                MyAvatar.avatarParts[(int)BODY_PART_TYPE.HAIR_BACK].cosmetic = cos.LinkedCosmetic;
                 PlayerData.CommandsHandler.SendAvatarChanged(BODY_PART_TYPE.HAIR_BACK, cos.CosmeticBodyPartID);
                 break;
             default:
                 MyAvatar.avatarParts[(int)cos.CosmeticBodyPartType].cosmetic = cos.LinkedCosmetic;
-                PlayerData.CommandsHandler.SendAvatarChanged((BODY_PART_TYPE)cos.CosmeticBodyPartType, cos.CosmeticBodyPartID);
+                PlayerData.CommandsHandler.SendAvatarChanged((BODY_PART_TYPE)cos.CosmeticBodyPartType, cos.CosmeticID);
                 break;
         }
         

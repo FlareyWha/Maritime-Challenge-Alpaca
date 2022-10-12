@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 1_DefaultOfficeShirt
   m_EditorClassIdentifier: 
   ID: 1
-  bodyPartType: 3
-  IconSprite: {fileID: 21300000, guid: 1390391b4073b164c8ded08ca3f97517, type: 3}
+  BodyPartType: 3
+  IconSprite: {fileID: 21300000, guid: b0b623764b329c74d897caadf059e9e0, type: 3}
   allBodyPartAnimations:
   - {fileID: 7400000, guid: 9c54540be608708458fcd5bb8e039266, type: 2}
   - {fileID: 7400000, guid: b331f3f20e429d141ada52290133c0f6, type: 2}

@@ -9,10 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c7a9f46d422cfd47b9f51a85a7fc34f, type: 3}
-  m_Name: 6_DefaultFemaleBody
+  m_Script: {fileID: 11500000, guid: a07636edece9aac4b88056c654a9f147, type: 3}
+  m_Name: 7_DefaultWomanHair
   m_EditorClassIdentifier: 
-  ID: 6
-  BodyPartType: 2
-  IconSprite: {fileID: 21300000, guid: 66d2b2f357f76374dbc28e5f4c0cfbd1, type: 3}
-  allBodyPartAnimations: []
+  CosmeticID: 7
+  partType: 6
+  DisplaySprite: {fileID: 21300000, guid: ade9b933075e0cb44a95cb1aac7ed4eb, type: 3}

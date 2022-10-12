@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 5_DefaultManShoes
   m_EditorClassIdentifier: 
   ID: 5
-  bodyPartType: 5
-  IconSprite: {fileID: 21300000, guid: 66d2b2f357f76374dbc28e5f4c0cfbd1, type: 3}
+  BodyPartType: 5
+  IconSprite: {fileID: 21300000, guid: 877e12c255819db49b77e3a5472b78a8, type: 3}
   allBodyPartAnimations:
   - {fileID: 7400000, guid: 1c4bb48cd888fff4ba153a10af0f2ed2, type: 2}
   - {fileID: 7400000, guid: 00d2c5c893d11b44a9b8bfe53ba26291, type: 2}

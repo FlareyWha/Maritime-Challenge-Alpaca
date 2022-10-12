@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 9_DefaultWomanShoes
   m_EditorClassIdentifier: 
   ID: 9
-  bodyPartType: 5
-  IconSprite: {fileID: 21300000, guid: 1390391b4073b164c8ded08ca3f97517, type: 3}
+  BodyPartType: 5
+  IconSprite: {fileID: 21300000, guid: f442117f4a728eb4c8a1991513d497fa, type: 3}
   allBodyPartAnimations:
   - {fileID: 7400000, guid: d8fb22821d019974ea399ed0c20b2757, type: 2}
   - {fileID: 7400000, guid: d01a6b15eda1e7845a47d6f94f3c7940, type: 2}
