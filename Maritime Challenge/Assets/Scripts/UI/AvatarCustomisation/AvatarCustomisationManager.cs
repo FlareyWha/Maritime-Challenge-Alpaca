@@ -96,8 +96,8 @@ public class AvatarCustomisationManager : MonoBehaviourSingleton<AvatarCustomisa
         {
             case COSMETIC_TYPE.HAIR:
                 MyAvatar.avatarParts[(int)COSMETIC_TYPE.HAIR].cosmetic = cos.LinkedCosmetic;
-                PlayerData.CommandsHandler.SendAvatarChanged(BODY_PART_TYPE.HAIR_FRONT, cos.CosmeticBodyPartID);
-                PlayerData.CommandsHandler.SendAvatarChanged(BODY_PART_TYPE.HAIR_BACK, cos.CosmeticBodyPartID);
+                PlayerData.CommandsHandler.SendAvatarChanged(BODY_PART_TYPE.HAIR_FRONT, cos.CosmeticID);
+                PlayerData.CommandsHandler.SendAvatarChanged(BODY_PART_TYPE.HAIR_BACK, cos.CosmeticID);
                 break;
             default:
                 MyAvatar.avatarParts[(int)cos.CosmeticBodyPartType].cosmetic = cos.LinkedCosmetic;

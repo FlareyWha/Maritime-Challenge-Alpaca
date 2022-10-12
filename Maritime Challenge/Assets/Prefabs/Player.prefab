@@ -510,7 +510,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultID: 3
-  FileHeader: Hair
+  FileHeader: Hair/Back
   AnimPartName: hairback
 --- !u!1 &5300436063019523554
 GameObject:
@@ -1037,7 +1037,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultID: 3
-  FileHeader: Hair
+  FileHeader: Hair/Front
   AnimPartName: hairfront
 --- !u!1 &7230950417349455460
 GameObject:

@@ -47,7 +47,7 @@ public class PlayerCommands : NetworkBehaviour
    
     public void SendAvatarChanged(BODY_PART_TYPE type, int cosmeticID)
     {
-        Debug.Log("SendAvatarChanged()");
+        Debug.Log("SendAvatarChanged() " + type + " " + cosmeticID);
         CallAvatarChanged(type, cosmeticID);
     }
 
@@ -62,7 +62,7 @@ public class PlayerCommands : NetworkBehaviour
     [ClientRpc]
     private void InvokeAvatarChanged(BODY_PART_TYPE type, int cosmeticID)
     {
-        Debug.Log("ClientRpc Received, Invoke Avatar Changed");
+        Debug.Log("ClientRpc Received, Invoke Avatar Changed , CosmeticID " + cosmeticID);
         GetComponent<Player>().InvokeAvatarChangedEvent(type, cosmeticID);
     }
 
