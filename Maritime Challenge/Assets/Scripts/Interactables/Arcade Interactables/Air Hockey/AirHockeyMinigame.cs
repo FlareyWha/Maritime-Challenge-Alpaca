@@ -213,7 +213,7 @@ public class AirHockeyMinigame : NetworkBehaviour
 
     private void ResetPuck()
     {
-        Puck.transform.localPosition = startPuckPos;
+        Puck.transform.position = startPuckPos;
         Puck.ForceStop();
     }
 
