@@ -48,9 +48,19 @@ public class Player : BaseEntity
     public delegate void AvatarChanged(BODY_PART_TYPE type, int cosmeticID);
     public event AvatarChanged OnAvatarChanged;
 
+
+    Player()
+    {
+        PlayerData.PlayerList.Add(this);
+    }
+
+    ~Player()
+    {
+        PlayerData.PlayerList.Remove(this);
+    }
+
     private void Start()
     {
-
         PlayerAvatarEquipped.Callback += OnAvatarCosmeticsUpdated;
         gameObject.SetActive(isVisible);
     }
@@ -61,21 +71,27 @@ public class Player : BaseEntity
         // Set My Player
         PlayerData.MyPlayer = this;
         // Init Synced Player Vars
-        SetDetails();
-       
-        PlayerData.OnPlayerDataUpdated += SetDetails;
+        CallSetDetails();
+
+        PlayerData.OnPlayerDataUpdated += CallSetDetails;
 
        
-
         //Init My BattleShip
         if (LinkedBattleshipGO == null)
             SpawnBattleShip();
 
     }
 
-
-    private void SetDetails()
+    private void CallSetDetails()
     {
+        StartCoroutine(SetDetails());
+    }
+
+    IEnumerator SetDetails()
+    {
+        while (PlayerData.EquippedCosmeticsList.Count == 0)
+            yield return null;
+
         int[] equipedList = new int[(int)COSMETIC_TYPE.NUM_TOTAL];
         for (int i = 0; i < PlayerData.EquippedCosmeticsList.Count; i++)
         {
@@ -123,19 +139,18 @@ public class Player : BaseEntity
 
         // Init Cosmetics
         PlayerAvatarEquipped.Clear();
+        List<int> temp = new List<int>();
         for (int i = 0; i < (int)COSMETIC_TYPE.NUM_TOTAL; i++)
         {
-            PlayerAvatarEquipped.Add(0);
+            temp.Add(0);
         }
         for (int i = 0; i < cosmeticsList.Length; i++)
         {
-            PlayerAvatarEquipped[i] = cosmeticsList[i];
-
-
-            // TBC TO REMOVE
-            if (cosmeticsList[i] == 0)
-                PlayerAvatarEquipped[i] = 1;
-
+            temp[i] = cosmeticsList[i];
+        }
+        foreach(int cos_id in temp)
+        {
+            PlayerAvatarEquipped.Add(cos_id);
         }
     }
 

@@ -15,7 +15,7 @@ public class ContactsManager : MonoBehaviour
     [SerializeField]
     private Text DisplayName;
     [SerializeField]
-    private Image DisplayAvatar;
+    private AvatarDisplay DisplayAvatar;
     [SerializeField]
     private GameObject FriendshipUI;
     [SerializeField]
@@ -57,6 +57,7 @@ public class ContactsManager : MonoBehaviour
             if (currSelected == null)
             {
                 SetSelectedContact(contact);
+                DisplayAvatar.SetPlayer(PlayerData.FindPlayerByID(player.Value.UID));
                 currSelected.EnableHighlight();
             }
         }
@@ -69,6 +70,7 @@ public class ContactsManager : MonoBehaviour
         if (currSelected != null)
             currSelected.DisableHighlight();
         currSelected = contact;
+       
         UpdateDisplay();
     }
 
@@ -88,6 +90,7 @@ public class ContactsManager : MonoBehaviour
     private void UpdateContactDisplayUI(BasicInfo player) // For Unlocked But Not Friends
     {
         FriendshipUI.SetActive(false);
+        DisplayAvatar.SetPlayer(PlayerData.FindPlayerByID(player.UID));
         DisplayNamecard.SetHidden(currSelected.GetContactInfo().UID);
         DisplayName.text = player.Name;
     }
@@ -96,6 +99,7 @@ public class ContactsManager : MonoBehaviour
     {
         FriendshipUI.SetActive(true);
         FriendshipText.text = friend.FriendshipLevel.ToString();
+        DisplayAvatar.SetPlayer(PlayerData.FindPlayerByID(friend.UID));
         DisplayNamecard.SetDetails(friend);
         DisplayName.text = friend.Name;
     }
@@ -103,6 +107,7 @@ public class ContactsManager : MonoBehaviour
     private void HideContactDisplayInfo() // For Not Unlocked
     {
         FriendshipUI.SetActive(false);
+        DisplayAvatar.SetPlayer(null);
         DisplayNamecard.SetUnknown(currSelected.GetContactInfo().UID);
         DisplayName.text = "?";
     }

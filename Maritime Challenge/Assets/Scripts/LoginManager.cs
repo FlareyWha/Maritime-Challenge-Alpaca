@@ -84,4 +84,10 @@ public class LoginManager : MonoBehaviour
         // Connect to Server
         ConnectionManager.Instance.ConnectToServer();
     }
+
+    public void GuestLogin()
+    {
+        PlayerData.InitGuestData();
+        ConnectToServer();
+    }
 }

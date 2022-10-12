@@ -23,7 +23,9 @@ public class ProfileNamecard : MonoBehaviour
     [SerializeField]
     private Image AvatarImage;
     [SerializeField]
-    private Sprite UnknownSprite, DefaultSprite;
+    private AvatarDisplay DisplayAvatar;
+    [SerializeField]
+    private Sprite UnknownSprite;//, DefaultSprite;
 
     private int playerID = 0;
 
@@ -36,38 +38,55 @@ public class ProfileNamecard : MonoBehaviour
 
     public void SetDetails(Player player)
     {
+        // Player
         playerID = player.GetUID();
 
+        // Namecard Panels/Types
         ProfileInfo.SetActive(true);
         HiddenPanel.SetActive(false);
         UnknownPanel.SetActive(false);
         PendingPanel.SetActive(false);
         IncomingPanel.SetActive(false);
+
+        // Player Details
         Name.text = "Name: " + player.GetUsername();
         Bio.text = player.GetBio();
         Level.text = player.GetLevel().ToString();
         Country.text = "Country: " + PlayerData.GetCountryName(player.GetCountryID());
         Guild.text = "Guild: " + PlayerData.GetGuildName(player.GetGuildID());
-        //Title.sprite = PlayerData.GetTitleByID(player.GetTitleID());
-        AvatarImage.sprite = DefaultSprite;
+        Title.sprite = TitleManager.Instance.FindTitleByID(player.GetTitleID()).TitleSprite;
+        // AvatarImage.sprite = DefaultSprite;
+
+        // Avatar Display
+        DisplayAvatar.SetPlayer(player);
+        AvatarImage.gameObject.SetActive(false);
+        DisplayAvatar.gameObject.SetActive(true);
+
     }
 
     public void SetDetails(FriendInfo player)
     {
         playerID = player.UID;
 
+        // Namecard Panels/Types
         ProfileInfo.SetActive(true);
         HiddenPanel.SetActive(false);
         UnknownPanel.SetActive(false);
         PendingPanel.SetActive(false);
         IncomingPanel.SetActive(false);
+        // Player Details
         Name.text = "Name: " + player.Name;
         Bio.text = player.Biography;
         Level.text = player.CurrLevel.ToString();
         Country.text = "Country: " + PlayerData.GetCountryName(player.Country);
         Guild.text = "Guild: " + PlayerData.GetGuildName(player.GuildID);
-        //Title.sprite = PlayerData.GetTitleByID(player.CurrentTitleID);
-        AvatarImage.sprite = DefaultSprite;
+        Title.sprite = TitleManager.Instance.FindTitleByID(player.CurrentTitleID).TitleSprite;
+        //AvatarImage.sprite = DefaultSprite;
+
+        // Avatar Display
+        DisplayAvatar.SetPlayer(PlayerData.FindPlayerByID(player.UID));
+        AvatarImage.gameObject.SetActive(false);
+        DisplayAvatar.gameObject.SetActive(true);
     }
 
     public void SetHidden(int playerID)
@@ -98,7 +117,10 @@ public class ProfileNamecard : MonoBehaviour
             IncomingPanel.SetActive(false);
         }
 
-        AvatarImage.sprite = DefaultSprite;
+        //AvatarImage.sprite = DefaultSprite;
+        DisplayAvatar.SetPlayer(PlayerData.FindPlayerByID(playerID));
+        AvatarImage.gameObject.SetActive(false);
+        DisplayAvatar.gameObject.SetActive(true);
 
     }
 
@@ -112,6 +134,8 @@ public class ProfileNamecard : MonoBehaviour
         PendingPanel.SetActive(false);
         UnknownPanel.SetActive(true);
 
+        AvatarImage.gameObject.SetActive(true);
+        DisplayAvatar.gameObject.SetActive(false);
         AvatarImage.sprite = UnknownSprite;
     }
 

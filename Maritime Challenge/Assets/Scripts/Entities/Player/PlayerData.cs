@@ -28,6 +28,7 @@ public static class PlayerData // Local Player's Data
     public static Player MyPlayer = null;
     public static PlayerCommands CommandsHandler = null;
 
+    public static List<Player> PlayerList = new List<Player>();
     //Dict to store friendId
     public static List<BasicInfo> FriendList = new List<BasicInfo>();
     //Dict to store id of people and whether they are unlocked
@@ -94,6 +95,17 @@ public static class PlayerData // Local Player's Data
         return "Guild does not exist";
     }
 
+    public static Player FindPlayerByID(int id)
+    {
+        foreach (Player player in PlayerList)
+        {
+            if (player.GetUID() == id)
+                return player;
+        }
+        Debug.LogWarning("Could not find Player of ID " + id);
+        return null;
+    }
+
     public static string FindPlayerNameByID(int id)
     {
         foreach (KeyValuePair<int, BasicInfo> info in PhonebookData)
@@ -135,6 +147,11 @@ public static class PlayerData // Local Player's Data
 
         Debug.LogWarning("PlayerData: Could not Find BattleshipInfo of ID " + ID);
         return null;
+
+    }
+
+    public static void InitGuestData()
+    {
 
     }
 

@@ -816,7 +816,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 328514328}
         m_TargetAssemblyTypeName: LoginManager, Assembly-CSharp
-        m_MethodName: ConnectToServer
+        m_MethodName: GuestLogin
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

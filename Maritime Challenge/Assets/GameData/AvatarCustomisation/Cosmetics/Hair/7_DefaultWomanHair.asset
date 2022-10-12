@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 7_DefaultWomanHair
   m_EditorClassIdentifier: 
   ID: 7
-  bodyPartType: 0
-  IconSprite: {fileID: 21300000, guid: 66d2b2f357f76374dbc28e5f4c0cfbd1, type: 3}
+  BodyPartType: 0
+  IconSprite: {fileID: 21300000, guid: f30d504f820ec71469a69e8a4160e51d, type: 3}
   allBodyPartAnimations:
   - {fileID: 7400000, guid: b5427eeab0b4f65488b941a2929c6d3c, type: 2}
   - {fileID: 7400000, guid: 74f13d3eb473088458cfdb17486d2d7e, type: 2}

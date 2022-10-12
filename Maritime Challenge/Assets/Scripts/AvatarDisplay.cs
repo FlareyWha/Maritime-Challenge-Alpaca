@@ -9,6 +9,9 @@ public class AvatarDisplay : MonoBehaviour
     private Image[] AvatarDisplayParts;
     [SerializeField]
     private Sprite BlankSprite;
+
+    [SerializeField]
+    private Image UnknownAvatar;
   
     private Player player = null;
 
@@ -16,13 +19,33 @@ public class AvatarDisplay : MonoBehaviour
     {
         if (this.player != null)
             this.player.OnAvatarChanged -= OnPlayerAvatarUpdated;
+
         this.player = player;
-        SetAvatar(player.PlayerAvatar);
-        player.OnAvatarChanged += OnPlayerAvatarUpdated;
+
+        if (player == null)
+            SetUnknown();
+        else
+        {
+            SetAvatar(player.PlayerAvatar);
+            player.OnAvatarChanged += OnPlayerAvatarUpdated;
+        }
+
     }
+
+
+    void SetUnknown()
+    {
+        UnknownAvatar.gameObject.SetActive(true);
+        for (BODY_PART_TYPE i = 0; i < BODY_PART_TYPE.NUM_TOTAL; i++)
+        {
+            AvatarDisplayParts[(int)i].sprite = BlankSprite;
+        }
+    }
+
 
     private void SetAvatar(AvatarSO avatar)
     {
+        UnknownAvatar.gameObject.SetActive(false);
         for (BODY_PART_TYPE i = 0; i < BODY_PART_TYPE.NUM_TOTAL; i++)
         {
             switch (i)
