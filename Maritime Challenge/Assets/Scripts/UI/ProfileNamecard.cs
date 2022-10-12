@@ -21,11 +21,9 @@ public class ProfileNamecard : MonoBehaviour
     // Unknown - Have not met/unlocked
 
     [SerializeField]
-    private Image AvatarImage;
+    private Image UnknownAvatar;
     [SerializeField]
     private AvatarDisplay DisplayAvatar;
-    [SerializeField]
-    private Sprite UnknownSprite;//, DefaultSprite;
 
     private int playerID = 0;
 
@@ -59,7 +57,7 @@ public class ProfileNamecard : MonoBehaviour
 
         // Avatar Display
         DisplayAvatar.SetPlayer(player);
-        AvatarImage.gameObject.SetActive(false);
+        UnknownAvatar.gameObject.SetActive(false);
         DisplayAvatar.gameObject.SetActive(true);
 
     }
@@ -85,7 +83,7 @@ public class ProfileNamecard : MonoBehaviour
 
         // Avatar Display
         DisplayAvatar.SetPlayer(PlayerData.FindPlayerByID(player.UID));
-        AvatarImage.gameObject.SetActive(false);
+        UnknownAvatar.gameObject.SetActive(false);
         DisplayAvatar.gameObject.SetActive(true);
     }
 
@@ -119,7 +117,7 @@ public class ProfileNamecard : MonoBehaviour
 
         //AvatarImage.sprite = DefaultSprite;
         DisplayAvatar.SetPlayer(PlayerData.FindPlayerByID(playerID));
-        AvatarImage.gameObject.SetActive(false);
+        UnknownAvatar.gameObject.SetActive(false);
         DisplayAvatar.gameObject.SetActive(true);
 
     }
@@ -134,9 +132,8 @@ public class ProfileNamecard : MonoBehaviour
         PendingPanel.SetActive(false);
         UnknownPanel.SetActive(true);
 
-        AvatarImage.gameObject.SetActive(true);
+        UnknownAvatar.gameObject.SetActive(true);
         DisplayAvatar.gameObject.SetActive(false);
-        AvatarImage.sprite = UnknownSprite;
     }
 
 
