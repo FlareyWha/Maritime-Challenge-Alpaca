@@ -10,6 +10,8 @@ public class Sit : BaseInteractable
 
     public int SitID;
 
+    [SerializeField]
+    private GameObject coffeeCup;
 
     private Player playerSeated = null;
     public Player PlayerSeated
@@ -25,12 +27,13 @@ public class Sit : BaseInteractable
 
         SitID = Sits.Count;
         Sits.Add(this);
-    }
 
+        coffeeCup.SetActive(false);
+    }
 
     public override void Interact()
     {
-        if (playerSeated == null)
+        if (playerSeated == null && CafeManager.Instance.HasDrink)
         {
             Player player = PlayerData.MyPlayer;
 
@@ -42,6 +45,10 @@ public class Sit : BaseInteractable
             
             //Prob clamp the player pos to the seat or smth and prevent movment
             PlayerData.CommandsHandler.SendPlayerSeatedEvent(SitID, player);
+
+            coffeeCup.SetActive(true);
+
+            CafeManager.Instance.HasDrink = false;
         }
         else if (playerSeated == PlayerData.MyPlayer)
         {
@@ -50,6 +57,8 @@ public class Sit : BaseInteractable
 
             //Do the opposite of above
             PlayerData.CommandsHandler.SendPlayerSeatedEvent(SitID, null);
+
+            coffeeCup.SetActive(false);
         }
 
         UpdateInteractMessage();
