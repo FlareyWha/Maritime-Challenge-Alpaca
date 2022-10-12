@@ -92,6 +92,9 @@ public class Register : MonoBehaviour
                 else
                     confirmationText.text = webreq.downloadHandler.text;
                 break;
+            case UnityWebRequest.Result.ProtocolError:
+                confirmationText.text = webreq.downloadHandler.text;
+                break;
             default:
                 confirmationText.text = "Server error";
                 break;
@@ -122,9 +125,10 @@ public class Register : MonoBehaviour
         switch (webreq.result)
         {
             case UnityWebRequest.Result.Success:
+                string text = webreq.downloadHandler.text;
                 yield return StartCoroutine(refreshDatabaseManager.DoRefreshDatabase());
                 yield return StartCoroutine(GetUID());
-                confirmationText.text = webreq.downloadHandler.text;
+                confirmationText.text = text;
                 break;
             case UnityWebRequest.Result.ProtocolError:
                 confirmationText.text = webreq.downloadHandler.text;
@@ -257,7 +261,7 @@ public class Register : MonoBehaviour
         Debug.Log(url);
 
         WWWForm form = new WWWForm();
-        form.AddField("UID", uid);
+        form.AddField("iOwnerUID", uid);
         form.AddField("iBattleshipID", 1);
         using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
         yield return webreq.SendWebRequest();
@@ -282,7 +286,7 @@ public class Register : MonoBehaviour
         Debug.Log(url);
 
         WWWForm form = new WWWForm();
-        form.AddField("UID", uid);
+        form.AddField("iOwnerUID", uid);
         form.AddField("iTitleID", 1);
         using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
         yield return webreq.SendWebRequest();
