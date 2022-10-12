@@ -29,7 +29,10 @@ public class GuildInfoPanel : MonoBehaviour
         guildDescriptionText.text = "Guild Description: " + guildDescription;
 
         if (ownerUID == 0)
+        {
             guildOwnerText.text = "Guild Owner: None";
+            StartCoroutine(UIManager.ToggleFlyInAnim(rectTransform, new Vector2(0, -910), Vector2.zero, 0.5f, null));
+        }
         else
         {
             //if (ownerUID == PlayerData.UID)
