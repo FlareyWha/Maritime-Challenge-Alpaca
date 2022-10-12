@@ -55,6 +55,7 @@ public class PlayerCommands : NetworkBehaviour
     private void CallAvatarChanged(BODY_PART_TYPE type, int cosmeticID)
     {
         Debug.Log("Command Received: Call Avatar Changed()");
+        GetComponent<Player>().UpdateAvatarEquipped(type, cosmeticID);
         InvokeAvatarChanged(type, cosmeticID);
     }
 
