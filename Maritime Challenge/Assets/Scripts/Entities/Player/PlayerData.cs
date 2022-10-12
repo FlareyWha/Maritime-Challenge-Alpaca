@@ -83,13 +83,13 @@ public static class PlayerData // Local Player's Data
     {
         switch (id)
         {
-            case 0:
-                return "Guild1";
             case 1:
-                return "Guild2";
+                return "Guild1";
             case 2:
-                return "Guild3";
+                return "Guild2";
             case 3:
+                return "Guild3";
+            case 4:
                 return "Guild4";
         }
         return "Guild does not exist";
