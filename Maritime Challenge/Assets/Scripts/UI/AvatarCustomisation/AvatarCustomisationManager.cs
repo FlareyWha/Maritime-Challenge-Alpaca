@@ -91,7 +91,6 @@ public class AvatarCustomisationManager : MonoBehaviourSingleton<AvatarCustomisa
 
     private void UpdateAvatar(Cosmetic cos)
     {
-
         switch (cos.CosmeticBodyPartType)
         {
             case COSMETIC_TYPE.HAIR:
