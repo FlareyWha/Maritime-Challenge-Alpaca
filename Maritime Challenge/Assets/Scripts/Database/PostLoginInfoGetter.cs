@@ -162,7 +162,7 @@ public class PostLoginInfoGetter : MonoBehaviour
 
     IEnumerator GetEquippedCosmetics()
     {
-        string url = ServerDataManager.URL_getCosmeticData;
+        string url = ServerDataManager.URL_getEquippedCosmeticList;
         Debug.Log(url);
 
         WWWForm form = new WWWForm();
