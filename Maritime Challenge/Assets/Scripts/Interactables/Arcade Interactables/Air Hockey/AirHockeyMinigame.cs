@@ -97,8 +97,8 @@ public class AirHockeyMinigame : NetworkBehaviour
     {
         int seatID = GetPlayerSeatID(player);
         playersList.Remove(seatID);
-        if (playersList.Count == 0)
-            AirHockeyGamePanel.SetActive(false);
+        if (playersList.Count == 1)
+            StopGame();
 
         PlayerSeats[seatID].RevokePaddleControl();
 
