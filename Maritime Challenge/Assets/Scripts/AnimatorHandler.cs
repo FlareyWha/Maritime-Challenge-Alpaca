@@ -18,6 +18,7 @@ public class AnimatorHandler : MonoBehaviour
 
     private List<string> playerStatesList = new List<string>() { "idle" , "walk" };
     private List<string> playerDirectionsList = new List<string>() { "up", "down", "left", "right" };
+    private string blankAnimFilePath = "PlayerAnimations/Blank";
 
     private void Awake()
     {
@@ -49,7 +50,7 @@ public class AnimatorHandler : MonoBehaviour
         animatorOverrideController.ApplyOverrides(defaultAnimationClips);
     }
 
-    public void SetAnimations(BODY_PART_TYPE type, int cosmeticID)
+    public void SetAnimations(int cosmeticID)
     {
         foreach (string state in playerStatesList)
         {
@@ -66,7 +67,9 @@ public class AnimatorHandler : MonoBehaviour
     private void UpdateAnimationClip(string state, string dir, string cosmeticID)
     {
         animationClip = Resources.Load<AnimationClip>("PlayerAnimations/" + FileHeader + "/" + AnimPartName + "_" + cosmeticID + "_" + state + "_" + dir);
-        // Override default animation
+        if (animationClip == null)
+            animationClip = Resources.Load<AnimationClip>(blankAnimFilePath);
+
         defaultAnimationClips[AnimPartName + "_" + defaultID + "_" + state + "_" + dir] = animationClip;
     }
 
