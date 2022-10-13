@@ -97,6 +97,7 @@ public class PlayerUI : NetworkBehaviour
 
     public void ViewProfile(Button button)
     {
+        Debug.Log("View Profile Clicked");
         Player player = gameObject.GetComponent<Player>();
 
         //Unlock the phonebook data if other isnt unlocked to begin with
