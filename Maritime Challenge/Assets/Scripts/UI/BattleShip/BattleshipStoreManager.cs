@@ -28,6 +28,11 @@ public class BattleshipStoreManager : MonoBehaviour
         UpdateOwnedShipsDisplay();
     }
 
+    private void OnDestroy()
+    {
+        PlayerData.OnNumTokensUpdated -= UpdateNumTokensUI;
+    }
+
     private void UpdateNumTokensUI()
     {
         OwnedTokensText.text = PlayerData.NumTokens.ToString();
