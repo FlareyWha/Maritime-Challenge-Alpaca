@@ -6,52 +6,51 @@ public class PlayerAnimationsManager : MonoBehaviour
 {
     [SerializeField]
     private AnimatorHandler[] animatorHandlers;
-    [SerializeField]
-    private Player player;
 
-    private AvatarSO playerAvatar;
-
+    private PlayerAvatarManager playerAvatar = null;
 
     private void Start()
     {
-        if (player != null)
-            SetAvatar(player);
+        Debug.Log("PlayerAnimsManager Start Called");
 
-        UpdateAvatarAnimations();
+        StartCoroutine(Inits());
     }
 
-    public void UpdateAvatarAnimations() 
+    IEnumerator Inits()
+    {
+        playerAvatar = GetComponent<Player>().gameObject.GetComponent<PlayerAvatarManager>();
+        playerAvatar.OnAvatarChanged += UpdateSpecificAnimations;
+
+        while (!playerAvatar.IsInitted())
+            yield return null;
+        InitAvatarAnimations();
+    }
+
+    public void InitAvatarAnimations() 
     {
         Debug.Log("Avatar Animations Updated");
-        for (int i = 0; i < (int)BODY_PART_TYPE.NUM_TOTAL; i++)
+        for (BODY_PART_TYPE i = 0; i < BODY_PART_TYPE.NUM_TOTAL; i++)
         {
-            animatorHandlers[i].SetAnimations(GetAvatarPart((BODY_PART_TYPE)i));
+            animatorHandlers[(int)i].SetAnimations(GetPartID(i));
         }
     }
 
-    public void UpdateSpecificAnimations(BODY_PART_TYPE type, int cosmeticID)
+    public void UpdateSpecificAnimations(COSMETIC_TYPE type, int cosmeticID)
     {
         animatorHandlers[(int)type].SetAnimations(cosmeticID);
     }
 
 
-    private void SetAvatar(Player player)
-    {
-        Debug.Log("Assigned to Event");
-        player.OnAvatarChanged += UpdateSpecificAnimations;
-        playerAvatar = player.PlayerAvatar;
-
-    }
-
-    private AvatarPart GetAvatarPart(BODY_PART_TYPE type)  
+   
+    private int GetPartID(BODY_PART_TYPE type)  
     {
         switch (type)
         {
             case BODY_PART_TYPE.HAIR_BACK:
             case BODY_PART_TYPE.HAIR_FRONT:
-                return playerAvatar.avatarParts[(int)COSMETIC_TYPE.HAIR];
+                return playerAvatar.GetEquippedCosmeticID(COSMETIC_TYPE.HAIR);
             default:
-                return playerAvatar.avatarParts[(int)type];
+                return playerAvatar.GetEquippedCosmeticID((COSMETIC_TYPE)(int)type);
         }
     }
 

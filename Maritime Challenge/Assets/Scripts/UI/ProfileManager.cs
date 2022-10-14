@@ -43,6 +43,10 @@ public class ProfileManager : MonoBehaviour
         EditBiographyText();
         EXPFill.fillAmount = PlayerData.CurrXP / GameSettings.GetEXPRequirement(PlayerData.CurrLevel);
         LevelNum.text = PlayerData.CurrLevel.ToString();
+
+        PlayerAvatarManager manager = PlayerData.MyPlayer.GetComponent<PlayerAvatarManager>();
+        while (!manager.IsInitted())
+            yield return null; 
         DisplayAvatar.SetPlayer(PlayerData.MyPlayer);
     }
 

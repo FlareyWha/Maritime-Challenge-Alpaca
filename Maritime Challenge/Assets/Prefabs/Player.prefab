@@ -1576,6 +1576,7 @@ GameObject:
   - component: {fileID: 6532631195805342017}
   - component: {fileID: 3737132526103077014}
   - component: {fileID: 2154318079331551881}
+  - component: {fileID: 3834950433424090269}
   - component: {fileID: 560335285860505812}
   - component: {fileID: 5626269258864024186}
   - component: {fileID: 3140019152750636414}
@@ -1743,7 +1744,6 @@ MonoBehaviour:
   critrate: 0.1
   critdmg: 0.5
   movespd: 1
-  Avatar: {fileID: 11400000, guid: 047e97fd606b794419c762b21a7a8cd5, type: 2}
   BattleShipPrefab: {fileID: 2042507932746732076, guid: b8ed2059b8897514fa98360bc451be85, type: 3}
   BodyReferenceSprite: {fileID: 2281672732284213407}
 --- !u!114 &9116503974399402979
@@ -1812,7 +1812,20 @@ MonoBehaviour:
   - {fileID: 4094357339714646145}
   - {fileID: 8124456436019200357}
   - {fileID: 7637044336230447112}
-  player: {fileID: 9181191743022904711}
+--- !u!114 &3834950433424090269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8779834002269100689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffde1ed576cb34c47bb9d8e3a842945b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!114 &560335285860505812
 MonoBehaviour:
   m_ObjectHideFlags: 0

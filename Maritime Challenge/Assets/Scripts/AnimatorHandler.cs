@@ -32,23 +32,7 @@ public class AnimatorHandler : MonoBehaviour
 
     }
 
-    public void SetAnimations(AvatarPart part)
-    {
-        if (part.cosmetic == null)
-            return;
-
-        string partId = part.cosmetic.ID.ToString();
-        foreach (string state in playerStatesList)
-        {
-            foreach (string dir in playerDirectionsList)
-            {
-                UpdateAnimationClip(state, dir, partId);
-            }
-        }
-      
-        // Apply updated animations
-        animatorOverrideController.ApplyOverrides(defaultAnimationClips);
-    }
+ 
 
     public void SetAnimations(int cosmeticID)
     {
@@ -56,7 +40,7 @@ public class AnimatorHandler : MonoBehaviour
         {
             foreach (string dir in playerDirectionsList)
             {
-                UpdateAnimationClip(state, dir, cosmeticID.ToString());
+                UpdateAnimationClip(state, dir, cosmeticID);
             }
         }
 
@@ -64,10 +48,16 @@ public class AnimatorHandler : MonoBehaviour
         animatorOverrideController.ApplyOverrides(defaultAnimationClips);
     }
 
-    private void UpdateAnimationClip(string state, string dir, string cosmeticID)
+    private void UpdateAnimationClip(string state, string dir, int cosmeticID)
     {
-        animationClip = Resources.Load<AnimationClip>("PlayerAnimations/" + FileHeader + "/" + AnimPartName + "_" + cosmeticID + "_" + state + "_" + dir);
-        if (animationClip == null)
+        if (cosmeticID == PlayerAvatarManager.NullRefNum)
+        {
+            animationClip = Resources.Load<AnimationClip>(blankAnimFilePath);
+            return;
+        }
+
+        animationClip = Resources.Load<AnimationClip>("PlayerAnimations/" + FileHeader + "/" + AnimPartName + "_" + cosmeticID.ToString() + "_" + state + "_" + dir);
+        if (animationClip == null) // safe checkign
             animationClip = Resources.Load<AnimationClip>(blankAnimFilePath);
 
         defaultAnimationClips[AnimPartName + "_" + defaultID + "_" + state + "_" + dir] = animationClip;

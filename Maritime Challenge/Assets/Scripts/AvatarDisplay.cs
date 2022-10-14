@@ -13,7 +13,7 @@ public class AvatarDisplay : MonoBehaviour
     [SerializeField]
     private Image UnknownAvatar;
   
-    private Player player = null;
+    private PlayerAvatarManager playerAvatar = null;
 
     public void SetPlayer(Player player)
     {
@@ -22,16 +22,23 @@ public class AvatarDisplay : MonoBehaviour
             SetUnknown();
             return;
         }
-        else
+
+        PlayerAvatarManager playerAvatarManager = player.gameObject.GetComponent<PlayerAvatarManager>();
+        if (this.playerAvatar != null)
+            this.playerAvatar.OnAvatarChanged -= SetAvatarSprite;
+
+        this.playerAvatar = playerAvatarManager;
+        playerAvatar.OnAvatarChanged += SetAvatarSprite;
+        InitPlayerAvatarDisplay();
+
+    }
+    
+    private void InitPlayerAvatarDisplay()
+    {
+        for (COSMETIC_TYPE i = 0; i < COSMETIC_TYPE.NUM_TOTAL; i++)
         {
-            SetAvatar(player.PlayerAvatar);
-            player.OnAvatarChanged += OnPlayerAvatarUpdated;
+            SetAvatarSprite(i, playerAvatar.GetEquippedCosmeticID(i));
         }
-        if (this.player != null)
-            this.player.OnAvatarChanged -= OnPlayerAvatarUpdated;
-
-        this.player = player;
-
     }
 
 
@@ -44,38 +51,32 @@ public class AvatarDisplay : MonoBehaviour
         }
     }
 
-
-    private void SetAvatar(AvatarSO avatar)
+    
+    private void SetAvatarSprite(COSMETIC_TYPE type, int cosmeticID)
     {
-        UnknownAvatar.gameObject.SetActive(false);
-        for (BODY_PART_TYPE i = 0; i < BODY_PART_TYPE.NUM_TOTAL; i++)
+        switch (type)
         {
-            switch (i)
-            {
-                case BODY_PART_TYPE.HAIR_BACK:
-                case BODY_PART_TYPE.HAIR_FRONT:
-                    if (avatar.avatarParts[(int)COSMETIC_TYPE.HAIR].cosmetic!= null)
-                        UpdatePartSprite(i, avatar.avatarParts[(int)COSMETIC_TYPE.HAIR].cosmetic.ID);
-                    break;
-                default:
-                    if (avatar.avatarParts[(int)i].cosmetic != null)
-                        UpdatePartSprite(i, avatar.avatarParts[(int)i].cosmetic.ID);
-                    break;
-            }
+            case COSMETIC_TYPE.HAIR:
+                UpdatePartSprite(BODY_PART_TYPE.HAIR_BACK, cosmeticID);
+                UpdatePartSprite(BODY_PART_TYPE.HAIR_FRONT, cosmeticID);
+                break;
+            default:
+                UpdatePartSprite((BODY_PART_TYPE)(int)type, cosmeticID);
+                break;
         }
 
-
-    }
-
-    private void OnPlayerAvatarUpdated(BODY_PART_TYPE type, int cosmeticID)
-    {
-        UpdatePartSprite(type, cosmeticID);
     }
 
     private void UpdatePartSprite(BODY_PART_TYPE type, int cosmeticID)
     {
+        if (cosmeticID == PlayerAvatarManager.NullRefNum)
+        {
+            AvatarDisplayParts[(int)type].sprite = BlankSprite;
+            return;
+        }    
+
         Sprite newSprite = CosmeticManager.Instance.GetDisplaySprite(cosmeticID, type);
-        if (newSprite == null)
+        if (newSprite == null) // safe checking
             AvatarDisplayParts[(int)type].sprite = BlankSprite;
         else
             AvatarDisplayParts[(int)type].sprite = newSprite;

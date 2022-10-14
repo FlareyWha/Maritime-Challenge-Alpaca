@@ -9,12 +9,6 @@ using UnityEngine.Networking;
 public class Player : BaseEntity
 {
     [SerializeField]
-    private AvatarSO Avatar;
-    public AvatarSO PlayerAvatar {  get { return Avatar; } }
-
-    public readonly SyncList<int> PlayerAvatarEquipped = new SyncList<int>();
-
-    [SerializeField]
     private GameObject BattleShipPrefab;
     [SerializeField]
     private SpriteRenderer BodyReferenceSprite;
@@ -46,9 +40,6 @@ public class Player : BaseEntity
     private PlayerAnimationsManager playerAnimationsManager = null;
     private Battleship LinkedBattleship = null;
 
-    public delegate void AvatarChanged(BODY_PART_TYPE type, int cosmeticID);
-    public event AvatarChanged OnAvatarChanged;
-
 
     Player()
     {
@@ -62,7 +53,7 @@ public class Player : BaseEntity
 
     private void Start()
     {
-        PlayerAvatarEquipped.Callback += OnAvatarCosmeticsUpdated;
+       
         gameObject.SetActive(isVisible);
     }
 
@@ -93,13 +84,8 @@ public class Player : BaseEntity
         while (PlayerData.EquippedCosmeticsList.Count == 0)
             yield return null;
 
-        int[] equipedList = new int[(int)COSMETIC_TYPE.NUM_TOTAL];
-        for (int i = 0; i < PlayerData.EquippedCosmeticsList.Count; i++)
-        {
-            equipedList[(int)PlayerData.EquippedCosmeticsList[i].CosmeticBodyPartType] = PlayerData.EquippedCosmeticsList[i].CosmeticID;
-            Avatar.avatarParts[(int)PlayerData.EquippedCosmeticsList[i].CosmeticBodyPartType].cosmetic = CosmeticManager.Instance.FindCosmeticByID(PlayerData.EquippedCosmeticsList[i].CosmeticID);
-        }
-        SetDetails(PlayerData.UID, PlayerData.Name, PlayerData.Biography, PlayerData.CurrentTitleID, PlayerData.GuildID, PlayerData.Country, PlayerData.CurrLevel, equipedList);
+      
+        SetDetails(PlayerData.UID, PlayerData.Name, PlayerData.Biography, PlayerData.CurrentTitleID, PlayerData.GuildID, PlayerData.Country, PlayerData.CurrLevel);
     }
     public override void OnStartClient()
     {
@@ -128,7 +114,7 @@ public class Player : BaseEntity
     }
 
     [Command]
-    void SetDetails(int id, string name, string bio, int title_id, int guild_id, int country_id, int level, int[] cosmeticsList)
+    void SetDetails(int id, string name, string bio, int title_id, int guild_id, int country_id, int level)
     {
         UID = id;
         username = name;
@@ -140,22 +126,6 @@ public class Player : BaseEntity
 
         isVisible = true;
         LinkedBattleshipGO = null;
-
-        // Init Cosmetics
-        PlayerAvatarEquipped.Clear();
-        List<int> temp = new List<int>();
-        for (int i = 0; i < (int)COSMETIC_TYPE.NUM_TOTAL; i++)
-        {
-            temp.Add(0);
-        }
-        for (int i = 0; i < cosmeticsList.Length; i++)
-        {
-            temp[i] = cosmeticsList[i];
-        }
-        foreach(int cos_id in temp)
-        {
-            PlayerAvatarEquipped.Add(cos_id);
-        }
     }
 
     [Command]
@@ -230,31 +200,7 @@ public class Player : BaseEntity
         gameObject.SetActive(show);
     }
 
-    [Server]
-    public void UpdateAvatarEquipped(BODY_PART_TYPE type, int cosmeticID)
-    {
-        if (type == BODY_PART_TYPE.HAIR_BACK)
-            return;
-
-        PlayerAvatarEquipped[(int)type] = cosmeticID;
-    }
-
-    private void OnAvatarCosmeticsUpdated(SyncList<int>.Operation op, int index, int oldItem, int newItem)
-    {
-        UpdateAvatarSO(index, newItem);
-    }
-
-    private void UpdateAvatarSO(int index, int newID)
-    {
-        Avatar.avatarParts[index].cosmetic = CosmeticManager.Instance.FindCosmeticByID(newID);
-        Debug.Log("Player AvatarSO Updated: " + (COSMETIC_TYPE)index + " ID " + newID);
-    }
-
-    public void InvokeAvatarChangedEvent(BODY_PART_TYPE type, int cosmeticID)
-    {
-        OnAvatarChanged?.Invoke(type, cosmeticID);
-    }
-
+   
     // ============ SYNCVAR CALLBACKS ====================
 
     void OnUsernameChanged(string prev_name, string new_name)

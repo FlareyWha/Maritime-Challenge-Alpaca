@@ -449,7 +449,6 @@ public class BaseEnemy : BaseEntity
     }
     private void OnVisibilityChanged(bool _old, bool _new)
     {
-        Debug.Log("OnVisibilityChangedCalled: set to " + _new);
         gameObject.SetActive(_new);
     }
 }
