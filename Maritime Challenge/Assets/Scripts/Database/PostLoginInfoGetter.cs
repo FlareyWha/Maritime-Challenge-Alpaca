@@ -125,6 +125,10 @@ public class PostLoginInfoGetter : MonoBehaviour
                 //Deseralize the data
                 JSONDeseralizer.DeseralizePhonebookData(webreq.downloadHandler.text);
 
+                foreach (KeyValuePair<int, BasicInfo> other in PlayerData.PhonebookData)
+                {
+                    StartCoroutine(GetEquippedCosmetics(other.Key, false));
+                }
                 break;
             case UnityWebRequest.Result.ProtocolError:
                 Debug.LogError(webreq.downloadHandler.text);
@@ -149,7 +153,7 @@ public class PostLoginInfoGetter : MonoBehaviour
             case UnityWebRequest.Result.Success:
                 PlayerData.CosmeticsList = JSONDeseralizer.DeseralizeCosmeticData(webreq.downloadHandler.text);
 
-                yield return StartCoroutine(GetEquippedCosmetics());
+                yield return StartCoroutine(GetEquippedCosmetics(PlayerData.UID, true));
                 break;
             case UnityWebRequest.Result.ProtocolError:
                 Debug.LogError(webreq.downloadHandler.text);
@@ -160,13 +164,13 @@ public class PostLoginInfoGetter : MonoBehaviour
         }
     }
 
-    IEnumerator GetEquippedCosmetics()
+    IEnumerator GetEquippedCosmetics(int uid, bool self)
     {
         string url = ServerDataManager.URL_getEquippedCosmeticList;
         Debug.Log(url);
 
         WWWForm form = new WWWForm();
-        form.AddField("iOwnerUID", PlayerData.UID);
+        form.AddField("iOwnerUID", uid);
         using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
         yield return webreq.SendWebRequest();
         switch (webreq.result)
@@ -182,7 +186,17 @@ public class PostLoginInfoGetter : MonoBehaviour
                         {
                             if (cosmetic.Key.CosmeticID == equippedCosmeticListIDList[i])
                             {
-                                PlayerData.EquippedCosmeticsList.Add(cosmetic.Key);
+                                if (self)
+                                    PlayerData.EquippedCosmeticsList.Add(cosmetic.Key);
+                                else
+                                {
+                                    //Searched 
+                                    foreach (KeyValuePair<int, BasicInfo> other in PlayerData.PhonebookData)
+                                    {
+                                        if (other.Key == uid)
+                                            other.Value.EquippedCosmetics.Add(cosmetic.Key);
+                                    }
+                                }
                                 break;
                             }
                         }
