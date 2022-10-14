@@ -181,6 +181,8 @@ public class PostLoginInfoGetter : MonoBehaviour
             case UnityWebRequest.Result.Success:
                 List<int> equippedCosmeticListIDList = JSONDeseralizer.DeseralizeEquippedCosmeticList(webreq.downloadHandler.text);
 
+                List<Cosmetic> cosmeticList = new List<Cosmetic>();
+
                 for (int i = 0; i < equippedCosmeticListIDList.Count; ++i)
                 {
                     foreach (KeyValuePair<Cosmetic, bool> cosmetic in PlayerData.CosmeticsList)
@@ -192,19 +194,17 @@ public class PostLoginInfoGetter : MonoBehaviour
                                 if (self)
                                     PlayerData.EquippedCosmeticsList.Add(cosmetic.Key);
                                 else
-                                {
-                                    //Searched 
-                                    foreach (KeyValuePair<int, BasicInfo> other in PlayerData.PhonebookData)
-                                    {
-                                        if (other.Key == uid)
-                                            other.Value.EquippedCosmetics.Add(cosmetic.Key);
-                                    }
-                                }
-                                break;
+                                    cosmeticList.Add(cosmetic.Key);
                             }
                         }
+
+                        break;
                     }
                 }
+
+                if (!self)
+                    PlayerData.OthersEquippedCosmeticList.Add(uid, cosmeticList);
+
                 break;
             case UnityWebRequest.Result.ProtocolError:
                 Debug.LogError(webreq.downloadHandler.text);

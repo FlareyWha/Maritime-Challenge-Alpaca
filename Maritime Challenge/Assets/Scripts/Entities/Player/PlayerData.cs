@@ -32,6 +32,8 @@ public static class PlayerData // Local Player's Data
     public static List<BasicInfo> FriendList = new List<BasicInfo>();
     //Dict to store id of people and whether they are unlocked
     public static Dictionary<int, BasicInfo> PhonebookData = new Dictionary<int, BasicInfo>();
+    //Dict to store the equipped cosmetics of others
+    public static Dictionary<int, List<Cosmetic>> OthersEquippedCosmeticList = new Dictionary<int, List<Cosmetic>>();
     //Dict to store data of friends that have been viewed and saved locally
 	public static List<FriendInfo> FriendDataList = new List<FriendInfo>();
     //Stores all the friend requests you have sent to other people
