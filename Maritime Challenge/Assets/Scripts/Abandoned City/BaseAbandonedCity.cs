@@ -28,8 +28,7 @@ public class BaseAbandonedCity : NetworkBehaviour
 
     protected Grid grid;
 
-    [SyncVar(hook = nameof(OnEnemiesVisibilityChanged))]
-    private bool isEnemiesVisible = false;
+ 
 
     protected void OnDrawGizmos()
     {
@@ -40,7 +39,11 @@ public class BaseAbandonedCity : NetworkBehaviour
 
     public override void OnStartServer()
     {
-        isEnemiesVisible = false;
+        foreach (uint enemyID in allEnemies)
+        {
+            GetEnemyFromList(enemyID).SetVisibility(false);
+        }
+        //isEnemiesVisible = false;
     }
 
     public override void OnStartClient()
@@ -49,7 +52,6 @@ public class BaseAbandonedCity : NetworkBehaviour
         {
             capturedGuildName.text = PlayerData.GetGuildName(capturedGuildID);
         }
-
     }
 
     IEnumerator GetGrid()
@@ -67,10 +69,6 @@ public class BaseAbandonedCity : NetworkBehaviour
     private void Start()
     {
         StartCoroutine(GetGrid());
-        foreach (uint enemyID in allEnemies)
-        {
-            GetEnemyFromList(enemyID).gameObject.SetActive(isEnemiesVisible);
-        }
     }
 
     [Server]
@@ -122,10 +120,10 @@ public class BaseAbandonedCity : NetworkBehaviour
             baseEnemy.InitEnemy(new Vector3(Random.Range(abandonedCityAreaLowerLimit.x, abandonedCityAreaUpperLimit.x), Random.Range(abandonedCityAreaLowerLimit.y, abandonedCityAreaUpperLimit.y), 0), this);
 
             baseEnemyGameObject.SetActive(false);
+            baseEnemy.SetVisibility(false);
 
             allEnemies.Add(baseEnemyGameObject.GetComponent<BaseEnemy>().netId);
         }
-        isEnemiesVisible = false;
     }
 
     public void ResizeColliderSize(Grid grid)
@@ -215,12 +213,13 @@ public class BaseAbandonedCity : NetworkBehaviour
         //Spawn enemies and make sure to set the abandoned city variable in the enemies to this one.
         foreach (uint enemyID in allEnemies)
         {
-            GetEnemyFromList(enemyID).gameObject.SetActive(true);
+            BaseEnemy enemy = GetEnemyFromList(enemyID);
+            enemy.gameObject.SetActive(true);
+            enemy.SetVisibility(true);
         }
 
         enemyList.AddRange(allEnemies);
 
-        isEnemiesVisible = true;
 
         Debug.Log("Enemy List Count: " + enemyList.Count);
         Debug.Log("All Enemy List Count: " + allEnemies.Count);
@@ -233,9 +232,8 @@ public class BaseAbandonedCity : NetworkBehaviour
             BaseEnemy baseEnemy = GetEnemyFromList(enemyID);
             baseEnemy.HP = baseEnemy.MaxHP;
             baseEnemy.gameObject.SetActive(false);
+            baseEnemy.SetVisibility(false); 
         }
-
-        isEnemiesVisible = false;
 
         enemyList.Clear();
 

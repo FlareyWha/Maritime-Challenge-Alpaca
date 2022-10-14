@@ -73,6 +73,14 @@ public class BaseEnemy : BaseEntity
         set { linkedAbandonedCity = value; }
     }
 
+    [SyncVar(hook = nameof(OnVisibilityChanged))]
+    private bool isVisible = true;
+
+    public override void OnStartClient()
+    {
+        gameObject.SetActive(isVisible);
+    }
+
     protected void OnDrawGizmos()
     {
         //Draw something to visualize the box area
@@ -422,6 +430,7 @@ public class BaseEnemy : BaseEntity
         {
             linkedAbandonedCity.RemoveFromEnemyList(this, attacker.GetComponent<Player>());
             gameObject.SetActive(false);
+            isVisible = false;
         }
         else
             NetworkServer.Destroy(gameObject);
@@ -431,5 +440,16 @@ public class BaseEnemy : BaseEntity
     public override void OnEntityClicked()
     {
         PlayerData.MyPlayer.GetBattleShip().SetTarget(this);
+    }
+
+
+    public void SetVisibility(bool show)
+    {
+        isVisible = show;
+    }
+    private void OnVisibilityChanged(bool _old, bool _new)
+    {
+        Debug.Log("OnVisibilityChangedCalled: set to " + _new);
+        gameObject.SetActive(_new);
     }
 }
