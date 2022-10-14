@@ -41,16 +41,7 @@ public class Player : BaseEntity
     private Battleship LinkedBattleship = null;
 
 
-    Player()
-    {
-        PlayerData.PlayerList.Add(this);
-    }
-
-    ~Player()
-    {
-        PlayerData.PlayerList.Remove(this);
-    }
-
+   
     private void Start()
     {
        

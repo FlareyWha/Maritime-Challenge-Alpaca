@@ -21,8 +21,6 @@ public class ProfileNamecard : MonoBehaviour
     // Unknown - Have not met/unlocked
 
     [SerializeField]
-    private Image UnknownAvatar;
-    [SerializeField]
     private AvatarDisplay DisplayAvatar;
 
     private int playerID = 0;
@@ -57,8 +55,6 @@ public class ProfileNamecard : MonoBehaviour
 
         // Avatar Display
         DisplayAvatar.SetPlayer(player);
-        UnknownAvatar.gameObject.SetActive(false);
-        DisplayAvatar.gameObject.SetActive(true);
 
     }
 
@@ -82,14 +78,13 @@ public class ProfileNamecard : MonoBehaviour
         //AvatarImage.sprite = DefaultSprite;
 
         // Avatar Display
-        DisplayAvatar.SetPlayer(PlayerData.FindPlayerByID(player.UID));
-        UnknownAvatar.gameObject.SetActive(false);
-        DisplayAvatar.gameObject.SetActive(true);
+        DisplayAvatar.SetFromInfo(player);
     }
 
-    public void SetHidden(int playerID)
+    // For Online
+    public void SetHidden(Player player)
     {
-        this.playerID = playerID;
+        this.playerID = player.GetUID();
         Name.text = "Name: " + PlayerData.FindPlayerNameByID(playerID);
 
         ProfileInfo.SetActive(false);
@@ -116,10 +111,40 @@ public class ProfileNamecard : MonoBehaviour
         }
 
         //AvatarImage.sprite = DefaultSprite;
-        DisplayAvatar.SetPlayer(PlayerData.FindPlayerByID(playerID));
-        UnknownAvatar.gameObject.SetActive(false);
-        DisplayAvatar.gameObject.SetActive(true);
+        DisplayAvatar.SetPlayer(player);
+    }
 
+    // For Offline
+    public void SetHidden(BasicInfo playerInfo)
+    {
+        this.playerID = playerInfo.UID;
+        Name.text = "Name: " + playerInfo.Name;
+
+        ProfileInfo.SetActive(false);
+        UnknownPanel.SetActive(false);
+
+        if (FriendsManager.CheckIfPending(playerID))
+        {
+            HiddenPanel.SetActive(false);
+            PendingPanel.SetActive(true);
+            IncomingPanel.SetActive(false);
+
+        }
+        else if (FriendsManager.CheckIfIncoming(playerID))
+        {
+            HiddenPanel.SetActive(false);
+            PendingPanel.SetActive(false);
+            IncomingPanel.SetActive(true);
+        }
+        else
+        {
+            HiddenPanel.SetActive(true);
+            PendingPanel.SetActive(false);
+            IncomingPanel.SetActive(false);
+        }
+
+        //AvatarImage.sprite = DefaultSprite;
+        DisplayAvatar.SetFromInfo(playerInfo);
     }
 
     public void SetUnknown(int playerID)
@@ -132,8 +157,7 @@ public class ProfileNamecard : MonoBehaviour
         PendingPanel.SetActive(false);
         UnknownPanel.SetActive(true);
 
-        UnknownAvatar.gameObject.SetActive(true);
-        DisplayAvatar.gameObject.SetActive(false);
+        DisplayAvatar.SetFromInfo(null);
     }
 
 

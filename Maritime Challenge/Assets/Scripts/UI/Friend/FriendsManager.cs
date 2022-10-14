@@ -132,7 +132,7 @@ public class FriendsManager : MonoBehaviourSingleton<FriendsManager>
         {
             case UnityWebRequest.Result.Success:
                 Debug.Log(webreq.downloadHandler.text);
-                PlayerData.FriendList.Remove(PlayerData.FindPlayerInfoByID(otherUID));
+                PlayerData.FriendList.Remove(PlayerData.FindPlayerFromFriendList(otherUID));
                 PlayerData.FriendDataList.Remove(PlayerData.FindFriendInfoByID(otherUID));
                 GameHandler.Instance.SendFriendRemovedEvent(otherUID);
                 OnFriendListUpdated?.Invoke();

@@ -121,7 +121,7 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
         if (FriendsManager.CheckIfFriends(player.GetUID()))
             InteractNamecard.SetDetails(player);
         else if (ContactsManager.CheckIfKnown(player.GetUID()))
-            InteractNamecard.SetHidden(player.GetUID());
+            InteractNamecard.SetHidden(player);
         else
             InteractNamecard.SetUnknown(player.GetUID());
     }
@@ -131,7 +131,7 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
         if (FriendsManager.CheckIfFriends(playerID))
             SetFriendInteractNamecardDetails(playerID);
         else if (ContactsManager.CheckIfKnown(playerID))
-            InteractNamecard.SetHidden(playerID);
+            InteractNamecard.SetHidden(PlayerData.FindPlayerInfoByID(playerID));
         else
             InteractNamecard.SetUnknown(playerID);
     }

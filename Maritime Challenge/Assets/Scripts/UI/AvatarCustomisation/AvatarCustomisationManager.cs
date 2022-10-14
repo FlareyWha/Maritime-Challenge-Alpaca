@@ -49,6 +49,10 @@ public class AvatarCustomisationManager : MonoBehaviourSingleton<AvatarCustomisa
 
         foreach (KeyValuePair<Cosmetic, bool> cos in PlayerData.CosmeticsList)
         {
+            // if not unlocked
+            if (!cos.Value)
+                continue;
+
             AvatarItemUI item = Instantiate(AvatarItemUIPrefab, CustomisablesRect[(int)cos.Key.CosmeticBodyPartType]).GetComponent<AvatarItemUI>();
             item.Init(cos.Key, EquipAccessory);
 
@@ -82,6 +86,11 @@ public class AvatarCustomisationManager : MonoBehaviourSingleton<AvatarCustomisa
 
     private void EquipAccessory(AvatarItemUI item)
     {
+        // If is current item, return
+        if (currentEquippedItem[(int)item.Cosmetic.CosmeticBodyPartType] == item)
+            return;
+
+        // set select overlay to false for prev item
         if (currentEquippedItem[(int)item.Cosmetic.CosmeticBodyPartType] != null)
             currentEquippedItem[(int)item.Cosmetic.CosmeticBodyPartType].SetEquippedOverlay(false);
         currentEquippedItem[(int)item.Cosmetic.CosmeticBodyPartType] = item;

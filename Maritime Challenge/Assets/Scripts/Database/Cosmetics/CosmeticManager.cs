@@ -41,7 +41,6 @@ public class CosmeticManager : MonoBehaviourSingleton<CosmeticManager>
 
         Debug.LogWarning("Could not Find Cosmetic Display Sprite for cosmetic of ID " + cosmeticID);
         return null;
-
     }
 
     public void UpdateEquippedCosmetic(int oldID, int newID)

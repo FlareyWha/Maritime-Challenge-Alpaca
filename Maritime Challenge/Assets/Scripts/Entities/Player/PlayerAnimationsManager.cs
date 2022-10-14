@@ -28,7 +28,6 @@ public class PlayerAnimationsManager : MonoBehaviour
 
     public void InitAvatarAnimations() 
     {
-        Debug.Log("Avatar Animations Updated");
         for (BODY_PART_TYPE i = 0; i < BODY_PART_TYPE.NUM_TOTAL; i++)
         {
             animatorHandlers[(int)i].SetAnimations(GetCosmeticPartID(i));

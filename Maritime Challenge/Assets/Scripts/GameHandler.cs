@@ -170,7 +170,7 @@ public class GameHandler : NetworkBehaviour
         Debug.Log("Received Friend Removed Event for " + recID);
         if (recID == PlayerData.UID)
         {
-            PlayerData.FriendList.Remove(PlayerData.FindPlayerInfoByID(otherID));
+            PlayerData.FriendList.Remove(PlayerData.FindPlayerFromFriendList(otherID));
 
             FriendInfo info = PlayerData.FindFriendInfoByID(otherID);
             if (info != null)

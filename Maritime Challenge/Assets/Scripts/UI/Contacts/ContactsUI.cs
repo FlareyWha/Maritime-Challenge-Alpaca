@@ -5,7 +5,9 @@ using UnityEngine.UI;
 public class ContactsUI : MonoBehaviour
 {
     [SerializeField]
-    private Image AvatarImage, Highlight;
+    private AvatarDisplay DisplayAvatar;
+    [SerializeField]
+    private Image Highlight;
     [SerializeField]
     private Text Name;
     [SerializeField]
@@ -30,10 +32,10 @@ public class ContactsUI : MonoBehaviour
         EnableHighlight();
     }
 
-    public void Initialise(Sprite avatarSprite, BasicInfo contact, Action<ContactsUI> action)
+    public void Initialise(BasicInfo contact, Action<ContactsUI> action)
     {
-        if (avatarSprite != null)
-            AvatarImage.sprite = avatarSprite;
+        DisplayAvatar.SetFromInfo(contact);
+
         Name.text = contact.Name;
         contactInfo = contact;
         SetSelectedContact = action;
@@ -43,7 +45,8 @@ public class ContactsUI : MonoBehaviour
 
     public void InitUnknown(BasicInfo contact, Action<ContactsUI> action)
     {
-        AvatarImage.sprite = UnknownSprite;
+        DisplayAvatar.SetFromInfo(null);
+
         SetSelectedContact = action;
         contactInfo = contact;
         Name.text = "";

@@ -64,14 +64,12 @@ public class PlayerAvatarManager : NetworkBehaviour
 
     public void AvatarCosmeticChanged(COSMETIC_TYPE type, int cosmeticID)
     {
-        Debug.Log("SendAvatarChanged() " + type + " " + cosmeticID);
         CallAvatarChanged(type, cosmeticID);
     }
 
     [Command]
     private void CallAvatarChanged(COSMETIC_TYPE type, int cosmeticID)
     {
-        Debug.Log("Command Received: Call Avatar Changed()");
         EquippedCosmeticIDs[(int)type] = cosmeticID;
         InvokeAvatarChanged(type, cosmeticID);
     }
@@ -79,7 +77,6 @@ public class PlayerAvatarManager : NetworkBehaviour
     [ClientRpc]
     private void InvokeAvatarChanged(COSMETIC_TYPE type, int cosmeticID)
     {
-        Debug.Log("ClientRpc Received, Invoke Avatar Changed , CosmeticID " + cosmeticID);
         OnAvatarChanged?.Invoke(type, cosmeticID);
     }
 

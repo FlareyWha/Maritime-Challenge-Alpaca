@@ -51,13 +51,16 @@ public class ContactsManager : MonoBehaviour
             }
             else
             {
-                contact.Initialise(null, player.Value, SetSelectedContact);
+                contact.Initialise(player.Value, SetSelectedContact);
             }
 
             if (currSelected == null)
             {
                 SetSelectedContact(contact);
-                DisplayAvatar.SetPlayer(PlayerData.FindPlayerByID(player.Value.UID));
+                if (!player.Value.Unlocked)
+                    DisplayAvatar.SetFromInfo(null);
+                else
+                    DisplayAvatar.SetFromInfo(player.Value);
                 currSelected.EnableHighlight();
             }
         }
@@ -85,13 +88,19 @@ public class ContactsManager : MonoBehaviour
             UpdateContactDisplayUI(currSelected.GetContactInfo());
         else
             HideContactDisplayInfo();
+
+
+        if (currSelected.GetUnlockStatus())
+            DisplayAvatar.SetFromInfo(currSelected.GetContactInfo());
+        else
+            DisplayAvatar.SetFromInfo(null);
     }
 
     private void UpdateContactDisplayUI(BasicInfo player) // For Unlocked But Not Friends
     {
         FriendshipUI.SetActive(false);
-        DisplayAvatar.SetPlayer(PlayerData.FindPlayerByID(player.UID));
-        DisplayNamecard.SetHidden(currSelected.GetContactInfo().UID);
+        DisplayAvatar.SetFromInfo(player);
+        DisplayNamecard.SetHidden(player);
         DisplayName.text = player.Name;
     }
 
@@ -99,7 +108,7 @@ public class ContactsManager : MonoBehaviour
     {
         FriendshipUI.SetActive(true);
         FriendshipText.text = friend.FriendshipLevel.ToString();
-        DisplayAvatar.SetPlayer(PlayerData.FindPlayerByID(friend.UID));
+        DisplayAvatar.SetFromInfo(friend);
         DisplayNamecard.SetDetails(friend);
         DisplayName.text = friend.Name;
     }
@@ -107,7 +116,7 @@ public class ContactsManager : MonoBehaviour
     private void HideContactDisplayInfo() // For Not Unlocked
     {
         FriendshipUI.SetActive(false);
-        DisplayAvatar.SetPlayer(null);
+        DisplayAvatar.SetFromInfo(null);
         DisplayNamecard.SetUnknown(currSelected.GetContactInfo().UID);
         DisplayName.text = "?";
     }

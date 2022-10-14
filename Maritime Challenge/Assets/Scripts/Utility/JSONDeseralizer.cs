@@ -58,6 +58,7 @@ public class JSONDeseralizer : MonoBehaviour
                 Name = friendList.friends[i].sUsername,
                 Unlocked = true
             };
+            //basicInfo.EquippedCosmetics = PlayerData.FindPlayerInfoByID(friendList.friends[i].iFriendUID).EquippedCosmetics;
             PlayerData.FriendList.Add(basicInfo);
         }
     }
@@ -99,6 +100,7 @@ public class JSONDeseralizer : MonoBehaviour
         friendInfo.GuildID = jsonFriendData.iGuildID;
         friendInfo.Country = jsonFriendData.iCountry;
         friendInfo.FriendshipLevel = jsonFriendData.iFriendshipLevel;
+        friendInfo.EquippedCosmetics = PlayerData.FindPlayerInfoByID(friendUID).EquippedCosmetics;
 
         PlayerData.FriendDataList.Add(friendInfo);
         return friendInfo;
