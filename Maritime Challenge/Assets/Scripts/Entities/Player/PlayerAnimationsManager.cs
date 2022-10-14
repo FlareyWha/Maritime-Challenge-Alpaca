@@ -31,27 +31,29 @@ public class PlayerAnimationsManager : MonoBehaviour
         Debug.Log("Avatar Animations Updated");
         for (BODY_PART_TYPE i = 0; i < BODY_PART_TYPE.NUM_TOTAL; i++)
         {
-            animatorHandlers[(int)i].SetAnimations(GetPartID(i));
+            animatorHandlers[(int)i].SetAnimations(GetCosmeticPartID(i));
         }
     }
 
     public void UpdateSpecificAnimations(COSMETIC_TYPE type, int cosmeticID)
     {
-        animatorHandlers[(int)type].SetAnimations(cosmeticID);
+        switch (type)
+        {
+            case COSMETIC_TYPE.HAIR:
+                animatorHandlers[(int)BODY_PART_TYPE.HAIR_FRONT].SetAnimations(cosmeticID);
+                animatorHandlers[(int)BODY_PART_TYPE.HAIR_BACK].SetAnimations(cosmeticID);
+                break;
+            default:
+                animatorHandlers[(int)type].SetAnimations(cosmeticID); 
+                break;
+        }
     }
 
 
-   
-    private int GetPartID(BODY_PART_TYPE type)  
+
+    private int GetCosmeticPartID(BODY_PART_TYPE type)
     {
-        switch (type)
-        {
-            case BODY_PART_TYPE.HAIR_BACK:
-            case BODY_PART_TYPE.HAIR_FRONT:
-                return playerAvatar.GetEquippedCosmeticID(COSMETIC_TYPE.HAIR);
-            default:
-                return playerAvatar.GetEquippedCosmeticID((COSMETIC_TYPE)(int)type);
-        }
+        return playerAvatar.GetEquippedCosmeticID(CosmeticManager.BodyPartToCosmetic(type));
     }
 
 }

@@ -43,7 +43,6 @@ public class PlayerAvatarManager : NetworkBehaviour
 
     private void OnAvatarCosmeticsUpdated(SyncList<int>.Operation op, int index, int oldItem, int newItem)
     {
-        Debug.Log("OnAvatarCosmeticsUpdated Callback Called");
         if (newItem == NullRefNum)
         {
             EquippedCosmetics[index] = null;

@@ -50,11 +50,11 @@ public class AnimatorHandler : MonoBehaviour
 
     private void UpdateAnimationClip(string state, string dir, int cosmeticID)
     {
-        if (cosmeticID == PlayerAvatarManager.NullRefNum)
-        {
-            animationClip = Resources.Load<AnimationClip>(blankAnimFilePath);
-            return;
-        }
+        //if (cosmeticID == PlayerAvatarManager.NullRefNum)
+        //{
+        //    animationClip = Resources.Load<AnimationClip>(blankAnimFilePath);
+        //    return;
+        //}
 
         animationClip = Resources.Load<AnimationClip>("PlayerAnimations/" + FileHeader + "/" + AnimPartName + "_" + cosmeticID.ToString() + "_" + state + "_" + dir);
         if (animationClip == null) // safe checkign

@@ -73,6 +73,19 @@ public class CosmeticManager : MonoBehaviourSingleton<CosmeticManager>
                 break;
         }
     }
+
+    public static COSMETIC_TYPE BodyPartToCosmetic(BODY_PART_TYPE type)
+    {
+        switch (type)
+        {
+            case BODY_PART_TYPE.HAIR_BACK:
+            case BODY_PART_TYPE.HAIR_FRONT:
+                return COSMETIC_TYPE.HAIR;
+            default:
+                return (COSMETIC_TYPE)(int)type;
+        }
+    }
+
 }
 
 
