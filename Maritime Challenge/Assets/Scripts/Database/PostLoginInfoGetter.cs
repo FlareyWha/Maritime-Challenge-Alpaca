@@ -192,10 +192,10 @@ public class PostLoginInfoGetter : MonoBehaviour
                                     PlayerData.EquippedCosmeticsList.Add(cosmetic.Key);
                                 else
                                     cosmeticList.Add(cosmetic.Key);
+
+                                break;
                             }
                         }
-
-                        break;
                     }
                 }
 
