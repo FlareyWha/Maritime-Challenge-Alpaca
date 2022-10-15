@@ -37,26 +37,20 @@ public class AvatarDisplay : MonoBehaviour
     }
 
 
-    public void SetFromInfo(BasicInfo playerInfo)
+    public void SetPlayer(int playerID)
     {
-        if (playerInfo == null)
-        {
-            SetUnknown();
-            return;
-        }
-
         UnknownAvatar.gameObject.SetActive(false);
         for (COSMETIC_TYPE i = 0; i < COSMETIC_TYPE.NUM_TOTAL; i++)
         {
             SetAvatarSprite(i, PlayerAvatarManager.NullRefNum);
         }
-        foreach (Cosmetic cos in playerInfo.EquippedCosmetics)
+        foreach (Cosmetic cos in PlayerData.OthersEquippedCosmeticList[playerID])
         {
             SetAvatarSprite(cos.CosmeticBodyPartType, cos.CosmeticID);
         }
     }
 
-    void SetUnknown()
+    public void SetUnknown()
     {
         UnknownAvatar.gameObject.SetActive(true);
         for (BODY_PART_TYPE i = 0; i < BODY_PART_TYPE.NUM_TOTAL; i++)

@@ -221,7 +221,6 @@ public class BasicInfo
     public int UID;
     public string Name;
     public bool Unlocked;
-    public List<Cosmetic> EquippedCosmetics = new List<Cosmetic>();
 }
 
 public class FriendInfo : BasicInfo

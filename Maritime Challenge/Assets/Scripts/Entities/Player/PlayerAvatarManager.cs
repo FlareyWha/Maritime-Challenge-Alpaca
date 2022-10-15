@@ -20,6 +20,14 @@ public class PlayerAvatarManager : NetworkBehaviour
     }
     public override void OnStartLocalPlayer()
     {
+        StartCoroutine(InitCosmetics());
+    }
+
+    IEnumerator InitCosmetics()
+    {
+        while (PlayerData.EquippedCosmeticsList.Count == 0)
+            yield return null;
+
         List<int> equippedList = new List<int>();
         for (int i = 0; i < (int)COSMETIC_TYPE.NUM_TOTAL; i++)
         {

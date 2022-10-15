@@ -34,7 +34,7 @@ public class ContactsUI : MonoBehaviour
 
     public void Initialise(BasicInfo contact, Action<ContactsUI> action)
     {
-        DisplayAvatar.SetFromInfo(contact);
+        DisplayAvatar.SetPlayer(contact.UID);
 
         Name.text = contact.Name;
         contactInfo = contact;
@@ -45,7 +45,7 @@ public class ContactsUI : MonoBehaviour
 
     public void InitUnknown(BasicInfo contact, Action<ContactsUI> action)
     {
-        DisplayAvatar.SetFromInfo(null);
+        DisplayAvatar.SetUnknown();
 
         SetSelectedContact = action;
         contactInfo = contact;

@@ -78,7 +78,7 @@ public class ProfileNamecard : MonoBehaviour
         //AvatarImage.sprite = DefaultSprite;
 
         // Avatar Display
-        DisplayAvatar.SetFromInfo(player);
+        DisplayAvatar.SetPlayer(player.UID);
     }
 
     // For Online
@@ -144,7 +144,7 @@ public class ProfileNamecard : MonoBehaviour
         }
 
         //AvatarImage.sprite = DefaultSprite;
-        DisplayAvatar.SetFromInfo(playerInfo);
+        DisplayAvatar.SetPlayer(playerInfo.UID);
     }
 
     public void SetUnknown(int playerID)
@@ -157,7 +157,7 @@ public class ProfileNamecard : MonoBehaviour
         PendingPanel.SetActive(false);
         UnknownPanel.SetActive(true);
 
-        DisplayAvatar.SetFromInfo(null);
+        DisplayAvatar.SetUnknown();
     }
 
 

@@ -58,9 +58,9 @@ public class ContactsManager : MonoBehaviour
             {
                 SetSelectedContact(contact);
                 if (!player.Value.Unlocked)
-                    DisplayAvatar.SetFromInfo(null);
+                    DisplayAvatar.SetUnknown();
                 else
-                    DisplayAvatar.SetFromInfo(player.Value);
+                    DisplayAvatar.SetPlayer(player.Value.UID);
                 currSelected.EnableHighlight();
             }
         }
@@ -91,15 +91,15 @@ public class ContactsManager : MonoBehaviour
 
 
         if (currSelected.GetUnlockStatus())
-            DisplayAvatar.SetFromInfo(currSelected.GetContactInfo());
+            DisplayAvatar.SetPlayer(currSelected.GetContactInfo().UID);
         else
-            DisplayAvatar.SetFromInfo(null);
+            DisplayAvatar.SetUnknown();
     }
 
     private void UpdateContactDisplayUI(BasicInfo player) // For Unlocked But Not Friends
     {
         FriendshipUI.SetActive(false);
-        DisplayAvatar.SetFromInfo(player);
+        DisplayAvatar.SetPlayer(player.UID);
         DisplayNamecard.SetHidden(player);
         DisplayName.text = player.Name;
     }
@@ -108,7 +108,7 @@ public class ContactsManager : MonoBehaviour
     {
         FriendshipUI.SetActive(true);
         FriendshipText.text = friend.FriendshipLevel.ToString();
-        DisplayAvatar.SetFromInfo(friend);
+        DisplayAvatar.SetPlayer(friend.UID);
         DisplayNamecard.SetDetails(friend);
         DisplayName.text = friend.Name;
     }
@@ -116,7 +116,7 @@ public class ContactsManager : MonoBehaviour
     private void HideContactDisplayInfo() // For Not Unlocked
     {
         FriendshipUI.SetActive(false);
-        DisplayAvatar.SetFromInfo(null);
+        DisplayAvatar.SetUnknown();
         DisplayNamecard.SetUnknown(currSelected.GetContactInfo().UID);
         DisplayName.text = "?";
     }

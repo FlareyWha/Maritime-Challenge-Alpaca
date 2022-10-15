@@ -98,9 +98,6 @@ public class PostLoginInfoGetter : MonoBehaviour
             case UnityWebRequest.Result.Success:
                 Debug.Log("Get friends success");
 
-               // while (PlayerData.PhonebookData.Count == 0)
-                    // yield return null;
-
                 //Deseralize the data
                 JSONDeseralizer.DeseralizeFriends(webreq.downloadHandler.text);
                 break;
