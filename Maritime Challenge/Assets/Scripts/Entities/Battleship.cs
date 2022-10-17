@@ -36,12 +36,12 @@ public class Battleship : NetworkBehaviour
     private float theta = 0.0f;
     private Vector2 direction = Vector2.zero;
     private float angular_velocity = 0.0f;
-    private float angular_accel_rate = 2.0f;
-    private float angular_deccel_rate = 1.0f;
+    private float angular_accel_rate = 45.0f;
+    private float angular_deccel_rate = 5.0f;
     private float accel_rate = 20.0f;
     private float deccel_rate = 10.0f;
-    private const float MAX_VEL = 12.0f;
-    private const float MAX_ANGULAR_VEL = 2.0f;
+    private const float MAX_VEL = 10.0f;
+    private const float MAX_ANGULAR_VEL = 10.0f;
 
     private const float TARGET_RANGE = 30.0f;
 
@@ -104,34 +104,42 @@ public class Battleship : NetworkBehaviour
         if (UIManager.Instance.Joystick.GetDirection() != Vector2.zero)
         {
             // Update Angular Vel
-            angular_velocity += angular_accel_rate * Time.deltaTime;
             Vector2 joystickDir = UIManager.Instance.Joystick.GetDirection();
             float deltaTheta = Vector2.SignedAngle(velocity, joystickDir);
+            angular_velocity += deltaTheta * angular_accel_rate * Time.deltaTime;
 
-
-            // Update Theta
-            theta += deltaTheta * angular_velocity * Time.deltaTime;
             // update direction var for later use/ref
             direction = Quaternion.Euler(0, 0, theta) * Vector2.up;
             // Update vel speed
             float speed = velocity.magnitude + accel_rate * Time.deltaTime;
 
-
             // Apply new speed and dir to Vel
             velocity = direction * speed;
         }
+
+        // Update Theta
+        theta += angular_velocity * Time.deltaTime;
 
 
         // Apply Decceleration if ship is moving
         if (velocity.magnitude != 0)
             velocity -= velocity.normalized * deccel_rate * Time.deltaTime;
         // Deccelerate Angular Velocity
-        //if (angular_velocity > 0)
-        //{
-        //    angular_velocity -= angular_deccel_rate * Time.deltaTime;
-        //    if (angular_velocity <= 0.0f)
-        //        angular_velocity = 0.0f;
-        //}
+        if (angular_velocity != 0)
+        {
+            if (angular_velocity > 0)
+            {
+                angular_velocity -= angular_deccel_rate * Time.deltaTime;
+                if (angular_velocity < 0)
+                    angular_velocity = 0;
+            }
+            else
+            {
+                angular_velocity += angular_deccel_rate * Time.deltaTime;
+                if (angular_velocity > 0)
+                    angular_velocity = 0;
+            }
+        }
 
         // Stop Ship if coming to a stop  (curr dir diff from last accel dir) - so it doesn't go backwards from deccel
         if (velocity.magnitude != 0 && Vector2.Dot(direction, velocity) < 0)
