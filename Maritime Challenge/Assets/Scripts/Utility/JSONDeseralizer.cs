@@ -99,6 +99,7 @@ public class JSONDeseralizer : MonoBehaviour
         friendInfo.GuildID = jsonFriendData.iGuildID;
         friendInfo.Country = jsonFriendData.iCountry;
         friendInfo.FriendshipLevel = jsonFriendData.iFriendshipLevel;
+        friendInfo.FriendshipXP = jsonFriendData.iFriendshipXP;
 
         PlayerData.FriendDataList.Add(friendInfo);
         return friendInfo;
