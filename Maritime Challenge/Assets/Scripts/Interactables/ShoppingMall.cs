@@ -11,7 +11,7 @@ public class ShoppingMall : BaseInteractable
 
     public override void Interact()
     {
-        PlayerData.CommandsHandler.SwitchSubScene("ShoppingMallScene", SceneManager.EnterMallSpawnPos);
+        PlayerData.CommandsHandler.SwitchSubScene("ShoppingMallScene", SceneManager.GetSpawnPos(SPAWN_POS.SHOPPINGMALL_ENTRANCE));
 
     }
 }

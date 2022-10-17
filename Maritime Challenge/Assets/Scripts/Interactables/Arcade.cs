@@ -11,7 +11,7 @@ public class Arcade : BaseInteractable
 
     public override void Interact()
     {
-        PlayerData.CommandsHandler.SwitchSubScene("ArcadeScene", SceneManager.EnterArcadeSpawnPos);
+        PlayerData.CommandsHandler.SwitchSubScene("ArcadeScene", SceneManager.GetSpawnPos(SPAWN_POS.ARCADE_ENTRANCE));
 
     }
 }
