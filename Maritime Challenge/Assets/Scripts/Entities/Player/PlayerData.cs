@@ -235,5 +235,6 @@ public class FriendInfo : BasicInfo
     public int Country;
     public bool Online;
     public int FriendshipLevel;
+    public int FriendshipXP;
 }
 

@@ -91,6 +91,7 @@ public class JSONFriendData
     public int iGuildID;
     public int iCountry;
     public int iFriendshipLevel;
+    public int iFriendshipXP;
 }
 
 [Serializable]
