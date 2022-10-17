@@ -11,7 +11,7 @@ public class Cafe : BaseInteractable
 
     public override void Interact()
     {
-        PlayerData.CommandsHandler.SwitchSubScene("CafeScene", SceneManager.EnterCafeSpawnPos);
+        PlayerData.CommandsHandler.SwitchSubScene("CafeScene", SceneManager.GetSpawnPos(SPAWN_POS.CAFE_ENTRANCE));
        
     }
 }
