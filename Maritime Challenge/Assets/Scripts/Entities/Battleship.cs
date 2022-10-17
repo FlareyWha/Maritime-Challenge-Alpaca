@@ -36,12 +36,12 @@ public class Battleship : NetworkBehaviour
     private float theta = 0.0f;
     private Vector2 direction = Vector2.zero;
     private float angular_velocity = 0.0f;
-    private float angular_accel_rate = 45.0f;
+    private float angular_accel_rate = 50.0f;
     private float angular_deccel_rate = 5.0f;
     private float accel_rate = 20.0f;
     private float deccel_rate = 10.0f;
     private const float MAX_VEL = 10.0f;
-    private const float MAX_ANGULAR_VEL = 10.0f;
+    private const float MAX_ANGULAR_VEL = 12.0f;
 
     private const float TARGET_RANGE = 30.0f;
 
