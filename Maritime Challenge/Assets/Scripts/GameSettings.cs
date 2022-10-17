@@ -12,6 +12,11 @@ public static class GameSettings
     {
         return (level * level * 2) + level * 50 + 300;
     }
+
+    public static int GetFriendshipXPRequirement(int level)
+    {
+        return (level * level) + level * 50 + 100;
+    }
 }
 
 

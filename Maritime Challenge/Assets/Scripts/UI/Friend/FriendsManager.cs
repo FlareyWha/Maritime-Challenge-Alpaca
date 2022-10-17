@@ -176,6 +176,81 @@ public class FriendsManager : MonoBehaviourSingleton<FriendsManager>
         }
     }
 
+    public void UpdateFriendshipXPLevels(int friendUID, int xpGained)
+    {
+        //Need to find way to update this on both clients.
+        //Either this function gets called twice or this will invoke smth that doesnt do the calculations but just update the numbers
+        //Contact me if need discussing I suppose
+        //For now what this func does is update on one client and the database.
+
+        FriendInfo friend = null;
+
+        foreach (FriendInfo friendInfo in PlayerData.FriendDataList)
+        {
+            if (friendInfo.UID == friendUID)
+            {
+                friend = friendInfo;
+                break;
+            }
+        }
+
+        if (friend != null)
+        {
+            int currXP = friend.FriendshipXP + xpGained;
+            int currLevel = friend.FriendshipLevel;
+            int friendshipLevel = 0, friendshipXP = 0;
+            bool finishedLevelingUp = false;
+
+            do
+            {
+                //Get the xp requirement
+                int xpRequirement = GameSettings.GetFriendshipXPRequirement(currLevel);
+
+                //Increase level if currXP meets the xpRequirement
+                if (currXP >= xpRequirement)
+                {
+                    currLevel++;
+                    currXP -= xpRequirement;
+                }
+                else
+                    finishedLevelingUp = true;
+            }
+            while (!finishedLevelingUp);
+
+            friend.FriendshipLevel = currLevel;
+            friend.FriendshipXP = currXP;
+
+            StartCoroutine(DoUpdateFriendshipXPLevels(PlayerData.UID, friendUID, friendshipLevel, friendshipXP));
+            StartCoroutine(DoUpdateFriendshipXPLevels(friendUID, PlayerData.UID, friendshipLevel, friendshipXP));
+        }
+    }
+
+    IEnumerator DoUpdateFriendshipXPLevels(int ownerUID, int friendUID, int friendshipLevel, int friendshipXP)
+    {
+        string url = ServerDataManager.URL_updateFriendshipXPLevels;
+        Debug.Log(url);
+
+        WWWForm form = new WWWForm();
+        form.AddField("iOwnerUID", ownerUID);
+        form.AddField("iFriendUID", friendUID);
+        using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
+        yield return webreq.SendWebRequest();
+        switch (webreq.result)
+        {
+            case UnityWebRequest.Result.Success:
+                //Deseralize the data
+                FriendInfo friend = JSONDeseralizer.DeseralizeFriendData(friendUID, webreq.downloadHandler.text);
+                OnNewFriendDataSaved?.Invoke(friend);
+                break;
+            case UnityWebRequest.Result.ProtocolError:
+                Debug.LogError(webreq.downloadHandler.text);
+                break;
+            default:
+                Debug.LogError("Server error");
+                break;
+        }
+    }
+
     public void InvokeOnFriendListUpdated()
     {
         OnFriendListUpdated?.Invoke();
