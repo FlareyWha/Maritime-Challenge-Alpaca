@@ -33,10 +33,15 @@ public class Battleship : NetworkBehaviour
     private Player ownerPlayer = null;
 
     private Vector2 velocity = Vector2.zero;
-    private Vector2 accel = Vector2.zero;
+    private float theta = 0.0f;
+    private Vector2 direction = Vector2.zero;
+    private float angular_velocity = 0.0f;
+    private float angular_accel_rate = 2.0f;
+    private float angular_deccel_rate = 1.0f;
     private float accel_rate = 20.0f;
     private float deccel_rate = 10.0f;
-    private const float MAX_VEL = 10.0f;
+    private const float MAX_VEL = 12.0f;
+    private const float MAX_ANGULAR_VEL = 2.0f;
 
     private const float TARGET_RANGE = 30.0f;
 
@@ -98,23 +103,44 @@ public class Battleship : NetworkBehaviour
         // Update Accel if Joystick is Moved
         if (UIManager.Instance.Joystick.GetDirection() != Vector2.zero)
         {
-            accel = UIManager.Instance.Joystick.GetDirection();
-            velocity += accel * accel_rate * Time.deltaTime;
+            // Update Angular Vel
+            angular_velocity += angular_accel_rate * Time.deltaTime;
+            Vector2 joystickDir = UIManager.Instance.Joystick.GetDirection();
+            float deltaTheta = Vector2.SignedAngle(velocity, joystickDir);
+
+
+            // Update Theta
+            theta += deltaTheta * angular_velocity * Time.deltaTime;
+            // update direction var for later use/ref
+            direction = Quaternion.Euler(0, 0, theta) * Vector2.up;
+            // Update vel speed
+            float speed = velocity.magnitude + accel_rate * Time.deltaTime;
+
+
+            // Apply new speed and dir to Vel
+            velocity = direction * speed;
         }
-        // Stop Ship if coming to a stop  (curr dir diff from last accel dir) - so it doesn't go backwards from deccel
-        if (velocity.magnitude != 0 &&
-            Vector2.Dot(accel, velocity) < 0)
-        {
-            velocity = Vector2.zero;
-        }
+
 
         // Apply Decceleration if ship is moving
         if (velocity.magnitude != 0)
             velocity -= velocity.normalized * deccel_rate * Time.deltaTime;
+        // Deccelerate Angular Velocity
+        //if (angular_velocity > 0)
+        //{
+        //    angular_velocity -= angular_deccel_rate * Time.deltaTime;
+        //    if (angular_velocity <= 0.0f)
+        //        angular_velocity = 0.0f;
+        //}
+
+        // Stop Ship if coming to a stop  (curr dir diff from last accel dir) - so it doesn't go backwards from deccel
+        if (velocity.magnitude != 0 && Vector2.Dot(direction, velocity) < 0)
+            velocity = Vector2.zero;
 
         // Clamp values wihtin Max Limit
         velocity.x = Mathf.Clamp(velocity.x, -MAX_VEL, MAX_VEL);
         velocity.y = Mathf.Clamp(velocity.y, -MAX_VEL, MAX_VEL);
+        angular_velocity = Mathf.Clamp(angular_velocity, -MAX_ANGULAR_VEL, MAX_ANGULAR_VEL);
 
         // Move Ship By Velocity
         rb.position += velocity * Time.deltaTime;
@@ -139,12 +165,12 @@ public class Battleship : NetworkBehaviour
             SyncShipFacing((int)currFacing);
 
         // Update Rotation
-        float theta = Vector2.SignedAngle(Vector2.up, velocity);
+        //float theta = Vector2.SignedAngle(Vector2.up, velocity);
         rb.rotation = theta;
 
         // Update Ship Attack
         if (currTarget != null)
-        {   
+        {
             // Check for Disable (?)
             if (!currTarget.gameObject.activeSelf)
             {
@@ -267,7 +293,7 @@ public class Battleship : NetworkBehaviour
         transform.position = refTransform.position;
         transform.rotation = refTransform.rotation;
         currFacing = SHIP_FACING.LEFT;
-        //SyncShipSprite((int)currFacing);
+        SyncShipFacing((int)currFacing);
         SyncShipStatus(true);
     }
 
