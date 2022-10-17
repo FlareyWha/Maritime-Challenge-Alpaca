@@ -255,6 +255,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1965978618348430356, guid: 711e0565d765b3047b60d57b37e7fb8d, type: 3}
+      propertyPath: SpawnPos
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1965978618348430356, guid: 711e0565d765b3047b60d57b37e7fb8d, type: 3}
       propertyPath: TargetScene
       value: WorldHubScene
       objectReference: {fileID: 0}

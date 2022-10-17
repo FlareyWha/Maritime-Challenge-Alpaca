@@ -8,13 +8,20 @@ public class SceneManager : MonoBehaviourSingleton<SceneManager>
 {
 
     public static Vector2 StartWorldHubSpawnPos = new Vector2(6.0f, -8.0f);
-    public static Vector2 EnterCafeSpawnPos = new Vector2(0.0f, 4.0f);
-    public static Vector2 EnterArcadeSpawnPos = new Vector2(0.0f, 4.0f);
-    public static Vector2 EnterMallSpawnPos = new Vector2(0.0f, 4.0f);
-    public static Vector2 ExitCafeSpawnPos = new Vector2(-12.0f, -8.0f);
-    public static Vector2 ExitArcadeSpawnPos = new Vector2(-12.0f, -8.0f);
-    public static Vector2 ExitMallSpawnPos = new Vector2(-12.0f, -8.0f);
+ 
+    public static Vector2[] SpawnPosList = new Vector2[(int)SPAWN_POS.NUM_TOTAL];
 
+
+    protected override void Awake()
+    {
+        base.Awake();
+        SpawnPosList[(int)SPAWN_POS.CAFE_ENTRANCE].Set(0.0f, 4.0f);
+        SpawnPosList[(int)SPAWN_POS.ARCADE_ENTRANCE].Set(7.0f, 2.0f);
+        SpawnPosList[(int)SPAWN_POS.SHOPPINGMALL_ENTRANCE].Set(0.0f, 4.0f);
+        SpawnPosList[(int)SPAWN_POS.WORLDHUB_CAFE_FRONT].Set(-12.0f, -8.0f);
+        SpawnPosList[(int)SPAWN_POS.WORLDHUB_ARCADE_FRONT].Set(8.2f, 0.75f);
+        SpawnPosList[(int)SPAWN_POS.WORLDHUB_SHOPPINGMALL_FRONT].Set(21.6f, -7.0f);
+    }
     private void Start()
     {
         UnityEngine.SceneManagement.SceneManager.sceneLoaded += OnSceneLoaded;
@@ -61,6 +68,11 @@ public class SceneManager : MonoBehaviourSingleton<SceneManager>
         UnityEngine.SceneManagement.SceneManager.MoveGameObjectToScene(go,
             UnityEngine.SceneManagement.SceneManager.GetSceneByName(sceneName));
     }
+
+    public static Vector2 GetSpawnPos(SPAWN_POS posType)
+    {
+        return SpawnPosList[(int)posType];
+    }
  
 }
 
@@ -75,6 +87,19 @@ public enum SCENE_ID
     CAFE,
     ARCADE,
     SHOPPINGMALL,
+
+    NUM_TOTAL
+}
+
+public enum SPAWN_POS // (World/SubScene_Where)
+{
+    WORLDHUB_CAFE_FRONT,
+    WORLDHUB_ARCADE_FRONT,
+    WORLDHUB_SHOPPINGMALL_FRONT,
+    CAFE_ENTRANCE,
+    ARCADE_ENTRANCE,
+    SHOPPINGMALL_ENTRANCE,
+
 
     NUM_TOTAL
 }

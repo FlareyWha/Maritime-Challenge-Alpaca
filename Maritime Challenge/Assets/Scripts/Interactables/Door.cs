@@ -6,6 +6,8 @@ public class Door : BaseInteractable
 {
     [SerializeField]
     private string InteractMessageText, TargetScene;
+    [SerializeField]
+    private SPAWN_POS SpawnPos;
 
     void Start()
     {
@@ -14,6 +16,6 @@ public class Door : BaseInteractable
 
     public override void Interact()
     {
-        PlayerData.CommandsHandler.SwitchSubScene(TargetScene, SceneManager.ExitCafeSpawnPos);
+        PlayerData.CommandsHandler.SwitchSubScene(TargetScene, SceneManager.GetSpawnPos(SpawnPos));
     }
 }
