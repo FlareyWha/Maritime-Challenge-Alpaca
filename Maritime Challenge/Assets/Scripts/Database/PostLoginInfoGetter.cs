@@ -184,17 +184,14 @@ public class PostLoginInfoGetter : MonoBehaviour
                 {
                     foreach (KeyValuePair<Cosmetic, bool> cosmetic in PlayerData.CosmeticsList)
                     {
-                        if (cosmetic.Value == true)
+                        if (cosmetic.Key.CosmeticID == equippedCosmeticListIDList[i])
                         {
-                            if (cosmetic.Key.CosmeticID == equippedCosmeticListIDList[i])
-                            {
-                                if (self)
-                                    PlayerData.EquippedCosmeticsList.Add(cosmetic.Key);
-                                else
-                                    cosmeticList.Add(cosmetic.Key);
+                            if (self)
+                                PlayerData.EquippedCosmeticsList.Add(cosmetic.Key);
+                            else
+                                cosmeticList.Add(cosmetic.Key);
 
-                                break;
-                            }
+                            break;
                         }
                     }
                 }
