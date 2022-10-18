@@ -83,7 +83,8 @@ public class ServerDataManager : MonoBehaviour
 
     #region Handling Missions & Achievements
 
-    public static string URL_getMissionStatus = serverURL + "GetMissionStatus.php";
+    public static string URL_getMissionData = serverURL + "GetMissionData.php";
+    public static string URL_updateMissionClaimed = serverURL + "UpdateMissionClaimed.php";
     public static string URL_getAchievementData = serverURL + "GetAchievementData.php";
     public static string URL_updateAchievementClaimed = serverURL + "UpdateAchievementClaimed.php";
 
@@ -114,6 +115,7 @@ public class ServerDataManager : MonoBehaviour
 
     //Refresh database
     public static string URL_addAchievementListData = serverURL + "AddAchievementListData.php";
+    public static string URL_addMissionListData = serverURL + "AddMissionListData.php";
     public static string URL_addBattleshipListData = serverURL + "AddBattleshipListData.php";
     public static string URL_addCosmeticListData = serverURL + "AddCosmeticListData.php";
     public static string URL_addTitleListData = serverURL + "AddTitleListData.php";

@@ -126,7 +126,6 @@ public class AchievementsManager : MonoBehaviour
         StartCoroutine(DoClaimAchievement(achievement));
         //Achievement achievement = GetAchievement(achievementID);
 
-        PlayerData.AchievementList[achievement] = true;
         int earnedTitleID = achievement.EarnedTitleID;
 
         if (earnedTitleID == -1)

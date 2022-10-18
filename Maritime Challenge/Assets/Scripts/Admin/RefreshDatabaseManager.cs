@@ -24,6 +24,7 @@ public class RefreshDatabaseManager : MonoBehaviour
         CoroutineCollection coroutineCollectionManager = new CoroutineCollection();
 
         StartCoroutine(coroutineCollectionManager.CollectCoroutine(AddData(ServerDataManager.URL_addAchievementListData)));
+        StartCoroutine(coroutineCollectionManager.CollectCoroutine(AddData(ServerDataManager.URL_addMissionListData)));
         StartCoroutine(coroutineCollectionManager.CollectCoroutine(AddData(ServerDataManager.URL_addBattleshipListData)));
         StartCoroutine(coroutineCollectionManager.CollectCoroutine(AddData(ServerDataManager.URL_addCosmeticListData)));
         StartCoroutine(coroutineCollectionManager.CollectCoroutine(AddData(ServerDataManager.URL_addTitleListData)));

@@ -229,6 +229,21 @@ public class JSONAchievementDataList
 }
 
 [Serializable]
+public class JSONMissionData
+{
+    public int iMissionID;
+    public string sMissionName;
+    public string sMissionDescription;
+    public bool bMissionClaimed;
+}
+
+[Serializable]
+public class JSONMissionDataList
+{
+    public List<JSONMissionData> missionData = new List<JSONMissionData>();
+}
+
+[Serializable]
 public class JSONBattleshipData
 {
     public int iBattleshipID;
