@@ -39,19 +39,20 @@ public class ContactsManager : MonoBehaviour
         }
 
 
-        // TBC - Sort List By Known/Unknown
-
+        List<ContactsUI> contactsList = new List<ContactsUI>();
         foreach (KeyValuePair<int, BasicInfo> player in PlayerData.PhonebookData)
         {
-            GameObject uiGO = Instantiate(ContactUIPrefab, ContactsListRect);
+            GameObject uiGO = Instantiate(ContactUIPrefab);
             ContactsUI contact = uiGO.GetComponent<ContactsUI>();
             if (!player.Value.Unlocked)
             {
                 contact.InitUnknown(player.Value, SetSelectedContact);
+                contact.SortOrderRef = -1;
             }
             else
             {
                 contact.Initialise(player.Value, SetSelectedContact);
+                contact.SortOrderRef = 1;
             }
 
             if (currSelected == null)
@@ -63,8 +64,14 @@ public class ContactsManager : MonoBehaviour
                     DisplayAvatar.SetPlayer(player.Value.UID);
                 currSelected.EnableHighlight();
             }
+            contactsList.Add(contact);
         }
-
+        // TBC - Sort List By Known/Unknown
+        contactsList.Sort((a, b) => { return b.SortOrderRef.CompareTo(a.SortOrderRef); });
+        foreach (ContactsUI ui in contactsList)
+        {
+            ui.gameObject.transform.SetParent(ContactsListRect);
+        }
      
     }
 

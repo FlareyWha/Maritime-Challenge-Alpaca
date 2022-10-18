@@ -28,11 +28,16 @@ public class TitlesUIManager : MonoBehaviourSingleton<TitlesUIManager>
             Destroy(child.gameObject);
         }
 
-
+        List<TitleUI> titlesList = new List<TitleUI>();
         foreach (KeyValuePair<Title, bool> title in PlayerData.TitleDictionary)
         {
-            TitleUI titleUI = Instantiate(TitleUIPrefab, TitlesRect).GetComponent<TitleUI>();
+            TitleUI titleUI = Instantiate(TitleUIPrefab).GetComponent<TitleUI>();
             titleUI.Init(title.Key, title.Value, SwitchTitle);
+
+            if (title.Value)
+                titleUI.SortOrderRef = 1;
+            else
+                titleUI.SortOrderRef = -1;
 
             // If Is Currently Equipped
             if (PlayerData.CurrentTitleID == title.Key.TitleID)
@@ -42,6 +47,12 @@ public class TitlesUIManager : MonoBehaviourSingleton<TitlesUIManager>
 
                 ProfileDisplayTitle.sprite = title.Key.LinkedTitle.TitleSprite;
             }
+            titlesList.Add(titleUI);
+        }
+        titlesList.Sort((a, b) => { return b.SortOrderRef.CompareTo(a.SortOrderRef); });
+        foreach (TitleUI ui in titlesList)
+        {
+            ui.gameObject.transform.SetParent(TitlesRect);
         }
     }
 

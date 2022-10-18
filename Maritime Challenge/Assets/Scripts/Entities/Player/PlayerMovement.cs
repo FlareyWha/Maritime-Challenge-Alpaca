@@ -10,13 +10,30 @@ public class PlayerMovement : NetworkBehaviour
     [SerializeField]
     private List<Animator> allPlayerAnimators;
 
+    [SyncVar]
+    private bool isWalking;
+    [SyncVar]
+    private Vector2 dir;
+
     private const float WALK_SPEED = 5.0f;
 
     private Rigidbody2D rb = null;
 
+    public override void OnStartServer()
+    {
+        isWalking = false;
+        dir = Vector2.zero;
+    }
+
     public override void OnStartClient()
     {
         rb = GetComponent<Rigidbody2D>();
+        foreach (Animator animator in allPlayerAnimators)
+        {
+            animator.SetBool("Walk", isWalking);
+            animator.SetFloat("DirX", dir.x);
+            animator.SetFloat("DirY", dir.y);
+        }
     }
 
     public override void OnStartLocalPlayer()
@@ -46,12 +63,14 @@ public class PlayerMovement : NetworkBehaviour
     [Command]
     private void SendUpdateAnimatorWalk(bool walk)
     {
+        isWalking = walk;
         UpdateAnimatorWalkBool(walk);
     }
 
     [Command]
     private void SendUpdateAnimatorDir(float x, float y)
     {
+        dir.Set(x, y);
         UpdateAnimatorDirValues(x, y);
     }
 

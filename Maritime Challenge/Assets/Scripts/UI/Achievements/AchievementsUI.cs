@@ -24,6 +24,8 @@ public class AchievementsUI : MonoBehaviour
     [SerializeField]
     private GameObject CompletedOverlay;
 
+    public int SortOrderRef = 0;
+
     private Achievement achievement;
     private Action<Achievement> onSelectAction;
 

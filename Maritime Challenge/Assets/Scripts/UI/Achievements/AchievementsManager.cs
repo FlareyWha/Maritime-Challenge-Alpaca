@@ -71,16 +71,30 @@ public class AchievementsManager : MonoBehaviour
         }
 
         // Init Rect
+        List<AchievementsUI> achievementsList = new List<AchievementsUI>();
         foreach (AchievementStatus achievementStat in achievements)
         {
             Achievement achievement = achievementStat.GetCurrentAchievement();
-            AchievementsUI ui = Instantiate(AchievementsUIPrefab, AchievementsRect).GetComponent<AchievementsUI>();
+            AchievementsUI ui = Instantiate(AchievementsUIPrefab).GetComponent<AchievementsUI>();
             int currProgress = GetCurrentProgressNum(achievement.AchievementData.Type);
             int reqProgress = achievement.AchievementData.RequirementNum;
             if (achievementStat.OnFinalTier() && currProgress >= reqProgress)
+            {
                 ui.SetCompleted(achievement);
+                ui.SortOrderRef = 1;
+            }
             else
-                ui.Init(achievement, currProgress , reqProgress, ClaimAchievement);
+            {
+                ui.Init(achievement, currProgress, reqProgress, ClaimAchievement);
+                ui.SortOrderRef = -1;
+            }
+
+            achievementsList.Add(ui);
+        }
+        achievementsList.Sort((a, b) => { return b.SortOrderRef.CompareTo(a.SortOrderRef); });
+        foreach (AchievementsUI ui in achievementsList)
+        {
+            ui.gameObject.transform.SetParent(AchievementsRect);
         }
     }
 
