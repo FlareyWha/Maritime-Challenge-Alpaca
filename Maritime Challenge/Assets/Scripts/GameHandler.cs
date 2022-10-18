@@ -52,7 +52,7 @@ public class GameHandler : NetworkBehaviour
         if (chat_type == CHAT_TYPE.GUILD && guildID != PlayerData.GuildID)
             return;
 
-        ChatManager.Instance.UpdateChatLog(chat_type, playerName, message);
+        ChatManager.Instance.UpdateChatLog(chat_type, player.GetUID(), playerName, message);
 
         if (player == null)
             return;

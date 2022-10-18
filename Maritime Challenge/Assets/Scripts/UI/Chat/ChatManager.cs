@@ -48,11 +48,11 @@ public class ChatManager : MonoBehaviourSingleton<ChatManager>
         InputField_Message.text = "";
     }
 
-    public void UpdateChatLog(CHAT_TYPE chat_type, string sender_name, string message)
+    public void UpdateChatLog(CHAT_TYPE chat_type, int sender_id, string sender_name, string message)
     {
         GameObject go = Instantiate(ChatMessageUIPrefab, ChatLogRect);
         ChatMessageUI chatUI = go.GetComponent<ChatMessageUI>();
-        chatUI.Init(chat_type, sender_name, message);
+        chatUI.Init(chat_type, sender_id, sender_name, message);
     }
 
     public void OnChatTypeChanged()

@@ -12,7 +12,6 @@ public class PlayerUI : NetworkBehaviour
     private Text PlayerDisplayName;
 
 
-    private Vector2 playerSize;
     private bool isInteractOpen = false;
     public static Player interactPlayer = null;
 
@@ -38,7 +37,7 @@ public class PlayerUI : NetworkBehaviour
     {
         GameObject bubbleGO = Instantiate(ChatBubbleUIPrefab, ChatBubbleRect);
         ChatBubbleUI chatUI = bubbleGO.GetComponent<ChatBubbleUI>();
-        chatUI.Init(text);
+        chatUI.Init(GetComponent<Player>() == PlayerData.MyPlayer, text);
         chatBubbleList.Add(chatUI);
 
         // Limit Chat Bubbles

@@ -9,8 +9,15 @@ public class ChatMessageUI : MonoBehaviour
     [SerializeField]
     private Text MessageText;
 
-    public void Init(CHAT_TYPE type, string who, string message)
+    private Color32 myMessageColor = new Color32(0, 150, 200, 255);
+
+    public void Init(CHAT_TYPE type, int sender_id, string who, string message)
     {
+        if (who == "")
+            who = "Guest";
+        else if (sender_id == PlayerData.MyPlayer.GetUID())
+            MessageText.color = myMessageColor;
+
         string typeText = "";
         switch (type)
         {
