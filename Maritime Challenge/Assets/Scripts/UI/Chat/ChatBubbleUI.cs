@@ -11,8 +11,13 @@ public class ChatBubbleUI : MonoBehaviour
     private float timer = 5.0f;
     private float fade_timer = 0.5f;
 
-    public void Init(string message)
+    private Color32 MyColor = new Color32(255, 255, 240, 255);
+
+    public void Init(bool isMine, string message)
     {
+        if (isMine)
+            GetComponent<Image>().color = MyColor;
+
         MessageText.text = message;
 
         UIManager.SetHeightByTextHeight(gameObject, MessageText);
