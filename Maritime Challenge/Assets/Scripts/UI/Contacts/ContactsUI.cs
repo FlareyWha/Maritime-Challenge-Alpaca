@@ -13,6 +13,8 @@ public class ContactsUI : MonoBehaviour
     [SerializeField]
     private Sprite UnknownSprite;
 
+    public int SortOrderRef = 0;
+
     private Button button;
     private BasicInfo contactInfo;
 
