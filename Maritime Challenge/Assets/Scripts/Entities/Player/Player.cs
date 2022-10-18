@@ -16,7 +16,7 @@ public class Player : BaseEntity
 
     [SerializeField]
     private SpriteRenderer[] PlayerSprites;
-    private int[] defaultSortingOrder;
+    private int[] defaultSortingOrder = new int[(int)BODY_PART_TYPE.NUM_TOTAL];
 
 
     [SyncVar]
