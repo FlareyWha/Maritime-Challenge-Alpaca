@@ -11,6 +11,8 @@ public class TitleUI : MonoBehaviour
     [SerializeField]
     private Button button;
 
+    public int SortOrderRef = 0;
+
     private Title title;
     public Title LinkedTitle { get { return title;  } }
 
