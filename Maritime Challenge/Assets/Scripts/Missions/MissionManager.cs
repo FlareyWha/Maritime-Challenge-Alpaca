@@ -8,16 +8,39 @@ public class MissionManager : MonoBehaviour
     [SerializeField]
     private List<MissionSO> MissionDataList;
 
+    void Awake()
+    {
+        // Link Mission Scriptable Object to Mission Class from database
+        foreach (KeyValuePair<Mission, bool> mission in PlayerData.MissionList)
+        {
+            mission.Key.MissionData = FindMissionByID(mission.Key.MissionID);
+        }
+    }
+    private MissionSO FindMissionByID(int id)
+    {
+        foreach (MissionSO mission in MissionDataList)
+        {
+            if (mission.ID == id)
+                return mission;
+        }
+        Debug.LogWarning("Could not find Mission of ID " + id + "!");
+        return null;
+    }
     // Start is called before the first frame update
     void Start()
     {
-        
+        PlayerData.OnPlayerStatsUpdated += CheckMissionUnlocked;
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public void CheckMissionUnlocked()
+    {
+        //Idk tbh
     }
 
     public void ClaimMission(Mission mission)
