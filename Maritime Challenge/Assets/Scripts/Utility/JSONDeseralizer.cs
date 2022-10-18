@@ -232,7 +232,7 @@ public class JSONDeseralizer : MonoBehaviour
 
         for (int i = 0; i < mailDataList.mailData.Count; ++i)
         {
-            mailList.Add(new Mail(mailDataList.mailData[i].sMailTitle, mailDataList.mailData[i].sMailDescription, mailDataList.mailData[i].iMailItemAmount));
+            mailList.Add(new Mail(mailDataList.mailData[i].iMailID, mailDataList.mailData[i].sMailTitle, mailDataList.mailData[i].sMailDescription, mailDataList.mailData[i].iMailItemAmount));
         }
 
         return mailList;

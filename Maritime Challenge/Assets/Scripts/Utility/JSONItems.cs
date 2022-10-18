@@ -251,6 +251,7 @@ public class JSONBattleshipDataList
 [Serializable]
 public class JSONMailData
 {
+    public int iMailID;
     public string sMailTitle;
     public string sMailDescription;
     public int iMailItemAmount;
