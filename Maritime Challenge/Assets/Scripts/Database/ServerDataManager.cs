@@ -98,6 +98,14 @@ public class ServerDataManager : MonoBehaviour
 
     #endregion
 
+    #region Handling Mail
+
+    //Mail
+    public static string URL_addMail = serverURL + "AddMail.php";
+    public static string URL_getMailData = serverURL + "GetMailData.php";
+
+    #endregion
+
     #region Handling Admin Stuff
 
     //Redemptions

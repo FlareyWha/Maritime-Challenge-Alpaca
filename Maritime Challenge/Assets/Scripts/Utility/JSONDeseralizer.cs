@@ -223,4 +223,18 @@ public class JSONDeseralizer : MonoBehaviour
 
         return battleshipDataDictionary;
     }
+
+    public static List<Mail> DeseralizeMailData(string mailDataJSON)
+    {
+        JSONMailDataList mailDataList = JsonUtility.FromJson<JSONMailDataList>(mailDataJSON);
+
+        List<Mail> mailList = new List<Mail>();
+
+        for (int i = 0; i < mailDataList.mailData.Count; ++i)
+        {
+            mailList.Add(new Mail(mailDataList.mailData[i].sMailTitle, mailDataList.mailData[i].sMailDescription, mailDataList.mailData[i].iMailItemAmount));
+        }
+
+        return mailList;
+    }
 }

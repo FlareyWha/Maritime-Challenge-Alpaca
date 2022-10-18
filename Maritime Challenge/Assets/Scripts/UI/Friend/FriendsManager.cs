@@ -106,7 +106,7 @@ public class FriendsManager : MonoBehaviourSingleton<FriendsManager>
                 OnFriendListUpdated?.Invoke();
                 break;
             case UnityWebRequest.Result.ProtocolError:
-                Debug.Log(webreq.downloadHandler.text);
+                Debug.LogError(webreq.downloadHandler.text);
                 break;
             default:
                 Debug.LogError("Friend cannot be added");

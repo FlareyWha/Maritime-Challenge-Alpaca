@@ -247,3 +247,17 @@ public class JSONBattleshipDataList
 {
     public List<JSONBattleshipData> battleshipData = new List<JSONBattleshipData>();
 }
+
+[Serializable]
+public class JSONMailData
+{
+    public string sMailTitle;
+    public string sMailDescription;
+    public int iMailItemAmount;
+}
+
+[Serializable]
+public class JSONMailDataList
+{
+    public List<JSONMailData> mailData = new List<JSONMailData>();
+}
