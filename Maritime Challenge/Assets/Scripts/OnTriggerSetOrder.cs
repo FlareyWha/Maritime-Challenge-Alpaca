@@ -14,7 +14,7 @@ public class OnTriggerSetOrder : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-
+            collision.gameObject.GetComponent<Player>().SetOrderInLayer(orderInLayer);
         }
     }
 }

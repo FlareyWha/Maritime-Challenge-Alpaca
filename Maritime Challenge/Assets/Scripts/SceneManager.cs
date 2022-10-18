@@ -18,9 +18,9 @@ public class SceneManager : MonoBehaviourSingleton<SceneManager>
         SpawnPosList[(int)SPAWN_POS.CAFE_ENTRANCE].Set(0.0f, 4.0f);
         SpawnPosList[(int)SPAWN_POS.ARCADE_ENTRANCE].Set(7.0f, 2.0f);
         SpawnPosList[(int)SPAWN_POS.SHOPPINGMALL_ENTRANCE].Set(0.0f, 4.0f);
-        SpawnPosList[(int)SPAWN_POS.WORLDHUB_CAFE_FRONT].Set(-12.0f, -8.0f);
-        SpawnPosList[(int)SPAWN_POS.WORLDHUB_ARCADE_FRONT].Set(8.2f, 0.75f);
-        SpawnPosList[(int)SPAWN_POS.WORLDHUB_SHOPPINGMALL_FRONT].Set(21.6f, -7.0f);
+        SpawnPosList[(int)SPAWN_POS.WORLDHUB_CAFE_FRONT].Set(-2.9f, -8.0f);
+        SpawnPosList[(int)SPAWN_POS.WORLDHUB_ARCADE_FRONT].Set(9.0f, 0.0f);
+        SpawnPosList[(int)SPAWN_POS.WORLDHUB_SHOPPINGMALL_FRONT].Set(21.0f, -7.6f);
     }
     private void Start()
     {

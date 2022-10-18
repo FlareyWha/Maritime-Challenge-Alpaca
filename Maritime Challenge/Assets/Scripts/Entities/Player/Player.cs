@@ -14,6 +14,10 @@ public class Player : BaseEntity
     private SpriteRenderer BodyReferenceSprite;
     public SpriteRenderer RefSprite { get { return BodyReferenceSprite; } }
 
+    [SerializeField]
+    private SpriteRenderer[] PlayerSprites;
+    private int[] defaultSortingOrder;
+
 
     [SyncVar]
     private int UID = 0;
@@ -44,8 +48,11 @@ public class Player : BaseEntity
    
     private void Start()
     {
-       
         gameObject.SetActive(isVisible);
+        for (int i = 0; i < PlayerSprites.Length; i++)
+        {
+            defaultSortingOrder[i] = PlayerSprites[i].sortingOrder;
+        }
     }
 
   
@@ -222,7 +229,10 @@ public class Player : BaseEntity
 
     public void SetOrderInLayer(int what)
     {
-        //GetComponent<SpriteRenderer>().sortingOrder = what;
+        for (int i = 0; i < PlayerSprites.Length; i++)
+        {
+            PlayerSprites[i].sortingOrder = defaultSortingOrder[i] + what;
+        }
     }
 
     // ================= GETTERS =====================

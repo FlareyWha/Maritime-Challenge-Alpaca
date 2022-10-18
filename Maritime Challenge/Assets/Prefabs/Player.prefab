@@ -1439,7 +1439,7 @@ Transform:
   m_GameObject: {fileID: 8779834002269100689}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.9, y: 0.9, z: 1}
   m_Children:
   - {fileID: 6001049790804034230}
   - {fileID: 1448870458124100187}
@@ -1586,6 +1586,14 @@ MonoBehaviour:
   movespd: 1
   BattleShipPrefab: {fileID: 2042507932746732076, guid: b8ed2059b8897514fa98360bc451be85, type: 3}
   BodyReferenceSprite: {fileID: 2281672732284213407}
+  PlayerSprites:
+  - {fileID: 4378395825095399806}
+  - {fileID: 2281672732284213407}
+  - {fileID: 1722077273126694961}
+  - {fileID: 6800025604057381098}
+  - {fileID: 3201312575687265649}
+  - {fileID: 4674462900905510182}
+  - {fileID: 5561724877521398438}
 --- !u!114 &9116503974399402979
 MonoBehaviour:
   m_ObjectHideFlags: 0
