@@ -187,6 +187,10 @@ public static class PlayerData // Local Player's Data
     {
         AchievementList[achvment] = true;
     }
+    public static void SetMissionClaimed(Mission mission)
+    {
+        MissionList[mission] = true;
+    }
     public static void SetTitleUnlocked(Title title)
     {
         TitleDictionary[title] = true;
