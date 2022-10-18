@@ -52,6 +52,10 @@ public class ProfileManager : MonoBehaviour
 
     public void EditName()
     {
+        // TBC - warning text
+        if (nameInputField.text == "")
+            return;
+
         StartCoroutine(StartEditName());
     }
 
