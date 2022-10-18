@@ -200,12 +200,28 @@ public class JSONDeseralizer : MonoBehaviour
 
         foreach (JSONAchievementData achievementData in achievementDataList.achievementData)
         {
-            Achievement title = new Achievement(achievementData.iAchievementID, achievementData.sAchievementName, achievementData.sAchievementDescription, achievementData.iEarnedTitleID);
+            Achievement achievement = new Achievement(achievementData.iAchievementID, achievementData.sAchievementName, achievementData.sAchievementDescription, achievementData.iEarnedTitleID);
 
-            achievementDataDictionary.Add(title, achievementData.bAchievementClaimed);
+            achievementDataDictionary.Add(achievement, achievementData.bAchievementClaimed);
         }
 
         return achievementDataDictionary;
+    }
+
+    public static Dictionary<Mission, bool> DeseralizeMissionData(string missionDataJSON)
+    {
+        JSONMissionDataList missionDataList = JsonUtility.FromJson<JSONMissionDataList>(missionDataJSON);
+
+        Dictionary<Mission, bool> missionDataDictionary = new Dictionary<Mission, bool>();
+
+        foreach (JSONMissionData missionData in missionDataList.missionData)
+        {
+            Mission mission = new Mission(missionData.iMissionID, missionData.sMissionName, missionData.sMissionDescription);
+
+            missionDataDictionary.Add(mission, missionData.bMissionClaimed);
+        }
+
+        return missionDataDictionary;
     }
 
     public static Dictionary<BattleshipInfo, bool> DeseralizeBattleshipData(string battleshipDataJSON)

@@ -49,6 +49,8 @@ public static class PlayerData // Local Player's Data
     public static List<Cosmetic> EquippedCosmeticsList = new List<Cosmetic>();
     // Stores all the achievements and whether they are claimed
     public static Dictionary<Achievement, bool> AchievementList = new Dictionary<Achievement, bool>();
+    // Stores all the missions and whether they are claimed
+    public static Dictionary<Mission, bool> MissionList = new Dictionary<Mission, bool>();
     // Stores all the battleships in the game, and whether you have unlocked them
     public static Dictionary<BattleshipInfo, bool> BattleshipList = new Dictionary<BattleshipInfo, bool>();
     // Stores all the mail that you have
