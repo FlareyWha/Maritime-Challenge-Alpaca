@@ -5023,9 +5023,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1239262383}
     m_Modifications:
+    - target: {fileID: 3191674572451163588, guid: a074d3fe931804244ad201237febaebb, type: 3}
+      propertyPath: m_Text
+      value: 0%
+      objectReference: {fileID: 0}
     - target: {fileID: 4737507811708982396, guid: a074d3fe931804244ad201237febaebb, type: 3}
       propertyPath: m_Text
-      value: Visit 4 Different Cities
+      value: 'Visit the Cafe Today '
+      objectReference: {fileID: 0}
+    - target: {fileID: 5089880075093043403, guid: a074d3fe931804244ad201237febaebb, type: 3}
+      propertyPath: m_FillAmount
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7432482289095101348, guid: a074d3fe931804244ad201237febaebb, type: 3}
       propertyPath: m_Pivot.x
@@ -7422,9 +7430,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1239262383}
     m_Modifications:
+    - target: {fileID: 3191674572451163588, guid: a074d3fe931804244ad201237febaebb, type: 3}
+      propertyPath: m_Text
+      value: 0%
+      objectReference: {fileID: 0}
     - target: {fileID: 4737507811708982396, guid: a074d3fe931804244ad201237febaebb, type: 3}
       propertyPath: m_Text
-      value: Send 1 Chat Message
+      value: Share with Someone your Favourite Food!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4737507811708982396, guid: a074d3fe931804244ad201237febaebb, type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5089880075093043403, guid: a074d3fe931804244ad201237febaebb, type: 3}
+      propertyPath: m_FillAmount
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7432482289095101348, guid: a074d3fe931804244ad201237febaebb, type: 3}
       propertyPath: m_Pivot.x
