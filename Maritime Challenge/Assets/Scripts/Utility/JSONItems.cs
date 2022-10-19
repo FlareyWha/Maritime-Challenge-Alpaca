@@ -23,6 +23,7 @@ public class JSONPlayerData
     public float fPlayerXPos;
     public float fPlayerYPos;
     public float fPlayerZPos;
+    public string dtLastLogin;
 }
 
 [Serializable]

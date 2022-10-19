@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class JSONDeseralizer : MonoBehaviour
@@ -26,6 +27,7 @@ public class JSONDeseralizer : MonoBehaviour
         PlayerData.NumEventCurrency = jsonPlayerData.iTotalEventCurrency;
         PlayerData.CurrentBattleship = jsonPlayerData.iCurrentBattleship;
         PlayerData.PlayerPosition = new Vector3(jsonPlayerData.fPlayerXPos, jsonPlayerData.fPlayerYPos, jsonPlayerData.fPlayerZPos);
+        PlayerData.LastLogin = Convert.ToDateTime(jsonPlayerData.dtLastLogin);
     }
 
     public static void DeseralizePlayerStats(string playerStatsJSON)

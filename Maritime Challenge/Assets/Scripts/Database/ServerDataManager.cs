@@ -29,6 +29,7 @@ public class ServerDataManager : MonoBehaviour
     public static string URL_getPlayerData = serverURL + "GetPlayerData.php";
     public static string URL_getPlayerStats = serverURL + "GetPlayerStats.php";
     public static string URL_updatePlayerStats = serverURL + "UpdatePlayerStats.php";
+    public static string URL_updateLastLoginTime = serverURL + "UpdateLastLoginTime.php";
 
     //Game data
     public static string URL_updateAccountXPLevels = serverURL + "UpdateAccountXPLevels.php";
