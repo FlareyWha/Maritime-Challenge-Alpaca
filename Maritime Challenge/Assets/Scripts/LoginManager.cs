@@ -65,7 +65,7 @@ public class LoginManager : MonoBehaviour
                 Debug.Log(PlayerData.UID);
 
                 //Get player data
-                StartCoroutine(postLoginInfoGetter.GetInfo());
+                StartCoroutine(UpdateLastLoginTime());
                 break;
             case UnityWebRequest.Result.ProtocolError:
                 confirmationText.text = webreq.downloadHandler.text;
@@ -74,6 +74,34 @@ public class LoginManager : MonoBehaviour
             default:
                 Debug.Log(webreq.downloadHandler.text);
                 confirmationText.text = "Server error";
+                LoadingScreen.gameObject.SetActive(false);
+                break;
+        }
+    }
+
+    IEnumerator UpdateLastLoginTime()
+    {
+        //Set the URL to the getUID one
+        url = ServerDataManager.URL_updateLastLoginTime;
+        Debug.Log(url);
+
+        WWWForm form = new WWWForm();
+        form.AddField("UID", PlayerData.UID);
+        using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
+        yield return webreq.SendWebRequest();
+        switch (webreq.result)
+        {
+            case UnityWebRequest.Result.Success:
+                Debug.Log(webreq.downloadHandler.text);
+                //Get player data
+                StartCoroutine(postLoginInfoGetter.GetInfo());
+                break;
+            case UnityWebRequest.Result.ProtocolError:
+                Debug.LogError(webreq.downloadHandler.text);
+                LoadingScreen.gameObject.SetActive(false);
+                break;
+            default:
+                Debug.LogError(webreq.downloadHandler.text);
                 LoadingScreen.gameObject.SetActive(false);
                 break;
         }

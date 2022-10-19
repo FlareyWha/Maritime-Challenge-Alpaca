@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public static class PlayerData // Local Player's Data
@@ -20,6 +21,7 @@ public static class PlayerData // Local Player's Data
     public static int NumEventCurrency = 0;
     public static int CurrentBattleship = 1;
     public static Vector3 PlayerPosition;
+    public static DateTime LastLogin;
 
     public static PlayerStats PlayerStats = new PlayerStats();
 
