@@ -6,15 +6,17 @@ public class Mission
 {
     public int MissionID;
     public string MissionName;
-    public string MissionDescription;
+    public int MissionType;
+    public int MissionRequirementMaxNumber;
 
     public MissionSO MissionData;
 
-    public Mission(int missionID, string missionName, string missionDescription)
+    public Mission(int missionID, string missionName, int missionType, int missionRequirementMaxNumber)
     {
         MissionID = missionID;
         MissionName = missionName;
-        MissionDescription = missionDescription;
+        MissionType = missionType;
+        MissionRequirementMaxNumber = missionRequirementMaxNumber;
     }
 }
 
