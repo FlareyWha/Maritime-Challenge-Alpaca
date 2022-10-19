@@ -34,6 +34,8 @@ public class Battleship : NetworkBehaviour
 
     private Vector2 velocity = Vector2.zero;
     private float theta = 0.0f;
+    private float target_theta = 0.0f;
+    private float delta_theta = 0.0f;
     private Vector2 direction = Vector2.zero;
     private float angular_velocity = 0.0f;
     private float angular_accel_rate = 50.0f;
@@ -41,7 +43,7 @@ public class Battleship : NetworkBehaviour
     private float accel_rate = 20.0f;
     private float deccel_rate = 10.0f;
     private const float MAX_VEL = 10.0f;
-    private const float MAX_ANGULAR_VEL = 12.0f;
+    private const float MAX_ANGULAR_VEL = 40.0f;
 
     private const float TARGET_RANGE = 30.0f;
 
@@ -105,9 +107,11 @@ public class Battleship : NetworkBehaviour
         {
             // Update Angular Vel
             Vector2 joystickDir = UIManager.Instance.Joystick.GetDirection();
-            float deltaTheta = Vector2.SignedAngle(velocity, joystickDir);
-            angular_velocity += deltaTheta * angular_accel_rate * Time.deltaTime;
+            target_theta = Vector2.SignedAngle(Vector2.up, joystickDir);
+            delta_theta = Vector2.SignedAngle(velocity, joystickDir);
 
+            angular_velocity += delta_theta * angular_accel_rate * Time.deltaTime;
+           
             // update direction var for later use/ref
             direction = Quaternion.Euler(0, 0, theta) * Vector2.up;
             // Update vel speed
@@ -119,25 +123,28 @@ public class Battleship : NetworkBehaviour
 
         // Update Theta
         theta += angular_velocity * Time.deltaTime;
-
+        // Check if Overshot Target Dir
+        if (theta > target_theta && delta_theta > 0 
+            || theta < target_theta && delta_theta < 0)
+            angular_velocity = 0;
 
         // Apply Decceleration if ship is moving
         if (velocity.magnitude != 0)
             velocity -= velocity.normalized * deccel_rate * Time.deltaTime;
         // Deccelerate Angular Velocity
-        if (angular_velocity != 0)
+        if (angular_velocity != 0.0f)
         {
-            if (angular_velocity > 0)
+            if (angular_velocity > 0.0f)
             {
                 angular_velocity -= angular_deccel_rate * Time.deltaTime;
-                if (angular_velocity < 0)
-                    angular_velocity = 0;
+                if (angular_velocity < 0.0f)
+                    angular_velocity = 0.0f;
             }
             else
             {
                 angular_velocity += angular_deccel_rate * Time.deltaTime;
-                if (angular_velocity > 0)
-                    angular_velocity = 0;
+                if (angular_velocity > 0.0f)
+                    angular_velocity = 0.0f;
             }
         }
 
