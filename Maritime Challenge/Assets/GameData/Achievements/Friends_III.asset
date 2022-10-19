@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 5
   Name: Everyone Knows Me
-  Type: 0
+  Type: 2
   Tier: 3
   RequirementNum: 50
   BackgroundSprite: {fileID: 21300000, guid: 08d35c0fd177b504a9c3813611330cb5, type: 3}

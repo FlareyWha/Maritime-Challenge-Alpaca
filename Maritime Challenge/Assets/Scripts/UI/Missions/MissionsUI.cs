@@ -1,4 +1,4 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,16 +13,47 @@ public class MissionsUI : MonoBehaviour
     private Image MissionProgressFill;
     [SerializeField]
     private Text MissionProgressText;
+    [SerializeField]
+    private GameObject ClaimedOverlay;
 
-    private int missionID = 0;
+    public int SortOrderRef = 0;
 
-    public void Init()
+    private Mission mission = null;
+    public Mission Mission { get { return mission; } }
+
+    private event Action<MissionsUI> onButtonClickedAction;
+
+    public void Init(Mission mission, int currProg, int reqProg, Action<MissionsUI> action)
     {
-        
+        this.mission = mission;
+
+        MissionTitle.text = mission.MissionName;
+        MissionProgressFill.fillAmount = (float)currProg / reqProg;
+        MissionProgressText.text = (((float)currProg / reqProg) * 100) + "%";
+
+        ClaimButton.gameObject.SetActive(false);
+
+
+        if (currProg >= reqProg)
+        {
+            MissionProgressText.gameObject.SetActive(false);
+            ClaimButton.gameObject.SetActive(true);
+            ClaimButton.onClick.AddListener(OnClaimButtonClicked);
+        }
+        onButtonClickedAction = action;
     }
 
-    public int GetMissionID()
+    public void SetCompleted()
     {
-        return missionID;
+        ClaimedOverlay.gameObject.SetActive(true);
+        ClaimButton.gameObject.SetActive(false);
+        MissionProgressText.text = "CLAIMED";
     }
+ 
+
+    private void OnClaimButtonClicked()
+    {
+        onButtonClickedAction?.Invoke(this);
+    }
+
 }

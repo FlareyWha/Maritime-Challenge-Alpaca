@@ -309,7 +309,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 206a49e6b2aff404297d9212ac1f5c54, type: 3}
     m_FontSize: 32
     m_FontStyle: 1
     m_BestFit: 0
@@ -617,7 +617,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 206a49e6b2aff404297d9212ac1f5c54, type: 3}
     m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 0
@@ -921,6 +921,7 @@ MonoBehaviour:
   ProgressFill: {fileID: 3490075262092004713}
   ProgressText: {fileID: 3490075262606116639}
   CompletedOverlay: {fileID: 81185555117410124}
+  SortOrderRef: 0
 --- !u!1 &4258171109810535983
 GameObject:
   m_ObjectHideFlags: 0

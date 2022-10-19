@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class MissionManager : MonoBehaviour
+public class MissionManager : MonoBehaviourSingleton<MissionManager>
 {
     [SerializeField]
     private List<MissionSO> MissionDataList;
 
-    void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         // Link Mission Scriptable Object to Mission Class from database
         foreach (KeyValuePair<Mission, bool> mission in PlayerData.MissionList)
         {
@@ -26,22 +27,8 @@ public class MissionManager : MonoBehaviour
         Debug.LogWarning("Could not find Mission of ID " + id + "!");
         return null;
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        PlayerData.OnPlayerStatsUpdated += CheckMissionUnlocked;
-    }
+   
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void CheckMissionUnlocked()
-    {
-        //Idk tbh
-    }
 
     public void ClaimMission(Mission mission)
     {

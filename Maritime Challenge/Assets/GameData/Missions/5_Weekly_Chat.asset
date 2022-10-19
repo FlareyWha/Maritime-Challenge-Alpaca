@@ -9,13 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c8dd05e4bbf47d4e8128d8f72cfdb64, type: 3}
-  m_Name: Friends_I
+  m_Script: {fileID: 11500000, guid: df827b16d3741f943be4cef7cbc7ed73, type: 3}
+  m_Name: 5_Weekly_Chat
   m_EditorClassIdentifier: 
-  ID: 1
-  Name: Social Butterfly
-  Type: 2
-  Tier: 1
+  ID: 5
+  Name: Send 10 Chat Messages
+  Type: 1
   RequirementNum: 10
-  BackgroundSprite: {fileID: 21300000, guid: 08d35c0fd177b504a9c3813611330cb5, type: 3}
-  Title: {fileID: 11400000, guid: ec2163a233012cc4590c722375bfcd5c, type: 2}

@@ -66,7 +66,11 @@ public static class PlayerData // Local Player's Data
     public delegate void NumTokensUpdated();
     public static event NumTokensUpdated OnNumTokensUpdated;
 
+    public static int GetCurrentProgressNum(PLAYER_STAT type)
+    {
+        return PlayerStats.PlayerStat[(int)type];
 
+    }
     public static string GetCountryName(int id)
     {
         switch (id)

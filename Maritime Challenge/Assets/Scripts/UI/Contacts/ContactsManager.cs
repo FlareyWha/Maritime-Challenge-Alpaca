@@ -16,10 +16,13 @@ public class ContactsManager : MonoBehaviour
     private Text DisplayName;
     [SerializeField]
     private AvatarDisplay DisplayAvatar;
+
     [SerializeField]
     private GameObject FriendshipUI;
     [SerializeField]
-    private Text FriendshipText;
+    private Text FriendshipLevelText;
+    [SerializeField]
+    private Image FriendshipXPFill;
 
     [SerializeField]
     private Text GiftRemainingNumText;
@@ -94,7 +97,7 @@ public class ContactsManager : MonoBehaviour
 
 
     public void OnGiftButtonClicked()
-    {
+    { 
 
     }
 
@@ -128,7 +131,8 @@ public class ContactsManager : MonoBehaviour
     private void UpdateContactDisplayUI(FriendInfo friend) // For Friends
     {
         FriendshipUI.SetActive(true);
-        FriendshipText.text = friend.FriendshipLevel.ToString();
+        FriendshipLevelText.text = friend.FriendshipLevel.ToString();
+        FriendshipXPFill.fillAmount = (float)friend.FriendshipXP / GameSettings.GetFriendshipXPRequirement(friend.FriendshipLevel);
         DisplayAvatar.SetPlayer(friend.UID);
         DisplayNamecard.SetDetails(friend);
         DisplayName.text = friend.Name;

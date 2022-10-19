@@ -20,13 +20,3 @@ public class Achievement
         EarnedTitleID = titleID;
     }
 }
-
-
-public enum ACHIEVEMENT_TYPE
-{
-    FRIENDS,
-    RIGHTSHIPEDIA,
-    BATTLESHIPS_OWNED,
-
-    NUM_ACHIEVEMENT_TYPE
-}

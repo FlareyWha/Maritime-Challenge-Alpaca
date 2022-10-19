@@ -9,21 +9,19 @@ public class AchievementsManager : MonoBehaviour
     [SerializeField]
     private List<AchievementSO> AchievementDataList;
 
-
     [SerializeField]
     private Transform AchievementsRect;
     [SerializeField]
     private GameObject AchievementsUIPrefab;
 
-    private AchievementStatus[] achievements = new AchievementStatus[(int)ACHIEVEMENT_TYPE.NUM_ACHIEVEMENT_TYPE];
+    private Dictionary<PLAYER_STAT, AchievementStatus> achievements = new Dictionary<PLAYER_STAT, AchievementStatus>();
 
     void Awake()
     {
         // Init AchievementStatus Array
-        for (int i = 0; i < achievements.Length; i++)
-        {
-            achievements[i] = new AchievementStatus();
-        }
+        achievements.Add(PLAYER_STAT.FRIENDS_ADDED, new AchievementStatus());
+        achievements.Add(PLAYER_STAT.RIGHTSHIPEDIA_ENTRIES_UNLOCKED, new AchievementStatus());
+        achievements.Add(PLAYER_STAT.BATTLESHIPS_OWNED, new AchievementStatus());
 
         // Link Achievement Scriptable Object to Achievement Class from database
         foreach (KeyValuePair<Achievement, bool> achvment in PlayerData.AchievementList)
@@ -54,9 +52,9 @@ public class AchievementsManager : MonoBehaviour
         foreach (KeyValuePair<Achievement, bool> achievement in PlayerData.AchievementList)
         {
             AchievementSO data = achievement.Key.AchievementData;
-            achievements[(int)data.Type].achievementsList[data.Tier - 1] = achievement.Key;
+            achievements[(PLAYER_STAT)(int)data.Type].achievementsList[data.Tier - 1] = achievement.Key;
             if (achievement.Value)
-                achievements[(int)data.Type].CheckCurrentTierByUnlocked(data.Tier);
+                achievements[(PLAYER_STAT)(int)data.Type].CheckCurrentTierByUnlocked(data.Tier);
         }
     }
     private void UpdateAchievementsRect()
@@ -72,13 +70,13 @@ public class AchievementsManager : MonoBehaviour
 
         // Init Rect
         List<AchievementsUI> achievementsList = new List<AchievementsUI>();
-        foreach (AchievementStatus achievementStat in achievements)
+        foreach (KeyValuePair<PLAYER_STAT, AchievementStatus> achievementStat in achievements)
         {
-            Achievement achievement = achievementStat.GetCurrentAchievement();
+            Achievement achievement = achievementStat.Value.GetCurrentAchievement();
             AchievementsUI ui = Instantiate(AchievementsUIPrefab).GetComponent<AchievementsUI>();
-            int currProgress = GetCurrentProgressNum(achievement.AchievementData.Type);
+            int currProgress = PlayerData.GetCurrentProgressNum(achievement.AchievementData.Type);
             int reqProgress = achievement.AchievementData.RequirementNum;
-            if (achievementStat.OnFinalTier() && currProgress >= reqProgress)
+            if (achievementStat.Value.OnFinalTier() && currProgress >= reqProgress)
             {
                 ui.SetCompleted(achievement);
                 ui.SortOrderRef = 1;
@@ -98,21 +96,7 @@ public class AchievementsManager : MonoBehaviour
         }
     }
 
-    private int GetCurrentProgressNum(ACHIEVEMENT_TYPE type)
-    {
-        switch (type)
-        {
-            case ACHIEVEMENT_TYPE.FRIENDS:
-                return PlayerData.PlayerStats.PlayerStat[(int)PLAYER_STAT.FRIENDS_ADDED];
-            case ACHIEVEMENT_TYPE.RIGHTSHIPEDIA:
-                return PlayerData.PlayerStats.PlayerStat[(int)PLAYER_STAT.RIGHTSHIPEDIA_ENTRIES_UNLOCKED];
-            case ACHIEVEMENT_TYPE.BATTLESHIPS_OWNED:
-                return PlayerData.PlayerStats.PlayerStat[(int)PLAYER_STAT.BATTLESHIPS_OWNED];
-            default:
-                return 0;
-        }
-    }
-
+    
     public void CheckAchievementUnlocked() // Call Whenever PlayerStats is Updated
     {
         //SetAchievementsStatus();

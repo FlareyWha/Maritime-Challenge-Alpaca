@@ -6,7 +6,7 @@ public class AchievementSO : ScriptableObject
     public int ID;
     public string Name;
 
-    public ACHIEVEMENT_TYPE Type;
+    public PLAYER_STAT Type;
     public int Tier;
     public int RequirementNum;
 
