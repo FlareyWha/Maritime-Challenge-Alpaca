@@ -21,6 +21,14 @@ public class ContactsManager : MonoBehaviour
     [SerializeField]
     private Text FriendshipText;
 
+    [SerializeField]
+    private Text GiftRemainingNumText;
+    [SerializeField]
+    private Image GiftButtonIcon;
+    [SerializeField]
+    private GameObject GiftRemainingNumPopUp;
+    private Color32 giftDisabledColor = new Color32(160, 160, 160, 200);
+
     private ContactsUI currSelected = null;
 
     private void Start()
@@ -82,6 +90,12 @@ public class ContactsManager : MonoBehaviour
         currSelected = contact;
        
         UpdateDisplay();
+    }
+
+
+    public void OnGiftButtonClicked()
+    {
+
     }
 
     private void UpdateDisplay()

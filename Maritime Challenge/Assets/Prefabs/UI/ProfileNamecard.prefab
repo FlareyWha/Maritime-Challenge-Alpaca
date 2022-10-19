@@ -1293,7 +1293,6 @@ MonoBehaviour:
   AcceptFriendRequestButton: {fileID: 8106068228912210829}
   AddFriendButton: {fileID: 4749506206140517134}
   RemoveFriendButton: {fileID: 8929804119663971861}
-  UnknownAvatar: {fileID: 6998111027003210864}
   DisplayAvatar: {fileID: 3190573084988202086}
 --- !u!1 &5226220916844789172
 GameObject:
@@ -2427,6 +2426,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02d0ef473acd6a744b07e7083c2d8d05, type: 3}
+--- !u!224 &2737870561330494632 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2475564450980967614, guid: 02d0ef473acd6a744b07e7083c2d8d05, type: 3}
+  m_PrefabInstance: {fileID: 550606859750623254}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &3190573084988202086 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3162397015287043184, guid: 02d0ef473acd6a744b07e7083c2d8d05, type: 3}
@@ -2436,21 +2440,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ce62b5139ffa9947a8076943821ed60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!224 &2737870561330494632 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 2475564450980967614, guid: 02d0ef473acd6a744b07e7083c2d8d05, type: 3}
-  m_PrefabInstance: {fileID: 550606859750623254}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &6998111027003210864 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7402350859999343718, guid: 02d0ef473acd6a744b07e7083c2d8d05, type: 3}
-  m_PrefabInstance: {fileID: 550606859750623254}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
