@@ -45,6 +45,12 @@ public class JSONDeseralizer : MonoBehaviour
         PlayerData.PlayerStats.PlayerStat[(int)PLAYER_STAT.COSMETICS_OWNED] = jsonPlayerStats.iCosmeticsOwned;
         PlayerData.PlayerStats.PlayerStat[(int)PLAYER_STAT.TITLES_UNLOCKED] = jsonPlayerStats.iTitlesUnlocked;
         PlayerData.PlayerStats.PlayerStat[(int)PLAYER_STAT.ACHIEVEMENTS_COMPLETED] = jsonPlayerStats.iAchievementsCompleted;
+        PlayerData.PlayerStats.PlayerStat[(int)PLAYER_STAT.LOGIN] = jsonPlayerStats.iLogin;
+        PlayerData.PlayerStats.PlayerStat[(int)PLAYER_STAT.CHAT_MESSAGES_SENT_DAILY] = jsonPlayerStats.iChatMessagesSentDaily;
+        PlayerData.PlayerStats.PlayerStat[(int)PLAYER_STAT.CHAT_MESSAGES_SENT_WEEKLY] = jsonPlayerStats.iChatMessagesSentWeekly;
+        PlayerData.PlayerStats.PlayerStat[(int)PLAYER_STAT.GIFTS_SENT_DAILY] = jsonPlayerStats.iGiftsSentDaily;
+        PlayerData.PlayerStats.PlayerStat[(int)PLAYER_STAT.GIFTS_SENT_WEEKLY] = jsonPlayerStats.iGiftsSentWeekly;
+        PlayerData.PlayerStats.PlayerStat[(int)PLAYER_STAT.PROFILES_VIEWED] = jsonPlayerStats.iProfilesViewed;
     }
 
     public static void DeseralizeFriends(string friendsJSON)

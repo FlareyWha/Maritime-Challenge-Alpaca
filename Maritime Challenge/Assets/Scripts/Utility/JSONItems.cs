@@ -43,6 +43,12 @@ public class JSONPlayerStats
     public int iCosmeticsOwned;
     public int iTitlesUnlocked;
     public int iAchievementsCompleted;
+    public int iLogin;
+    public int iChatMessagesSentDaily;
+    public int iChatMessagesSentWeekly;
+    public int iGiftsSentDaily;
+    public int iGiftsSentWeekly;
+    public int iProfilesViewed;
 }
 
 [Serializable]
