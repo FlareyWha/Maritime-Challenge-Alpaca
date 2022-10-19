@@ -9,7 +9,7 @@ public class ChatMessageUI : MonoBehaviour
     [SerializeField]
     private Text MessageText;
 
-    private Color32 myMessageColor = new Color32(0, 150, 200, 255);
+    private Color32 myMessageColor = new Color32(0, 10, 50, 255);
 
     public void Init(CHAT_TYPE type, int sender_id, string who, string message)
     {
