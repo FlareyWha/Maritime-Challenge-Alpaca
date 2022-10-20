@@ -11,7 +11,7 @@ public class MissionsUIManager : MonoBehaviour
     private Transform DailyMissionsRect, WeeklyMissionsRect, SeasonalMissionsRect;
 
 
-    private void Awake()
+    private void Start()
     {
         UpdateMissionsRect();
         PlayerData.OnPlayerStatsUpdated += OnPlayerStatsUpdated;

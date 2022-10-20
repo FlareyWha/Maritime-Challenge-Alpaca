@@ -40,6 +40,7 @@ public class ContactsManager : MonoBehaviour
         FriendsManager.OnNewFriendDataSaved += OnFriendDataSaved;
         FriendRequestHandler.OnFriendRequestSent += OnFriendRequestsUpdated;
         FriendRequestHandler.OnFriendRequestDeleted += OnFriendRequestsUpdated;
+        UpdateContactsListRect();
     }
 
     public void UpdateContactsListRect()
@@ -97,8 +98,8 @@ public class ContactsManager : MonoBehaviour
 
 
     public void OnGiftButtonClicked()
-    { 
-
+    {
+        MailboxManager.Instance.SendFriendshipGiftMail(currSelected.GetContactInfo().UID, 20);
     }
 
     private void UpdateDisplay()

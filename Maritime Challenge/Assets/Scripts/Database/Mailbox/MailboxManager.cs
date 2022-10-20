@@ -5,17 +5,7 @@ using UnityEngine.Networking;
 
 public class MailboxManager : MonoBehaviourSingleton<MailboxManager>
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
 
     public void RefreshMail()
     {

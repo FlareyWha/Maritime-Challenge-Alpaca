@@ -182,11 +182,18 @@ public static class PlayerData // Local Player's Data
         NumEventCurrency = 0;
         PlayerPosition = Vector3.zero;
 
-        FriendList.Clear();
         PhonebookData.Clear();
+        FriendList.Clear();
         FriendDataList.Clear();
         SentFriendRequestList.Clear();
         ReceivedFriendRequestList.Clear();
+        AchievementList.Clear();
+        MissionList.Clear();
+        CosmeticsList.Clear();
+        OthersEquippedCosmeticList.Clear();
+        TitleDictionary.Clear();
+        BattleshipList.Clear();
+        MailList.Clear();
     }
 
     public static void SetAchievementClaimed(Achievement achvment)
