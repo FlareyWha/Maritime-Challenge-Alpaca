@@ -5,7 +5,7 @@ using UnityEngine.Networking;
 using UnityEngine.UI;
 using Mirror;
 
-public class PlayerUI : NetworkBehaviour
+public class PlayerUI : MonoBehaviour
 {
  
     [SerializeField]
@@ -80,7 +80,7 @@ public class PlayerUI : NetworkBehaviour
     // OTHER CLIENTS INTERACT WITH LOCAL PLAYER FOR VIEW MENU
     public void OpenInteractPanel()
     {
-        if (!isLocalPlayer && !isInteractOpen)
+        if (!isInteractOpen)
         {
             isInteractOpen = true;
             ShowInteractPanel();

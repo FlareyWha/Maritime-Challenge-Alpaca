@@ -150,7 +150,8 @@ public class Player : BaseEntity
     private void OnPlayerClicked()
     {
         Debug.Log("Player Entity Click Called");
-        playerUI.OpenInteractPanel();
+        if (!isLocalPlayer)
+            playerUI.OpenInteractPanel();
     }
 
  
