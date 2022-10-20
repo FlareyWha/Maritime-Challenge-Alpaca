@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public static class GameSettings
@@ -16,6 +17,14 @@ public static class GameSettings
     public static int GetFriendshipXPRequirement(int level)
     {
         return (level * level) + level * 50 + 100;
+    }
+
+    public static int CompareDateTime(DateTime t1, DateTime t2)
+    {
+        //Less than zero : If t1 is earlier than t2.
+        //Zero: If t1 is the same as t2.
+        //Greater than zero : If t1 is later than t2.
+        return DateTime.Compare(t1, t2);
     }
 }
 

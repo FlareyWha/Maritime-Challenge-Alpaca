@@ -7,24 +7,26 @@ using UnityEngine.Networking;
 public class PlayerStats
 {
     public int[] PlayerStat = new int[(int)PLAYER_STAT.NO_PLAYER_STAT];
-    public readonly string[] statNames = { "iEnemiesDefeated", "iBossesDefeated", "iFriendsAdded", "iRightshipediaEntriesUnlocked", "iBattleshipsOwned", "iCosmeticsOwned", "iTitlesUnlocked", "iAchievementsCompleted" };
+    public readonly string[] statNames = { "iEnemiesDefeated", "iBossesDefeated", "iFriendsAdded", "iRightshipediaEntriesUnlocked", "iBattleshipsOwned", "iCosmeticsOwned", "iTitlesUnlocked", "iAchievementsCompleted", "iLogin", "iChatMessagesSentDaily", "iChatMessagesSentWeekly", "iGiftsSentDaily", "iGiftsSentWeekly", "iProfilesViewed" };
 
-  
+
 }
 
 public enum PLAYER_STAT
 {
-    ENEMIES_DEFEATED = 0,
-    BOSSES_DEFEATED = 1,
-    FRIENDS_ADDED = 2,
-    RIGHTSHIPEDIA_ENTRIES_UNLOCKED = 3,
-    BATTLESHIPS_OWNED = 4,
-    COSMETICS_OWNED = 5,
-    TITLES_UNLOCKED = 6,
-    ACHIEVEMENTS_COMPLETED = 7,
-
+    ENEMIES_DEFEATED,
+    BOSSES_DEFEATED,
+    FRIENDS_ADDED,
+    RIGHTSHIPEDIA_ENTRIES_UNLOCKED,
+    BATTLESHIPS_OWNED,
+    COSMETICS_OWNED,
+    TITLES_UNLOCKED,
+    ACHIEVEMENTS_COMPLETED,
+    LOGIN,
+    CHAT_MESSAGES_SENT_DAILY,
+    CHAT_MESSAGES_SENT_WEEKLY,
+    GIFTS_SENT_DAILY,
+    GIFTS_SENT_WEEKLY,
+    PROFILES_VIEWED,
     NO_PLAYER_STAT
 }
-
-
-
