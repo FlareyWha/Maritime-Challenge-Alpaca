@@ -29,6 +29,8 @@ public class ContactsManager : MonoBehaviour
     [SerializeField]
     private Image GiftButtonIcon;
     [SerializeField]
+    private Button GiftButton;
+    [SerializeField]
     private GameObject GiftRemainingNumPopUp;
     private Color32 giftDisabledColor = new Color32(160, 160, 160, 200);
 
@@ -40,7 +42,9 @@ public class ContactsManager : MonoBehaviour
         FriendsManager.OnNewFriendDataSaved += OnFriendDataSaved;
         FriendRequestHandler.OnFriendRequestSent += OnFriendRequestsUpdated;
         FriendRequestHandler.OnFriendRequestDeleted += OnFriendRequestsUpdated;
+        UpdateDisplay();
         UpdateContactsListRect();
+        UpdateGiftUI();
     }
 
     public void UpdateContactsListRect()
@@ -100,6 +104,21 @@ public class ContactsManager : MonoBehaviour
     public void OnGiftButtonClicked()
     {
         MailboxManager.Instance.SendFriendshipGiftMail(currSelected.GetContactInfo().UID, 20);
+        PlayerData.PlayerStats.PlayerStat[(int)PLAYER_STAT.GIFTS_SENT_DAILY]++;
+        PlayerData.PlayerStats.PlayerStat[(int)PLAYER_STAT.GIFTS_SENT_WEEKLY]++;
+        UpdateGiftUI();
+    }
+
+    private void UpdateGiftUI()
+    {
+        int remainingNum = GameSettings.NumGiftsDaily - PlayerData.PlayerStats.PlayerStat[(int)PLAYER_STAT.GIFTS_SENT_DAILY];
+        GiftRemainingNumText.text = remainingNum.ToString();
+        if (remainingNum == 0)
+        {
+            GiftButtonIcon.color = giftDisabledColor;
+            GiftRemainingNumPopUp.gameObject.SetActive(false);
+            GiftButton.interactable = false;
+        }
     }
 
     private void UpdateDisplay()
