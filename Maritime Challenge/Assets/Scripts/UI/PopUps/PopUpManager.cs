@@ -5,11 +5,12 @@ using UnityEngine.UI;
 
 public class PopUpManager : MonoBehaviourSingleton<PopUpManager>
 {
-
     [SerializeField]
-    private GameObject HPPopUpPrefab;
+    private Canvas MainUICanvas;
+    [SerializeField]
+    private GameObject HPPopUpPrefab, CurrencyPopUpPrefab;
 
-
+    
     private List<PopUp> popUpList = new List<PopUp>();
 
     public void AddHPChangeText(int amt, bool isNegative, Transform entityTransform)
@@ -24,6 +25,14 @@ public class PopUpManager : MonoBehaviourSingleton<PopUpManager>
         hpPopUp.Init(amt, isNegative, entityTransform.gameObject == PlayerData.MyPlayer.gameObject 
             || entityTransform.gameObject == PlayerData.MyPlayer.GetBattleShip().gameObject);
         popUpList.Add(hpPopUp);
+    }
+
+    public void AddCurrencyPopUp(int delta_amt, Vector2 screenPos)
+    {
+        GameObject popup_go = Instantiate(CurrencyPopUpPrefab, MainUICanvas.transform);
+        popup_go.transform.localPosition = screenPos;
+        CurrencyPopUp popup = popup_go.GetComponent<CurrencyPopUp>();
+        popup.Init(delta_amt);
     }
 
     private void Update()

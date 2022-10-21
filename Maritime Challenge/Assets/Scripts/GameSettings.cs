@@ -9,6 +9,8 @@ public static class GameSettings
 
 
     public static int NumGiftsDaily = 5;
+    public static int MinNumGiftTokens = 5;
+    public static int MaxNumGiftTokens = 30;
     public static int GetEXPRequirement(int level)
     {
         return (level * level * 2) + level * 50 + 300;
