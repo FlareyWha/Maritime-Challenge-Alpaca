@@ -36,7 +36,7 @@ public class MailboxManager : MonoBehaviourSingleton<MailboxManager>
 
     public void SendFriendshipGiftMail(int recipientUID, int tokenAmount)
     {
-        string mailTitle = "You have received a gift from " + PlayerData.Name + "!";
+        string mailTitle = "You received a gift from " + PlayerData.Name + "!";
         string mailDescription = "DELETE";
 
         StartCoroutine(DoSendMail(recipientUID, mailTitle, mailDescription, tokenAmount));

@@ -82,13 +82,14 @@ public class ContactsManager : MonoBehaviour
             }
             contactsList.Add(contact);
         }
-        // TBC - Sort List By Known/Unknown
+        // Sort List By Known/Unknown
         contactsList.Sort((a, b) => { return b.SortOrderRef.CompareTo(a.SortOrderRef); });
         foreach (ContactsUI ui in contactsList)
         {
             ui.gameObject.transform.SetParent(ContactsListRect);
+            ui.gameObject.transform.localScale = Vector3.one;
         }
-     
+
     }
 
     public void SetSelectedContact(ContactsUI contact)
