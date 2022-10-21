@@ -1,7 +1,70 @@
 fileFormatVersion: 2
-guid: 76d16c8d33f722d4eae0d10d3fd659a7
+guid: f66e27578928ceb46a348f7e4c8b55d0
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 1158870537368671042
+    second: Loading_Water_Spritesheet_0
+  - first:
+      213: -5395815761047571301
+    second: Loading_Water_Spritesheet_1
+  - first:
+      213: -3503482425312736724
+    second: Loading_Water_Spritesheet_2
+  - first:
+      213: -6875570618408497209
+    second: Loading_Water_Spritesheet_3
+  - first:
+      213: 2948713934708033154
+    second: Loading_Water_Spritesheet_4
+  - first:
+      213: -5192959704323640327
+    second: Loading_Water_Spritesheet_5
+  - first:
+      213: -2455727018891808677
+    second: Loading_Water_Spritesheet_6
+  - first:
+      213: 5009676584508563706
+    second: Loading_Water_Spritesheet_7
+  - first:
+      213: 1914743873976264926
+    second: Loading_Water_Spritesheet_8
+  - first:
+      213: 9037771998443846898
+    second: Loading_Water_Spritesheet_9
+  - first:
+      213: 1402868232998513226
+    second: Loading_Water_Spritesheet_10
+  - first:
+      213: 8196394477937188297
+    second: Loading_Water_Spritesheet_11
+  - first:
+      213: -5064740233419761400
+    second: Loading_Water_Spritesheet_12
+  - first:
+      213: 1896168181743279516
+    second: Loading_Water_Spritesheet_13
+  - first:
+      213: -2839003685497139847
+    second: Loading_Water_Spritesheet_14
+  - first:
+      213: -5454327122578695560
+    second: Loading_Water_Spritesheet_15
+  - first:
+      213: -6246164581275821596
+    second: Loading_Water_Spritesheet_16
+  - first:
+      213: 6835024168614226572
+    second: Loading_Water_Spritesheet_17
+  - first:
+      213: -773787320288396360
+    second: Loading_Water_Spritesheet_18
+  - first:
+      213: 32641277341853364
+    second: Loading_Water_Spritesheet_19
+  - first:
+      213: 5555341537022909473
+    second: Loading_Water_Spritesheet_20
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -32,7 +95,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -41,9 +104,9 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -65,10 +128,22 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -77,7 +152,448 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Loading_Water_Spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6692
+        width: 1200
+        height: 1500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24396802d92251010800000000000000
+      internalID: 1158870537368671042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loading_Water_Spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 6692
+        width: 1200
+        height: 1500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b943e4157263e15b0800000000000000
+      internalID: -5395815761047571301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loading_Water_Spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 6692
+        width: 1200
+        height: 1500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2a0962eb41216fc0800000000000000
+      internalID: -3503482425312736724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loading_Water_Spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 6692
+        width: 1200
+        height: 1500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cf06ad63f01590a0800000000000000
+      internalID: -6875570618408497209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loading_Water_Spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 6692
+        width: 1200
+        height: 1500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 286448e53bfebe820800000000000000
+      internalID: 2948713934708033154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loading_Water_Spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 6692
+        width: 1200
+        height: 1500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f33fd299a6eee7b0800000000000000
+      internalID: -5192959704323640327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loading_Water_Spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5192
+        width: 1200
+        height: 1500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b50ff9d89418bedd0800000000000000
+      internalID: -2455727018891808677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loading_Water_Spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 5192
+        width: 1200
+        height: 1500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af0a93baf42f58540800000000000000
+      internalID: 5009676584508563706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loading_Water_Spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 5192
+        width: 1200
+        height: 1500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed8e53c9869829a10800000000000000
+      internalID: 1914743873976264926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loading_Water_Spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 5192
+        width: 1200
+        height: 1500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fcb7389fbd9c6d70800000000000000
+      internalID: 9037771998443846898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loading_Water_Spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 5192
+        width: 1200
+        height: 1500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4a6e86a93df77310800000000000000
+      internalID: 1402868232998513226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loading_Water_Spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 5192
+        width: 1200
+        height: 1500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cd5b60f9517fb170800000000000000
+      internalID: 8196394477937188297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loading_Water_Spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3692
+        width: 1200
+        height: 1500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 809d263879d66b9b0800000000000000
+      internalID: -5064740233419761400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loading_Water_Spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 3692
+        width: 1200
+        height: 1500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9dd43b3aea805a10800000000000000
+      internalID: 1896168181743279516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loading_Water_Spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 3692
+        width: 1200
+        height: 1500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97d0be19035d998d0800000000000000
+      internalID: -2839003685497139847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loading_Water_Spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 3692
+        width: 1200
+        height: 1500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87a1be951665e44b0800000000000000
+      internalID: -5454327122578695560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loading_Water_Spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 3692
+        width: 1200
+        height: 1500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e99d6c286a2159a0800000000000000
+      internalID: -6246164581275821596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loading_Water_Spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 3692
+        width: 1200
+        height: 1500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8ae5719442eade50800000000000000
+      internalID: 6835024168614226572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loading_Water_Spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2192
+        width: 1200
+        height: 1500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bb328a2884f245f0800000000000000
+      internalID: -773787320288396360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loading_Water_Spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 2192
+        width: 1200
+        height: 1500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b6e9fc9117f37000800000000000000
+      internalID: 32641277341853364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loading_Water_Spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 2192
+        width: 1200
+        height: 1500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12c1938c1b9881d40800000000000000
+      internalID: 5555341537022909473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
