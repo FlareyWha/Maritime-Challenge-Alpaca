@@ -224,7 +224,7 @@ public class JSONDeseralizer : MonoBehaviour
 
         foreach (JSONMissionData missionData in missionDataList.missionData)
         {
-            Mission mission = new Mission(missionData.iMissionID, missionData.sMissionName, missionData.iMissionType, missionData.iMissionRequirementMaxNumber);
+            Mission mission = new Mission(missionData.iMissionID, missionData.sMissionName, missionData.iMissionType, missionData.iMissionMaxRequirementNumber);
 
             missionDataDictionary.Add(mission, missionData.bMissionClaimed);
         }

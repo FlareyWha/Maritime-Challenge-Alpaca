@@ -241,7 +241,7 @@ public class JSONMissionData
     public int iMissionID;
     public string sMissionName;
     public int iMissionType;
-    public int iMissionRequirementMaxNumber;
+    public int iMissionMaxRequirementNumber;
     public bool bMissionClaimed;
 }
 
