@@ -28,6 +28,7 @@ public class PostLoginInfoGetter : MonoBehaviour
         StartCoroutine(coroutineCollectionManager.CollectCoroutine(DoGetAchievements()));
         StartCoroutine(coroutineCollectionManager.CollectCoroutine(DoGetMissions()));
         StartCoroutine(coroutineCollectionManager.CollectCoroutine(DoGetBattleships()));
+        StartCoroutine(coroutineCollectionManager.CollectCoroutine(DoGetMail()));
 
         //Wait for all the coroutines to finish running before continuing
         yield return coroutineCollectionManager;
@@ -298,6 +299,32 @@ public class PostLoginInfoGetter : MonoBehaviour
                 break;
             default:
                 Debug.LogError("Server error");
+                break;
+        }
+    }
+
+  
+
+    IEnumerator DoGetMail()
+    {
+        string url = ServerDataManager.URL_getMailData;
+        Debug.Log(url);
+
+        WWWForm form = new WWWForm();
+        form.AddField("iOwnerUID", PlayerData.UID);
+        using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
+        yield return webreq.SendWebRequest();
+        switch (webreq.result)
+        {
+            case UnityWebRequest.Result.Success:
+                PlayerData.MailList.Clear();
+                PlayerData.MailList.AddRange(JSONDeseralizer.DeseralizeMailData(webreq.downloadHandler.text));
+                break;
+            case UnityWebRequest.Result.ProtocolError:
+                Debug.LogError(webreq.downloadHandler.text);
+                break;
+            default:
+                Debug.LogError("Server Error");
                 break;
         }
     }
