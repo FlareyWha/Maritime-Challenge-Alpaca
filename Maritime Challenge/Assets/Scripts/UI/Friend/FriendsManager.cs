@@ -25,6 +25,14 @@ public class FriendsManager : MonoBehaviourSingleton<FriendsManager>
         FriendRequestHandler.OnFriendRequestDeleted += OnFriendRequestsUpdated;
     }
 
+    protected override void OnDestroy()
+    {
+        base.OnDestroy();
+
+        FriendRequestHandler.OnFriendRequestSent -= OnFriendRequestsUpdated;
+        FriendRequestHandler.OnFriendRequestDeleted -= OnFriendRequestsUpdated;
+    }
+
     private void UpdateRequestsPanelUI()
     {
         // Clear Rects

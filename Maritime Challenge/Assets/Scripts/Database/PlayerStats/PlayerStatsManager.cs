@@ -21,9 +21,11 @@ public class PlayerStatsManager : MonoBehaviourSingleton<PlayerStatsManager>
         string url = ServerDataManager.URL_updatePlayerStats;
         Debug.Log(url);
 
+        Debug.Log("Stat Name: " + statName);
+
         WWWForm form = new WWWForm();
         form.AddField("iOwnerUID", PlayerData.UID);
-        form.AddField("iStatName", statName);
+        form.AddField("sStatName", statName);
         form.AddField("iStatAmount", statAmount);
         using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
         yield return webreq.SendWebRequest();

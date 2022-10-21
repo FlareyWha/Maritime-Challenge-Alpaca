@@ -46,7 +46,13 @@ public class ContactsManager : MonoBehaviour
         UpdateContactsListRect();
         UpdateGiftUI();
     }
-
+    private void OnDestroy()
+    {
+        FriendsManager.OnFriendListUpdated -= UpdateDisplay;
+        FriendsManager.OnNewFriendDataSaved -= OnFriendDataSaved;
+        FriendRequestHandler.OnFriendRequestSent -= OnFriendRequestsUpdated;
+        FriendRequestHandler.OnFriendRequestDeleted -= OnFriendRequestsUpdated;
+    }
     public void UpdateContactsListRect()
     {
         foreach (Transform child in ContactsListRect)
