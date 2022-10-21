@@ -60,7 +60,8 @@ public class MissionsUIManager : MonoBehaviour
                     ui.gameObject.transform.SetParent(SeasonalMissionsRect);
                     break;
             }
-           
+            ui.gameObject.transform.localScale = Vector3.one;
+
         }
 
     }

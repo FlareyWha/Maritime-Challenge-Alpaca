@@ -53,6 +53,7 @@ public class TitlesUIManager : MonoBehaviourSingleton<TitlesUIManager>
         foreach (TitleUI ui in titlesList)
         {
             ui.gameObject.transform.SetParent(TitlesRect);
+            ui.gameObject.transform.localScale = Vector3.one;
         }
     }
 

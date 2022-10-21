@@ -5,6 +5,12 @@ using UnityEngine.Networking;
 
 public class PlayerStatsManager : MonoBehaviourSingleton<PlayerStatsManager>
 {
+    protected override void Awake()
+    {
+        base.Awake();
+
+        UpdatePlayerStat(PLAYER_STAT.LOGIN, ++PlayerData.PlayerStats.PlayerStat[(int)PLAYER_STAT.LOGIN]);
+    }
     public void UpdatePlayerStat(PLAYER_STAT playerStat, int statAmount)
     {
         StartCoroutine(DoUpdatePlayerStat(PlayerData.PlayerStats.statNames[(int)playerStat], statAmount));

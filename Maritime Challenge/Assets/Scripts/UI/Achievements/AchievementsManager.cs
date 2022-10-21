@@ -93,6 +93,7 @@ public class AchievementsManager : MonoBehaviour
         foreach (AchievementsUI ui in achievementsList)
         {
             ui.gameObject.transform.SetParent(AchievementsRect);
+            ui.gameObject.transform.localScale = Vector3.one;
         }
     }
 
