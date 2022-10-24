@@ -25,6 +25,8 @@ public class BaseAbandonedCity : NetworkBehaviour
     protected int capturedGuildID = 0;
     [SerializeField]
     protected Text capturedGuildName;
+    [SerializeField]
+    protected GameObject buoy;
 
     protected Grid grid;
 
@@ -205,6 +207,7 @@ public class BaseAbandonedCity : NetworkBehaviour
     [ClientRpc]
     void UpdateGuildName(int guildID)
     {
+        buoy.SetActive(true);
         capturedGuildName.text = PlayerData.GetGuildName(guildID);
     }
 

@@ -164,7 +164,7 @@
   <Class Name="PostLoginInfoGetter">
     <Position X="7.75" Y="12.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAIAACAAAARIAAAACACAAAAABMAAAAABAAACAIA=</HashCode>
+      <HashCode>AAAAAAIAACAAAARIAAAACACAAAAABMAAAAABAQACAIA=</HashCode>
       <FileName>Assets\Scripts\Database\PostLoginInfoGetter.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -295,7 +295,7 @@
       </Delegate>
     </NestedTypes>
     <TypeIdentifier>
-      <HashCode>lABEAUDoCAgCRICgCBCCFASIFAoMgQwSDAAjgAAAEEA=</HashCode>
+      <HashCode>lABEAUDoCAgCRICgCBCCFASIFAoMgQwSDAAjgQAAEEA=</HashCode>
       <FileName>Assets\Scripts\Entities\Player\PlayerData.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -355,7 +355,7 @@
   <Class Name="PlayerStatsManager">
     <Position X="11.25" Y="3.75" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAggAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAggAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
       <FileName>Assets\Scripts\Database\PlayerStats\PlayerStatsManager.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -379,8 +379,8 @@
         <Point X="28.25" Y="11.842" />
         <Point X="28.625" Y="11.842" />
         <Point X="28.625" Y="24.688" />
-        <Point X="29.198" Y="24.688" Type="JumpStart" />
-        <Point X="29.365" Y="24.688" Type="JumpEnd" />
+        <Point X="29.417" Y="24.688" Type="JumpStart" />
+        <Point X="29.583" Y="24.688" Type="JumpEnd" />
         <Point X="33.667" Y="24.688" Type="JumpStart" />
         <Point X="33.833" Y="24.688" Type="JumpEnd" />
         <Point X="37.125" Y="24.688" />
@@ -428,7 +428,7 @@
       </Delegate>
     </NestedTypes>
     <TypeIdentifier>
-      <HashCode>ADEAAAAAAiAQCABAQAMAEACAAAAAYBAAEAIAAQAAIFA=</HashCode>
+      <HashCode>ADEBAAAAAiAQCABAQAMAEACAAAAAYBAAEAIAAQAAIFA=</HashCode>
       <FileName>Assets\Scripts\UI\Friend\FriendsManager.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -714,7 +714,7 @@
   <Class Name="AchievementsManager">
     <Position X="1.75" Y="16.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>EAAACAAIACAGAAAAAAAAAgABAAgAAAAACAAAATABAEA=</HashCode>
+      <HashCode>EAAACAAIACAGAAAAAAAAAgABAAgAAAAACAAAADABAEA=</HashCode>
       <FileName>Assets\Scripts\UI\Achievements\AchievementsManager.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
@@ -790,7 +790,7 @@
   <Class Name="ContactsManager">
     <Position X="30.25" Y="8.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ABAAEAAAACoAAAAAACAAkABAAAAAgAQAAIADCQIEAAA=</HashCode>
+      <HashCode>ABABEAAAACoAgAAAACAQkABAAAADgAAAAqAHCRIEAAQ=</HashCode>
       <FileName>Assets\Scripts\UI\Contacts\ContactsManager.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -873,7 +873,7 @@
   <Class Name="MissionsUI">
     <Position X="7.25" Y="26.25" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAIAAgAAAAAiAAAAAAAAABAAAAAAACAAAACAAAAAAA=</HashCode>
+      <HashCode>AEAKAAhACAAACCAAAAAAAABAAAAAAAAAAAACAAAAEAA=</HashCode>
       <FileName>Assets\Scripts\UI\Missions\MissionsUI.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -901,7 +901,7 @@
   <Class Name="PopUpManager">
     <Position X="19" Y="3.75" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAEAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <HashCode>AgQAAAAAEAAAAAAAAAQAAAAAAAAAAAAAAgAAAQAAAAI=</HashCode>
       <FileName>Assets\Scripts\UI\PopUps\PopUpManager.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
@@ -994,7 +994,7 @@
   <Class Name="GameSettings">
     <Position X="17.75" Y="24.25" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAgAAAAAAAAAAAAAAAQAAAIAAAAAAAAAAACAAAAAAA=</HashCode>
+      <HashCode>AAAgAAAAAAAAAAAAAIAQAAAIAAAAAAAAAAACAEAABAA=</HashCode>
       <FileName>Assets\Scripts\GameSettings.cs</FileName>
     </TypeIdentifier>
   </Class>
