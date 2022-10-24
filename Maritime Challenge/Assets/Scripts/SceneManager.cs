@@ -17,7 +17,7 @@ public class SceneManager : MonoBehaviourSingleton<SceneManager>
         base.Awake();
         SpawnPosList[(int)SPAWN_POS.CAFE_ENTRANCE].Set(0.0f, 4.0f);
         SpawnPosList[(int)SPAWN_POS.ARCADE_ENTRANCE].Set(7.0f, 2.0f);
-        SpawnPosList[(int)SPAWN_POS.SHOPPINGMALL_ENTRANCE].Set(0.0f, 4.0f);
+        SpawnPosList[(int)SPAWN_POS.SHOPPINGMALL_ENTRANCE].Set(-2.1f, -0.4f);
         SpawnPosList[(int)SPAWN_POS.WORLDHUB_CAFE_FRONT].Set(-2.9f, -8.0f);
         SpawnPosList[(int)SPAWN_POS.WORLDHUB_ARCADE_FRONT].Set(9.0f, 0.0f);
         SpawnPosList[(int)SPAWN_POS.WORLDHUB_SHOPPINGMALL_FRONT].Set(21.0f, -7.6f);
