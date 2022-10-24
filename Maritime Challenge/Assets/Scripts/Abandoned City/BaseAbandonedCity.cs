@@ -53,6 +53,7 @@ public class BaseAbandonedCity : NetworkBehaviour
         if (captured)
         {
             capturedGuildName.text = PlayerData.GetGuildName(capturedGuildID);
+            buoy.SetActive(true);
         }
     }
 

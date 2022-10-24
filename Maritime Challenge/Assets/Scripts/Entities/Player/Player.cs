@@ -65,6 +65,8 @@ public class Player : BaseEntity
 
         PlayerData.OnPlayerDataUpdated += CallSetDetails;
 
+        // Set Position
+        transform.position = PlayerData.PlayerPosition;
        
         //Init My BattleShip
         if (LinkedBattleshipGO == null)

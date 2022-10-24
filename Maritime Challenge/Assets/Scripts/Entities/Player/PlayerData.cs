@@ -159,6 +159,19 @@ public static class PlayerData // Local Player's Data
 
     }
 
+
+    public static void CheckForDailyReset()
+    {
+        DateTime CurrentDateTime = System.DateTime.UtcNow;
+        DateTime ResetDateTime = new DateTime(CurrentDateTime.Year, CurrentDateTime.Month, CurrentDateTime.Day,
+            GameSettings.DailyResetTime.Hour, GameSettings.DailyResetTime.Minute, GameSettings.DailyResetTime.Second);
+
+        if (LastLogin < ResetDateTime && CurrentDateTime > ResetDateTime)
+        {
+            // Reset Stats
+        }
+    }
+
     public static void InitGuestData()
     {
 

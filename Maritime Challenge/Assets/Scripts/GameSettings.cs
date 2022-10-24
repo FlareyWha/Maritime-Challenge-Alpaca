@@ -11,6 +11,9 @@ public static class GameSettings
     public static int NumGiftsDaily = 5;
     public static int MinNumGiftTokens = 5;
     public static int MaxNumGiftTokens = 30;
+
+    public static DateTime DailyResetTime = new DateTime(2022, 01, 01, 00, 00, 00);
+
     public static int GetEXPRequirement(int level)
     {
         return (level * level * 2) + level * 50 + 300;
