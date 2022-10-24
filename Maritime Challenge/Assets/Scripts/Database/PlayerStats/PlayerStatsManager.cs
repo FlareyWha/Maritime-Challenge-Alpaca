@@ -21,7 +21,6 @@ public class PlayerStatsManager : MonoBehaviourSingleton<PlayerStatsManager>
         string url = ServerDataManager.URL_updatePlayerStats;
         Debug.Log(url);
 
-        Debug.Log("Stat Name: " + statName);
 
         WWWForm form = new WWWForm();
         form.AddField("iOwnerUID", PlayerData.UID);
