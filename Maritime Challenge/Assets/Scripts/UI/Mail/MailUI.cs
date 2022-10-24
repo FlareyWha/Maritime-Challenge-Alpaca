@@ -11,14 +11,14 @@ public class MailUI : MonoBehaviour
     [SerializeField]
     private Button ClaimButton;
 
-    private Mail LinkedMail;
-    private Action<Mail> onClaimButtonClicked;
+    public Mail LinkedMail;
+    private Action<MailUI> onClaimButtonClicked;
 
     private Color32[] BackgroundColorOptions =
     {
-        new Color32(200, 200, 255, 255),
-        new Color32(200, 255, 200, 255),
-        new Color32(255, 200, 200, 255)
+        new Color32(230, 230, 255, 255),
+        new Color32(230, 255, 230, 255),
+        new Color32(255, 230, 230, 255)
     };
 
     private void Awake()
@@ -30,7 +30,7 @@ public class MailUI : MonoBehaviour
         BackgroundImage.color = BackgroundColorOptions[randOption];
     }
 
-    public void Init(Mail mail, Action<Mail> action)
+    public void Init(Mail mail, Action<MailUI> action)
     {
         onClaimButtonClicked = action;
 
@@ -41,6 +41,7 @@ public class MailUI : MonoBehaviour
 
     private void OnClaimButtonClicked()
     {
-        onClaimButtonClicked?.Invoke(LinkedMail);
+        ClaimButton.interactable = false;
+        onClaimButtonClicked?.Invoke(this);
     }
 }

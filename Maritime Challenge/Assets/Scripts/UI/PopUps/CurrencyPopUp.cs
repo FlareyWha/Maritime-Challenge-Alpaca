@@ -9,10 +9,10 @@ public class CurrencyPopUp : PopUp
     private Text signText, amountText;
 
     private float lifetime = 1.0f;
-    private const float rise_speed = 1.0f;
+    private const float rise_speed = 10.0f;
 
-    private Color32 increaseColor = Color.white;
-    private Color32 decreaseColor = Color.white;
+    private Color32 increaseColor = Color.gray;
+    private Color32 decreaseColor = Color.gray;
 
     public void Init(int delta_amt)
     {
@@ -21,11 +21,13 @@ public class CurrencyPopUp : PopUp
         {
             signText.text = "+";
             signText.color = increaseColor;
+            amountText.color = increaseColor;
         }
         else
         {
             signText.text = "-";
             signText.color = decreaseColor;
+            amountText.color = decreaseColor;
         }
 
     }
@@ -34,6 +36,8 @@ public class CurrencyPopUp : PopUp
     {
         if (!active)
             return;
+
+        Debug.Log("Currency PopUp Updating");
 
         transform.position = new Vector3(transform.position.x,
             transform.position.y + rise_speed * Time.deltaTime, transform.position.z);

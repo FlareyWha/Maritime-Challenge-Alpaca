@@ -8,6 +8,7 @@ public class MailboxManager : MonoBehaviourSingleton<MailboxManager>
 
     public void DeleteMail(Mail mail)
     {
+        PlayerData.MailList.Remove(mail);
         StartCoroutine(DoDeleteMail(mail.MailID));
     }
 

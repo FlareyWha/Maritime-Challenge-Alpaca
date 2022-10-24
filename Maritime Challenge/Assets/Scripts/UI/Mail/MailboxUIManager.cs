@@ -27,6 +27,14 @@ public class MailboxUIManager : MonoBehaviour
         {
             Destroy(child.gameObject);
         }
+        if (PlayerData.MailList.Count == 0)
+        {
+            SetEmpty();
+            return;
+        }
+
+        EmptyMailboxPanel.SetActive(false);
+
         // Fill
         foreach (Mail mail in PlayerData.MailList)
         {
@@ -37,8 +45,26 @@ public class MailboxUIManager : MonoBehaviour
         EmptyMailboxPanel.SetActive(PlayerData.MailList.Count == 0);
     }
 
-    private void ClaimMail(Mail mail)
+    private void SetEmpty()
     {
+        EmptyMailboxPanel.SetActive(true);
+    }
 
+    private void ClaimMail(MailUI mail)
+    {
+        // Update Num Tokens
+        PlayerData.NumTokens += mail.LinkedMail.MailItemAmount;
+        PlayerData.InvokeNumTokensUpdated();
+        StartCoroutine(CurrencyManager.DoUpdateTokenAmount());
+        // Delete Mail
+        MailboxManager.Instance.DeleteMail(mail.LinkedMail);
+        // Destroy Mail UI
+        Destroy(mail.gameObject);
+
+        // Currency Gain UI
+        PopUpManager.Instance.AddCurrencyPopUp(mail.LinkedMail.MailItemAmount, mail.transform.position);
+
+        if (PlayerData.MailList.Count == 0)
+            SetEmpty();
     }
 }

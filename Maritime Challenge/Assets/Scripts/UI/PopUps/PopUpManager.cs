@@ -30,9 +30,11 @@ public class PopUpManager : MonoBehaviourSingleton<PopUpManager>
     public void AddCurrencyPopUp(int delta_amt, Vector2 screenPos)
     {
         GameObject popup_go = Instantiate(CurrencyPopUpPrefab, MainUICanvas.transform);
-        popup_go.transform.localPosition = screenPos;
+        popup_go.transform.position = screenPos;
         CurrencyPopUp popup = popup_go.GetComponent<CurrencyPopUp>();
         popup.Init(delta_amt);
+
+        popUpList.Add(popup);
     }
 
     private void Update()
