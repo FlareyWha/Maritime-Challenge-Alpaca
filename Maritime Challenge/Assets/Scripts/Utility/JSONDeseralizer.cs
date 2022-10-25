@@ -208,7 +208,7 @@ public class JSONDeseralizer : MonoBehaviour
 
         foreach (JSONAchievementData achievementData in achievementDataList.achievementData)
         {
-            Achievement achievement = new Achievement(achievementData.iAchievementID, achievementData.sAchievementName, achievementData.sAchievementDescription, achievementData.iEarnedTitleID);
+            Achievement achievement = new Achievement(achievementData.iAchievementID, achievementData.sAchievementName, achievementData.sAchievementDescription, achievementData.iEarnedTitleID, achievementData.iRightshipRollarsEarned);
 
             achievementDataDictionary.Add(achievement, achievementData.bAchievementClaimed);
         }
@@ -224,7 +224,7 @@ public class JSONDeseralizer : MonoBehaviour
 
         foreach (JSONMissionData missionData in missionDataList.missionData)
         {
-            Mission mission = new Mission(missionData.iMissionID, missionData.sMissionName, missionData.iMissionType, missionData.iMissionMaxRequirementNumber);
+            Mission mission = new Mission(missionData.iMissionID, missionData.sMissionName, missionData.iMissionType, missionData.iMissionMaxRequirementNumber, missionData.iTokensEarned);
 
             missionDataDictionary.Add(mission, missionData.bMissionClaimed);
         }

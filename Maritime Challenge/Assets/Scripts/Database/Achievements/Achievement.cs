@@ -8,15 +8,17 @@ public class Achievement
     public string AchievementName;
     public string AchievementDescription;
     public int EarnedTitleID;
+    public int RightshipRollarsEarned;
 
     public AchievementSO AchievementData;
 
 
-    public Achievement(int ID, string name, string description, int titleID)
+    public Achievement(int ID, string name, string description, int titleID, int rightshipRollarsEarned)
     {
         AchievementID = ID;
         AchievementName = name;
         AchievementDescription = description;
         EarnedTitleID = titleID;
+        RightshipRollarsEarned = rightshipRollarsEarned;
     }
 }

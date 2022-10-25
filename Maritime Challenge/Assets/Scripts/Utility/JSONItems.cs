@@ -226,6 +226,7 @@ public class JSONAchievementData
     public string sAchievementName;
     public string sAchievementDescription;
     public int iEarnedTitleID;
+    public int iRightshipRollarsEarned;
     public bool bAchievementClaimed;
 }
 
@@ -242,6 +243,7 @@ public class JSONMissionData
     public string sMissionName;
     public int iMissionType;
     public int iMissionMaxRequirementNumber;
+    public int iTokensEarned;
     public bool bMissionClaimed;
 }
 
