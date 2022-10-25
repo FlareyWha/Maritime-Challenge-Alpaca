@@ -60,4 +60,32 @@ public class MissionManager : MonoBehaviourSingleton<MissionManager>
                 break;
         }
     }
+
+    public void ResetMissions(MISSION_TYPE missionType)
+    {
+        StartCoroutine(DoResetMissions(missionType));
+    }
+
+    IEnumerator DoResetMissions(MISSION_TYPE missionType)
+    {
+        string url = ServerDataManager.URL_resetMissions;
+        Debug.Log(url);
+
+        WWWForm form = new WWWForm();
+        form.AddField("iMissionType", (int)missionType);
+        using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
+        yield return webreq.SendWebRequest();
+        switch (webreq.result)
+        {
+            case UnityWebRequest.Result.Success:
+                Debug.Log(webreq.downloadHandler.text);
+                break;
+            case UnityWebRequest.Result.ProtocolError:
+                Debug.LogError(webreq.downloadHandler.text);
+                break;
+            default:
+                Debug.LogError("Server error");
+                break;
+        }
+    }
 }

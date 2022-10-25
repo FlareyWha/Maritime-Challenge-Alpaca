@@ -89,6 +89,8 @@ public class ServerDataManager : MonoBehaviour
     public static string URL_getAchievementData = serverURL + "GetAchievementData.php";
     public static string URL_updateAchievementClaimed = serverURL + "UpdateAchievementClaimed.php";
 
+    public static string URL_resetMissions = serverURL + "ResetMissions.php";
+
     #endregion
 
     #region Handling Guilds & Abandoned Cities
