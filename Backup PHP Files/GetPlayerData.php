@@ -17,11 +17,11 @@ catch (Exception $e)
 }
 
 // Prepare statement to get the necessary stats from tb_account
-$query = "select sUsername, bShowBirthday, dBirthday, iCurrentTitleID, sBiography, iLevel, iXP, iDepartment, iGuildID, iCountry, iTotalRightshipRollars, iTotalTokens, iTotalEventCurrency, iCurrentBattleship, fPlayerXPos, fPlayerYPos, fPlayerZPos from tb_account where UID=?";
+$query = "select sUsername, bShowBirthday, dBirthday, iCurrentTitleID, sBiography, iLevel, iXP, iDepartment, iGuildID, iCountry, iTotalRightshipRollars, iTotalTokens, iTotalEventCurrency, iCurrentBattleship, fPlayerXPos, fPlayerYPos, fPlayerZPos, dtLastLogin from tb_account where UID=?";
 $stmt = $conn->prepare($query);
 $stmt->bind_param("i", $uid);
 $stmt->execute();
-$stmt->bind_result($sUsername, $bShowBirthday, $dBirthday, $iCurrentTitleID, $sBiography, $iLevel, $iXP, $iDepartment, $iGuildID, $iCountry, $iTotalRightshipRollars, $iTotalTokens, $iTotalEventCurrency, $iCurrentBattleship, $fPlayerXPos, $fPlayerYPos, $fPlayerZPos);
+$stmt->bind_result($sUsername, $bShowBirthday, $dBirthday, $iCurrentTitleID, $sBiography, $iLevel, $iXP, $iDepartment, $iGuildID, $iCountry, $iTotalRightshipRollars, $iTotalTokens, $iTotalEventCurrency, $iCurrentBattleship, $fPlayerXPos, $fPlayerYPos, $fPlayerZPos, $dtLastLogin);
 
 //Bind into array to send as json
 $arr = Array();
@@ -46,7 +46,8 @@ while ($stmt->fetch())
         "iCurrentBattleship" => $iCurrentBattleship,
         "fPlayerXPos" => $fPlayerXPos,
         "fPlayerYPos" => $fPlayerYPos,
-        "fPlayerZPos" => $fPlayerZPos
+        "fPlayerZPos" => $fPlayerZPos,
+        "dtLastLogin" => $dtLastLogin
     );
     array_push($arr["playerData"], $JSONPlayerData);
 }

@@ -5,10 +5,10 @@ require("dbconn_inc.php"); // include the external file
 try
 {
     //Check if POST fields are received
-    if (!isset($_POST["UID"]) || !isset($_POST["iTotalRightshipRollars"]))
+    if (!isset($_POST["UID"]) || !isset($_POST["iCurrentTitleID"]))
         throw new Exception("not posted!");
     $uid = $_POST["UID"];
-    $iTotalRightshipRollars = $_POST["iTotalRightshipRollars"];
+    $iCurrentTitleID = $_POST["iCurrentTitleID"];
 }
 catch (Exception $e)
 {
@@ -17,12 +17,12 @@ catch (Exception $e)
     die();
 }
 
-//Prepare statement to update the iCoins for the account with uid
-$query = "update tb_account set iTotalRightshipRollars=? where UID=?";
+//Prepare statement to update the sBiography for the account with uid
+$query = "update tb_account set iCurrentTitleID=? where UID=?";
 $stmt=$conn->prepare($query);
 
 //s - string, i - integer...
-$stmt->bind_param("ii", $iTotalRightshipRollars, $uid);
+$stmt->bind_param("ii", $iCurrentTitleID, $uid);
 
 //Execute statement
 $stmt->execute();

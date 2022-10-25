@@ -8,7 +8,7 @@ $stmt = $conn->prepare($query);
 
 $stmt->execute();
 
-$stmt->bind_result($iAbandonedCity, $sAbandonedCityName, $iAbandonedCityAreaCellWidth, $iAbandonedCityAreaCellHeight, $fAbandonedCityXPos, $fAbandonedCityYPos, $iCapturedGuildID);
+$stmt->bind_result($iAbandonedCityID, $sAbandonedCityName, $iAbandonedCityAreaCellWidth, $iAbandonedCityAreaCellHeight, $fAbandonedCityXPos, $fAbandonedCityYPos, $iCapturedGuildID);
 
 //Bind into array to send as json
 $arr = Array(); //Create main array
@@ -18,7 +18,7 @@ $arr["abandonedCities"] = Array(); //Create the MAIN associate array item
 while ($stmt->fetch())
 {
 	$JSONAbandonedCity = array( //create associative array for each record
-		"iAbandonedCity" => $iAbandonedCity,
+		"iAbandonedCityID" => $iAbandonedCityID,
 		"sAbandonedCityName" => $sAbandonedCityName,
         "iAbandonedCityAreaCellWidth" => $iAbandonedCityAreaCellWidth,
         "iAbandonedCityAreaCellHeight" => $iAbandonedCityAreaCellHeight,

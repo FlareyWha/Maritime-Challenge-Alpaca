@@ -1,14 +1,13 @@
-<?php //UpdateCoins.php
+<?php //UpdateXPLevels.php
 //Connect database 
 require("dbconn_inc.php"); // include the external file
 
+//Check if POST fields are received
 try
 {
-    //Check if POST fields are received
-    if (!isset($_POST["UID"]) || !isset($_POST["iTotalRightshipRollars"]))
+    if (!isset($_POST["UID"]))
         throw new Exception("not posted!");
     $uid = $_POST["UID"];
-    $iTotalRightshipRollars = $_POST["iTotalRightshipRollars"];
 }
 catch (Exception $e)
 {
@@ -17,12 +16,15 @@ catch (Exception $e)
     die();
 }
 
-//Prepare statement to update the iCoins for the account with uid
-$query = "update tb_account set iTotalRightshipRollars=? where UID=?";
+//Set new timezone
+date_default_timezone_set('UTC');
+$sDateTime = date("y-m-d H:i:s");
+
+$query = "update tb_account set dtLastLogin=? where UID=?";
 $stmt=$conn->prepare($query);
 
 //s - string, i - integer...
-$stmt->bind_param("ii", $iTotalRightshipRollars, $uid);
+$stmt->bind_param("si", $sDateTime, $uid);
 
 //Execute statement
 $stmt->execute();

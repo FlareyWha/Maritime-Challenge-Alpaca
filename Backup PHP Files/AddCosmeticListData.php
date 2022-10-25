@@ -1,10 +1,8 @@
 <?php //AddPhonebookData.php
-//require("dbconn_inc.php"); // include the external file
-
-$uid = require "GetUidStatement.php";
+require("dbconn_inc.php"); // include the external file
 
 //Get all the uids 
-$uidArray = require "GetUIDArrayStatement";
+$uidArray = require "GetUIDArrayStatement.php";
 
 $query="select iCosmeticID from tb_cosmetic";
 $stmt=$conn->prepare($query);
@@ -32,5 +30,5 @@ foreach ($uidArray as $uid)
         $stmt->close();
     }
 }
-
+$conn->close();
 ?>

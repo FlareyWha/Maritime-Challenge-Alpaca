@@ -1,4 +1,4 @@
-<?php //Login.php
+    <?php //Login.php
 // Connect database
 require("dbconn_inc.php");
 
