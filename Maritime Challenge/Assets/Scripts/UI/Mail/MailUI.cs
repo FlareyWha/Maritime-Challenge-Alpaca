@@ -16,9 +16,13 @@ public class MailUI : MonoBehaviour
 
     private Color32[] BackgroundColorOptions =
     {
-        new Color32(230, 230, 255, 255),
-        new Color32(230, 255, 230, 255),
-        new Color32(255, 230, 230, 255)
+        new Color32(255, 206, 199, 255),
+        new Color32(255, 222, 199, 255),
+        new Color32(255, 252, 199, 255),
+        new Color32(232, 255, 199, 255),
+        new Color32(199, 230, 255, 255),
+        new Color32(199, 207, 255, 255),
+        new Color32(205, 199, 255, 255),
     };
 
     private void Awake()
