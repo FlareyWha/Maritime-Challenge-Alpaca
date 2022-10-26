@@ -118,6 +118,18 @@ public class LoginManager : MonoBehaviour
         LoadingScreen.gameObject.SetActive(true);
         PlayerData.InitGuestData();
         ConnectToServer();
-        TutorialManager.Instance.LoadTutorial();
+        LoadTutorial();
+    }
+    private void LoadTutorial()
+    {
+        StartCoroutine(TutorialLoading());
+    }
+
+    IEnumerator TutorialLoading()
+    {
+        while (PlayerData.CommandsHandler == null)
+            yield return null;
+
+        PlayerData.CommandsHandler.SwitchSubScene("TutorialScene", SceneManager.TutorialSpawnPos);
     }
 }

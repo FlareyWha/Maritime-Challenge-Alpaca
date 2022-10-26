@@ -8,6 +8,7 @@ public class SceneManager : MonoBehaviourSingleton<SceneManager>
 {
 
     public static Vector2 StartWorldHubSpawnPos = new Vector2(6.0f, -8.0f);
+    public static Vector2 TutorialSpawnPos = new Vector2(0.0f, 0.0f);
  
     public static Vector2[] SpawnPosList = new Vector2[(int)SPAWN_POS.NUM_TOTAL];
 

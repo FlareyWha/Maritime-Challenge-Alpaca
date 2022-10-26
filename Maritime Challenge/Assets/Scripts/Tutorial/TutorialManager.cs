@@ -8,23 +8,13 @@ public class TutorialManager : MonoBehaviourSingleton<TutorialManager>
 
     private int tutorialPhase = 0;
 
-    public void LoadTutorial()
-    {
-        StartCoroutine(TutorialLoading());
-    }
-
-    IEnumerator TutorialLoading()
-    {
-        while (PlayerData.CommandsHandler == null)
-            yield return null;
-
-        PlayerData.CommandsHandler.SwitchSubScene("TutorialScene", Vector2.zero);
-    }
-
-
-
     void ActivateNextPhase()
     {
         tutorialPhase++;
+    }
+
+    public void SkipTutorial()
+    {
+        PlayerData.CommandsHandler.SwitchSubScene("WorldHubScene", SceneManager.StartWorldHubSpawnPos);
     }
 }

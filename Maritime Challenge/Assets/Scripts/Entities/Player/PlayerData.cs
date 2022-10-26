@@ -86,7 +86,7 @@ public static class PlayerData // Local Player's Data
             case 3:
                 return "Europe";
         }
-        return "Country does not exist";
+        return "-";
     }
 
     public static string GetGuildName(int id)
@@ -102,7 +102,7 @@ public static class PlayerData // Local Player's Data
             case 4:
                 return "Guild4";
         }
-        return "Guild does not exist";
+        return "-";
     }
 
    
@@ -176,7 +176,21 @@ public static class PlayerData // Local Player's Data
 
     public static void InitGuestData()
     {
-
+        UID = 0;
+        Name = "Guest";
+        ShowBirthday = false;
+        //Birthday = "0000-0-0";
+        CurrentTitleID = 1;
+        Biography = "";
+        CurrLevel = 0;
+        CurrXP = 0;
+        Department = 0;
+        GuildID = -1;
+        Country = -1;
+        NumRightshipRollars = 0;
+        NumTokens = 0;
+        NumEventCurrency = 0;
+        PlayerPosition = Vector3.zero;
     }
 
     public static void ResetData()
@@ -190,8 +204,8 @@ public static class PlayerData // Local Player's Data
         CurrLevel = 0;
         CurrXP = 0;
         Department = 0;
-        GuildID = 0;
-        Country = 0;
+        GuildID = -1;
+        Country = -1;
         NumRightshipRollars = 0;
         NumTokens = 0;
         NumEventCurrency = 0;
