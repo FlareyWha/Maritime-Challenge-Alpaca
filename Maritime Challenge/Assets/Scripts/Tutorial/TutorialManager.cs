@@ -10,21 +10,14 @@ public class TutorialManager : MonoBehaviourSingleton<TutorialManager>
 
     private int tutorialPhase = 0;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void ActivateNextPhase()
     {
         tutorialPhase++;
         currentTutorial = tutorialList[tutorialPhase];
+    }
+
+    public void SkipTutorial()
+    {
+        PlayerData.CommandsHandler.SwitchSubScene("WorldHubScene", SceneManager.StartWorldHubSpawnPos);
     }
 }
