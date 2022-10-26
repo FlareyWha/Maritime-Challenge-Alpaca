@@ -15,8 +15,8 @@ public class CurrencyPopUp : PopUp
     private float lifetime = 1.0f;
     private const float rise_speed = 10.0f;
 
-    private Color32 increaseColor = Color.gray;
-    private Color32 decreaseColor = Color.gray;
+    private Color32 increaseColor = Color.white;
+    private Color32 decreaseColor = new Color32(255, 135, 135, 255);
 
     public void Init(CURRENCY_TYPE type, int delta_amt)
     {
