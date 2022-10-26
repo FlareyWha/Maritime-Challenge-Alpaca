@@ -537,6 +537,7 @@ MonoBehaviour:
   - {fileID: 2294281570881140805, guid: deba852909b2a0442a17042171339078, type: 3}
   gameScene: MainScene
   subScenesList:
+  - TutorialScene
   - WorldHubScene
   - CafeScene
   - ArcadeScene

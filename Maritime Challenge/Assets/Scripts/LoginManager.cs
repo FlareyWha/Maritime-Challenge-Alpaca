@@ -115,7 +115,9 @@ public class LoginManager : MonoBehaviour
 
     public void GuestLogin()
     {
+        LoadingScreen.gameObject.SetActive(true);
         PlayerData.InitGuestData();
         ConnectToServer();
+        TutorialManager.Instance.LoadTutorial();
     }
 }

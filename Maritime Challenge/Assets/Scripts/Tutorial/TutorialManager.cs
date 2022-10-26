@@ -2,23 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TutorialManager : MonoBehaviour
+public class TutorialManager : MonoBehaviourSingleton<TutorialManager>
 {
     private Tutorial[] tutorialList;
 
     private int tutorialPhase = 0;
 
-    // Start is called before the first frame update
-    void Start()
+    public void LoadTutorial()
     {
-        
+        StartCoroutine(TutorialLoading());
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator TutorialLoading()
     {
-        
+        while (PlayerData.CommandsHandler == null)
+            yield return null;
+
+        PlayerData.CommandsHandler.SwitchSubScene("TutorialScene", Vector2.zero);
     }
+
+
 
     void ActivateNextPhase()
     {
