@@ -54,7 +54,6 @@ public class CurrencyPopUp : PopUp
         if (!active)
             return;
 
-        Debug.Log("Currency PopUp Updating");
 
         transform.position = new Vector3(transform.position.x,
             transform.position.y + rise_speed * Time.deltaTime, transform.position.z);

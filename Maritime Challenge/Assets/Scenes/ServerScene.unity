@@ -538,11 +538,11 @@ MonoBehaviour:
   gameScene: MainScene
   startingSubScene: WorldHubScene
   subScenesList:
-  - TutorialScene
   - WorldHubScene
   - CafeScene
   - ArcadeScene
   - ShoppingMallScene
+  - TutorialScene
 --- !u!1 &1438128726
 GameObject:
   m_ObjectHideFlags: 0
