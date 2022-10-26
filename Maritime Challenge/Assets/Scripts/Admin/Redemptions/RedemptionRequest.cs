@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class RedemptionRequest : MonoBehaviour
 {
+    private List<int> redemptionRequestID = new List<int>();
+
     [SerializeField]
     private Text usernameText, redemptionItemNameText, amountText;
 
@@ -20,8 +22,9 @@ public class RedemptionRequest : MonoBehaviour
         
     }
 
-    public void InitRedemptionRequest(string username, string redemptionItemName, int amount)
+    public void InitRedemptionRequest(List<int> ID, string username, string redemptionItemName, int amount)
     {
+        redemptionRequestID = ID;
         usernameText.text = username;
         redemptionItemNameText.text = redemptionItemName;
         amountText.text = "x" + amount;

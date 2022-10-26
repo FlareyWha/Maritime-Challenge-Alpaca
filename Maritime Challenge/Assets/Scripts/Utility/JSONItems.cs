@@ -166,6 +166,7 @@ public class JSONGuildInfoList
 [Serializable]
 public class JSONRedemptionRequest
 {
+    public int iRedemptionRequestID;
     public string sUsername;
     public string sRedemptionItemName;
 }

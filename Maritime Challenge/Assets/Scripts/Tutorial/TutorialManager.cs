@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TutorialManager : MonoBehaviour
+public class TutorialManager : MonoBehaviourSingleton<TutorialManager>
 {
     private Tutorial[] tutorialList;
+
+    private Tutorial currentTutorial;
 
     private int tutorialPhase = 0;
 
@@ -23,5 +25,6 @@ public class TutorialManager : MonoBehaviour
     void ActivateNextPhase()
     {
         tutorialPhase++;
+        currentTutorial = tutorialList[tutorialPhase];
     }
 }

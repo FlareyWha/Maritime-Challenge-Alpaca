@@ -114,7 +114,9 @@ public class ServerDataManager : MonoBehaviour
     #region Handling Admin Stuff
 
     //Redemptions
+    public static string URL_addRedemptionRequest = serverURL + "AddRedemptionRequest.php";
     public static string URL_getRedemptionRequests = serverURL + "GetRedemptionRequests.php";
+    public static string URL_deleteRedemptionRequest = serverURL + "DeleteRedemptionRequest.php";
 
     //Refresh database
     public static string URL_addAchievementListData = serverURL + "AddAchievementListData.php";
