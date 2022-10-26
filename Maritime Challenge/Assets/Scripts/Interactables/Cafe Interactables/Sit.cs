@@ -20,6 +20,8 @@ public class Sit : BaseInteractable
         set { playerSeated = value; }
     }
 
+    private Vector3 oldPosition;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +38,8 @@ public class Sit : BaseInteractable
         if (playerSeated == null && CafeManager.Instance.HasDrink)
         {
             Player player = PlayerData.MyPlayer;
+
+            oldPosition = player.transform.position;
 
             //Set player pos to the seat's pos
             player.transform.position = transform.parent.position;
@@ -55,6 +59,8 @@ public class Sit : BaseInteractable
             //Enable joystick
             UIManager.Instance.ToggleJoystick(true);
 
+            PlayerData.MyPlayer.transform.position = oldPosition;
+
             //Do the opposite of above
             PlayerData.CommandsHandler.SendPlayerSeatedEvent(SitID, null);
 
@@ -70,6 +76,8 @@ public class Sit : BaseInteractable
             interactMessage = "Sit Down?";
         else if (playerSeated == PlayerData.MyPlayer)
             interactMessage = "Stand Up?";
+        else if (!CafeManager.Instance.HasDrink)
+            interactMessage = "Buy a drink to sit down.";
 
         UIManager.Instance.SetInteractButtonMessage(interactMessage);
     }

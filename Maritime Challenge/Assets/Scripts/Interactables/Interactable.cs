@@ -8,7 +8,7 @@ public class BaseInteractable : MonoBehaviour
    // private float InteractRadius = 3.0f;
 
 
-    private Player myPlayer = null;
+    protected Player myPlayer = null;
     protected string interactMessage = "Interact";
    // protected bool in_range = false;
  
@@ -37,7 +37,7 @@ public class BaseInteractable : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
 
         if (myPlayer == null || myPlayer.GetBattleShip() == null)// - INEFFICIENT TEMP FIX COS ANNOYING
@@ -49,7 +49,7 @@ public class BaseInteractable : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    protected virtual void OnTriggerExit2D(Collider2D collision)
     {
         if (myPlayer == null || myPlayer.GetBattleShip() == null)// - INEFFICIENT TEMP FIX COS ANNOYING
             return;
