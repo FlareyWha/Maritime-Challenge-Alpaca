@@ -38,11 +38,6 @@ public class ConnectionManager : NetworkManager
         StopClient();
     }
 
-    private void LogOutOfGame()
-    {
-        SceneManager.Instance.LoadScene(SCENE_ID.LOGIN);
-        PlayerData.ResetData();
-    }
 
     public override void OnClientChangeScene(string newSceneName, SceneOperation sceneOperation, bool customHandling) 
     {
@@ -106,5 +101,20 @@ public class ConnectionManager : NetworkManager
             return identity.gameObject.GetComponent<Player>();
         else
             return null;
+    }
+
+    public override void OnClientDisconnect()
+    {
+        base.OnClientDisconnect();
+
+        PlayerData.OnExitSaveData();
+    }
+
+    public override void OnApplicationQuit()
+    {
+        base.OnApplicationQuit();
+
+        if (isNetworkActive)
+            PlayerData.OnExitSaveData();
     }
 }

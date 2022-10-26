@@ -181,7 +181,7 @@ public static class PlayerData // Local Player's Data
         }
     }
 
-    public static void OnLogOutSaveData()
+    public static void OnExitSaveData()
     {
 
     }
