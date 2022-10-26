@@ -23,6 +23,8 @@ namespace Mirror.Examples.MultipleAdditiveScenes
         [SerializeField]
         private string gameScene;
         [SerializeField]
+        private string startingSubScene;
+        [SerializeField]
         private string[] subScenesList;
 
         // This is set true after server loads all subscene instances
@@ -55,7 +57,7 @@ namespace Mirror.Examples.MultipleAdditiveScenes
                 yield return null;
 
             // Send Scene message to client to additively load the game scene
-            conn.Send(new SceneMessage { sceneName = subScenesList[0], sceneOperation = SceneOperation.LoadAdditive, customHandling = true});
+            conn.Send(new SceneMessage { sceneName = startingSubScene, sceneOperation = SceneOperation.LoadAdditive, customHandling = true});
 
             // Wait for end of frame before adding the player to ensure Scene Message goes first
             yield return new WaitForEndOfFrame();

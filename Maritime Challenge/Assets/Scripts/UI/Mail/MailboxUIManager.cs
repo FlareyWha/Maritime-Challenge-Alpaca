@@ -62,7 +62,7 @@ public class MailboxUIManager : MonoBehaviour
         Destroy(mail.gameObject);
 
         // Currency Gain UI
-        PopUpManager.Instance.AddCurrencyPopUp(mail.LinkedMail.MailItemAmount, mail.transform.position);
+        PopUpManager.Instance.AddCurrencyPopUp(CURRENCY_TYPE.TOKEN, mail.LinkedMail.MailItemAmount, mail.transform.position);
 
         if (PlayerData.MailList.Count == 0)
             SetEmpty();

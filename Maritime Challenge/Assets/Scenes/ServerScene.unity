@@ -536,6 +536,7 @@ MonoBehaviour:
   - {fileID: 1304970981937623793, guid: f7c88a45075ad454eb5c4e22bb934699, type: 3}
   - {fileID: 2294281570881140805, guid: deba852909b2a0442a17042171339078, type: 3}
   gameScene: MainScene
+  startingSubScene: WorldHubSceme
   subScenesList:
   - TutorialScene
   - WorldHubScene

@@ -3,8 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class CurrencyManager
+public class CurrencyManager : MonoBehaviourSingleton<CurrencyManager>
 {
+    public void UpdateTokenAmount(int deltaPrice)
+    {
+        PlayerData.NumTokens += deltaPrice;
+        PlayerData.InvokeNumTokensUpdated();
+        StartCoroutine(DoUpdateTokenAmount());
+
+        //Update the UI of the total tokens if needed
+    }
+
+    public void UpdateRightShipRollarsAmount(int deltaPrice)
+    {
+        PlayerData.NumRightshipRollars += deltaPrice;
+        PlayerData.InvokeNumRollarsUpdated();
+        StartCoroutine(DoUpdateRightshipRollarsAmount());
+
+        //Update the UI of the total tokens if needed
+    }
+
     public static IEnumerator DoUpdateRightshipRollarsAmount()
     {
         string url = ServerDataManager.URL_updateTotalRightshipRollars;

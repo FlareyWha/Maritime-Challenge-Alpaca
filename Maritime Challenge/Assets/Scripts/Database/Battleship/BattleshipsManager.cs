@@ -29,15 +29,6 @@ public class BattleshipsManager : MonoBehaviourSingleton<BattleshipsManager>
         return null;
     }
 
-    public void UpdateTokenAmount(int deltaPrice)
-    {
-        PlayerData.NumTokens += deltaPrice;
-        PlayerData.InvokeNumTokensUpdated();
-        StartCoroutine(CurrencyManager.DoUpdateTokenAmount());
-
-        //Update the UI of the total tokens if needed
-    }
-
     public void UnlockBattleship(int battleshipID)
     {
         StartCoroutine(DoUnlockBattleship(battleshipID));

@@ -7,6 +7,10 @@ public class CurrencyPopUp : PopUp
 {
     [SerializeField]
     private Text signText, amountText;
+    [SerializeField]
+    private Image CurrencyIcon;
+    [SerializeField]
+    private Sprite TokenIconSprite, RollarIconSprite;
 
     private float lifetime = 1.0f;
     private const float rise_speed = 10.0f;
@@ -14,7 +18,7 @@ public class CurrencyPopUp : PopUp
     private Color32 increaseColor = Color.gray;
     private Color32 decreaseColor = Color.gray;
 
-    public void Init(int delta_amt)
+    public void Init(CURRENCY_TYPE type, int delta_amt)
     {
         amountText.text = Mathf.Abs(delta_amt).ToString();
         if (delta_amt > 0)
@@ -28,6 +32,19 @@ public class CurrencyPopUp : PopUp
             signText.text = "-";
             signText.color = decreaseColor;
             amountText.color = decreaseColor;
+        }
+
+
+        switch (type)
+        {
+            case CURRENCY_TYPE.TOKEN:
+                CurrencyIcon.sprite = TokenIconSprite;
+                break;
+            case CURRENCY_TYPE.ROLLAR:
+                CurrencyIcon.sprite = RollarIconSprite;
+                break;
+            default:
+                break;
         }
 
     }
@@ -46,4 +63,12 @@ public class CurrencyPopUp : PopUp
         if (lifetime < 0.0f)
             active = false;
     }
+}
+
+public enum CURRENCY_TYPE
+{
+    TOKEN,
+    ROLLAR,
+
+    NUM_TOTAL
 }

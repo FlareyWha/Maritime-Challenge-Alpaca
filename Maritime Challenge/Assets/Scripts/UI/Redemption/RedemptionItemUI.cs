@@ -11,18 +11,18 @@ public class RedemptionItemUI : MonoBehaviour
     [SerializeField]
     private Image VoucherBG;
 
-    private RedeemableItemSO item;
+    public RedeemableItemSO Item;
 
-    private Action<RedeemableItemSO> exchangeAction;
+    private Action<RedemptionItemUI> exchangeAction;
 
     private void Awake()
     {
         button.onClick.AddListener(OnButtonClicked);
     }
 
-    public void Init(RedeemableItemSO item, Action<RedeemableItemSO> action)
+    public void Init(RedeemableItemSO item, Action<RedemptionItemUI> action)
     {
-        this.item = item;
+        this.Item = item;
         VoucherBG.sprite = item.VoucherSprite;
         CostText.text = item.RollarsCost.ToString();
 
@@ -31,7 +31,7 @@ public class RedemptionItemUI : MonoBehaviour
 
     private void OnButtonClicked()
     {
-        exchangeAction.Invoke(item);
+        exchangeAction.Invoke(this);
     }
 
 }

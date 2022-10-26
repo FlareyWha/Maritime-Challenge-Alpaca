@@ -136,7 +136,8 @@ public class BattleshipStoreManager : MonoBehaviour
         int id = currSelectedShopItem.BattleshipInfo.BattleshipID;
         if (PlayerData.NumTokens >= price)
         {
-            BattleshipsManager.Instance.UpdateTokenAmount(-1 * price);
+            CurrencyManager.Instance.UpdateTokenAmount(-1 * price);
+            PopUpManager.Instance.AddCurrencyPopUp(CURRENCY_TYPE.TOKEN, -1 * price, currSelectedShopItem.transform.position);
             BattleshipsManager.Instance.UnlockBattleship(id);
             PlayerData.SetBattleshipUnlocked(currSelectedShopItem.BattleshipInfo);
             UpdateShopItemsDisplay();

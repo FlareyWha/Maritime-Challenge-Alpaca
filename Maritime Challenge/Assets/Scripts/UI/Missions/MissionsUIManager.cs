@@ -69,6 +69,8 @@ public class MissionsUIManager : MonoBehaviour
     private void ClaimCompletedMission(MissionsUI mission)
     {
         MissionManager.Instance.ClaimMission(mission.Mission);
+        CurrencyManager.Instance.UpdateTokenAmount(mission.Mission.TokensEarned);
+        PopUpManager.Instance.AddCurrencyPopUp(CURRENCY_TYPE.TOKEN, mission.Mission.TokensEarned, mission.transform.position);
         mission.SetCompleted();
     }
 
