@@ -57,5 +57,4 @@ foreach ($allOtherUidArray as $otherUid)
     $stmt->execute();
     $stmt->close();
 }
-
 ?>

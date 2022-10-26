@@ -17,27 +17,22 @@ catch (Exception $e)
 }
 
 // Prepare statement to get the necessary stats from tb_account
-$query = "select tb_cosmetic.iCosmeticID, sCosmeticName, iCosmeticCost, iCosmeticRarity, iCosmeticType, bCosmeticUnlocked from tb_cosmetic inner join tb_cosmeticList on tb_cosmetic.iCosmeticID=tb_cosmeticList.iCosmeticID where iOwnerUID=? order by tb_cosmetic.iCosmeticID asc";
+$query = "select iCosmeticID from tb_equippedCosmeticList where iOwnerUID=?";
 $stmt = $conn->prepare($query);
 $stmt->bind_param("i", $iOwnerUID);
 $stmt->execute();
-$stmt->bind_result($iCosmeticID, $sCosmeticName, $iCosmeticCost, $iCosmeticRarity, $iCosmeticType, $bCosmeticUnlocked);
+$stmt->bind_result($iCosmeticID);
 
 //Bind into array to send as json
 $arr = Array();
-$arr["cosmeticData"] = Array();
+$arr["equippedCosmetics"] = Array();
 
 while ($stmt->fetch())
 {
-    $JSONCosmeticData = array (
+    $JSONEquippedCosmetic = array (
         "iCosmeticID" => $iCosmeticID,
-        "sCosmeticName" => $sCosmeticName,
-        "iCosmeticCost" => $iCosmeticCost,
-        "iCosmeticRarity" => $iCosmeticRarity,
-        "iCosmeticType" => $iCosmeticType,
-        "bCosmeticUnlocked" => $bCosmeticUnlocked
     );
-    array_push($arr["cosmeticData"], $JSONCosmeticData);
+    array_push($arr["equippedCosmetics"], $JSONEquippedCosmetic);
 }
 
 http_response_code(200);

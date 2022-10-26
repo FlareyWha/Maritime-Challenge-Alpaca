@@ -5,9 +5,9 @@ require("dbconn_inc.php"); // include the external file
 try
 {
     //Check if POST fields are received
-    if (!isset($_POST["UID"]) || !isset($_POST["iAchievementID"]))
+    if (!isset($_POST["iOwnerUID"]) || !isset($_POST["iAchievementID"]))
         throw new Exception("not posted!");
-    $uid = $_POST["UID"];
+    $iOwnerUID = $_POST["iOwnerUID"];
     $iAchievementID = $_POST["iAchievementID"];
 }
 catch (Exception $e)
@@ -20,11 +20,7 @@ catch (Exception $e)
 //Prepare statement to update the iCoins for the account with uid
 $query = "update tb_achievementList set bAchievementClaimed=true where iOwnerUID=? and iAchievementID=?";
 $stmt=$conn->prepare($query);
-
-//s - string, i - integer...
-$stmt->bind_param("ii", $uid, $iAchievementID);
-
-//Execute statement
+$stmt->bind_param("ii", $iOwnerUID, $iAchievementID);
 $stmt->execute();
 $stmt->fetch();
 //Returns number of rows updated

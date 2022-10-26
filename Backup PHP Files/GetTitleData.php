@@ -42,9 +42,9 @@ catch (Exception $e)
 }
 
 //Prepare statement to get the necessary stats from tb_account
-$query = "select tb_title.iTitleID, sTitleName, bTitleUnlocked from tb_title inner join tb_titleList on tb_title.iTitleID=tb_titleList.iTitleID where iOwnerUID=? order by tb_title.iTitleID asc";
+$query = "select tb_title.iTitleID, sTitleName, bTitleUnlocked from tb_title inner join tb_titleList on tb_title.iTitleID=tb_titleList.iTitleID where iOwnerUID=? and tb_title.iTitleID > 0 order by tb_title.iTitleID asc";
 $stmt = $conn->prepare($query);
-$stmt->bind_param("i", $uid);
+$stmt->bind_param("i", $iOwnerUID);
 $stmt->execute();
 $stmt->bind_result($iTitleID, $sTitleName, $bTitleUnlocked);
 
