@@ -25,7 +25,7 @@ public static class PlayerData // Local Player's Data
 
     public static PlayerStats PlayerStats = new PlayerStats();
 
-    public static string activeSubScene = "WorldHubScene";
+    public static string activeSubScene = "None";
 
     public static Player MyPlayer = null;
     public static PlayerCommands CommandsHandler = null;
