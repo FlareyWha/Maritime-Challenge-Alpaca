@@ -68,6 +68,9 @@ public static class PlayerData // Local Player's Data
     public delegate void NumTokensUpdated();
     public static event NumTokensUpdated OnNumTokensUpdated;
 
+    public delegate void NumRollarsUpdated();
+    public static event NumRollarsUpdated OnNumRollarsUpdated;
+
     public static int GetCurrentProgressNum(PLAYER_STAT type)
     {
         return PlayerStats.PlayerStat[(int)type];
@@ -261,6 +264,11 @@ public static class PlayerData // Local Player's Data
     public static void InvokeNumTokensUpdated()
     {
         OnNumTokensUpdated.Invoke();
+    }
+
+    public static void InvokeNumRollarsUpdated()
+    {
+        OnNumRollarsUpdated.Invoke();
     }
 
 }

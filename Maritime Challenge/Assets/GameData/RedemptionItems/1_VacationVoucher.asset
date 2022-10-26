@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52ded95bb87a4ce4ca0ef52b365d193d, type: 3}
+  m_Name: 1_VacationVoucher
+  m_EditorClassIdentifier: 
+  ID: 1
+  Name: Vacation Voucher
+  RollarsCost: 1200
+  VoucherSprite: {fileID: 21300000, guid: 65b6ed298c1e8bd4385a3d45a57aeaa1, type: 3}
