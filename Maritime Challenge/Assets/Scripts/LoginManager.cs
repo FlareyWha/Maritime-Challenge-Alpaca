@@ -20,6 +20,7 @@ public class LoginManager : MonoBehaviour
 
     private void Start()
     {
+       
         postLoginInfoGetter = GetComponent<PostLoginInfoGetter>();
     }
 
@@ -35,6 +36,7 @@ public class LoginManager : MonoBehaviour
 
         // LOGIN
         PlayerData.ResetData();
+        PlayerStatsManager.Instance.UpdatePlayerStat(PLAYER_STAT.LOGIN, ++PlayerData.PlayerStats.PlayerStat[(int)PLAYER_STAT.LOGIN]);
         LoadingScreen.gameObject.SetActive(true);
 
         // Set Player Details/Data in PLayerData
@@ -118,6 +120,7 @@ public class LoginManager : MonoBehaviour
         LoadingScreen.gameObject.SetActive(true);
         PlayerData.InitGuestData();
         ConnectToServer();
+        DontDestroyOnLoad(this);
         LoadTutorial();
     }
     private void LoadTutorial()
@@ -127,9 +130,13 @@ public class LoginManager : MonoBehaviour
 
     IEnumerator TutorialLoading()
     {
+
         while (PlayerData.CommandsHandler == null)
             yield return null;
 
+        Debug.Log("Loading TutorialScene...");
         PlayerData.CommandsHandler.SwitchSubScene("TutorialScene", SceneManager.TutorialSpawnPos);
+
+        Destroy(this);
     }
 }

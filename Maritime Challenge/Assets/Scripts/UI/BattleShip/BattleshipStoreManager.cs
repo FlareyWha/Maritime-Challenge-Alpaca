@@ -136,10 +136,14 @@ public class BattleshipStoreManager : MonoBehaviour
         int id = currSelectedShopItem.BattleshipInfo.BattleshipID;
         if (PlayerData.NumTokens >= price)
         {
+            // Update Tokens
             CurrencyManager.Instance.UpdateTokenAmount(-1 * price);
             PopUpManager.Instance.AddCurrencyPopUp(CURRENCY_TYPE.TOKEN, -1 * price, currSelectedShopItem.transform.position);
+            // Update Battleship
             BattleshipsManager.Instance.UnlockBattleship(id);
             PlayerData.SetBattleshipUnlocked(currSelectedShopItem.BattleshipInfo);
+            PlayerStatsManager.Instance.UpdatePlayerStat(PLAYER_STAT.BATTLESHIPS_OWNED, ++PlayerData.PlayerStats.PlayerStat[(int)PLAYER_STAT.BATTLESHIPS_OWNED]);
+
             UpdateShopItemsDisplay();
             UpdateOwnedShipsDisplay();
 

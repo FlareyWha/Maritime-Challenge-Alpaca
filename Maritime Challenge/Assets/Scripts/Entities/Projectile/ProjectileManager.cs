@@ -13,8 +13,7 @@ public class ProjectileManager : MonoBehaviourSingleton<ProjectileManager>
 
     private List<CannonBall> cannonBallsList = new List<CannonBall>();
 
-
-    [Server]
+   
     private void Start()
     {
 

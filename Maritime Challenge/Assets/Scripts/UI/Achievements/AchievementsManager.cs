@@ -108,8 +108,10 @@ public class AchievementsManager : MonoBehaviour
     public void ClaimAchievement(Achievement achievement)
     {
         Debug.Log("Achievement Manager: Claiming Achievement.." + achievement.AchievementName);
+
+        PlayerStatsManager.Instance.UpdatePlayerStat(PLAYER_STAT.ACHIEVEMENTS_COMPLETED, ++PlayerData.PlayerStats.PlayerStat[(int)PLAYER_STAT.ACHIEVEMENTS_COMPLETED]);
+
         StartCoroutine(DoClaimAchievement(achievement));
-        //Achievement achievement = GetAchievement(achievementID);
 
         int earnedTitleID = achievement.EarnedTitleID;
 
@@ -134,6 +136,7 @@ public class AchievementsManager : MonoBehaviour
     private void OnTitleUnlocked(Title title)
     {
         PlayerData.SetTitleUnlocked(title);
+        PlayerStatsManager.Instance.UpdatePlayerStat(PLAYER_STAT.TITLES_UNLOCKED, ++PlayerData.PlayerStats.PlayerStat[(int)PLAYER_STAT.TITLES_UNLOCKED]);
         TitlesUIManager.Instance.UpdateTitlesRect();
     }
 

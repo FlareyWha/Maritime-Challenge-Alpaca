@@ -5,14 +5,10 @@ using UnityEngine.Networking;
 
 public class PlayerStatsManager : MonoBehaviourSingleton<PlayerStatsManager>
 {
-    protected override void Awake()
-    {
-        base.Awake();
-
-        UpdatePlayerStat(PLAYER_STAT.LOGIN, ++PlayerData.PlayerStats.PlayerStat[(int)PLAYER_STAT.LOGIN]);
-    }
     public void UpdatePlayerStat(PLAYER_STAT playerStat, int statAmount)
     {
+        PlayerData.PlayerStats.PlayerStat[(int)playerStat] = statAmount;
+        PlayerData.InvokePlayerStatsUpdated();
         StartCoroutine(DoUpdatePlayerStat(PlayerData.PlayerStats.statNames[(int)playerStat], statAmount));
     }
 
@@ -31,6 +27,7 @@ public class PlayerStatsManager : MonoBehaviourSingleton<PlayerStatsManager>
         switch (webreq.result)
         {
             case UnityWebRequest.Result.Success:
+                Debug.Log("Player Stats Updated: " + statName + " set to " + statAmount);
                 Debug.Log(webreq.downloadHandler.text);
                 break;
             case UnityWebRequest.Result.ProtocolError:

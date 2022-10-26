@@ -44,6 +44,8 @@ public class ChatManager : MonoBehaviourSingleton<ChatManager>
             return;
 
         // Send Message
+        PlayerStatsManager.Instance.UpdatePlayerStat(PLAYER_STAT.CHAT_MESSAGES_SENT_DAILY, ++PlayerData.PlayerStats.PlayerStat[(int)PLAYER_STAT.CHAT_MESSAGES_SENT_DAILY]);
+        PlayerStatsManager.Instance.UpdatePlayerStat(PLAYER_STAT.CHAT_MESSAGES_SENT_WEEKLY, ++PlayerData.PlayerStats.PlayerStat[(int)PLAYER_STAT.CHAT_MESSAGES_SENT_WEEKLY]);
         GameHandler.Instance.SendChatMessage(InputField_Message.text);
         InputField_Message.text = "";
     }

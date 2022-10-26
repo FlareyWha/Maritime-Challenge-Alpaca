@@ -110,6 +110,7 @@ public class FriendsManager : MonoBehaviourSingleton<FriendsManager>
                     Name = name
                 };
                 PlayerData.FriendList.Add(basicInfo);
+                PlayerStatsManager.Instance.UpdatePlayerStat(PLAYER_STAT.FRIENDS_ADDED, ++PlayerData.PlayerStats.PlayerStat[(int)PLAYER_STAT.FRIENDS_ADDED]);
                 GameHandler.Instance.SendFriendAddedEvent(otherUID);
                 OnFriendListUpdated?.Invoke();
                 break;

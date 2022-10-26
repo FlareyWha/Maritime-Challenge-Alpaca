@@ -173,7 +173,7 @@ public class ProfileManager : MonoBehaviour
 
     public void LogOut()
     {
+        PlayerData.OnExitSaveData();
         ConnectionManager.Instance.DisconnectFromServer();
-        
     }
 }
