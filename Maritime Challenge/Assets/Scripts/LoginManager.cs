@@ -35,6 +35,7 @@ public class LoginManager : MonoBehaviour
 
         // LOGIN
         PlayerData.ResetData();
+        PlayerStatsManager.Instance.UpdatePlayerStat(PLAYER_STAT.LOGIN, ++PlayerData.PlayerStats.PlayerStat[(int)PLAYER_STAT.LOGIN]);
         LoadingScreen.gameObject.SetActive(true);
 
         // Set Player Details/Data in PLayerData

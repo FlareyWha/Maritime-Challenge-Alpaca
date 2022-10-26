@@ -66,7 +66,7 @@ public class MissionManager : MonoBehaviourSingleton<MissionManager>
         StartCoroutine(DoResetMissions(missionType));
     }
 
-    IEnumerator DoResetMissions(MISSION_TYPE missionType)
+    static IEnumerator DoResetMissions(MISSION_TYPE missionType)
     {
         string url = ServerDataManager.URL_resetMissions;
         Debug.Log(url);

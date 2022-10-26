@@ -146,6 +146,8 @@ public class GameHandler : NetworkBehaviour
                 Name = otherName
             };
             PlayerData.FriendList.Add(basicInfo);
+            PlayerData.PlayerStats.PlayerStat[(int)PLAYER_STAT.FRIENDS_ADDED]++;
+            PlayerData.InvokePlayerStatsUpdated();
             FriendsManager.Instance.InvokeOnFriendListUpdated();
         }
     }

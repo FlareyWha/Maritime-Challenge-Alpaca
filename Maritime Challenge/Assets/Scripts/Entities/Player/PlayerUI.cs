@@ -98,12 +98,14 @@ public class PlayerUI : MonoBehaviour
     {
         Debug.Log("View Profile Clicked");
         Player player = gameObject.GetComponent<Player>();
+        PlayerStatsManager.Instance.UpdatePlayerStat(PLAYER_STAT.PROFILES_VIEWED, ++PlayerData.PlayerStats.PlayerStat[(int)PLAYER_STAT.PROFILES_VIEWED]);
 
         //Unlock the phonebook data if other isnt unlocked to begin with
         if (!PlayerData.PhonebookData[player.GetUID()].Unlocked)
         {
             StartCoroutine(UpdatePhonebookOtherUnlocked(player));
             PlayerData.MyPlayer.UpdateXPLevels(300);
+            PlayerStatsManager.Instance.UpdatePlayerStat(PLAYER_STAT.RIGHTSHIPEDIA_ENTRIES_UNLOCKED, ++PlayerData.PlayerStats.PlayerStat[(int)PLAYER_STAT.RIGHTSHIPEDIA_ENTRIES_UNLOCKED]);
         }
         else
         {

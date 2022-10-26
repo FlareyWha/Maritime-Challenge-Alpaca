@@ -34,6 +34,11 @@ public class RedemptionManager : MonoBehaviour
         }
     }
 
+    private void OnEnable()
+    {
+        PlayerData.OnNumRollarsUpdated -= UpdateNumRollarsUI;
+    }
+
     private void ExchangeItem(RedemptionItemUI item)
     {
         if (PlayerData.NumRightshipRollars < item.Item.RollarsCost)

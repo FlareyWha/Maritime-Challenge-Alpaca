@@ -172,9 +172,18 @@ public static class PlayerData // Local Player's Data
         if (LastLogin < ResetDateTime && CurrentDateTime > ResetDateTime)
         {
             // Reset Stats
+            PlayerStatsManager.Instance.UpdatePlayerStat(PLAYER_STAT.PROFILES_VIEWED, 0);
+            PlayerStatsManager.Instance.UpdatePlayerStat(PLAYER_STAT.CHAT_MESSAGES_SENT_DAILY, 0);
+            PlayerStatsManager.Instance.UpdatePlayerStat(PLAYER_STAT.GIFTS_SENT_DAILY, 0);
+            PlayerStatsManager.Instance.UpdatePlayerStat(PLAYER_STAT.LOGIN, 0);
 
             // 
         }
+    }
+
+    public static void OnLogOutSaveData()
+    {
+
     }
 
     public static void InitGuestData()
@@ -258,17 +267,17 @@ public static class PlayerData // Local Player's Data
 
     public static void InvokePlayerStatsUpdated()
     {
-        OnPlayerStatsUpdated.Invoke();
+        OnPlayerStatsUpdated?.Invoke();
     }
 
     public static void InvokeNumTokensUpdated()
     {
-        OnNumTokensUpdated.Invoke();
+        OnNumTokensUpdated?.Invoke();
     }
 
     public static void InvokeNumRollarsUpdated()
     {
-        OnNumRollarsUpdated.Invoke();
+        OnNumRollarsUpdated?.Invoke();
     }
 
 }

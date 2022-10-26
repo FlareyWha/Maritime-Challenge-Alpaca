@@ -16,6 +16,11 @@ public class MissionsUIManager : MonoBehaviour
         UpdateMissionsRect();
         PlayerData.OnPlayerStatsUpdated += OnPlayerStatsUpdated;
     }
+
+    private void OnDestroy()
+    {
+        PlayerData.OnPlayerStatsUpdated -= OnPlayerStatsUpdated;
+    }
     private void UpdateMissionsRect()
     {
         // Clear List
