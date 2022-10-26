@@ -38,7 +38,7 @@ public class MissionManager : MonoBehaviourSingleton<MissionManager>
 
     IEnumerator DoClaimMission(Mission mission)
     {
-        string url = ServerDataManager.URL_updateAchievementClaimed;
+        string url = ServerDataManager.URL_updateMissionClaimed;
         Debug.Log(url);
 
         WWWForm form = new WWWForm();
