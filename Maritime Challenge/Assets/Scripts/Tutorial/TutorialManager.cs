@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TutorialManager : MonoBehaviourSingleton<TutorialManager>
 {
+    [SerializeField]
     private Tutorial[] tutorialList;
 
     private Tutorial currentTutorial;
