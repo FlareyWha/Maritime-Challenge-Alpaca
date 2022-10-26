@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8768562e3cdd0234098260f434055290
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _MainTex: {instanceID: 0}
+  - _SpecularTex: {fileID: 2800000, guid: 30bbe0d325f289944a785b6c94077c75, type: 3}
+  - _NormalsTex: {instanceID: 0}
+  - _GlowTex: {fileID: 2800000, guid: 30bbe0d325f289944a785b6c94077c75, type: 3}
+  - _FadeTex: {fileID: 2800000, guid: 82e633f74c8a5df49bcfcd501c0caf88, type: 3}
+  - _FadeBurnTex: {fileID: 2800000, guid: 4542570ab946ceb44a0a9747171a3699, type: 3}
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
