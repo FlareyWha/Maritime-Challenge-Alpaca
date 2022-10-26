@@ -7,6 +7,13 @@ public class TutorialSign : BaseInteractable
     [SerializeField]
     private ParticleSystem confetti;
 
+    private bool interacted;
+    public bool Interacted
+    {
+        get { return interacted; }
+        private set { }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,5 +29,6 @@ public class TutorialSign : BaseInteractable
     public override void Interact()
     {
         confetti.Play();
+        interacted = true;
     }
 }

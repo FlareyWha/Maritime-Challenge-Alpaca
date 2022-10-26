@@ -10,10 +10,25 @@ public class TutorialManager : MonoBehaviourSingleton<TutorialManager>
 
     private int tutorialPhase = 0;
 
+    private void Start()
+    {
+        currentTutorial = tutorialList[0];
+        currentTutorial.InitTutorial();
+    }
+
+    private void Update()
+    {
+        currentTutorial.CheckConditionChanges();
+
+        if (currentTutorial.CheckConditionCleared())
+            ActivateNextPhase();
+    }
+
     void ActivateNextPhase()
     {
         tutorialPhase++;
         currentTutorial = tutorialList[tutorialPhase];
+        currentTutorial.InitTutorial();
     }
 
     public void SkipTutorial()

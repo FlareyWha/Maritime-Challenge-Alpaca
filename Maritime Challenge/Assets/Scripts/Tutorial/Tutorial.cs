@@ -13,7 +13,17 @@ public class Tutorial
         set { maxCondition = value; }
     }
 
-    public void IncreaseCondition(int value = 1)
+    public virtual void InitTutorial()
+    {
+
+    }
+
+    public virtual void CheckConditionChanges()
+    {
+
+    }
+
+    protected void IncreaseCondition(int value = 1)
     {
         condition += value;
     }
