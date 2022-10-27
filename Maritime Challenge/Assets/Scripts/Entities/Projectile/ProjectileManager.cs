@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
 
-public class ProjectileManager : MonoBehaviourSingleton<ProjectileManager>
+public class ProjectileManager : NetworkBehaviour
 {
+    #region Singleton
+    public static ProjectileManager Instance = null;
+    #endregion
 
     private int MaxStartingNumProjectiles = 30;
 
@@ -13,13 +16,10 @@ public class ProjectileManager : MonoBehaviourSingleton<ProjectileManager>
 
     private List<CannonBall> cannonBallsList = new List<CannonBall>();
 
-   
-    private void Start()
+
+
+    public override void OnStartServer()
     {
-
-        if (!GameHandler.Instance.isServer)
-            return;
-
         for (int i = 0; i < MaxStartingNumProjectiles; i++)
         {
             CannonBall ball = Instantiate(CannonBallPrefab).GetComponent<CannonBall>();
@@ -27,6 +27,10 @@ public class ProjectileManager : MonoBehaviourSingleton<ProjectileManager>
             ball.gameObject.SetActive(false);
             cannonBallsList.Add(ball);
         }
+    }
+    private void Awake()
+    {
+        Instance = this;
     }
 
     public CannonBall GetActiveCannonBall()

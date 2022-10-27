@@ -18,14 +18,36 @@ public class GameHandler : NetworkBehaviour
     [Server]
     public void OnNewPlayerJoined(NetworkConnectionToClient conn)
     {
+
         StartCoroutine(SetPlayerOnline(conn));
     }
     IEnumerator SetPlayerOnline(NetworkConnectionToClient conn)
     {
         while (conn.identity == null)
             yield return null;
-        onlinePlayers.Add(conn.identity.gameObject.GetComponent<Player>());
+
+        Player player = conn.identity.gameObject.GetComponent<Player>();
+        foreach (Player onlinePlayer in onlinePlayers)
+        {
+            if (player.GetUID() == onlinePlayer.GetUID())
+            {
+                ForceKick(player);
+                yield break;
+            }
+        }
+
+        onlinePlayers.Add(player);
     }
+
+    [ClientRpc]
+    private void ForceKick(Player player)
+    {
+        Debug.LogWarning("Login Failed: Account is already Online!");
+
+        if (player.isLocalPlayer)
+            ConnectionManager.Instance.DisconnectFromServer();
+    }
+
     [Server]
     public void OnPlayerQuit(NetworkConnectionToClient conn)
     {
