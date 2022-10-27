@@ -24,6 +24,8 @@ public class Server : Mirror.Examples.MultipleAdditiveScenes.MultiSceneNetManage
     public override void OnServerDisconnect(NetworkConnectionToClient conn)
     {
         base.OnServerDisconnect(conn);
+
+        GameHandler.Instance.OnPlayerQuit(conn);
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)

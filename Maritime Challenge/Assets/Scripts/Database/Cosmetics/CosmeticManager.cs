@@ -27,7 +27,7 @@ public class CosmeticManager : MonoBehaviourSingleton<CosmeticManager>
             if (cos.ID == id)
                 return cos;
         }
-        Debug.LogWarning("Could not find Avatar Cosmetic of ID " + id + "!");
+        // Debug.LogWarning("Could not find Avatar Cosmetic of ID " + id + "!");
         return null;
     }
 

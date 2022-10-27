@@ -11,7 +11,7 @@ public class GameHandler : NetworkBehaviour
     #region Singleton
     public static GameHandler Instance = null;
     #endregion
-    private readonly SyncList<Player> onlinePlayers = new SyncList<Player>();
+    private readonly SyncDictionary<int, Player> onlinePlayers = new SyncDictionary<int, Player>();
 
     private void Awake()
     {
@@ -21,7 +21,6 @@ public class GameHandler : NetworkBehaviour
     [Server]
     public void OnNewPlayerJoined(NetworkConnectionToClient conn)
     {
-
         StartCoroutine(SetPlayerOnline(conn));
     }
     IEnumerator SetPlayerOnline(NetworkConnectionToClient conn)
@@ -37,27 +36,27 @@ public class GameHandler : NetworkBehaviour
 
         if (player.GetUID() == -1)
         {
-            onlinePlayers.Add(player);
+            Debug.Log("Registering Online Player to List..");
+            onlinePlayers.Add(conn.connectionId, player);
             yield break;
         }
 
-        foreach (Player onlinePlayer in onlinePlayers)
+        foreach (KeyValuePair<int, Player> onlinePlayer in onlinePlayers)
         {
-            if (player.GetUID() == onlinePlayer.GetUID())
+            if (player.GetUID() == onlinePlayer.Value.GetUID())
             {
                 ForceKick(player);
                 yield break;
             }
         }
 
-        onlinePlayers.Add(player);
+        Debug.Log("Registering Online Player to List..");
+        onlinePlayers.Add(conn.connectionId, player);
     }
 
     [ClientRpc]
     private void ForceKick(Player player)
     {
-        Debug.LogWarning("Login Failed: Account is already Online!");
-
         if (player.isLocalPlayer)
         {
             Instantiate(WarningPanel);
@@ -68,7 +67,8 @@ public class GameHandler : NetworkBehaviour
     [Server]
     public void OnPlayerQuit(NetworkConnectionToClient conn)
     {
-        onlinePlayers.Remove(conn.identity.gameObject.GetComponent<Player>());
+        Debug.Log("Removing Player from Online List..");
+        onlinePlayers.Remove(conn.connectionId);
     }
 
     public void SendChatMessage(string message)
