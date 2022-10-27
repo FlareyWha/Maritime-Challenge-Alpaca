@@ -60,8 +60,8 @@ public class GameHandler : NetworkBehaviour
 
         if (player.isLocalPlayer)
         {
-            ConnectionManager.Instance.DisconnectFromServer();
             Instantiate(WarningPanel);
+            ConnectionManager.Instance.DisconnectFromServer();
         }
     }
 

@@ -47,6 +47,11 @@ public class AchievementsManager : MonoBehaviour
         UpdateAchievementsRect();
     }
 
+    private void OnDestroy()
+    {
+        PlayerData.OnPlayerStatsUpdated -= CheckAchievementUnlocked;
+    }
+
     private void SetAchievementsStatus()
     {
         foreach (KeyValuePair<Achievement, bool> achievement in PlayerData.AchievementList)
