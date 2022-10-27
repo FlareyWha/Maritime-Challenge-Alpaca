@@ -163,7 +163,7 @@ public static class PlayerData // Local Player's Data
     }
 
 
-    public static void CheckForDailyReset()
+    public static bool CheckForDailyReset()
     {
         DateTime CurrentDateTime = System.DateTime.UtcNow;
         DateTime ResetDateTime = new DateTime(CurrentDateTime.Year, CurrentDateTime.Month, CurrentDateTime.Day,
@@ -175,10 +175,14 @@ public static class PlayerData // Local Player's Data
             PlayerStatsManager.Instance.UpdatePlayerStat(PLAYER_STAT.PROFILES_VIEWED, 0);
             PlayerStatsManager.Instance.UpdatePlayerStat(PLAYER_STAT.CHAT_MESSAGES_SENT_DAILY, 0);
             PlayerStatsManager.Instance.UpdatePlayerStat(PLAYER_STAT.GIFTS_SENT_DAILY, 0);
-            PlayerStatsManager.Instance.UpdatePlayerStat(PLAYER_STAT.LOGIN, 0);
+            PlayerStatsManager.Instance.UpdatePlayerStat(PLAYER_STAT.LOGIN, 1);
 
             // 
+
+            return true;
         }
+
+        return false;
     }
 
     public static void OnExitSaveData()

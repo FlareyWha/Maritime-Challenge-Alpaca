@@ -110,15 +110,18 @@ public class AchievementsManager : MonoBehaviour
     }
 
    
-    public void ClaimAchievement(Achievement achievement)
+    public void ClaimAchievement(AchievementsUI achievement)
     {
-        Debug.Log("Achievement Manager: Claiming Achievement.." + achievement.AchievementName);
+        Debug.Log("Achievement Manager: Claiming Achievement.." + achievement.LinkedAchievement.AchievementName);
+
+        CurrencyManager.Instance.UpdateRightShipRollarsAmount(achievement.LinkedAchievement.RightshipRollarsEarned);
+        PopUpManager.Instance.AddCurrencyPopUp(CURRENCY_TYPE.ROLLAR, achievement.LinkedAchievement.RightshipRollarsEarned, achievement.transform.position);
 
         PlayerStatsManager.Instance.UpdatePlayerStat(PLAYER_STAT.ACHIEVEMENTS_COMPLETED, ++PlayerData.PlayerStats.PlayerStat[(int)PLAYER_STAT.ACHIEVEMENTS_COMPLETED]);
 
-        StartCoroutine(DoClaimAchievement(achievement));
+        StartCoroutine(DoClaimAchievement(achievement.LinkedAchievement));
 
-        int earnedTitleID = achievement.EarnedTitleID;
+        int earnedTitleID = achievement.LinkedAchievement.EarnedTitleID;
 
         if (earnedTitleID == -1)
         {

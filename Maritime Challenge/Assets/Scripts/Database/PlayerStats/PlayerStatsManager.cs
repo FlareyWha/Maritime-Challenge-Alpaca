@@ -7,6 +7,7 @@ public class PlayerStatsManager : MonoBehaviourSingleton<PlayerStatsManager>
 {
     public void UpdatePlayerStat(PLAYER_STAT playerStat, int statAmount)
     {
+        Debug.Log("Player " + playerStat + " set to " + statAmount);
         PlayerData.PlayerStats.PlayerStat[(int)playerStat] = statAmount;
         PlayerData.InvokePlayerStatsUpdated();
         StartCoroutine(DoUpdatePlayerStat(PlayerData.PlayerStats.statNames[(int)playerStat], statAmount));

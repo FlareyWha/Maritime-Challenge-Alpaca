@@ -33,6 +33,10 @@ public class PostLoginInfoGetter : MonoBehaviour
         //Wait for all the coroutines to finish running before continuing
         yield return coroutineCollectionManager;
 
+        // Increase Login - if daily reset, increase login in func
+        if (!PlayerData.CheckForDailyReset())
+            PlayerStatsManager.Instance.UpdatePlayerStat(PLAYER_STAT.LOGIN, ++PlayerData.PlayerStats.PlayerStat[(int)PLAYER_STAT.LOGIN]);
+
         //Connect to server once all the info has been recieved
         loginManager.ConnectToServer();
     }

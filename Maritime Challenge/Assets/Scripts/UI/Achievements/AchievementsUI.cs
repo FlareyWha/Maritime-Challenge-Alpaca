@@ -26,8 +26,8 @@ public class AchievementsUI : MonoBehaviour
 
     public int SortOrderRef = 0;
 
-    private Achievement achievement;
-    private Action<Achievement> onSelectAction;
+    public Achievement LinkedAchievement;
+    private Action<AchievementsUI> onSelectAction;
 
 
     private void Awake()
@@ -35,9 +35,9 @@ public class AchievementsUI : MonoBehaviour
         button.onClick.AddListener(OnAchievementUIClicked);
     }
 
-    public void Init(Achievement achvment, int currProg, int maxProg, Action<Achievement> action)
+    public void Init(Achievement achvment, int currProg, int maxProg, Action<AchievementsUI> action)
     {
-        achievement = achvment;
+        LinkedAchievement = achvment;
         onSelectAction = action;
         UpdateUI(achvment, currProg, maxProg);
     }
@@ -92,7 +92,7 @@ public class AchievementsUI : MonoBehaviour
 
     private void OnAchievementUIClicked()
     {
-        onSelectAction?.Invoke(achievement);
+        onSelectAction?.Invoke(this);
     }
 
 }
