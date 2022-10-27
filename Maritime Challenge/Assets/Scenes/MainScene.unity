@@ -1207,6 +1207,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  WarningPanel: {fileID: 1072791454667600021, guid: 151f6e974f2144143b8e0892f616a335, type: 3}
 --- !u!114 &75201133
 MonoBehaviour:
   m_ObjectHideFlags: 0
