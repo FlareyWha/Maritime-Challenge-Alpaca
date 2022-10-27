@@ -14,5 +14,7 @@ public class TeleportTutorial : Tutorial
     {
         if (TeleportManager.Instance.Teleported)
             IncreaseCondition();
+
+        Debug.Log(TeleportManager.Instance.Teleported);
     }
 }
