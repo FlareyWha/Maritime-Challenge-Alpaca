@@ -14,6 +14,9 @@ public class AchievementsManager : MonoBehaviour
     [SerializeField]
     private GameObject AchievementsUIPrefab;
 
+    [SerializeField]
+    private GameObject TitleUnlockPanelPrefab;
+
     private Dictionary<PLAYER_STAT, AchievementStatus> achievements = new Dictionary<PLAYER_STAT, AchievementStatus>();
 
     void Awake()
@@ -115,7 +118,7 @@ public class AchievementsManager : MonoBehaviour
         Debug.Log("Achievement Manager: Claiming Achievement.." + achievement.LinkedAchievement.AchievementName);
 
         CurrencyManager.Instance.UpdateRightShipRollarsAmount(achievement.LinkedAchievement.RightshipRollarsEarned);
-        PopUpManager.Instance.AddCurrencyPopUp(CURRENCY_TYPE.ROLLAR, achievement.LinkedAchievement.RightshipRollarsEarned, achievement.transform.position);
+        PopUpManager.Instance.AddCurrencyPopUp(CURRENCY_TYPE.ROLLAR, achievement.LinkedAchievement.RightshipRollarsEarned, achievement.ButtonPosition);
 
         PlayerStatsManager.Instance.UpdatePlayerStat(PLAYER_STAT.ACHIEVEMENTS_COMPLETED, ++PlayerData.PlayerStats.PlayerStat[(int)PLAYER_STAT.ACHIEVEMENTS_COMPLETED]);
 
@@ -146,6 +149,9 @@ public class AchievementsManager : MonoBehaviour
         PlayerData.SetTitleUnlocked(title);
         PlayerStatsManager.Instance.UpdatePlayerStat(PLAYER_STAT.TITLES_UNLOCKED, ++PlayerData.PlayerStats.PlayerStat[(int)PLAYER_STAT.TITLES_UNLOCKED]);
         TitlesUIManager.Instance.UpdateTitlesRect();
+
+        TitleUnlockPopUp popup = Instantiate(TitleUnlockPanelPrefab, GameObject.Find("Canvas").transform).GetComponent<TitleUnlockPopUp>();
+        popup.InitTitle(title.LinkedTitle.TitleSprite);
     }
 
     IEnumerator DoClaimAchievement(Achievement achvment)

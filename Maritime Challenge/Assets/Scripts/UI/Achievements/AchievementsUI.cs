@@ -7,6 +7,7 @@ public class AchievementsUI : MonoBehaviour
 {
     [SerializeField]
     private Button button;
+    public Vector3 ButtonPosition { get { return button.transform.position; } }
 
     [SerializeField]
     private Sprite FilledStarSprite;

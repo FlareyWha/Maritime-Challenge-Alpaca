@@ -9,6 +9,7 @@ public class MissionsUI : MonoBehaviour
     private Text MissionTitle;
     [SerializeField]
     private Button ClaimButton;
+    public Vector3 ButtonPosition { get { return ClaimButton.transform.position; } }
     [SerializeField]
     private Image MissionProgressFill;
     [SerializeField]

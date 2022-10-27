@@ -6755,6 +6755,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4b4ecc7289d9c074b9f7b27e4b4c96f5, type: 2}
   AchievementsRect: {fileID: 1127641211}
   AchievementsUIPrefab: {fileID: 3490075263169380758, guid: b80652c84f0267245b55e3e10a19519b, type: 3}
+  TitleUnlockPanelPrefab: {fileID: 0}
 --- !u!1 &429042970
 GameObject:
   m_ObjectHideFlags: 0
