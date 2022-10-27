@@ -105,8 +105,6 @@ public class TutorialNPC : MonoBehaviour
     public void HideInteractPanel()
     {
         StartCoroutine(UIManager.ToggleSlideAnim(InteractPanel, false, 0.2f, null));
-
-        interacted = true;
     }
 
    
@@ -116,6 +114,8 @@ public class TutorialNPC : MonoBehaviour
 
      
         UIManager.Instance.ShowInteractNamecard(button);
+
+        interacted = true;
     }
 
    

@@ -29,6 +29,9 @@ public class TutorialHUDManager : MonoBehaviour
 
     public void UpdateConditionAmountText(int conditionAmount, int conditionMaxAmount)
     {
-        conditionAmountText.text = conditionAmount + "/" + conditionMaxAmount;
+        if (conditionMaxAmount <= 1)
+            conditionAmountText.text = "";
+        else
+            conditionAmountText.text = conditionAmount + "/" + conditionMaxAmount;
     }
 }

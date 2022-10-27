@@ -34,7 +34,7 @@ public class TeleportManager : MonoBehaviourSingleton<TeleportManager>
         rectTransform.anchoredPosition = hiddenCoords;
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         if (teleported)
             teleported = false;

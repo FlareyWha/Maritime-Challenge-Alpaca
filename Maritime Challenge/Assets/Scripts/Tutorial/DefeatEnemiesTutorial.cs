@@ -12,10 +12,11 @@ public class DefeatEnemiesTutorial : Tutorial
         conditionText = "Defeat all the enemies.";
     }
 
-    public override void InitTutorial()
+    public override void InitTutorial(TutorialHUDManager tutorialHUDManager)
     {
         enemies.AddRange(GameObject.FindObjectsOfType<BaseEnemy>());
         maxCondition = enemies.Count;
+        base.InitTutorial(tutorialHUDManager);
     }
 
     public override void CheckConditionChanges()
@@ -32,6 +33,9 @@ public class DefeatEnemiesTutorial : Tutorial
         }
 
         if (indexToRemove != -1)
+        {
             enemies.Remove(enemies[indexToRemove]);
+            tutorialHUDManager.UpdateConditionAmountText(condition, maxCondition);
+        }
     }
 }
