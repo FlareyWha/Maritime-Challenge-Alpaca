@@ -78,7 +78,7 @@ public class PlayerStatsManager : MonoBehaviourSingleton<PlayerStatsManager>
         switch (webreq.result)
         {
             case UnityWebRequest.Result.Success:
-                Debug.Log("Player Stats Updated: " + statName + " set to " + statAmount);
+                Debug.Log("Player Position Updated: " + position);
                 Debug.Log(webreq.downloadHandler.text);
                 break;
             case UnityWebRequest.Result.ProtocolError:
