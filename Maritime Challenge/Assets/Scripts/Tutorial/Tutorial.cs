@@ -6,26 +6,11 @@ using UnityEngine;
 public class Tutorial : MonoBehaviour
 {
     protected int condition = 0;
-
     protected int maxCondition;
-    public int MaxCondition
-    { 
-        get { return maxCondition; }
-        set { maxCondition = value; }
-    }
-
     protected string objectiveText;
-    public string ObjectiveText
-    {
-        get { return objectiveText; }
-        private set { }
-    }
     protected string conditionText;
-    public string ConditionText
-    {
-        get { return conditionText; }
-        private set { }
-    }
+
+    protected TutorialHUDManager tutorialHUDManager;
 
 
     protected virtual void Start()
@@ -35,9 +20,10 @@ public class Tutorial : MonoBehaviour
         maxCondition = 1;
     }
 
-    public virtual void InitTutorial()
+    public virtual void InitTutorial(TutorialHUDManager tutorialHUDManager)
     {
-
+        this.tutorialHUDManager = tutorialHUDManager;
+        this.tutorialHUDManager.UpdateTutorialHUD(objectiveText, conditionText, condition, maxCondition);
     }
 
     public virtual void CheckConditionChanges()

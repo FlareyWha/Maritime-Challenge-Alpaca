@@ -11,10 +11,13 @@ public class TutorialManager : MonoBehaviourSingleton<TutorialManager>
 
     private int tutorialPhase = 0;
 
+    [SerializeField]
+    private TutorialHUDManager tutorialHUDManager;
+
     private void Start()
     {
         currentTutorial = tutorialList[0];
-        currentTutorial.InitTutorial();
+        currentTutorial.InitTutorial(tutorialHUDManager);
     }
 
     private void Update()
@@ -29,7 +32,7 @@ public class TutorialManager : MonoBehaviourSingleton<TutorialManager>
     {
         tutorialPhase++;
         currentTutorial = tutorialList[tutorialPhase];
-        currentTutorial.InitTutorial();
+        currentTutorial.InitTutorial(tutorialHUDManager);
 
         Debug.Log("Current phase: " + tutorialPhase);
     }
