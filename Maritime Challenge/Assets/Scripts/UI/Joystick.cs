@@ -16,6 +16,11 @@ public class Joystick : MonoBehaviour
     private float free_move_width = 0.0f;
     private float free_move_height = 0.0f;
     private bool isHeld = false;
+    public bool IsHeld
+    {
+        get { return isHeld; }
+        private set { }
+    }
     private Vector2 defaultPos;
 
     void Start()

@@ -13,6 +13,13 @@ public class TutorialNPC : MonoBehaviour
 
     private bool isInteractOpen = false;
 
+    private bool interacted = false;
+    public bool Interacted
+    {
+        get { return interacted; }
+        private set { }
+    }
+
     [SerializeField]
     private Image InteractPanel;
 
@@ -98,6 +105,8 @@ public class TutorialNPC : MonoBehaviour
     public void HideInteractPanel()
     {
         StartCoroutine(UIManager.ToggleSlideAnim(InteractPanel, false, 0.2f, null));
+
+        interacted = true;
     }
 
    

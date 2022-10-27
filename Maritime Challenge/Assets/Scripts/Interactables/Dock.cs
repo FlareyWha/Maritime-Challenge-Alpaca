@@ -12,6 +12,13 @@ public class Dock : BaseInteractable
 
     private bool is_docked_here = false;
 
+    private bool interacted;
+    public bool Interacted
+    {
+        get { return interacted; }
+        private set { }
+    }
+
     void Start()
     {
         if (IsStartingDock)
@@ -22,10 +29,19 @@ public class Dock : BaseInteractable
 
     }
 
+    private void Update()
+    {
+        if (interacted)
+            interacted = false;
+    }
+
     public override void Interact()
     {
         if (is_docked_here)
+        {
             PlayerData.MyPlayer.SummonBattleShip(this);
+            interacted = true;
+        }
         else
             PlayerData.MyPlayer.DockShip(this);
 

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class Tutorial
 {
     private int condition;
@@ -13,7 +14,17 @@ public class Tutorial
         set { maxCondition = value; }
     }
 
-    public void IncreaseCondition(int value = 1)
+    public virtual void InitTutorial()
+    {
+
+    }
+
+    public virtual void CheckConditionChanges()
+    {
+
+    }
+
+    protected void IncreaseCondition(int value = 1)
     {
         condition += value;
     }

@@ -22,9 +22,22 @@ public class TeleportManager : MonoBehaviourSingleton<TeleportManager>
     [SerializeField]
     private Button backButton;
 
+    private bool teleported = false;
+    public bool Teleported
+    {
+        get { return teleported; }
+        private set { }
+    }
+
     private void Start()
     {
         rectTransform.anchoredPosition = hiddenCoords;
+    }
+
+    private void Update()
+    {
+        if (teleported)
+            teleported = false;
     }
 
     public void UpdateTeleportInfoPanel(string teleportPointName, string teleportPointDescription, Vector3 teleportCoordinates)
@@ -51,6 +64,7 @@ public class TeleportManager : MonoBehaviourSingleton<TeleportManager>
         PlayerData.MyPlayer.gameObject.transform.position = currentTeleportCoordinates;
         rectTransform.anchoredPosition = hiddenCoords;
 
+        teleported = true;
         //Call loading screen or smth
     }
 }
