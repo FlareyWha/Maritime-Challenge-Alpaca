@@ -15,7 +15,90 @@ public class PlayerStatsManager : MonoBehaviourSingleton<PlayerStatsManager>
 
     public void SaveAllStatsOnQuit()
     {
+        UpdateStats();
         StartCoroutine(DoSaveAllStatsOnQuit());
+    }
+
+    void UpdateStats()
+    {
+        PlayerStats playerStats = PlayerData.PlayerStats;
+
+        playerStats.PlayerStat[(int)PLAYER_STAT.FRIENDS_ADDED] = GetNumberOfFriends();
+        playerStats.PlayerStat[(int)PLAYER_STAT.RIGHTSHIPEDIA_ENTRIES_UNLOCKED] = GetRightshipediaUnlockedEntriesNumber();
+        playerStats.PlayerStat[(int)PLAYER_STAT.BATTLESHIPS_OWNED] = GetOwnedBattleships();
+        playerStats.PlayerStat[(int)PLAYER_STAT.COSMETICS_OWNED] = GetOwnedCosmetics();
+        playerStats.PlayerStat[(int)PLAYER_STAT.TITLES_UNLOCKED] = GetUnlockedTitles();
+        playerStats.PlayerStat[(int)PLAYER_STAT.ACHIEVEMENTS_COMPLETED] = GetCompletedAchievements();
+    }
+
+    int GetNumberOfFriends()
+    {
+        return PlayerData.FriendDataList.Count;
+    }
+
+    int GetRightshipediaUnlockedEntriesNumber()
+    {
+        int unlockedEntries = 0;
+
+        foreach (KeyValuePair<int, BasicInfo> phonebookEntry in PlayerData.PhonebookData)
+        {
+            if (phonebookEntry.Value.Unlocked)
+                unlockedEntries++;
+        }
+
+        return unlockedEntries;
+    }
+
+    int GetOwnedBattleships()
+    {
+        int ownedBattleships = 0;
+
+        foreach (KeyValuePair<BattleshipInfo, bool> battleship in PlayerData.BattleshipList)
+        {
+            if (battleship.Value)
+                ownedBattleships++;
+        }
+
+        return ownedBattleships;
+    }
+
+    int GetOwnedCosmetics()
+    {
+        int ownedCosmetics = 0;
+
+        foreach (KeyValuePair<Cosmetic, bool> cosmetic in PlayerData.CosmeticsList)
+        {
+            if (cosmetic.Value)
+                ownedCosmetics++;
+        }
+
+        return ownedCosmetics;
+    }
+
+    int GetUnlockedTitles()
+    {
+        int unlockedTitles = 0;
+
+        foreach (KeyValuePair<Title, bool> title in PlayerData.TitleDictionary)
+        {
+            if (title.Value)
+                unlockedTitles++;
+        }
+
+        return unlockedTitles;
+    }
+
+    int GetCompletedAchievements()
+    {
+        int completedAchievements = 0;
+
+        foreach (KeyValuePair<Achievement, bool> achievement in PlayerData.AchievementList)
+        {
+            if (achievement.Value)
+                completedAchievements++;
+        }
+
+        return completedAchievements;
     }
 
     IEnumerator DoSaveAllStatsOnQuit()
