@@ -5,6 +5,9 @@ using Mirror;
 
 public class GameHandler : NetworkBehaviour
 {
+    [SerializeField]
+    private GameObject WarningPanel;
+
     #region Singleton
     public static GameHandler Instance = null;
     #endregion
@@ -27,6 +30,17 @@ public class GameHandler : NetworkBehaviour
             yield return null;
 
         Player player = conn.identity.gameObject.GetComponent<Player>();
+
+
+        while (player.GetUID() == 0)
+            yield return null;
+
+        if (player.GetUID() == -1)
+        {
+            onlinePlayers.Add(player);
+            yield break;
+        }
+
         foreach (Player onlinePlayer in onlinePlayers)
         {
             if (player.GetUID() == onlinePlayer.GetUID())
@@ -45,7 +59,10 @@ public class GameHandler : NetworkBehaviour
         Debug.LogWarning("Login Failed: Account is already Online!");
 
         if (player.isLocalPlayer)
+        {
             ConnectionManager.Instance.DisconnectFromServer();
+            Instantiate(WarningPanel);
+        }
     }
 
     [Server]

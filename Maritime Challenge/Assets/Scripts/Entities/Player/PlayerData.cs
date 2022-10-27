@@ -188,7 +188,7 @@ public static class PlayerData // Local Player's Data
 
     public static void InitGuestData()
     {
-        UID = 0;
+        UID = -1;
         Name = "Guest";
         ShowBirthday = false;
         //Birthday = "0000-0-0";
