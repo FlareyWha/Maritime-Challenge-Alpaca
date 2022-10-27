@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class InteractableTutorial : Tutorial
 {
+    [SerializeField]
     private TutorialSign tutorialSign;
 
-    public override void InitTutorial()
+    protected override void Start()
     {
-        tutorialSign = GameObject.Find("TutotialSign").GetComponent<TutorialSign>();
+        base.Start();
+        conditionText = "Interact with the sign.";
     }
 
     public override void CheckConditionChanges()

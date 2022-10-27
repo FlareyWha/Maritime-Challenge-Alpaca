@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class ViewProfileTutorial : Tutorial
 {
+    [SerializeField]
     private TutorialNPC tutorialNPC;
 
-    public override void InitTutorial()
+    protected override void Start()
     {
-        tutorialNPC = GameObject.Find("TutorialNPC").GetComponent<TutorialNPC>();
+        base.Start();
+        conditionText = "View the NPC'S Profile";
     }
 
     public override void CheckConditionChanges()

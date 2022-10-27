@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class DockTutorial : Tutorial
 {
+    [SerializeField]
     private Dock dock;
 
-    public override void InitTutorial()
+    protected override void Start()
     {
-        dock = GameObject.Find("Dock").GetComponent<Dock>();
+        base.Start();
+        conditionText = "Board your battleship at the dock.";
     }
 
     public override void CheckConditionChanges()

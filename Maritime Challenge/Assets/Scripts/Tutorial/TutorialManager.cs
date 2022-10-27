@@ -30,6 +30,8 @@ public class TutorialManager : MonoBehaviourSingleton<TutorialManager>
         tutorialPhase++;
         currentTutorial = tutorialList[tutorialPhase];
         currentTutorial.InitTutorial();
+
+        Debug.Log("Current phase: " + tutorialPhase);
     }
 
     public void SkipTutorial()

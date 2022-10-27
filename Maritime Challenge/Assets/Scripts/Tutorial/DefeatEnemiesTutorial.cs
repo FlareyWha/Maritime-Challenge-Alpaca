@@ -4,24 +4,34 @@ using UnityEngine;
 
 public class DefeatEnemiesTutorial : Tutorial
 {
-
     private List<BaseEnemy> enemies = new List<BaseEnemy>();
+
+    protected override void Start()
+    {
+        base.Start();
+        conditionText = "Defeat all the enemies.";
+    }
 
     public override void InitTutorial()
     {
         enemies.AddRange(GameObject.FindObjectsOfType<BaseEnemy>());
-        MaxCondition = enemies.Count;
+        maxCondition = enemies.Count;
     }
 
     public override void CheckConditionChanges()
     {
+        int indexToRemove = -1;
+
         for (int i = 0; i < enemies.Count; ++i)
         {
             if (enemies[i] == null)
             {
                 IncreaseCondition();
-                enemies.Remove(enemies[i]);
+                indexToRemove = i;
             }
         }
+
+        if (indexToRemove != -1)
+            enemies.Remove(enemies[indexToRemove]);
     }
 }

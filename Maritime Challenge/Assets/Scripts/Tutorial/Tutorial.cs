@@ -3,15 +3,36 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class Tutorial
+public class Tutorial : MonoBehaviour
 {
-    private int condition;
+    protected int condition = 0;
 
-    private int maxCondition;
+    protected int maxCondition;
     public int MaxCondition
     { 
         get { return maxCondition; }
         set { maxCondition = value; }
+    }
+
+    protected string objectiveText;
+    public string ObjectiveText
+    {
+        get { return objectiveText; }
+        private set { }
+    }
+    protected string conditionText;
+    public string ConditionText
+    {
+        get { return conditionText; }
+        private set { }
+    }
+
+
+    protected virtual void Start()
+    {
+        objectiveText = "Do the tutorial.";
+        conditionText = "AAAAAAAAAAAAAAAAAAAA";
+        maxCondition = 1;
     }
 
     public virtual void InitTutorial()
