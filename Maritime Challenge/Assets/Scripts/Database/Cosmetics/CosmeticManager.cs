@@ -34,7 +34,7 @@ public class CosmeticManager : MonoBehaviourSingleton<CosmeticManager>
     public Sprite GetDisplaySprite(int cosmeticID, BODY_PART_TYPE partType)
     {
         if (cosmeticID == 3 && partType == BODY_PART_TYPE.HAIR_BACK)
-            return;
+            return null;
 
         foreach (DisplayCosmeticSO discos in CosmeticDisplaySpritesList)
         {

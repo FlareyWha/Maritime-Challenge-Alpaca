@@ -123,7 +123,7 @@ MonoBehaviour:
   syncPosition: 1
   syncRotation: 0
   syncScale: 0
-  interpolatePosition: 1
+  interpolatePosition: 0
   interpolateRotation: 0
   interpolateScale: 0
   bufferTimeMultiplier: 1
@@ -189,3 +189,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  active: 0

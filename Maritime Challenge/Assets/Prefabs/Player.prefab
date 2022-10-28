@@ -1579,7 +1579,7 @@ MonoBehaviour:
   syncInterval: 0.1
   hp: 100
   maxHp: 100
-  atk: 10
+  atk: 0
   atkspd: 2
   critrate: 0.1
   critdmg: 0.5
@@ -1606,8 +1606,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5a317b54f53daa46838ca0d03acff17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
   PlayerDisplayName: {fileID: 2173444980401618727}
   InteractPanel: {fileID: 1423794624995397429}
   ChatBubbleUIPrefab: {fileID: 2474843570704675809, guid: 31493853d27f2d748a6d9658c5836a71, type: 3}

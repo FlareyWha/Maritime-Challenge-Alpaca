@@ -10,7 +10,7 @@ public class CurrencyPopUp : PopUp
     [SerializeField]
     private Image CurrencyIcon;
     [SerializeField]
-    private Sprite TokenIconSprite, RollarIconSprite, HeartIconSprite;
+    private Sprite TokenIconSprite, RollarIconSprite, HeartIconSprite, XPIconSprite;
 
     private float lifetime = 1.0f;
     private const float rise_speed = 15.0f;
@@ -45,6 +45,9 @@ public class CurrencyPopUp : PopUp
                 break; 
             case CURRENCY_TYPE.FRIENDSHIP_XP:
                 CurrencyIcon.sprite = HeartIconSprite;
+                break;   
+            case CURRENCY_TYPE.PLAYER_XP:
+                CurrencyIcon.sprite = XPIconSprite;
                 break;
             default:
                 break;

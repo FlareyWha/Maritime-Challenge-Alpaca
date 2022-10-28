@@ -236,7 +236,7 @@ public class Battleship : NetworkBehaviour
     private void FireCannon(float theta)
     {
         float rad = Mathf.Deg2Rad * theta;
-        LaunchCannonBall(currTarget.gameObject, GetTurretHoleRefPos(), new Vector3(Mathf.Sin(rad), Mathf.Cos(rad), 0), PlayerData.activeSubScene);
+        LaunchCannonBall(currTarget.gameObject, GetTurretHoleRefPos(), new Vector3(Mathf.Cos(rad), Mathf.Sin(rad), 0), PlayerData.activeSubScene);
     }
 
     private Vector3 GetTurretHoleRefPos()
