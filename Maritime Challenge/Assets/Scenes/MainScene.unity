@@ -2467,7 +2467,7 @@ GameObject:
   - component: {fileID: 155293097}
   - component: {fileID: 155293096}
   m_Layer: 5
-  m_Name: RadialFill
+  m_Name: FriendshipLevelBG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27388,7 +27388,7 @@ MonoBehaviour:
   DisplayAvatar: {fileID: 31232492}
   FriendshipUI: {fileID: 799283025}
   FriendshipLevelText: {fileID: 1079926438}
-  FriendshipXPFill: {fileID: 155293096}
+  FriendshipXPFill: {fileID: 799283027}
   GiftRemainingNumText: {fileID: 150767354}
   GiftButtonIcon: {fileID: 1509721929}
   GiftButton: {fileID: 1509721928}

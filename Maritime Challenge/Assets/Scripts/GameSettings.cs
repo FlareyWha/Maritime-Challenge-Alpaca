@@ -21,7 +21,7 @@ public static class GameSettings
 
     public static int GetFriendshipXPRequirement(int level)
     {
-        return (level * level) + level * 50 + 100;
+        return (level * level) + level * 200 + 100;
     }
 
     public static int CompareDateTime(DateTime t1, DateTime t2)

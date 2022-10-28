@@ -12,7 +12,7 @@ public class AvatarDisplay : MonoBehaviour
 
     [SerializeField]
     private Image UnknownAvatar;
-  
+
     private PlayerAvatarManager playerAvatar = null;
 
     public void SetPlayer(Player player)
@@ -26,7 +26,7 @@ public class AvatarDisplay : MonoBehaviour
         InitPlayerAvatarDisplay();
 
     }
-    
+
     private void InitPlayerAvatarDisplay()
     {
         UnknownAvatar.gameObject.SetActive(false);
@@ -44,7 +44,23 @@ public class AvatarDisplay : MonoBehaviour
         {
             SetAvatarSprite(i, PlayerAvatarManager.NullRefNum);
         }
+        if (!PlayerData.OthersEquippedCosmeticList.ContainsKey(playerID))
+        {
+            StartCoroutine(InitToPlayerSprites(playerID));
+            return;
+        }
         foreach (Cosmetic cos in PlayerData.OthersEquippedCosmeticList[playerID])
+        {
+            SetAvatarSprite(cos.CosmeticBodyPartType, cos.CosmeticID);
+        }
+    }
+
+    IEnumerator InitToPlayerSprites(int id)
+    {
+        while (!PlayerData.OthersEquippedCosmeticList.ContainsKey(id))
+            yield return null;
+
+        foreach (Cosmetic cos in PlayerData.OthersEquippedCosmeticList[id])
         {
             SetAvatarSprite(cos.CosmeticBodyPartType, cos.CosmeticID);
         }

@@ -162,7 +162,9 @@ public class TutorialPromptManager : MonoBehaviourSingleton<TutorialPromptManage
     public void OnDoneButtonPressed()
     {
         if (currTutorialID == TUTORIALID.TUTORIAL_COMPLETE)
+        {
             PlayerData.CommandsHandler.SwitchSubScene("WorldHubScene", SceneManager.StartWorldHubSpawnPos);
+        }
         else
             DeactiveTutorialPrompt();
     }

@@ -207,7 +207,6 @@ public class FriendsManager : MonoBehaviourSingleton<FriendsManager>
         {
             int currXP = friend.FriendshipXP + xpGained;
             int currLevel = friend.FriendshipLevel;
-            int friendshipLevel = 0, friendshipXP = 0;
             bool finishedLevelingUp = false;
 
             do
@@ -229,8 +228,8 @@ public class FriendsManager : MonoBehaviourSingleton<FriendsManager>
             friend.FriendshipLevel = currLevel;
             friend.FriendshipXP = currXP;
 
-            StartCoroutine(DoUpdateFriendshipXPLevels(PlayerData.UID, friendUID, friendshipLevel, friendshipXP));
-            StartCoroutine(DoUpdateFriendshipXPLevels(friendUID, PlayerData.UID, friendshipLevel, friendshipXP));
+            StartCoroutine(DoUpdateFriendshipXPLevels(PlayerData.UID, friendUID, friend.FriendshipLevel, friend.FriendshipXP));
+            StartCoroutine(DoUpdateFriendshipXPLevels(friendUID, PlayerData.UID, friend.FriendshipLevel, friend.FriendshipXP));
         }
     }
 
@@ -239,17 +238,20 @@ public class FriendsManager : MonoBehaviourSingleton<FriendsManager>
         string url = ServerDataManager.URL_updateFriendshipXPLevels;
         Debug.Log(url);
 
+        Debug.Log("öwner uid: " + ownerUID + "frienmd id: " + friendUID + "level: " + friendshipLevel + " xp: " + friendshipXP);
+
         WWWForm form = new WWWForm();
         form.AddField("iOwnerUID", ownerUID);
         form.AddField("iFriendUID", friendUID);
+        form.AddField("iFriendshipLevel", friendshipLevel);
+        form.AddField("iFriendshipXP", friendshipXP);
         using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
         yield return webreq.SendWebRequest();
         switch (webreq.result)
         {
             case UnityWebRequest.Result.Success:
-                //Deseralize the data
-                FriendInfo friend = JSONDeseralizer.DeseralizeFriendData(friendUID, webreq.downloadHandler.text);
-                OnNewFriendDataSaved?.Invoke(friend);
+                OnFriendListUpdated?.Invoke();
+                Debug.Log(webreq.downloadHandler.text);
                 break;
             case UnityWebRequest.Result.ProtocolError:
                 Debug.LogError(webreq.downloadHandler.text);

@@ -144,7 +144,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: dbab751c41907b64993a5c55112d508e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 52f934601c997db458a0cc96fc6bc8db, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -252,6 +252,7 @@ MonoBehaviour:
   CurrencyIcon: {fileID: 7645800680247903835}
   TokenIconSprite: {fileID: 21300000, guid: 5d232a1997278c74cbc1f35c9fb71863, type: 3}
   RollarIconSprite: {fileID: 21300000, guid: dbab751c41907b64993a5c55112d508e, type: 3}
+  HeartIconSprite: {fileID: 21300000, guid: 52f934601c997db458a0cc96fc6bc8db, type: 3}
 --- !u!114 &4236282942774558985
 MonoBehaviour:
   m_ObjectHideFlags: 0
