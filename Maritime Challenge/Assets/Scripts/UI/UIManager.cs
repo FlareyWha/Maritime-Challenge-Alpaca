@@ -56,7 +56,7 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
     {
         base.Awake();
 
-        ContactsManager.OnNewRightShipediaEntry += SetInteractNamecardDetails;
+        ContactsManager.OnNewRightShipediaEntry += OnNewRightShipediaEntry;
         FriendsManager.OnFriendListUpdated += OnFriendListUpdated;
         FriendsManager.OnNewFriendDataSaved += OnFriendDataSaved;
         FriendRequestHandler.OnFriendRequestSent += OnFriendRequestsUpdated;
@@ -67,7 +67,7 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
     {
         base.OnDestroy();
 
-        ContactsManager.OnNewRightShipediaEntry -= SetInteractNamecardDetails;
+        ContactsManager.OnNewRightShipediaEntry -= OnNewRightShipediaEntry;
         FriendsManager.OnFriendListUpdated -= OnFriendListUpdated;
         FriendsManager.OnNewFriendDataSaved -= OnFriendDataSaved;
         FriendRequestHandler.OnFriendRequestSent -= OnFriendRequestsUpdated;

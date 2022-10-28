@@ -17,6 +17,8 @@ public class MailboxUIManager : MonoBehaviourSingleton<MailboxUIManager>
 
     protected override void Awake()
     {
+        base.Awake();
+
         UpdateMailRect();
     }
 
