@@ -288,3 +288,17 @@ public class JSONMailDataList
 {
     public List<JSONMailData> mailData = new List<JSONMailData>();
 }
+
+[System.Serializable]
+public class JSONTutorialPrompt
+{
+    public string TutorialID;
+    public string ImageFilePath;
+    public string Description;
+}
+
+[System.Serializable]
+public class TutorialPromptObject
+{
+    public List<JSONTutorialPrompt> tutorialPromptObject = new List<JSONTutorialPrompt>();
+}

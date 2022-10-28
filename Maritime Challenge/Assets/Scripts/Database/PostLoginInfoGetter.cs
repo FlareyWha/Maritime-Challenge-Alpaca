@@ -37,6 +37,8 @@ public class PostLoginInfoGetter : MonoBehaviour
         if (!PlayerData.CheckForDailyReset())
             PlayerStatsManager.Instance.UpdatePlayerStat(PLAYER_STAT.LOGIN, ++PlayerData.PlayerStats.PlayerStat[(int)PLAYER_STAT.LOGIN]);
 
+        PlayerStatsManager.Instance.SaveAllStats();
+
         //Connect to server once all the info has been recieved
         loginManager.ConnectToServer();
     }

@@ -187,7 +187,7 @@ public static class PlayerData // Local Player's Data
 
     public static void OnExitSaveData()
     {
-        PlayerStatsManager.Instance.SaveAllStatsOnQuit();
+        PlayerStatsManager.Instance.SaveAllStats();
         PlayerStatsManager.Instance.UpdateLastPosition(Vector3Int.FloorToInt(MyPlayer.transform.position));
     }
 

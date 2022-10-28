@@ -13,7 +13,7 @@ public class PlayerStatsManager : MonoBehaviourSingleton<PlayerStatsManager>
         StartCoroutine(DoUpdatePlayerStat(PlayerData.PlayerStats.statNames[(int)playerStat], statAmount));
     }
 
-    public void SaveAllStatsOnQuit()
+    public void SaveAllStats()
     {
         UpdateStats();
         StartCoroutine(DoSaveAllStatsOnQuit());

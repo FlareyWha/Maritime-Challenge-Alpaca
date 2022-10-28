@@ -18,6 +18,7 @@ public class TutorialManager : MonoBehaviourSingleton<TutorialManager>
     {
         currentTutorial = tutorialList[0];
         currentTutorial.InitTutorial(tutorialHUDManager);
+        TutorialPromptManager.Instance.ActivateTutorialPrompt((TUTORIALID)tutorialPhase);
     }
 
     private void Update()
@@ -31,12 +32,13 @@ public class TutorialManager : MonoBehaviourSingleton<TutorialManager>
     void ActivateNextPhase()
     {
         if (tutorialPhase == tutorialList.Length - 1)
-            TutorialPromptManager.Instance.ActivateTutorialPrompt();
+            TutorialPromptManager.Instance.ActivateTutorialPrompt(TUTORIALID.TUTORIAL_COMPLETE);
         else
         {
             tutorialPhase++;
             currentTutorial = tutorialList[tutorialPhase];
             currentTutorial.InitTutorial(tutorialHUDManager);
+            TutorialPromptManager.Instance.ActivateTutorialPrompt((TUTORIALID)tutorialPhase);
         }
 
         Debug.Log("Current phase: " + tutorialPhase);
