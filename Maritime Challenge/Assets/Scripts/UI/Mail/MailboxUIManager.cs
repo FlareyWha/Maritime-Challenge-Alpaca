@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MailboxUIManager : MonoBehaviour
+public class MailboxUIManager : MonoBehaviourSingleton<MailboxUIManager>
 {
     [SerializeField]
     private GameObject MailUIPrefab;
@@ -15,12 +15,12 @@ public class MailboxUIManager : MonoBehaviour
     private GameObject EmptyMailboxPanel;
 
 
-    private void Awake()
+    protected override void Awake()
     {
         UpdateMailRect();
     }
 
-    private void UpdateMailRect()
+    public void UpdateMailRect()
     {
         // Clear
         foreach (Transform child in MailRect)

@@ -52,12 +52,26 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
 
     //private float timer = 0.0f;
 
-    void Start()
+    protected override void Awake()
     {
+        base.Awake();
+
+        ContactsManager.OnNewRightShipediaEntry += SetInteractNamecardDetails;
         FriendsManager.OnFriendListUpdated += OnFriendListUpdated;
         FriendsManager.OnNewFriendDataSaved += OnFriendDataSaved;
         FriendRequestHandler.OnFriendRequestSent += OnFriendRequestsUpdated;
         FriendRequestHandler.OnFriendRequestDeleted += OnFriendRequestsUpdated;
+    }
+
+    protected override void OnDestroy()
+    {
+        base.OnDestroy();
+
+        ContactsManager.OnNewRightShipediaEntry -= SetInteractNamecardDetails;
+        FriendsManager.OnFriendListUpdated -= OnFriendListUpdated;
+        FriendsManager.OnNewFriendDataSaved -= OnFriendDataSaved;
+        FriendRequestHandler.OnFriendRequestSent -= OnFriendRequestsUpdated;
+        FriendRequestHandler.OnFriendRequestDeleted -= OnFriendRequestsUpdated;
     }
 
     public void ToggleMainUI(bool show)
@@ -134,6 +148,12 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
             InteractNamecard.SetHidden(PlayerData.FindPlayerInfoByID(playerID));
         else
             InteractNamecard.SetUnknown(playerID);
+    }
+
+    private void OnNewRightShipediaEntry(int id)
+    {
+        if (InteractNamecard.GetPlayerID() == id)
+            SetInteractNamecardDetails(id);
     }
 
     private void SetFriendInteractNamecardDetails(int id)

@@ -36,12 +36,14 @@ public class ContactsManager : MonoBehaviourSingleton<ContactsManager>
 
     private ContactsUI currSelected = null;
 
-    public delegate void NewRightShipediaEntry();
+    public delegate void NewRightShipediaEntry(int id);
     public static event NewRightShipediaEntry OnNewRightShipediaEntry;
 
-    private void Start()
+    protected override void Awake()
     {
-        OnNewRightShipediaEntry += UpdateContactsListRect;
+        base.Awake();
+
+        OnNewRightShipediaEntry += OnNewEntryUnlocked;
         FriendsManager.OnFriendListUpdated += UpdateDisplay;
         FriendsManager.OnNewFriendDataSaved += OnFriendDataSaved;
         FriendRequestHandler.OnFriendRequestSent += OnFriendRequestsUpdated;
@@ -50,9 +52,11 @@ public class ContactsManager : MonoBehaviourSingleton<ContactsManager>
         UpdateContactsListRect();
         UpdateGiftUI();
     }
-    private void OnDestroy()
+    protected override void OnDestroy()
     {
-        OnNewRightShipediaEntry -= UpdateContactsListRect;
+        base.OnDestroy();
+
+        OnNewRightShipediaEntry -= OnNewEntryUnlocked;
         FriendsManager.OnFriendListUpdated -= UpdateDisplay;
         FriendsManager.OnNewFriendDataSaved -= OnFriendDataSaved;
         FriendRequestHandler.OnFriendRequestSent -= OnFriendRequestsUpdated;
@@ -103,6 +107,11 @@ public class ContactsManager : MonoBehaviourSingleton<ContactsManager>
 
     }
 
+    private void OnNewEntryUnlocked(int id)
+    {
+        UpdateContactsListRect();
+    }
+
     public void SetSelectedContact(ContactsUI contact)
     {
         if (currSelected != null)
@@ -112,15 +121,17 @@ public class ContactsManager : MonoBehaviourSingleton<ContactsManager>
         UpdateDisplay();
     }
 
-    public void InvokeNewRightShipediaEntryEvent()
+    public void InvokeNewRightShipediaEntryEvent(int id)
     {
-        OnNewRightShipediaEntry?.Invoke();
+        OnNewRightShipediaEntry?.Invoke(id);
     }
 
     public void OnGiftButtonClicked()
     {
         int numTokens = Random.Range(GameSettings.MinNumGiftTokens, GameSettings.MaxNumGiftTokens);
         MailboxManager.Instance.SendFriendshipGiftMail(currSelected.GetContactInfo().UID, numTokens);
+
+        GameHandler.Instance.SendMailBoxEvent(currSelected.GetContactInfo().UID);
 
         PlayerStatsManager.Instance.UpdatePlayerStat(PLAYER_STAT.GIFTS_SENT_DAILY, ++PlayerData.PlayerStats.PlayerStat[(int)PLAYER_STAT.GIFTS_SENT_DAILY]);
         PlayerStatsManager.Instance.UpdatePlayerStat(PLAYER_STAT.GIFTS_SENT_WEEKLY, ++PlayerData.PlayerStats.PlayerStat[(int)PLAYER_STAT.GIFTS_SENT_WEEKLY]);

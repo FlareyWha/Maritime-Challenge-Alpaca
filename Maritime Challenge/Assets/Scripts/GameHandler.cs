@@ -198,7 +198,26 @@ public class GameHandler : NetworkBehaviour
         }
     }
 
-   
+    public void SendMailBoxEvent(int recID)
+    {
+        Debug.Log("COMMAND: Sending Mail Event for: " + recID + "from " + PlayerData.UID);
+        SendMailBoxEventtoServer(recID);
+    }
+
+    [Command(requiresAuthority = false)]
+    private void SendMailBoxEventtoServer(int recID)
+    {
+        Debug.Log("SERVER RECEIVED COMMAND: Sending Mail Event for: " + recID);
+        MailBoxReceived(recID);
+    }
+
+    [ClientRpc]
+    private void MailBoxReceived(int recID)
+    {
+        Debug.Log("CLIENT RPC: Received Mail Event for: " + recID);
+        if (PlayerData.UID == recID)
+            MailboxUIManager.Instance.UpdateMailRect();
+    }
 
     public void SendFriendRemovedEvent(int recID)
     {

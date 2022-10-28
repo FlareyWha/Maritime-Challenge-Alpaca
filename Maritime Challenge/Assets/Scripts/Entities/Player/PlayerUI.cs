@@ -133,7 +133,7 @@ public class PlayerUI : MonoBehaviour
                 Debug.Log(webreq.downloadHandler.text);
                 PlayerData.PhonebookData[playerID].Unlocked = true;
 
-                ContactsManager.Instance.InvokeNewRightShipediaEntryEvent();
+                ContactsManager.Instance.InvokeNewRightShipediaEntryEvent(playerID);
 
                 break;
             case UnityWebRequest.Result.ProtocolError:
