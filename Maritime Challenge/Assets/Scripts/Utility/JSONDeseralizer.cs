@@ -261,4 +261,24 @@ public class JSONDeseralizer : MonoBehaviour
 
         return mailList;
     }
+
+    public static List<TutorialPrompt> DeseralizeTutorialPrompts(TextAsset tutorialJSON)
+    {
+        TutorialPromptObject tutorialPromptObject = JsonUtility.FromJson<TutorialPromptObject>(tutorialJSON.text);
+        List<TutorialPrompt> tutorialPromptList = new List<TutorialPrompt>();
+
+        for (int i = 0; i < tutorialPromptObject.tutorialPromptObject.Count; ++i)
+        {
+            TutorialPrompt tutorialPrompt = new TutorialPrompt();
+
+            tutorialPrompt.TutorialID = (TUTORIALID)Enum.Parse(typeof(TUTORIALID), tutorialPromptObject.tutorialPromptObject[i].TutorialID);
+            tutorialPrompt.Description = tutorialPromptObject.tutorialPromptObject[i].Description;
+
+            tutorialPrompt.ImageFilePath = "Tutorial/Images/" + tutorialPromptObject.tutorialPromptObject[i].ImageFilePath;
+
+            tutorialPromptList.Add(tutorialPrompt);
+        }
+
+        return tutorialPromptList;
+    }
 }
