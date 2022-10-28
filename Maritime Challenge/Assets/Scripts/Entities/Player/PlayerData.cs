@@ -58,7 +58,7 @@ public static class PlayerData // Local Player's Data
     // Stores all the mail that you have
     public static List<Mail> MailList = new List<Mail>();
 
-
+    
     public delegate void PlayerDataUpdated();
     public static event PlayerDataUpdated OnPlayerDataUpdated;
 

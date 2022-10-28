@@ -153,6 +153,13 @@ public class GameHandler : NetworkBehaviour
         }
         else if (recID == PlayerData.UID)
         {
+            if (!PlayerData.PhonebookData[senderID].Unlocked)
+            {
+                StartCoroutine(PlayerUI.UpdatePhonebookOtherUnlocked(senderID));
+                PlayerData.MyPlayer.UpdateXPLevels(300);
+                PlayerStatsManager.Instance.UpdatePlayerStat(PLAYER_STAT.RIGHTSHIPEDIA_ENTRIES_UNLOCKED, ++PlayerData.PlayerStats.PlayerStat[(int)PLAYER_STAT.RIGHTSHIPEDIA_ENTRIES_UNLOCKED]);
+            }
+
             PlayerData.ReceivedFriendRequestList.Add(senderID);
             FriendRequestHandler.InvokeFriendRequestSentEvent(senderID, recID);
         }
@@ -190,6 +197,8 @@ public class GameHandler : NetworkBehaviour
             FriendsManager.Instance.InvokeOnFriendListUpdated();
         }
     }
+
+   
 
     public void SendFriendRemovedEvent(int recID)
     {

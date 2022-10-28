@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Networking;
 
-public class ContactsManager : MonoBehaviour
+public class ContactsManager : MonoBehaviourSingleton<ContactsManager>
 {
     [SerializeField]
     private GameObject ContactUIPrefab;
@@ -36,8 +36,12 @@ public class ContactsManager : MonoBehaviour
 
     private ContactsUI currSelected = null;
 
+    public delegate void NewRightShipediaEntry();
+    public static event NewRightShipediaEntry OnNewRightShipediaEntry;
+
     private void Start()
     {
+        OnNewRightShipediaEntry += UpdateContactsListRect;
         FriendsManager.OnFriendListUpdated += UpdateDisplay;
         FriendsManager.OnNewFriendDataSaved += OnFriendDataSaved;
         FriendRequestHandler.OnFriendRequestSent += OnFriendRequestsUpdated;
@@ -48,6 +52,7 @@ public class ContactsManager : MonoBehaviour
     }
     private void OnDestroy()
     {
+        OnNewRightShipediaEntry -= UpdateContactsListRect;
         FriendsManager.OnFriendListUpdated -= UpdateDisplay;
         FriendsManager.OnNewFriendDataSaved -= OnFriendDataSaved;
         FriendRequestHandler.OnFriendRequestSent -= OnFriendRequestsUpdated;
@@ -107,6 +112,10 @@ public class ContactsManager : MonoBehaviour
         UpdateDisplay();
     }
 
+    public void InvokeNewRightShipediaEntryEvent()
+    {
+        OnNewRightShipediaEntry?.Invoke();
+    }
 
     public void OnGiftButtonClicked()
     {

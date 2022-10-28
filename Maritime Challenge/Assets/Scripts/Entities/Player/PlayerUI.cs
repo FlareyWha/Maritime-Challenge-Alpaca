@@ -103,7 +103,7 @@ public class PlayerUI : MonoBehaviour
         //Unlock the phonebook data if other isnt unlocked to begin with
         if (!PlayerData.PhonebookData[player.GetUID()].Unlocked)
         {
-            StartCoroutine(UpdatePhonebookOtherUnlocked(player));
+            StartCoroutine(UpdatePhonebookOtherUnlocked(player.GetUID()));
             PlayerData.MyPlayer.UpdateXPLevels(300);
             PlayerStatsManager.Instance.UpdatePlayerStat(PLAYER_STAT.RIGHTSHIPEDIA_ENTRIES_UNLOCKED, ++PlayerData.PlayerStats.PlayerStat[(int)PLAYER_STAT.RIGHTSHIPEDIA_ENTRIES_UNLOCKED]);
         }
@@ -116,16 +116,14 @@ public class PlayerUI : MonoBehaviour
         interactPlayer = player;
     }
 
-    IEnumerator UpdatePhonebookOtherUnlocked(Player player)
+    public static IEnumerator UpdatePhonebookOtherUnlocked(int playerID)
     {
         string url = ServerDataManager.URL_updatePhonebookOtherUnlocked;
         Debug.Log(url);
 
-        int otherUID = player.GetUID();
-
         WWWForm form = new WWWForm();
         form.AddField("UID", PlayerData.UID);
-        form.AddField("OtherUID", otherUID);
+        form.AddField("OtherUID", playerID);
         using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
         yield return webreq.SendWebRequest();
         switch (webreq.result)
@@ -133,10 +131,9 @@ public class PlayerUI : MonoBehaviour
             case UnityWebRequest.Result.Success:
                 //Deseralize the data
                 Debug.Log(webreq.downloadHandler.text);
+                PlayerData.PhonebookData[playerID].Unlocked = true;
 
-                PlayerData.PhonebookData[otherUID].Unlocked = true;
-
-                UIManager.Instance.SetInteractNamecardDetails(player);
+                ContactsManager.Instance.InvokeNewRightShipediaEntryEvent();
 
                 break;
             case UnityWebRequest.Result.ProtocolError:
