@@ -65,7 +65,7 @@ public class AvatarCustomisationManager : MonoBehaviourSingleton<AvatarCustomisa
         }
     }
      
-    private void UpdateInventoryRect(COSMETIC_TYPE type)
+    public void UpdateInventoryRect(COSMETIC_TYPE type)
     {
         // Clear
         Transform rect = CustomisablesRect[(int)type];

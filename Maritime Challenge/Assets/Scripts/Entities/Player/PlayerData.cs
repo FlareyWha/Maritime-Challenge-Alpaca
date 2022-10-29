@@ -258,6 +258,10 @@ public static class PlayerData // Local Player's Data
     {
         BattleshipList[shipInfo] = true;
     }
+    public static void SetCosmeticUnlocked(Cosmetic cosmetic)
+    {
+        CosmeticsList[cosmetic] = true;
+    }
     public static void SetUsername(string name)
     {
         Name = name;
