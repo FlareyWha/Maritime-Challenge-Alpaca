@@ -235,8 +235,13 @@ public class Battleship : NetworkBehaviour
 
     private void FireCannon(float theta)
     {
+        // ASSUMING +Y AXIS START
+        //x 
+        // 0 - 0, 90 - -1, 180 - 0, 270 - 1
+        // y
+        // 0 - 1, 90 - 0, 180 - -1, 270 - 0
         float rad = Mathf.Deg2Rad * theta;
-        LaunchCannonBall(currTarget.gameObject, GetTurretHoleRefPos(), new Vector3(Mathf.Cos(rad), Mathf.Sin(rad), 0), PlayerData.activeSubScene);
+        LaunchCannonBall(currTarget.gameObject, GetTurretHoleRefPos(), new Vector3(-Mathf.Sin(rad), Mathf.Cos(rad), 0), PlayerData.activeSubScene);
     }
 
     private Vector3 GetTurretHoleRefPos()

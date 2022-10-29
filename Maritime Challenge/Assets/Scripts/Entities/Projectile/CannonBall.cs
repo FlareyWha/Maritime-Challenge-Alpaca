@@ -17,10 +17,9 @@ public class CannonBall : BaseProjectile
     [Server]
     public void Init(GameObject target, Vector3 initialDir, Player owner)
     {
-        float launch_force = 20.0f;
         this.target = target.GetComponent<BaseEnemy>();
         this.ownerPlayer = owner;
-        velocity = initialDir * launch_force * SPEED;// (target.transform.position - transform.position).normalized * SPEED;
+        velocity = initialDir * SPEED;// (target.transform.position - transform.position).normalized * SPEED;
 
         target.GetComponent<BaseEntity>().OnEntityDied += OnTargetDiedCallback;
         //Show();
