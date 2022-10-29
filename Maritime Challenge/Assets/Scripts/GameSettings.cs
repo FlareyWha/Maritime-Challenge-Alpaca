@@ -14,6 +14,11 @@ public static class GameSettings
 
     public static DateTime DailyResetTime = new DateTime(2022, 01, 01, 00, 00, 00);
 
+    public static float WORLD_MIN_X = -160.0f;
+    public static float WORLD_MAX_X = 192.0f;
+    public static float WORLD_MIN_Y = -86.0f;
+    public static float WORLD_MAX_Y = 86.0f;
+
     public static int GetEXPRequirement(int level)
     {
         return (level * level * 2) + level * 50 + 300;

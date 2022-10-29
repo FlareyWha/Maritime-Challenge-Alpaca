@@ -42,7 +42,7 @@ public class Battleship : NetworkBehaviour
     private float angular_deccel_rate = 5.0f;
     private float accel_rate = 20.0f;
     private float deccel_rate = 10.0f;
-    private const float MAX_VEL = 10.0f;
+    private const float MAX_VEL = 12.0f;
     private const float MAX_ANGULAR_VEL = 40.0f;
 
     private const float TARGET_RANGE = 30.0f;

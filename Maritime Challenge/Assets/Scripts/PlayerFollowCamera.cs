@@ -7,7 +7,7 @@ public class PlayerFollowCamera : MonoBehaviourSingleton<PlayerFollowCamera>
     private Camera cam;
     private GameObject followTarget;
 
-    private bool in_anim = false;
+    //private bool in_anim = false;
     private float defaultOrthoSize;
 
     void Start()
@@ -25,6 +25,8 @@ public class PlayerFollowCamera : MonoBehaviourSingleton<PlayerFollowCamera>
             newPos.y = Mathf.Lerp(transform.position.y, followTarget.transform.position.y, 0.1f);
             newPos.z = transform.position.z;
             transform.position = newPos;
+
+            ConstraintToWorldBounds();
         }
     }
 
@@ -54,8 +56,7 @@ public class PlayerFollowCamera : MonoBehaviourSingleton<PlayerFollowCamera>
             yield break;
 
 
-
-        in_anim = true;
+       
         cam.orthographicSize = startSize;
 
         float zoom_rate = (endSize - startSize) / anim_time;
@@ -69,7 +70,6 @@ public class PlayerFollowCamera : MonoBehaviourSingleton<PlayerFollowCamera>
         }
 
         cam.orthographicSize = endSize;
-        in_anim = false;
 
 
     }
@@ -89,9 +89,6 @@ public class PlayerFollowCamera : MonoBehaviourSingleton<PlayerFollowCamera>
         if (cam.transform.rotation.eulerAngles.z == theta)
             yield break;
 
-
-        in_anim = true;
-
         float spin_rate = (theta - cam.transform.rotation.eulerAngles.z) / anim_time;
 
         float timer = anim_time;
@@ -106,8 +103,6 @@ public class PlayerFollowCamera : MonoBehaviourSingleton<PlayerFollowCamera>
 
         cam.transform.rotation = Quaternion.Euler(cam.transform.rotation.eulerAngles.x, 
             cam.transform.rotation.eulerAngles.y, theta);
-        in_anim = false;
-
 
     }
 
@@ -116,5 +111,16 @@ public class PlayerFollowCamera : MonoBehaviourSingleton<PlayerFollowCamera>
         StartCoroutine(RotateCameraAnim(0, anim_time));
         ResetCameraZoom(anim_time);
         SetFollowTarget(PlayerData.MyPlayer.gameObject);
+    }
+
+    private void ConstraintToWorldBounds()
+    {
+        Vector3 pos = transform.position;
+
+        float cam_size_x = Camera.main.orthographicSize * ((float)Screen.width / Screen.height);
+        pos.x = Mathf.Clamp(transform.position.x, GameSettings.WORLD_MIN_X + cam_size_x, GameSettings.WORLD_MAX_X - cam_size_x);
+        pos.y = Mathf.Clamp(transform.position.y, GameSettings.WORLD_MIN_Y + cam.orthographicSize, GameSettings.WORLD_MAX_Y - cam.orthographicSize);
+
+        transform.position = pos;
     }
 }
