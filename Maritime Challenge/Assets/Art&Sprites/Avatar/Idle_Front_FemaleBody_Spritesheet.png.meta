@@ -1,0 +1,876 @@
+fileFormatVersion: 2
+guid: 062212c5c75714941afdac131a43bd09
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5748532956864040277
+    second: Idle_Front_FemaleBody_Spritesheet_0
+  - first:
+      213: 5109419105189758734
+    second: Idle_Front_FemaleBody_Spritesheet_1
+  - first:
+      213: 217707174474859021
+    second: Idle_Front_FemaleBody_Spritesheet_2
+  - first:
+      213: 1532853820625513533
+    second: Idle_Front_FemaleBody_Spritesheet_3
+  - first:
+      213: -3350665170016984366
+    second: Idle_Front_FemaleBody_Spritesheet_4
+  - first:
+      213: -6360406777554993840
+    second: Idle_Front_FemaleBody_Spritesheet_5
+  - first:
+      213: -7533238080255355847
+    second: Idle_Front_FemaleBody_Spritesheet_6
+  - first:
+      213: -6070666246574541699
+    second: Idle_Front_FemaleBody_Spritesheet_7
+  - first:
+      213: -3902288067577313386
+    second: Idle_Front_FemaleBody_Spritesheet_8
+  - first:
+      213: -3645609186101713781
+    second: Idle_Front_FemaleBody_Spritesheet_9
+  - first:
+      213: 6337670319424740565
+    second: Idle_Front_FemaleBody_Spritesheet_10
+  - first:
+      213: -4990077763840216778
+    second: Idle_Front_FemaleBody_Spritesheet_11
+  - first:
+      213: -8932372653788202497
+    second: Idle_Front_FemaleBody_Spritesheet_12
+  - first:
+      213: 1241701624237100909
+    second: Idle_Front_FemaleBody_Spritesheet_13
+  - first:
+      213: -4361804208460023027
+    second: Idle_Front_FemaleBody_Spritesheet_14
+  - first:
+      213: -6604388327515179734
+    second: Idle_Front_FemaleBody_Spritesheet_15
+  - first:
+      213: -3850127903216495694
+    second: Idle_Front_FemaleBody_Spritesheet_16
+  - first:
+      213: 3469914516629364289
+    second: Idle_Front_FemaleBody_Spritesheet_17
+  - first:
+      213: -2172442849402347083
+    second: Idle_Front_FemaleBody_Spritesheet_18
+  - first:
+      213: 3584224893410103551
+    second: Idle_Front_FemaleBody_Spritesheet_19
+  - first:
+      213: -2610128556180611449
+    second: Idle_Front_FemaleBody_Spritesheet_20
+  - first:
+      213: 1364782115784860245
+    second: Idle_Front_FemaleBody_Spritesheet_21
+  - first:
+      213: 1144964190667265490
+    second: Idle_Front_FemaleBody_Spritesheet_22
+  - first:
+      213: 7790997453215075822
+    second: Idle_Front_FemaleBody_Spritesheet_23
+  - first:
+      213: -1235441998615407894
+    second: Idle_Front_FemaleBody_Spritesheet_24
+  - first:
+      213: 503548222404515266
+    second: Idle_Front_FemaleBody_Spritesheet_25
+  - first:
+      213: 8972306904718733121
+    second: Idle_Front_FemaleBody_Spritesheet_26
+  - first:
+      213: -8532149101767703637
+    second: Idle_Front_FemaleBody_Spritesheet_27
+  - first:
+      213: -571613593408192634
+    second: Idle_Front_FemaleBody_Spritesheet_28
+  - first:
+      213: -2637360927947272096
+    second: Idle_Front_FemaleBody_Spritesheet_29
+  - first:
+      213: -3849169974117547746
+    second: Idle_Front_FemaleBody_Spritesheet_30
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Idle_Front_FemaleBody_Spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1648
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55dc1896444e6cf40800000000000000
+      internalID: 5748532956864040277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Front_FemaleBody_Spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1648
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e070e65fa9d48e640800000000000000
+      internalID: 5109419105189758734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Front_FemaleBody_Spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1648
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d02c0af8583750300800000000000000
+      internalID: 217707174474859021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Front_FemaleBody_Spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1648
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3cebfead6ac54510800000000000000
+      internalID: 1532853820625513533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Front_FemaleBody_Spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1648
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d22ddbc7cb0081d0800000000000000
+      internalID: -3350665170016984366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Front_FemaleBody_Spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1648
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05df8d41cbb4bb7a0800000000000000
+      internalID: -6360406777554993840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Front_FemaleBody_Spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1648
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9341fe9f0ef847790800000000000000
+      internalID: -7533238080255355847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Front_FemaleBody_Spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1648
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7478f66639a0cba0800000000000000
+      internalID: -6070666246574541699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Front_FemaleBody_Spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1248
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6970fc08da948d9c0800000000000000
+      internalID: -3902288067577313386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Front_FemaleBody_Spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1248
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b84a180b2c1386dc0800000000000000
+      internalID: -3645609186101713781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Front_FemaleBody_Spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1248
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dc19dcb39de3f750800000000000000
+      internalID: 6337670319424740565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Front_FemaleBody_Spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1248
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6317abc56beafbab0800000000000000
+      internalID: -4990077763840216778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Front_FemaleBody_Spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1248
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff97a89a566d90480800000000000000
+      internalID: -8932372653788202497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Front_FemaleBody_Spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1248
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6f8da56c096b3110800000000000000
+      internalID: 1241701624237100909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Front_FemaleBody_Spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1248
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0bbfe6ae22c773c0800000000000000
+      internalID: -4361804208460023027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Front_FemaleBody_Spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1248
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a25b8b3cecf7854a0800000000000000
+      internalID: -6604388327515179734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Front_FemaleBody_Spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 848
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b316f42219919ac0800000000000000
+      internalID: -3850127903216495694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Front_FemaleBody_Spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 848
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14e1aa45edc972030800000000000000
+      internalID: 3469914516629364289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Front_FemaleBody_Spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 848
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b129821dbee9d1e0800000000000000
+      internalID: -2172442849402347083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Front_FemaleBody_Spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 848
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff052deec89bdb130800000000000000
+      internalID: 3584224893410103551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Front_FemaleBody_Spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 848
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78e50ce38e5f6cbd0800000000000000
+      internalID: -2610128556180611449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Front_FemaleBody_Spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 848
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 552a9277a1ea0f210800000000000000
+      internalID: 1364782115784860245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Front_FemaleBody_Spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 848
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d5d3497ddab3ef00800000000000000
+      internalID: 1144964190667265490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Front_FemaleBody_Spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 848
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eed8bdcb7ee2f1c60800000000000000
+      internalID: 7790997453215075822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Front_FemaleBody_Spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 448
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae21ee34c04dadee0800000000000000
+      internalID: -1235441998615407894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Front_FemaleBody_Spritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 448
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c553bbb076fcf600800000000000000
+      internalID: 503548222404515266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Front_FemaleBody_Spritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 448
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14f6b8fa799048c70800000000000000
+      internalID: 8972306904718733121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Front_FemaleBody_Spritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 448
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba3c772e897b79980800000000000000
+      internalID: -8532149101767703637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Front_FemaleBody_Spritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 448
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68fbe1027783118f0800000000000000
+      internalID: -571613593408192634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Front_FemaleBody_Spritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 448
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06055399536366bd0800000000000000
+      internalID: -2637360927947272096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Front_FemaleBody_Spritesheet_30
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 448
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e11cf946d40059ac0800000000000000
+      internalID: -3849169974117547746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

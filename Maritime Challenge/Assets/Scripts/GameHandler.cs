@@ -67,27 +67,24 @@ public class GameHandler : NetworkBehaviour
     [Server]
     public void OnPlayerQuit(NetworkConnectionToClient conn)
     {
-        Debug.Log("Removing Player from Online List..");
         onlinePlayers.Remove(conn.connectionId);
+        Debug.Log("Removing Player from Online List.." + "Online Players Count: " + onlinePlayers.Count);
     }
 
     public void SendChatMessage(string message)
     {
-        Debug.Log("Sending A Message..");
         SendMessageToServer(ChatManager.Instance.GetChatType(), PlayerData.MyPlayer, message);
     }
 
     [Command(requiresAuthority = false)]
     private void SendMessageToServer(CHAT_TYPE type, Player player, string message)
     {
-        Debug.Log("Sending Message to Server");
         UpdateChatLog(type, player, player.GetGuildID(), player.GetUsername(), message);
     }
 
     [ClientRpc]
     private void UpdateChatLog(CHAT_TYPE chat_type, Player player, int guildID, string playerName, string message)
     {
-        Debug.Log("Received RPC from Server, Updating Chat Log...");
         if (chat_type == CHAT_TYPE.GUILD && guildID != PlayerData.GuildID)
             return;
 
@@ -168,22 +165,18 @@ public class GameHandler : NetworkBehaviour
 
     public void SendFriendAddedEvent(int recID)
     {
-        Debug.Log("COMMAND: Sending Friend Added Event for: " + recID + "from " + PlayerData.UID);
         SendFriendAddedEventtoServer(recID, PlayerData.UID, PlayerData.Name);
     }
 
     [Command(requiresAuthority = false)]
     private void SendFriendAddedEventtoServer(int recID, int otherID, string otherName)
     {
-        Debug.Log("SERVER RECEIVED COMMAND: Sending Friend Addd Event for: " + recID + "from " + otherID);
         FriendAdded(recID, otherID, otherName);
     }
 
     [ClientRpc]
     private void FriendAdded(int recID, int otherID, string otherName)
     {
-        Debug.Log("CLIENT RPC: Received Friend Added Event for: " + recID);
-
         if (recID == PlayerData.UID)
         {
             BasicInfo basicInfo = new BasicInfo
@@ -200,43 +193,36 @@ public class GameHandler : NetworkBehaviour
 
     public void SendMailBoxEvent(int recID)
     {
-        Debug.Log("COMMAND: Sending Mail Event for: " + recID + "from " + PlayerData.UID);
         SendMailBoxEventtoServer(recID);
     }
 
     [Command(requiresAuthority = false)]
     private void SendMailBoxEventtoServer(int recID)
     {
-        Debug.Log("SERVER RECEIVED COMMAND: Sending Mail Event for: " + recID);
         MailBoxReceived(recID);
     }
 
     [ClientRpc]
     private void MailBoxReceived(int recID)
     {
-        Debug.Log("CLIENT RPC: Received Mail Event for: " + recID);
         if (PlayerData.UID == recID)
             MailboxUIManager.Instance.UpdateMailRect();
     }
 
     public void SendFriendRemovedEvent(int recID)
     {
-        Debug.Log("COMMAND: Sending Friend Removed Event for: " + recID + "from " + PlayerData.UID);
         SendFriendRemovedEventtoServer(recID, PlayerData.UID);
     }
 
     [Command(requiresAuthority = false)]
     private void SendFriendRemovedEventtoServer(int recID, int otherID)
     {
-        Debug.Log("SERVER RECEIVED COMMAND: Sending Friend Removed Event for: " + recID + "from " + otherID);
         FriendRemoved(recID, otherID);
     }
 
     [ClientRpc]
     private void FriendRemoved(int recID, int otherID)
     {
-
-        Debug.Log("Received Friend Removed Event for " + recID);
         if (recID == PlayerData.UID)
         {
             PlayerData.FriendList.Remove(PlayerData.FindPlayerFromFriendList(otherID));

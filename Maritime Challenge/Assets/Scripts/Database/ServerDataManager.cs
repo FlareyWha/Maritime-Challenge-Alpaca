@@ -72,7 +72,7 @@ public class ServerDataManager : MonoBehaviour
     public static string URL_deleteFriendRequest = serverURL + "DeleteFriendRequest.php";
 
     //Friendship Points
-    public static string URL_updateFriendshipXPLevels = "UpdateFriendshipXPLevels.php";
+    public static string URL_updateFriendshipXPLevels = serverURL + "UpdateFriendshipXPLevels.php";
 
     #endregion
 

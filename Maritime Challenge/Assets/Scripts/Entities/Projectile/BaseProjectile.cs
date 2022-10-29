@@ -5,6 +5,7 @@ using Mirror;
 
 public class BaseProjectile : NetworkBehaviour
 {
+    [SyncVar (hook =nameof(ToggleVisibility))]
     public bool active = false;
 
     protected Vector2 velocity = Vector2.zero;
@@ -23,9 +24,18 @@ public class BaseProjectile : NetworkBehaviour
     private float lifetime = 10.0f;
     private float lifetime_timer = 10.0f;
 
+
+
+
     public virtual void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        gameObject.SetActive(active);
+    }
+
+    public override void OnStartServer()
+    {
+        active = false;
     }
 
     public virtual void FixedUpdate()
@@ -65,7 +75,6 @@ public class BaseProjectile : NetworkBehaviour
     {
         active = true;
         gameObject.SetActive(true);
-        ToggleVisibility(true);
         Debug.Log("Projectile Activated.");
 
         lifetime_timer = lifetime;
@@ -77,13 +86,12 @@ public class BaseProjectile : NetworkBehaviour
     {
         active = false;
         gameObject.SetActive(false);
-        ToggleVisibility(false);
     }
 
-    [ClientRpc]
-    private void ToggleVisibility(bool show)
+   
+    private void ToggleVisibility(bool _old, bool _new)
     {
-        gameObject.SetActive(show);
+        gameObject.SetActive(_new);
     }
 }
 

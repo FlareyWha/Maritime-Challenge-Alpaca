@@ -1,0 +1,804 @@
+fileFormatVersion: 2
+guid: 6b1d35ec39956204dacf7e812acdf447
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3218207576011532581
+    second: Walk_front_FemaleBody_Spritesheet_0
+  - first:
+      213: 7469629520235068746
+    second: Walk_front_FemaleBody_Spritesheet_1
+  - first:
+      213: -8516787526561817713
+    second: Walk_front_FemaleBody_Spritesheet_2
+  - first:
+      213: -3493219588358686767
+    second: Walk_front_FemaleBody_Spritesheet_3
+  - first:
+      213: -3290700874062312719
+    second: Walk_front_FemaleBody_Spritesheet_4
+  - first:
+      213: -6119214173257310492
+    second: Walk_front_FemaleBody_Spritesheet_5
+  - first:
+      213: 8012433270122569960
+    second: Walk_front_FemaleBody_Spritesheet_6
+  - first:
+      213: 6751896181143300830
+    second: Walk_front_FemaleBody_Spritesheet_7
+  - first:
+      213: -1426253611497836583
+    second: Walk_front_FemaleBody_Spritesheet_8
+  - first:
+      213: -8319580184725474817
+    second: Walk_front_FemaleBody_Spritesheet_9
+  - first:
+      213: 7998757518279407695
+    second: Walk_front_FemaleBody_Spritesheet_10
+  - first:
+      213: 8494935631793094150
+    second: Walk_front_FemaleBody_Spritesheet_11
+  - first:
+      213: 1314045448131884355
+    second: Walk_front_FemaleBody_Spritesheet_12
+  - first:
+      213: 8503438510026335154
+    second: Walk_front_FemaleBody_Spritesheet_13
+  - first:
+      213: 5163124327546186383
+    second: Walk_front_FemaleBody_Spritesheet_14
+  - first:
+      213: 8449723279075445498
+    second: Walk_front_FemaleBody_Spritesheet_15
+  - first:
+      213: -999024560889170389
+    second: Walk_front_FemaleBody_Spritesheet_16
+  - first:
+      213: -8795974338772224874
+    second: Walk_front_FemaleBody_Spritesheet_17
+  - first:
+      213: 131565519087311694
+    second: Walk_front_FemaleBody_Spritesheet_18
+  - first:
+      213: -4301204297019419092
+    second: Walk_front_FemaleBody_Spritesheet_19
+  - first:
+      213: -8478863164519882735
+    second: Walk_front_FemaleBody_Spritesheet_20
+  - first:
+      213: -6071226461989665376
+    second: Walk_front_FemaleBody_Spritesheet_21
+  - first:
+      213: -5678411553901367139
+    second: Walk_front_FemaleBody_Spritesheet_22
+  - first:
+      213: -4471391194758199746
+    second: Walk_front_FemaleBody_Spritesheet_23
+  - first:
+      213: 8382724426083307164
+    second: Walk_front_FemaleBody_Spritesheet_24
+  - first:
+      213: 1422562599487288634
+    second: Walk_front_FemaleBody_Spritesheet_25
+  - first:
+      213: -5834369193916158972
+    second: Walk_front_FemaleBody_Spritesheet_26
+  - first:
+      213: 5639663216781025163
+    second: Walk_front_FemaleBody_Spritesheet_27
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Walk_front_FemaleBody_Spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1648
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd69c5aa241a653d0800000000000000
+      internalID: -3218207576011532581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_front_FemaleBody_Spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1648
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4df16d097479a760800000000000000
+      internalID: 7469629520235068746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_front_FemaleBody_Spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1648
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8b1ec35eda4ec980800000000000000
+      internalID: -8516787526561817713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_front_FemaleBody_Spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1648
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d7b171da47958fc0800000000000000
+      internalID: -3493219588358686767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_front_FemaleBody_Spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1648
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fac27b6df41552d0800000000000000
+      internalID: -3290700874062312719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_front_FemaleBody_Spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1648
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ee5672612f241ba0800000000000000
+      internalID: -6119214173257310492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_front_FemaleBody_Spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1648
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e06d248b91e13f60800000000000000
+      internalID: 8012433270122569960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_front_FemaleBody_Spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1648
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edaec5dbdcd83bd50800000000000000
+      internalID: 6751896181143300830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_front_FemaleBody_Spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1248
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dfad0f95ede43ce0800000000000000
+      internalID: -1426253611497836583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_front_FemaleBody_Spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1248
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff13f09a6e9ea8c80800000000000000
+      internalID: -8319580184725474817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_front_FemaleBody_Spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1248
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f487789659b410f60800000000000000
+      internalID: 7998757518279407695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_front_FemaleBody_Spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1248
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60ef5d2f2f214e570800000000000000
+      internalID: 8494935631793094150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_front_FemaleBody_Spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1248
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 345be9a7f5d6c3210800000000000000
+      internalID: 1314045448131884355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_front_FemaleBody_Spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1248
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b32f7f8548420670800000000000000
+      internalID: 8503438510026335154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_front_FemaleBody_Spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1248
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8a6192783a17a740800000000000000
+      internalID: 5163124327546186383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_front_FemaleBody_Spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1248
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afa04a3cd82734570800000000000000
+      internalID: 8449723279075445498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_front_FemaleBody_Spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 848
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b267f467470c222f0800000000000000
+      internalID: -999024560889170389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_front_FemaleBody_Spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 848
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 694b70421fb6ee580800000000000000
+      internalID: -8795974338772224874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_front_FemaleBody_Spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 848
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4b93ed742a63d100800000000000000
+      internalID: 131565519087311694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_front_FemaleBody_Spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 848
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2616c90b7d0f44c0800000000000000
+      internalID: -4301204297019419092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_front_FemaleBody_Spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 848
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 110e5a3ffd6055a80800000000000000
+      internalID: -8478863164519882735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_front_FemaleBody_Spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 848
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a5872613bbaebba0800000000000000
+      internalID: -6071226461989665376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_front_FemaleBody_Spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 848
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d903c39f6ca3231b0800000000000000
+      internalID: -5678411553901367139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_front_FemaleBody_Spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 848
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e36c0a8166d62f1c0800000000000000
+      internalID: -4471391194758199746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_front_FemaleBody_Spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 448
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9e8fa2b37b655470800000000000000
+      internalID: 8382724426083307164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_front_FemaleBody_Spritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 448
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a35323da525fdb310800000000000000
+      internalID: 1422562599487288634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_front_FemaleBody_Spritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 448
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40c25244128280fa0800000000000000
+      internalID: -5834369193916158972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_front_FemaleBody_Spritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 448
+        width: 256
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8fd111c0db144e40800000000000000
+      internalID: 5639663216781025163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

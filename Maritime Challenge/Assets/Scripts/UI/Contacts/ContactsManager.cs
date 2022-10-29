@@ -128,14 +128,19 @@ public class ContactsManager : MonoBehaviourSingleton<ContactsManager>
 
     public void OnGiftButtonClicked()
     {
+        // Send Mail
         int numTokens = Random.Range(GameSettings.MinNumGiftTokens, GameSettings.MaxNumGiftTokens);
         MailboxManager.Instance.SendFriendshipGiftMail(currSelected.GetContactInfo().UID, numTokens);
-
         GameHandler.Instance.SendMailBoxEvent(currSelected.GetContactInfo().UID);
-
+        // Update Player Stats
         PlayerStatsManager.Instance.UpdatePlayerStat(PLAYER_STAT.GIFTS_SENT_DAILY, ++PlayerData.PlayerStats.PlayerStat[(int)PLAYER_STAT.GIFTS_SENT_DAILY]);
         PlayerStatsManager.Instance.UpdatePlayerStat(PLAYER_STAT.GIFTS_SENT_WEEKLY, ++PlayerData.PlayerStats.PlayerStat[(int)PLAYER_STAT.GIFTS_SENT_WEEKLY]);
-
+        // Update Friendship XP if friends
+        if (FriendsManager.CheckIfFriends(currSelected.GetContactInfo().UID))
+        {
+            FriendsManager.Instance.UpdateFriendshipXPLevels(currSelected.GetContactInfo().UID, 100);
+            PopUpManager.Instance.AddCurrencyPopUp(CURRENCY_TYPE.FRIENDSHIP_XP, 100, FriendshipUI.transform.position);
+        }
 
         UpdateGiftUI();
     }
@@ -184,6 +189,8 @@ public class ContactsManager : MonoBehaviourSingleton<ContactsManager>
         FriendshipUI.SetActive(true);
         FriendshipLevelText.text = friend.FriendshipLevel.ToString();
         FriendshipXPFill.fillAmount = (float)friend.FriendshipXP / GameSettings.GetFriendshipXPRequirement(friend.FriendshipLevel);
+        Debug.Log(friend.FriendshipXP + " / " + GameSettings.GetFriendshipXPRequirement(friend.FriendshipLevel));
+        Debug.Log((float)friend.FriendshipXP / GameSettings.GetFriendshipXPRequirement(friend.FriendshipLevel));
         DisplayAvatar.SetPlayer(friend.UID);
         DisplayNamecard.SetDetails(friend);
         DisplayName.text = friend.Name;
