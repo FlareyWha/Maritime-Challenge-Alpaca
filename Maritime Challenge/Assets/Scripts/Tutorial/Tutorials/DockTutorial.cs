@@ -10,7 +10,7 @@ public class DockTutorial : Tutorial
     protected override void Start()
     {
         base.Start();
-        conditionText = "Board your battleship at the dock.";
+        conditionText = "Sail to the city on the right to dock.";
     }
 
     public override void CheckConditionChanges()

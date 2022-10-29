@@ -5,6 +5,11 @@ using UnityEngine.UI;
 public enum TUTORIALID
 {
     MOVE_JOYSTICK,
+    VIEW_PROFILE,
+    TELEPORT,
+    INTERACTABLE,
+    BOARD_BATTLESHIP,
+    DOCK,
     TUTORIAL_COMPLETE,
     NO_TUTORIAL
 }
