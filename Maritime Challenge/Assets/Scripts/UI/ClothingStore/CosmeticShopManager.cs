@@ -25,7 +25,6 @@ public class CosmeticShopManager : MonoBehaviour
     private CosmeticShopItemUI currSelectedShopItem = null;
 
 
-
     private void Awake()
     {
         PlayerData.OnNumTokensUpdated += UpdateNumTokensUI;
@@ -90,6 +89,7 @@ public class CosmeticShopManager : MonoBehaviour
             }
             itemUI.Init(cosmeticInfo.Key, SetSelectedShopitem);
 
+            // Set Current Selected item
             if (currSelectedShopItem == null)
                 currSelectedShopItem = itemUI;
 
@@ -97,11 +97,15 @@ public class CosmeticShopManager : MonoBehaviour
         }
     }
 
+    // Called when a shop item ui is clicked on
     private void SetSelectedShopitem(CosmeticShopItemUI item)
     {
+        // Disable Selection UI on current selected ui
         if (currSelectedShopItem != null)
             currSelectedShopItem.SetSelected(false);
+        // Set New UI
         currSelectedShopItem = item;
+        // Enable New UI
         currSelectedShopItem.SetSelected(true);
     }
 
@@ -132,22 +136,24 @@ public class CosmeticShopManager : MonoBehaviour
         currSelectedShopItem = null;
         UpdateShopTabs();
 
-        //Confirmation ui to say purchase successful
+        // Confirmation ui to say purchase successful
 
     }
 
-    public void SetSelectedTab(int index)
+    public void SetSelectedTab(int index) // Called In Inspector on Tab Clicked
     {
+        // Do Nothing if its current tab
         if (CurrentlySelectedindex == index)
             return;
 
+        // Disable Current Tab Selection UI And ShopitemPanels
         ShopItemPanels[CurrentlySelectedindex].SetActive(false);
         ShopSelectedTabs[CurrentlySelectedindex].SetActive(false);
 
+        // Set New Tab
         CurrentlySelectedindex = index;
 
-        Debug.Log("Setting Selected tab to" + index);
-
+        // Enable Current Tab Selection UI And ShopitemPanels
         ShopItemPanels[CurrentlySelectedindex].SetActive(true);
         ShopSelectedTabs[CurrentlySelectedindex].SetActive(true);
     }

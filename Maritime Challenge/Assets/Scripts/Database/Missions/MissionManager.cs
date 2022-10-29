@@ -11,6 +11,7 @@ public class MissionManager : MonoBehaviourSingleton<MissionManager>
     protected override void Awake()
     {
         base.Awake();
+
         // Link Mission Scriptable Object to Mission Class from database
         foreach (KeyValuePair<Mission, bool> mission in PlayerData.MissionList)
         {
@@ -28,7 +29,6 @@ public class MissionManager : MonoBehaviourSingleton<MissionManager>
         return null;
     }
    
-
 
     public void ClaimMission(Mission mission)
     {

@@ -30,8 +30,6 @@ public class AirHockeyMinigame : NetworkBehaviour
         AirHockeyGamePanel.SetActive(false);
         GameCanvas.SetActive(false);
         Puck.gameObject.SetActive(false);
-        //   for (int i = 0; i < PlayerPaddle.Length; i++)
-        //      PlayerPaddle[i].gameObject.SetActive(false);
         startPuckPos = Puck.transform.position;
 
         for (int i = 0; i < PlayerSeats.Length; i++)
@@ -143,9 +141,6 @@ public class AirHockeyMinigame : NetworkBehaviour
         // Show Air Hockey Game GOs
         AirHockeyGamePanel.SetActive(true);
         GameCanvas.SetActive(true);
-      //  Puck.gameObject.SetActive(true);
-      //  for (int i = 0; i < PlayerPaddle.Length; i++)
-      //      PlayerPaddle[i].gameObject.SetActive(true);
         // Camera ANims
         PlayerFollowCamera.Instance.SetFollowTarget(AirHockeyGamePanel.gameObject);
         PlayerFollowCamera.Instance.ZoomCameraInOut(zoomValue, 1.0f);
@@ -168,13 +163,10 @@ public class AirHockeyMinigame : NetworkBehaviour
         // Hide Air Hockey Game GOs
         AirHockeyGamePanel.SetActive(false);
         GameCanvas.SetActive(false);
-     //   Puck.gameObject.SetActive(false);
-     //   for (int i = 0; i < PlayerPaddle.Length; i++)
-     //       PlayerPaddle[i].gameObject.SetActive(false);
         // Reset Camera Anims
         PlayerFollowCamera.Instance.ResetAll(0.7f);
         // Player tings
-        PlayerData.MyPlayer.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
+        PlayerData.MyPlayer.transform.localScale = new Vector3(0.6f, 0.6f, 0.6f);
     }
 
     [Server]
@@ -195,7 +187,6 @@ public class AirHockeyMinigame : NetworkBehaviour
     [Server]
     public void StopGame()
     {
-        //Puck.gameObject.SetActive(false);
         Puck.gameObject.GetComponent<Collider2D>().enabled = false;
         StopGameCallback();
     }
@@ -244,7 +235,7 @@ public class AirHockeyMinigame : NetworkBehaviour
             if (info.Value == player.netId)
                 return info.Key;
         }
-        Debug.LogError("Player not recorded in list of seated players!");
+        Debug.LogWarning("Player not recorded in list of seated players!");
         return -1;
     }
 
@@ -255,7 +246,7 @@ public class AirHockeyMinigame : NetworkBehaviour
             if (PlayerSeats[i] == seat)
                 return i;
         }
-        Debug.Log("Could not find seat!");
+        Debug.LogWarning("Could not find seat!");
         return -1;
     }
 

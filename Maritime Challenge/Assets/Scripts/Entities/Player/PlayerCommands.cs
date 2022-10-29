@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using Mirror;
 
 
@@ -45,22 +42,6 @@ public class PlayerCommands : NetworkBehaviour
     }
 
    
-    
-
-    IEnumerator WaitEnterScene(string sceneName)
-    {
-        Debug.Log("Ënabling Loading Screen");
-        UIManager.Instance.ToggleLoadingScreen(true);
-
-        while (PlayerData.activeSubScene != sceneName)
-            yield return null;
-        while (GameObject.Find("Environment") == null)
-            yield return null;
-
-        UIManager.Instance.ToggleLoadingScreen(false);
-        Debug.Log("Disabling Loading Screen");
-    }
-
     [ClientRpc]
     public void ForceMovePlayer(Vector2 pos)
     {

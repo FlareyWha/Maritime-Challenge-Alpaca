@@ -76,16 +76,16 @@ public class GameHandler : NetworkBehaviour
     [Command(requiresAuthority = false)]
     private void SendMessageToServer(CHAT_TYPE type, Player player, string message)
     {
-        UpdateChatLog(type, player, player.GetGuildID(), player.GetUsername(), message);
+        UpdateChatLog(type, player, player.GetUID(), player.GetGuildID(), player.GetUsername(), message);
     }
 
     [ClientRpc]
-    private void UpdateChatLog(CHAT_TYPE chat_type, Player player, int guildID, string playerName, string message)
+    private void UpdateChatLog(CHAT_TYPE chat_type, Player player, int playerID, int guildID, string playerName, string message)
     {
         if (chat_type == CHAT_TYPE.GUILD && guildID != PlayerData.GuildID)
             return;
 
-        ChatManager.Instance.UpdateChatLog(chat_type, player.GetUID(), playerName, message);
+        ChatManager.Instance.UpdateChatLog(chat_type, playerID, playerName, message);
 
         if (player == null)
             return;

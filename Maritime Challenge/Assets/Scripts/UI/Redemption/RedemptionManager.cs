@@ -34,9 +34,9 @@ public class RedemptionManager : MonoBehaviour
         }
     }
 
-    private void OnEnable()
+    private void OnDestroy()
     {
-        PlayerData.OnNumRollarsUpdated -= UpdateNumRollarsUI;
+         PlayerData.OnNumRollarsUpdated -= UpdateNumRollarsUI;
     }
 
     private void ExchangeItem(RedemptionItemUI item)
