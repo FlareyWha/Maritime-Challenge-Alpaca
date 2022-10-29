@@ -17,6 +17,8 @@ public class AirHockeyMinigame : NetworkBehaviour
     [SerializeField]
     private AirHockeySeat[] PlayerSeats;
 
+    private readonly SyncList<bool> SeatsTaken = new SyncList<bool>();
+
     private readonly SyncDictionary<int, uint> playersList = new SyncDictionary<int, uint>();
     private readonly SyncDictionary<int, int> scoresList = new SyncDictionary<int, int>();
 
@@ -31,15 +33,18 @@ public class AirHockeyMinigame : NetworkBehaviour
         //   for (int i = 0; i < PlayerPaddle.Length; i++)
         //      PlayerPaddle[i].gameObject.SetActive(false);
         startPuckPos = Puck.transform.position;
-        
+
         for (int i = 0; i < PlayerSeats.Length; i++)
         {
             if (playersList.ContainsKey(i))
                 PlayerSeats[i].UpdateNameDisplay(GetPlayer(playersList[i]).GetUsername());
             else
                 PlayerSeats[i].UpdateNameDisplay("Waiting for Player...");
+
+            PlayerSeats[i].SetIsTaken(SeatsTaken[i]);
         }
 
+        SeatsTaken.Callback += UpdateSeatAvailability;
     }
 
     public override void OnStartServer()
@@ -47,6 +52,7 @@ public class AirHockeyMinigame : NetworkBehaviour
         for (int i = 0; i < PlayerSeats.Length; i++)
         {
             scoresList.Add(i, 0);
+            SeatsTaken.Add(false);
         }
         Puck.gameObject.GetComponent<Collider2D>().enabled = false;
     }
@@ -69,6 +75,7 @@ public class AirHockeyMinigame : NetworkBehaviour
             playersList.Remove(seatID);
         playersList.Add(seatID, player.netId);
         PlayerSeats[seatID].AssignPaddleControl(player);
+        SeatsTaken[seatID] = true;
 
         // Update All Clients
         OnPlayerJoinGameCallback(seatID, player);
@@ -86,7 +93,6 @@ public class AirHockeyMinigame : NetworkBehaviour
         if (seat == null)
             return;
 
-        seat.enabled = false;
         seat.UpdateNameDisplay(player.GetUsername());
 
 
@@ -101,8 +107,20 @@ public class AirHockeyMinigame : NetworkBehaviour
             StopGame();
 
         PlayerSeats[seatID].RevokePaddleControl();
+        SeatsTaken[seatID] = false;
 
         OnPlayerLeftGameCallback(seatID, player);
+    }
+
+    private void UpdateSeatAvailability(SyncList<bool>.Operation op, int index, bool oldItem, bool newItem)
+    {
+        // Free Seat
+        AirHockeySeat seat = PlayerSeats[index];
+        if (seat == null)
+            return;
+
+        seat.SetIsTaken(newItem);
+
     }
 
     [ClientRpc]
@@ -113,7 +131,6 @@ public class AirHockeyMinigame : NetworkBehaviour
         if (seat == null)
             return;
 
-        seat.enabled = true;
         seat.UpdateNameDisplay("Waiting for Player...");
     }
 
@@ -138,7 +155,7 @@ public class AirHockeyMinigame : NetworkBehaviour
             PlayerFollowCamera.Instance.RotateCamera(transform.rotation.eulerAngles.z, 1.0f);
 
         // Player Things
-        PlayerData.MyPlayer.transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
+        PlayerData.MyPlayer.transform.localScale = new Vector3(0.6f, 0.6f, 0.6f);
         PlayerData.MyPlayer.transform.position = seat.transform.position;
         PlayerData.MyPlayer.SetOrderInLayer(1);
     }
@@ -157,7 +174,7 @@ public class AirHockeyMinigame : NetworkBehaviour
         // Reset Camera Anims
         PlayerFollowCamera.Instance.ResetAll(0.7f);
         // Player tings
-        PlayerData.MyPlayer.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+        PlayerData.MyPlayer.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
     }
 
     [Server]

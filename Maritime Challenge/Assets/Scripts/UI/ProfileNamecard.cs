@@ -163,7 +163,7 @@ public class ProfileNamecard : MonoBehaviour
     public void SetExampleDetails()
     {
         this.playerID = 0;
-        Name.text = "Name: " + "John Cena Von Dae";
+        Name.text = "Name: " + "John Von Dae";
 
         Bio.text = "mood gone";
         Level.text = 100.ToString();

@@ -20,6 +20,8 @@ public class AirHockeySeat : BaseInteractable
     public bool OnOppositeSide { get { return IsOppositeSide; } }
 
     private int UID = -1;
+    private bool isTaken = false;
+    public bool IsTaken {  get { return isTaken; } }
 
     void Start()
     {
@@ -34,7 +36,17 @@ public class AirHockeySeat : BaseInteractable
         AirHockeyGameManager.PlayerJoinGame(this.UID, PlayerData.MyPlayer);
     }
 
-    
+    public void SetIsTaken(bool taken)
+    {
+        isTaken = taken;
+    }
+
+    protected override bool CheckRequirements()
+    {
+        return !isTaken;
+    }
+
+
     [Server]
     public void AssignPaddleControl(Player player)
     {

@@ -2473,7 +2473,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 15
+  orthographic size: 12
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -18819,7 +18819,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 12800000, guid: 206a49e6b2aff404297d9212ac1f5c54, type: 3}
     m_FontSize: 28
-    m_FontStyle: 1
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 40
