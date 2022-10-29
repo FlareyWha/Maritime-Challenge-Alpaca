@@ -1,0 +1,20 @@
+{
+	"tutorialPromptObject":
+	[
+		{
+			"TutorialID": "INTERACTABLE",
+			"ImageFilePath": "",
+			"Description": "If you walk near something that can be interacted with, a button will pop out. You can click the button to achieve various effects depending on what you walk near to."
+		},
+		{
+			"TutorialID": "INTERACTABLE",
+			"ImageFilePath": "",
+			"Description": "There are many such objects in the world, and you can explore and find out for yourself once you complete the tutorial."
+		},
+		{
+			"TutorialID": "INTERACTABLE",
+			"ImageFilePath": "",
+			"Description": "Try interacting with the tutorial sign. You can find it by following the path."
+		}
+	]
+}
