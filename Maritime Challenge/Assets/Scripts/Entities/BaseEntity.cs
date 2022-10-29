@@ -54,8 +54,8 @@ public class BaseEntity : NetworkBehaviour
     public delegate void EntityDied();
     public event EntityDied OnEntityDied;
 
-    protected delegate void EntityHPChanged(int oldHP, int newHP);
-    protected event EntityHPChanged OnEntityHPChanged;
+    public delegate void EntityHPChanged(int oldHP, int newHP);
+    public event EntityHPChanged OnEntityHPChanged;
 
     protected GameObject killer;
     public GameObject Killer

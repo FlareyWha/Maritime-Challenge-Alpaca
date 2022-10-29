@@ -38,6 +38,7 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
     // Interaction UIs
     [SerializeField]
     private ProfileNamecard InteractNamecard;
+ 
     [SerializeField]
     private GuildInfoPanel guildInfoPanel;
     public GuildInfoPanel GuildInfoPanel
@@ -239,6 +240,23 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
             button.interactable = true;
         if (!open)
             mask.gameObject.SetActive(false);
+    }
+
+    static public IEnumerator ToggleFadeAnim(CanvasGroup canvasGroup, float start_alpha, float end_alpha, float anim_time)
+    {
+        canvasGroup.alpha = start_alpha;
+
+        float rate = (end_alpha - start_alpha) / anim_time;
+        float timer = anim_time;
+        while (timer > 0.0f)
+        {
+            timer -= Time.deltaTime;
+            canvasGroup.alpha += rate * Time.deltaTime;
+            yield return null;
+        }
+
+        canvasGroup.alpha = end_alpha;
+     
     }
 
     static public IEnumerator ToggleFlyInAnim(RectTransform rectTransform, Vector3 startPos, Vector3 targetPos, float anim_time, Button button)
