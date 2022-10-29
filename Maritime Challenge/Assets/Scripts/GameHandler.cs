@@ -36,7 +36,6 @@ public class GameHandler : NetworkBehaviour
 
         if (player.GetUID() == -1)
         {
-            Debug.Log("Registering Online Player to List..");
             onlinePlayers.Add(conn.connectionId, player);
             yield break;
         }
@@ -50,7 +49,6 @@ public class GameHandler : NetworkBehaviour
             }
         }
 
-        Debug.Log("Registering Online Player to List..");
         onlinePlayers.Add(conn.connectionId, player);
     }
 
@@ -68,7 +66,6 @@ public class GameHandler : NetworkBehaviour
     public void OnPlayerQuit(NetworkConnectionToClient conn)
     {
         onlinePlayers.Remove(conn.connectionId);
-        Debug.Log("Removing Player from Online List.." + "Online Players Count: " + onlinePlayers.Count);
     }
 
     public void SendChatMessage(string message)

@@ -55,6 +55,22 @@ public class AvatarDisplay : MonoBehaviour
         }
     }
 
+    public void SetDefault()
+    {
+        UnknownAvatar.gameObject.SetActive(false);
+        for (COSMETIC_TYPE i = 0; i < COSMETIC_TYPE.NUM_TOTAL; i++)
+        {
+            SetAvatarSprite(i, PlayerAvatarManager.NullRefNum);
+        }
+    
+        SetAvatarSprite(COSMETIC_TYPE.HAIR, 3);
+        SetAvatarSprite(COSMETIC_TYPE.TOP, 10);
+        SetAvatarSprite(COSMETIC_TYPE.BOTTOM, 11);
+        SetAvatarSprite(COSMETIC_TYPE.SHOE, 5);
+        SetAvatarSprite(COSMETIC_TYPE.BODY, 2);
+        
+    }
+
     IEnumerator InitToPlayerSprites(int id)
     {
         while (!PlayerData.OthersEquippedCosmeticList.ContainsKey(id))

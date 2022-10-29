@@ -123,7 +123,7 @@ MonoBehaviour:
   syncPosition: 1
   syncRotation: 0
   syncScale: 0
-  interpolatePosition: 0
+  interpolatePosition: 1
   interpolateRotation: 0
   interpolateScale: 0
   bufferTimeMultiplier: 1
