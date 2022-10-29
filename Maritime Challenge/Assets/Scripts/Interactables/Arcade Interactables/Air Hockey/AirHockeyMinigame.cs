@@ -138,7 +138,7 @@ public class AirHockeyMinigame : NetworkBehaviour
             PlayerFollowCamera.Instance.RotateCamera(transform.rotation.eulerAngles.z, 1.0f);
 
         // Player Things
-        PlayerData.MyPlayer.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+        PlayerData.MyPlayer.transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
         PlayerData.MyPlayer.transform.position = seat.transform.position;
         PlayerData.MyPlayer.SetOrderInLayer(1);
     }
