@@ -160,6 +160,29 @@ public class ProfileNamecard : MonoBehaviour
         DisplayAvatar.SetUnknown();
     }
 
+    public void SetExampleDetails()
+    {
+        this.playerID = 0;
+        Name.text = "Name: " + "John Cena Von Dae";
+
+        Bio.text = "mood gone";
+        Level.text = 100.ToString();
+        Country.text = "Country: " + "RightShip";
+        Guild.text = "Guild: " + "Alpaca";
+        Title.sprite = TitleManager.Instance.FindTitleByID(10).TitleSprite;
+
+        ProfileInfo.SetActive(true);
+        UnknownPanel.SetActive(false);
+
+
+        HiddenPanel.SetActive(false);
+        PendingPanel.SetActive(false);
+        IncomingPanel.SetActive(false);
+
+
+        //AvatarImage.sprite = DefaultSprite;
+        DisplayAvatar.SetDefault();
+    }
 
     private void OnAcceptButtonClicked()
     {
@@ -169,11 +192,17 @@ public class ProfileNamecard : MonoBehaviour
 
     private void OnAddFriendButtonClicked()
     {
+        if (playerID == 0) // example/unset
+            return;
+
         FriendsManager.Instance.SendFriendRequest(playerID);
     }
 
     private void OnRemoveFriendButtonClicked()
     {
+        if (playerID == 0) // example/unset
+            return;
+
         FriendsManager.Instance.DeleteFriend(playerID);
     }
 

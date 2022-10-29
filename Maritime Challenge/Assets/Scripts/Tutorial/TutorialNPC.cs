@@ -112,7 +112,7 @@ public class TutorialNPC : MonoBehaviour
     {
         Debug.Log("View Profile Clicked");
 
-     
+        UIManager.Instance.SetExampleInteractNamecardDetails();
         UIManager.Instance.ShowInteractNamecard(button);
 
         interacted = true;

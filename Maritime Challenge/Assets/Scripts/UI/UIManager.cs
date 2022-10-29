@@ -150,6 +150,11 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
             InteractNamecard.SetUnknown(playerID);
     }
 
+    public void SetExampleInteractNamecardDetails()
+    {
+        InteractNamecard.SetExampleDetails();
+    }
+
     private void OnNewRightShipediaEntry(int id)
     {
         if (InteractNamecard.GetPlayerID() == id)
