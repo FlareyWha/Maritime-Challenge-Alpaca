@@ -83,6 +83,10 @@ public class LoginManager : MonoBehaviour
 
     IEnumerator UpdateLastLoginTime()
     {
+        // Increase Login - if daily reset, increase login in func
+        if (!PlayerData.CheckForDailyReset())
+            PlayerStatsManager.Instance.UpdatePlayerStat(PLAYER_STAT.LOGIN, ++PlayerData.PlayerStats.PlayerStat[(int)PLAYER_STAT.LOGIN]);
+
         //Set the URL to the getUID one
         url = ServerDataManager.URL_updateLastLoginTime;
         Debug.Log(url);

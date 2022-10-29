@@ -25,12 +25,12 @@ public class GuildInfoPanel : MonoBehaviour
 
     public void UpdateGuildInfoPanel(string guildName, string guildDescription, int ownerUID)
     {
-        guildNameText.text = "Guild Name: " + guildName;
-        guildDescriptionText.text = "Guild Description: " + guildDescription;
+        guildNameText.text = guildName.ToString();
+        guildDescriptionText.text = guildDescription;
 
         if (ownerUID == 0)
         {
-            guildOwnerText.text = "Guild Owner: None";
+            guildOwnerText.text = "None";
             StartCoroutine(UIManager.ToggleFlyInAnim(rectTransform, new Vector2(0, -910), Vector2.zero, 0.5f, null));
         }
         else
@@ -61,7 +61,7 @@ public class GuildInfoPanel : MonoBehaviour
         {
             case UnityWebRequest.Result.Success:
                 //Deseralize and instantiate somehow idk tbh
-                guildOwnerText.text = "Guild Owner: " + webreq.downloadHandler.text;
+                guildOwnerText.text = webreq.downloadHandler.text;
                 StartCoroutine(UIManager.ToggleFlyInAnim(rectTransform, new Vector2(0, -910), Vector2.zero, 0.5f, null));
                 break;
             case UnityWebRequest.Result.ProtocolError:

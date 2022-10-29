@@ -169,8 +169,12 @@ public static class PlayerData // Local Player's Data
         DateTime ResetDateTime = new DateTime(CurrentDateTime.Year, CurrentDateTime.Month, CurrentDateTime.Day,
             GameSettings.DailyResetTime.Hour, GameSettings.DailyResetTime.Minute, GameSettings.DailyResetTime.Second);
 
+     
+
         if (LastLogin < ResetDateTime && CurrentDateTime > ResetDateTime)
-        {
+        {  
+            Debug.Log("DAILY RESET AVTIVATED");
+
             // Reset Stats
             PlayerStatsManager.Instance.UpdatePlayerStat(PLAYER_STAT.PROFILES_VIEWED, 0);
             PlayerStatsManager.Instance.UpdatePlayerStat(PLAYER_STAT.CHAT_MESSAGES_SENT_DAILY, 0);
