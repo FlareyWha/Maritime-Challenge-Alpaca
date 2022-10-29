@@ -4,15 +4,8 @@ using UnityEngine;
 
 public class BaseInteractable : MonoBehaviour
 {
-   // [SerializeField]
-   // private float InteractRadius = 3.0f;
-
-
     protected Player myPlayer = null;
     protected string interactMessage = "Interact";
-   // protected bool in_range = false;
- 
-
 
     void Awake()
     {
@@ -27,30 +20,30 @@ public class BaseInteractable : MonoBehaviour
         myPlayer = PlayerData.MyPlayer;
     }
 
-    void Update()
-    {
-       
-    }
-
     public virtual void Interact()
     {
 
     }
 
-    protected virtual void OnTriggerEnter2D(Collider2D collision)
+    protected virtual bool CheckRequirements()
     {
+        return true;
+    }
 
+    protected void OnTriggerEnter2D(Collider2D collision)
+    {
         if (myPlayer == null || myPlayer.GetBattleShip() == null)// - INEFFICIENT TEMP FIX COS ANNOYING
             return;
 
-        if (collision.gameObject == myPlayer.gameObject || collision.gameObject == myPlayer.GetBattleShip().gameObject)
+        if (CheckRequirements() && collision.gameObject == myPlayer.gameObject || collision.gameObject == myPlayer.GetBattleShip().gameObject)
         {
             PlayerInteract.OnEnterInteractable(this);
         }
     }
 
-    protected virtual void OnTriggerExit2D(Collider2D collision)
-    {
+    protected void OnTriggerExit2D(Collider2D collision)
+    { 
+    
         if (myPlayer == null || myPlayer.GetBattleShip() == null)// - INEFFICIENT TEMP FIX COS ANNOYING
             return;
 

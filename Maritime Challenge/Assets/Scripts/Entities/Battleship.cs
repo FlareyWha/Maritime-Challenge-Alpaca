@@ -92,7 +92,7 @@ public class Battleship : NetworkBehaviour
     private void UpdateUI(string oldname, string newname)
     { 
         OwnerNameText.text = ownerName;
-        UIManager.SetWidthByTextWidth(OwnerNameBG.gameObject, OwnerNameText);
+        UIManager.SetWidthByTextWidth(OwnerNameBG.gameObject, OwnerNameText, 5);
     }
 
 

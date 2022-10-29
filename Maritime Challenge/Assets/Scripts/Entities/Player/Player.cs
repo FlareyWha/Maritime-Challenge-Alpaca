@@ -74,6 +74,11 @@ public class Player : BaseEntity
 
     }
 
+    public override void OnStopLocalPlayer()
+    {
+        PlayerData.OnPlayerDataUpdated -= CallSetDetails;
+    }
+
     private void CallSetDetails()
     {
         StartCoroutine(SetDetails());

@@ -118,7 +118,7 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
     public void SetInteractButtonMessage(string interact_text)
     {
         InteractButtonText.text = interact_text;
-        SetWidthByTextWidth(InteractButton.gameObject, InteractButtonText);
+        SetWidthByTextWidth(InteractButton.gameObject, InteractButtonText, 10);
     }
 
     public void DisableInteractButton()
@@ -445,11 +445,11 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
         return raysastResults;
     }
 
-    public static void SetWidthByTextWidth(GameObject toChange, Text toRef)
+    public static void SetWidthByTextWidth(GameObject toChange, Text toRef, float padding)
     {
         float text_width = toRef.preferredWidth;
         RectTransform rt = toChange.GetComponent(typeof(RectTransform)) as RectTransform;
-        rt.sizeDelta = new Vector2(text_width, rt.rect.height);
+        rt.sizeDelta = new Vector2(text_width + padding * 2, rt.rect.height);
     }
 
     public static void SetHeightByTextHeight(GameObject toChange, Text toRef)

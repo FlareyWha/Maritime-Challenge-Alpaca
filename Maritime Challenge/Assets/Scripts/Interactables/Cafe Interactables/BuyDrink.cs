@@ -22,26 +22,9 @@ public class BuyDrink : BaseInteractable
         CafeManager.Instance.HasDrink = true;
         UIManager.Instance.DisableInteractButton();
     }
-
-    protected override void OnTriggerEnter2D(Collider2D collision)
+    protected override bool CheckRequirements()
     {
-        if (myPlayer == null || myPlayer.GetBattleShip() == null)// - INEFFICIENT TEMP FIX COS ANNOYING
-            return;
-
-        if (!CafeManager.Instance.HasDrink && (collision.gameObject == myPlayer.gameObject || collision.gameObject == myPlayer.GetBattleShip().gameObject))
-        {
-            PlayerInteract.OnEnterInteractable(this);
-        }
+        return !CafeManager.Instance.HasDrink;
     }
-
-    protected override void OnTriggerExit2D(Collider2D collision)
-    {
-        if (myPlayer == null || myPlayer.GetBattleShip() == null)// - INEFFICIENT TEMP FIX COS ANNOYING
-            return;
-
-        if (collision.gameObject == myPlayer.gameObject || collision.gameObject == myPlayer.GetBattleShip().gameObject)
-        {
-            PlayerInteract.OnLeaveInteractable(this);
-        }
-    }
+  
 }
