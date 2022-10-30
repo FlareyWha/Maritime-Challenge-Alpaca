@@ -17,5 +17,7 @@ public class DockTutorial : Tutorial
     {
         if (dock.Interacted)
             IncreaseCondition();
+
+        Debug.Log(dock.Interacted);
     }
 }

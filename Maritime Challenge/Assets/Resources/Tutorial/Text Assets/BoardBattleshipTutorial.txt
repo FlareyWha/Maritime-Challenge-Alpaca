@@ -3,17 +3,17 @@
 	[
 		{
 			"TutorialID": "BOARD_BATTLESHIP",
-			"ImageFilePath": "",
+			"ImageFilePath": "Board Battleship/Battleship",
 			"Description": "Each player has a battleship they can use to sail on the seas. Every new player starts off with the default one, but more can be obtained from the battleship shop."
 		},
 		{
 			"TutorialID": "BOARD_BATTLESHIP",
-			"ImageFilePath": "",
+			"ImageFilePath": "Board Battleship/Dock",
 			"Description": "To board your battleship, you need to go to a dock. You can find docks at various places in the world."
 		},
 		{
 			"TutorialID": "BOARD_BATTLESHIP",
-			"ImageFilePath": "",
+			"ImageFilePath": "Board Battleship/Board Battleship",
 			"Description": "Try boarding your battleship at the nearby dock. Follow the path to find it."
 		}
 	]

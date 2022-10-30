@@ -3,17 +3,17 @@
 	[
 		{
 			"TutorialID": "DOCK",
-			"ImageFilePath": "",
+			"ImageFilePath": "Dock/Destination",
 			"Description": "You can do various things in the ocean such as defeating enemies, but you can only experience this feature once you complete the tutorial."
 		},
 		{
 			"TutorialID": "DOCK",
-			"ImageFilePath": "",
+			"ImageFilePath": "Dock/Battleship Movement",
 			"Description": "Steering the battleship is similar to moving on land. Simply drag the joystick to move."
 		},
 		{
 			"TutorialID": "DOCK",
-			"ImageFilePath": "",
+			"ImageFilePath": "Dock/Destination",
 			"Description": "Try moving to the small city on the right and dock there. If you get lost, remember that you can check your map."
 		}
 	]

@@ -40,13 +40,14 @@ public class Dock : BaseInteractable
         if (is_docked_here)
         {
             PlayerData.MyPlayer.SummonBattleShip(this);
-            interacted = true;
         }
         else
             PlayerData.MyPlayer.DockShip(this);
 
         is_docked_here = !is_docked_here;
         UpdateInteractMessage();
+
+        interacted = true;
     }
 
     private void UpdateInteractMessage()

@@ -3,17 +3,17 @@
 	[
 		{
 			"TutorialID": "TELEPORT",
-			"ImageFilePath": "",
+			"ImageFilePath": "Teleport/Map Icon",
 			"Description": "You can view the map by clicking the menu button and clicking the map icon. The map lets you see the layout of the world and has other features such as being able to teleport to other places."
 		},
 		{
 			"TutorialID": "TELEPORT",
-			"ImageFilePath": "",
+			"ImageFilePath": "Teleport/Map",
 			"Description": "You can pan the map by dragging it, and zoom by pinching or widening your fingers. If you use a computer, you can zoom by using the scroll wheel instead."
 		},
 		{
 			"TutorialID": "TELEPORT",
-			"ImageFilePath": "",
+			"ImageFilePath": "Teleport/Destination",
 			"Description": "Try this out by opening the map and teleport to the city to the left of the current one you are at."
 		}
 	]
