@@ -7,7 +7,10 @@ public class GuildInfo : BaseInteractable
 {
     private JSONGuildInfo guildInfo;
 
-    private GuildInfoPanel guildInfoPanel;
+    private List<JSONGuildMember> guildMembers = new List<JSONGuildMember>();
+
+    [SerializeField]
+    private int guildID = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -23,9 +26,20 @@ public class GuildInfo : BaseInteractable
 
     public override void Interact()
     {
+        StartCoroutine(UpdateGuildPanel());
+    }
+
+    IEnumerator UpdateGuildPanel()
+    {
         UIManager.Instance.GuildInfoPanel.gameObject.SetActive(true);
         UIManager.Instance.ToggleJoystick(false);
-        StartCoroutine(GetGuildInfo());
+
+        CoroutineCollection coroutineCollectionManager = new CoroutineCollection();
+
+        StartCoroutine(coroutineCollectionManager.CollectCoroutine(GetGuildInfo()));
+        StartCoroutine(coroutineCollectionManager.CollectCoroutine(GetGuildMembers()));
+
+        yield return coroutineCollectionManager;
     }
 
     IEnumerator GetGuildInfo()
@@ -35,7 +49,7 @@ public class GuildInfo : BaseInteractable
 
         //Need replace with the actual guild id later
         WWWForm form = new WWWForm();
-        form.AddField("iGuildID", 1);
+        form.AddField("iGuildID", guildID);
         using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
         yield return webreq.SendWebRequest();
         switch (webreq.result)
@@ -53,7 +67,32 @@ public class GuildInfo : BaseInteractable
                 Debug.LogError(webreq.downloadHandler.text);
                 break;
             default:
+                Debug.LogError("Server error");
+                break;
+        }
+    }
+
+    IEnumerator GetGuildMembers()
+    {
+        string url = ServerDataManager.URL_getGuildMembers;
+        Debug.Log(url);
+
+        //Need replace with the actual guild id later
+        WWWForm form = new WWWForm();
+        form.AddField("iGuildID", guildID);
+        using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
+        yield return webreq.SendWebRequest();
+        switch (webreq.result)
+        {
+            case UnityWebRequest.Result.Success:
+                guildMembers = JSONDeseralizer.DeseralizeGuildMembers(webreq.downloadHandler.text);
+                UIManager.Instance.GuildInfoPanel.UpdateGuildMembers(guildMembers);
+                break;
+            case UnityWebRequest.Result.ProtocolError:
                 Debug.LogError(webreq.downloadHandler.text);
+                break;
+            default:
+                Debug.LogError("Server error");
                 break;
         }
     }

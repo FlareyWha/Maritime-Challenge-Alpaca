@@ -164,6 +164,18 @@ public class JSONGuildInfoList
 }
 
 [Serializable]
+public class JSONGuildMember
+{
+    public string sUsername;
+}
+
+[Serializable]
+public class JSONGuildMemberList
+{
+    public List<JSONGuildMember> guildMembers = new List<JSONGuildMember>();
+}
+
+[Serializable]
 public class JSONRedemptionRequest
 {
     public int iRedemptionRequestID;
