@@ -10236,7 +10236,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!20 &1519012505
 Camera:
   m_ObjectHideFlags: 0
@@ -10264,7 +10264,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 15
+  orthographic size: 4
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -10288,7 +10288,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1519012504}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2, y: 7, z: -10}
+  m_LocalPosition: {x: 5.8, y: 10, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -10770,6 +10770,14 @@ PrefabInstance:
     - target: {fileID: 6643721144882836039, guid: 2716639459e443f46b7efacff488f231, type: 3}
       propertyPath: sceneId
       value: 2296574738
+      objectReference: {fileID: 0}
+    - target: {fileID: 6654699338403918437, guid: 2716639459e443f46b7efacff488f231, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6654699338403918437, guid: 2716639459e443f46b7efacff488f231, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 7011034235522670036, guid: 2716639459e443f46b7efacff488f231, type: 3}
       propertyPath: m_IsActive
