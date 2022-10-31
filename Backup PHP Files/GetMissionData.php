@@ -17,13 +17,13 @@ catch (Exception $e)
 }
 
 //Prepare statement to update the iCoins for the account with uid
-$query = "select tb_mission.iMissionID, sMissionTitle, iMissionType, iMissionMaxRequirementNumber, bMissionClaimed from tb_missionList inner join tb_mission on tb_mission.iMissionID=tb_missionList.iMissionID where iOwnerUID=? order by tb_mission.iMissionID asc";
+$query = "select tb_mission.iMissionID, sMissionTitle, iMissionType, iMissionMaxRequirementNumber, iTokensEarned, bMissionClaimed from tb_missionList inner join tb_mission on tb_mission.iMissionID=tb_missionList.iMissionID where iOwnerUID=? order by tb_mission.iMissionID asc";
 $stmt=$conn->prepare($query);
 $stmt->bind_param("i", $iOwnerUID);
 
 //Execute statement
 $stmt->execute();
-$stmt->bind_result($iMissionID, $sMissionName, $iMissionType, $iMissionMaxRequirementNumber, $bMissionClaimed);
+$stmt->bind_result($iMissionID, $sMissionName, $iMissionType, $iMissionMaxRequirementNumber, $iTokensEarned, $bMissionClaimed);
 
 //Bind into array to send as json
 $arr = Array();
@@ -36,6 +36,7 @@ while ($stmt->fetch())
         "sMissionName" => $sMissionName,
         "iMissionType" => $iMissionType,
         "iMissionMaxRequirementNumber" => $iMissionMaxRequirementNumber,
+        "iTokensEarned" => $iTokensEarned,
         "bMissionClaimed" => $bMissionClaimed
     );
     array_push($arr["missionData"], $JSONMissionData);

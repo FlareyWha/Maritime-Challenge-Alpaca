@@ -17,13 +17,13 @@ catch (Exception $e)
 }
 
 //Prepare statement to update the iCoins for the account with uid
-$query = "select tb_achievement.iAchievementID, sAchievementName, sAchievementDescription, iEarnedTitleID, bAchievementClaimed from tb_achievementList inner join tb_achievement on tb_achievement.iAchievementID=tb_achievementList.iAchievementID where iOwnerUID=? order by tb_achievement.iAchievementID asc";
+$query = "select tb_achievement.iAchievementID, sAchievementName, sAchievementDescription, iEarnedTitleID, iRightshipRollarsEarned, bAchievementClaimed from tb_achievementList inner join tb_achievement on tb_achievement.iAchievementID=tb_achievementList.iAchievementID where iOwnerUID=? order by tb_achievement.iAchievementID asc";
 $stmt=$conn->prepare($query);
 $stmt->bind_param("i", $iOwnerUID);
 
 //Execute statement
 $stmt->execute();
-$stmt->bind_result($iAchievementID, $sAchievementName, $sAchievementDescription, $iEarnedTitleID, $bAchievementClaimed);
+$stmt->bind_result($iAchievementID, $sAchievementName, $sAchievementDescription, $iEarnedTitleID, $iRightshipRollarsEarned, $bAchievementClaimed);
 
 //Bind into array to send as json
 $arr = Array();
@@ -36,6 +36,7 @@ while ($stmt->fetch())
         "sAchievementName" => $sAchievementName,
         "sAchievementDescription" => $sAchievementDescription,
         "iEarnedTitleID" => $iEarnedTitleID,
+        "iRightshipRollarsEarned" => $iRightshipRollarsEarned,
         "bAchievementClaimed" => $bAchievementClaimed
     );
     array_push($arr["achievementData"], $JSONAchievementData);

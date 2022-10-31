@@ -34,10 +34,11 @@ $iTotalPlayers = require "GetTotalPlayersStatement.php";
 $iGuildID = 4 - (180 - $iTotalPlayers) % 4;
 
 //Create account here
-$query="insert into tb_account values (0,?,?,?,0,?,?,1,\"Hi!\",0,0,0,".$iGuildID.",0,0,0,0,1,0,0,0,".$sDateTime.")";
+$query="insert into tb_account values (0,?,?,?,0,?,?,1,\"Hi!\",0,0,0,{$iGuildID},0,0,0,0,1,0,0,0,\"{$sDateTime}\")";
 $stmt=$conn->prepare($query);
 //s - string, i - integer...make sure it matches the data types!
-$stmt->bind_param("ssssi",$sUsername,$sEmail,$sPassword,$dBirthday,$iGender);
+$stmt->bind_param("ssssi", $sUsername, $sEmail, $sPassword, $dBirthday, $iGender);
+
 // Execute Statement
 $stmt->execute();
 $stmt->fetch();
