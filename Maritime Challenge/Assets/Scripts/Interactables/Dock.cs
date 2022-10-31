@@ -31,8 +31,7 @@ public class Dock : BaseInteractable
 
     private void Update()
     {
-        if (interacted)
-            interacted = false;
+        
     }
 
     public override void Interact()
