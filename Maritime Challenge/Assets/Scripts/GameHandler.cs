@@ -150,7 +150,6 @@ public class GameHandler : NetworkBehaviour
             if (!PlayerData.PhonebookData[senderID].Unlocked)
             {
                 StartCoroutine(PlayerUI.UpdatePhonebookOtherUnlocked(senderID));
-                PlayerData.MyPlayer.UpdateXPLevels(300);
                 PlayerStatsManager.Instance.UpdatePlayerStat(PLAYER_STAT.RIGHTSHIPEDIA_ENTRIES_UNLOCKED, ++PlayerData.PlayerStats.PlayerStat[(int)PLAYER_STAT.RIGHTSHIPEDIA_ENTRIES_UNLOCKED]);
             }
 
@@ -230,6 +229,16 @@ public class GameHandler : NetworkBehaviour
 
             FriendsManager.Instance.InvokeOnFriendListUpdated();
 
+        }
+    }
+
+    [ClientRpc]
+    public void OnEnemyDied(int playerID, Vector3 enemyPos)
+    {
+        if (playerID == PlayerData.MyPlayer.GetUID())
+        {
+            PlayerStatsManager.Instance.UpdateXPLevels(GameSettings.XP_PER_ENEMY_KILL);
+            PopUpManager.Instance.AddCurrencyPopUp(CURRENCY_TYPE.PLAYER_XP, GameSettings.XP_PER_ENEMY_KILL, Camera.main.WorldToScreenPoint(enemyPos));
         }
     }
 

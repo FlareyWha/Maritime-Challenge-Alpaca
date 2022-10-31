@@ -19,9 +19,12 @@ public static class GameSettings
     public static float WORLD_MIN_Y = -86.0f;
     public static float WORLD_MAX_Y = 86.0f;
 
+    public static int XP_PER_RIGHTSHIPEDIA_ENTRY = 300;
+    public static int XP_PER_ENEMY_KILL = 100;
+
     public static int GetEXPRequirement(int level)
     {
-        return (level * level * 2) + level * 50 + 300;
+        return (level * level * 2) + level * 100 + 300;
     }
 
     public static int GetFriendshipXPRequirement(int level)

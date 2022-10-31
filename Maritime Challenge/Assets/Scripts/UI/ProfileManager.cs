@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Networking;
 
-public class ProfileManager : MonoBehaviour
+public class ProfileManager : MonoBehaviourSingleton<ProfileManager>
 {
     [SerializeField]
     private Text nameText, guildText, departmentText, countryText, birthdayText, biographyText;
@@ -21,7 +21,6 @@ public class ProfileManager : MonoBehaviour
     void Start()
     {
         LoadData();
-        //PlayerData.OnPlayerDataUpdated += LoadData;
     }
 
     public void LoadData()
@@ -35,19 +34,24 @@ public class ProfileManager : MonoBehaviour
             yield return null;
 
         //Edit all the text
+        UpdateUI();
+
+        PlayerAvatarManager manager = PlayerData.MyPlayer.GetComponent<PlayerAvatarManager>();
+        while (!manager.IsInitted())
+            yield return null;
+        DisplayAvatar.SetPlayer(PlayerData.MyPlayer);
+    }
+
+    public void UpdateUI()
+    {
         EditNameText();
         EditGuildText();
         EditDepartmentText();
         EditCountryText();
         EditBirthdayText();
         EditBiographyText();
-        EXPFill.fillAmount = PlayerData.CurrXP / GameSettings.GetEXPRequirement(PlayerData.CurrLevel);
+        EXPFill.fillAmount = (float)PlayerData.CurrXP / GameSettings.GetEXPRequirement(PlayerData.CurrLevel);
         LevelNum.text = PlayerData.CurrLevel.ToString();
-
-        PlayerAvatarManager manager = PlayerData.MyPlayer.GetComponent<PlayerAvatarManager>();
-        while (!manager.IsInitted())
-            yield return null; 
-        DisplayAvatar.SetPlayer(PlayerData.MyPlayer);
     }
 
     public void EditName()
@@ -117,9 +121,6 @@ public class ProfileManager : MonoBehaviour
                 break;
         }
     }
-
-   
-
     void EditNameText()
     {
         nameText.text = "Name: " + PlayerData.Name;

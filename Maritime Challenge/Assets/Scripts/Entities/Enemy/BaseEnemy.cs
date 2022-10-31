@@ -419,13 +419,14 @@ public class BaseEnemy : BaseEntity
     }
     private void OnHPChanged(int oldHP, int newHP)
     {
-        //Debug.Log("PLAYER HP CHANGED");
         HPFill.fillAmount = (float)newHP / maxHp;
     }
 
     [Server]
     protected override void HandleDeath(GameObject attacker)
     {
+        GameHandler.Instance.OnEnemyDied(attacker.GetComponent<Player>().GetUID(), transform.position);
+
         if (linkedAbandonedCity != null)
         {
             linkedAbandonedCity.RemoveFromEnemyList(this, attacker.GetComponent<Player>());
@@ -436,6 +437,7 @@ public class BaseEnemy : BaseEntity
             NetworkServer.Destroy(gameObject);
     }
 
+   
     [Client]
     public override void OnEntityClicked()
     {

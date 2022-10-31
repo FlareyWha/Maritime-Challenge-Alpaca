@@ -25,12 +25,7 @@ public class CannonBall : BaseProjectile
         //Show();
     }
     
-    //[ClientRpc]
-    //private void Show()
-    //{
-    //    gameObject.SetActive(true);
-    //}
-
+    
     public override void FixedUpdate()
     {
         base.FixedUpdate();
@@ -59,7 +54,6 @@ public class CannonBall : BaseProjectile
 
         if (target != null && collision.gameObject == this.target.gameObject)
         {
-            Debug.Log("Cannonball Hit Enemy");
             BaseEntity enemy = collision.gameObject.GetComponent<BaseEntity>();
             enemy.TakeDamage(ownerPlayer.ATK, ownerPlayer.gameObject);
 

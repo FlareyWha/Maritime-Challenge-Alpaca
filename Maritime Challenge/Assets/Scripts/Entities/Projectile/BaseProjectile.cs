@@ -40,7 +40,6 @@ public class BaseProjectile : NetworkBehaviour
 
     public virtual void FixedUpdate()
     {
-
         if (!isServer)
             return;
 

@@ -140,13 +140,13 @@ public class BaseAbandonedCity : NetworkBehaviour
 
     public void OnFirstPlayerEnterArea()
     {
-        Debug.Log("Player In Range - Spawning Enemies..");
+        //Debug.Log("Player In Range - Spawning Enemies..");
         SpawnEnemies();
     }
 
     public void OnLastPlayerLeaveArea()
     {
-        Debug.Log("Last Player Left");
+        //Debug.Log("Last Player Left");
         ResetAbandonedCity();
     }
 
@@ -173,7 +173,7 @@ public class BaseAbandonedCity : NetworkBehaviour
 
     public void RemoveFromEnemyList(BaseEnemy enemy, Player enemyKiller)
     {
-        Debug.Log("jfdjsfjjdksfjs");
+        //Debug.Log("jfdjsfjjdksfjs");
 
         enemyList.Remove(enemy.netId);
         CheckAreaCleared(enemyKiller);
@@ -225,8 +225,8 @@ public class BaseAbandonedCity : NetworkBehaviour
         enemyList.AddRange(allEnemies);
 
 
-        Debug.Log("Enemy List Count: " + enemyList.Count);
-        Debug.Log("All Enemy List Count: " + allEnemies.Count);
+        //Debug.Log("Enemy List Count: " + enemyList.Count);
+        //Debug.Log("All Enemy List Count: " + allEnemies.Count);
     }
 
     public void UnspawnEnemies()
@@ -241,8 +241,8 @@ public class BaseAbandonedCity : NetworkBehaviour
 
         enemyList.Clear();
 
-        Debug.Log("Enemy List Count Unspawn: " + enemyList.Count);
-        Debug.Log("All Enemy List Count Unspawn: " + allEnemies.Count);
+        //Debug.Log("Enemy List Count Unspawn: " + enemyList.Count);
+        //Debug.Log("All Enemy List Count Unspawn: " + allEnemies.Count);
     }
 
     public void DestroyEnemies()
