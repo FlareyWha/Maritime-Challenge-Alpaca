@@ -191,8 +191,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  hp: 200
-  maxHp: 200
+  hp: 2000
+  maxHp: 2000
   atk: 0
   atkspd: 0
   critrate: 0
@@ -208,6 +208,7 @@ MonoBehaviour:
   maxPatrolTime: 10
   maxSpotTime: 1
   maxChaseTime: 5
+  maxFreezeTime: 2
   attackDistance: 2
   HPFill: {fileID: 137366106763546506}
 --- !u!1 &2051776154836846008

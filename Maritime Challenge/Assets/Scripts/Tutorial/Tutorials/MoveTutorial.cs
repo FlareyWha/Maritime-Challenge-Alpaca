@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MoveTutorial : Tutorial
 {
+    private float timer;
+
     protected override void Start()
     {
         base.Start();
@@ -13,6 +15,13 @@ public class MoveTutorial : Tutorial
     public override void CheckConditionChanges()
     {
         if (UIManager.Instance.Joystick.IsHeld)
-            IncreaseCondition();
+        {
+            timer += Time.deltaTime;
+
+            if (timer >= 1)
+                IncreaseCondition();
+        }
+        else
+            timer = 0;
     }
 }
