@@ -38,7 +38,7 @@ public class GuildInfoPanel : MonoBehaviour
         if (ownerUID == 0)
         {
             guildOwnerText.text = "None";
-            StartCoroutine(UIManager.ToggleFlyInAnim(rectTransform, new Vector2(0, -910), Vector2.zero, 0.5f, null));
+            StartCoroutine(UIManager.ToggleFlyInAnim(rectTransform, new Vector2(0, -960), Vector2.zero, 0.5f, null));
         }
         else
         {
@@ -69,7 +69,7 @@ public class GuildInfoPanel : MonoBehaviour
             case UnityWebRequest.Result.Success:
                 //Deseralize and instantiate somehow idk tbh
                 guildOwnerText.text = webreq.downloadHandler.text;
-                StartCoroutine(UIManager.ToggleFlyInAnim(rectTransform, new Vector2(0, -910), Vector2.zero, 0.5f, null));
+                StartCoroutine(UIManager.ToggleFlyInAnim(rectTransform, new Vector2(0, -960), Vector2.zero, 0.5f, null));
                 break;
             case UnityWebRequest.Result.ProtocolError:
                 Debug.LogError(webreq.downloadHandler.text);
@@ -104,7 +104,7 @@ public class GuildInfoPanel : MonoBehaviour
 
     IEnumerator BackButtonClicked()
     {
-        yield return StartCoroutine(UIManager.ToggleFlyOutAnim(rectTransform, Vector2.zero, new Vector2(0, -910), 0.5f, null));
+        yield return StartCoroutine(UIManager.ToggleFlyOutAnim(rectTransform, Vector2.zero, new Vector2(0, -960), 0.5f, null));
 
         gameObject.SetActive(false);
     }
