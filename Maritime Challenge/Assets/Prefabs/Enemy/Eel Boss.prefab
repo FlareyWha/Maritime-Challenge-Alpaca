@@ -191,19 +191,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  hp: 2000
-  maxHp: 2000
-  atk: 0
-  atkspd: 0
-  critrate: 0
-  critdmg: 0
+  hp: 20000
+  maxHp: 20000
+  atk: 10
+  atkspd: 1
+  critrate: 0.1
+  critdmg: 1
   movespd: 1
   targetTransform: {fileID: 3913211141615104091}
   spawnPoint: {x: 0, y: 0}
-  movementAreaCellWidth: 32
-  movementAreaCellHeight: 32
-  detectionDistance: 10
-  findPlayerDistance: 20
+  movementAreaCellWidth: 64
+  movementAreaCellHeight: 64
+  detectionDistance: 20
+  findPlayerDistance: 40
   maxIdleTime: 5
   maxPatrolTime: 10
   maxSpotTime: 1
