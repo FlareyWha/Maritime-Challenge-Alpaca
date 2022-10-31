@@ -104,7 +104,7 @@ public class PlayerUI : MonoBehaviour
         if (!PlayerData.PhonebookData[player.GetUID()].Unlocked)
         {
             StartCoroutine(UpdatePhonebookOtherUnlocked(player.GetUID()));
-            PopUpManager.Instance.AddCurrencyPopUp(CURRENCY_TYPE.PLAYER_XP, GameSettings.XP_PER_RIGHTSHIPEDIA_ENTRY, Vector2.zero);
+            PopUpManager.Instance.AddCurrencyPopUp(CURRENCY_TYPE.PLAYER_XP, GameSettings.XP_PER_RIGHTSHIPEDIA_ENTRY, Camera.main.WorldToScreenPoint(transform.position));
             PlayerStatsManager.Instance.UpdateXPLevels(GameSettings.XP_PER_RIGHTSHIPEDIA_ENTRY);
             PlayerStatsManager.Instance.UpdatePlayerStat(PLAYER_STAT.RIGHTSHIPEDIA_ENTRIES_UNLOCKED, ++PlayerData.PlayerStats.PlayerStat[(int)PLAYER_STAT.RIGHTSHIPEDIA_ENTRIES_UNLOCKED]);
         }

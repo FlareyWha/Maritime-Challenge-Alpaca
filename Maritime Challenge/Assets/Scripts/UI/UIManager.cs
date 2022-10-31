@@ -158,8 +158,7 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
 
     private void OnNewRightShipediaEntry(int id)
     {
-        if (InteractNamecard.GetPlayerID() == id)
-            SetInteractNamecardDetails(id);
+        SetInteractNamecardDetails(InteractNamecard.GetPlayerID());
     }
 
     private void SetFriendInteractNamecardDetails(int id)
