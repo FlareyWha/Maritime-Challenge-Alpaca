@@ -127,7 +127,7 @@ public class CosmeticShopManager : MonoBehaviour
         CurrencyManager.Instance.UpdateTokenAmount(-1 * cosmetic.CosmeticPrice);
         PopUpManager.Instance.AddCurrencyPopUp(CURRENCY_TYPE.TOKEN, -1 * cosmetic.CosmeticPrice, currSelectedShopItem.transform.position);
         // Unlock Cosmetic
-        //CosmeticManager.Instance.
+        CosmeticManager.Instance.BuyCosmetic(cosmetic.CosmeticID);
         PlayerData.SetCosmeticUnlocked(cosmetic);
         AvatarCustomisationManager.Instance.UpdateInventoryRect(cosmetic.CosmeticBodyPartType);
         // Update Player Stat
