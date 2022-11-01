@@ -46,7 +46,7 @@ public class AvatarDisplay : MonoBehaviour
         }
         if (!PlayerData.OthersEquippedCosmeticList.ContainsKey(playerID) || PlayerData.OthersEquippedCosmeticList[playerID].Count == 0)
         {
-            StartCoroutine(InitToPlayerSprites(playerID));
+            UIManager.Instance.WaitAvatarDisplayInit(this, playerID);
             return;
         }
         foreach (Cosmetic cos in PlayerData.OthersEquippedCosmeticList[playerID])
@@ -71,16 +71,7 @@ public class AvatarDisplay : MonoBehaviour
         
     }
 
-    IEnumerator InitToPlayerSprites(int id)
-    {
-        while (!PlayerData.OthersEquippedCosmeticList.ContainsKey(id) || PlayerData.OthersEquippedCosmeticList[id].Count == 0)
-            yield return null;
-
-        foreach (Cosmetic cos in PlayerData.OthersEquippedCosmeticList[id])
-        {
-            SetAvatarSprite(cos.CosmeticBodyPartType, cos.CosmeticID);
-        }
-    }
+   
 
     public void SetUnknown()
     {
@@ -92,7 +83,7 @@ public class AvatarDisplay : MonoBehaviour
     }
 
     
-    private void SetAvatarSprite(COSMETIC_TYPE type, int cosmeticID)
+    public void SetAvatarSprite(COSMETIC_TYPE type, int cosmeticID)
     {
         switch (type)
         {
