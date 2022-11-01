@@ -13,6 +13,6 @@ public class WorldBoss : BaseInteractable
     public override void Interact()
     {
         //Enter world boss scene or wtv
-        //PlayerData.CommandsHandler.SwitchSubScene("WorldHubScene", SceneManager.StartWorldHubSpawnPos);
+        PlayerData.CommandsHandler.SwitchSubScene("BossScene", SceneManager.StartWorldHubSpawnPos);
     }
 }

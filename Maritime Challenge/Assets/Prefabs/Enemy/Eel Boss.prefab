@@ -200,16 +200,16 @@ MonoBehaviour:
   movespd: 1
   targetTransform: {fileID: 3913211141615104091}
   spawnPoint: {x: 0, y: 0}
-  movementAreaCellWidth: 64
-  movementAreaCellHeight: 64
-  detectionDistance: 20
-  findPlayerDistance: 40
+  movementAreaCellWidth: 128
+  movementAreaCellHeight: 128
+  detectionDistance: 40
+  findPlayerDistance: 80
   maxIdleTime: 5
   maxPatrolTime: 10
   maxSpotTime: 1
   maxChaseTime: 5
   maxFreezeTime: 2
-  attackDistance: 2
+  attackDistance: 8
   HPFill: {fileID: 137366106763546506}
 --- !u!1 &2051776154836846008
 GameObject:
