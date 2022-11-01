@@ -12191,8 +12191,8 @@ RectTransform:
   - {fileID: 1719053128}
   - {fileID: 1645062698}
   - {fileID: 402076798}
-  - {fileID: 1521929081}
   - {fileID: 1774989062}
+  - {fileID: 1521929081}
   - {fileID: 1444367248}
   - {fileID: 1655393399}
   - {fileID: 119540177}
@@ -26841,9 +26841,9 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 6
-  m_Spacing: 0
-  m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
+  m_Spacing: 5
+  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
@@ -27338,7 +27338,7 @@ RectTransform:
   - {fileID: 1625583545}
   - {fileID: 1315956598}
   m_Father: {fileID: 735894134}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
