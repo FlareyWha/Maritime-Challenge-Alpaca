@@ -11,8 +11,6 @@ public class PlayerAnimationsManager : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log("PlayerAnimsManager Start Called");
-
         StartCoroutine(Inits());
     }
 
