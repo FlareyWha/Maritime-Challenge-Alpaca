@@ -24,7 +24,10 @@ public class BaseProjectile : NetworkBehaviour
     private float lifetime = 10.0f;
     private float lifetime_timer = 10.0f;
 
-
+    private void Start()
+    {
+        gameObject.SetActive(active);
+    }
 
 
     public virtual void Awake()

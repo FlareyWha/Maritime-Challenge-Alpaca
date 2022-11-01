@@ -53,6 +53,11 @@ public class Battleship : NetworkBehaviour
     [SerializeField]
     private GameObject selectedTargetUI;
 
+    private void Start()
+    {
+        gameObject.SetActive(isVisible);
+    }
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
