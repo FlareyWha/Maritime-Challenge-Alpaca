@@ -48,6 +48,7 @@ public class ContactsManager : MonoBehaviourSingleton<ContactsManager>
         FriendsManager.OnNewFriendDataSaved += OnFriendDataSaved;
         FriendRequestHandler.OnFriendRequestSent += OnFriendRequestsUpdated;
         FriendRequestHandler.OnFriendRequestDeleted += OnFriendRequestsUpdated;
+
         UpdateDisplay();
         UpdateContactsListRect();
         UpdateGiftUI();
@@ -219,18 +220,6 @@ public class ContactsManager : MonoBehaviourSingleton<ContactsManager>
     }
 
     
-
-    //public void AddSelectedContactAsFriend()
-    //{
-        
-    //}
-
-    //public void UnfriendContact()
-    //{
-    //    FriendsManager.Instance.DeleteFriend(currSelected.GetContactInfo().UID);
-    //}
-
-
     private void OnFriendRequestsUpdated(int sender_id, int rec_id)
     {
         if (currSelected == null)

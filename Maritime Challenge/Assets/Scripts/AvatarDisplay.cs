@@ -44,7 +44,7 @@ public class AvatarDisplay : MonoBehaviour
         {
             SetAvatarSprite(i, PlayerAvatarManager.NullRefNum);
         }
-        if (!PlayerData.OthersEquippedCosmeticList.ContainsKey(playerID))
+        if (!PlayerData.OthersEquippedCosmeticList.ContainsKey(playerID) || PlayerData.OthersEquippedCosmeticList[playerID].Count == 0)
         {
             StartCoroutine(InitToPlayerSprites(playerID));
             return;
@@ -73,7 +73,7 @@ public class AvatarDisplay : MonoBehaviour
 
     IEnumerator InitToPlayerSprites(int id)
     {
-        while (!PlayerData.OthersEquippedCosmeticList.ContainsKey(id))
+        while (!PlayerData.OthersEquippedCosmeticList.ContainsKey(id) || PlayerData.OthersEquippedCosmeticList[playerID].Count == 0)
             yield return null;
 
         foreach (Cosmetic cos in PlayerData.OthersEquippedCosmeticList[id])
