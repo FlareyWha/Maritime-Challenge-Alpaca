@@ -12,21 +12,31 @@ public class BossHPBar : MonoBehaviourSingleton<BossHPBar>
 
     private BaseEnemy LinkedEnemy = null;
 
+    [SerializeField]
+    private EelBoss eelBoss;
+
     protected override void Awake()
     {
         base.Awake();
         canvasGroup = GetComponent<CanvasGroup>();
     }
 
+    protected void Start()
+    {
+        LinkEnemy(eelBoss);
+    }
+
     public void Activate()
     {
         StartCoroutine(UIManager.ToggleFadeAnim(canvasGroup, 0, 1, 0.6f));
+        Activate();
     }
 
     public void Deactivate()
     {
         StartCoroutine(UIManager.ToggleFadeAnim(canvasGroup, 1, 0, 0.6f));
     }
+
     public void LinkEnemy(BaseEnemy enemy)
     {
         if (LinkedEnemy != null)

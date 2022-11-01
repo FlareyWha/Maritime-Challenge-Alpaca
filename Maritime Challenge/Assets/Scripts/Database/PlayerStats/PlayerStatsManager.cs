@@ -154,9 +154,9 @@ public class PlayerStatsManager : MonoBehaviourSingleton<PlayerStatsManager>
 
         WWWForm form = new WWWForm();
         form.AddField("UID", PlayerData.UID);
-        form.AddField("fXPlayerPos", position.x);
-        form.AddField("fYPlayerPos", position.y);
-        form.AddField("fZPlayerPos", position.z);
+        form.AddField("fPlayerXPos", position.x);
+        form.AddField("fPlayerYPos", position.y);
+        form.AddField("fPlayerZPos", position.z);
         using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
         yield return webreq.SendWebRequest();
         switch (webreq.result)
