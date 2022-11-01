@@ -23,13 +23,13 @@ public class BossHPBar : MonoBehaviourSingleton<BossHPBar>
 
     protected void Start()
     {
+        Activate();
         LinkEnemy(eelBoss);
     }
 
     public void Activate()
     {
         StartCoroutine(UIManager.ToggleFadeAnim(canvasGroup, 0, 1, 0.6f));
-        Activate();
     }
 
     public void Deactivate()
