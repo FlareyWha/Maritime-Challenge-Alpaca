@@ -73,7 +73,7 @@ public class AvatarDisplay : MonoBehaviour
 
     IEnumerator InitToPlayerSprites(int id)
     {
-        while (!PlayerData.OthersEquippedCosmeticList.ContainsKey(id) || PlayerData.OthersEquippedCosmeticList[playerID].Count == 0)
+        while (!PlayerData.OthersEquippedCosmeticList.ContainsKey(id) || PlayerData.OthersEquippedCosmeticList[id].Count == 0)
             yield return null;
 
         foreach (Cosmetic cos in PlayerData.OthersEquippedCosmeticList[id])

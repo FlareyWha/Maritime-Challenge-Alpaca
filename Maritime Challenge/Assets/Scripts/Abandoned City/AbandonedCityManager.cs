@@ -11,8 +11,6 @@ public class AbandonedCityManager : MonoBehaviourSingleton<AbandonedCityManager>
     [SerializeField]
     private GameObject abandonedCityPrefab;
 
-    [SerializeField]
-    private Transform abandonedCityContainer;
 
     // Start is called before the first frame update
     void Start()
@@ -62,7 +60,8 @@ public class AbandonedCityManager : MonoBehaviourSingleton<AbandonedCityManager>
     {
         for (int i = 0; i < abandonedCityInfo.Count; ++i)
         {
-            BaseAbandonedCity abandonedCity = Instantiate(abandonedCityPrefab, new Vector3(abandonedCityInfo[i].fAbandonedCityXPos, abandonedCityInfo[i].fAbandonedCityYPos, 0), Quaternion.identity, abandonedCityContainer).GetComponent<BaseAbandonedCity>();
+            BaseAbandonedCity abandonedCity = Instantiate(abandonedCityPrefab, new Vector3(abandonedCityInfo[i].fAbandonedCityXPos, abandonedCityInfo[i].fAbandonedCityYPos, 0), Quaternion.identity).GetComponent<BaseAbandonedCity>();
+            SceneManager.Instance.MoveGameObjectToScene(abandonedCity.gameObject, "WorldHubScene");
             NetworkServer.Spawn(abandonedCity.gameObject);
 
             abandonedCity.InitAbandonedCity(abandonedCityInfo[i].iAbandonedCityID, abandonedCityInfo[i].iAbandonedCityAreaCellWidth, abandonedCityInfo[i].iAbandonedCityAreaCellHeight, new Vector2(abandonedCityInfo[i].fAbandonedCityXPos, abandonedCityInfo[i].fAbandonedCityYPos), abandonedCityInfo[i].iCapturedGuildID);
