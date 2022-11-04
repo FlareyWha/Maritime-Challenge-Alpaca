@@ -29,7 +29,7 @@ public class Joystick : MonoBehaviour
 
         inner_radius = InnerCircle.GetComponent<RectTransform>().rect.width * 0.5f;
         outer_radius = OuterCircle.GetComponent<RectTransform>().rect.width * 0.5f;
-        max_delta_radius = inner_radius * 1.5f;
+        max_delta_radius = inner_radius * 1.7f;
 
         free_move_height = FreeMoveArea.rect.height;
         free_move_width = FreeMoveArea.rect.width;
@@ -64,15 +64,21 @@ public class Joystick : MonoBehaviour
                 return;
             }
 
+
+            inner_radius = InnerCircle.GetComponent<RectTransform>().rect.width * 0.5f;
+            outer_radius = OuterCircle.GetComponent<RectTransform>().rect.width * 0.5f;
+            max_delta_radius = inner_radius * 1.7f;
+
+
             Vector2 touchWorldPos = InputManager.GetTouchPos();
 
             Vector2 oriPos = new Vector2(OuterCircle.transform.position.x, OuterCircle.transform.position.y);
+            Vector3 deltaPos = touchWorldPos - oriPos;
             if (Vector2.Distance(touchWorldPos, oriPos) > max_delta_radius)
             {
-                touchWorldPos = oriPos + (touchWorldPos - oriPos).normalized * max_delta_radius;
+                deltaPos = (touchWorldPos - oriPos).normalized * max_delta_radius;
             }
-            InnerCircle.transform.position = touchWorldPos;
-
+            InnerCircle.transform.localPosition = OuterCircle.transform.localPosition + deltaPos;
         }
     }
 
@@ -169,6 +175,10 @@ public class Joystick : MonoBehaviour
 
     private void ConstraintWithinScreen()
     {
+        free_move_height = FreeMoveArea.rect.height;
+        free_move_width = FreeMoveArea.rect.width;
+
+
         Vector2 pos;
         pos.x = Mathf.Clamp(OuterCircle.transform.position.x, FreeMoveArea.position.x - free_move_width * 0.5f + max_delta_radius + inner_radius,
             FreeMoveArea.position.x + (free_move_width * 0.5f) - max_delta_radius - inner_radius);
