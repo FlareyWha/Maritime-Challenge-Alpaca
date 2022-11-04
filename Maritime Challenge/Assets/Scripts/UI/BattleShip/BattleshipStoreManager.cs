@@ -94,7 +94,6 @@ public class BattleshipStoreManager : MonoBehaviour
         }
     }
 
-
     private void SetSelectedShopUI(BattleshipShopItemUI ui)
     {
         if (currSelectedShopItem != null)
@@ -126,6 +125,16 @@ public class BattleshipStoreManager : MonoBehaviour
         MOVSPDText.text = shipInfo.MoveSpd.ToString();
     }
 
+    public void SetDetailsToCurrentInventory()
+    {
+        SetShipDetailsUI(currSelectedBattleship.BattleshipInfo);
+    }
+
+    public void SetDetailsToCurrentShopItem()
+    {
+        SetShipDetailsUI(currSelectedShopItem.BattleshipInfo);
+    }
+
     public void BuyItem()
     {
         if (currSelectedShopItem == null)
@@ -147,7 +156,6 @@ public class BattleshipStoreManager : MonoBehaviour
             UpdateShopItemsDisplay();
             UpdateOwnedShipsDisplay();
 
-            Debug.Log("Battleship Bought! : " + currSelectedShopItem.BattleshipInfo.BattleshipName);
             if (ShopRect.childCount > 0)
                 currSelectedShopItem = ShopRect.GetChild(0).gameObject.GetComponent<BattleshipShopItemUI>();
             else
