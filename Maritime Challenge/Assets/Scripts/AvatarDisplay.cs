@@ -44,12 +44,20 @@ public class AvatarDisplay : MonoBehaviour
         {
             SetAvatarSprite(i, PlayerAvatarManager.NullRefNum);
         }
-       
+
+
+        if (!PlayerData.OthersEquippedCosmeticList.ContainsKey(playerID) || PlayerData.OthersEquippedCosmeticList[playerID].Count == 0)
+        {
+            UIManager.Instance.WaitAvatarDisplayInit(this, playerID);
+            return;
+        }
+
         foreach (Cosmetic cos in PlayerData.OthersEquippedCosmeticList[playerID])
         {
             SetAvatarSprite(cos.CosmeticBodyPartType, cos.CosmeticID);
         }
     }
+
 
     public void SetDefault()
     {

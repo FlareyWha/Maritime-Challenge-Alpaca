@@ -211,6 +211,22 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
         SetInteractNamecardDetails(InteractNamecard.GetPlayerID());
     }
 
+    public void WaitAvatarDisplayInit(AvatarDisplay avatar, int id)
+    {
+        StartCoroutine(InitDisplayToPlayerSprites(avatar, id));
+    }
+    IEnumerator InitDisplayToPlayerSprites(AvatarDisplay avatar, int id)
+    {
+        while (!PlayerData.OthersEquippedCosmeticList.ContainsKey(id) || PlayerData.OthersEquippedCosmeticList[id].Count == 0)
+            yield return null;
+
+
+        foreach (Cosmetic cos in PlayerData.OthersEquippedCosmeticList[id])
+        {
+            avatar.SetAvatarSprite(cos.CosmeticBodyPartType, cos.CosmeticID);
+        }
+    }
+
     static public IEnumerator ToggleSlideAnim(Image mask, bool open, float anim_time, Button button)
     {
         if (button != null)

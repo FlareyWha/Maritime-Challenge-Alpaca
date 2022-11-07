@@ -8,6 +8,8 @@ public class PostLoginInfoGetter : MonoBehaviour
 {
     private LoginManager loginManager;
 
+    private static bool bGetCosmeticsComplete = false;
+
     private void Start()
     {
         loginManager = GetComponent<LoginManager>();
@@ -156,6 +158,7 @@ public class PostLoginInfoGetter : MonoBehaviour
         {
             case UnityWebRequest.Result.Success:
                 PlayerData.CosmeticsList = JSONDeseralizer.DeseralizeCosmeticData(webreq.downloadHandler.text);
+                bGetCosmeticsComplete = true;
 
                 yield return StartCoroutine(GetEquippedCosmetics(PlayerData.UID, true));
                 break;
@@ -180,6 +183,10 @@ public class PostLoginInfoGetter : MonoBehaviour
         switch (webreq.result)
         {
             case UnityWebRequest.Result.Success:
+
+                while (!bGetCosmeticsComplete)
+                    yield return null;
+             
                 List<int> equippedCosmeticListIDList = JSONDeseralizer.DeseralizeEquippedCosmeticList(webreq.downloadHandler.text);
 
                 List<Cosmetic> cosmeticList = new List<Cosmetic>();
