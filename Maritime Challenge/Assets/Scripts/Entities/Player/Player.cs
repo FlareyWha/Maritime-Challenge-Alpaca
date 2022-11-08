@@ -46,7 +46,7 @@ public class Player : BaseEntity
 
 
    
-    private void Start()
+    private void Awake()
     {
         gameObject.SetActive(isVisible);
         for (int i = 0; i < PlayerSprites.Length; i++)

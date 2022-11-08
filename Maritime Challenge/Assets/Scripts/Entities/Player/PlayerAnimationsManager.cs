@@ -21,6 +21,9 @@ public class PlayerAnimationsManager : MonoBehaviour
 
         while (!playerAvatar.IsInitted())
             yield return null;
+
+        Debug.Log("Initting Player Animations For " + GetComponent<Player>().GetUsername());
+
         InitAvatarAnimations();
     }
 

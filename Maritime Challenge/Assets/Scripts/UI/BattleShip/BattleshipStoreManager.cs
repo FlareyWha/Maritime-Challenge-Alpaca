@@ -20,12 +20,13 @@ public class BattleshipStoreManager : MonoBehaviour
     private BattleshipUI currSelectedBattleship = null;
 
 
-    private void Start()
+    private void Awake()
     {
         PlayerData.OnNumTokensUpdated += UpdateNumTokensUI;
         UpdateNumTokensUI();
         UpdateShopItemsDisplay();
         UpdateOwnedShipsDisplay();
+        SetDetailsToCurrentShopItem();
     }
 
     private void OnDestroy()
@@ -125,13 +126,35 @@ public class BattleshipStoreManager : MonoBehaviour
         MOVSPDText.text = shipInfo.MoveSpd.ToString();
     }
 
+    private void SetEmptyDetailsUI()
+    {
+        ShopKeeperQuoteText.text = "Nothing to view here.";
+        BattleshipNameText.text = "";
+        HPText.text = "";
+        ATKText.text = "";
+        ATKSPDText.text = "";
+        MOVSPDText.text = "";
+    }
+
     public void SetDetailsToCurrentInventory()
     {
+        if (currSelectedBattleship == null)
+        {
+            SetEmptyDetailsUI();
+            return;
+        }
+
         SetShipDetailsUI(currSelectedBattleship.BattleshipInfo);
     }
 
     public void SetDetailsToCurrentShopItem()
     {
+        if (currSelectedShopItem == null)
+        {
+            SetEmptyDetailsUI();
+            return;
+        }
+
         SetShipDetailsUI(currSelectedShopItem.BattleshipInfo);
     }
 
