@@ -21,7 +21,6 @@ public class PostLoginInfoGetter : MonoBehaviour
 
         StartCoroutine(coroutineCollectionManager.CollectCoroutine(GetPlayerData()));
         StartCoroutine(coroutineCollectionManager.CollectCoroutine(GetPlayerStats()));
-        StartCoroutine(coroutineCollectionManager.CollectCoroutine(GetPhonebookData()));
         StartCoroutine(coroutineCollectionManager.CollectCoroutine(GetFriends()));
         StartCoroutine(coroutineCollectionManager.CollectCoroutine(FriendRequestHandler.GetSentFriendRequests()));
         StartCoroutine(coroutineCollectionManager.CollectCoroutine(FriendRequestHandler.GetRecievedFriendRequests()));
@@ -38,6 +37,10 @@ public class PostLoginInfoGetter : MonoBehaviour
         PlayerStatsManager.Instance.SaveAllStats();
 
         StartCoroutine(UpdateLastLoginTime());
+
+        StartCoroutine(coroutineCollectionManager.CollectCoroutine(GetPhonebookData()));
+
+        yield return coroutineCollectionManager;
 
         //Connect to server once all the info has been recieved
         loginManager.ConnectToServer();
