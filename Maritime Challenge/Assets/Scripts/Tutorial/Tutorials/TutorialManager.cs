@@ -46,6 +46,7 @@ public class TutorialManager : MonoBehaviourSingleton<TutorialManager>
 
     public void SkipTutorial()
     {
+        UIManager.Instance.ToggleJoystick(true);
         PlayerData.CommandsHandler.SwitchSubScene("WorldHubScene", SceneManager.StartWorldHubSpawnPos);
     }
 }
