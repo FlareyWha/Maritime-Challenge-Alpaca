@@ -66,7 +66,7 @@ public class Player : BaseEntity
         PlayerData.OnPlayerDataUpdated += CallSetDetails;
 
         // Set Position
-        transform.position = PlayerData.PlayerPosition;
+        transform.position = SceneManager.StartWorldHubSpawnPos;
        
         //Init My BattleShip
         if (LinkedBattleshipGO == null)

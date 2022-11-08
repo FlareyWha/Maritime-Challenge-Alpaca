@@ -76,8 +76,9 @@ public class AvatarCustomisationManager : MonoBehaviourSingleton<AvatarCustomisa
 
         foreach (KeyValuePair<Cosmetic, bool> cos in PlayerData.CosmeticsList)
         {
-            if (cos.Key.CosmeticBodyPartType != type)
-                return;
+            Debug.Log("Checking for " + cos.Key.CosmeticName);
+            if (cos.Key.CosmeticBodyPartType != type || !cos.Value)
+                continue;
 
             AvatarItemUI item = Instantiate(AvatarItemUIPrefab, rect).GetComponent<AvatarItemUI>();
             item.Init(cos.Key, EquipAccessory);
