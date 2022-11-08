@@ -55,6 +55,7 @@ public class Battleship : NetworkBehaviour
 
     private void Start()
     {
+        Debug.Log("BattleShip Set to " + isVisible);
         gameObject.SetActive(isVisible);
     }
 
