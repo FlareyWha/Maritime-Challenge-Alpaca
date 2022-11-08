@@ -55,7 +55,18 @@ public class Player : BaseEntity
         }
     }
 
-  
+    private void Start()
+    {
+        if (isLocalPlayer)
+        {
+            for (int i = 0; i < defaultSortingOrder.Length; i++)
+            {
+                defaultSortingOrder[i] += 3;
+            }
+        }
+    }
+
+
     public override void OnStartLocalPlayer()
     {
         // Set My Player
