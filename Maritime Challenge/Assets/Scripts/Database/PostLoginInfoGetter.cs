@@ -37,6 +37,8 @@ public class PostLoginInfoGetter : MonoBehaviour
 
         PlayerStatsManager.Instance.SaveAllStats();
 
+        StartCoroutine(UpdateLastLoginTime());
+
         //Connect to server once all the info has been recieved
         loginManager.ConnectToServer();
     }
@@ -57,6 +59,8 @@ public class PostLoginInfoGetter : MonoBehaviour
 
                 //Deseralize the data
                 JSONDeseralizer.DeseralizePlayerData(webreq.downloadHandler.text);
+
+
                 break;
             case UnityWebRequest.Result.ProtocolError:
                 Debug.LogError(webreq.downloadHandler.text);
@@ -334,6 +338,34 @@ public class PostLoginInfoGetter : MonoBehaviour
                 break;
             default:
                 Debug.LogError("Server Error");
+                break;
+        }
+    }
+
+    IEnumerator UpdateLastLoginTime()
+    {
+        // Increase Login - if daily reset, increase login in func
+        if (!PlayerData.CheckForDailyReset())
+            PlayerStatsManager.Instance.UpdatePlayerStat(PLAYER_STAT.LOGIN, ++PlayerData.PlayerStats.PlayerStat[(int)PLAYER_STAT.LOGIN]);
+
+        //Set the URL to the getUID one
+        string url = ServerDataManager.URL_updateLastLoginTime;
+        Debug.Log(url);
+
+        WWWForm form = new WWWForm();
+        form.AddField("UID", PlayerData.UID);
+        using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
+        yield return webreq.SendWebRequest();
+        switch (webreq.result)
+        {
+            case UnityWebRequest.Result.Success:
+                Debug.Log(webreq.downloadHandler.text);
+                break;
+            case UnityWebRequest.Result.ProtocolError:
+                Debug.LogError(webreq.downloadHandler.text);
+                break;
+            default:
+                Debug.LogError(webreq.downloadHandler.text);
                 break;
         }
     }
