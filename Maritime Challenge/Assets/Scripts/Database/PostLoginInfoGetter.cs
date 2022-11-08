@@ -19,12 +19,12 @@ public class PostLoginInfoGetter : MonoBehaviour
     {
         CoroutineCollection coroutineCollectionManager = new CoroutineCollection();
 
+        StartCoroutine(coroutineCollectionManager.CollectCoroutine(DoGetCosmetics()));
         StartCoroutine(coroutineCollectionManager.CollectCoroutine(GetPlayerData()));
         StartCoroutine(coroutineCollectionManager.CollectCoroutine(GetPlayerStats()));
         StartCoroutine(coroutineCollectionManager.CollectCoroutine(GetFriends()));
         StartCoroutine(coroutineCollectionManager.CollectCoroutine(FriendRequestHandler.GetSentFriendRequests()));
         StartCoroutine(coroutineCollectionManager.CollectCoroutine(FriendRequestHandler.GetRecievedFriendRequests()));
-        StartCoroutine(coroutineCollectionManager.CollectCoroutine(DoGetCosmetics()));
         StartCoroutine(coroutineCollectionManager.CollectCoroutine(DoGetTitles()));
         StartCoroutine(coroutineCollectionManager.CollectCoroutine(DoGetAchievements()));
         StartCoroutine(coroutineCollectionManager.CollectCoroutine(DoGetMissions()));
@@ -36,7 +36,7 @@ public class PostLoginInfoGetter : MonoBehaviour
 
         PlayerStatsManager.Instance.SaveAllStats();
 
-        StartCoroutine(UpdateLastLoginTime());
+        StartCoroutine(coroutineCollectionManager.CollectCoroutine(UpdateLastLoginTime()));
 
         StartCoroutine(coroutineCollectionManager.CollectCoroutine(GetPhonebookData()));
 
