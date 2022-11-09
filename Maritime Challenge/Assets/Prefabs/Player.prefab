@@ -549,7 +549,7 @@ GameObject:
   - component: {fileID: 7096844099003520825}
   - component: {fileID: 4378395825095399806}
   - component: {fileID: 5068429581049363927}
-  - component: {fileID: 7637044336230447112}
+  - component: {fileID: 529802597165510171}
   m_Layer: 0
   m_Name: HairBack
   m_TagString: Untagged
@@ -641,7 +641,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &7637044336230447112
+--- !u!114 &529802597165510171
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -650,7 +650,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3779865381794697847}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 548986ca072bad243a66dd0c9f1aa796, type: 3}
+  m_Script: {fileID: 11500000, guid: cb728ce480cacce468966a5d5f07e4a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   defaultID: 3
@@ -667,7 +667,7 @@ GameObject:
   - component: {fileID: 1572434323186482908}
   - component: {fileID: 3201312575687265649}
   - component: {fileID: 2473084929414549253}
-  - component: {fileID: 8124456436019200357}
+  - component: {fileID: 1310903272113893548}
   m_Layer: 0
   m_Name: Shoe
   m_TagString: Untagged
@@ -759,7 +759,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &8124456436019200357
+--- !u!114 &1310903272113893548
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -768,7 +768,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5300436063019523554}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 548986ca072bad243a66dd0c9f1aa796, type: 3}
+  m_Script: {fileID: 11500000, guid: cb728ce480cacce468966a5d5f07e4a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   defaultID: 5
@@ -930,7 +930,7 @@ GameObject:
   - component: {fileID: 6529587388857215446}
   - component: {fileID: 4674462900905510182}
   - component: {fileID: 4618263655241512286}
-  - component: {fileID: 5880137284040802452}
+  - component: {fileID: 6247527442988275319}
   m_Layer: 0
   m_Name: HairFront
   m_TagString: Untagged
@@ -1022,7 +1022,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &5880137284040802452
+--- !u!114 &6247527442988275319
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1031,7 +1031,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6670612129872012886}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 548986ca072bad243a66dd0c9f1aa796, type: 3}
+  m_Script: {fileID: 11500000, guid: cb728ce480cacce468966a5d5f07e4a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   defaultID: 3
@@ -1048,7 +1048,7 @@ GameObject:
   - component: {fileID: 5529625875339312634}
   - component: {fileID: 1722077273126694961}
   - component: {fileID: 3045004736510988409}
-  - component: {fileID: 4094357339714646145}
+  - component: {fileID: 677268191541227687}
   m_Layer: 0
   m_Name: Bottom
   m_TagString: Untagged
@@ -1140,7 +1140,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &4094357339714646145
+--- !u!114 &677268191541227687
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1149,7 +1149,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7230950417349455460}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 548986ca072bad243a66dd0c9f1aa796, type: 3}
+  m_Script: {fileID: 11500000, guid: cb728ce480cacce468966a5d5f07e4a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   defaultID: 4
@@ -1360,7 +1360,7 @@ GameObject:
   - component: {fileID: 1600595928407338493}
   - component: {fileID: 6800025604057381098}
   - component: {fileID: 265808385365591700}
-  - component: {fileID: 1183674550607232837}
+  - component: {fileID: 8848833632666251694}
   m_Layer: 0
   m_Name: Top
   m_TagString: Untagged
@@ -1452,7 +1452,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1183674550607232837
+--- !u!114 &8848833632666251694
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1461,7 +1461,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7836821286546894828}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 548986ca072bad243a66dd0c9f1aa796, type: 3}
+  m_Script: {fileID: 11500000, guid: cb728ce480cacce468966a5d5f07e4a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   defaultID: 1
@@ -1478,7 +1478,7 @@ GameObject:
   - component: {fileID: 8771049406964737184}
   - component: {fileID: 2281672732284213407}
   - component: {fileID: 8266499074715506729}
-  - component: {fileID: 2105671807482991916}
+  - component: {fileID: 3227356925160142986}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -1570,7 +1570,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &2105671807482991916
+--- !u!114 &3227356925160142986
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1579,7 +1579,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7885934357493370052}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 548986ca072bad243a66dd0c9f1aa796, type: 3}
+  m_Script: {fileID: 11500000, guid: cb728ce480cacce468966a5d5f07e4a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   defaultID: 2
@@ -1941,13 +1941,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animatorHandlers:
-  - {fileID: 5880137284040802452}
-  - {fileID: 4912471776485065140}
-  - {fileID: 2105671807482991916}
-  - {fileID: 1183674550607232837}
-  - {fileID: 4094357339714646145}
-  - {fileID: 8124456436019200357}
-  - {fileID: 7637044336230447112}
+  - {fileID: 6247527442988275319}
+  - {fileID: 4058051024973884189}
+  - {fileID: 3227356925160142986}
+  - {fileID: 8848833632666251694}
+  - {fileID: 677268191541227687}
+  - {fileID: 1310903272113893548}
+  - {fileID: 529802597165510171}
 --- !u!114 &3834950433424090269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2069,7 +2069,7 @@ GameObject:
   - component: {fileID: 8665798488461219694}
   - component: {fileID: 5561724877521398438}
   - component: {fileID: 8029997214271889164}
-  - component: {fileID: 4912471776485065140}
+  - component: {fileID: 4058051024973884189}
   m_Layer: 0
   m_Name: Headwear
   m_TagString: Untagged
@@ -2161,7 +2161,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &4912471776485065140
+--- !u!114 &4058051024973884189
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2170,7 +2170,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 9177410304660845624}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 548986ca072bad243a66dd0c9f1aa796, type: 3}
+  m_Script: {fileID: 11500000, guid: cb728ce480cacce468966a5d5f07e4a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   defaultID: 0

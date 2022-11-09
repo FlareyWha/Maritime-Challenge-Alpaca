@@ -119,9 +119,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1680
-        width: 861
-        height: 368
+        y: 861
+        width: 368
+        height: 861
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,10 +139,10 @@ TextureImporter:
       name: Boat2_Right_Spritesheet_1
       rect:
         serializedVersion: 2
-        x: 861
-        y: 1680
-        width: 861
-        height: 368
+        x: 368
+        y: 861
+        width: 368
+        height: 861
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,10 +160,10 @@ TextureImporter:
       name: Boat2_Right_Spritesheet_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1312
-        width: 861
-        height: 368
+        x: 736
+        y: 861
+        width: 368
+        height: 861
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,10 +181,10 @@ TextureImporter:
       name: Boat2_Right_Spritesheet_3
       rect:
         serializedVersion: 2
-        x: 861
-        y: 1312
-        width: 861
-        height: 368
+        x: 1104
+        y: 861
+        width: 368
+        height: 861
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,9 +203,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 944
-        width: 861
-        height: 368
+        y: 0
+        width: 368
+        height: 861
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -223,10 +223,10 @@ TextureImporter:
       name: Boat2_Right_Spritesheet_5
       rect:
         serializedVersion: 2
-        x: 861
-        y: 944
-        width: 861
-        height: 368
+        x: 368
+        y: 0
+        width: 368
+        height: 861
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,10 +244,10 @@ TextureImporter:
       name: Boat2_Right_Spritesheet_6
       rect:
         serializedVersion: 2
-        x: 0
-        y: 576
-        width: 861
-        height: 368
+        x: 736
+        y: 0
+        width: 368
+        height: 861
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -265,10 +265,10 @@ TextureImporter:
       name: Boat2_Right_Spritesheet_7
       rect:
         serializedVersion: 2
-        x: 861
-        y: 576
-        width: 861
-        height: 368
+        x: 1104
+        y: 0
+        width: 368
+        height: 861
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

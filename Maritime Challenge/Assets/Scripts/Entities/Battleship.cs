@@ -18,14 +18,19 @@ public class Battleship : NetworkBehaviour
     private Image OwnerNameBG;
     [SerializeField]
     private Image HPFill;
-    [SerializeField]
-    private Sprite UpwardSprite, DownwardSprite, LeftSprite, RightSprite;
+  
     [SerializeField]
     private Transform TurretHoleRef_Up, TurretHoleRef_Down, TurretHoleRef_Left, TurretHoleRef_Right;
     private SHIP_FACING currFacing, prevFacing;
 
- //   [SerializeField]
-  //  private GameObject CannonBallPrefab;
+    [SerializeField]
+    private Animator animator;
+    [SerializeField]
+    private BattleShipAnimatorHandler animatorhandler;
+    [SyncVar]
+    private bool anim_isMoving;
+    [SyncVar]
+    private Vector2 anim_dir;
 
     private Rigidbody2D rb = null;
     private SpriteRenderer shipSprite = null;
@@ -58,7 +63,18 @@ public class Battleship : NetworkBehaviour
         Debug.Log("BattleShip Set to " + isVisible);
         gameObject.SetActive(isVisible);
     }
+    public override void OnStartServer()
+    {
+        anim_isMoving = false;
+        anim_dir = Vector2.zero;
+    }
 
+    public override void OnStartClient()
+    {
+        animator.SetBool("IsMoving", anim_isMoving);
+        animator.SetFloat("DirX", anim_dir.x);
+        animator.SetFloat("DirY", anim_dir.y);
+    }
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -117,7 +133,7 @@ public class Battleship : NetworkBehaviour
             delta_theta = Vector2.SignedAngle(velocity, joystickDir);
 
             angular_velocity += delta_theta * angular_accel_rate * Time.deltaTime;
-           
+
             // update direction var for later use/ref
             direction = Quaternion.Euler(0, 0, theta) * Vector2.up;
             // Update vel speed
@@ -130,9 +146,10 @@ public class Battleship : NetworkBehaviour
         // Update Theta
         theta += angular_velocity * Time.deltaTime;
         // Check if Overshot Target Dir
-        if (theta > target_theta && delta_theta > 0 
+        if (theta > target_theta && delta_theta > 0
             || theta < target_theta && delta_theta < 0)
             angular_velocity = 0;
+
 
         // Apply Decceleration if ship is moving
         if (velocity.magnitude != 0)
@@ -186,8 +203,14 @@ public class Battleship : NetworkBehaviour
             SyncShipFacing((int)currFacing);
 
         // Update Rotation
-        //float theta = Vector2.SignedAngle(Vector2.up, velocity);
         rb.rotation = theta;
+
+        // Update Animations
+        SendUpdateAnimatorMoving(velocity.magnitude != 0);
+
+        Vector2 dirrr = Quaternion.Euler(0, 0, theta) * Vector2.up;
+        SendUpdateAnimatorDir(dirrr.x, dirrr.y);
+
 
         // Update Ship Attack
         if (currTarget != null)
@@ -241,11 +264,6 @@ public class Battleship : NetworkBehaviour
 
     private void FireCannon(float theta)
     {
-        // ASSUMING +Y AXIS START
-        //x 
-        // 0 - 0, 90 - -1, 180 - 0, 270 - 1
-        // y
-        // 0 - 1, 90 - 0, 180 - -1, 270 - 0
         float rad = Mathf.Deg2Rad * theta;
         LaunchCannonBall(currTarget.gameObject, GetTurretHoleRefPos(), new Vector3(-Mathf.Sin(rad), Mathf.Cos(rad), 0), PlayerData.activeSubScene);
     }
@@ -340,7 +358,6 @@ public class Battleship : NetworkBehaviour
     {
         SetShipFacing(facing);
         currFacing = (SHIP_FACING)facing;
-        UpdateShipSpriteBaseOnFacing();
     }
 
 
@@ -355,26 +372,6 @@ public class Battleship : NetworkBehaviour
     private void SetShipFacing(int facing)
     {
         currFacing = (SHIP_FACING)facing;
-        UpdateShipSpriteBaseOnFacing();
-    }
-
-    private void UpdateShipSpriteBaseOnFacing()
-    {
-        switch (currFacing)
-        {
-            case SHIP_FACING.LEFT:
-                shipSprite.sprite = LeftSprite;
-                break;
-            case SHIP_FACING.RIGHT:
-                shipSprite.sprite = RightSprite;
-                break;
-            case SHIP_FACING.UP:
-                shipSprite.sprite = UpwardSprite;
-                break;
-            case SHIP_FACING.DOWN:
-                shipSprite.sprite = DownwardSprite;
-                break;
-        }
     }
 
     [Command]
@@ -390,18 +387,46 @@ public class Battleship : NetworkBehaviour
         if (shipInfo == null)
             return;
 
-        LeftSprite = shipInfo.BattleshipData.LeftSprite;
-        RightSprite = shipInfo.BattleshipData.RightSprite;
-        UpwardSprite = shipInfo.BattleshipData.UpwardSprite;
-        DownwardSprite = shipInfo.BattleshipData.DownwardSprite;
-
-        UpdateShipSpriteBaseOnFacing();
+        animatorhandler.SetAnimations(id);
     }
+    [Command]
+    private void SendUpdateAnimatorMoving(bool moving)
+    {
+        anim_isMoving = moving;
+        UpdateAnimatorWalkBool(moving);
+    }
+
+    [Command]
+    private void SendUpdateAnimatorDir(float x, float y)
+    {
+        anim_dir.Set(x, y);
+        UpdateAnimatorDirValues(x, y);
+    }
+
+    [ClientRpc]
+    private void UpdateAnimatorWalkBool(bool moving)
+    {
+        animator.SetBool("IsMoving", moving);
+
+    }
+
+
+    [ClientRpc]
+    private void UpdateAnimatorDirValues(float x, float y)
+    {
+        animator.SetFloat("DirX", x);
+        animator.SetFloat("DirY", y);
+
+    }
+
 
     public Player GetOwner()
     {
         return ownerPlayer;
     }
+
+
+
 
 }
 

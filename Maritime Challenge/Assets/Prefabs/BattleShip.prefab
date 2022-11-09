@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 2425340848230285394}
   - component: {fileID: 5819340548618860176}
   - component: {fileID: 4643109351371328166}
+  - component: {fileID: 8989833743452985700}
+  - component: {fileID: 8333611826739105661}
   m_Layer: 0
   m_Name: BattleShip
   m_TagString: Player
@@ -183,15 +185,12 @@ MonoBehaviour:
   OwnerNameText: {fileID: 3553049689375612532}
   OwnerNameBG: {fileID: 2338799580837776988}
   HPFill: {fileID: 5957078598496987714}
-  UpwardSprite: {fileID: 21300000, guid: 3374480f0e12b15458bca866fe070cf0, type: 3}
-  DownwardSprite: {fileID: 21300000, guid: dd7c4ffdc4c02de4bb13dad6613642bd, type: 3}
-  LeftSprite: {fileID: 21300000, guid: ae37a3edde070b24dbd7611fc8dddcdd, type: 3}
-  RightSprite: {fileID: 21300000, guid: 5cd9f5d0e400b4146b2b5b71e9aaa1c6, type: 3}
   TurretHoleRef_Up: {fileID: 7303310586061355137}
   TurretHoleRef_Down: {fileID: 6381226605469765442}
   TurretHoleRef_Left: {fileID: 3381262428454028483}
   TurretHoleRef_Right: {fileID: 3004337632481595969}
-  CannonBallPrefab: {fileID: 3171479867457677337, guid: 3b6c88c2f2545ee41812db2a9d27ea86, type: 3}
+  animator: {fileID: 8989833743452985700}
+  animatorhandler: {fileID: 8333611826739105661}
   selectedTargetUI: {fileID: 4645963429196385156}
 --- !u!58 &4643109351371328166
 CircleCollider2D:
@@ -209,6 +208,39 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 3.105
+--- !u!95 &8989833743452985700
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042507932746732076}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4676a8fe188e9cc4187808a294255bb7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8333611826739105661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042507932746732076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6532219243c411f4a981b7ca38b61c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultID: 1
+  FileHeader: 
 --- !u!1 &2106921298954242604
 GameObject:
   m_ObjectHideFlags: 0

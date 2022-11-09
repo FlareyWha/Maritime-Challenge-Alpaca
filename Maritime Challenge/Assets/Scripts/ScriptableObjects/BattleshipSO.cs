@@ -8,6 +8,4 @@ public class BattleshipSO : ScriptableObject
     public int Cost;
     public Sprite ShopIconSprite;
     public string ShipDescription;
-    // Stats
-    public Sprite UpwardSprite, DownwardSprite, LeftSprite, RightSprite;
 }
