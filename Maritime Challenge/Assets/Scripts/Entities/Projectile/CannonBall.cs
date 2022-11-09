@@ -56,9 +56,15 @@ public class CannonBall : BaseProjectile
         {
             BaseEntity enemy = collision.gameObject.GetComponent<BaseEntity>();
             enemy.TakeDamage(ownerPlayer.ATK, ownerPlayer.gameObject);
-
+            SpawnHitVFX(transform.position);
             Deactivate();
         }
+    }
+
+    [ClientRpc]
+    private void SpawnHitVFX(Vector3 pos)
+    {
+        VFXManager.Instance.AddVFX(VFX_TYPE.CANNONBALL_HIT, pos);
     }
 
 
