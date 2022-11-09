@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class BattleshipStoreManager : MonoBehaviour
 {
@@ -18,6 +19,12 @@ public class BattleshipStoreManager : MonoBehaviour
 
     private BattleshipShopItemUI currSelectedShopItem = null;
     private BattleshipUI currSelectedBattleship = null;
+
+    [SerializeField]
+    private AudioSource audioSource;
+
+    [SerializeField]
+    private AudioClip purchaseSucessfulClip, purchaseFailedClip;
 
 
     private void Awake()
@@ -161,8 +168,10 @@ public class BattleshipStoreManager : MonoBehaviour
     public void BuyItem()
     {
         if (currSelectedShopItem == null)
+        {
+            audioSource.clip = purchaseFailedClip;
             return;
-
+        }
 
         int price = currSelectedShopItem.BattleshipInfo.BattleshipData.Cost;
         int id = currSelectedShopItem.BattleshipInfo.BattleshipID;
@@ -184,12 +193,16 @@ public class BattleshipStoreManager : MonoBehaviour
             else
                 currSelectedShopItem = null;
             //Confirmation text to say purchase successful
+
+            audioSource.clip = purchaseSucessfulClip;
         }
         else
         {
             //Confirmation text to say purchase not successful
+            audioSource.clip = purchaseFailedClip;
         }
 
+        audioSource.Play();
     }
 
     public void ChangeBattleship()
