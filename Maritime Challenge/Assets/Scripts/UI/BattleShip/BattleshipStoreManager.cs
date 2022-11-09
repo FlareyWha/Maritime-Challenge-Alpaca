@@ -170,6 +170,7 @@ public class BattleshipStoreManager : MonoBehaviour
         if (currSelectedShopItem == null)
         {
             audioSource.clip = purchaseFailedClip;
+            audioSource.Play();
             return;
         }
 

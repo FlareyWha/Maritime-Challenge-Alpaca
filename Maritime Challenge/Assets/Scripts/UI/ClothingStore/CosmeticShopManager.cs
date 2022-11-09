@@ -24,6 +24,12 @@ public class CosmeticShopManager : MonoBehaviour
 
     private CosmeticShopItemUI currSelectedShopItem = null;
 
+    [SerializeField]
+    private AudioSource audioSource;
+
+    [SerializeField]
+    private AudioClip purchaseSucessfulClip, purchaseFailedClip;
+
 
     private void Awake()
     {
@@ -112,7 +118,11 @@ public class CosmeticShopManager : MonoBehaviour
     public void PurchaseCosmetic()
     {
         if (currSelectedShopItem == null)
+        {
+            audioSource.clip = purchaseFailedClip;
+            audioSource.Play();
             return;
+        }
 
         Cosmetic cosmetic = currSelectedShopItem.CosmeticInfo;
 
@@ -120,6 +130,8 @@ public class CosmeticShopManager : MonoBehaviour
         if (cosmetic.CosmeticPrice > PlayerData.NumTokens)
         {
             // show warning
+            audioSource.clip = purchaseFailedClip;
+            audioSource.Play();
             return;
         }
 
@@ -138,6 +150,8 @@ public class CosmeticShopManager : MonoBehaviour
 
         // Confirmation ui to say purchase successful
 
+        audioSource.clip = purchaseSucessfulClip;
+        audioSource.Play();
     }
 
     public void SetSelectedTab(int index) // Called In Inspector on Tab Clicked
