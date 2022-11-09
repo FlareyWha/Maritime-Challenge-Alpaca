@@ -52,11 +52,15 @@ Material:
     - _FadeBurnWidth: 0.025
     - _GlowAmount: 15.7
     - _GlowLit: 0
+    - _GrassRadialBend: 0.1
+    - _GrassSpeed: 2
+    - _GrassWind: 20
     - _HitEffectBlend: 1
     - _HitEffectGlow: 5
     - _HsvBright: 1
     - _HsvSaturation: 1
     - _HsvShift: 180
+    - _LightAdd: 0
     - _LightBoost: 1
     - _NormalFlipX: 0
     - _NormalFlipY: 0
@@ -64,6 +68,7 @@ Material:
     - _OutlineAlpha: 1
     - _OutlineGlow: 27.9
     - _OutlineLit: 0
+    - _OutlineOnly: 0
     - _OutlineWidth: 0.0144
     - _SpecBoost: 0.2
     - _ToonShadowSmooth: 0.25
@@ -78,3 +83,4 @@ Material:
     - _GlowColor: {r: 0.83166873, g: 0.1745283, b: 1, a: 1}
     - _HitEffectColor: {r: 1, g: 1, b: 1, a: 1}
     - _OutlineColor: {r: 0.8585048, g: 0, b: 1, a: 1}
+  m_BuildTextureStacks: []
