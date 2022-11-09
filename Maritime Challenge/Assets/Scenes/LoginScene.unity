@@ -2576,6 +2576,7 @@ GameObject:
   - component: {fileID: 1674622163}
   - component: {fileID: 1674622165}
   - component: {fileID: 1674622164}
+  - component: {fileID: 1674622166}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -2632,10 +2633,10 @@ MonoBehaviour:
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Entering RightShip City...
+  m_Text: Retrieving Player Data
 --- !u!222 &1674622165
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2644,6 +2645,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1674622162}
   m_CullTransparentMesh: 1
+--- !u!114 &1674622166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1674622162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f90caa67fbc836c47aa14a520897a750, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1742555239
 GameObject:
   m_ObjectHideFlags: 0
