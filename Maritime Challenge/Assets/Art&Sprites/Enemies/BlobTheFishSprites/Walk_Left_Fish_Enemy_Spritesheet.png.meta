@@ -1,0 +1,1092 @@
+fileFormatVersion: 2
+guid: 2b4e6e0aedfc82247948842a2cef2fd6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5929647185727709707
+    second: Walk_Left_Fish_Enemy_Spritesheet_0
+  - first:
+      213: 5069944422603396150
+    second: Walk_Left_Fish_Enemy_Spritesheet_1
+  - first:
+      213: -5933630426346902600
+    second: Walk_Left_Fish_Enemy_Spritesheet_2
+  - first:
+      213: 1121382010871748617
+    second: Walk_Left_Fish_Enemy_Spritesheet_3
+  - first:
+      213: 480580582232606596
+    second: Walk_Left_Fish_Enemy_Spritesheet_4
+  - first:
+      213: -166897894104722310
+    second: Walk_Left_Fish_Enemy_Spritesheet_5
+  - first:
+      213: 8392608888217859439
+    second: Walk_Left_Fish_Enemy_Spritesheet_6
+  - first:
+      213: 6002892827113694144
+    second: Walk_Left_Fish_Enemy_Spritesheet_7
+  - first:
+      213: 5626712947853704992
+    second: Walk_Left_Fish_Enemy_Spritesheet_8
+  - first:
+      213: 1538357535091823281
+    second: Walk_Left_Fish_Enemy_Spritesheet_9
+  - first:
+      213: 3690145290171188553
+    second: Walk_Left_Fish_Enemy_Spritesheet_10
+  - first:
+      213: -2573604948386953038
+    second: Walk_Left_Fish_Enemy_Spritesheet_11
+  - first:
+      213: -5018906316076692651
+    second: Walk_Left_Fish_Enemy_Spritesheet_12
+  - first:
+      213: -8725507694702014216
+    second: Walk_Left_Fish_Enemy_Spritesheet_13
+  - first:
+      213: -7925339213122463123
+    second: Walk_Left_Fish_Enemy_Spritesheet_14
+  - first:
+      213: 2639109305180664918
+    second: Walk_Left_Fish_Enemy_Spritesheet_15
+  - first:
+      213: 3728126949246794050
+    second: Walk_Left_Fish_Enemy_Spritesheet_16
+  - first:
+      213: 7308197716288008327
+    second: Walk_Left_Fish_Enemy_Spritesheet_17
+  - first:
+      213: 4716918762869467229
+    second: Walk_Left_Fish_Enemy_Spritesheet_18
+  - first:
+      213: 1097413076227168367
+    second: Walk_Left_Fish_Enemy_Spritesheet_19
+  - first:
+      213: 5207589561264755193
+    second: Walk_Left_Fish_Enemy_Spritesheet_20
+  - first:
+      213: 95502347411365562
+    second: Walk_Left_Fish_Enemy_Spritesheet_21
+  - first:
+      213: -6532257692677839280
+    second: Walk_Left_Fish_Enemy_Spritesheet_22
+  - first:
+      213: 1095387121942844462
+    second: Walk_Left_Fish_Enemy_Spritesheet_23
+  - first:
+      213: 8333637398102225255
+    second: Walk_Left_Fish_Enemy_Spritesheet_24
+  - first:
+      213: -7178975351073991465
+    second: Walk_Left_Fish_Enemy_Spritesheet_25
+  - first:
+      213: 5517035710596082165
+    second: Walk_Left_Fish_Enemy_Spritesheet_26
+  - first:
+      213: -3277397820538197198
+    second: Walk_Left_Fish_Enemy_Spritesheet_27
+  - first:
+      213: 936980251172354701
+    second: Walk_Left_Fish_Enemy_Spritesheet_28
+  - first:
+      213: 1225511430753035569
+    second: Walk_Left_Fish_Enemy_Spritesheet_29
+  - first:
+      213: 4919126194936803425
+    second: Walk_Left_Fish_Enemy_Spritesheet_30
+  - first:
+      213: 3062834124963329499
+    second: Walk_Left_Fish_Enemy_Spritesheet_31
+  - first:
+      213: 9152085335649819744
+    second: Walk_Left_Fish_Enemy_Spritesheet_32
+  - first:
+      213: 8992591829914399396
+    second: Walk_Left_Fish_Enemy_Spritesheet_33
+  - first:
+      213: 2130582390205603177
+    second: Walk_Left_Fish_Enemy_Spritesheet_34
+  - first:
+      213: -6407815898819981641
+    second: Walk_Left_Fish_Enemy_Spritesheet_35
+  - first:
+      213: 7144474997176087157
+    second: Walk_Left_Fish_Enemy_Spritesheet_36
+  - first:
+      213: 6913340913346049515
+    second: Walk_Left_Fish_Enemy_Spritesheet_37
+  - first:
+      213: -7303655481975112308
+    second: Walk_Left_Fish_Enemy_Spritesheet_38
+  - first:
+      213: -6600372933456208296
+    second: Walk_Left_Fish_Enemy_Spritesheet_39
+  - first:
+      213: 9031564004955727301
+    second: Walk_Left_Fish_Enemy_Spritesheet_40
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Walk_Left_Fish_Enemy_Spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3247
+        width: 622
+        height: 849
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b02e1b4e2b65a4250800000000000000
+      internalID: 5929647185727709707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Left_Fish_Enemy_Spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 3247
+        width: 622
+        height: 849
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6349f34379f0c5640800000000000000
+      internalID: 5069944422603396150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Left_Fish_Enemy_Spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 1244
+        y: 3247
+        width: 622
+        height: 849
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bba421a09287ada0800000000000000
+      internalID: -5933630426346902600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Left_Fish_Enemy_Spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 1866
+        y: 3247
+        width: 622
+        height: 849
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 908168f5ff2ff8f00800000000000000
+      internalID: 1121382010871748617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Left_Fish_Enemy_Spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 2488
+        y: 3247
+        width: 622
+        height: 849
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 487cce94e7d5ba600800000000000000
+      internalID: 480580582232606596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Left_Fish_Enemy_Spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 3110
+        y: 3247
+        width: 622
+        height: 849
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a749024ef3f0fadf0800000000000000
+      internalID: -166897894104722310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Left_Fish_Enemy_Spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 3732
+        y: 3247
+        width: 622
+        height: 849
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f65f2016159887470800000000000000
+      internalID: 8392608888217859439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Left_Fish_Enemy_Spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 4354
+        y: 3247
+        width: 622
+        height: 849
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c32ad8b83f8e4350800000000000000
+      internalID: 6002892827113694144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Left_Fish_Enemy_Spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 4976
+        y: 3247
+        width: 622
+        height: 849
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02f39ed4d99161e40800000000000000
+      internalID: 5626712947853704992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Left_Fish_Enemy_Spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 5598
+        y: 3247
+        width: 622
+        height: 849
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b291b01708595510800000000000000
+      internalID: 1538357535091823281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Left_Fish_Enemy_Spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 6220
+        y: 3247
+        width: 622
+        height: 849
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9450c361797063330800000000000000
+      internalID: 3690145290171188553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Left_Fish_Enemy_Spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 6842
+        y: 3247
+        width: 622
+        height: 849
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b8453b5fe7b84cd0800000000000000
+      internalID: -2573604948386953038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Left_Fish_Enemy_Spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 7464
+        y: 3247
+        width: 622
+        height: 849
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55bc84dfb43495ab0800000000000000
+      internalID: -5018906316076692651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Left_Fish_Enemy_Spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2398
+        width: 622
+        height: 849
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f0595c3bf4c8e680800000000000000
+      internalID: -8725507694702014216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Left_Fish_Enemy_Spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 2398
+        width: 622
+        height: 849
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6a9c55d9f9830290800000000000000
+      internalID: -7925339213122463123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Left_Fish_Enemy_Spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 1244
+        y: 2398
+        width: 622
+        height: 849
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 654b8b23eefff9420800000000000000
+      internalID: 2639109305180664918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Left_Fish_Enemy_Spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 1866
+        y: 2398
+        width: 622
+        height: 849
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2497a6735b7fcb330800000000000000
+      internalID: 3728126949246794050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Left_Fish_Enemy_Spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 2488
+        y: 2398
+        width: 622
+        height: 849
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 780faab3a1feb6560800000000000000
+      internalID: 7308197716288008327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Left_Fish_Enemy_Spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 3110
+        y: 2398
+        width: 622
+        height: 849
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d58a53f9f9cd57140800000000000000
+      internalID: 4716918762869467229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Left_Fish_Enemy_Spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 3732
+        y: 2398
+        width: 622
+        height: 849
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f689364e06bca3f00800000000000000
+      internalID: 1097413076227168367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Left_Fish_Enemy_Spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 4354
+        y: 2398
+        width: 622
+        height: 849
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f1d73f6d13154840800000000000000
+      internalID: 5207589561264755193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Left_Fish_Enemy_Spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 4976
+        y: 2398
+        width: 622
+        height: 849
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abe9ba401ea435100800000000000000
+      internalID: 95502347411365562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Left_Fish_Enemy_Spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 5598
+        y: 2398
+        width: 622
+        height: 849
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 056ef96ec32c855a0800000000000000
+      internalID: -6532257692677839280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Left_Fish_Enemy_Spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 6220
+        y: 2398
+        width: 622
+        height: 849
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e24d0f6a8c8933f00800000000000000
+      internalID: 1095387121942844462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Left_Fish_Enemy_Spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 6842
+        y: 2398
+        width: 622
+        height: 849
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7613bc06f0707a370800000000000000
+      internalID: 8333637398102225255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Left_Fish_Enemy_Spritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 7464
+        y: 2398
+        width: 622
+        height: 849
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d413fb34f72f5c90800000000000000
+      internalID: -7178975351073991465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Left_Fish_Enemy_Spritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1549
+        width: 622
+        height: 849
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f9693f8fb2709c40800000000000000
+      internalID: 5517035710596082165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Left_Fish_Enemy_Spritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 1549
+        width: 622
+        height: 849
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23b6e2feb085482d0800000000000000
+      internalID: -3277397820538197198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Left_Fish_Enemy_Spritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 1244
+        y: 1549
+        width: 622
+        height: 849
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8a3fa8f292d00d00800000000000000
+      internalID: 936980251172354701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Left_Fish_Enemy_Spritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 1866
+        y: 1549
+        width: 622
+        height: 849
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 135273a3724e10110800000000000000
+      internalID: 1225511430753035569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Left_Fish_Enemy_Spritesheet_30
+      rect:
+        serializedVersion: 2
+        x: 2488
+        y: 1549
+        width: 622
+        height: 849
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 160f68e263f344440800000000000000
+      internalID: 4919126194936803425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Left_Fish_Enemy_Spritesheet_31
+      rect:
+        serializedVersion: 2
+        x: 3110
+        y: 1549
+        width: 622
+        height: 849
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd53268b86f518a20800000000000000
+      internalID: 3062834124963329499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Left_Fish_Enemy_Spritesheet_32
+      rect:
+        serializedVersion: 2
+        x: 3732
+        y: 1549
+        width: 622
+        height: 849
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06c18797f1db20f70800000000000000
+      internalID: 9152085335649819744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Left_Fish_Enemy_Spritesheet_33
+      rect:
+        serializedVersion: 2
+        x: 4354
+        y: 1549
+        width: 622
+        height: 849
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a2b020ef9a1ccc70800000000000000
+      internalID: 8992591829914399396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Left_Fish_Enemy_Spritesheet_34
+      rect:
+        serializedVersion: 2
+        x: 4976
+        y: 1549
+        width: 622
+        height: 849
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96d58e44569519d10800000000000000
+      internalID: 2130582390205603177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Left_Fish_Enemy_Spritesheet_35
+      rect:
+        serializedVersion: 2
+        x: 5598
+        y: 1549
+        width: 622
+        height: 849
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7be0cbcd36dd217a0800000000000000
+      internalID: -6407815898819981641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Left_Fish_Enemy_Spritesheet_36
+      rect:
+        serializedVersion: 2
+        x: 6220
+        y: 1549
+        width: 622
+        height: 849
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57237592826462360800000000000000
+      internalID: 7144474997176087157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Left_Fish_Enemy_Spritesheet_37
+      rect:
+        serializedVersion: 2
+        x: 6842
+        y: 1549
+        width: 622
+        height: 849
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be57a27aeee11ff50800000000000000
+      internalID: 6913340913346049515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Left_Fish_Enemy_Spritesheet_38
+      rect:
+        serializedVersion: 2
+        x: 7464
+        y: 1549
+        width: 622
+        height: 849
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8df90b190434aa90800000000000000
+      internalID: -7303655481975112308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Left_Fish_Enemy_Spritesheet_39
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 700
+        width: 622
+        height: 849
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85e5d3c89c3c664a0800000000000000
+      internalID: -6600372933456208296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Left_Fish_Enemy_Spritesheet_40
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 700
+        width: 622
+        height: 849
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c527997c9f865d70800000000000000
+      internalID: 9031564004955727301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
