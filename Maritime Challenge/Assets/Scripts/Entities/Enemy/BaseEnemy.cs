@@ -244,11 +244,6 @@ public class BaseEnemy : BaseEntity
 
             //Debug.Log("Enemy spotted player");
         }
-
-        if (enemyAnimationHandler != null)
-        {
-            enemyAnimationHandler.SendUpdateAnimatorWalk(false);
-        }
     }
 
     protected virtual void HandlePatrol()
@@ -328,6 +323,22 @@ public class BaseEnemy : BaseEntity
     {
         timer = 0;
         maxTimer = newMaxTimer;
+
+        if (enemyAnimationHandler != null)
+        {
+            switch (currEnemyState)
+            {
+                case ENEMY_STATES.IDLE:
+                case ENEMY_STATES.FREEZE:
+                    enemyAnimationHandler.SendUpdateAnimatorWalk(false);
+                    break;
+
+                case ENEMY_STATES.PATROL:
+                case ENEMY_STATES.CHASE:
+                    enemyAnimationHandler.SendUpdateAnimatorWalk(true);
+                    break;
+            }
+        }
     }
 
     protected void FindAStarPath(Vector3Int endGridPos)
@@ -419,7 +430,6 @@ public class BaseEnemy : BaseEntity
 
         if (enemyAnimationHandler != null)
         {
-            enemyAnimationHandler.SendUpdateAnimatorWalk(true);
             float dirX = Mathf.InverseLerp(-1, 1, currentMovementDirection.normalized.x);
             enemyAnimationHandler.SendUpdateAnimatorDir(dirX);
         }
