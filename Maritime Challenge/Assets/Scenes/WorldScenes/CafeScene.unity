@@ -3746,6 +3746,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4851536740854130390, guid: 3a3effae8c54a704a9d406b21d1c3513, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 4851536740854130391, guid: 3a3effae8c54a704a9d406b21d1c3513, type: 3}
       propertyPath: m_Name
       value: Cafe Cashier
