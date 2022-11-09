@@ -202,7 +202,7 @@ public class GameHandler : NetworkBehaviour
     private void MailBoxReceived(int recID)
     {
         if (PlayerData.UID == recID)
-            MailboxUIManager.Instance.UpdateMailRect();
+            MailboxManager.Instance.GetMail();
     }
 
     public void SendFriendRemovedEvent(int recID)

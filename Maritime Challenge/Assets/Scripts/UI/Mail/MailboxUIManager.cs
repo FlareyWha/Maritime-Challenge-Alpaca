@@ -14,19 +14,31 @@ public class MailboxUIManager : MonoBehaviourSingleton<MailboxUIManager>
     [SerializeField]
     private GameObject EmptyMailboxPanel;
 
+    private Color32[] BackgroundColorOptions =
+   {
+        new Color32(255, 206, 199, 255),
+        new Color32(255, 222, 199, 255),
+        new Color32(255, 252, 199, 255),
+        new Color32(232, 255, 199, 255),
+        new Color32(199, 230, 255, 255),
+        new Color32(199, 207, 255, 255),
+        new Color32(205, 199, 255, 255),
+    };
 
     protected override void Awake()
     {
         base.Awake();
-
         UpdateMailRect();
     }
 
     public void UpdateMailRect()
     {
-        // Clear
+        // Clear - but retain color first
+        Dictionary<int, Color> prevList = new Dictionary<int, Color>();
         foreach (Transform child in MailRect)
         {
+            MailUI ui = child.gameObject.GetComponent<MailUI>();
+            prevList.Add(ui.LinkedMail.MailID, ui.GetComponent<Image>().color);
             Destroy(child.gameObject);
         }
         if (PlayerData.MailList.Count == 0)
@@ -42,6 +54,25 @@ public class MailboxUIManager : MonoBehaviourSingleton<MailboxUIManager>
         {
             MailUI ui = Instantiate(MailUIPrefab, MailRect).GetComponent<MailUI>();
             ui.Init(mail, ClaimMail);
+
+            bool isNew = true;
+            foreach (KeyValuePair<int, Color> prevMail in prevList)
+            {
+                if (mail.MailID == prevMail.Key)
+                {
+                    isNew = false;
+                    ui.SetColor(prevMail.Value);
+                    break;
+                }
+            }
+            if (isNew)
+            {
+                // Set Random BG Color
+                int randOption = UnityEngine.Random.Range(0, BackgroundColorOptions.Length - 1);
+                ui.SetColor(BackgroundColorOptions[randOption]);
+            }
+
+
         }
 
         EmptyMailboxPanel.SetActive(PlayerData.MailList.Count == 0);

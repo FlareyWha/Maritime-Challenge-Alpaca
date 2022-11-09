@@ -980,6 +980,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 2492915017818905701, guid: c0d8bbc8937bc7f47a6b7bcc224922f0, type: 3}
+    - target: {fileID: 8032686515659643713, guid: 413b3d77989903a4ebf3a9e58f19ab16, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8032686515659643716, guid: 413b3d77989903a4ebf3a9e58f19ab16, type: 3}
       propertyPath: m_Name
       value: Boat

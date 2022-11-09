@@ -59,6 +59,36 @@ public class MailboxManager : MonoBehaviourSingleton<MailboxManager>
         {
             case UnityWebRequest.Result.Success:
                 Debug.Log(webreq.downloadHandler.text);
+                GameHandler.Instance.SendMailBoxEvent(recipientUID);
+                break;
+            case UnityWebRequest.Result.ProtocolError:
+                Debug.LogError(webreq.downloadHandler.text);
+                break;
+            default:
+                Debug.LogError("Server Error");
+                break;
+        }
+    }
+    public void GetMail()
+    {
+        StartCoroutine(DoGetMail());
+    }
+
+    IEnumerator DoGetMail()
+    {
+        string url = ServerDataManager.URL_getMailData;
+        Debug.Log(url);
+
+        WWWForm form = new WWWForm();
+        form.AddField("iOwnerUID", PlayerData.UID);
+        using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
+        yield return webreq.SendWebRequest();
+        switch (webreq.result)
+        {
+            case UnityWebRequest.Result.Success:
+                PlayerData.MailList.Clear();
+                PlayerData.MailList.AddRange(JSONDeseralizer.DeseralizeMailData(webreq.downloadHandler.text));
+                MailboxUIManager.Instance.UpdateMailRect();
                 break;
             case UnityWebRequest.Result.ProtocolError:
                 Debug.LogError(webreq.downloadHandler.text);

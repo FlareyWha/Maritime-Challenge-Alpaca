@@ -132,7 +132,6 @@ public class ContactsManager : MonoBehaviourSingleton<ContactsManager>
         // Send Mail
         int numTokens = Random.Range(GameSettings.MinNumGiftTokens, GameSettings.MaxNumGiftTokens);
         MailboxManager.Instance.SendFriendshipGiftMail(currSelected.GetContactInfo().UID, numTokens);
-        GameHandler.Instance.SendMailBoxEvent(currSelected.GetContactInfo().UID);
         // Update Player Stats
         PlayerStatsManager.Instance.UpdatePlayerStat(PLAYER_STAT.GIFTS_SENT_DAILY, ++PlayerData.PlayerStats.PlayerStat[(int)PLAYER_STAT.GIFTS_SENT_DAILY]);
         PlayerStatsManager.Instance.UpdatePlayerStat(PLAYER_STAT.GIFTS_SENT_WEEKLY, ++PlayerData.PlayerStats.PlayerStat[(int)PLAYER_STAT.GIFTS_SENT_WEEKLY]);
