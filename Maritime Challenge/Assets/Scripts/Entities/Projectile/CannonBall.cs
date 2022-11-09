@@ -64,6 +64,8 @@ public class CannonBall : BaseProjectile
     [ClientRpc]
     private void SpawnHitVFX(Vector3 pos)
     {
+        if (PlayerData.activeSubScene != "WorldHubScene")
+            return;
         VFXManager.Instance.AddVFX(VFX_TYPE.CANNONBALL_HIT, pos);
     }
 

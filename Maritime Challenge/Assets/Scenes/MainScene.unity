@@ -21792,9 +21792,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24008c85822ad75408762e8430e28b37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  VFXIndex: 00000000
+  VFXIndex: 0000000001000000
   VFXPrefabs:
   - {fileID: 1690711144469934, guid: 9986a424105805e4e873558762330238, type: 3}
+  - {fileID: 2769692093935658139, guid: 2f430e5bfae437a4289c8a51e9cc386f, type: 3}
 --- !u!1 &1127641210
 GameObject:
   m_ObjectHideFlags: 0

@@ -36,6 +36,7 @@ public class VFXManager : MonoBehaviourSingleton<VFXManager>
 public enum VFX_TYPE
 {
     CANNONBALL_HIT,
+    BLOBFISH_HIT,
 
     NUM_TOTAL
 }

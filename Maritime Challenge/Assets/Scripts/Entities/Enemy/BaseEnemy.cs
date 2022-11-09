@@ -285,8 +285,17 @@ public class BaseEnemy : BaseEntity
     protected virtual void HandleAttack()
     {
         currentTargetPlayer.GetOwner().TakeDamage(5, gameObject);
+        SetHitVFX(currentTargetPlayer.transform.position);
         currEnemyState = ENEMY_STATES.FREEZE;
         ResetTimer(maxFreezeTime);
+    }
+
+    [ClientRpc]
+    private void SetHitVFX(Vector3 pos)
+    {
+        if (PlayerData.activeSubScene != "WorldHubScene")
+            return;
+        VFXManager.Instance.AddVFX(VFX_TYPE.BLOBFISH_HIT, pos);
     }
 
     protected virtual void HandleFreeze()
