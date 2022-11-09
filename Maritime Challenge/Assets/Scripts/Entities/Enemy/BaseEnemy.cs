@@ -16,6 +16,9 @@ public enum ENEMY_STATES
 }
 public class BaseEnemy : BaseEntity
 {
+    [SerializeField]
+    private EnemyAnimationHandler enemyAnimationHandler;
+
     protected Rigidbody2D rb;
     [SerializeField]
     protected Transform targetTransform;
@@ -241,6 +244,11 @@ public class BaseEnemy : BaseEntity
 
             //Debug.Log("Enemy spotted player");
         }
+
+        if (enemyAnimationHandler != null)
+        {
+            enemyAnimationHandler.SendUpdateAnimatorWalk(false);
+        }
     }
 
     protected virtual void HandlePatrol()
@@ -408,6 +416,13 @@ public class BaseEnemy : BaseEntity
     protected void Move()
     {
         rb.position += currentMovementDirection * movespd * Time.deltaTime;
+
+        if (enemyAnimationHandler != null)
+        {
+            enemyAnimationHandler.SendUpdateAnimatorWalk(true);
+            float dirX = Mathf.InverseLerp(-1, 1, currentMovementDirection.normalized.x);
+            enemyAnimationHandler.SendUpdateAnimatorDir(dirX);
+        }
     }
 
     protected bool CheckOutOfBounds()
@@ -436,6 +451,11 @@ public class BaseEnemy : BaseEntity
         }
         else
             NetworkServer.Destroy(gameObject);
+
+        if (enemyAnimationHandler != null)
+        {
+            enemyAnimationHandler.SendUpdateAnimatorDie(true);
+        }
     }
 
    
