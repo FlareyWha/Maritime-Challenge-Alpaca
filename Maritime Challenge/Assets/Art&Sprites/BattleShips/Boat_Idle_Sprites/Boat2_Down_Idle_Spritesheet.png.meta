@@ -1,0 +1,1116 @@
+fileFormatVersion: 2
+guid: 62d90fd830b90064397754b17fae3e36
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4649076064544369448
+    second: Boat2_Down_Idle_Spritesheet_0
+  - first:
+      213: -5088688316846229027
+    second: Boat2_Down_Idle_Spritesheet_1
+  - first:
+      213: 8536855379478769778
+    second: Boat2_Down_Idle_Spritesheet_2
+  - first:
+      213: 2469328830650379772
+    second: Boat2_Down_Idle_Spritesheet_3
+  - first:
+      213: 4893406996392318735
+    second: Boat2_Down_Idle_Spritesheet_4
+  - first:
+      213: 3439650413526820204
+    second: Boat2_Down_Idle_Spritesheet_5
+  - first:
+      213: 692240587842621034
+    second: Boat2_Down_Idle_Spritesheet_6
+  - first:
+      213: -182367354782679429
+    second: Boat2_Down_Idle_Spritesheet_7
+  - first:
+      213: -8135775071368097920
+    second: Boat2_Down_Idle_Spritesheet_8
+  - first:
+      213: 2645534355643333489
+    second: Boat2_Down_Idle_Spritesheet_9
+  - first:
+      213: 3834025797960089690
+    second: Boat2_Down_Idle_Spritesheet_10
+  - first:
+      213: -7982610558637081930
+    second: Boat2_Down_Idle_Spritesheet_11
+  - first:
+      213: -73804149629062749
+    second: Boat2_Down_Idle_Spritesheet_12
+  - first:
+      213: 6258523372435475446
+    second: Boat2_Down_Idle_Spritesheet_13
+  - first:
+      213: 8689555984815152089
+    second: Boat2_Down_Idle_Spritesheet_14
+  - first:
+      213: -4620691260614304304
+    second: Boat2_Down_Idle_Spritesheet_15
+  - first:
+      213: -8327117913525793156
+    second: Boat2_Down_Idle_Spritesheet_16
+  - first:
+      213: 6152314002210807270
+    second: Boat2_Down_Idle_Spritesheet_17
+  - first:
+      213: -2455975212509918704
+    second: Boat2_Down_Idle_Spritesheet_18
+  - first:
+      213: 6035742216240226944
+    second: Boat2_Down_Idle_Spritesheet_19
+  - first:
+      213: -5265833599746132129
+    second: Boat2_Down_Idle_Spritesheet_20
+  - first:
+      213: -4445204712905761733
+    second: Boat2_Down_Idle_Spritesheet_21
+  - first:
+      213: 6520976516498121568
+    second: Boat2_Down_Idle_Spritesheet_22
+  - first:
+      213: 7035911901936881481
+    second: Boat2_Down_Idle_Spritesheet_23
+  - first:
+      213: 5924865956092661978
+    second: Boat2_Down_Idle_Spritesheet_24
+  - first:
+      213: -7584697530917648911
+    second: Boat2_Down_Idle_Spritesheet_25
+  - first:
+      213: -7982076488298910519
+    second: Boat2_Down_Idle_Spritesheet_26
+  - first:
+      213: 6914848991444715818
+    second: Boat2_Down_Idle_Spritesheet_27
+  - first:
+      213: 4208563492690887831
+    second: Boat2_Down_Idle_Spritesheet_28
+  - first:
+      213: 1562533726639349751
+    second: Boat2_Down_Idle_Spritesheet_29
+  - first:
+      213: 5482899461440667462
+    second: Boat2_Down_Idle_Spritesheet_30
+  - first:
+      213: -42661864312114681
+    second: Boat2_Down_Idle_Spritesheet_31
+  - first:
+      213: 7123998257183953681
+    second: Boat2_Down_Idle_Spritesheet_32
+  - first:
+      213: -1395167824727251783
+    second: Boat2_Down_Idle_Spritesheet_33
+  - first:
+      213: -5860605428014075261
+    second: Boat2_Down_Idle_Spritesheet_34
+  - first:
+      213: -5570704620584162895
+    second: Boat2_Down_Idle_Spritesheet_35
+  - first:
+      213: -3156316196130114960
+    second: Boat2_Down_Idle_Spritesheet_36
+  - first:
+      213: -3195401217640225434
+    second: Boat2_Down_Idle_Spritesheet_37
+  - first:
+      213: 1785287309858994265
+    second: Boat2_Down_Idle_Spritesheet_38
+  - first:
+      213: -260629529959681230
+    second: Boat2_Down_Idle_Spritesheet_39
+  - first:
+      213: -6805664398257855424
+    second: Boat2_Down_Idle_Spritesheet_40
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Boat2_Down_Idle_Spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1378
+        width: 250
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82b20f08c06d48040800000000000000
+      internalID: 4649076064544369448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boat2_Down_Idle_Spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 1378
+        width: 250
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd933b5dfe85169b0800000000000000
+      internalID: -5088688316846229027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boat2_Down_Idle_Spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1378
+        width: 250
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 270f6b8ccb0097670800000000000000
+      internalID: 8536855379478769778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boat2_Down_Idle_Spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 1378
+        width: 250
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfdeb880d71d44220800000000000000
+      internalID: 2469328830650379772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boat2_Down_Idle_Spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1378
+        width: 250
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f071061acbfd8e340800000000000000
+      internalID: 4893406996392318735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boat2_Down_Idle_Spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 1378
+        width: 250
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c65aac9b3d71cbf20800000000000000
+      internalID: 3439650413526820204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boat2_Down_Idle_Spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 1378
+        width: 250
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6e8771a5255b9900800000000000000
+      internalID: 692240587842621034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boat2_Down_Idle_Spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 1750
+        y: 1378
+        width: 250
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7efc876bd9187df0800000000000000
+      internalID: -182367354782679429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boat2_Down_Idle_Spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 1378
+        width: 250
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08f40a28dabe71f80800000000000000
+      internalID: -8135775071368097920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boat2_Down_Idle_Spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 2250
+        y: 1378
+        width: 250
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17b7635da73d6b420800000000000000
+      internalID: 2645534355643333489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boat2_Down_Idle_Spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 1378
+        width: 250
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5048135622353530800000000000000
+      internalID: 3834025797960089690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boat2_Down_Idle_Spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 2750
+        y: 1378
+        width: 250
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ba77289df1183190800000000000000
+      internalID: -7982610558637081930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boat2_Down_Idle_Spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 1378
+        width: 250
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a1f866548bc9fef0800000000000000
+      internalID: -73804149629062749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boat2_Down_Idle_Spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 3250
+        y: 1378
+        width: 250
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fb0f7029ddbad650800000000000000
+      internalID: 6258523372435475446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boat2_Down_Idle_Spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 3500
+        y: 1378
+        width: 250
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dbd6c20121879870800000000000000
+      internalID: 8689555984815152089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boat2_Down_Idle_Spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 3750
+        y: 1378
+        width: 250
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dd155aa7c100efb0800000000000000
+      internalID: -4620691260614304304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boat2_Down_Idle_Spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 708
+        width: 250
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7ec0896062207c80800000000000000
+      internalID: -8327117913525793156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boat2_Down_Idle_Spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 708
+        width: 250
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eddf681df8616550800000000000000
+      internalID: 6152314002210807270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boat2_Down_Idle_Spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 708
+        width: 250
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01a8e297e8f9aedd0800000000000000
+      internalID: -2455975212509918704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boat2_Down_Idle_Spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 708
+        width: 250
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 082e3d2219343c350800000000000000
+      internalID: 6035742216240226944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boat2_Down_Idle_Spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 708
+        width: 250
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f57b0d89d300ce6b0800000000000000
+      internalID: -5265833599746132129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boat2_Down_Idle_Spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 708
+        width: 250
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3c1c558dd57f42c0800000000000000
+      internalID: -4445204712905761733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boat2_Down_Idle_Spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 708
+        width: 250
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 063e88697992f7a50800000000000000
+      internalID: 6520976516498121568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boat2_Down_Idle_Spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 1750
+        y: 708
+        width: 250
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94f04e1d89494a160800000000000000
+      internalID: 7035911901936881481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boat2_Down_Idle_Spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 708
+        width: 250
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad055be123a593250800000000000000
+      internalID: 5924865956092661978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boat2_Down_Idle_Spritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 2250
+        y: 708
+        width: 250
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f50fd4f7cdbdb690800000000000000
+      internalID: -7584697530917648911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boat2_Down_Idle_Spritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 708
+        width: 250
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cc22f889b7f93190800000000000000
+      internalID: -7982076488298910519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boat2_Down_Idle_Spritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 2750
+        y: 708
+        width: 250
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a29c782758a76ff50800000000000000
+      internalID: 6914848991444715818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boat2_Down_Idle_Spritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 708
+        width: 250
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 794848cd232d76a30800000000000000
+      internalID: 4208563492690887831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boat2_Down_Idle_Spritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 3250
+        y: 708
+        width: 250
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ffd7ed452c3fa510800000000000000
+      internalID: 1562533726639349751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boat2_Down_Idle_Spritesheet_30
+      rect:
+        serializedVersion: 2
+        x: 3500
+        y: 708
+        width: 250
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64ff952b20c271c40800000000000000
+      internalID: 5482899461440667462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boat2_Down_Idle_Spritesheet_31
+      rect:
+        serializedVersion: 2
+        x: 3750
+        y: 708
+        width: 250
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 702783ca24f686ff0800000000000000
+      internalID: -42661864312114681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boat2_Down_Idle_Spritesheet_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 38
+        width: 250
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11393fb9ba68dd260800000000000000
+      internalID: 7123998257183953681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boat2_Down_Idle_Spritesheet_33
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 38
+        width: 250
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b4e31d514e53ace0800000000000000
+      internalID: -1395167824727251783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boat2_Down_Idle_Spritesheet_34
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 38
+        width: 250
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 382be7ef962faaea0800000000000000
+      internalID: -5860605428014075261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boat2_Down_Idle_Spritesheet_35
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 38
+        width: 250
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b9247599a1e0b2b0800000000000000
+      internalID: -5570704620584162895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boat2_Down_Idle_Spritesheet_36
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 38
+        width: 250
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0723ada74238234d0800000000000000
+      internalID: -3156316196130114960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boat2_Down_Idle_Spritesheet_37
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 38
+        width: 250
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66524b3c587a7a3d0800000000000000
+      internalID: -3195401217640225434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boat2_Down_Idle_Spritesheet_38
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 38
+        width: 250
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9587826795d96c810800000000000000
+      internalID: 1785287309858994265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boat2_Down_Idle_Spritesheet_39
+      rect:
+        serializedVersion: 2
+        x: 1750
+        y: 38
+        width: 250
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 233b6c8c2de026cf0800000000000000
+      internalID: -260629529959681230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boat2_Down_Idle_Spritesheet_40
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 38
+        width: 250
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0446159a94c6d81a0800000000000000
+      internalID: -6805664398257855424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
