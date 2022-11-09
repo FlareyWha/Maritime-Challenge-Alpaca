@@ -1,0 +1,1092 @@
+fileFormatVersion: 2
+guid: a9484a1be9f69f34a843d5ecda3c7c50
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2678984362562127961
+    second: Idle_Right_Fish_Enemy_Spritesheet_0
+  - first:
+      213: 4287101585141022904
+    second: Idle_Right_Fish_Enemy_Spritesheet_1
+  - first:
+      213: 1133177362812681036
+    second: Idle_Right_Fish_Enemy_Spritesheet_2
+  - first:
+      213: -7289458537276901510
+    second: Idle_Right_Fish_Enemy_Spritesheet_3
+  - first:
+      213: -3311545742174634124
+    second: Idle_Right_Fish_Enemy_Spritesheet_4
+  - first:
+      213: -8933934467517850239
+    second: Idle_Right_Fish_Enemy_Spritesheet_5
+  - first:
+      213: -5720704993676111414
+    second: Idle_Right_Fish_Enemy_Spritesheet_6
+  - first:
+      213: -1592258549489593883
+    second: Idle_Right_Fish_Enemy_Spritesheet_7
+  - first:
+      213: -7377505021601290471
+    second: Idle_Right_Fish_Enemy_Spritesheet_8
+  - first:
+      213: -7169688201846109428
+    second: Idle_Right_Fish_Enemy_Spritesheet_9
+  - first:
+      213: -2509648007834943257
+    second: Idle_Right_Fish_Enemy_Spritesheet_10
+  - first:
+      213: 4194518964577566776
+    second: Idle_Right_Fish_Enemy_Spritesheet_11
+  - first:
+      213: 3009920272742692763
+    second: Idle_Right_Fish_Enemy_Spritesheet_12
+  - first:
+      213: -1573603003707799671
+    second: Idle_Right_Fish_Enemy_Spritesheet_13
+  - first:
+      213: -7929126132115475601
+    second: Idle_Right_Fish_Enemy_Spritesheet_14
+  - first:
+      213: -5892007712510622520
+    second: Idle_Right_Fish_Enemy_Spritesheet_15
+  - first:
+      213: -4215491732203071254
+    second: Idle_Right_Fish_Enemy_Spritesheet_16
+  - first:
+      213: -8871033779960478439
+    second: Idle_Right_Fish_Enemy_Spritesheet_17
+  - first:
+      213: -5550194532385234271
+    second: Idle_Right_Fish_Enemy_Spritesheet_18
+  - first:
+      213: -6876077398593569852
+    second: Idle_Right_Fish_Enemy_Spritesheet_19
+  - first:
+      213: -7551258143520332689
+    second: Idle_Right_Fish_Enemy_Spritesheet_20
+  - first:
+      213: 3030169420394482838
+    second: Idle_Right_Fish_Enemy_Spritesheet_21
+  - first:
+      213: 3399763233736226813
+    second: Idle_Right_Fish_Enemy_Spritesheet_22
+  - first:
+      213: 859668602620785976
+    second: Idle_Right_Fish_Enemy_Spritesheet_23
+  - first:
+      213: -3872415568743159806
+    second: Idle_Right_Fish_Enemy_Spritesheet_24
+  - first:
+      213: 3371452232721285486
+    second: Idle_Right_Fish_Enemy_Spritesheet_25
+  - first:
+      213: -6258753295374297577
+    second: Idle_Right_Fish_Enemy_Spritesheet_26
+  - first:
+      213: 8534087322360534570
+    second: Idle_Right_Fish_Enemy_Spritesheet_27
+  - first:
+      213: 7599233073448198496
+    second: Idle_Right_Fish_Enemy_Spritesheet_28
+  - first:
+      213: -8797705889073455693
+    second: Idle_Right_Fish_Enemy_Spritesheet_29
+  - first:
+      213: 7121406975857178559
+    second: Idle_Right_Fish_Enemy_Spritesheet_30
+  - first:
+      213: -2904374571087410903
+    second: Idle_Right_Fish_Enemy_Spritesheet_31
+  - first:
+      213: -5346151188197016446
+    second: Idle_Right_Fish_Enemy_Spritesheet_32
+  - first:
+      213: -328166875754529525
+    second: Idle_Right_Fish_Enemy_Spritesheet_33
+  - first:
+      213: -1714315723889081137
+    second: Idle_Right_Fish_Enemy_Spritesheet_34
+  - first:
+      213: -772202647209554120
+    second: Idle_Right_Fish_Enemy_Spritesheet_35
+  - first:
+      213: -9075920437782984260
+    second: Idle_Right_Fish_Enemy_Spritesheet_36
+  - first:
+      213: 919609411096038419
+    second: Idle_Right_Fish_Enemy_Spritesheet_37
+  - first:
+      213: -7291820999640625062
+    second: Idle_Right_Fish_Enemy_Spritesheet_38
+  - first:
+      213: 5885895133540996314
+    second: Idle_Right_Fish_Enemy_Spritesheet_39
+  - first:
+      213: -161466813875788906
+    second: Idle_Right_Fish_Enemy_Spritesheet_40
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Idle_Right_Fish_Enemy_Spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3267
+        width: 607
+        height: 829
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a778a68ae552dad0800000000000000
+      internalID: -2678984362562127961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Right_Fish_Enemy_Spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 3267
+        width: 607
+        height: 829
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b0485a7d28de7b30800000000000000
+      internalID: 4287101585141022904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Right_Fish_Enemy_Spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 1214
+        y: 3267
+        width: 607
+        height: 829
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4bb6f1cecad9bf00800000000000000
+      internalID: 1133177362812681036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Right_Fish_Enemy_Spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 1821
+        y: 3267
+        width: 607
+        height: 829
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a77fba0e414a6da90800000000000000
+      internalID: -7289458537276901510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Right_Fish_Enemy_Spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 2428
+        y: 3267
+        width: 607
+        height: 829
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47f393c51b60b02d0800000000000000
+      internalID: -3311545742174634124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Right_Fish_Enemy_Spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 3035
+        y: 3267
+        width: 607
+        height: 829
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18ddaf09fe9440480800000000000000
+      internalID: -8933934467517850239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Right_Fish_Enemy_Spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 3642
+        y: 3267
+        width: 607
+        height: 829
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac1d12b2e19fb90b0800000000000000
+      internalID: -5720704993676111414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Right_Fish_Enemy_Spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 4249
+        y: 3267
+        width: 607
+        height: 829
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e1181f094927e9e0800000000000000
+      internalID: -1592258549489593883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Right_Fish_Enemy_Spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 4856
+        y: 3267
+        width: 607
+        height: 829
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9176bc24546dd9990800000000000000
+      internalID: -7377505021601290471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Right_Fish_Enemy_Spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 5463
+        y: 3267
+        width: 607
+        height: 829
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0b47aa2196208c90800000000000000
+      internalID: -7169688201846109428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Right_Fish_Enemy_Spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 6070
+        y: 3267
+        width: 607
+        height: 829
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e04bbdfe60fb2dd0800000000000000
+      internalID: -2509648007834943257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Right_Fish_Enemy_Spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 6677
+        y: 3267
+        width: 607
+        height: 829
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 830094756cce53a30800000000000000
+      internalID: 4194518964577566776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Right_Fish_Enemy_Spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 7284
+        y: 3267
+        width: 607
+        height: 829
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9733137a8265c920800000000000000
+      internalID: 3009920272742692763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Right_Fish_Enemy_Spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2438
+        width: 607
+        height: 829
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 987428ac760792ae0800000000000000
+      internalID: -1573603003707799671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Right_Fish_Enemy_Spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 2438
+        width: 607
+        height: 829
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f637dfb0bc516f190800000000000000
+      internalID: -7929126132115475601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Right_Fish_Enemy_Spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 1214
+        y: 2438
+        width: 607
+        height: 829
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c441f1e3326b3ea0800000000000000
+      internalID: -5892007712510622520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Right_Fish_Enemy_Spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 1821
+        y: 2438
+        width: 607
+        height: 829
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae8907caa909f75c0800000000000000
+      internalID: -4215491732203071254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Right_Fish_Enemy_Spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 2428
+        y: 2438
+        width: 607
+        height: 829
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91507f227c1c3e480800000000000000
+      internalID: -8871033779960478439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Right_Fish_Enemy_Spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 3035
+        y: 2438
+        width: 607
+        height: 829
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a2ecde9a7fb9f2b0800000000000000
+      internalID: -5550194532385234271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Right_Fish_Enemy_Spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 3642
+        y: 2438
+        width: 607
+        height: 829
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cbfcb879044390a0800000000000000
+      internalID: -6876077398593569852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Right_Fish_Enemy_Spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 4249
+        y: 2438
+        width: 607
+        height: 829
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f64e13c0aba843790800000000000000
+      internalID: -7551258143520332689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Right_Fish_Enemy_Spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 4856
+        y: 2438
+        width: 607
+        height: 829
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69c4dd788035d0a20800000000000000
+      internalID: 3030169420394482838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Right_Fish_Enemy_Spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 5463
+        y: 2438
+        width: 607
+        height: 829
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df7f74bf5a26e2f20800000000000000
+      internalID: 3399763233736226813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Right_Fish_Enemy_Spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 6070
+        y: 2438
+        width: 607
+        height: 829
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 835b4c31a082eeb00800000000000000
+      internalID: 859668602620785976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Right_Fish_Enemy_Spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 6677
+        y: 2438
+        width: 607
+        height: 829
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2082f52ae8a624ac0800000000000000
+      internalID: -3872415568743159806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Right_Fish_Enemy_Spritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 7284
+        y: 2438
+        width: 607
+        height: 829
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e61cc8461fdc9ce20800000000000000
+      internalID: 3371452232721285486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Right_Fish_Enemy_Spritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1609
+        width: 607
+        height: 829
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 716d864c9017429a0800000000000000
+      internalID: -6258753295374297577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Right_Fish_Enemy_Spritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 1609
+        width: 607
+        height: 829
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a26d673443b2f6670800000000000000
+      internalID: 8534087322360534570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Right_Fish_Enemy_Spritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 1214
+        y: 1609
+        width: 607
+        height: 829
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 061a744c736e57960800000000000000
+      internalID: 7599233073448198496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Right_Fish_Enemy_Spritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 1821
+        y: 1609
+        width: 607
+        height: 829
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bd1a6b2b1548e580800000000000000
+      internalID: -8797705889073455693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Right_Fish_Enemy_Spritesheet_30
+      rect:
+        serializedVersion: 2
+        x: 2428
+        y: 1609
+        width: 607
+        height: 829
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb7b4f8e9e154d260800000000000000
+      internalID: 7121406975857178559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Right_Fish_Enemy_Spritesheet_31
+      rect:
+        serializedVersion: 2
+        x: 3035
+        y: 1609
+        width: 607
+        height: 829
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92948a337b691b7d0800000000000000
+      internalID: -2904374571087410903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Right_Fish_Enemy_Spritesheet_32
+      rect:
+        serializedVersion: 2
+        x: 3642
+        y: 1609
+        width: 607
+        height: 829
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28cfbf7c1d7aec5b0800000000000000
+      internalID: -5346151188197016446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Right_Fish_Enemy_Spritesheet_33
+      rect:
+        serializedVersion: 2
+        x: 4249
+        y: 1609
+        width: 607
+        height: 829
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0df99717fd127bf0800000000000000
+      internalID: -328166875754529525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Right_Fish_Enemy_Spritesheet_34
+      rect:
+        serializedVersion: 2
+        x: 4856
+        y: 1609
+        width: 607
+        height: 829
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc489b49ee68538e0800000000000000
+      internalID: -1714315723889081137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Right_Fish_Enemy_Spritesheet_35
+      rect:
+        serializedVersion: 2
+        x: 5463
+        y: 1609
+        width: 607
+        height: 829
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83f457e98c59845f0800000000000000
+      internalID: -772202647209554120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Right_Fish_Enemy_Spritesheet_36
+      rect:
+        serializedVersion: 2
+        x: 6070
+        y: 1609
+        width: 607
+        height: 829
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb9cc38b27adb0280800000000000000
+      internalID: -9075920437782984260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Right_Fish_Enemy_Spritesheet_37
+      rect:
+        serializedVersion: 2
+        x: 6677
+        y: 1609
+        width: 607
+        height: 829
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31c4c7813eb13cc00800000000000000
+      internalID: 919609411096038419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Right_Fish_Enemy_Spritesheet_38
+      rect:
+        serializedVersion: 2
+        x: 7284
+        y: 1609
+        width: 607
+        height: 829
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a50dfae3f6f3eca90800000000000000
+      internalID: -7291820999640625062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Right_Fish_Enemy_Spritesheet_39
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 780
+        width: 607
+        height: 829
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad459eb6076eea150800000000000000
+      internalID: 5885895133540996314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Right_Fish_Enemy_Spritesheet_40
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 780
+        width: 607
+        height: 829
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6936bebc9ca52cdf0800000000000000
+      internalID: -161466813875788906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
