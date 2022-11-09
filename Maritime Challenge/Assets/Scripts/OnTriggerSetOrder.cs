@@ -7,6 +7,7 @@ public class OnTriggerSetOrder : MonoBehaviour
     [SerializeField]
     private int orderInLayer;
 
+    public int OrderInLayer { get { return orderInLayer; } }
 
 
 
@@ -14,10 +15,23 @@ public class OnTriggerSetOrder : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Player player = collision.gameObject.GetComponent<Player>();
+            PlayerOrderInLayerTrigger player = collision.gameObject.GetComponent<PlayerOrderInLayerTrigger>();
             if (player == null)
                 return;
-            player.SetOrderInLayer(orderInLayer);
+
+            player.AddTrigger(this);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            PlayerOrderInLayerTrigger player = collision.gameObject.GetComponent<PlayerOrderInLayerTrigger>();
+            if (player == null)
+                return;
+
+            player.RemoveTrigger(this);
         }
     }
 }

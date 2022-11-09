@@ -1707,6 +1707,7 @@ GameObject:
   - component: {fileID: 3737132526103077014}
   - component: {fileID: 2154318079331551881}
   - component: {fileID: 3834950433424090269}
+  - component: {fileID: 984363709133478693}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -1870,14 +1871,6 @@ MonoBehaviour:
   movespd: 1
   BattleShipPrefab: {fileID: 2042507932746732076, guid: b8ed2059b8897514fa98360bc451be85, type: 3}
   BodyReferenceSprite: {fileID: 2281672732284213407}
-  PlayerSprites:
-  - {fileID: 4378395825095399806}
-  - {fileID: 2281672732284213407}
-  - {fileID: 1722077273126694961}
-  - {fileID: 6800025604057381098}
-  - {fileID: 3201312575687265649}
-  - {fileID: 4674462900905510182}
-  - {fileID: 5561724877521398438}
 --- !u!114 &9116503974399402979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1956,6 +1949,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+--- !u!114 &984363709133478693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8779834002269100689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b7472359c1692d499156c3fcdf01e24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  PlayerSprites:
+  - {fileID: 4674462900905510182}
+  - {fileID: 5561724877521398438}
+  - {fileID: 2281672732284213407}
+  - {fileID: 6800025604057381098}
+  - {fileID: 1722077273126694961}
+  - {fileID: 3201312575687265649}
+  - {fileID: 4378395825095399806}
 --- !u!1 &9177410304660845624
 GameObject:
   m_ObjectHideFlags: 0

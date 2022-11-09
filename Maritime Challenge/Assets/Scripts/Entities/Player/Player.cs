@@ -14,10 +14,7 @@ public class Player : BaseEntity
     private SpriteRenderer BodyReferenceSprite;
     public SpriteRenderer RefSprite { get { return BodyReferenceSprite; } }
 
-    [SerializeField]
-    private SpriteRenderer[] PlayerSprites;
-    private int[] defaultSortingOrder = new int[(int)BODY_PART_TYPE.NUM_TOTAL];
-
+  
 
     [SyncVar]
     private int UID = 0;
@@ -49,23 +46,10 @@ public class Player : BaseEntity
     private void Awake()
     {
         gameObject.SetActive(isVisible);
-        for (int i = 0; i < PlayerSprites.Length; i++)
-        {
-            defaultSortingOrder[i] = PlayerSprites[i].sortingOrder;
-        }
+        
     }
 
-    private void Start()
-    {
-        if (isLocalPlayer)
-        {
-            for (int i = 0; i < defaultSortingOrder.Length; i++)
-            {
-                defaultSortingOrder[i] += 3;
-            }
-        }
-    }
-
+   
 
     public override void OnStartLocalPlayer()
     {
@@ -246,14 +230,7 @@ public class Player : BaseEntity
          OnEntityHPChanged += LinkedBattleship.SetHP;
     }
 
-    public void SetOrderInLayer(int what)
-    {
-        for (int i = 0; i < PlayerSprites.Length; i++)
-        {
-            PlayerSprites[i].sortingOrder = defaultSortingOrder[i] + what;
-        }
-    }
-
+  
     // ================= GETTERS =====================
     public string GetUsername()
     {

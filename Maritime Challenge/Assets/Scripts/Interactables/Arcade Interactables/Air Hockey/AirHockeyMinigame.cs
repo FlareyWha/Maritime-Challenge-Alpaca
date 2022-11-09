@@ -152,7 +152,6 @@ public class AirHockeyMinigame : NetworkBehaviour
         // Player Things
         PlayerData.MyPlayer.transform.localScale = new Vector3(0.6f, 0.6f, 0.6f);
         PlayerData.MyPlayer.transform.position = seat.transform.position;
-        PlayerData.MyPlayer.SetOrderInLayer(1);
     }
 
     [Client]
