@@ -171,6 +171,22 @@ public class Player : BaseEntity
         SyncPlayerVisibility(false);
     }
 
+    [Server]
+    protected override void HandleDeath(GameObject attacker)
+    {
+        hp = maxHp;
+        OnMyPlayerDied();
+    }
+
+    [ClientRpc]
+    private void OnMyPlayerDied()
+    {
+        if (!isLocalPlayer)
+            return;
+
+        Dock.StartingDock.Interact();
+
+    }
     public void DockShip(Dock dock)
     {
         if (LinkedBattleship == null)

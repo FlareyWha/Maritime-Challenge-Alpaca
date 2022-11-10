@@ -5904,7 +5904,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1108260117510256188, guid: 4c05ffb1ef6f85047bd7ad0a6484ba82, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 40
+      value: 61
       objectReference: {fileID: 0}
     - target: {fileID: 1108260117510256188, guid: 4c05ffb1ef6f85047bd7ad0a6484ba82, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5940,7 +5940,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1108260117510256188, guid: 4c05ffb1ef6f85047bd7ad0a6484ba82, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -20
+      value: -30.5
       objectReference: {fileID: 0}
     - target: {fileID: 1108260117510256188, guid: 4c05ffb1ef6f85047bd7ad0a6484ba82, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5953,6 +5953,18 @@ PrefabInstance:
     - target: {fileID: 1108260117510256188, guid: 4c05ffb1ef6f85047bd7ad0a6484ba82, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5873577789984491035, guid: 4c05ffb1ef6f85047bd7ad0a6484ba82, type: 3}
+      propertyPath: m_Text
+      value: Welcome to RightShip City! Enter a message to start chatting!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5873577789984491035, guid: 4c05ffb1ef6f85047bd7ad0a6484ba82, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 206a49e6b2aff404297d9212ac1f5c54, type: 3}
+    - target: {fileID: 5873577789984491035, guid: 4c05ffb1ef6f85047bd7ad0a6484ba82, type: 3}
+      propertyPath: m_FontData.m_FontStyle
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c05ffb1ef6f85047bd7ad0a6484ba82, type: 3}
@@ -25396,7 +25408,31 @@ MonoBehaviour:
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1682262334}
+        m_TargetAssemblyTypeName: ChatManager, Assembly-CSharp
+        m_MethodName: SendMessage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 152548300}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -32952,7 +32988,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 40}
+  m_SizeDelta: {x: 0, y: 61}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1744947861
 MonoBehaviour:
