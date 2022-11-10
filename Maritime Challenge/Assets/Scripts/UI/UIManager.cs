@@ -274,6 +274,21 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
      
     }
 
+    public void ToggleFlyInAnim(RectTransform rectTransform, GameObject go, Vector2 dir, Vector3 targetPos, float anim_timer, Button button)
+    {
+        Vector3 startPos = Vector3.zero;
+        startPos.x = dir.x * (0.5f * Screen.width + 0.5f * rectTransform.rect.width);
+        startPos.y = dir.y * (0.5f * Screen.height + 0.5f * rectTransform.rect.height);
+        StartCoroutine(ToggleFlyInAnim(go, true, startPos, targetPos, anim_timer, button));
+    }
+
+    public void ToggleFlyOutAnim(RectTransform rectTransform, GameObject go, Vector2 dir, Vector3 startPos, float anim_timer, Button button)
+    {
+        Vector3 endPos = Vector3.zero;
+        endPos.x = dir.x * (0.5f * Screen.width + 0.5f * rectTransform.rect.width);
+        endPos.y = dir.y * (0.5f * Screen.height + 0.5f * rectTransform.rect.height);
+        StartCoroutine(ToggleFlyOutAnim(go, true, startPos, endPos, anim_timer, button));
+    }
     static public IEnumerator ToggleFlyInAnim(RectTransform rectTransform, Vector3 startPos, Vector3 targetPos, float anim_time, Button button)
     {
         if (button != null)
@@ -289,6 +304,8 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
             rectTransform.anchoredPosition += fly_rate * Time.deltaTime;
             yield return null;
         }
+
+        rectTransform.anchoredPosition = targetPos;
 
         if (button != null)
             button.interactable = true;
@@ -313,10 +330,13 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
             yield return null;
         }
 
+        uiGO.transform.localPosition = targetPos;
+
         if (button != null)
             button.interactable = true;
      
     }
+
 
     static public IEnumerator ToggleFlyOutAnim(RectTransform rectTransform, Vector3 startPos, Vector3 targetPos, float anim_time, Button button)
     {
@@ -333,6 +353,8 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
             rectTransform.anchoredPosition += fly_rate * Time.deltaTime;
             yield return null;
         }
+
+        rectTransform.anchoredPosition = targetPos;
 
         if (button != null)
             button.interactable = true;
@@ -353,6 +375,8 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
             uiGO.transform.localPosition += fly_rate * Time.deltaTime;
             yield return null;
         }
+
+        uiGO.transform.localPosition = targetPos;
 
         if (button != null)
             button.interactable = true;

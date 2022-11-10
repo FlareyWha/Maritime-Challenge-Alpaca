@@ -1257,10 +1257,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1444367245}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1444367249}
+        m_TargetAssemblyTypeName: PageUIAnim, Assembly-CSharp
+        m_MethodName: FlyInFromAbove
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2120,6 +2120,7 @@ GameObject:
   - component: {fileID: 119540177}
   - component: {fileID: 119540176}
   - component: {fileID: 119540175}
+  - component: {fileID: 119540178}
   m_Layer: 5
   m_Name: RedeemPage
   m_TagString: Untagged
@@ -2189,6 +2190,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &119540178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 119540174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a09d3418fba0de49822cefc3d2c7f5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RefRectTransform: {fileID: 119540177}
+  AnimTime: 0.2
 --- !u!1 &122816941
 GameObject:
   m_ObjectHideFlags: 0
@@ -2525,10 +2540,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 402076797}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 402076801}
+        m_TargetAssemblyTypeName: PageUIAnim, Assembly-CSharp
+        m_MethodName: FlyInFromLeft
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5801,7 +5816,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: -330}
+  m_SizeDelta: {x: 0, y: -770}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &312114796
 MonoBehaviour:
@@ -8169,6 +8184,7 @@ GameObject:
   - component: {fileID: 402076798}
   - component: {fileID: 402076800}
   - component: {fileID: 402076799}
+  - component: {fileID: 402076801}
   m_Layer: 5
   m_Name: ProfilePage
   m_TagString: Untagged
@@ -8237,6 +8253,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 402076797}
   m_CullTransparentMesh: 1
+--- !u!114 &402076801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 402076797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a09d3418fba0de49822cefc3d2c7f5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RefRectTransform: {fileID: 402076798}
+  AnimTime: 0.2
 --- !u!1 &410667512
 GameObject:
   m_ObjectHideFlags: 0
@@ -10450,10 +10480,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1655393396}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1655393400}
+        m_TargetAssemblyTypeName: PageUIAnim, Assembly-CSharp
+        m_MethodName: FlyOutToRight
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -10903,10 +10933,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 402076797}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 402076801}
+        m_TargetAssemblyTypeName: PageUIAnim, Assembly-CSharp
+        m_MethodName: FlyOutToLeft
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -11084,10 +11114,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 738995229}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 738995233}
+        m_TargetAssemblyTypeName: PageUIAnim, Assembly-CSharp
+        m_MethodName: FlyOutToBelow
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -13584,10 +13614,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1237344741}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1237344745}
+        m_TargetAssemblyTypeName: PageUIAnim, Assembly-CSharp
+        m_MethodName: FlyInFromLeft
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -14808,6 +14838,7 @@ GameObject:
   - component: {fileID: 738995230}
   - component: {fileID: 738995232}
   - component: {fileID: 738995231}
+  - component: {fileID: 738995233}
   m_Layer: 5
   m_Name: MailboxPanel
   m_TagString: Untagged
@@ -14857,7 +14888,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5bf5a6906748816418d709424270f86b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6728ade834ece324b941c071ae86e4c3, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -14875,6 +14906,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 738995229}
   m_CullTransparentMesh: 1
+--- !u!114 &738995233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 738995229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a09d3418fba0de49822cefc3d2c7f5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RefRectTransform: {fileID: 738995230}
+  AnimTime: 0.2
 --- !u!1 &741667821
 GameObject:
   m_ObjectHideFlags: 0
@@ -18221,8 +18266,8 @@ RectTransform:
   m_Father: {fileID: 1957876630}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.75, y: 0}
+  m_AnchorMax: {x: 0.75, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -19677,10 +19722,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 738995229}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 738995233}
+        m_TargetAssemblyTypeName: PageUIAnim, Assembly-CSharp
+        m_MethodName: FlyInFromBelow
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -19968,10 +20013,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1645062697}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1645062699}
+        m_TargetAssemblyTypeName: PageUIAnim, Assembly-CSharp
+        m_MethodName: FlyInFromLeft
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -22324,7 +22369,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0.75, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -23063,6 +23108,7 @@ GameObject:
   - component: {fileID: 1237344742}
   - component: {fileID: 1237344744}
   - component: {fileID: 1237344743}
+  - component: {fileID: 1237344745}
   m_Layer: 5
   m_Name: MissionsPage
   m_TagString: Untagged
@@ -23135,6 +23181,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1237344741}
   m_CullTransparentMesh: 1
+--- !u!114 &1237344745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237344741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a09d3418fba0de49822cefc3d2c7f5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RefRectTransform: {fileID: 1237344742}
+  AnimTime: 0.2
 --- !u!1 &1239262382
 GameObject:
   m_ObjectHideFlags: 0
@@ -23876,10 +23936,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 119540174}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 119540178}
+        m_TargetAssemblyTypeName: PageUIAnim, Assembly-CSharp
+        m_MethodName: FlyOutToBelow
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -25235,7 +25295,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0.75, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -25705,10 +25765,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1645062697}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1645062699}
+        m_TargetAssemblyTypeName: PageUIAnim, Assembly-CSharp
+        m_MethodName: FlyOutToLeft
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -26458,6 +26518,7 @@ GameObject:
   - component: {fileID: 1444367248}
   - component: {fileID: 1444367247}
   - component: {fileID: 1444367246}
+  - component: {fileID: 1444367249}
   m_Layer: 5
   m_Name: SettingsPage
   m_TagString: Untagged
@@ -26527,6 +26588,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 600, y: 800}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1444367249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1444367245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a09d3418fba0de49822cefc3d2c7f5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RefRectTransform: {fileID: 1444367248}
+  AnimTime: 0.2
 --- !u!1 &1449868563
 GameObject:
   m_ObjectHideFlags: 0
@@ -28156,10 +28231,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1444367245}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1444367249}
+        m_TargetAssemblyTypeName: PageUIAnim, Assembly-CSharp
+        m_MethodName: FlyOutToBelow
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -28856,8 +28931,8 @@ RectTransform:
   m_Father: {fileID: 2038666782}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.75, y: 0}
+  m_AnchorMax: {x: 0.75, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -28983,10 +29058,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1655393396}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1655393400}
+        m_TargetAssemblyTypeName: PageUIAnim, Assembly-CSharp
+        m_MethodName: FlyInFromRight
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -30343,7 +30418,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -0.00048828125, y: -45.5}
-  m_SizeDelta: {x: -509.67664, y: 91}
+  m_SizeDelta: {x: 314, y: 91}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1629270168
 MonoBehaviour:
@@ -30504,6 +30579,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1645062698}
+  - component: {fileID: 1645062699}
   m_Layer: 5
   m_Name: RightShipediaPage
   m_TagString: Untagged
@@ -30537,6 +30613,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -720, y: -1280}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1645062699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645062697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a09d3418fba0de49822cefc3d2c7f5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RefRectTransform: {fileID: 1761310319}
+  AnimTime: 0.2
 --- !u!1 &1645600170
 GameObject:
   m_ObjectHideFlags: 0
@@ -30763,6 +30853,7 @@ GameObject:
   - component: {fileID: 1655393399}
   - component: {fileID: 1655393398}
   - component: {fileID: 1655393397}
+  - component: {fileID: 1655393400}
   m_Layer: 5
   m_Name: AchievementsPage
   m_TagString: Untagged
@@ -30830,6 +30921,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1655393400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1655393396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a09d3418fba0de49822cefc3d2c7f5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RefRectTransform: {fileID: 1655393399}
+  AnimTime: 0.2
 --- !u!1 &1659137697
 GameObject:
   m_ObjectHideFlags: 0
@@ -31943,10 +32048,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1237344741}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1237344745}
+        m_TargetAssemblyTypeName: PageUIAnim, Assembly-CSharp
+        m_MethodName: FlyOutToLeft
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -33399,10 +33504,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 119540174}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 119540178}
+        m_TargetAssemblyTypeName: PageUIAnim, Assembly-CSharp
+        m_MethodName: FlyInFromBelow
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -33472,6 +33577,7 @@ GameObject:
   - component: {fileID: 1774989062}
   - component: {fileID: 1774989061}
   - component: {fileID: 1774989060}
+  - component: {fileID: 1774989063}
   m_Layer: 5
   m_Name: CustomiseAvatarPage
   m_TagString: Untagged
@@ -33539,6 +33645,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1774989063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1774989059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a09d3418fba0de49822cefc3d2c7f5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RefRectTransform: {fileID: 1774989062}
+  AnimTime: 0.2
 --- !u!1001 &1775785088
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33688,7 +33808,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 275, y: 0}
+  m_SizeDelta: {x: 275, y: 420}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1779754447
 MonoBehaviour:
@@ -35564,7 +35684,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1916445792
 RectTransform:
   m_ObjectHideFlags: 0
@@ -38076,7 +38196,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2109214384
 RectTransform:
   m_ObjectHideFlags: 0
