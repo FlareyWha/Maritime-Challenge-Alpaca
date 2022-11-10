@@ -24,7 +24,6 @@ public class AirHockeyMinigame : NetworkBehaviour
 
     private Vector3 startPuckPos;
 
-
     private void Start()
     {
         AirHockeyGamePanel.SetActive(false);
@@ -150,7 +149,7 @@ public class AirHockeyMinigame : NetworkBehaviour
             PlayerFollowCamera.Instance.RotateCamera(transform.rotation.eulerAngles.z, 1.0f);
 
         // Player Things
-        PlayerData.MyPlayer.transform.localScale = new Vector3(0.6f, 0.6f, 0.6f);
+        PlayerData.MyPlayer.transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
         PlayerData.MyPlayer.transform.position = seat.transform.position;
     }
 
@@ -209,10 +208,21 @@ public class AirHockeyMinigame : NetworkBehaviour
     {
         ResetPuck();
 
+        PlayGoalSFX(transform.position);
+
         int score = scoresList[seatID];
         score++;
         scoresList[seatID] = score;
         UpdateScoreDisplay(seatID, score);
+    }
+
+    [ClientRpc]
+    private void PlayGoalSFX(Vector3 pos)
+    {
+        if (PlayerData.activeSubScene != "ArcadeScene")
+            return;
+
+        // Play Cheering SFX
     }
 
     [ClientRpc]

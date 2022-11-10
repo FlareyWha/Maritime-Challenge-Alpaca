@@ -95,4 +95,13 @@ public class AirHockeyPaddle : NetworkBehaviour
         return pos;
     }
 
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("AirHockeyPuck"))
+        {
+            // Play Sound Effect - Pos is just transform.position
+        }
+    }
+
 }
