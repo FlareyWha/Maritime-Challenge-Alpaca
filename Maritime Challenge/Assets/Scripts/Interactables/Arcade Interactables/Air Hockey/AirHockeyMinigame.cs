@@ -11,6 +11,9 @@ public class AirHockeyMinigame : NetworkBehaviour
     private GameObject AirHockeyGamePanel, GameCanvas;
 
     [SerializeField]
+    private Collider2D TableCollider;
+
+    [SerializeField]
     private AirHockeyPuck Puck;
   //  [SerializeField]
   //  private AirHockeyPaddle[] PlayerPaddle;
@@ -52,6 +55,7 @@ public class AirHockeyMinigame : NetworkBehaviour
             SeatsTaken.Add(false);
         }
         Puck.gameObject.GetComponent<Collider2D>().enabled = false;
+        TableCollider.enabled = false;
     }
 
 
