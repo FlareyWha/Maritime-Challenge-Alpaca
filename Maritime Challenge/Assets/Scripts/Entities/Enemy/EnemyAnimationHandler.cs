@@ -15,9 +15,17 @@ public class EnemyAnimationHandler : NetworkBehaviour
     }
 
     [Server]
+    public void SendUpdateAnimatorAttack()
+    {
+        UpdateAnimatorWalkBool(false);
+        UpdateAnimatorAttackTrigger();
+    }
+
+    [Server]
     public void SendUpdateAnimatorDie(bool die)
     {
         UpdateAnimatorDieBool(die);
+        animator.SetBool("Die", die);
     }
 
     [Server]
@@ -33,9 +41,17 @@ public class EnemyAnimationHandler : NetworkBehaviour
     }
 
     [ClientRpc]
+    private void UpdateAnimatorAttackTrigger()
+    {
+        animator.SetTrigger("Attack");
+    }
+
+    [ClientRpc]
     private void UpdateAnimatorDieBool(bool die)
     {
         animator.SetBool("Die", die);
+
+        Debug.Log("Dieeeeeeeeeee");
     }
 
 

@@ -70,6 +70,5 @@ public class CannonBall : BaseProjectile
 
         // Play Sound
         SoundManager.Instance.PlayCannonballHitSFX(sceneName, transform.position);
-        Debug.Log("sfalfjdsklfj");
     }
 }

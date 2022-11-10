@@ -80,6 +80,8 @@ public class BaseEnemy : BaseEntity
     [SyncVar(hook = nameof(OnVisibilityChanged))]
     private bool isVisible = true;
 
+    private GameObject attacker;
+
     public override void OnStartClient()
     {
         gameObject.SetActive(isVisible);
@@ -277,6 +279,9 @@ public class BaseEnemy : BaseEntity
         {
             currEnemyState = ENEMY_STATES.ATTACK;
             timer = 0.5f * attack_interval;
+
+            if (enemyAnimationHandler != null)
+                enemyAnimationHandler.SendUpdateAnimatorAttack();
         }
 
         ChaseMovement();
@@ -460,6 +465,17 @@ public class BaseEnemy : BaseEntity
     [Server]
     protected override void HandleDeath(GameObject attacker)
     {
+        this.attacker = attacker;
+
+        if (enemyAnimationHandler != null)
+        {
+            enemyAnimationHandler.SendUpdateAnimatorDie(true);
+        }
+    }
+
+    [Server]
+    public void Die()
+    {
         GameHandler.Instance.OnEnemyDied(attacker.GetComponent<Player>().GetUID(), transform.position);
 
         if (linkedAbandonedCity != null)
@@ -470,14 +486,9 @@ public class BaseEnemy : BaseEntity
         }
         else
             NetworkServer.Destroy(gameObject);
-
-        if (enemyAnimationHandler != null)
-        {
-            enemyAnimationHandler.SendUpdateAnimatorDie(true);
-        }
     }
 
-   
+
     [Client]
     public override void OnEntityClicked()
     {
