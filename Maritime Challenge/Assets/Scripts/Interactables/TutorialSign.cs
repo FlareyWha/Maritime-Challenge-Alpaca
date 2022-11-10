@@ -7,6 +7,9 @@ public class TutorialSign : BaseInteractable
     [SerializeField]
     private ParticleSystem confetti;
 
+    [SerializeField]
+    private AudioSource audioSource;
+
     private bool interacted;
     public bool Interacted
     {
@@ -30,5 +33,6 @@ public class TutorialSign : BaseInteractable
     {
         confetti.Play();
         interacted = true;
+        audioSource.Play();
     }
 }

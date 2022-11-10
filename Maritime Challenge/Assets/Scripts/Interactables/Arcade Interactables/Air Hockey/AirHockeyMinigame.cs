@@ -24,6 +24,9 @@ public class AirHockeyMinigame : NetworkBehaviour
 
     private Vector3 startPuckPos;
 
+    [SerializeField]
+    private AudioSource cheerAudioSource;
+
     private void Start()
     {
         AirHockeyGamePanel.SetActive(false);
@@ -223,6 +226,7 @@ public class AirHockeyMinigame : NetworkBehaviour
             return;
 
         // Play Cheering SFX
+        cheerAudioSource.Play();
     }
 
     [ClientRpc]
