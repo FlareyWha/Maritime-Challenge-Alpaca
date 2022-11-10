@@ -14,6 +14,8 @@ public class TutorialManager : MonoBehaviourSingleton<TutorialManager>
     [SerializeField]
     private TutorialHUDManager tutorialHUDManager;
 
+    private bool lastTutorial = false;
+
     private void Start()
     {
         currentTutorial = tutorialList[0];
@@ -25,14 +27,17 @@ public class TutorialManager : MonoBehaviourSingleton<TutorialManager>
     {
         currentTutorial.CheckConditionChanges();
 
-        if (currentTutorial.CheckConditionCleared())
+        if (currentTutorial.CheckConditionCleared() && !lastTutorial)
             ActivateNextPhase();
     }
 
     void ActivateNextPhase()
     {
         if (tutorialPhase == tutorialList.Length - 1)
+        {
             TutorialPromptManager.Instance.ActivateTutorialPrompt(TUTORIALID.TUTORIAL_COMPLETE);
+            lastTutorial = true;
+        }
         else
         {
             tutorialPhase++;
