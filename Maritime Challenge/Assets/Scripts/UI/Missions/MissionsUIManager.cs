@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MissionsUIManager : MonoBehaviour
+public class MissionsUIManager : MonoBehaviourSingleton<MissionsUIManager>
 {
     [SerializeField]
     private GameObject MissionsUIPrefab;
@@ -17,11 +17,13 @@ public class MissionsUIManager : MonoBehaviour
         PlayerData.OnPlayerStatsUpdated += OnPlayerStatsUpdated;
     }
 
-    private void OnDestroy()
+    protected override void OnDestroy()
     {
+        base.OnDestroy();
+
         PlayerData.OnPlayerStatsUpdated -= OnPlayerStatsUpdated;
     }
-    private void UpdateMissionsRect()
+    public void UpdateMissionsRect()
     {
         // Clear List
         foreach (Transform child in DailyMissionsRect)

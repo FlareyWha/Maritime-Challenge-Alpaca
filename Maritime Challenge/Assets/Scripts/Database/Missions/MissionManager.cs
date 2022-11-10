@@ -66,7 +66,7 @@ public class MissionManager : MonoBehaviourSingleton<MissionManager>
         StartCoroutine(DoResetMissions(missionType));
     }
 
-    static IEnumerator DoResetMissions(MISSION_TYPE missionType)
+    IEnumerator DoResetMissions(MISSION_TYPE missionType)
     {
         string url = ServerDataManager.URL_resetMissions;
         Debug.Log(url);
@@ -79,6 +79,7 @@ public class MissionManager : MonoBehaviourSingleton<MissionManager>
         {
             case UnityWebRequest.Result.Success:
                 Debug.Log(webreq.downloadHandler.text);
+                StartCoroutine(DoGetMissions());
                 break;
             case UnityWebRequest.Result.ProtocolError:
                 Debug.LogError(webreq.downloadHandler.text);
@@ -88,4 +89,32 @@ public class MissionManager : MonoBehaviourSingleton<MissionManager>
                 break;
         }
     }
+
+    IEnumerator DoGetMissions()
+    {
+        string url = ServerDataManager.URL_getMissionData;
+        Debug.Log(url);
+
+        WWWForm form = new WWWForm();
+        form.AddField("iOwnerUID", PlayerData.UID);
+        using UnityWebRequest webreq = UnityWebRequest.Post(url, form);
+        yield return webreq.SendWebRequest();
+        switch (webreq.result)
+        {
+            case UnityWebRequest.Result.Success:
+                PlayerData.MissionList = JSONDeseralizer.DeseralizeMissionData(webreq.downloadHandler.text);
+
+                while (MissionsUIManager.Instance == null)
+                    yield return null;
+                MissionsUIManager.Instance.UpdateMissionsRect();
+                break;
+            case UnityWebRequest.Result.ProtocolError:
+                Debug.LogError(webreq.downloadHandler.text);
+                break;
+            default:
+                Debug.LogError("Server error");
+                break;
+        }
+    }
+
 }
