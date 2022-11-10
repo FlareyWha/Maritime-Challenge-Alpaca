@@ -15,6 +15,9 @@ public class AirHockeyPaddle : NetworkBehaviour
     private bool isHeld = false;
     private Vector2 offset = Vector2.zero;
 
+    [SerializeField]
+    private AudioSource puckAudioSource;
+
 
     public override void OnStartAuthority()
     {
@@ -101,6 +104,7 @@ public class AirHockeyPaddle : NetworkBehaviour
         if (collision.CompareTag("AirHockeyPuck"))
         {
             // Play Sound Effect - Pos is just transform.position
+            puckAudioSource.Play();
         }
     }
 

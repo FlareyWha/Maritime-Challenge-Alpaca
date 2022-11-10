@@ -58,6 +58,9 @@ public class Battleship : NetworkBehaviour
     [SerializeField]
     private GameObject selectedTargetUI;
 
+    [SerializeField]
+    private AudioSource audioSource;
+
     private void Start()
     {
         Debug.Log("BattleShip Set to " + isVisible);
@@ -306,6 +309,7 @@ public class Battleship : NetworkBehaviour
             return;
 
         // Play SFX
+        audioSource.Play();
     }
 
 
