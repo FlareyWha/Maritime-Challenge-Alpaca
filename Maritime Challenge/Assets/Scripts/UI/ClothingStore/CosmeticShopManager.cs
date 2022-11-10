@@ -101,6 +101,7 @@ public class CosmeticShopManager : MonoBehaviour
 
            
         }
+
     }
 
     // Called when a shop item ui is clicked on
