@@ -37,6 +37,7 @@ public class TutorialManager : MonoBehaviourSingleton<TutorialManager>
         {
             TutorialPromptManager.Instance.ActivateTutorialPrompt(TUTORIALID.TUTORIAL_COMPLETE);
             lastTutorial = true;
+            tutorialHUDManager.UpdateTutorialHUD("You are free", "Explore the area, interact with other guests or register an account", 0, 0);
         }
         else
         {
