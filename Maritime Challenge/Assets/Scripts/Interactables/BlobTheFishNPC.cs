@@ -17,23 +17,21 @@ public class BlobTheFishNPC : BaseInteractable
     private Transform ChatBubbleRect;
     private List<ChatBubbleUI> chatBubbleList = new List<ChatBubbleUI>();
 
+    private const int MaxChatBubbleNum = 4;
+
     // Start is called before the first frame update
     void Start()
     {
         interactMessage = "Speak to BlobTheFish";
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    
     private void FixedUpdate()
     {
         // Chat Bubble
         List<ChatBubbleUI> toRemoveList = new List<ChatBubbleUI>();
-        foreach (ChatBubbleUI bubble in chatBubbleList)
+
+        if (chatBubbleList.Count > 0)
         {
             ChatBubbleUI oldest = chatBubbleList[0];
             oldest.UpdateTimer();
@@ -44,6 +42,7 @@ public class BlobTheFishNPC : BaseInteractable
                 oldest.StartFadeOut();
             }
         }
+
         foreach (ChatBubbleUI bubble in toRemoveList)
         {
             chatBubbleList.Remove(bubble);
@@ -65,5 +64,11 @@ public class BlobTheFishNPC : BaseInteractable
         chatBubbleList.Add(chatUI);
 
         // Limit Chat Bubbles
+        if (chatBubbleList.Count > MaxChatBubbleNum)
+        {
+            ChatBubbleUI ui = chatBubbleList[0];
+            chatBubbleList.Remove(ui);
+            Destroy(ui.gameObject);
+        }
     }
 }

@@ -24,6 +24,8 @@ public class PlayerUI : MonoBehaviour
     private Transform ChatBubbleRect;
     private List<ChatBubbleUI> chatBubbleList = new List<ChatBubbleUI>();
 
+    private const int MaxChatBubbleNum = 4;
+
     void Start()
     {
     }
@@ -41,6 +43,12 @@ public class PlayerUI : MonoBehaviour
         chatBubbleList.Add(chatUI);
 
         // Limit Chat Bubbles
+        if (chatBubbleList.Count > MaxChatBubbleNum)
+        {
+            ChatBubbleUI ui = chatBubbleList[0];
+            chatBubbleList.Remove(ui);
+            Destroy(ui.gameObject);
+        }
     }
 
     public void ShowInteractPanel()
@@ -57,23 +65,25 @@ public class PlayerUI : MonoBehaviour
     {
         // Chat Bubble
         List<ChatBubbleUI> toRemoveList = new List<ChatBubbleUI>();
-        foreach (ChatBubbleUI bubble in chatBubbleList)
+
+        if (chatBubbleList.Count > 0)
         {
             ChatBubbleUI oldest = chatBubbleList[0];
             oldest.UpdateTimer();
-            
+
             if (oldest.GetTimer() <= 0.0f)
             {
                 toRemoveList.Add(oldest);
                 oldest.StartFadeOut();
             }
         }
+
         foreach (ChatBubbleUI bubble in toRemoveList)
         {
             chatBubbleList.Remove(bubble);
         }
 
-      
+
 
     }
 

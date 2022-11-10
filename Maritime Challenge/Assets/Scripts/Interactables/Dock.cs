@@ -19,10 +19,15 @@ public class Dock : BaseInteractable
         private set { }
     }
 
+    public static Dock StartingDock = null;
+
     void Start()
     {
         if (IsStartingDock)
+        {
             is_docked_here = true;
+            StartingDock = this;
+        }
 
         UpdateInteractMessage();
 
