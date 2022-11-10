@@ -5,9 +5,6 @@ using Mirror;
 
 public class CannonBall : BaseProjectile
 {
-    [SerializeField]
-    private AudioSource audioSource;
-
     public override void Awake()
     {
         base.Awake();
@@ -72,10 +69,7 @@ public class CannonBall : BaseProjectile
         VFXManager.Instance.AddVFX(VFX_TYPE.CANNONBALL_HIT, pos);
 
         // Play Sound
-        audioSource.Play();
-
-        Debug.Log("ASFJSFHJK");
+        SoundManager.Instance.PlayCannonballHitSFX(sceneName, transform.position);
+        Debug.Log("sfalfjdsklfj");
     }
-
-
 }

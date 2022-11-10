@@ -193,7 +193,8 @@ MonoBehaviour:
   animator: {fileID: 8989833743452985700}
   animatorhandler: {fileID: 8333611826739105661}
   selectedTargetUI: {fileID: 4645963429196385156}
-  audioSource: {fileID: 1251782331011053387}
+  launchAudioSource: {fileID: 1251782331011053387}
+  hitAudioSource: {fileID: 0}
 --- !u!95 &8989833743452985700
 Animator:
   serializedVersion: 3
@@ -424,7 +425,7 @@ GameObject:
   - component: {fileID: 1850772146253433731}
   - component: {fileID: 1251782331011053387}
   m_Layer: 0
-  m_Name: Audio Source
+  m_Name: LaunchAudioSource
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
