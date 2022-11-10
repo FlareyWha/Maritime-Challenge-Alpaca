@@ -11,7 +11,7 @@ public class AirHockeyMinigame : NetworkBehaviour
     private GameObject AirHockeyGamePanel, GameCanvas;
 
     [SerializeField]
-    private Collider2D TableCollider;
+    private Collider2D TableCollider, PuckCollider;
 
     [SerializeField]
     private AirHockeyPuck Puck;
@@ -57,7 +57,7 @@ public class AirHockeyMinigame : NetworkBehaviour
             scoresList.Add(i, 0);
             SeatsTaken.Add(false);
         }
-        Puck.gameObject.GetComponent<Collider2D>().enabled = false;
+        PuckCollider.enabled = false;
         TableCollider.enabled = false;
     }
 
@@ -178,7 +178,7 @@ public class AirHockeyMinigame : NetworkBehaviour
     private void StartGame()
     {
         //Puck.gameObject.SetActive(true);
-        Puck.gameObject.GetComponent<Collider2D>().enabled = true;
+        PuckCollider.enabled = true;
         ResetPuck();
         StartGameCallback();
     }
@@ -192,7 +192,7 @@ public class AirHockeyMinigame : NetworkBehaviour
     [Server]
     public void StopGame()
     {
-        Puck.gameObject.GetComponent<Collider2D>().enabled = false;
+        PuckCollider.enabled = false;
         StopGameCallback();
     }
 

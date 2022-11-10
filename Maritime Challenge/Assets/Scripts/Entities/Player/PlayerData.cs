@@ -181,7 +181,7 @@ public static class PlayerData // Local Player's Data
             PlayerStatsManager.Instance.UpdatePlayerStat(PLAYER_STAT.GIFTS_SENT_DAILY, 0);
             PlayerStatsManager.Instance.UpdatePlayerStat(PLAYER_STAT.LOGIN, 1);
 
-            // 
+            MissionManager.Instance.ResetMissions(MISSION_TYPE.DAILY);
 
             return true;
         }
@@ -189,6 +189,7 @@ public static class PlayerData // Local Player's Data
         return false;
     }
 
+   
     public static void OnExitSaveData()
     {
         PlayerStatsManager.Instance.SaveAllStats();
