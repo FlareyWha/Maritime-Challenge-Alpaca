@@ -210,30 +210,6 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: iPhone
-    maxTextureSize: 8192
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 8192
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -242,9 +218,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1378
-        width: 250
-        height: 670
+        y: 3296
+        width: 300
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -262,10 +238,10 @@ TextureImporter:
       name: Boat2_Down_Idle_Spritesheet_1
       rect:
         serializedVersion: 2
-        x: 250
-        y: 1378
-        width: 250
-        height: 670
+        x: 300
+        y: 3296
+        width: 300
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -283,10 +259,10 @@ TextureImporter:
       name: Boat2_Down_Idle_Spritesheet_2
       rect:
         serializedVersion: 2
-        x: 500
-        y: 1378
-        width: 250
-        height: 670
+        x: 600
+        y: 3296
+        width: 300
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -304,10 +280,10 @@ TextureImporter:
       name: Boat2_Down_Idle_Spritesheet_3
       rect:
         serializedVersion: 2
-        x: 750
-        y: 1378
-        width: 250
-        height: 670
+        x: 900
+        y: 3296
+        width: 300
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -325,10 +301,10 @@ TextureImporter:
       name: Boat2_Down_Idle_Spritesheet_4
       rect:
         serializedVersion: 2
-        x: 1000
-        y: 1378
-        width: 250
-        height: 670
+        x: 1200
+        y: 3296
+        width: 300
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -346,10 +322,10 @@ TextureImporter:
       name: Boat2_Down_Idle_Spritesheet_5
       rect:
         serializedVersion: 2
-        x: 1250
-        y: 1378
-        width: 250
-        height: 670
+        x: 1500
+        y: 3296
+        width: 300
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -367,10 +343,10 @@ TextureImporter:
       name: Boat2_Down_Idle_Spritesheet_6
       rect:
         serializedVersion: 2
-        x: 1500
-        y: 1378
-        width: 250
-        height: 670
+        x: 1800
+        y: 3296
+        width: 300
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -388,10 +364,10 @@ TextureImporter:
       name: Boat2_Down_Idle_Spritesheet_7
       rect:
         serializedVersion: 2
-        x: 1750
-        y: 1378
-        width: 250
-        height: 670
+        x: 2100
+        y: 3296
+        width: 300
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -409,10 +385,10 @@ TextureImporter:
       name: Boat2_Down_Idle_Spritesheet_8
       rect:
         serializedVersion: 2
-        x: 2000
-        y: 1378
-        width: 250
-        height: 670
+        x: 2400
+        y: 3296
+        width: 300
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -430,10 +406,10 @@ TextureImporter:
       name: Boat2_Down_Idle_Spritesheet_9
       rect:
         serializedVersion: 2
-        x: 2250
-        y: 1378
-        width: 250
-        height: 670
+        x: 2700
+        y: 3296
+        width: 300
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -451,10 +427,10 @@ TextureImporter:
       name: Boat2_Down_Idle_Spritesheet_10
       rect:
         serializedVersion: 2
-        x: 2500
-        y: 1378
-        width: 250
-        height: 670
+        x: 3000
+        y: 3296
+        width: 300
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -472,10 +448,10 @@ TextureImporter:
       name: Boat2_Down_Idle_Spritesheet_11
       rect:
         serializedVersion: 2
-        x: 2750
-        y: 1378
-        width: 250
-        height: 670
+        x: 3300
+        y: 3296
+        width: 300
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -493,10 +469,10 @@ TextureImporter:
       name: Boat2_Down_Idle_Spritesheet_12
       rect:
         serializedVersion: 2
-        x: 3000
-        y: 1378
-        width: 250
-        height: 670
+        x: 3600
+        y: 3296
+        width: 300
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -514,10 +490,10 @@ TextureImporter:
       name: Boat2_Down_Idle_Spritesheet_13
       rect:
         serializedVersion: 2
-        x: 3250
-        y: 1378
-        width: 250
-        height: 670
+        x: 0
+        y: 2496
+        width: 300
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -535,10 +511,10 @@ TextureImporter:
       name: Boat2_Down_Idle_Spritesheet_14
       rect:
         serializedVersion: 2
-        x: 3500
-        y: 1378
-        width: 250
-        height: 670
+        x: 300
+        y: 2496
+        width: 300
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -556,10 +532,10 @@ TextureImporter:
       name: Boat2_Down_Idle_Spritesheet_15
       rect:
         serializedVersion: 2
-        x: 3750
-        y: 1378
-        width: 250
-        height: 670
+        x: 600
+        y: 2496
+        width: 300
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -577,10 +553,10 @@ TextureImporter:
       name: Boat2_Down_Idle_Spritesheet_16
       rect:
         serializedVersion: 2
-        x: 0
-        y: 708
-        width: 250
-        height: 670
+        x: 900
+        y: 2496
+        width: 300
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -598,10 +574,10 @@ TextureImporter:
       name: Boat2_Down_Idle_Spritesheet_17
       rect:
         serializedVersion: 2
-        x: 250
-        y: 708
-        width: 250
-        height: 670
+        x: 1200
+        y: 2496
+        width: 300
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -619,10 +595,10 @@ TextureImporter:
       name: Boat2_Down_Idle_Spritesheet_18
       rect:
         serializedVersion: 2
-        x: 500
-        y: 708
-        width: 250
-        height: 670
+        x: 1500
+        y: 2496
+        width: 300
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -640,10 +616,10 @@ TextureImporter:
       name: Boat2_Down_Idle_Spritesheet_19
       rect:
         serializedVersion: 2
-        x: 750
-        y: 708
-        width: 250
-        height: 670
+        x: 1800
+        y: 2496
+        width: 300
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -661,10 +637,10 @@ TextureImporter:
       name: Boat2_Down_Idle_Spritesheet_20
       rect:
         serializedVersion: 2
-        x: 1000
-        y: 708
-        width: 250
-        height: 670
+        x: 2100
+        y: 2496
+        width: 300
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -682,10 +658,10 @@ TextureImporter:
       name: Boat2_Down_Idle_Spritesheet_21
       rect:
         serializedVersion: 2
-        x: 1250
-        y: 708
-        width: 250
-        height: 670
+        x: 2400
+        y: 2496
+        width: 300
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -703,10 +679,10 @@ TextureImporter:
       name: Boat2_Down_Idle_Spritesheet_22
       rect:
         serializedVersion: 2
-        x: 1500
-        y: 708
-        width: 250
-        height: 670
+        x: 2700
+        y: 2496
+        width: 300
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -724,10 +700,10 @@ TextureImporter:
       name: Boat2_Down_Idle_Spritesheet_23
       rect:
         serializedVersion: 2
-        x: 1750
-        y: 708
-        width: 250
-        height: 670
+        x: 3000
+        y: 2496
+        width: 300
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -745,10 +721,10 @@ TextureImporter:
       name: Boat2_Down_Idle_Spritesheet_24
       rect:
         serializedVersion: 2
-        x: 2000
-        y: 708
-        width: 250
-        height: 670
+        x: 3300
+        y: 2496
+        width: 300
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -766,10 +742,10 @@ TextureImporter:
       name: Boat2_Down_Idle_Spritesheet_25
       rect:
         serializedVersion: 2
-        x: 2250
-        y: 708
-        width: 250
-        height: 670
+        x: 3600
+        y: 2496
+        width: 300
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -787,10 +763,10 @@ TextureImporter:
       name: Boat2_Down_Idle_Spritesheet_26
       rect:
         serializedVersion: 2
-        x: 2500
-        y: 708
-        width: 250
-        height: 670
+        x: 0
+        y: 1696
+        width: 300
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -808,10 +784,10 @@ TextureImporter:
       name: Boat2_Down_Idle_Spritesheet_27
       rect:
         serializedVersion: 2
-        x: 2750
-        y: 708
-        width: 250
-        height: 670
+        x: 300
+        y: 1696
+        width: 300
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -829,10 +805,10 @@ TextureImporter:
       name: Boat2_Down_Idle_Spritesheet_28
       rect:
         serializedVersion: 2
-        x: 3000
-        y: 708
-        width: 250
-        height: 670
+        x: 600
+        y: 1696
+        width: 300
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -850,10 +826,10 @@ TextureImporter:
       name: Boat2_Down_Idle_Spritesheet_29
       rect:
         serializedVersion: 2
-        x: 3250
-        y: 708
-        width: 250
-        height: 670
+        x: 900
+        y: 1696
+        width: 300
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -871,10 +847,10 @@ TextureImporter:
       name: Boat2_Down_Idle_Spritesheet_30
       rect:
         serializedVersion: 2
-        x: 3500
-        y: 708
-        width: 250
-        height: 670
+        x: 1200
+        y: 1696
+        width: 300
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -892,10 +868,10 @@ TextureImporter:
       name: Boat2_Down_Idle_Spritesheet_31
       rect:
         serializedVersion: 2
-        x: 3750
-        y: 708
-        width: 250
-        height: 670
+        x: 1500
+        y: 1696
+        width: 300
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -913,10 +889,10 @@ TextureImporter:
       name: Boat2_Down_Idle_Spritesheet_32
       rect:
         serializedVersion: 2
-        x: 0
-        y: 38
-        width: 250
-        height: 670
+        x: 1800
+        y: 1696
+        width: 300
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -934,10 +910,10 @@ TextureImporter:
       name: Boat2_Down_Idle_Spritesheet_33
       rect:
         serializedVersion: 2
-        x: 250
-        y: 38
-        width: 250
-        height: 670
+        x: 2100
+        y: 1696
+        width: 300
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -955,10 +931,10 @@ TextureImporter:
       name: Boat2_Down_Idle_Spritesheet_34
       rect:
         serializedVersion: 2
-        x: 500
-        y: 38
-        width: 250
-        height: 670
+        x: 2400
+        y: 1696
+        width: 300
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -976,10 +952,10 @@ TextureImporter:
       name: Boat2_Down_Idle_Spritesheet_35
       rect:
         serializedVersion: 2
-        x: 750
-        y: 38
-        width: 250
-        height: 670
+        x: 2700
+        y: 1696
+        width: 300
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -997,10 +973,10 @@ TextureImporter:
       name: Boat2_Down_Idle_Spritesheet_36
       rect:
         serializedVersion: 2
-        x: 1000
-        y: 38
-        width: 250
-        height: 670
+        x: 3000
+        y: 1696
+        width: 300
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1018,10 +994,10 @@ TextureImporter:
       name: Boat2_Down_Idle_Spritesheet_37
       rect:
         serializedVersion: 2
-        x: 1250
-        y: 38
-        width: 250
-        height: 670
+        x: 3300
+        y: 1696
+        width: 300
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1039,10 +1015,10 @@ TextureImporter:
       name: Boat2_Down_Idle_Spritesheet_38
       rect:
         serializedVersion: 2
-        x: 1500
-        y: 38
-        width: 250
-        height: 670
+        x: 3600
+        y: 1696
+        width: 300
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1060,10 +1036,10 @@ TextureImporter:
       name: Boat2_Down_Idle_Spritesheet_39
       rect:
         serializedVersion: 2
-        x: 1750
-        y: 38
-        width: 250
-        height: 670
+        x: 0
+        y: 896
+        width: 300
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1081,10 +1057,10 @@ TextureImporter:
       name: Boat2_Down_Idle_Spritesheet_40
       rect:
         serializedVersion: 2
-        x: 2000
-        y: 38
-        width: 250
-        height: 670
+        x: 300
+        y: 896
+        width: 300
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
