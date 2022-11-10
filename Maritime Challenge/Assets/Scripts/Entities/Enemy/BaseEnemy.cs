@@ -57,6 +57,8 @@ public class BaseEnemy : BaseEntity
 
     private float attack_interval = 1.0f;
 
+    bool damageDealt = false;
+
     [SerializeField]
     private Image HPFill;
 
@@ -289,8 +291,7 @@ public class BaseEnemy : BaseEntity
 
     protected virtual void HandleAttack()
     {
-        currentTargetPlayer.GetOwner().TakeDamage(5, gameObject);
-        SetHitVFX(currentTargetPlayer.transform.position);
+        damageDealt = false;
         currEnemyState = ENEMY_STATES.FREEZE;
         ResetTimer(maxFreezeTime);
     }
@@ -305,6 +306,13 @@ public class BaseEnemy : BaseEntity
 
     protected virtual void HandleFreeze()
     {
+        if (!damageDealt && timer >= maxTimer * 0.5f)
+        {
+            currentTargetPlayer.GetOwner().TakeDamage(5, gameObject);
+            SetHitVFX(currentTargetPlayer.transform.position);
+            damageDealt = true;
+        }
+
         if (timer >= maxTimer)
         {
             currEnemyState = ENEMY_STATES.IDLE;
