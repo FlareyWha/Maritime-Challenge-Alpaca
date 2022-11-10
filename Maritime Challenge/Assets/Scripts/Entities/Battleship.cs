@@ -295,7 +295,19 @@ public class Battleship : NetworkBehaviour
         SceneManager.Instance.MoveGameObjectToScene(ball.gameObject, currSceneName);
 
         ball.Init(target, shipDir, ownerPlayer);
+
+        PlayLaunchCannonballSFX(currSceneName, spawnPos);
     }
+
+    [ClientRpc]
+    private void PlayLaunchCannonballSFX(string sceneName, Vector3 pos)
+    {
+        if (PlayerData.activeSubScene != sceneName)
+            return;
+
+        // Play SFX
+    }
+
 
     private void OnTargetDiedCallback()
     {

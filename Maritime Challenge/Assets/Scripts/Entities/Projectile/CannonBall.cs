@@ -56,17 +56,20 @@ public class CannonBall : BaseProjectile
         {
             BaseEntity enemy = collision.gameObject.GetComponent<BaseEntity>();
             enemy.TakeDamage(ownerPlayer.ATK, ownerPlayer.gameObject);
-            SpawnHitVFX(transform.position);
+            SpawnHitEffects(gameObject.scene.name, transform.position);
             Deactivate();
         }
     }
 
     [ClientRpc]
-    private void SpawnHitVFX(Vector3 pos)
+    private void SpawnHitEffects(string sceneName, Vector3 pos)
     {
-        if (PlayerData.activeSubScene != "WorldHubScene")
+        if (PlayerData.activeSubScene != sceneName)
             return;
+
         VFXManager.Instance.AddVFX(VFX_TYPE.CANNONBALL_HIT, pos);
+
+        // Play Sound
     }
 
 

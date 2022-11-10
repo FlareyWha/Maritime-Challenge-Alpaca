@@ -208,10 +208,21 @@ public class AirHockeyMinigame : NetworkBehaviour
     {
         ResetPuck();
 
+        PlayGoalSFX(transform.position);
+
         int score = scoresList[seatID];
         score++;
         scoresList[seatID] = score;
         UpdateScoreDisplay(seatID, score);
+    }
+
+    [ClientRpc]
+    private void PlayGoalSFX(Vector3 pos)
+    {
+        if (PlayerData.activeSubScene != "ArcadeScene")
+            return;
+
+        // Play Cheering SFX
     }
 
     [ClientRpc]
