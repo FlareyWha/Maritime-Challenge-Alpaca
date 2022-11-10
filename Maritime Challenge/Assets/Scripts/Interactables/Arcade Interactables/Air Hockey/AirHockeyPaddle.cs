@@ -101,10 +101,11 @@ public class AirHockeyPaddle : NetworkBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("AirHockeyPuck"))
+        if (collision.gameObject.CompareTag("AirHockeyPuck"))
         {
             // Play Sound Effect - Pos is just transform.position
             puckAudioSource.Play();
+            Debug.Log("Playing HIT");
         }
     }
 

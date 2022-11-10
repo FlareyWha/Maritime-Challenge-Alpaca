@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 2075830238219610778}
   - component: {fileID: 6630292128914404554}
   - component: {fileID: 7214422312265734692}
+  - component: {fileID: 8658889130366512720}
   m_Layer: 0
   m_Name: Puck
   m_TagString: Untagged
@@ -212,3 +213,19 @@ MonoBehaviour:
   syncAngularVelocity: 1
   clearAngularVelocity: 0
   angularVelocitySensitivity: 0.1
+--- !u!58 &8658889130366512720
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2294281570881140805}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.2549999
