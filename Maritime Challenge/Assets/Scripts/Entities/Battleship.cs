@@ -59,7 +59,7 @@ public class Battleship : NetworkBehaviour
     private GameObject selectedTargetUI;
 
     [SerializeField]
-    private AudioSource audioSource;
+    private AudioSource launchAudioSource;
 
     private void Start()
     {
@@ -309,9 +309,8 @@ public class Battleship : NetworkBehaviour
             return;
 
         // Play SFX
-        audioSource.Play();
+        launchAudioSource.Play();
     }
-
 
     private void OnTargetDiedCallback()
     {
