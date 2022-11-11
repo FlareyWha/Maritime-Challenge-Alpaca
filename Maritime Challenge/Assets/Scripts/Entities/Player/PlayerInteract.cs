@@ -38,6 +38,9 @@ public class PlayerInteract : NetworkBehaviour
             UIManager.Instance.EnableInteractButton(interactable.GetInteractMessage());
         }
 
+        if (interactable.GetComponent<Sit>() != null)
+            interactable.GetComponent<Sit>().UpdateInteractMessage();
+
         InRangeList.Add(interactable);
     }
 

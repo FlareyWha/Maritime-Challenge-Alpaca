@@ -32,6 +32,7 @@ public class Sit : BaseInteractable
         coffeeCup.SetActive(false);
     }
 
+
     public override void Interact()
     {
         if (playerSeated == null && CafeManager.Instance.HasDrink)
@@ -45,6 +46,8 @@ public class Sit : BaseInteractable
 
             //Disable joystick
             UIManager.Instance.ToggleJoystick(false);
+
+            playerSeated = PlayerData.MyPlayer;
             
             //Prob clamp the player pos to the seat or smth and prevent movment
             PlayerData.CommandsHandler.SendPlayerSeatedEvent(SitID, player);
@@ -72,11 +75,14 @@ public class Sit : BaseInteractable
     public void UpdateInteractMessage()
     {
         if (playerSeated == null)
-            interactMessage = "Sit Down?";
+        {
+            if (!CafeManager.Instance.HasDrink)
+                interactMessage = "Buy a drink to sit down.";
+            else
+                interactMessage = "Sit Down?";
+        }
         else if (playerSeated == PlayerData.MyPlayer)
             interactMessage = "Stand Up?";
-        else if (!CafeManager.Instance.HasDrink)
-            interactMessage = "Buy a drink to sit down.";
 
         UIManager.Instance.SetInteractButtonMessage(interactMessage);
     }
