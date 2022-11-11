@@ -25,6 +25,8 @@ public class BossHPBar : MonoBehaviourSingleton<BossHPBar>
     {
         Activate();
         LinkEnemy(eelBoss);
+        HPFill.fillAmount = (float)LinkedEnemy.HP / LinkedEnemy.MaxHP;
+        HPFillText.text = LinkedEnemy.HP + "/" + LinkedEnemy.MaxHP;
     }
 
     public void Activate()
