@@ -42,7 +42,7 @@ public class Sit : BaseInteractable
             oldPosition = player.transform.position;
 
             //Set player pos to the seat's pos
-            player.transform.position = transform.parent.position;
+            player.transform.position = transform.position;
 
             //Disable joystick
             UIManager.Instance.ToggleJoystick(false);
