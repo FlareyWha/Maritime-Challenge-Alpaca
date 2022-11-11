@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3404052716961215193}
   - component: {fileID: 6759318339984561681}
+  - component: {fileID: 3595799294410712986}
   m_Layer: 0
   m_Name: Shadow
   m_TagString: Untagged
@@ -82,6 +83,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &3595799294410712986
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889988092392330156}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fe25af9a87f99ee40bdcd32b22fe78d0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3022589829131868472
 GameObject:
   m_ObjectHideFlags: 0
@@ -19429,6 +19449,7 @@ GameObject:
   - component: {fileID: 1466384262677790442}
   - component: {fileID: 6518700637236326858}
   - component: {fileID: 4545149287226860094}
+  - component: {fileID: 4729434333643816763}
   m_Layer: 0
   m_Name: WorldBoss
   m_TagString: Untagged
@@ -19551,6 +19572,25 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 6.275
+--- !u!95 &4729434333643816763
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7406788778913910647}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fe25af9a87f99ee40bdcd32b22fe78d0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8949612809137040494
 GameObject:
   m_ObjectHideFlags: 0
