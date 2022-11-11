@@ -4344,10 +4344,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1336347820}
     m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2480246100883348166, guid: c329656309de28248bdfaed725c33776, type: 3}
       propertyPath: coffeeCup
       value: 
@@ -4415,6 +4411,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4851536740854130389, guid: c329656309de28248bdfaed725c33776, type: 3}
   m_PrefabInstance: {fileID: 798003158}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &798003160 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2480246100883348166, guid: c329656309de28248bdfaed725c33776, type: 3}
+  m_PrefabInstance: {fileID: 798003158}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 066a6d73a99737c4695e8224a7152483, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &799195361
 GameObject:
   m_ObjectHideFlags: 0
@@ -5278,10 +5285,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 799195362}
     m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2480246100883348166, guid: c329656309de28248bdfaed725c33776, type: 3}
       propertyPath: coffeeCup
       value: 
@@ -5353,6 +5356,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4851536740854130389, guid: c329656309de28248bdfaed725c33776, type: 3}
   m_PrefabInstance: {fileID: 1075959345}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1075959347 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2480246100883348166, guid: c329656309de28248bdfaed725c33776, type: 3}
+  m_PrefabInstance: {fileID: 1075959345}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 066a6d73a99737c4695e8224a7152483, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1130296533
 GameObject:
   m_ObjectHideFlags: 0
@@ -5442,10 +5456,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1365911531}
     m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2480246100883348166, guid: c329656309de28248bdfaed725c33776, type: 3}
       propertyPath: coffeeCup
       value: 
@@ -5517,6 +5527,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4851536740854130389, guid: c329656309de28248bdfaed725c33776, type: 3}
   m_PrefabInstance: {fileID: 1145790404}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1145790406 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2480246100883348166, guid: c329656309de28248bdfaed725c33776, type: 3}
+  m_PrefabInstance: {fileID: 1145790404}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 066a6d73a99737c4695e8224a7152483, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1168051935
 GameObject:
   m_ObjectHideFlags: 0
@@ -5677,10 +5698,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1365911531}
     m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2480246100883348166, guid: c329656309de28248bdfaed725c33776, type: 3}
       propertyPath: coffeeCup
       value: 
@@ -5748,6 +5765,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4851536740854130389, guid: c329656309de28248bdfaed725c33776, type: 3}
   m_PrefabInstance: {fileID: 1206433441}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1206433443 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2480246100883348166, guid: c329656309de28248bdfaed725c33776, type: 3}
+  m_PrefabInstance: {fileID: 1206433441}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 066a6d73a99737c4695e8224a7152483, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1212387781
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5755,10 +5783,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1365911531}
     m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2480246100883348166, guid: c329656309de28248bdfaed725c33776, type: 3}
       propertyPath: coffeeCup
       value: 
@@ -5826,6 +5850,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4851536740854130389, guid: c329656309de28248bdfaed725c33776, type: 3}
   m_PrefabInstance: {fileID: 1212387781}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1212387783 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2480246100883348166, guid: c329656309de28248bdfaed725c33776, type: 3}
+  m_PrefabInstance: {fileID: 1212387781}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 066a6d73a99737c4695e8224a7152483, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1214807040
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5833,10 +5868,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1336347820}
     m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2480246100883348166, guid: c329656309de28248bdfaed725c33776, type: 3}
       propertyPath: coffeeCup
       value: 
@@ -5912,6 +5943,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4851536740854130389, guid: c329656309de28248bdfaed725c33776, type: 3}
   m_PrefabInstance: {fileID: 1214807040}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1214807042 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2480246100883348166, guid: c329656309de28248bdfaed725c33776, type: 3}
+  m_PrefabInstance: {fileID: 1214807040}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 066a6d73a99737c4695e8224a7152483, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1252495653
 GameObject:
   m_ObjectHideFlags: 0
@@ -6423,10 +6465,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1365911531}
     m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2480246100883348166, guid: c329656309de28248bdfaed725c33776, type: 3}
       propertyPath: coffeeCup
       value: 
@@ -6498,6 +6536,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4851536740854130389, guid: c329656309de28248bdfaed725c33776, type: 3}
   m_PrefabInstance: {fileID: 1365387852}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1365387854 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2480246100883348166, guid: c329656309de28248bdfaed725c33776, type: 3}
+  m_PrefabInstance: {fileID: 1365387852}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 066a6d73a99737c4695e8224a7152483, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1365911530
 GameObject:
   m_ObjectHideFlags: 0
@@ -6638,6 +6687,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HasDrink: 0
+  SitsList:
+  - {fileID: 2036483579}
+  - {fileID: 798003160}
+  - {fileID: 1454502211}
+  - {fileID: 1214807042}
+  - {fileID: 1075959347}
+  - {fileID: 1749959059}
+  - {fileID: 1212387783}
+  - {fileID: 1206433443}
+  - {fileID: 1145790406}
+  - {fileID: 1365387854}
+  - {fileID: 1904304813}
+  - {fileID: 1731345740}
 --- !u!4 &1405975650
 Transform:
   m_ObjectHideFlags: 0
@@ -8323,10 +8385,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1336347820}
     m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2480246100883348166, guid: c329656309de28248bdfaed725c33776, type: 3}
       propertyPath: coffeeCup
       value: 
@@ -8398,6 +8456,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4851536740854130389, guid: c329656309de28248bdfaed725c33776, type: 3}
   m_PrefabInstance: {fileID: 1454502209}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1454502211 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2480246100883348166, guid: c329656309de28248bdfaed725c33776, type: 3}
+  m_PrefabInstance: {fileID: 1454502209}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 066a6d73a99737c4695e8224a7152483, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1498979523
 GameObject:
   m_ObjectHideFlags: 0
@@ -9121,10 +9190,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 786774347}
     m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2480246100883348166, guid: c329656309de28248bdfaed725c33776, type: 3}
       propertyPath: coffeeCup
       value: 
@@ -9192,6 +9257,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4851536740854130389, guid: c329656309de28248bdfaed725c33776, type: 3}
   m_PrefabInstance: {fileID: 1731345738}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1731345740 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2480246100883348166, guid: c329656309de28248bdfaed725c33776, type: 3}
+  m_PrefabInstance: {fileID: 1731345738}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 066a6d73a99737c4695e8224a7152483, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1749959057
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9199,10 +9275,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 799195362}
     m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2480246100883348166, guid: c329656309de28248bdfaed725c33776, type: 3}
       propertyPath: coffeeCup
       value: 
@@ -9270,6 +9342,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4851536740854130389, guid: c329656309de28248bdfaed725c33776, type: 3}
   m_PrefabInstance: {fileID: 1749959057}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1749959059 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2480246100883348166, guid: c329656309de28248bdfaed725c33776, type: 3}
+  m_PrefabInstance: {fileID: 1749959057}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 066a6d73a99737c4695e8224a7152483, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1808082539
 GameObject:
   m_ObjectHideFlags: 0
@@ -9356,10 +9439,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 786774347}
     m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2480246100883348166, guid: c329656309de28248bdfaed725c33776, type: 3}
       propertyPath: coffeeCup
       value: 
@@ -9423,6 +9502,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4851536740854130389, guid: c329656309de28248bdfaed725c33776, type: 3}
   m_PrefabInstance: {fileID: 1904304811}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1904304813 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2480246100883348166, guid: c329656309de28248bdfaed725c33776, type: 3}
+  m_PrefabInstance: {fileID: 1904304811}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 066a6d73a99737c4695e8224a7152483, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1921221934
 GameObject:
   m_ObjectHideFlags: 0
@@ -9573,6 +9663,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4851536740854130389, guid: c329656309de28248bdfaed725c33776, type: 3}
   m_PrefabInstance: {fileID: 2036483577}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2036483579 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2480246100883348166, guid: c329656309de28248bdfaed725c33776, type: 3}
+  m_PrefabInstance: {fileID: 2036483577}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 066a6d73a99737c4695e8224a7152483, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2119242045
 GameObject:
   m_ObjectHideFlags: 0

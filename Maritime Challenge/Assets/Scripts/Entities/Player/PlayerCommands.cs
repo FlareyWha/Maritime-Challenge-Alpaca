@@ -37,8 +37,13 @@ public class PlayerCommands : NetworkBehaviour
     [ClientRpc]
     public void SetPlayerSeated(int sitID, Player player)
     {
-        Sit.Sits[sitID].PlayerSeated = player;
-        Sit.Sits[sitID].UpdateInteractMessage();
+        if (CafeManager.Instance == null)
+            return;
+
+        CafeManager.Instance.FindSit(sitID).PlayerSeated = player;
+        CafeManager.Instance.FindSit(sitID).UpdateInteractMessage();
+        CafeManager.Instance.FindSit(sitID).SetCoffeeCup(player != null);
+            
     }
 
    

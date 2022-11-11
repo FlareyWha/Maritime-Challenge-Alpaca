@@ -6,7 +6,7 @@ using Mirror;
 
 public class Sit : BaseInteractable
 {
-    public static List<Sit> Sits = new List<Sit>();
+    //public static List<Sit> Sits = new List<Sit>();
 
     public int SitID;
 
@@ -27,8 +27,7 @@ public class Sit : BaseInteractable
     {
         UpdateInteractMessage();
 
-        SitID = Sits.Count;
-        Sits.Add(this);
+        SitID = CafeManager.Instance.GetSitID(this);
 
         coffeeCup.SetActive(false);
     }
@@ -80,5 +79,10 @@ public class Sit : BaseInteractable
             interactMessage = "Buy a drink to sit down.";
 
         UIManager.Instance.SetInteractButtonMessage(interactMessage);
+    }
+
+    public void SetCoffeeCup(bool show)
+    {
+        coffeeCup.SetActive(show);
     }
 }
