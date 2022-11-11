@@ -5,12 +5,12 @@ require("dbconn_inc.php"); // include the external file
 //Check if POST fields are received
 try
 {
-    if (!isset($_POST["UID"])||!isset($_POST["fXPlayerPos"])||!isset($_POST["fYPlayerPos"])||!isset($_POST["fZPlayerPos"]))
+    if (!isset($_POST["UID"])||!isset($_POST["fPlayerXPos"])||!isset($_POST["fPlayerYPos"])||!isset($_POST["fPlayerZPos"]))
         throw new Exception("not posted!");
     $UID = $_POST["UID"];
-    $fXPlayerPos = $_POST["fXPlayerPos"];
-    $fYPlayerPos = $_POST["fYPlayerPos"];
-    $fZPlayerPos = $_POST["fZPlayerPos"];
+    $fPlayerXPos = $_POST["fPlayerXPos"];
+    $fPlayerYPos = $_POST["fPlayerYPos"];
+    $fPlayerZPos = $_POST["fPlayerZPos"];
 }
 catch (Exception $e)
 {
@@ -20,11 +20,11 @@ catch (Exception $e)
 }
 
 //Prepare statement to update the iLevel and iXP of the acccount with the uid
-$query = "update tb_account set fXPlayerPos=?, fYPlayerPos=?, fZPlayerPos=? where UID=?";
+$query = "update tb_account set fPlayerXPos=?, fPlayerYPos=?, fPlayerZPos=? where UID=?";
 $stmt=$conn->prepare($query);
 
 //s - string, i - integer...
-$stmt->bind_param("fffi", $fXPlayerPos, $fYPlayerPos, $fZPlayerPos, $UID);
+$stmt->bind_param("fffi", $fPlayerXPos, $fPlayerYPos, $fPlayerZPos, $UID);
 
 //Execute statement
 $stmt->execute();

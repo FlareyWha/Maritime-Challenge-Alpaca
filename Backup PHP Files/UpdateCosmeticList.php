@@ -5,9 +5,9 @@ require("dbconn_inc.php"); // include the external file
 try
 {
     //check if POST fields are received, else quit
-    if (!isset($_POST["UID"])||!isset($_POST["iCosmeticID"]))
+    if (!isset($_POST["iOwnerUID"])||!isset($_POST["iCosmeticID"]))
         throw new Exception("not posted!"); 
-    $UID = $_POST["UID"];
+    $iOwnerUID = $_POST["iOwnerUID"];
     $iCosmeticID = $_POST["iCosmeticID"];
 }
 catch (Exception $e)
@@ -19,7 +19,7 @@ catch (Exception $e)
 
 $query = "update tb_cosmeticList set bCosmeticUnlocked=true where iOwnerUID=? and iCosmeticID=?";
 $stmt = $conn->prepare($query);
-$stmt->bind_param("ii", $UID, $iCosmeticID);
+$stmt->bind_param("ii", $iOwnerUID, $iCosmeticID);
 $stmt->execute();
 $stmt->fetch();
 $cosmeticsUpdated = $stmt->affected_rows;
